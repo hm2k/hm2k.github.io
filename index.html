@@ -93,8 +93,12 @@
             margin: 0 auto;
         }
 
-        main {
+        header {
+            background: #FFCC00;
+        }
 
+        main {
+            height: 100%;
             text-align: center;
         }
 
@@ -109,7 +113,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-65485-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'UA-65485-1');
@@ -118,11 +126,16 @@
 </head>
 
 <body>
-<header class="m-5">
-    <a href="/" rel="home"><h1>HM2K</h1></a>
+<header>
+    <video autoplay="autoplay" muted id="myVideo" class="w-100">
+        <source src="assets/images/hm2k-intro.mp4" type="video/mp4">
+    </video>
 </header>
 
 <main>
+    <div class="text-center">
+        <h1><a href="/"><img src="assets/images/hm2k-logo.gif" alt="HM2K"> HM2K</a></h1>
+    </div>
     <hr class="w-75">
     <p>
         Projects:
