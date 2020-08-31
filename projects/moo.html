@@ -1,0 +1,199 @@
+<title>moo.dll and moo script by HM2K</title>
+
+<link href="projects.css" rel="stylesheet" type="text/css">
+<h1>Moo</h1>
+<p><a href="http://www.hm2k.org/scripts/moo.mrc">Download - moo script v3.0 *beta* (for mIRC v6.16 or above - <strong>no more moo.dll</strong>) by HM2K</a></p>
+<p><strong>What does moo mean?</strong><br>
+  &quot;moo&quot; is often just a generic word used in place of &quot;example&quot; or &quot;test&quot;, or even &quot;foo&quot;. However of course it is the noise made by a cow.</p>
+<p><strong>What is moo script?</strong><br>
+  moo script  was originally a script that displays your systems information via <a href="http://www.mirc.co.uk/">mIRC</a> using moo.dll created by <a href="http://www.influenced.net/">marky</a>.<br>
+  This script shows the stats of your system, including: your operating system, your uptime, your cpu, your memory usage, your resolution, your network and your hard drives, all in all, a useful script.</p>
+<p><strong>Example:</strong><br>
+[01:00:00 pm] &lt;HM2K&gt; moo: os: Microsoft Windows XP Professional - Service Pack 2 (5.1.2600) uptime: 2days 13hrs 3mins 49secs cpu: AMD Athlon(tm) XP 2200+ at 1800MHz (14% Load) gfx: ATI Technologies Inc. RADEON 9600 Series AGP (0x4150) 128MB res: 1024x768 32bit 75Hz ram: 341/511.48MB (66.61%) [|||||||---] hdd: C:\ 841.84MB/55.89GB Free D:\ 4.36GB/111.78GB Free net: SiS 900 PCI Fast Ethernet Adapter - 100MB/s 1.63GB In, 841.92MB Out</p>
+<p><strong>What is moo.dll?</strong><br>
+  moo.dll is an mIRC dll designed to return system information for mIRC scripts, that reports various 
+statistics, made by <a href="http://www.influenced.net/">marky</a>.</p>
+<p><strong>Is moo.dll a virus or backdoor? <br>
+</strong>No, this is often a mis-conception as moo.dll is sometimes packaged up with trojans made with mIRC, such as <a href="http://golcor.tripod.com/gtbot.htm">GTbot</a>, it is then used to retreive that systems information. It is NOT possible for moo.dll to be a backdoor or virus as it does not have the functionality to do so, all it does is return a strings of text.</p>
+<p>  <em>&lt;HndlWCare&gt; he may have written what incorporates moo.dll, but he did not write moo.dll -- moo.dll was written by a college roommate of one of our ops who has admitted inserting a backdoor into it.<br>
+&lt;marky&gt; don't make me laugh.. check any antivirus website where a virus which has included moo.dll has been disassembled - check the description of moo.dll.. it's usually &quot;harmless mirc addon&quot; or suchlike.. and you can be sure the anti virus people have disassembled it thoroughly.</em></p>
+<p>I have checked the source code AND disassembled moo.dll, and have found there are NO functions that are harmful.</p>
+<p><strong>What are moo.dll's functions?</strong></p>
+<p>The functions can be used within <a href="http://www.mirc.co.uk/">mIRC</a> for example: //echo -a $dll(moo.dll,version,_) or 
+//say $dll(moo.dll,version,_)</p>
+<table width="100%"  border="0">
+  <tr>
+    <td><strong>Function</strong></td>
+    <td><strong>Description</strong></td>
+    <td><strong>Example</strong></td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,version,_)</td>
+    <td>Returns the version of moo.dll </td>
+    <td>4.0.4 build 1</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,osinfo,_)</td>
+    <td>Returns the Operating System information</td>
+    <td>Windows XP Professional, Service Pack 2 (5.1 - 2600)</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,uptime,_)</td>
+    <td>Returns the uptime of your Operating System.</td>
+    <td>3d 9h 6m 38s</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,cpuinfo,_)</td>
+    <td>Returns the CPU make, speed, cache and load.</td>
+    <td>1-AMD , 1799MHz, 256KB (0% Load)</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,meminfo,_)</td>
+    <td>Returns the systems RAM usage.</td>
+    <td>Usage: 470/512MB (91.80%)</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,screeninfo,_)</td>
+    <td>Returns the systems screen resolution, bit rate and refresh rate.</td>
+    <td>1024x768 32bit 75Hz</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,gfxinfo,_)</td>
+    <td>Returns the make and model of your graphics card. </td>
+    <td>ATI Technologies Inc. RADEON 9600 Series AGP</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,connection,_)</td>
+    <td>Returns details of the RAS dialup connection. </td>
+    <td>-1</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,interfaceinfo,_)</td>
+    <td>Returns the details of your network cards. </td>
+    <td>#1 (SiS 900 PCI Fast Ethernet Adapter (100Mb/s) 2090.15MB In, 1906.62MB Out)</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,diskcapacity,_)</td>
+    <td>Returns the free space and total space of your hard drives. </td>
+    <td>C:\ (0.75GB Free, 55.89GB Total), D:\ (4.06GB Free, 111.78GB Total)</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,testing,_)</td>
+    <td>Returns some CPU information that was under test. </td>
+    <td>CPUID Processor Brand (where suppored, blank otherwise): (AMD Athlon(tm) XP 2200+)</td>
+  </tr>
+  <tr>
+    <td>$dll(moo.dll,mbm5info,1)</td>
+    <td>If mbm5 is running it will return MBM5 details, otherwise it will error. </td>
+    <td>error,Motherboard Monitor 5 is not loaded</td>
+  </tr>
+</table>
+<p><strong>Where do I find a copy of moo script or moo.dll?</strong><br>
+Please the moo archive below... </p>
+<h2><strong>moo script and moo.dll archive</strong></h2>
+<p><strong>This is an archive of moo scripts (by HM2K) and moo.dlls.</strong></p>
+<table width="100%" border="1" cellspacing="0" cellpadding="3">
+  <tr> 
+    <td><strong>Filename</strong></td>
+    <td><strong>Description</strong></td>
+  </tr>
+  <tr>
+    <td><a href="http://www.hm2k.org/scripts/moo.mrc">moo.mrc</a></td>
+    <td>moo script v3.0 *beta* (for mIRC v6.16 or above - <strong>no more moo.dll</strong>) by HM2K</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td><a href="http://www.hm2k.org/files/moo2.rar">moo2.rar</a></td>
+    <td>New moo.dll with helper exe running in the background. (Includes: moo.dll 
+      moo2.dll moodll.mrc moohlp.exe)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moo_4.0.4.1.zip">moo_4.0.4.1.zip</a></td>
+    <td>Latest moo.dll from marky (Includes: readme.txt moo.dll moodll.mrc)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moo_4.0.4.1_hm2k.zip">moo_4.0.4.1_hm2k.zip</a></td>
+    <td>Latest mIRC Script by HM2K (Includes: moo.txt moo.dll moo.mrc)</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/bandwidthdll.zip">bandwidthdll.zip</a></td>
+    <td>mIRC Bandwidth Monitor DLL v1.2 by Caerdydd (Includes bandwidth.dll)</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moo_4.0.3.10.zip">moo_4.0.3.10.zip</a></td>
+    <td>moo.dll version 4.0.3.10 (Includes: moo.dll moodll.mrc)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moo_4.0.3.10_hm2k.zip">moo_4.0.3.10_hm2k.zip</a></td>
+    <td>mIRC Script by HM2K (Includes: moo.dll moodll.mrc)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moo_4.0.3.05.zip">moo_4.0.3.05.zip</a></td>
+    <td>moo.dll version 4.0.3.05 (Includes: moo.dll moodll.mrc)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moo_4.0.2.181.zip">moo_4.0.2.181.zip</a></td>
+    <td>moo.dll version 4.0.2.181 (Includes: moo.dll)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moodll_4.0.2.65.zip">moodll_4.0.2.65.zip</a></td>
+    <td>moo.dll version 4.0.2.65 (Includes: moo.dll moodll.mrc readme.txt)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moodll_4.0.2.17.zip">moodll_4.0.2.17.zip</a></td>
+    <td>moo.dll v4.0.2.17 27/04/01 - [4.0.2.17] (Includes: moo.dll moodll.mrc 
+      readme.txt)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moodll_4.0.2.9.zip">moodll_4.0.2.9.zip</a></td>
+    <td>moo.dll v4.0.2.9 (bad zip file)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moodll_4.0.1.1.zip">moodll_4.0.1.1.zip</a></td>
+    <td>moo.dll v4.0.1.1 (bad zip file)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moodll_0.0.3.04.zip">moodll_0.0.3.04.zip</a></td>
+    <td>moo.dll v0.0.3.04 (bad zip file)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moodll_0.0.3.02.zip">moodll_0.0.3.02.zip</a></td>
+    <td>moo.dll v0.0.3.02 (Includes: moo.dll moodll.mrc readme.txt)</td>
+  </tr>
+  <tr> 
+    <td><a href="http://www.hm2k.org/files/moodll_0.0.3.02_hm2k.zip">moodll_0.0.3.02_hm2k.zip</a></td>
+    <td>mIRC Script by HM2K (Includes: moo.dll moodll.mrc moodll.txt)</td>
+  </tr>
+  <tr> 
+    <td height="27"><a href="http://www.hm2k.org/files/moodll_0.0.3.02_src.zip">moodll_0.0.3.02_src.zip</a></td>
+    <td>moo.dll v0.0.3.02 source code (Written in c++)</td>
+  </tr>
+  <tr> 
+    <td height="27"><a href="http://www.hm2k.org/files/moodll_0.0.3.01.zip">moodll_0.0.3.01.zip</a></td>
+    <td>13/12/00 - [0.0.3.01] (Includes: moo.dll moodll.mrc readme.txt)</td>
+  </tr>
+  <tr> 
+    <td height="27"><a href="http://www.hm2k.org/files/moodll_0.0.3.01_src.zip">moodll_0.0.3.01_src.zip</a></td>
+    <td>moo.dll v0.0.3.01 - Source code (Written in c++)</td>
+  </tr>
+  <tr> 
+    <td height="27"><a href="http://www.hm2k.org/files/moodll_0.0.2.13.zip">moodll_0.0.2.13.zip</a></td>
+    <td>31/08/00 - [0.0.2.13] moo.dll Final. (Includes: moo.dll moodll.mrc readme.txt)</td>
+  </tr>
+  <tr> 
+    <td height="27"><a href="http://www.hm2k.org/files/moodll_0.0.2.13_src.zip">moodll_0.0.2.13_src.zip</a></td>
+    <td>mIRC32 Extension DLL [moo.dll] - First public source code release.</td>
+  </tr>
+</table>
+<p align="center">Copyright &copy; 2005 <a href="http://www.hm2k.org/">HM2K</a>. Alll Rights Reserved.</p>

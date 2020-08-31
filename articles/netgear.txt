@@ -1,0 +1,86 @@
+How do I tell the DG834G to allow new incoming connections to my network devices from the internet when natd is disabled when using the latest firmware?
+
+I've spent quite a bit of time on this now and its got to the point where I need further help as netgear's support is useless.
+
+The situation is this:
+
+I have a DG834G router, I am based in the UK and my ISP is eclipse.
+
+eclipse have provided me with the following set of IPs for my connection:
+
+IP Address(es)  	 82.152.138.225 > 82.152.138.230
+Subnet Mask 	255.255.255.248
+
+They have a guide to setup IPs on the Netgear DG834G here: http://kb.eclipse.net.uk/al/12/6/2108.html
+
+My network then consists of the following:
+
+1 x Linux Sever with 2 nics running CentOS (blade)
+3 x Wired computers running WindowsXP
+2 x Wireless Laptops
+and somtimes other devices depending on circumstances
+
+My router's IP is set to 82.152.138.225 automatically by the ISP.
+
+I have manually set the linux server (blade) to have an external IP of 82.152.138.226 and an internal ip of 192.168.0.1
+
+The linux server (blade) does and will run sshd, apache httpd, and an ftpd.
+
+The linux server (blade) is also now running DHCP for the internal network (192.168.0.*), is running portforwarding, and the natd is enabled using iptables.
+
+2 of the wired computers and the wireless laptops will be using the nat provided by the linux server (blade).
+
+One of the computers has an external IP of 82.152.138.228
+
+Anything else will automatically use the natd and internal ips unless told to do otherwise.
+
+My DG834G runs the latest firmware version from the official netgear website of V3.01.25.
+
+I have turned OFF DHCP and turned OFF NATD on the DG834G, I have also added the external IPs to the firewall on the inbound to ALLOW ALL, which *should* override the default BLOCK ALL rule.
+
+The problem is this:
+
+With that in mind, almost everything is working, HOWEVER one thing that is not working is new incoming connections from the internet.
+
+ie: I cannot connect to any of the services running on the linux server (blade) on 82.152.138.226 from the internet, but can on the internal network on 192.168.0.1.
+
+I have tested to make sure the linux server's ips, routing and iptables are setup correctly, and I have eliminated this from the problem.
+
+I have double checked this issue by running a service on the third windows xp machine with the ip of 82.152.138.228, and I cannot connect to it from the internet, but can if I change the ips to internal ips.
+
+I have contacted netgear support with regards to this issue and they asked me to test a whole bunch of things including: Hard Reset and Setting the linux server as a DMZ on the router (why?).
+
+After 2 tickets and 2 phone calls netgear eventually gave up and offered me the option of Netgear ProSupport or a new Netgear product, obviously at my cost, this is not an option.
+
+So I had a play with my device, I tried different firmware versions from v1 to v3, I found that with version v3 and v2 I had the same issue of not being able to connect in, HOWEVER with v1 I COULD connect in but the stability of my ADSL connection was not tollerable. I changed the firmware back to v3.
+
+Then a revolation, I discovered that the netgear DG834G actually runs embeded linux with busybox, and I can enable telnet access by visiting: http://82.152.138.225/setup.cgi?todo=debug
+
+From there I can issue basic linux and busybox commands, and also control any installed applications including iptables (the backend of the firewall the dg834g uses).
+
+I recently received a message from netgear saying "I appoligize that I did not mention this eariler, however, a security measure was added in firmware version 2.10.09 that drops inbound packets by default when the NAT is disabled. This security measure is present in all version after 2.10.09 as well."
+
+The steps towards a solution so far:
+
+With that in mind I figured that I need to configure the iptables in such a way that it will allow new inbound connections on all IPs.
+
+I have tried the following commands (mostly on seperate occasions in all kinds of different circumstances):
+
+* iptables -P INPUT ACCEPT
+* iptables -P FORWARD ACCEPT
+* iptables -I INPUT -j ACCEPT
+* iptables -A INPUT -m state --state NEW -j ACCEPT
+
+* iptables -F
+* iptables -X
+* iptables -Z
+
+None of them seem to solved the problem.
+
+Summery:
+
+My only idea now is to take a look at v1 of the firmware and try and work out what the difference is between that iptables and v3 iptables, however I can't help but think that there could be other differences that could affect the solution.
+
+My question is a not really a question its more of a cry for help to solve this clearly solvable problem, I just don't have the knowledge to resolve it on my own.
+
+PS, The information I have gathered can be sourced here: http://en.wikipedia.org/wiki/DG834G (and on the external pages)

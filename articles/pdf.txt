@@ -1,0 +1,13 @@
+Why do Adobe pdf files load slowly in Windows?
+----------------------------------------------
+
+Adobe Reader 6.0 for Windows loads lots of unused plugins on startup. The Inquirer has a great article explaining how you can disable those unneeded plugins and make Adobe Reader load faster.
+
+http://www.theinquirer.net/?article=11041
+
+Basically, you need to do the following:
+
+1. Install Adobe Reader 6.0 and notice where it is installed.
+2. Navigate to that folder in Explorer, locate the plug_ins subfolder and rename this folder to plug_ins_disabled.
+3. Create a new plug_ins folder.
+4. Move the files EWH32.api, printme.api and search.api from plug_ins_disabled to plug_ins.

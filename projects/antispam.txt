@@ -1,0 +1,34 @@
+;.o0{ #trance AntiSpam v0.3 by HM2K }0o. - IRC@HM2K.ORG
+
+;Who? 	This script was made for the users of #Trance and channels in a similar situation
+;What? 	This is a script to stop the spam bots sending annoying private messages
+;Why? 	There is no way to rid of them, ban them, kill them, stop them or otherwise, there's simply too many of them, and they have no central control they simply download a script and loop it
+;When? 	This script should work at any point
+;Where? This affects #chatzone,#ps3,#pothead,#adultswim,#exdcc,#trance,#ircparty,#khaldiya,#leech,#news,#lool,#ircgreeks,#orkut,#winnipeg,#worldchat on EFnet and many other channels on other networks
+;How? 	When a user joins the channel the user is set to ignore for 16 seconds, if the user parts within this time period, the ignore will be increased to 180 seconds stopping a spam bot from sending private messages.
+
+
+;mIRC or ircN users:
+
+;Simply add the lines below into your remotes (alt+r)
+
+on !*:join:#trance: .ignore -pu16 $iif($address($nick,2),$ifmatch,$nick)
+on !*:part:#trance: if ($ignore($iif($address($nick,2),$ifmatch,$nick $+ !*@*.*))) { .ignore -pu180 $ifmatch }
+
+;please note: if you're using this script in other channels, remember to replace #trance with your channel name
+
+;I also made a simple version (v0.1), but its not as reliable
+
+;on *:part:#trance: .ignore -pu180 $iif($address($nick,3),$ifmatch,$nick)
+
+;Other IRC Clients
+
+;irssi users - thanks redondos
+;please note: trigger.pl is required, also this has little error checking, unlike the mIRC version
+
+;issue: /trigger add -parts -channels 'EFNet/#trance' -command "ignore -network EFNET -time 180 $N!*@* MSGS"
+
+
+;If you're looking for a similar script for your IRC client, contact HM2K or ask in the appropriate channel for that client
+
+;EOF

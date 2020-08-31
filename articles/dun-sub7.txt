@@ -1,0 +1,20 @@
+How to retreve DUN passwords using SubSeven:
+--------------------------------------------
+Note: this document is very old...
+
+http://subseven.slak.org
+
+Default Port: 27374 (or 1243)
+
+Scan for [BT Internet(*@*.btinternet.com)]: 213.1.1.1 - 213.1.225.225
+Scan for [OneTel (*@*.onetel.net.uk)]: 212.67.100.1 - 212.67.255.1
+
+OK now you have the information download Sub7 then click 
+connection then ip scanner use the IP for one of the companies
+and search. once you get an IP paste it at the top where it says
+ip/uin: and then press connect (and yes leave the Delay on 4).
+Once connected (sometimes they won't)
+click advanced then passwords and choose retrieve RAS passwords
+and there you go you will have one of these accounts.
+I would apreciate it if you sent us what you find because accounts need updating
+all the time as they get closed down due to over use by people like you. :P

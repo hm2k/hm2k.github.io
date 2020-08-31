@@ -1,0 +1,33 @@
+HTML Guide
+----------
+*** Note: This is very old ***
+
+There are two ways of making a web page, one is using an WYSIWUG program which stands for What You See Is What You Get. Which usually involves no knowledge of HTML at all. FrontPage, DreamWeaver are both WYSIWUG programs, this is the easy way. The other way is to learn HTML and use it in any text based program like NotePad, this program actually is provided with windows making it available to any use to be able to create a web page.
+
+Fist of all we will start with a plan of what we want to do, I have decided that we want a web page to say: Hello World! In big, bold, underlined, italic, colourful writing, in the middle of the page. we want to end up with a line of text saying "Hello World!" in the middle of a HTML web page. We also want the same page to have a title in the title bar at the top of the browser to say "Hello World!"
+So we start, we open NotePad from either the Start Menu, (Start, Programs, Accessories, NotePad) 
+
+or from the Hard Drive, (My Computer, Hard Drive (C:), Windows, NotePad.exe)
+Once its open we start, I suggest that you save the document in a safe place before we begin and then save after we have done a major part.
+The web site we are about to do contains the basic/standard HTML functions:
+1. On the first line, and tell the browser that will be viewing it that it's a HTML file so we type: <HTML>
+2. We then decided that we want the title to say "Hello World!" so we tell it that were opening the heading stage by typing on a new line: <HEAD>
+
+3. Now we have to tell it that were starting a title, and that we want to display "Hello World!" and then finish it so on a new line we type:<TITLE>Hello World!</TITLE>
+4. Once that is done the heading is finished so on a new line we type: </HEAD>
+5. Once the heading is finished we start into the body text we tell it this by typing on the line after:<body bgcolour="#FFFFFF">
+6. Then we tell it that we want out text to be centralised this is what we type on the next line:<div align="center">
+
+7. Once this is done we want out text to be further down than the top line, so we add a few blank lines so we type:  <p>&nbsp;</p> (yes that is 2 spaces before it)
+8. Once you have entered this line a number of times you will (about 5) the text will be far enough down the page to put the text in, so on the following line we type: <p><font size="6" colour="#FF3333"><b><i><u>Hello World!</u></i></b></font></p>
+(yes again that is 2 spaces before it)
+Then to finish it off we end the closing lines:
+
+</div>
+</body>
+</html>
+The top line here stops the center line, the 2nd line stops the body text and the last line stops the HTML
+
+Note: Unfortunatly this was written when I had little knowledge of html, however I may update this in the future, for now I suggest you check out http://www.htmlhelp.com/
+
+- HM2K

@@ -1,0 +1,10 @@
+Problem:
+"STOP 0x000000ED UNMOUNTABLE_BOOT_VOLUME" Error Message
+
+Solution:
+1. Start your computer with the Windows startup disks, or with the Windows CD-ROM if your computer can start from the CD-ROM drive. 
+2. When the Welcome to Setup screen appears, press R to select the repair option. 
+3. If you have a dual-boot or multiple-boot computer, select the Windows installation that you want to access from the Recovery Console. 
+4. Type the administrator password when you are prompted to do so. NOTE: If no administrator password exists, just press ENTER. 
+5. At the command prompt, type chkdsk /r, and then press ENTER.
+6. At the command prompt, type exit, and then press ENTER to restart your computer.

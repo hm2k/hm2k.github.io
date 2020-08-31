@@ -1,0 +1,49 @@
+mIRC Guide Basic Version
+------------------------
+*** Note: This is very old ***
+
+mIRC can be downloaded from: http://www.mirc.com/
+
+About mIRC: 
+mIRC stands for Mardam-Bey Internet Relay Chat. The 'M' comes from the author Khaled Mardam-Bey and the IRC networks are not just used by mIRC they are used by other such IRC clients as PIRCH and VIRC but these are not as popular. The IRC networks are virtual meeting place where people from all over the world can meet and talk. There are many different IRC Severs connecting on many different IRC Networks (an IRC Server is efnet.demon.co.uk and its IRC Network is EFnet) All servers called EFnet are generally all connected together. Where as DelNet servers are not onnected to EFnet. Once connected to one of these many networks on any server you can then either speak to people by their nick through messages or in a channel (a chat room where more than 2 people can talk) as public chat . This occures because IRC is based on a client-server model. Clients are programs that connect to a server, a server is a program that transports data (messages) from one user (client) to another.
+
+Setting up mIRC for the first time:
+Click on [File], [Options],
+then click on the efnet server called : EFnet: EU, UK, Demon (If this fails to connect try any other EFnet server)
+Fill in ur name as <YOUR NAME>
+Fill in ur mail address
+Fill in ur nick as <YOUR NAME>
+and ur alternative as <YOUR NAME>
+then click on idnetd on the side bar
+USER ID: <YOUR NAME>
+Then click on OK
+then click file, connect or the first icon on the row of icons (the one under the file command)
+then when the channels folder opens type #hm2k
+
+I am oped (op, +o, @) in #hm2k as HM2K
+
+Once this is set up you can continue...
+
+Basic Commands:
+/join << This is used to join a channel ie:
+/join #hm2k << It will then join #hm2k
+
+/part << This is used to part a channel, in a similar way to /join ie:
+/part #hm2k << It will then part #hm2k
+
+/nick << This is a command to change your nickname during your connection ie:
+
+/nick HM2K << You will then see somthing like: *** NewUser is now known as HM2K
+
+/me << This usually displays emotions or actions ie:
+/me is typing << It will then display somthing like: * HM2K is typing
+
+/msg << This is used to send a private message to another user ie:
+/msg HM2K Hello << This will open a new window saying hello to the person called HM2K
+
+/whois << This is used to find out information about that person ie:
+/whois HM2K << This will display a small ammount of information about HM2K
+
+/quit << This is used to quit the whole of the IRC network
+
+Well there you go you know how to use mIRC next up will be: mIRC Guide Advanced Version

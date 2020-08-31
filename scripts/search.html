@@ -1,0 +1,61 @@
+<p class="main_title"><script language="JavaScript">
+var NS4 = (document.layers);
+var IE4 = (document.all);
+var win = window;
+var n   = 0;
+function findInPage(str) {
+  var txt, i, found;
+  if (str == "")
+    return false;
+  if (NS4) {
+    if (!win.find(str))
+      while(win.find(str, false, true))
+        n++;
+    else
+      n++;
+    if (n == 0)
+      alert("Sorry, nothing found!");
+  }
+  if (IE4) {
+    txt = win.document.body.createTextRange();
+    for (i = 0; i <= n && (found = txt.findText(str)) != false; i++) {
+      txt.moveStart("character", 1);
+      txt.moveEnd("textedit");
+    }
+    if (found) {
+      txt.moveStart("character", -1);
+      txt.findText(str);
+      txt.select();
+      txt.scrollIntoView();
+      n++;
+    }
+    else {
+      if (n > 0) {
+        n = 0;
+        findInPage(str);
+      }
+      else
+        alert("Sorry, nothing found!");
+    }
+  }
+  return false;
+}
+</script>
+        </p>
+        <form name="search" onSubmit="return findInPage(this.string.value);">
+          <dl> 
+            <dd align="center"> 
+              <div align="center"> 
+                <center>
+                  
+          <p><font size="2" face="Arial, Helvetica, sans-serif">Search this page:</font><font size="3"> 
+            <input name="string" type="text" size="15"
+                  onChange="n = 0;">
+                    </font> 
+                    <input type="submit" value="Search" name="submit">
+                  </p>
+                </center>
+              </div>
+            </dd>
+          </dl></form>
+      

@@ -1,0 +1,52 @@
+Creating an Eggdrop Bot for IRC
+-------------------------------
+*** Note: This is very old ***
+
+Please remember that most eggdrops are run on remote linux machines, NOT on windows!
+
+This means that you will require net access to a remote linux machine,
+Such as a box or a shell (http://www.falcon-networks.com/)
+These usually have to be payed for, or you can get a root (which are usually illegal)
+
+For this tutorial you will need either Microsoft Telnet or Secure CRT
+
+Press the "start menu" and click "run"
+Type "telnet" (without the quote marks) and press ok
+Click "connect" and then "Remote System"
+A dialog will popup, for host, type in the host supplied by your shell provider
+for the port type "telnet" and TermType should be by default "vt100"
+and click "Connect"
+
+Once connected you will be asked for your "UserName" and "Password"
+and then you will be taken to your home directory.
+type "lynx ftp://ftp.eggheads.org/pub/eggdrop/source/1.6/eggdrop1.6.4.tar.gz"
+and follow the on screen instructions
+
+once this file is completly downloaded type: tar -zxvf eggdrop1.6.4.tar.gz
+This might take a while, once this is done, type "cd eggdrop1.6.4"
+Now type: "./configure" and follow the instructions.
+Then type: "make" but this might take a while
+Then choose what directory you want your bot to be in by typing:
+"make install DEST=/home/'username'/'botname'"
+
+Now type: "pico eggdrop.conf.dist" and edit this file according to the settings you want.
+once you have done this save it as: 'botname'.conf
+if you have done all this successfully you should be able to just type:
+"./eggdrop -m 'botname'.conf" and there should be no problems.
+If there are any problems it is most likly to do with, either the names of things, so
+for example, make sure file names are in lowercase and that there are no unusual characters.
+Otherwise it is probably to do with the 'botname'.conf file, so just go through it again, 
+and see if there is anything unusual in there.
+
+Once you are done with this, it should come onto IRC, once there type "/msg 'botname' hello"
+then type "/dcc chat 'botname'"
+
+You will probably need to know the following commands:
+.help
+.adduser 'nick'
+.chattr 'nick' +o #<channel>
+.chattr 'nick' +m #<channel>
+.chattr 'nick' +n
+.chpass 'nick' temp123
+.-user 'nick'
+.whois 'nick'

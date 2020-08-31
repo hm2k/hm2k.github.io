@@ -1,0 +1,100 @@
+ The following is a list of a few free Unix/Linux shell account providers. These can all be accessed via telnet. The level of service and features offered by the providers listed here varies although most are pretty good (considering they arn't getting paid a whole lot). If you have a service or know of one let me know so i can add it to the list. If you're learning Unix/Linix then these are a good place to start.
+
+Arbornet, Inc. - http://m-net.arbornet.org/
+America's First Public Access UNIX Server
+
+Cost: Free Quota: 10mb Location: Michigan - Ann Arbor - Arbornet Inc Background Processes: Unknown IRC Allowed?: No Server: Apache/1.3.27 (Unix) PHP/4.2.2 mod_ssl/2.8.14 OpenSSL/0.9.6a
+
+Shell Details: Could not locate details.
+
+My Comments: Telnet to m-net.arbornet.org to signup
+rootshell.be - http://rootshell.be/
+A service of free UNIX shell accounts, hostings and services - Our goal is to allow everybody to use a UNIX account on a real server.
+
+Cost: Free Quota: 5mb Location: Belgium - Rrcust-be-taken Background Processes: No IRC Allowed?: No Server: Apache (Unix)
+
+Shell Details: No further details
+
+My Comments: No longer allows IRC traffic
+SDF public access unix system - http://sdf.lonestar.org/
+Free Shell Account and Shell Access
+
+Cost: Free Quota: 20mb Location: Texas - Plano - Central Iowa Railroad Background Processes: Unknown IRC Allowed?: No Server: Apache/1.3.28 (Unix)
+
+Shell Details: 20mb home, 20mb web, 20mb mail mutt, pop3, imaps, icq, bboard games, TOPS-20, mud, gopher & more - after account validation - elm, pine, mailx, rmail, lynx, cgi (limited) bash, ksh, tcsh, rc, zsh, tclsh http://yourlogin.freeshell.org hundreds of shell & network utilities
+
+My Comments: Telnet to sdf.lonestar.org to signup
+suburbia public access network - http://suburbia.com.au/
+suburbia public access network, a free internet system in Australia providing web, shell, irc, email and more services to non profit groups and individuals.
+
+Cost: Free Quota: Unknown Location: Australia - Suburbia Public Access Network Background Processes: Unknown IRC Allowed?: No Server: Unknown
+
+Shell Details: # Shell Accounts offering 1000s of text based programs allowing you to use; Electronic Mail, SSH and Telnet, FTP, Internet Relay Chat (IRC), MUDs, MUSHs & MOOs, USENET News, World Wide Web (WWW), # POP/IMAP based e-mail accounts # Webmail # Personal web space for yourself or organisation # Mailing List Server # Virtual Web Site hosting
+
+My Comments: No longer accepting unless you know an existing member or need hosting for a non-profit company
+Cyberunners.org - http://www.cyberunners.org/
+Cyberunners.org Shells for IRC eggdrop - Mysql PHP Hosting Forum
+
+Cost: Free for a month Quota: 20mb Location: Veneto - Venice - Tinit-adsl-lite Background Processes: 1 IRC Allowed?: Yes Server: Apache/1.3.26 (Unix) Debian GNU/Linux PHP/4.1.2
+
+Shell Details: 1BG, IPv6, SSH, Screen, BitchX, Eggdrop, Irssi, Webhosting, PHP, Mysql, FTP - 1 Month Free Trial.
+
+My Comments: You need to sign up to their forum, then you simply pay by $0 by paypal. It works out okay, you get 31 days.
+The Forest - http://www.daforest.org/index.shtml
+The Forest is a free Linux shell system run as a service to people that can't afford a pay shell account.
+
+Cost: Free Quota: 50mb Location: Florida - New Port Richey - Internet Junction Corporation Background Processes: 3 IRC Allowed?: Yes Server: Apache/1.3.31 (Unix) mod_ssl/2.8.18 OpenSSL/0.9.7d PHP/4.2.2 mod_gzip/1.3.26.1a
+
+Shell Details: All shell accounts include the following by default: * Connect via SSH2 * 50MB home quota (includes web space) * 10MB mail quota (inbox&spool - username@daforest.org) * 3 background processes (1 bot max, 1 bnc max) * A personal web page (includes php4, SSI/CGI if *really* needed) * A directory in the anonymous FTP area * WebMail access * POP3 mail access (by request) * Access to Pine, elm, Lynx, BX, IRCII, Micq, emacs, crontab, compilers...etc. * _NO_ ircd, mud, or other server-type programs. More quota can be requested if needed for a good reason. High resource usage is not permitted. Rules are strictly enforced (one warning only).
+
+My Comments: Due to very high demand, the request form has been disabled.
+Smaug - http://www.hobbiton.org
+Smaug is part of www.developerpit.com and is a private system. Any questions about it should be emailed to the bilbo user residing at this site.
+
+Cost: Free Quota: Unknown Location: North Dakota - Grand Forks - Perkins Background Processes: 2 IRC Allowed?: No Server: Apache/1.3.28 (Unix) PHP/4.3.3 mod_perl/1.27 mod_ssl/2.8.15 OpenSSL/0.9.7b
+
+Shell Details: Two background processes are allowed here, unless otherwise arranged with an admin. Tampering with system files or other user's files, probing or otherwise harassing other systems, attempting to gain unauthorized access or privileges on this or other systems, using excessive amounts of bandwidth (more than 700MB a week), mass mailing, significantly degrading server performance, allowing others to use your account, and illegal activity are prohibited. If you have knowledge of a security hole in this system, you are required to report it to an admin.
+
+My Comments: I can't find where you sign up…
+JVDS.com - http://www.jvds.com/freeshells/
+VPS hosting packages
+
+Cost: Free Quota: 6mb Location: England - Newbury - Phatservers.net Background Processes: No IRC Allowed?: No Server: Apache/2.0.48 (Fedora)
+
+Shell Details: You must supply all the information requested otherwise we will not issue you a shell.
+
+My Comments: That’s NO IRC and NO BACKGROUND PROCESSES…
+Liquid.Spod.Org - http://www.liquid.spod.org/subs.html
+What we offer is a Linux(SuSE) telnet/SSH shell account, e-mail via shell or POP3, ftp access, and/or web hosting with CGI support(apache with mod_perl and mod_php).
+
+Cost: Free Quota: 5mb by default Location: United States - Kansas - Ottawa - Rback3.tpkaks Pppox Pool Background Processes: Unknown IRC Allowed?: No Server: Liquid is a P2-233 MMX with 164MB RAM, approximately 24.6G hdd.
+
+Shell Details: We also take special requests for services, based on need. Any one or all of these services are available for non-profit or educational use only. Unacceptable uses include massive data warehousing, commercial mp3's, eggdrop or other IRC bots, seti@home and other similar clients. We don't have set disk quotas, per sae. Quotas are in place, but are assigned individually, based on need. If you don't mention a set amount or give any indication towards what you'll need, the average set quota is about 5 MB per user.
+
+My Comments: Accounts submission is currently DISABLED pending upgrade.
+Polarhome - http://www.polarhome.com/
+polarhome, kids, network, shell, hosting, everything, arpadffy
+
+Cost: Free Quota: 20mb Location: Wholesale Solutions Background Processes: Yes IRC Allowed?: Yes Server: Many
+
+Shell Details: polarhome.com is non commercial, educative effort for popularization of shell enabled operating systems and Internet services, offering shell accounts and other services on all available systems.
+
+My Comments: FTP shells are free, IRC shells require a donation.
+Spunge.Org - http://www.spunge.org/services.html#shell
+Site was down.
+
+Cost: Free Quota: 10mb Location: Texas - Plano - Benjamin Spencer Background Processes: Unknown IRC Allowed?: No Server: Apache/1.3.31 (Unix) mod_gzip/1.3.26.1a mod_throttle/3.1.2 mod_layout/3.2 mod_watch/3.17 PHP/4.3.7 mod_ssl/2.8.18 OpenSSL/0.9.7c
+
+Shell Details: The shell account generally comes with a 5 meg soft quota, and a 10 meg hard quota of disk space. The quota is only a way to keep things in check. If more space is needed, it usually isn't a problem to get more. The shell also comes with email (popable), web space, and FTP space if you need. The shell account is pretty much needed for all other services here. I have several reasons for that.
+
+My Comments: No further details
+Zerged.com - http://www.zerged.com/
+Serving shell, web and email hosting to the web. Free shells are available by reading the rules on our forums under 'Shell Hosting'.
+
+Cost: Free Quota: Unknown Location: Indiana - Mooresville - Jarboe Background Processes: Yes IRC Allowed?: No Server: Apache/1.3.28 (Unix) mod_ssl/2.8.15 OpenSSL/0.9.7b PHP/4.3.8
+
+Shell Details: Could not locate details.
+
+My Comments: All emails will be ignored. So please post in the forums under 'Zerged.com - Free Shell Request' if you have a question. They will be answered alot faster there than an email anyways.
+
+The above list are freeshell providers, if you wish to buy a shell visit the egghelp.org shell provider list.

@@ -1,0 +1,5 @@
+Problem:
+Task 'e@mail.com - Sending and Receiving' reported error (0x800CCC0F) : 'The connection to the server was interrupted.  If this problem continues, contact your server administrator or Internet service provider (ISP).  The server responded: +OK 2254 octets follow.'
+
+Solution:
+Turn off norton antivirus email scanning/protection.

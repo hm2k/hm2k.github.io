@@ -1,0 +1,2805 @@
+FAQ/Walkthrough 	Dec 6 2004	grayfox_2510	153.8 kb	1.5
+
+All trademarks and copyrights contained in his document are owned by their 
+                 respective trademark and copyright holders.
+
+Version 1.5
+
+           _____ _              __                           _ 
+          /__   \ |__   ___    / /  ___  __ _  ___ _ __   __| |
+            / /\/ '_ \ / _ \  / /  / _ \/ _` |/ _ \ '_ \ / _` |
+           / /  | | | |  __/ / /__|  __/ (_| |  __/ | | | (_| |
+           \/   |_| |_|\___| \____/\___|\__, |\___|_| |_|\__,_|
+                                        |___/                   
+
+                            __   _____     _     _       
+                      ___  / _| / _  / ___| | __| | __ _ 
+                     / _ \| |_  \// / / _ \ |/ _` |/ _` |
+                    | (_) |  _|  / //\  __/ | (_| | (_| |
+                     \___/|_|   /____/\___|_|\__,_|\__,_|
+
+
+      _____ _                   _       _     _         ___            
+     /__   \ |__   ___    /\/\ (_)_ __ (_)___| |__     / __\__ _ _ __  
+       / /\/ '_ \ / _ \  /    \| | '_ \| / __| '_ \   / /  / _` | '_ \ 
+      / /  | | | |  __/ / /\/\ \ | | | | \__ \ | | | / /__| (_| | |_) |
+      \/   |_| |_|\___| \/    \/_|_| |_|_|___/_| |_| \____/\__,_| .__/ 
+                                                                |_|    
+
+
+The Legend of Zelda - The Minish Cap (ASCII title provided by Naomi Frosdick).
+
+This FAQ/Walkthrough is copyright of Alan Quirino (grayfox_2510 (at) hotmail 
+(dot) com).
+
+Ok, so let us go over a few basic things...
+
+Ownership, Borrowing Info, Contributing, etc.:
+
+1) Please do not take any of this without my consent or at the very least,
+   without a written gratitude in wherever you posted this. I had to spend
+   quite some time getting all there is to this, or at least as close as
+   possible, and well, if you have written any document of this kind and
+   someone took something without gratitude then you must know it sucks... 
+
+2) Taking up part of the previos point, if you wish to take some information
+   from my guide, then make it reasonable... I mean, don't take a whole 
+   section. Nonetheless, give credit where it's due; golden rule of 
+   GameFAQs.com. I don't mind if I'm not told, as long as I'm given credit
+   for what I did to contribute.
+
+3) So, you notice a similarity between my guide and a piece of someone's else
+   but it looks out of place? What do you do? Simple, just let me know. 
+   It might be a coincidence, it might be plagiarize, who knows, but I'll 
+   contact the other author and find what's going on. Thank you for the 
+   support if you do notice this by the way.
+
+4) I try, but perhaps my efforts alone are not enough and thus I end up 
+   missing something here or there. Contributions are of course welcome, but
+   be sure to be looking at the latest version, which is always found here:
+   http://www.gamefaqs.com/features/recognition/8373.html
+   Or just to be sure, hit Ctrl+F5 while viewing this file to ensure it's not
+   a cached version. Also, be sure to put "Yakusoku no Chi Riviera" or the 
+   like as the subject of your mail. If you wish for me to put you under a
+   special name, include so. I normally also include e-mails just for
+   reference, but if you want otherwise, then please let me know.
+
+Permission, Posting, etc.:
+
+1) First and foremost, I am NOT allowing other sites to post my works. The only
+   sites that are allowed to host this is GameFAQs.com, and on the rare 
+   occasion GameSpot, but that's since they, and only they can directly link
+   to the former site. So save us both our time and do not ask for permission
+   to post this.
+
+2) So, assuming you inded had permissiong to post this... Do not change the
+   format, the font size, the font... Nothing. Why? Simple, the whole basis
+   of this guide is based on the current format, so changing it will simply
+   corrupt the whole file or make it hard to read. 
+
+3) Pay note that this is a free FAQ/Walkthrough. I make nothing out of this,
+   so why should you? In other words, don't charge people for this. If I
+   allowed this to be on display in your site, it must be free. Do not go
+   around distributing this asking for money either. In short, don't get
+   money at all for this...
+
+4) Yes, I do get questions about this... You are free to download this and
+   store it on your computer. No problem with that, just be careful with the
+   format unless you want to have trouble reading. But if you want to e-mail
+   me for any reason, make sure you are using the latest version...
+
+Mailing, Inquires, etc.:
+
+1) Ok, first of all, go to the TOC (Table of Contents). Then look at it
+   again, and again a third time. Sorry for stressing that out, but most often
+   the answers to your questions can be found in a particular section of the
+   guide. Make sure you are also viewing the latest version, which will always
+   be found at:
+   http://www.gamefaqs.com/features/recognition/8373.html
+   Hit Ctrl+F5 to make sure you aren't seeing a cached version. That aside,
+   if you still need to contact me for an inquire, then put a subject relevant
+   to the game such as, but not limited to "Yakusoku no Chi Riviera."
+   {No Subject) mails will be deleted 90% of the time, so...
+
+2) In addition to the previous point, I reserve the right to answer or not, and
+   as such, I will only answer questions that I missed to detail here at all,
+   or extreme cases. Mails asking about information that is already found here 
+   might, and probably will end up in the trash can on my mail account. 
+
+3) A few things though, use proper grammar and spelling for all that is holy.
+   Even if the answer can be found here, the odds of me answering a mail like
+   those will raise if you took the time to write properly. Now, I understand
+   not everyone knows English, heck, even mine ain't that good, but if so,
+   say so. Is that so much to ask?
+
+4) Lastly, I check my mail around twice a day. Some times even more, but on 
+   the rare occasion, allow up to two business days for a reply. If they are
+   gone and you haven't heard back from me, then either the mail got lost, both
+   mine or yours. That, or I ignored your mail for X reason, such as, but not
+   limited to: Crappy grammar, inquires already answered here, etc.
+
+So what if it's a long TOS, it needs to be done nowadays... *Rolls eyes*
+_______________________________________________________________________________
+-----------------------------------Contents------------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+BE SURE TO USE THE [] WHILE SEARCHING WITH THE KEY, OTHERWISE YOU MIGHT, AND 
+PROBABLY WILL LAND IN ANOTHER PLACE.
+
+##. Section                       [Key] Status                        Updated?
+
+00. To do & Updates               [000] Some items to do...           V 1.5
+01. Story                         [001] Done                          V 1.0
+02. Controls                      [002] Complete                      V 0.5
+03. Walkthrough                         Updated name references       V 1.3
+ 03.01. Big Earth Element         [031]          
+ 03.02. Burning Element           [032]          
+ 03.03. Wind Ocarina              [033]          
+ 03.04. Water Drop Element        [034]
+ 03.05. Wind Element              [035]
+ 03.06. Final Battle and More     [036]
+04. Heart Pieces                  [004] Complete?                     V 1.3
+05. Kinstones                   
+ 05.01. Types                     [051] Done                          V 0.8
+ 05.02. Fuse List                 [052] Complete!!                    V 1.3
+06. Item List
+ 06.01. Weapons, Utilities, Etc...[061] Updated                       V 1.2
+ 06.02. Key Items                 [062] Missing some items            V 1.1
+07. Tiger Scrolls                 [007] Complete                      V 1.1
+08. Figurine List                 [008] Complete                      V 1.0
+09. Sidequests                    [009] Updated                       V 1.5
+10. Thanks/Copyright              [010] So far so good                V 1.5
+_______________________________________________________________________________
+[000]------------------------00. To do & Updates-------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Ok, basically, this section denotes what I still have to finish (In more depth 
+than the above section) and with what I could use help.
+
+To do:
+ -> Perhaps some sidequests...
+
+Updates:
+ -> 1.5: Updated TOS and the SideQuest section.
+ -> 1.3: Hmm... Ok, it seems the Heart Piece section is complete... Other than
+         that, I corrected some stuff here and there.
+         Added the Sidequests section.
+ -> 1.1: Ok, done revising the walkthrough for name changes I believe. Still
+         missing that deam Heart Piece. I also corrected the Tiger Scrolls
+         section. Apparently I duplicated an upgrade with different stuff
+         for some reason... I got all the Kinfusions done!
+ -> 1.0: European version released. Working to change all the names, add the
+         story summary, redo parts of the walkthrough, add the info for each
+         figurine... Oh yeah, also updated stuff like the Tiger Scroll
+         section. Just one more heart piece to go and 2 Kinfusions left~
+ -> 0.9: Some more hearts and all the figurines, plus some more fusions.
+ -> 0.8: Added a few more figurines, started the Kinfusion list and updated 
+         the Skills section in which I apparently missed one and some more
+         Heart Pieces.
+ -> 0.7: Added almsot every figurine and their translated names with as much
+         as my crappy self-taught Jp allowed me to... And my programs.
+         Some more Heart Pieces.
+ -> 0.6: Added some more heart pieces, added the Skills section and filled in
+         some items I was missing.
+
+ -> 0.5: Started it all... Did all the walkthrough in two days. Yes, two days 
+         and then started to do the rest.
+_______________________________________________________________________________
+[001]-----------------------------01. Story------------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+A long, long time ago...
+When the world was on the verge of being swallowed by shadow...
+The tiny Picori appeared from the sky, bringing the hero of men a sword and a
+ golden light.
+With wisdom and courage, the hero drove out the darkness.
+When peace had been restored, the people enshrined that blade with care.
+_______________________________________________________________________________
+[002]----------------------------02. Controls----------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+-> D-Pad
+   -> Moves Link around, fairly obvious. 
+   -> Moves the cursor around in the menu screen and such.
+
+-> A Button
+   -> Talks to NPCs if in range.
+   -> Uses the item under the A button.
+   -> Assings items to the A button.
+   -> Swims faster.
+ 
+-> B Button
+   -> Uses the item under the B button.
+   -> Assings items to the B button.
+   -> Backs out from certain screens.
+   -> Makes you hide underwater while swimming.
+
+-> L Button
+   -> Uses the Kinstone bag when possible.
+
+-> R Button
+   -> Does the listed action. Basically, your action button. The situation 
+      modifies the command.
+
+-> Start Button
+   -> Pauses the game, bringing up the menu screen.
+
+-> Select Button
+   -> Makes link talk to his hat.
+_______________________________________________________________________________
+-------------------------------03. Walkthrough---------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Now, before we begin, let me say that I first wrote this based on the Jp
+version. I then started to go again through the game in english and thus
+rewriting most of this. But, if I left some terms from the Jp version remain 
+here, please let me know.
+
+For now, if you see Pikoru, it means Picori. MAV was supposed to be the Gust
+Jar, and the Patch Cane is the Cane of Pacci. (Which strangely enough, Pacci
+written in katakana is basically patch, but...)
+_______________________________________________________________________________
+[031]---------------------03.01. Big Earth Element-----------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Ok, first things first, we gotta start a new file... So load up the catridge, 
+start and make a new file. I named my character Link just for the sake of 
+obviousness... 
+
+After the first scenes detailing the story ends you'll see Zelda go inside the
+house there and speak to the Master Smith about how she wants to take Link to
+the Picoru Festival. You'll wake up soon afterwards. Head down and take the
+Smith's Sword. Before you go out however, take the 20 rupees there. And go out,
+follow her north to Hyrule Town.
+
+Once in Hyrule Town, follow her as well, talking to her wherever she stops. 
+She will then win you a Shield. After modeling it, feel free to equip it. And 
+take Zelda to the northern part of the town to reach the Hyrule's Castle 
+Fields. Go north and deflect the nut of the Deku Scrub using your shield. 
+Proceed north to the castle. After the few scenes, and the introduction of this
+game's villian, well, just watch... It's name in JP is Gufuu by the way and
+the name for the english version is Vatii.
+
+Once it's over and you are sleeping, hit A to wake up and exit the room. After 
+some more dialogue you'll get the Broken Picori Blade, and a Smith's Sword (The
+latter which you can now equip and use). You will also get a map, in which I'm 
+sure you noted the red, flashing checkmark. Keep heading south on the castle to
+leave it. Head south in the castle field and surprise, you can't go through... 
+So head right from the carpenters instead and cut the small trees with a quick 
+swipe to go through.
+
+Welcome to LonLon Ranch.
+
+Start heading down, being careful with the mole enemies. Go past the entrance 
+to the farm and down another screen. Go down the set of stairs directly in 
+front of you and keep heading south until you see a bridge to your right. Take
+it to reach the... Minish Woods. Head right from the start until you 
+have the choice to head north or south, you can't do anything heading north so 
+take the south path instead. 
+
+Once you reach the stump head left and immediately up then left again to hear a
+call for help. First though, head left for a heart piece, then head 
+back to the stump and straight north to reach the area. Save the weird talking
+hat from those two enemies. After the talk start heading south, the hat will 
+follow you. Keep heading south, and repeat it again to finally make it go on 
+top of you. Now head south to the stump. By the way, his name is Ezlo, or 
+Ezero if you wish from the Jp version.
+
+So basically, jump on the stump by moving onto it and once you are atop it, 
+press the R button to shrink yourself. At this size, and at this current point 
+of the game, you can't go into shallow waters, it'll be the same as if you'd go
+into deep waters as normal Link.
+
+Proceed left and into the wooden log with a hole carved in it. Time yourself to
+board the leaves floating in the water and head north to the Minish Town of
+the Pikoru of course. Head north to trigger a small event then head all the 
+way north to a house surrounded by water. Talk to the Picori inside, his name
+is Festari. He mentions how you might have trouble with their language and that
+a Jabber Nut could help you.
+
+Go right and take the path down, using the bridge that should be to your right 
+almost immediately to enter a house. Go north and push the box to a side to get
+the weird looking red seed, the Jabber Nut... So go back to the Picori 
+we just talked to. Head out and go left now to a house with a set of green 
+stairs. Climb up and talk to the sage-looking Pikoru. He's actually the
+elder of this village and will tell you that to reforge the blade, you will
+need the four elements. He will then mark their locations on your map.
+
+Head back to the middle house but take the upper right path to reach a Heart
+Piece, then go back Festari and he'll move aside, granting you passage to
+the Deepwood Shrine.
+
+First, head north and push the statue aside to enter the doorway. In the next 
+room kill the slugs and then step on all the switches to light the torches. 
+Open the chest for a small key and use it on the door to go through.
+
+In the next room head north to the lever. After a quick explanation, use the R 
+button to pull it and move back to make the bridge appear. Grab the mushroom 
+with the R button as well and move back as much as you can, then let go of the 
+directional pad (Keep holding down the R button). This will launch you to the 
+other side. Remember this for later use, you'll see more of these mushrooms.
+
+In the next room first head right to a set of stairs, go up them and after 
+another talk hit the switch. Then go down and inside the barrel, taking the 
+other exit inside. You can't harm the mushrooms for now, so avoid them. Simply 
+go down to be able to go up the stairs, move the statue over one of the 
+swtiches and step on the other to liberate the barrel from its restrains.
+
+Go inside the barrel again. This time when you move north or south the barrel 
+will spin. Directly from where you are start walking south and eventually the 
+barrel will spin enough so you'll hit the exit. Head west from there to the 
+next room. Grab the mushroom and pull it back all the way, go up the stairs 
+and get the Dungeon Map. Then go back down and jump off.
+
+Grab the mushroom but pull it only until the first mark in the floor ends, this
+will launch to the place between the two arches.
+
+Enter the left room and hit the switch if you wish, even though it won't be of 
+use. After another explanation, kill the enemies and push the vase into the 
+switch (Read: push). Cross to the other side and enter the next room. Push any 
+statue into the switch next to it. Then pull back the other one (Grab with the 
+R button) just a space, then go to the other side and pull it back into the 
+switch so you'll be inside the square when the chest appears to get a key. 
+Head back to the barrel room and take the upper right exit inside the barrel 
+(Spin it if necessary).
+
+Head right and pull the mushroom only until the mark in the floor ends. Then 
+hit the switch to make the bridge extend. Then pull this mushroom all the 
+way back and enter the door to your right. Kill all the slugs and pull the 
+right statue all the way back, then push the left one into the switch to go
+through.
+
+Kill the 3 beetles to get a key and proceed left. Now head up the stairs and 
+jump off to your right. Go through the arch and go through the stairs at the 
+top of the room. You can't do much here, except grabbing the big chest with 
+the Compass inside.
+
+Go back up and enter the left room. Careful here, there are mushrooms hiding in
+the spore-covered floor. Hit the switch and keep moving left to unlock the door
+and prepare for a mini boss.
+
+Basically, a giant caterchipillar. Hit the face with your sword first and it'll
+petrify. Once the tail goes into a red color unleash as many slashes with your
+sword as you can. After it recovers the whole worm will go red and start 
+running like crazy. Once it cools down as well repeat the process. Open the 
+chest that will then appear for the Gust Jar.
+
+This thing is basically a vacuum with a dark hole inside. Simply hold down the 
+button you have it equipped to to start sucking anything inside. Try it out in 
+the spiderweb blocking the southern exit of the room. You can also suck the 
+spores from the floor and if used to suck in the mushrooms, you'll dazzle them,
+you can hit them at this time to kill them. 
+
+If you headed south, you'll get a Heart Piece. In the room adjacent to the 
+miniboss one, start blowing the spores in the floor right when you start. You 
+should uncover a switch that'll make a mini chest appear that contains 10 sea 
+shells (I'll explain their use later). Two squares to the left there's another
+switch, which will also give you 10 seashells.
+
+If you go right in this room and suck in the spores between the torches you'll 
+uncover another switch for a chest with 20 seashells. Now head back to the 
+left.
+
+If you head to the door in the south of the south, there's another switch 
+covered in spores, exactly 3 squares away from the other switch.
+
+This will make a blue portain appear in the structure above you. Head back to 
+the entrance by going south from this room and take the portal for another 
+Heart Piece. Take the panel back to the entrance and clear the left staircase 
+from the spiderweb to go in. Push the block below the chest to get 20 rupees. 
+Back to the barrel room, take the upper left exit inside the barrel and clear 
+the spores in the floor for a switch to reach a chest with 10 seashells.
+
+Now go back inside the barrel. You should have noticed an opening in the 
+middle covered with a spiderweb; clear it, and then fall through while the 
+opening is exactly in the middle of the screen.
+
+See the lillypad in front of you? Use the Gust Jar to pull it in, then board 
+it and use the air projectiles the Gust Jar sends to move. 
+Keep following the only path and take the right passage when possible. Go
+up the stairs and push a vase atop the switch, the take the new path that 
+opened up with the lillypad. In the next screen move the lillypad all the way 
+on the water, so you can use it as a bridge so that when you press the switch 
+with a vase, you can use the lillypad to cross the water in order to grab the 
+chest with another Small Key.
+
+Now, using the lillypad again, go back to the fork where you took the right 
+path (right before the place where you had to push a vase atop a switch in 
+order to go through). This time however, keep going north and left right away 
+for a locked door.
+
+In the next room, pull the mushroom to your south and jump to the floor in the 
+north. Here, stand in front of the mushroom and use the Jar to suck it in and 
+then let go of the button so you'll be thrown to the other side. Repeat this 
+process until you land in front of the big chest and get the Boss Key. Press 
+the switch here to make a red portal open up.
+
+Clear the spiderweb on the right stairs and go up. Use the Jar to suck in the 
+mushroom and head left, then go down and use it again to head to the boss room.
+
+Ok, big slime... Right... First, use the Jar at the base of the enemy to suck 
+all that jell-o into nothingness. After a while that thing will lose balance 
+and will drop, use the time to slash it's head to kingdom come. Repeat. You'll
+get the Earth Elemental. Grab the Heart and take the green panel.
+
+Go back to the Picori town and to the elder in the upper left part of town. He
+says that you should look for Melari, a Minish of unsurpassable knowledge in
+these things apparently. He will then open a path for you to leave town.
+
+Enter the mushroom house out there to receive a Bomb Bag. Go back to normal 
+size in the stump there. Head north and activate the Wing Crest there. You 
+won't use this for a while however. You'll need the Ocarina of Windfirst 
+and that's a long ways off.
+
+Head left and down, break the rocks with a bomb and change screens to your 
+left. Head north (Don't bother with the mushroom for now) and go left. Bomb 
+the wall here if you want to get 20 seashells. Go up and and bomb the rocks for
+a quick route back to the forest if you wish, but head left instead for the 
+fields of Link's house. Go up to town and watch the pseudo-cat-looking person 
+give a Kinstone bag. Once the thought bubble with the heart appears, use the L
+button to open up the Kinstone combination screen. You only have one Kinstone, 
+so use it.
+
+Well, just for short, Kinstones are basically medallions. You get them in 
+chests, killing enemies or from grass and stuff you can cut/break. Some persons
+have those thought bubbles; use the L button to open up this screen and try to
+make a match with your Kinstones and the one the other person has. The normal 
+colors are red, blue and green; these, when making a match can do one of the 
+following: Open up the vines in a tree or making an entrance somewhere (denoted
+by a cave symbol in the map), opening paths (an arrow pointing up), creating 
+golden enemies (Evil-looking egg in the map), making mini chests appears 
+(scrolls on the map), making a giant plant grow to the clouds, filled with 
+items (a plant symbol on the map) or creating a special NPC or making one need 
+help (a person in the map). There are also golden Kinstones, but they are used 
+for special situations.
+
+Ok, once you have used the Kinstone you just got, you should see that a cave 
+symbol appeared in the map of Link's house. Go there if you wish, there's a 
+Heart Piece there. By the way, I won't really go around mentioning Kinfusions
+in the guide, since they can be so random. Instead, I list all the Kinfusions
+that you can do by the end of the game. And yes, you can get them all even
+by that time.
+_______________________________________________________________________________
+[032]-----------------------03.02. Burning Element-----------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+So now we start with the next elemental. On town, go directly left from the 
+entrance, inside the house with a chick on its roof. Talk to the teacher 
+inside, his name is Swiftblade and he will teach you the Spin Attack (The 
+usual, hold down the sword button to charge up and release). 
+Go up to the square; see the puffs of dust piled up? Use the Jar to clear them 
+up. For now, we are done in town. Head up the stairs and to the left. You 
+should see a guard, first, talk to him then do a Spin Attack in front of him 
+to make him let you go through.
+
+Immediately in the next area head to the wooden stairs. Head down and blast 
+down the wall to the right. Make sure you have 20 rupees and use your shield to
+deflect the Deku Nut back to the Deku Scrub, then buy a bottle from him for 20
+rupees. Go outside and up, then head left when you can (just before the bridge)
+and then down between the rocks to go a screen to the left.
+
+Welcome to Mount Crenel. Fill the bottle with water and use it on the seed 
+in the hole to make it grow. Follow the path around and be careful of the 
+white, spiny things, as they can hurt you (You can suck them in with the Jar 
+though). Head right as you hit a fork and bomb the wall between the two fence 
+pieces. 
+
+Go inside and up the stairs. Bomb the stone block before going into mini and 
+head to the green water pond. Fill up your bottle with this Crenel Hot Spring
+Water. Now go back, grow up and head down and out to the fork. Take the 
+left this time. If you ran out of bombs, take the left entrance and deflect
+the attack of the Deku Scrub in order for it to sell you 10 bombs for 30 
+rupees.
+
+If you are good, them bomb the cracked wall you should have seen moments ago 
+and go inside. Kill the Keeses and use the mushroom. Go up and head right to 
+the exit. Once outside, jump into the mini-hurricane and you'll be floating for
+a while with your hat as a parachute. Float to the left and into the other 
+ledge. 
+
+Here, go left and ignore the stairs for now as you keep heading up until you 
+change screens. Bomb the space between the two trees to open a secret entrance.
+Inside you can get a Heart Piece, 50 rupees from the right chest and a blue 
+Kinstone. Now go back out and to the stairs we dissed a moment ago.
+
+Go up and to the right. Use the Jar to suck in the spore-thingies here. You 
+should find a stone suitable for going into mini. Before you use it, suck in 
+the spores above you to uncover a hole in the ground for a Kinstone. Now go out
+and use the stone to shrink. If you want another piece of a blue Kinstone, 
+then head right once you are chibi and go up the vine and follow the only 
+path there for a chest.
+
+Otherwise, just go back to where you saw that green seed and enter the place. 
+Yes, believe it or not, you can carry the seed as chibi (Use the R button when 
+walking against it). Carry it out and place it on the hole in the ground then 
+use that green water I told you to collect before, of course, once you have 
+grown back to your normal size.
+
+Once up, first head to the left and up the stairs, and bomb the wall between
+the two rocks, just slightly right from the sign to get a Heart Piece and some
+faeries.
+
+Go back down and start heading right all the way until you see a bridge. Bomb 
+the wall on the other side and go in. Get another blue Kinstone from the chest 
+and head upstairs. 
+
+Careful, the gray slimes turn into spike balls, and you can't hurt them at that
+time. Simply kill them if you wish but bomb the blocks to get to the other 
+side. Back outside, use the tornadoes again and head left. Then up the ladder.
+Head right and bomb the wall for another Deku Scrub. You better have more than
+40 rupees, 'cause you are gonna need 'em.
+
+Buy the Grip Ring from it. With this, you can climb those walls now. Now head 
+back left and down, then jump through the left ledge. Head west and you should 
+see one of those walls. Being careful with the falling stones, start climbing 
+it. 
+
+First of all, head all the way right and bomb the fairly obvious entrance to 
+reach a Great Fairy. Throw a bomb into the pond and choose the 3rd option 
+(Neither) to upgrade your bomb bag to 30. Go out and head up. In the next 
+screen head right for a mushroom. Use it.
+
+After the rain starts and we get a better background music (In my opinnion 
+anyway), use the stone to shrink yourself and head south to the mini passage. 
+Careful of the droplets, they can hurt you while you make your way east. Once 
+you are out, use the stone to go back to normal size and push the stone 
+directly next to the hole. Then get the stone on the far right to fit in the 
+hole directly right from the first shrinking stone. And head down the ladder.
+
+Head down being careful from surprise rushes from those things. Then push the 
+upper block.
+
+In this puzzle of sorts, push the block on the south and then push the block 
+that's slightly above and to the left so you can push the one that was 
+previously adjacent to it to the north. Before we go further, push the block 
+directly south from there. Go around and push the lower one of the two blocks 
+together, then the leftmost of the line of blocks. Then the one on top of them,
+move the one directly below you and then the final one to go through (Did any 
+of that made sense?).
+
+Make your way right and enter the next door. Now, before you think of the 
+mushroom, stand directly north of it and use the Jar to suck in the vase so 
+it'll be out of the way, then rocket yourself to the other side with the 
+mushroom, go up.
+
+Go for the vases if you need bombs. Then go south and stand in the piece of the
+bridge there, place down a bomb and use R to pick it up, then throw it to the 
+other side so it'll hit the switch. Almost there...
+
+In the next cavern you can enter, move the rock around to fit in the hole; then
+go down. At the bottom, where there are two blocks together, push the bottom 
+one to the left and the upper one out of the way. Then simply move the upper 
+one of the next set to get yet another blue Kinstone. Head out and we are 
+there. Go chibi and enter the mini passage you can see to reach the Mountain 
+town of Melari (Melari's Mines).
+
+Yattoko~ Yattoko~
+
+Just keep heading down in a clockwise fashion until you reach the furnace in 
+the middle. And talk to the giant Picoru there. 
+
+Yes, he is Melari and he'll fix you your Broken Picori Blade. But while they
+are working, your hat suggests you go looking for the next element. So head 
+up and talk to the Picori blocking the exit. You will be able to go through. 
+
+Grow back to normal size and activate the Wing Crest, then go up to reach 
+the 2nd dungeon: the Cave of Flames. 
+
+Once inside, head right and hit the bombs but be careful. They go totally nuts
+when hit and start running around. If you hit one a second time, its legs will
+go off and you can carry it, but be warned they have a short fuse. Bomb the 
+wall you see there. In the next room, use your shield to flip around the 
+enemies, then whack 'em crazy with your sword. Grab the Compass once you are 
+done and head left.
+
+Careful with the rupees. The lower, middle one is actually a green Like-Like, 
+and they got some endurance. Anyway, head down the stairs. Keep heading left 
+and up the steps. Then follow the railroad track, go down and right at the 
+fork. 
+Board the mine cart and watch. In the next room keep going left and bomb the 
+wall at the end, either with bomb enemies, or with yours. Kill all the enemies 
+here to make a shrink stone appear.
+
+Go chibi and use the upper, mini exit. Head right all the way through the mini 
+holes and south when you can to change screens. Go left in order to jump down 
+and use the shrink stone to grow up. You can clear the fire with a quick swipe 
+of your sword by the way. Go up and grab the chest for the Dungeon Map.
+
+Start heading south, but beware of the rocks in the lava. They will collapse 
+when you stand on them, so move quickly. Go to the chest for a blue Kinstone 
+and press the switch. Then make your way to the door. Use the moving tile to 
+get through and don't kill the worms by sending them to the lava. Instead, use 
+them as stepping stones to fill the holes. The chest there contains 50 rupees. 
+Go up the stairs and don't fill that hole. Go right and down and use the 
+tornado there, and the other to go around. Then move the block out of the way 
+and push the chest atop the mini pillar into the hole so you can get the chest 
+for a Small Key. Oh yeah, press the switch and go through.
+
+Head left and board the mine cart again then open the door there and hit the 
+switch. Ride the cart again. Go left and head up the room I told you to avoid 
+as chibi. Walk on the track to head right, then bomb the southern wall to get
+a Heart Piece and go back up twice.
+
+Jump down the ledge and destroy all the spike slimes. With this you'll get 
+the Patch Cane, or as I prefer, the Golden Rod, but the official name is the
+Cane of Pacci so.... With this, you can hurl shiny, yellow balls in a 
+straight line. If they hit certain objects, they'll flip around (like the 
+cart we saw just before), if used on a hole in the ground, they'll fill it 
+and if you drop in and jump out, you'll jump higher. Nifty thing indeed. 
+
+In the next room, see that tile with spikes? Step on the first one and use the 
+Cane of Pacci to flip it around and move quickly. Then use it to fill the hole
+and jump upwards. Go down and turn the cart around. Push the chest atop the 
+pillar into the hole for another Small Key. Ride the cart back and head north,
+jump down and unlock the door there. 
+
+Ignore the switch for now and go chibi. Make your way left avoiding the green 
+spike balls. And go all the way to the other shrink stone. You saw those red 
+things right? Well, now they will pursue you as you make your way back. Once 
+you are done, use the Cane to flip the cart and ride it. Then hit the 
+switch, and ride it again.
+
+Use the grubs there to fill in the four holes at the bottom, the pull the 
+switch on the pillar to the top hole and hit it. Go up the steps and to the 
+next screen. 
+
+Jump down the northern ledge to get a blue Kinstone, then push the block out of
+the way, then use the Cane to fill in the hole below the chest to get a 
+green Kinstone. Take the right exit. Use the Cane on the moving tile to 
+flip it around and take it so you head north to hit a switch that'll make the 
+red portal appear. Then go back to the entrance and board the tile to the south
+and do the same with the next 2 you see. Before you board the next tile, flip 
+around the top vases. Then make your way to the upper exit.
+
+Go up the steps and jump down the ledge and head right. Go to the chest on the 
+far side for a green Kinstone. Then head back, fill up the upper hole and jump 
+to the other side. Use the tornado to go to the northern ledge and follow the 
+path. Use this next tornado to go slightly to the left as you head south to 
+reach another ledge.
+
+Use the tornado and head south. Use this next one to reach the small place 
+filled with fire. Clear them and use the Patch Cane to jump up and use the 
+tornadoes to the left to reach a chest with a green Kinstone. Use the next set 
+of tornadoes to reach the Boss Key. You have the door just north of you, so go 
+on.
+
+Fill up with life if you need and equip the Cane and Sword.
+
+Welcome to Gleerok's lair.
+This boss is fairly easy, just try to make a shot from the Patch Cane hit its 
+back so the shell will flip around and harm him. It will then lower its neck to
+the ground. Use this time to go up it and attack like a madman at the romboid 
+thingy on its back. After each attack session this thing will spit loads of 
+fire, which you can clear with your sword... Nonetheless, it's annoying... 
+Repeat this process until you get this guy down.
+
+You'll get the Fire Element and another Heart. Take the portal to head out 
+and go back to the Mines, back to the blacksmith to get the White 
+Sword. Melari then explains about infusing your sword with the power of the
+elements and all that. So hear the Picori say Yattoko~ One more time before 
+you leave to Hyrule Castle.
+
+Once you are in keep heading straight north to the next room and take the right
+path to find the stairs going down. Head south and left when you can to take 
+the exit you should see to the backyard. Go north and enter the Elemental
+Sanctuary. Go to the next room, stand in front of the pedestal and user your
+sword to charge it up.
+
+Time to do some cloning! Simply stand in one of those glowing tiles and charge 
+your sword to the max, a small orb will appear in the panel and then you have 
+to move to the other panel without letting go of the sword button. This will 
+create a clone of you. In short, if this clone were to collide against a solid 
+object, it'll disappear. Pressing the R button, taking damage, or special 
+attacks and destroy your clones too, but right now you can only make one.
+
+Head down and use the cloning technique so you can your clone hit both switches
+at the same time to go out. Once you are back at the Castle Fields... Mini boss
+time. Simply hit these things from the back. Once you are done, you'll will see
+how Gufuu became what he is, and about Ezero, your hat. Go back to town and 
+with the trainer to learn a new technique, which is in fact the ability to 
+break pots with your sword.
+
+Feel free to do some other stuff, like going all the way right with the cuckoo 
+girl and get some cash. Ok, things get weird now... Remember the place where 
+you got the first bottle? Go there again but instead, use the cloning technique
+to push the 2x2 block there. Go up the ladder and bomb the wall for a red 
+Kinstone. Head south and go inside the tree there, and speak to the person 
+there if you wish, but head east and down a screen for more events.
+
+I suggest you head down to push the rock to the right so you fill the hole. 
+Then go back up and push the other rock right above the stairs to fill another
+hole. There's a fairy pond between the two rocks, if you wish to bomb it open.
+Go back down again and head left all the way and up to reach the Castor Wilds.
+After Ezlo speaks, go back to Hyrule Town and go inside the shoe shop (The 
+upper left one in the middle square). The person there should fall asleep. 
+Shrink yourself and go up the desk to speak to the Picori there.
+
+They want you to go speak with Syrup, and they'll place a checkmark on your 
+map. Go to the LonLon Ranch and shrink yourself in the stump above the house 
+and make your way in. Go back to your normal size and break the vases for the 
+key. Shrink yourself and go out, then to normal size and speak to Talon. 
+They'll open the house and you can now go through. Go slightly north and the 
+left to go inside a cavern. Use the cloning technique to get a chest with 50 
+rupees.
+
+For now, head right and you should see a tornado. Take the upper path and 
+follow it to a hole. First, push the rock you can see to fill one up. If you 
+want a Heart Piece, head left and up to another hole, fill it with the Cane and
+jump up. In the next screen, head to the right going down the stairs and go 
+right for it. Once you are done, head back to the previous screen.
+
+Using the Cane to fill up the hole to your right, jump up and shrink yourself, 
+then head right and enter the hole in the ground for a red Kinstone. Go back to
+your size and use the tornado to reach the ledge directly to your south. Go 
+right and use this other tornado to go south all the way, passing a small water
+patch. Head right to Lake Hylia. Just head south and then left to go back to 
+Chiroria's Forest. Head down and up the stairs, follow the path and enter the
+house. Buy the mushroom for 60 rupees and head back to the Hylia's Lake screen.
+Take the left path here so you can push another rock into its place. Then go 
+back to the shoe shop... Oh, if you have the money (80), I suggest you get the
+upgraded rupee bag at the shop. This can hold up to 300. 
+
+Oh yeah, go all the way north of town and to the right to one of those stone 
+wings. Activate it.
+
+Now, in the shoe shop, simply press A or R in front of the guy to wake him up. 
+You'll get the Pegasus Boots out of this. With these, you can dash into trees 
+(some) to make the leaves sprawl out so you can use the stumps to shrink 
+yourself. Be sure to go back with Swiftblade the trainer to learn your third
+Tiger Skill.
+
+So, remember the Castor Wilds? Let's go back there.
+_______________________________________________________________________________
+[033]-------------------------03.03. Wind Ocarina------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Here, if you try to walk on the swamp you'll simply sink. Use the Boots to dash
+instead. Go left from where you begin and go up the vine you see there. Take 
+the upper left bridge and once you reach the next stop, go down the vine and 
+into the opening there. Simply follow the path and once you see the chest, 
+well... It'll go *poof* leaving you instead with an armed knight. These guys 
+block your attacks, so you gotta catch him offguard, like when he attacks. Hit 
+him enough times to make him go *poof* instead and give you back the chest for 
+a golden Kinstone. Golden Kinstones are special, they are the only Kinstones 
+used for story purposes.
+
+Head back out. Go up the vine there and take the upper right bridge. Head down 
+that vine and go left to another swamp which you should cross using the boots. 
+The spiny vines won't hurt you if you mad dash into them. You should see a 
+shrink stump; use it and enter the small passage on the left and on the 
+water... Use the Jar to navigate the lillypad. Once on the other side, go down 
+the hole and start slashing like crazy to kill all those blue beetles. You'll 
+get the Bow from this. Go back and return to normal size. 
+
+Once you are on the other side of this swamp, you see that statue with one eye?
+Shoot at it with the bow and then hit it again 3 times when it attacks you. Go
+up and use the tornado to head down and left, in an attempt to clear the water
+patch there. Then head down to another swamp. Keep heading down and left and 
+you should find another of those wing stones. Destroy the eye guardian there 
+too. Before you go up the vines, go left and push the rock you see there to 
+fill a hole. 
+
+Now go up and take this bridge to a tornado, which you should ride all the way 
+down and left, clearing the water. Push the rock and enter the cave for another
+golden Kinstone. Now, for the last Kinstone, go left from the cave and up, 
+through where we pushed one rock a few moments ago. Head north and up a vine, 
+take the upper bridge, then the next and the next. Head down here to find 
+another eye guardian. Destroy it and head up and left to another cave, here's 
+the last one. Now go back and south to push another stone. Ok, now look at your
+map at the lower left corner. You see those three heads? Well, we should head 
+there, but instead, go back to where the last eye guardian was and take two 
+bridges back. In this platform, take the other bridge to reach yet another eye
+guardian, kill it to reach a blue Kinstone; oh, and the rupees that appear here
+are actually red Like-Likes. Now you can go to the giant heads. 
+
+Each giant head asks for a certain golden Kinstone, in total 3, which we just 
+got. Just press L in front of each head and find the matching Kinstone for the 
+one it has.
+
+Welcome to the Wind Ruins.
+So yeah, go up and bomb the wall for a blue Kinstone. Then head south. 
+See that statue there? It'll go alive when you touch it, at which time you have
+to kill it. Do so and proceed.
+
+Use the stump to shrink and go inside the hole to get a red Kinstone. Then go 
+the guardian, still in small size and go up the mini ladder in its shield to go
+inside and hit the switch. Return to your size and kill it. Go around and push 
+the stone. In the next room just go if you wish, but kill all the enemies in 
+the next to open the path. Keep going until you see another stump. Use it and 
+do the same to the guardian, go inside and flip the switch so you can destroy 
+it. Push the stone when you can and keep going.
+
+In the next room you can only kill three guardians, the other will flee and 
+block your path. Kill the ones you can for now and grab the chests for 50 
+seashells and 50 rupees. Now use the stump to shrink and go inside the last 
+guardian and flip the switch to turn it off. This way it won't block your path 
+anymore. Kill all the snakes here and also the weird enemies that hide under 
+the rocks so you can go through.
+
+Welcome to the Fortress of Winds. First, head left and into the door you can 
+see. Head up the stairs and go around above to the next screen. Shot the eye 
+with an arrow. In the next room you'll be attacked by 4 Stalfos; deal with them
+and head south. One of the green rupees is a Like-Like, so kill it and head 
+right to deal with a red Like-Like, then go up the ladder. Follow the only path
+to the next room. Here, shoot the 2 eyes in front of you while moving on the 
+platform to open this door to a room with two sleeping eye guardians and two 
+switches.
+
+Use the cloning technique to hit both switches and deal with the guardians to 
+get the Compass. Head right and hit both eyes to open that door. Kill the 
+snakes and make a clone of you so that you are a vertical line and push the 
+block all the way right, then the one below all the way left. Cancel the clone 
+and now make a horizontal line so you can push the right block up. Pull the 
+lever to make a key fall and follow it. Back to the very first room, ignore 
+the central door and take the first one to your right.
+
+Go up and being careful of the sparkling, thingy enemy pull the right lever for
+a chest with a blue Kinstone. Then open the left chest for another blue 
+Kinstone. Pull the lever there to open the door. Simply head up the ladder here
+and into the next room. Go left and kill the guardian that is active. Then use 
+that panel to make a clone and the one by the right wall. Move to hit the two 
+switches we just saw and go in to shrink yourself. Go back, flip the guardian 
+on (How wrong did that sound?) and use the shrink stone there. Kill the 
+guardian afterwards and pull the lever to see another key fly by. Before you
+drop down, go to mini Link and then drop, take the mini path there to get a 
+Heart Piece. Leave the room and go back for the Small Key.
+
+Now you can take the central door. Do so and go up the stairs, kill the Stalfos
+and the eye guardians and grab the chest for the Dungeon Map. Go up and open 
+the left door first. (If you took the right one first, then simply go through.
+You should see a room with 4 switches; use the statues and the clone panels
+to press them all and get another key. Head down and all the way left to
+be back in the room with the two doors.)
+
+Use the platform to get to the other side and hit the eye in the next room 
+ASAP. You can find that loved, hand enemy here that'll drag your behind out 
+of the dungeon if it gets you. Go to the next room for another of those armed 
+knights. Dispose of it to get the blue portal.
+
+In the next room, avoid the spike balls and hit the switch to go through the 
+door. In the room to the right, you see those three floor panels with a design 
+on them? Bomb the middle one to get the Mole Mitts.
+
+With them, you can dig through the sand thingies you see there, as well as 
+digging on ground in the world map. Get 100 rupees from the chest there. Head 
+out and right to reach the room with the two locked doors.
+
+For now, some backtracking. In this room, go straight south and use the claws 
+to dig the statue free so you can push it onto the switch for a chest with 
+another blue Kinstone. Leave this room and take the stairs down to where we 
+started. If you go all the way to the right, you can find another 100 rupee. If
+you go back to the first room right of the main one and go up until you find 
+the dig-able walls you can get a red Kinstone. Going up will net you another 
+red Kinstone. Go up again and drop through the floor hole while you are in mini
+Link to use the hole there to get to a Heart Piece. To get out, push downwards 
+the 2nd block from left to right.
+
+Now go out and left all the way to reach a chest with a blue Kinstone. Enter 
+the door closest to you and kill the wind wizards to get 80 seashells. Go out 
+and to the door right next to it. Go up and into the first room with dig-able 
+walls. In the right corner, near where you start is a chest with a red 
+Kinstone. Once you've grabbed it, head up and press the switch after going 
+through the walls for a chest with, surprise, a red Kinstone. Go back now to 
+the room with the two locked doors.
+
+Open the right door and equip the Pegasus Boots. Pull the ledge and dash 
+through the bridge. Head right and kill the hands to make a shrink stone 
+appear. Pay no attention to it for now and instead head right. In this room 
+head around it to reach the cloning panels. First though, push/pull a statue
+onto the upper left switch and the lower right one. That way you can make a 
+clone in the opposite way; one on the upper right and you on the lower left. 
+Grab the key that falls and open the door.
+
+Go back a room and use the shrink stone. Go back and move between the rolling 
+spikes to go south, then head west. You see the entrance there? Go in and 
+return to your size before pressingthe switch. Now dig through the walls to 
+reach the key. Head down the ledge, return to your size and lay the smackdown
+on the hands. 
+
+Then head right and down the door. Dig through and go up the ladder. Use the 
+key here and drop through the RIGHT hole. Open the chest for the Boss Key. Push
+the block to the left and go back to the room that had the two locked doors and
+head south.
+
+Remember that room with a statue, a switch that created a chest with a Kinstone
+and a ladder that I didn't even mention? Go up there, dig through and push the
+upper right block to your right to trigger the red warp. Open the Boss' chamber
+and prepare.
+
+The whole boss isn't that difficult, but might catch you offguard. 
+Simply use the bow to shoot at the eye that's not attacking you to stun the 
+hand, then whack it like a mad maniac. Once you get both hands out of the 
+business, the whole thing will go into sleep mode. Shrink yourself and go 
+inside the boss and hit the flashing pillar like crazy. 3 times should suffice,
+but after the first one, the pillar chamber will be filled with sand and you 
+gotta dig through, not to mention you can't see which pillar to attack until 
+you are right next to it (Because of the flashing...).  
+
+No element this time, so grab your heart piece and go up. Check the giant 
+tablet and obtain the Ocarina... of Time! Ok, bad joke... Just a plain Ocarina 
+this time. It's actually the Wind Ocarina. You'll be warped outside the 
+dungeon. Use the Ocarina to head back to town.
+
+Ok, but lets get something else right now. Go to the LonLon Ranch and head 
+south a screen and down the stairs. Go right, and using the Cane of Pacci, jump
+with the hole to the ledge above. Go right and enter the groove to find a 
+Great Fairy, which will raise you wallet to a max of 500; just select the 
+first option twice. 
+
+Ok, now we are done with that. At this time, Tingles, 4 to be precise have 
+appeared all around Hyrule. One is to the right of Link's house, another one by
+the Lake Hylia spot you can get to with the Ocarina, in the screen right before
+the swamp, go north and through the underground passage to find another, and 
+the last one is in the LonLon Ranch, just take the underground entrance in 
+their lawn to get to it. Complete their Kinstone swaps if you want the Magical
+Boomerang. If you need green Kinstones, simply cut the grass/bushes and repeat
+until you get the one you need.
+
+Ok, so for the boomerang go to each place they opened up and light each torch.
+You can also find the following: 200 seashells and 3 red Kinstones. Once all 4
+torches are lit, you can access the central chamber from the outside. I just
+saved you from wasting 300 rupees in the normal Boomerang.
+_______________________________________________________________________________
+[034]---------------------03.04. Water Drop Elemental--------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Ok, back to the general walkthrough. Go back to the Lake Hylia spot with the 
+Ocarina, shrink yourself and go inside the Picori house and talk to the Picori.
+Now, go back to Hyrule's Town and to the building to your left, the one 
+previously guarded by an old man. The libary is now open. Go in and talk to 
+everyone, also, check the bulletin board in the back. Then go up and outside, 
+turn the vase over with the Cane and shrink yourself. Go back in and to the 
+bookcase. Go out and back to your normal size.
+
+This part was hell in the first run. Go near the cuckoo girl house, but first, 
+load up some water in your bottle. If you go above the cuckoo girl, you should 
+see two houses with a small wooden path above them, right? Enter the left one 
+and put out the fire. Then turn around the vase there and shrink yourself. Go 
+up the chimney you just put out and into the house next to it. Go around 
+inside avoiding the cat (It will pounce on you) and go up the mini stairs to 
+the bookcase, push the book from above and go back. When you are in normal 
+size, come and retrieve the book from the floor.
+
+Ok, go to the cafe and use the jug there to shrink yourself. Exit using the 
+south-western exit and go left to a small bridge. Head up until you see a dog, 
+talk to it while shrunk and it will finally move away. Now enter the house 
+right next to you and go into the only other exit you can take which will take
+you to a Picori home. Talk to to it and leave the house entirely, then head 
+slightly south. You see that flower path? Take it to enter the carpenter's 
+house. Use the jug there to grow back. Go back to the libary and talk to the 
+female librarian on the left twice. The first time you'll give her the book you
+just got and the next is a small briefing. So go now to the house next to the 
+dog and try to open it. You should be able to now, put out the fire inside it 
+with a water bottle and go back to the carpenter's house to shrink yourself.
+
+Go back to the house we came from and go inside the small hole on the right and
+talk to the Picori there. Then go up and out the chimney. Go north and enter 
+the yellow house, then take the exit on the other side. Follow the water side
+and go into a small flower patch with two cats. Avoid them like the plague and
+head down to the fountain, enter the mini cave there. Once inside, head right
+and use the Patch Cane on the hole to jump up. Kill the 4 blue beetles to get
+the Power Bracelets. With these, you can move objects as mini link. Nifty. Now,
+leave this place and go back to the house of the guy that's just reading, the
+one whose chimney we just used. Push the first drawer (the left one) to the 
+left and do the same with the right one so you can reach the higher exit. Now,
+clear the dust with the Jar and on the left side you should see cloning panels.
+Make a vertical line and maneuver yourself to the falling book on the right 
+side. Stand with the Picori to make it drop. Once done, pick the book when you
+are of normal size.
+
+Ok, remember the witch we bought the mushroom from? Go to her house, but if you
+see carefully, there is a sand entrance right next to the stairs leading to the
+witch's house. Go in using the digging gloves and head up the ladder on the 
+other side. Go right once outside and up past the house to the tree. Bump it 
+with the Pegasus Boots to uncover a stump and shrink yourself. Use the small 
+stone path you can see and then once in the mini passage, use the lillypad and 
+the Jar to go south and enter the house. Use the mini lillypad to cross over, 
+then move the shelf to the right so you can climb and drop the book. Go back 
+out and careful of the flies, return to your size to pick up the book. Now go 
+back to the library and hand them in.
+
+Now go up, outside, shrink yourself and go to the bookshelf. Take the first 
+blue book up and follow the path, at the end talk to the old Picori and be 
+dropped... Push the lower left blocks to leave this cage of sorts and head 
+down. Using the Jar, pull in the mushroom and head left. Then head up to fight
+a pair of ants. You can either hit them in the back, or whack 'em when they 
+throw their pincers at you. This will net you the Flippers. Basic controls, A 
+to swim faster, B to hide under the water or to simply dive.
+
+Jump into the water and head south at the crossroads to exit this place. Use 
+the Library's Jug to return to your size. Now, warp yourself to the Lake Hylia
+spot and go north from where you begin. Jump into the water near where the 
+Tingle is and keep heading south, as if you were going to the house that we got
+the 3rd book from. You should have seen that Heart Piece, right? Well, get it 
+and head left and up the stairs there to enter the house inside the tree for 
+another Heart Piece. We can't learn a technique here yet. But go left from here
+and push the rock into the hole, then go back and jump into the water. Head 
+slightly north and west to the ice floor. Jump on it and shrink in through.
+
+The fourth dungeon at last, also known as the Temple of Droplets. You should
+have seen the name I got for this dungeon back in the Jp version...
+
+So you go down and head up, move the ice out of the way and take the upper 
+exit. Head right and down the stairs. Turn the switch down there and head up 
+then drop through the hole.
+
+Now, move the frozen key to the light to melt it. Go back up and left to use it
+and with no other choice, fall down. Head right and what? Is that the Boss Key?
+Yes... 
+
+Ok, push the ice block further down all the way down and then left, then push 
+the one on top to the left and do the same for the Key one. Push the one with 
+the key up and then left again, then down, left, up and finally right. Now turn
+the switch around to close the floor above.
+
+No, if you though we would face the boss so soon, well, you think they will let
+us do it so easily? Head down and left then all the way south for the Dungeon 
+Map. Go back north and go in for a swim to the west. Go up the stairs and 
+head east, following the only path until you see a mushroom in which, as usual,
+you'll use the Jar to go over. Press the switch and drop through the waterfall.
+
+Start heading south and press the switch you see there and go right. You see 
+that structure in the water? Go to the middle and dive with the B button for a 
+Small Key. Then go back and up the wall besides the waterfall. We passed a 
+locked door on the way down, so go there, hit the switch on the other side and 
+board the lillypad. Steer it all the way down the waterfall. Then move it right
+to the switch we couldn't hit earlier. Head right for another worm enemy, the 
+big ones. Once it's down, head up through the newly opened door to get the 
+Compass.
+
+Board the lillypad and head to the previous room then up. Steer the lillypad to
+the first ice chunk and press the switch. From there, head directly to the ice 
+chunk right above you so you'll be in the main piece. Head left and down to see
+loads of ice cubes and a switch. At the very top, you should see that there are
+two in vertical alingment. Push the one on top down, right, down, left and up 
+to land on the switch. But before we go back, head north for a chest with 50 
+rupees.
+
+Go back to your ride and steer it all the way around so you can reach the door 
+on the upper-right corner of the room. Can't see anything huh? Just stick to 
+the wall as you go north-east. In the next room simply take the staircase up to
+fight 3 ants and get the blue portal. Head down and left to see a giant switch.
+Go down and make a clone, then go for the switch.
+
+Proceed to the place melted up and follow the only path, getting a blue 
+Kinstone in the way. Maneuver through the ice carefully and get the chest for
+a blue Kinstone if you wish. Then go  down and time yourself with the green 
+spike balls. You want to head left at this point to move on, as there are only 
+2 vases on the right side. Go up in the next room since you can't do anything 
+about the ice cubes yet.
+
+Head down the stairs, twice and flip the switch. Then go up and flip the switch
+there which you couldn't access previously. Go down again and flip the switch 
+once again to reach the friggin Key. Go back to the room with the ice cubes and
+unlock the door there. Flip the switch there and prepare to fight a cheap copy 
+of the first boss, except that this guy is electrified and while the energy is 
+on, you can't suck its base off. So wait for the energy to wear off and suck 
+with the Jar. Then hack at it.
+
+When the thing finally explodes into nothingness, open the chest for the 
+Flame Lantern... Or just Lantern, heck... So head back up and burn the ice 
+cubes there. Simply press the button the Lantern is equiped to to light it up 
+and you can walk around with it. Head down the stairs and get 100 rupees from
+the chest and head right. Fight 3 more ants. If you want, you can lit the 
+torches, but they won't be of use. 
+
+Head right again. First, take the lower path to hit a torch, light it up to 
+open another path. Take the newly opened path and at the fork head left for 
+a red Kinstone, then go right to lit another torch. Head north from there and 
+go left at the first fork, and keep going left. Bomb the wall there to reach 
+a room full of beetles. Kill them all to get a key. Go back to the previous 
+room and immediately head up then right at the fork for another red Kinstone 
+and another torch you should lit. Back to the fork head left and down through 
+the second line when you can to reach yet another red Kinstone and the last 
+torch.
+
+Just head left in this next room. Carefully make your way to the upper right 
+door and go below the structure and to the left side. First, make a vertical 
+clone and push the block at the top all the way left. Then, with a horizontal 
+clone push the one above you all the way down. Push the next one only one 
+square down and finally, with another vertical clone, push back the first block
+you pushed.
+
+In this next room, first of all, push the ice cube to the left. Then head left 
+and push the cube there down and to the left. Now, either place yourself at the
+northernmost panel of either set and make a clone in the northernmost panel of 
+the other set and make your way carefully to the other side to press the 
+switches. Then head down.
+
+Here simply push the upper right block one space up. Melt the ice cube in the 
+next room and make a vertical clone so you can push the block partially hidden 
+by the ice bridge and go up the stairs to the next room where you have to lit 
+all 9 torches and they can unlit as time passes, so make haste. Make your way 
+down in the next room and then go right. Careful with these flies as you press 
+the switch for the red portal and bomb the wall.
+
+Inside another dark room, use the Lantern to not only give you light, but to 
+burn the spiderweb and dispose of the two giant worms. Go right once you are 
+done and follow this path to the other giant switch. Again, make a clone and 
+flip the switch to free the element! Which will be taken by a bigass Octorok...
+
+This boss ain't so hard. First, equip your shield and sword and deflect the 
+giant rocks it shoots at you. After three it will go crazy and freeze the whole
+place. Now, lit the Lantern and try to touch its tail. Once you are done with 
+that, take cover. It will start trashing around and make stone slabs fall 
+everywhere. Repeat this process about 2 more times to be done with this thing.
+He might also use black ink to turn everything dark, in which case, simply lit
+up the Lantern.
+
+Finally, when it's down, get the Water Elementl and your Heart. Use the 
+green portal to go to the entrance, then stand in the ray of light and press R.
+So we have our new destination.
+_______________________________________________________________________________
+[035]-------------------------03.05. Wind Element------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Begin by heading back to town. In the square town, enter the middle shop on the
+left and speak to the person there. Basically, you pay him 10 Rupees and then 
+you dream of a lot of enemies and if you kill them all, you get a Heart Piece. 
+Head to the cafe and shrink yourself, the move the shelf to the left so you can
+climb up and head to the left in the attic.
+
+Inside the attic of the shop, there is a chest with 10 seashells. Head up from 
+there to enter the shop itself and grow big there. Check the bottle and get a 
+request. Use the Ocarina to head to Lake Hylia and go into the house above of 
+where you start and press R when facing the bowl. Go out and dive into the 
+small pond next to it to get a Heart Piece by the way.
+
+Before we proceed further, head to the left part of town and right below the
+Post Office, in the yellow house. Fuse with the person inside to make a weird
+warp show in in the Southern Hyrule Fields. Go there and to the 2nd floor of
+the house and using the Jar, suck in that ghost circling around the old man.
+Just hold down the Jar button and move around so it doesn't escapes the suction
+area.
+
+Head back to town. Head up the Castle Fields and go left right away. Jump to 
+the water and surface on the other side. Head up the steps and using the Pacci 
+Cane, bounce up and hit the switch to extend the bridge. Now head north to the
+middle of the four trees and left from there. Head down the stairs, twice to 
+get another Heart Piece then go back up and to the castle.
+
+Head left immediately and you should see the guards patroling. Avoid them like
+the plague, or like you did in OoT if you played it and head to the other side.
+Clear the bush field and go down the stairs. Follow the path and press the 
+switch. Then simply go up from there and back into the sanctuary. Power up 
+your sword once more and go back to where we got that last Heart Piece. Oh 
+yeah, now you can make up to two clones. 
+
+Head outside the castle and go south a screen. As you begin here, make your
+way left. You should see a wodden stair going into the gound, take it.
+
+Use the panels you see there to clone and to move that 3x3 block out 
+of the way so you'll end up on the other side. Head up and left to reach the...
+Valley of the King's House? Wtf... I really need to resume my Japanese... Or 
+perhaps it’s Valley of the King’s Tomb... 
+
+Ok, head down and careful of the ghosts. They are really bothersome. And the 
+crows will send your money flying away. Follow the only path and you'll hit the
+Lost Woods. People have said the route changes, but in my case, it was north, 
+west, west, north, east and north, and this happened twice (In my first game 
+and on this one). Just try to follow the signs. In the next place head north 
+and follow the path; taking north at the fork to the house of Dampe, whom'll 
+give you the key to the graveyard...
+
+But oh boy, the crime rates are high if a crow just swiped the key away from 
+you. This is fairly easy, simply find the tree that the crow is on and ram it 
+with the Pegasus Boots. Then go back to Dampe. In the graveyard, go to the 
+upper left and push the tombstone to enter a room with a Heart Piece and a 3x3 
+block, just make clones to push it out of the way. Now go back out and all the
+way right and down to the stones. Break them to uncover cloning panels. Make
+the clones and carefully move to the switches. Then go inside this tomb.
+
+Kill the mummies and get the key, then use the left mushroom to rocket 
+yourself. Only the middle door is real. Head right and make the two clones 
+on the two vertical, adjacent panels and move up to hit the switches for a key.
+In the left side do the same with the vertical panels and use the floating ones
+to move for another key. Use both keys in the middle locks and keep going 
+through. Eventually you'll reach a trap room, simply light up the candles and
+fight two more mummies then head north for some more story and a golden 
+Kinstone.
+
+Head back to town and go to the castle fields, taking the upper right exit. 
+
+If you haven't been here before, welcome to the Veil Falls.
+From there, dive into the water for the Heart Piece you clearly saw and then
+go back up, taking the stone bridge to a stone where you have to use the 
+Kinstone we just got. Make use of the Lantern and follow the only path but bomb
+the wall between the two rocks at the upper floor to get 50 seashells and 
+further above, after moving the 3x3 block, 100 seashells. Go back down and take
+the exit we ignored.
+
+Once out head up the climbing wall and activate the wing stone there. Then head
+north inside a cave. Bomb the fairly obvious wall to your right for 50 
+seashells. Then head up the stairs in the previous room to get 100 rupees and 
+exit this place through the right exit. Climb up some more and go into the 
+giant tornado. Ok, this place involves a lot of warping and 5 golden Kinstones.
+First, head right and take the red tornado. Once up, you get the first golden 
+Kinstone. Drop down through the hole there and head north to another tornado.
+Head north while digging through the clouds and jump down. Use the Kinstone we
+just got here.
+
+Then go back up and with the normal tornadoes head left and drop off there. You
+can kill these fishes with your bow, but they are rather troublesome. Kill them
+however to get another golden Kinstone and head back up. Dig to your left and 
+use the tornado and the next one to head up and left to a chest with another 
+golden Kinstone. Above them you can also find 50 seashells in two chests, for a
+total of 100 partially hidden in the clouds. Use the tornado to head to the 
+cloud mass below the one we just were on. Drop off here.
+
+To beat the Lakitu thingy, use the Patch Cane to flip it off and then hack at 
+it. Fuse a pair of Kinstones here and go back up. Start taking the tornadoes 
+down and left to another cloud mass with a chest surrounded by clouds with 50 
+seashells (Growing tired of these things?). Drop off the hole here and go right
+for another Lakitu-type enemy. Fuse this Kinstone as well. Take this tornado 
+and open the chest for the 4th golden Kinstone. Go back down a floor and head 
+south to take the right red tornado up and drop off to the right. Kill the two
+fishes here to reveal the last golden Kinstone then take the red tornado 
+closest to the Kinstone.
+
+Grab this chest for 50 seashells and use the tornado to head directly below and
+slightly right. You see that small space in the cloud formation that you can 
+dig through? Head there to fall off and take the red tornado you can see there,
+then drop off slightly to the north to fuse another Kinstone. Head north and 
+west with the tornadoes and dig through. You are back near where you began, 
+simple take the tornado there and start heading east and south when you can to
+reach the very first stop. Yes, the first Kinstone you saw is the last one to 
+fuse. Follow the two guys up the tornado and activate the wing stone there.
+
+Enter the house and in the above room you can get two green Kinstones. So head
+up a floor and in the alcove you can get another green Kinstone. I hope you
+listened to me when I told you to fuse with a strange guy in town and aid the
+guy being haunted by a ghost... If you did, you'll get the Light Arrow. If
+you didn't, I believe there's no other way to recover this.
+
+Go up another floor for not one, but two blue Kinstones AND one red Kinstone, 
+woo~ Another floor up... Grab the two red Kinstones and speak to the 
+elder-looking person then go back and speak to the kid blocking the staircase. 
+This is the entrance to the 5th dungeon. Ready?
+
+Welcome to the Palace of Winds~ 
+Follow the only path and hit the switches as you have to in order to cross the 
+bridges and for your sake, you better have the Magic Boomerang, otherwise, get 
+out of here and get it, trust me... Once you see the clone panels, make two 
+clones after you extend the bridge and push the block up then go on.
+
+Use the floating panels to go through and land on the other side to go left. 
+Head up the stairs and go left in the wiring. Go down the stairs and after 
+Ezero speaks to you, head down to hit the switch to go down, hit it again to 
+move further left and then try to hit while you are OUT of the bridge but on 
+the left side. Yes, you need the magic boomerang or a bomb. Go up and kill 
+the various waves of wind wizards to get the Roc's Cape! (I love this thing!) 
+Press the button you assign it to jump, pressing it again will make Link glide
+over and the longer you press it, the further it glides. So jump/glide to the 
+right and before you go into the clouds, head right.
+
+Go all the way up into a small square that seems cut off from the wiring, jump
+on it to go down and open the chest for a red Kinstone, then jump back and go 
+to the clouds. Simply press B and hold it to automatically do the second 
+jump/glide so you can go up faster. Head right here with a jump/glide twice. In
+the next room simply play with the blocks so you get to the panels and make 
+your clones in the southernmost line (yourself included) then charge up your 
+sword and go down. Release the spin to hit all four switches and kill the 
+enemies that appear. 
+
+Be careful in here, the wind can, and will blow you away if it gets you. Head 
+north and then jump to the other side and south there. Once you are down all 
+the way south, equip the Cane and try to launch a ball into the hole when
+the wind is gone, then bounce up. Proceed left and jump down in the wired 
+square. You guessed it, the red rupee is a Like-Like. Jump up and time the jump
+on the left with the floating panels, then jump up the other side and do the
+same for the cloud stairs. 
+
+Here you need to time yourself with the platform so you release the clones not 
+long before the platform gets to you so you can still board without losing much
+energy. Then head down and push the block. In the next room, drop the panel in 
+the middle of the floor with designs and jump to the platform. Careful with the
+crows, you have to jump between platforms several times. Then it's just 
+standard jumping in the next screen as you head right.
+
+Drop down and go north, then use the Cane to fill in the rightmost hole to 
+bounce up. Make your clones on the other side, using each corned adjacent to a 
+switch to him them all. Use the shrink stone and head south. Push the vases out
+of the way as you make your way left then north and in the next screen head 
+north as well to grow back to normal. Hit the switch, grab the key and head to
+the rolling spikes to unlock the door there and go up the clouds.
+
+Head left and be careful of the breezes as you walk through the bridge. Right 
+now, you can only head down when you hit the blocks, do so and head right 
+avoiding the traps and the slimes, then use the air to propel you in mid jump 
+all the way to the other side and go north. Careful of the Lakitus, use the 
+Cane to flip them out of business as you head north.
+
+Jump up the clouds and then jump to the right as you yell "Geronimo!" Head up 
+the stairs and right for a blue Kinstone then go back, jump right and do the 
+same "Geronimo!" routine if you wish. But go to the floor above when you are 
+ready and down a door.
+
+These things will only attack you when you are in a straight line of them. So 
+let them see you and as they attack, pounce at them like those cats in Hyrule 
+did to you when you were small! This will make a key fall, which you will use 
+right away. Here keep going left until you see the clone panels. You can either
+use 4 vases, or just place one and clone yourself to stand on the other 
+switches. But head left nonetheless and hit the switch to start the fan. Use it
+to head down and kill the enemies that will trap you. Then head right twice and
+repeat the fan routine but northwards this time. Push the block directly below 
+the chest for a key, which you'll use right away and get the Boss Key. Head 
+back down and right to the room with the boss door. 
+
+Oh, but this isn't really it, another armed Knight... Yep, the blue portal told
+you, didn't it? The next room is pitch dark. Simply head slightly right and you
+should see stairs going up, take them and grab the Compass from the chest, then
+go left from there to another structure but with an actual flight of stairs. 
+Once up, head north and right, then drop through the middle hole to reach a 
+chest with a key. Go back up but this time take the first exit south.
+
+Destroy the enemies here before you decide to clone yourself. Now, use the 
+panels on the far right, the far left and the very middle, then charge up your 
+sword and head down pronto to hit the four switches and head left. Avoid the 
+rolling spikes as you go north and open the chest for another Small Key. Head 
+right and jump down the ledge to open the door there.
+
+Be careful with the timing here, as the floating bombs can wreck you up as you 
+make your trip rightwards and upwards. In the next room head north first and 
+hit both switches with a spin attack, then head back down and up the stairs. 
+Head left, drop down, kill the mages for the red Kinstone and head right to go
+back up. This time go right, up and then left to another room with flame 
+wizards. Dispose of them for the Dungeon Map and head left. Kill the Wall 
+Masters and pull the lever. 
+
+Head upstairs in the next room. Head left and up, killing the mummies, then 
+drop a block and head up for a Heart Piece we saw earlier, but couldn't reach.
+Head back down and drop down then head back up. Go right and watch the bomb 
+floating; destroy it when it's besides the cracked blocks and jump away. Head
+north and hit the switch, then circle around to grab the chest for 200 rupees.
+Go back to the right and open the locked door but don't go up yet. Instead, 
+head right and kill everything, then light the torches for the red portal. 
+Now go up, bomb the wall and go out. Head up and exactly where that Stalfos was
+besides the wall, bomb there to open the exit, bomb the cracked blocks and go 
+through.
+
+Here, DO NOT attack the bombs. You gotta make it around WITHOUT hitting the 
+switch, that's right, don't touch the switch and go to the door on the other 
+side. Grab the chest for another Small Key and go back down twice. Stand on the
+cracked panels to fall down in front of the locked door. 
+
+If you want a blue Kinstone, head right from where you begin and push the two 
+panels besides the floor with pattern and below the chest. Otherwise, continue 
+through the north, and fairly direct path. You have to try heading south and 
+east to a floor with a design under two skulls to jump to the other side, of 
+course, after pushing the blocks down. Before you head up the cloud stairs, 
+jump to the right and use the cloud staircase if you want a red Kinstone. 
+Otherwise, go up the other and into the boss room. Use the tornado and... 
+
+This boss is fun if you ask me. You start in a blue thing that looks like a 
+fish then you see a red bigged one. Jump on the red when it comes from behind
+you. Ok, you see all those clone panels? Well, the fish thing will open up 
+three out of the eight, you have to make clones in the same fashion and hit 
+the eyes at the same time, then go and whack them like crazy. After each 
+hitting session, the red one will retreat and you have to board the blue one 
+while avoiding some attacks and as you hit the eye it pops open. As you 
+progress, the fish thing will shoot some orbs that if they touch your clones 
+(or you), the will disappear. Good luck. Just to tell, the blue small one will
+fall first, then the red one bites the dust. 
+
+Enjoy the Wind Element and your new Heart container, then head back to town.
+
+BUT! Before you go to the castle, take into account that once you power up
+the White Sword one last time, the town will go into an irreversible state, so
+you might want to make a back up of your game. No, you won't miss anything if
+you don't do it, just mentioning.
+ 
+Now go the castle and power up your sword. Go up and watch the stained-glass 
+with the cool music and then Vatii attacks... 
+_______________________________________________________________________________
+[036]---------------------03.06. Final Battle and More-------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Head out and use a spin attack to throw a small energy wave at each petrified 
+person to unpetrify them. Once all three are back to normal head down. Now it 
+isn't Hyrule's Castle, but Dark Hyrule's Castle... Head left and north a screen
+and avoid fire in the next screen as you head up. Bomb the wall on the right 
+here. Use the shrink stone in this room and head back to the room with the fire
+and drop through the hole.
+
+Head up from this room once and use the small passage to go into the first 
+cell. Grow back and press the switch to open the prison locks. Use a charged 
+attack on the King to unpetrify him. After you get the Small Key, head back up 
+to the very beginning. You remember the first locked door we saw? Well, go down
+from there to find the real locked door. Follow the only path and take the 
+stairs to the right and go up to get the Dungeon Map. Then head back and go 
+upstairs.
+
+From here you can leave the castle, and I suggest you do. Here you can go out 
+and try to get everything else. Head to the Heart Pieces, the Kinstone section 
+and the Items section on how to get everything else. Be sure to get the Tiger
+Scrolls too! Otherwise, here we go.
+
+Head straight up once you are back in the castle and left on the next screen. 
+Use the panels to make 3 clones and deflect the cannon balls with a sword slash
+at the same time, so all four statues are destroyed in the same motion. Head up
+and be careful with the vases and the Wall Masters.
+
+In the next room you have to walk through all the tiles just once, or you will 
+fail the puzzle.
+From the beginning, in simple directions of D (Down), R (Right), L (Left) or U 
+(Up), go:
+R R R R U L L U R R U L L L U U R D R U R D R
+And you are set. Head right and down for some more cloning fun.
+
+Simply lead your clones and yourself down the path to hit the switches and grab
+the Small Key. Go back to the main room, or the entrance if you wish and take 
+the right stairs for the locked door and head downstairs.
+
+Follow the path but do not jump down. Head up and using the panels try to make 
+the following clone formation.
+ _ _ _ _
+|X| | |_|
+|¯|¯ ¯|X| Where X stands for where a Link should be. 
+|X|   |¯|
+|¯|¯|¯|X|
+ ¯ ¯ ¯ ¯
+Charge up your sword and time yourself, then move between the four statues and 
+try to bounce back their attacks with the spin attack. It might end up taking a
+few tries, but once you are done, head up and kill everything, but bomb around 
+the lower left wall. Head up and take the stairs.
+
+Keep going for one of those Knights. Go right for the Compass then push the 
+throne and head downstairs, follow the only path to head back up on the other 
+side. And head up until you are out. Use the tornadoes to head down and enter 
+the tower here. 
+
+Clone yourself and be very careful with the fire as you head down to push the 
+block. Then go out right and head down with more tornadoes. Ignore the entrance
+and keep heading left. Using a Boomerang or arrow shoot at the switch to extend
+the bridge and head inside that door. Clone yourself in accordance to the 
+switches and hit them to proceed. Kill the two enemies there and head left and
+up. Destroy the blocks there somehow and then jump into the wiring to hit the 
+switches and proceed through the door.
+
+Head right and up for another Knight. You see all those Knights that showed up 
+when this one went down? Well, we gotta take care of them now in order to get 
+the 4 Small Keys we need. Head down and right for the first set then take the 
+big door there, lit all the candles and kill all the ghosts in the next room so
+you can then reach the Small Key.
+
+Head to where we fought the last set of Knights and head down from there, jump 
+up into the wire and jump off the ledge on the other side and fight the lone 
+Knight and go down the giant door. Don't even think of cloning, you can simply 
+head down, stand in the very middle of the switches and spin to get them all. 
+Get the key after that by going up after pressing the switch. Go back to the 
+last Knight room and take a left twice.
+
+Kill the double set and head down for more panel fun. Go, from the normal 
+floor:
+D D D D D D R U R U U L U R R D D D D R R R U L U L U R U R D D R
+Get rid of the ghosts and go out, left to the inside of a tower and up the 
+steps for the key. Go back to the Knight room and head up twice.
+
+Once this Knight is down, head up. Kill the red Stalfos and careful of the 
+Wall Masters then head up and shoot at the four eyes. Push the blocks on the 
+next room out of the way and fall down then head back up the stairs twice to 
+get the key. There's nothing outside, so just head back to where we fought the
+very first Knight here and go up again. Open all the locks and make clones to
+push the block away and get the Boss Key. You know where the room is, so head 
+there.
+
+Head up the bridge and kill the mini guardian then head up then make clones to 
+kill the Kobolds and press the switches and take down the knights. Then head up
+to find Vatii.
+
+Prepare yourself. For this fight, you see the small eyes he sends out? First 
+destroy them with your sword and then hack at the eye of Vatii's body. If the 
+eyes are surrounded in a black aura, use the Jar to suck the aura away and 
+destroy them. Repeat until done. Be careful though, the eyes can shoot out 
+lasers and Gufuu can teleport around, as well as send out balls of fire.
+
+The next form is slightly irritating... First, use the Bow to shoot the small 8
+balls that surround him until you get 4 in red color (The pattern changes per 
+session), then make the same pattern in clones and hit them at the same time 
+and hack away. Repeat. This guy can jump around and send a lot of debris around
+that will stay in the floor and can damage you if touched. Can be cleared with
+sword swipes though as well as sending electricity balls at you. Repeat until
+this guy goes down, again... Once you are back in the Dark Hyrule Castle, head
+up to find Zelda, still petrified... Use a charged attack to send the energy
+wave at her and restore her to normal. The castle will start to colapse and you
+start heading out but the exit is already blocked!
+
+Head down, to the garden, just before the shrine and Vatii will strike back!
+This time, you have to wait until he plugs and arm down and it surfaces, then 
+use the Cane to stop it and make it show a small entrance. Shrink with 
+the stone and go inside. There, out of all the drones that fly around, try to 
+hit the one with the eye in any other direction that's not in the center of the
+eye. This will destroy the arm, if you destroyed that drone though. Repeat with
+the other hand.
+
+Then grow back and make your clones. Wait for the eyes to shine and shoot an 
+energy ball and bounce it back to hit the eyes. If done correctly, you will 
+stun Vatii and then hack at him. Repeat until that guy finally goes down. This
+one ain't so hard...
+
+"Thus did Link's quest come to an end."
+"But surely, this is not the end of Zelda and Link's adventures in Hyrule."
+"The legend will continue..." 
+"...As long as the power of the light force echoes throughout the ages."
+
+And it's over... Watch the closing and for now, you can save the game, as this 
+will allow you to continue and collect whatever you missed, but for now, sit 
+back, hold your GBA/SP up proudly and watch the ending...
+_______________________________________________________________________________
+[004]---------------------------04. Heart Pieces-------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Only one more...
+
+The first name is the english official one, the one between ()'s was my first
+translation attempt.
+
+Castor Wilds: (Swamp)
+ -> On the upper right corner, go inside the wall there and on the right side,
+    push the top one, then skip the one in the middle and push left the one
+    below it; finally, push the one above you up and you are in.
+ -> On the middle left part, there's a giant stone, go inside to get a Heart
+    Piece, as well as a trainer.
+ -> Shrink yourself and use one of the mini lillypads you get from Kinfusing
+    with the kid with the flowing nose to head south and then take the tunnels
+    around until you can head to the southeastern body of water. Enter the
+    cave and on the back you'll find the piece.
+
+Cloud Tops:
+ -> Inside the fifth dungeon, pretty much around the middle of the first part. 
+    Hard to miss.
+
+Eastern Hills: (Left of the Minish Wood/Forest of Chikoria)
+ -> Left of the Minish Woods (Go left from the wing stone), cross the
+    dark pit with the mushroom and shrink on the other side to enter the
+    house. Kinfuse with the Picori to make a plant grow. Climb it to find a
+    piece.
+
+Hyrule Castle Garden: (Hyrule's Castle)
+ -> Head right on the gardens and cut down the bushes to find a trainer and a
+    Heart Piece.
+ -> Kinfuse to dry up the right fountain and go down the stairs to find this
+    piece.
+
+Hyrule Town:
+ -> Inside the middle left shop on the square, defeat the nightmare challenge 
+    to get a piece.
+ -> Go inside the school (upper right building), shrink yourself and take the 
+    right exit to the playground and go into the mini passage for a piece.
+ -> As mini Link, go to the hotel and enter it from the backside, through the
+    hidden path showed by the flower path to get a piece.
+ -> Inside the fountain cave, if you head left you can find one. You would 
+    need the Cape to get it since there is no shallow water. (Correction by
+    Kenneth)
+ -> Tricky one, jump above the bell and one will drop. Took me a while to
+    find this little...
+ -> Once you've completed the 136 Figurine list, talk to the person outside
+    the cafe and to the left to open the house with the robot on top. Go
+    inside and finally get this piece down.
+ -> Complete the Chicken game... It's friggin long, there are about 8 rounds 
+    or more and well, good luck.
+
+Minish Wood: (Forest of Chikoria)
+ -> One standing right outside the Deepwood Shrine entrance.
+ -> Inside the first dungeon, you can get another piece by heading south from 
+    the mini-boss.
+ -> Using a hidden switch in the first dungeon, you'll uncover the blue portal 
+    which will take you to another piece.
+ -> Go to Syrup's house but from the steps of her house head southeast to
+    find the piece you should have seen the first time you went into this
+    forest.
+ -> Go inside the Minish Town and head north all the way to the middle house
+    from which you can access the first dungeon, but head right instead to a
+    change of screens and there's your piece.
+ -> Once you have the Flippers, warp there and go mini, then go up, take the
+    bridge left and go up for three entrances. Take the left one and follow the
+    path for the piece.
+
+Mt. Crenel: (Gonguru Mountain)
+ -> Heading left all the way and up, to a place where you see two dead trees 
+    and a wall between them. Bomb the wall there for a chest with a piece.
+ -> Inside the Cave of Flames, after you see the first cart that's flipped
+    around head right and bomb the southern wall to get one.
+ -> After using the green water on the plant to climb, head left and up the
+    stairs and plant a bomb between the two rocks on the wall slightly right
+    of the sign there.
+ -> Once you've obtained the cloning technique, go back to Mount Crenel
+    near where you bought the Grip Ring and head up the wall, enter the cave
+    and using your clone push the block away to get another piece.
+ -> Below the giant plant on the upper left most area, or just go all the way
+    up from the Great Fairy pond and take the left stairs down, you can find
+    the piece inside the dig-able wall.
+ -> Go inside Melari's Mines and fuse with Melari to make a giant plant grow. 
+    Climb it to get a piece.
+
+North Hyrule Field: (Hyrule's Castle Fields)
+ -> Take the upper left exit to find a set of stairs down, take them and the 
+    next too to get another piece.
+
+Lake Hylia: 
+ -> Directly left from the house with the 3rd book or south from the Temple of
+    Droplets you can get another piece. 
+ -> From the previous one, head left to that house tree and you can get another
+    piece inside.
+ -> In the upper left house, then one with the dog you have to feed for a 
+    bottle, dive (as in really dive, with B) in the pond next to it to get 
+    another.
+ -> Just head right from the white Tingle to see it. You need the Roc's Cape.
+ -> Go up the plant you create by Kinfusing to find one.
+ -> From the White Tingle, head right and up to the cave, head west inside past
+    the first fork and south on the second to leave the cave and find a piece.
+ -> Kinfuse in order to open a hole near the stump near the wing stone, take it
+    and go through to end up in the island in the middle, talk to the Picori 
+    inside the house to get a full, yes, a full heart container!
+
+LonLon Ranch: (LonLon Ranch)
+ -> Go to the backside and ram the tree there to uncover a stump. Use it and go
+    slightly right to find a mini path, go there and find the piece.
+
+Royal Valley: (King's Tomb Valley)
+ -> Push the top left tombstone to get a piece inside.
+
+South Hyrule Fields: (Link's House Map)
+ -> After the very first Kintsone fusion, the tutorial one, a tree will open up
+    with a piece inside.
+ -> Go to the lower left corner, shrink and jump into the water as you head up 
+    and right, enter the small hole you see in the wall to get a piece.
+
+Veil Falls: (Sera Waterfall)
+ -> Using the Cane of Pacci on the northwest corner of the LonLon Ranch and
+    heading right in this screen you can get one.
+ -> If you go up and right from the Castle Fields, you can get another one 
+    by swimming a little.
+ -> By Kinfusing you can open up the waterfall near the very top, there's a
+    piece inside.
+ -> After kinfusing with a Picori in the Morest Town you'll gain access to a
+    dig-able wall. Go inside and you can find one.
+
+Western Wood:
+ -> After fusing with the Picori in the house near the Wing Crest in Lake 
+    Hylia, a tree will open up here with a piece inside.
+
+Wind Ruins: (Wind Ruins)
+ -> Inside the third dungeon, drop down the right upper hole in mini size and 
+    head right to grab another piece.
+ -> Head outside the dungeon and go left for a stump, use it and head down, 
+    then use the vines and enter the cave for another piece.
+_______________________________________________________________________________
+---------------------------------05. Kinstones---------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+_______________________________________________________________________________
+[051]-----------------------------05.01. Types---------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+There are several Kinstone designs. In general, blue, red and green are used 
+for everyday normal fusing, whereas Golden ones are used only for story 
+advancement. You can find green ones from defeating enemies and cutting grass,
+but red and blue are only obtained from chests. 
+
+Instead of trying to make a cheap description of each Kinstone, go here instead
+and look at the picture:
+http://img.photobucket.com/albums/v433/GrayFox2510/TLZKS.jpg
+
+Simply link the [Letter]/[Number] with the ones show in the Fuse List.
+_______________________________________________________________________________
+[052]---------------------------05.02. Fuse List-------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+I won't list the original fuse, the special ones (Golden) and the Tingle ones 
+
+Before we start though, take in mind that some of the green Kinfusions can
+produce random effects. Some are set, and some apparently aren't... Also,
+about 80% of the list below was done after the you power up your sword to the
+last level, which modifies some things in town. So if you start Kinfusing 
+before that, you might end up doing one of these with other characters, as if
+you don't Kinfuse at first, and that character leaves, you can still fuse with
+another for the same results... Yeah, sounded odd but heck.
+
+About the digging Gorons. Well, there are 6 fusions that involve them, one
+of the farmer and 5 wall devices. The first one, whichever you do, will trigger
+the whole event and subsequent ones will add Gorons to the cause.
+
+About the names, the first one comes from the European version, and the one
+between ()'s is my translation from the Jp version or what I used to have
+written in here.
+
+Castor Wilds: (Swamp)
+ -> Business Scrub:
+  -> Head all the way up, to where there are two caves pretty close (You found
+     a Golden Kinstone on the right one). On the left, dazzle the Bussiness 
+     Scrub and fuse a B2 open a tree in the Minish Woods.
+
+Cloud Tops: (Sky Villa)
+ -> Kid:
+  -> In the fourth floor, use a G1 to make a Golden Tektite appear in the
+     Veil Falls.
+ -> Sage:
+  -> In the fourth floor, in the upper room, use a G3 to make a Chest appear in
+     the Graveyard.
+  -> You can also fuse a G1 to make a second Chest appear in the Graveyard.
+ -> Women:
+  -> In the bottom floor, using an R2 you'll open a waterfall in the Veil
+     Falls.
+  -> In the second floor, use a G2 to create a Chest in the Veil Falls.
+  -> In the third floor, use a G1 to make a Golden Rope (Snake) appear in 
+     the Castor Wilds.
+  -> With the same NPC of the third floor, you can then fuse another G1 to open
+     a path in the screen left and down from town.
+
+Eastern Hills: (Below LonLon Ranch)
+ -> Carpenter:
+  -> Can only be done when the boss appears here after the first dungeon I
+     believe, but he will accept a G3 for random results.
+ -> Lower Farmer:
+  -> Use a G1 to make a Chest appear in Gonguru Mountain.
+ -> Upper Farmer:
+  -> Use a B2 to make the Goron punching a wall in the LonLon Ranch destroy it.
+ -> Picori:
+  -> Going left from the lower exit of the Forest of Chikoria use the stump to
+     enter the house there and use a B1 to make a giant plant grow in the
+     screen above.
+ -> Wall Device:
+  -> Dig through the wall near the farmers and find a weird device on the wall.
+     Use a B1 to give some help to the first Goron punching the wall. 
+
+Hyrule's Castle:
+ -> Trainer of Skill 2:
+  -> Trainer of Skill 2, simply fuse an R1 to open up a waterfall in the 
+     Sera Waterfall map.
+ -> Picori:
+  -> Ram into the tree to find a stump, shrink and head up and right to a hole
+     in the ground. With a G1 this will open up a path in the Western Wood.
+
+Hyrule Castle Fields:
+ -> Picori:
+  -> On the lower right part there is a tree that can be rammed for a stump.
+     Use it and climb the vine there then drop into the hole/home and with a
+     G2 reveal a Chest in the Wind Ruins.
+
+Hyrule Town:
+ -> Brown-haired guy:
+  -> Sometimes in the hotel's lowest floor, use a B1 to open up the upper
+     right tree in the Castle Fields.
+  -> In the house left from where you found the first book (Sometimes), with 
+     a G3 he'll make a Golden Rope (Snake) appear in the Castle front Court-
+     yard.
+  -> Inside the Cafe, the one sitting; use a G1 to make a Chest appear in the
+     Forest of Chikoria.
+  -> Outside the Cafe, this guy will sometimes accept a G3 in order to make a
+     Chest appear in the mini path to the Picori Forest Town.
+ -> Din:
+  -> Fuse an R1 (I think it was R1) to make a Butterfly appear in the 
+     Wind Ruins, this will allow you to shoot arrows faster!
+ -> Dog:
+  -> Inside the house left of the one with the first book, use a G3 to make a
+     Chest appear in the Castle Fields.
+ -> Carpenters:
+  -> Right besides the Post Office, one should appear sooner or later, fuse a
+     R3 to start making a house in town.
+  -> Inside the carpentry, the boss will accept an R2 to dry up a fountain in
+     the Castle Courtyard, revealing an entrance.
+  -> The left-most carpenter might ask for a G3. This will dry up the other
+     fountain in the Castle Courtyard.
+ -> Cat-like person:
+  -> Inside the Cafe, use a G3 to make a Chest appear in the Forest of 
+     Chikoria.
+ -> Farore:
+  -> Inside the Hotel, use an R1 to make Goman appear in town.
+  -> Inside the Hotel, use an R1 to make a Golden Enemy appear in the Wind
+     Ruins.
+  -> Inside the Hotel, use an R3 to make a Butterfly appear in the Castor
+     Wilds, this will allow you to dig faster!
+ -> Guy:
+  -> Sitting in the room next to the one where Din, Nayru and Farore used to 
+     be; fuse a G2 to make a Golden Rope (Snake) appear in the screen with
+     the two farmers.
+ -> Kid:
+  -> Inside school, use a G1 to make a Chest appear in the LonLon Ranch screen.
+  -> Inside the house that had the first book (After Hyrule's Castle goes 
+     dark), use a G1 to make a Chest appear in the Forest of Chiroria.
+ -> Kid with a leaking nose:
+  -> Outside near the middle left house or in the hotel, use a G1 to make a
+     lillypad appear in the swamp.
+  -> Same as above, but with a G2 to make another lillypad appear.
+  -> Same as above, but with a G3 to make another lillypad appear.
+ -> Little boy:
+  -> Either found outside or on the hotel, he'll make a Chest appear in the
+     mini path on LonLon Ranch in exchange for a G2.
+ -> Little chick:
+  -> In the roof of the Trainer's room, fuse a G2 to make a Golden Rope 
+     (Snake) appear in the map below the Ranch.
+ -> Little girl:
+  -> Outside near the fountain or on the hotel, with a B2 she'll create a land
+     mass near a dig-able wall left from town.
+  -> Inside the house left of the one with the first book, use a G1 to make a
+     Chest appear in the Forest of Chikoria.
+ -> Mailman:
+  -> Running around, get him and use a B2 to add Mail (An NPC...) in the Post
+     Office.
+ -> Nayru:
+  -> Inside the Hotel, use an R2 to make a Butterfly appear in the Graveyard,
+     this will allow you to swim faster!
+ -> Picori:
+  -> In the attic of the Cafe, fuse a G2 with the blue Picori to dry up an
+     entrance in Link's House map.
+  -> In the mini chamber of the wood workshop, with a G3 this Picori will pop
+     a Chest in the mini path on the School's backyard.
+  -> In the library, go to the sage-looking one and use a G2 to create a 
+     Golden Octorok in the Wind Ruins.
+ -> Purple Teacher:
+  -> Use a G2 to pop up a Chest in the area left of town, it is said that you
+     have to change your cloth color to purple prior to be able to do this
+     Kinfuse. Simply put Farore in a house so she can give you the stuff.
+ -> Scholar:
+  -> In the house below the school, use a ?? to make an entrance dry up in the
+     LonLon Ranch where you can get the 999 Wallet.
+ -> Sky-villager:
+  -> Inside the house below the Post Office, fuse an R3 to make a warp appear
+     in Link's House map leading to their house.
+ -> Woman:
+  -> In the Cafe, use a G1 on the brown haired woman to crack a hole-entrance
+     in the Forest of Chiroria, near the Picori Town.
+  -> In the Cafe, use a G3 on the blond woman to create a land mass granting 
+     access to a Dig-able wall in Lake Hylia.
+  -> Inside the house with the first book, use a G2 on the blond woman to
+     make a Golden Octorok appear in the Forest of Chikoria.
+
+Lake Hylia: (Lake Hylia)
+ -> Trainer of Skill 4:
+  -> Inside a tree left from the house with the third book, use a B2 to open
+     passage to one of the Secret Masters hiding in a waterfall near the
+     Castle Fields.
+ -> Picori:
+  -> Shrink and go all the way right in the water to a vine, climb it and drop
+     into the hole/home. Fuse a B2 to make a plant grow in Lake Hylia.
+  -> After taking a hole next to the wing stone and ending up in the lone
+     island, go inside the mushroom and fuse a G2 a Golden Rope in the Wind
+     Ruins.
+  -> Inside the mushroom house right near the Wing Crest, fuse an R3 to open
+     up a tree blocked with vines in the Western Woods.
+ -> Wall Device:
+  -> From where Tingle is, head right and up to the cave, enter it and go left
+     and down and follow the path to the dead end, you should find the Device
+     there. Fuse a ?? to aid the Gorons.
+ -> White Dog:
+  -> Inside the house on the upper left part of the lake, fuse a G2 to make a
+     Chest appear in the path to the rear mini entrance of the house with the
+     3rd book.
+ -> White Tingle:
+  -> Use a G1 to make a Chest appear in the mini path that leads to the Picori
+     Town in Gonguru Mountain, Merta Town.
+
+LonLon Ranch:
+ -> Goron:
+  -> The one punching the wall, use a B1 to make Uri Goron, the one who sells
+     Kinstones appear in town.
+  -> Once you are done with the 6 Gorons, one of them will accept an R3 to 
+     make the giant Goron show up. 
+
+Melari's Mines: (Merta Town)
+ -> Picori:
+  -> The one right next to the left exit, use a G3 to make a Chest appear in 
+     the Forest of Chikoria.
+  -> In the lower right room, a G3 will make a Golden Tectite appear in 
+     Gonguru Mountain.
+  -> The one right next to the right opening; with the use of a G1 you will
+     make a Chest appear in the mini passage that's being plummeted by constant
+     rain.
+  -> The Picori closest to the upper left exit. A G2 will produce a Chest 
+     in the screen with the green water.
+ -> Smith
+  -> Use an R2 to make a plant grow in Gonguru Mountain.
+
+Minish Woods: (Forest of Chikoria, I liked this so much better...)
+ -> Deku Scrub:
+  -> By Kinfusing you should open up a tree somewhere there, go in and dazzle
+     the Deku Scrub to fuse with him a G3 for a Golden Octorok in the map
+     left and down from the town.
+  -> You can fuse a second time with a G2 for a hole to open in the Castor
+     Wilds, near where you got the Bow.
+ -> Picori:
+  -> In the mushroom left of the town (Outside) use an R3 to create a Chest in
+     the Wind Ruins, just outside the 3rd dungeon.
+  -> Inside town, go up and right and jump into the water as you head right to
+     find another house, fuse an R1 to create access to a dig-able wall in the
+     Sera Waterfall.
+  -> With this same Picori, fuse an R3 to open a hole near the Lake Hylia's
+     Wing stone.
+ -> Sage Picori:
+  -> Inside the Picori Forest Town, go left and enter the Sage's hut and with
+     an R1 he will allow the previous Picori to change your bombs between
+     fuse and remote as you like.
+ -> Wall Device:
+  -> Go inside the wall next to the steps leading to the Witch's Hut and dig
+     all the way to the northeast to find this one, fuse a B1 to aid the Goron
+     digging.
+
+Mt. Crenel: (Gonguru Mountain)
+ -> Picori:
+  -> In the Mt. Crenel Base, near the shrink stone where the green plant was
+     used there's a hole in the ground covered by spores, find it and go 
+     inside to fuse a G1 to create a chest in this same map. (Thanks to
+     Cr4zyBr4dy for this)
+ -> Sage:
+  -> Go all the way up from the Great Fairy's pond, head left and down the
+     stairs and enter the right opening. With a G2 you'll create a Chest in
+     Link's House map.
+ -> Trainer of Skill 6:
+  -> Fuse a ?? to open up a waterfall in the swamp where you can meet another
+     trainer. (Had this in the wrong place, thanks Kenneth)
+ -> Wall Device:
+  -> From the one above, go through the dig-able wall left from the Sage's
+     chamber and find the device; use a B2 to give more help to the Goron
+     punching the wall.
+
+Royal Valley: (King's Tomb Valley)
+ -> Blue Ghost:
+  -> In the Graveyard, fuse a B1 to add a second level in the guessing game
+     in Town.
+  -> Then, with a B2 he'll make that ghost in town finally disappear, 
+     granting you access to the cuckoo girl house.
+ -> Dampe:
+  -> Go inside his house and fuse a B1 to make a tombstone open in the 
+     Graveyard.
+  -> Then use a G3 to open a hole in the ground in the Wind Ruins.
+ -> Ginya:
+  -> After doing Dampe's Kinfusion, you can find this ghost, she will take a 
+     G3 to open a waterfall in Town.
+  -> Use another G3 afterwards to fix a broken log in the area left of town.
+
+South Hyrule Field: (Link's House Map)
+ -> Green Tingle:
+  -> Use an R3 to create a Golden Tectite in the Gonguru Mountain.
+ -> Smith:
+  -> Inside Link's house, with an R2 you'll make a Chest appear near the farm.
+  -> Then, with a G2 he'll create a Chest in the area left of town.
+ -> Picori:
+  -> Go to the lower left and enter the mushroom (Ram the tree to make the 
+     stump appear) and use an R2 to make the witch sell Red Potions.
+
+Trilby Highlands: (Area left from town)
+ -> Picori
+  -> From where the Blue Tingle is, shrink and go up to find this Picori and
+     fuse with him a G3 to dry up an entrance in the area left of town.
+ -> Poems
+  -> Go left from town and as you hit the left wall head down to a tree house
+     and inside fuse an R1 with Poems to open the path to a house in the map
+     below.
+ -> Wall Device:
+  -> Go left from town and enter the dig-able wall that you can reach with a 
+     bridge just right of the Mountain Path and use a B2 on the device to 
+     give more help to the Goron.
+
+Western Woods: (Left from Link's house)
+ -> Picori:
+  -> Going left from town and down (Or left from Link's House map) and going
+     down you can find a stump and a house. Inside fuse a B2 to make the
+     plant right outside grow.
+
+Wind Ruins: (Wind Ruins)
+ -> Picori:
+  -> As you head down, go inside the first hole in the ground as mini Link and
+     fuse an R1 to make a plant grow in the same map.
+_______________________________________________________________________________
+---------------------------------06. Item List---------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+_______________________________________________________________________________
+[061]------------------06.01. Weapons, Utilities, Etc...-----------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Boomerang/Magical Boomerang: 
+ *The normal one is obtained by buying it for 300 rupees in the shop. The Magic
+  is gotten from completing the Kinstone fusing with the 4 tingles and yes, you
+  can skip the normal one.
+ -> If using the normal Boomerang, it will simply fly in the direction straight
+    ahead from you.
+ -> The Magic Boomerand however, if you hold down the button you have it 
+    equipped on and move the pad, you can steer it somewhat.
+
+Bottles:
+ *One is gotten from a Deku Scrub, and is part of the storyline.
+ *Another is from going behind the shop and acceeding to feed the dog in Lake 
+  Hylia.
+ *Kinfuse with the Smith in your house and he'll make a chest appear with it.
+ *Complete the Goron quest.
+ -> Four in total. They can store stuff like water, faeries and the like.
+
+Bow:
+ *Found in the Swamp, storyline section.
+ **Upgrade the quiver from the shop, for 600 rupees.
+ **A second upgrade comes from Kinfusing with a Picori in the Wind Ruins.
+ **Directly below the staircase as you enter the Graveyard is a wall between
+   two fence pieces, bomb it and truthfully answer all the questions of the
+   Fairy to get the last upgrade. (Thanks to Mathieu Sivade)
+ **The Light Arrows can be obtained by Kinfusioning with a guy in one of the
+   houses on the left side of the river that makes a weird symbol appear near
+   Link's house. Go inside and up the stairs, then use the Jar to suck in the
+   ghost you see (Move around so it doesn't escapes the suction). Then, when
+   you go back there prior to the fifth dungeon, talk to the person to get the
+   Light Arrows.
+ -> Shoots an arrow in a straight line.
+ -> Later on, it will be upgraded and you can shoot stronger arrows by holding
+    down the Bow button until the arrow is charged up.
+
+Cane of Pacci: (Patch Cane/Golden Rod)
+ *Found in the second dungeon, the Burning Cave.
+ -> Flips things around, such as carts and some enemies.
+ -> Use them on holes in the ground, go in and bounce out to jump higher.
+
+Flame Lantern: (Burning Lantern)
+ *Found in the fourth dungeon.
+ -> Press the button you have it on to lit it up. You can lit up some enemies 
+    and torches this way.
+ -> Press the button a second time to turn it off.
+
+Four Sword: 
+ *Gotten from the smith, not long after Gufuu's attack.
+ -> Your normal sword. Use the selected button to make a quick slash forward.
+ -> Once you get certain techniques, you can perform special movements. Please 
+    refer to the skill list.
+
+Gust Jar: (Magical Air Vase)
+ *Found in the first dungeon.
+ -> Use the selected button to start sucking air in. This thing is like a dark 
+    hole, so it will never fill up.
+ -> You can suck in dirt, spores and such, as well as attracting several 
+    objects such as pots and dazzle some enemies.
+ -> Use it on the mushrooms that launch you away if you can't reach them 
+    normally.
+ -> Aboard a lillypad, use it to ster with the puff of airs this thing lets go.
+
+Mole Mitts: (Moggle Gloves/Digging Claws)
+ *Found in the third dungeon, the Wind Dungeon.
+ -> Dig through certain types of walls.
+ -> Digs on the ground spot ahead of you.
+
+Ocarina of Wind:
+ *Found at the end of the Wind Dungeon, after the boss.
+ -> Calls the wind bird to fly you to any wing stone you've activated.
+
+Pegasus Boots:
+ *Obtained from the shoe maker after waking him up.
+ -> Press and hold the button to dash in a straight, suicidal way. 
+ -> If used on trees with sparkle around them, you can disperse the foliage.
+
+Remote/Bombs:
+ *Normal Bombs are found from a Picori just outside the Picori town, on the 
+  left.
+ *After making a Kinstone fuse with the Picori elder, you can change between 
+  Remote and Normal bombs with the aforementioned Picori.
+ **First upgrade can be found from a Great Fairy while climbing your first wall
+   in Gonguru Mountain, simply head right and bomb the wall. Throw a bomb in 
+   the pond and select the 3rd answer.
+ **Another upgrade comes from Kinfusing for a chest that's exactly below the
+   third dungeon.
+ -> Press the button to lay one down. It will go off in a few moments...
+ -> ...Remote bombs however won't go unless you press the button again. You can
+    only have one of these out at the same time however.
+
+Roc's Cape: (Mantle)
+ *Found in the fifth dungeon, the Palace of the Winds.
+ -> Press the button to jump once.
+ -> If pressed a second time, Link will perform a second jump and then glide 
+    down, the longer you press it, the further the second jump will allow you 
+    to get. The distance covered also depends on your movement.
+
+Shield: 
+ *Gotten from Zelda near the beginning of the game.
+ **After you complete the Goron Sidequest from fusing and getting the 3rd
+   bottle, fuse with one of the Gorons to make the Bigoron show up. He'll
+   eat up your shield and after a while he'll give you back the Mirror
+   Shield. This actually takes a while, so go around Kinfusing, hunting stuff
+   and what not.
+ -> Simple enough, hold down the button to cover yourself from some blows.
+ -> The Mirror version can also deflect some projectiles.
+
+_______________________________________________________________________________
+[062]--------------------------------06.02. Key Items--------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Carlov Medal:
+ *Get all 136 figurines.
+ -> Just a reminder on how much you lost hunting all the figurines down. ^^;;
+
+Elements:
+ *Big Earth Element: Obtained after the boss of the first dungeon.
+ *Burning Element: Obtained after the boss of the Burning Cave.
+ *Water Drop Element: Obtained after the boss of the fourth dungeon.
+ *Wind Element: Obtained after the boss of the the fifth dungeon.
+ -> They power up your sword, allowing you to create more clones.
+
+Grip Bracelet:
+ *Bought from a Deku Scrub in the Gonguru Mountain.
+ -> You can climb those walls that look climbable with this.
+
+Power Wrist:
+ *Obtained from the mini dungeon above the fountain in town.
+ -> Allows mini Link to move objects.
+
+Flippers:
+ *Obtained after the 3 book library quest.
+ -> Allows you to swim on water, as normal and mini Link.
+
+Kinstone Bag:
+ *Obtained from a pseudo-bard that looks like a cat.
+ -> Holds your Kinstones.
+
+Skill Scrolls:
+ *There are eight in total, refer to their own section for more info.
+
+Seashells:
+ *Obtained all around the world.
+ -> Trade them for image collections of characters, enemies and what not in the
+    lower left tree house of Hyrule's Town.
+
+Tingle Trophy:
+ *Obtained by completing all the Kinfusions.
+ -> Just a reminder on how much time you lost kinfusing. ^^;;
+
+Wallets:
+ *You start with a normal one that holds 100.
+ *Upgrade to the next level by talking to the Great Fairy in the Forest of 
+  Chikoria, simply use the Patch Cane in the screen below the LonLon Ranch (To 
+  the right of the stairs) to reach the groove, chose the firs option twice and
+  you are set for 500 rupees.
+ *Kinfuse a Red, 'E' looking Kinstone to dry some water in LonLon Ranch. Go 
+  inside and claim the biggest wallet for 999.
+_______________________________________________________________________________
+[007]--------------------------07. Tiger Scrolls-------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+Tiger Scroll 1: Spin Attack
+ -> Gotten from the trainer in town after clearing the first dungeon.
+  -> "Press and hold your sword button. Charge and release!" 
+     Basically, you do the standard spin attack.
+
+Tiger Scroll 2: Sword Beam
+ -> Obtained from a secret trainer hidden in a room under the castle. Simply go
+    right on the castle's main garden and cut down the grass to find a set of
+    stairs. Light up the candles with the Burning Lantern and learn this skill.
+  -> "When your hearts are full, swing your sword!"
+     If at full health, perform a simple sword slash to send out an energy
+     beam in a straight direction.
+
+Tiger Scroll 3: Dash Attack
+ -> After getting the Pegasus Boots, speak to the trainer in town to learn 
+    this.
+  -> "Equip your Pegasus Boots and sword, then dash away!"
+     Simply equip the Pegasus Boots and the Sword and dash to hold your sword
+     ahead of you for a quick surprise attack.
+
+Tiger Scroll 4: Peril Beam
+ -> After having 10 or more Hearts, go to Lake Hylia and find a tree groove 
+    slightly left from the house with the third book to learn this.
+  -> "When you have only one heart left, swing the sword!"
+     Like the Tiger Scroll 2, but this only works when under one heart of 
+     health.
+
+Tiger Scroll 5: Rock Breaker
+ -> After the second dungeon I believe, speak to the trainer in town.
+  -> "Break pots with your sword! That's all there is to it!"
+     This one allows you to break pots, vases, and what not using a simple
+     sword strike.
+
+Tiger Scroll 6: Roll Attack
+ -> Go to the wing stone in Mt. Crenel and jump down the ledge and head
+    right all the way then climb the wall. Clone yourself and open the door.
+  -> "Roll! Then swing your sword as you start to get up!"
+     Simply move forward and press R to roll and then use the sword to end
+     with a thrust.
+
+Tiger Scroll 7: Down Thrust
+ -> After getting the Mantle return to the trainer in town to learn this.
+  -> "Equip the Roc's Cape and the Sword!! Jump and swing!"
+     Jump once with the Mantle and use your sword to make devastating thrust.
+
+Tiger Scroll 8: Great Spin Attack
+ -> Obtained from the ghost trainer under a tomb in the Swamp after you have
+    gotten the other 7 Skills.
+  -> "Perform a Spin Attack... and the hit the button repeatedly!"
+     Charge up your sword and as you spin, keep hitting the sword button to
+     advance forward on the spin.
+
+Skill Upgrade: Sword Charge Speed Up
+ -> Obtained from the master behind the waterfall on the upper right corner of
+    the swamp which is opened up by a Kinfusion with trainer 6.
+  -> Simply speeds up your charge speed.
+
+Skill Upgrade: Cloning Speed Up
+ -> Obtined from a secret master behind a waterfall in the Seki Waterfall
+    screen after Kinfusing with the trainer of Skill 2.
+  -> Speeds up the time for the clone bar to fill up.
+
+Skill Upgrade: Extended Great Spin Attack
+ -> Obtainted from a secret master behind a waterfall in the Castle Fields.
+    Kinfuse with the trainer of Skill 4 to open it.
+  -> Raises the distance you can cover in a Great Spin Attack.
+_______________________________________________________________________________
+[008]--------------------------08. Figurine List-------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+So what are figurines you ask? Well, go to the tree house in the lower-left
+corner of town to find out. Basically, as you keep punching in those SeaShells
+you get a figurine that goes into your collection. Each time you get a new
+one, the percentage probability for obtaining another new one decreases. Such
+percentage can be increased by using extra SeaShells. 
+
+Ok, it seems you can only get the figurines whose character you have seen, but
+some don't fall under this category (I believe only enemies do). So if you are
+missing some figurines, then you haven't spotted that enemy yet.
+
+By the way, the last 6 figurines can only be obtained after you finish that
+data. I.e., beat Vatii and save the game afterwards.
+
+001. Capless Link. (Change Link with the name you input while making the file)
+ -> "A young boy who lives in Hyrule. He is close friends with Princess Zelda."
+002. Ezlo and Link. (Same, change Link with the name you used)
+ -> "A young boy on a quest with Ezlo to restore the Four Sword."
+003. Princess Zelda.
+ -> "A bright and cheery princess from Hyrule's royal family."
+004. Ezlo (Cap).
+ -> "A strange creature that looks at first like a cap. He speaks roughly and
+    treats Link like a child, but he actually really likes Link."
+005. Sorcered Vatii. (Or Gufuu, as you wish)
+ -> "When the young Minish donned Ezlo's magic cap, he took this evil form. 
+    Now, he searches for the light force in his quest to become all-powerful."
+006. King Daltus.
+ -> "The king of Hyrule. Reported to have been a fine swordsman, he appeared in
+    the Picori Festival tournament as a youth and fought to a draw with Smith."
+007. Minister Potho.
+ -> "The supporting pillar of Hyrule. He is also in charge of Princess Zelda's
+    education, so when she goes missing, he gets frustated."
+008. Smith.
+ -> "The finest swordsmith in Hyrule. As a young man, he was a great swordsman.
+    He and King Daltus are friends and enjoyed a pleasant rivalry as youths."
+009. Mayor Hagen.
+ -> "The mayor of the town of Hyrule. He is a collector of masks. He's built a
+    shelter into his garden just in case monsters ever attack Hyrule."
+010. Marcy.
+ -> "Second in command at Hyrule's post office. She's mellow and laid-back, 
+    entirely unlike the high-strung and easily excitable Stamp."
+011. Stamp. 
+ -> "A busy, hardworking postal employee, although he can be a touch edgy. The
+    stamp he uses is his own personal one, so please don't borrow it. Thanks."
+012. Rem.
+ -> "The propietor of Rem's Shoe Store. Using his "secter technique," he makes
+    shoes in his sleep. Princess Zelda is his single biggest source of income."
+013. Dr. Left.
+ -> "A gruff-talking academic type who is obsessed with styding the Picori. He
+    doesn't seem to be aware that there is a Minish living in his own house."
+014. Carlov
+ -> "A sculptor of finely crafted figurines. Many consider him the best 
+    sculptor in all of Hyrule. He enjoys collecting Mysterious Shells."
+015. Borlov
+ -> "Owner of the Chest Mini-Game Shop. Carlov's younger brother. He detests
+    gambling, but he has made the biggest gamble of all: entrepreneurship."
+016. Stockwell.
+ -> "The handy neighborhood gear seller, also called Stockwell the Well-
+    Stocked. He complains that he's been too busy lately to see his dog, 
+    Borken."
+017. Simon.
+ -> "His mysterious dungeon-simulation game is very popular in Hyrule. It gives
+    players the illusion of fighting real monsters in real dungeons."
+018. Gorman.
+ -> "He wants to rent out his house in town but he's too overbearing to attract
+    a tenant. He doesn't even seem to realize what the problem is..."
+019. Anju.
+ -> "This young woman tends to her cuccos in Hyrule Town. If you help her 
+    gather her loose cuccos, she'll give you a reward."
+020. Brocco.
+ -> "Hyrule's vegetable vendor. He sells fine produce. He also argues 
+    constantly with the fruit vendor, Pina, over the health benefits of 
+    vegetables."
+021. Pina.
+ -> "Hyrule's fruit vendor. She hates vegetables, so she won't even sell 
+    tomatoes, even though they technically ARE fruits. Freak."
+022. Beedle.
+ -> "Though he is an adult, he is very good at finding Picolyte made by the
+    Minish. And he is very, VERY convincing about their healthful properties."
+023. Postman.
+ -> "A very serious mail deliveryman. He continues to make every delivery right
+    on time every day."
+024. Crenel Hermit. 
+ -> "A hermit who lives on Mount Crenel. He has lot of Kinstone pieces. He 
+    brags that he won the festival tournament when he was younger."
+025. Monster Lady.
+ -> "A weird old lady living in Percy's house without his permission. She 
+    doesn't want you to turn on the lights, because she's actually..."
+026. Dampé.
+ -> "The gravedigger at the cemetery. They say he has the power to speak with
+    the dead. He fuses Kinstones he digs up with the local ghosts."
+027. Gustaf, Royal Spirit.
+ -> "The spirit of an ancient king of Hyrule who wishes to secure peace in his
+    land from beyond the grave. He was very fond of the people of the Wind 
+    Tribe."
+028. Syrup.
+ -> "A wizard who lives in the Minish Woods. She sells magic items with odd
+    powers. She's looking for an apprentice to whom she can teach her mystic
+    spells."
+029. Great Butterfly Fairy.
+ -> "The Great Buttefly Fairy of Mount Crenel. She provides you with a larger
+    wallet, allowing you to carry more Rupees with you."
+030. Great Mayfly Fairy.
+ -> "The Great Mayfly Fairy of Mount Crenel. She provides you with a larger 
+    bomb bag, allowing you to carry more bombs with you."
+031. Great Dragonfly Fairy.
+ -> "The Great Dragonfly Fary of Mount Crenel. She gives you a larger quiver,
+    allowing you to carry more arrows with you."
+032. Percy.
+ -> "A poet who lives in Trilby Highlands. He comes from a long journey to find
+    his house occupied by an unwanted guest. Poor guy..."
+033. Nayru.
+ -> "She's looking for a house in Hyrule to move into. She is descended from a
+    land of priestesses in the land of Labrynna."
+034. Farore.
+ -> "She's looking for a house in Hyrule to move into. She's a very helpful 
+    person, but people take advantage of her kind nature. This really bothers
+    her."
+035. Din.
+ -> "She's looking for a house in Hyrule to move into. She is a famous dancer
+    from the land of Holodrum."
+036. Joy Butterfly.
+ -> "A rare butterfly said to bring happiness to those who catch it."
+037. Gina.
+ -> "A strange Ghini who wants to fuse Kinstone pieces, which is somewhat 
+    peculiar for a monster. She has a lot of pieces, so keep on fusing."
+038. Festari.
+ -> "A priest living in Minish Village. He speaks some human languages. He sees
+    that Link is human with one look. He's a bit of a human enthusiast."
+039. Gentari.
+ -> "The elder of the Forest Minish. He has lived among humans for a long time.
+    He knows where the four elements are. He has a twin borther in Hyrule's
+    Library."
+040. Forest Picori.
+ -> "Not visible to the eyes of adults, they delight in making humans happy by
+    hiding helpful items and Rupees under grass and rocks all over the world."
+041. Librari.
+ -> "This Town Minish elder is Gentari's twin borther. Those large wings that
+    he is so proud of are trophies from a duel with a chicken as a young 
+    Minish."
+042. Town Picori.
+ -> "These Minish like humans so much that they moved from Minish Village into
+    Hyrule itself! They try to make humans happy, but it sometimes backfires."
+043. Melari.
+ -> "He lives with his seven apprentices in Mount Crenel, which contains all 
+    the mineral riches they will ever need. He seems gruff, but he's 
+    trustworthy."
+044. Mountain Picori.
+ -> "These seven students followed Melari from Minish Village to Mount Crenel.
+    Their song is actually a sign that they are full-fledged Mountain Minish
+    now." (Yattoko~ Yattoko~ ^^)
+045. Goron.
+ -> "These rock- and iron- eaters once lived on Mount Crenel in Western Hyrule.
+    Now their numbers are few, and they live quietly in a cave."
+046. Minish Vatii. (Or Gufuu...)
+ -> "Before he became a sorcered, he was a simple minish. He had always been
+    entranced by the evil that lives in the hearts of men..."
+047. Vassals.
+ -> "These vassals serve the king of Hyrule. They are loyal and diligent. Like
+    the king himself, they are courteous yet frank."
+048. Library.
+ -> "The Royal Hyrule Library. Although the library is well loved, many forget
+    to return their books, causing no end of trouble for the librarians."
+049. Blade Brothers.
+ -> "All of these self-trainer swordsmen have won the fighting tournaments at
+    the Picori Festival before. They see great potential in Link."
+050. Wheaton & Pita.
+ -> "This couple bakes bread in Hyrule. Their tasty pastries hold a secret...
+    If you are extra lucky, there'll be a helpful item hidden inside!"
+051. Funday School.
+ -> "This is where all the children of Hyrule learn. Linka and Princess Zelda
+    studied here, too. The two teachers are twins name Tina and Dina."
+052. Mama's Cafe.
+ -> "This is the best place in town to relax. You can also pick up some good
+    tips, from the latest gossip to observations about the world."
+053. Happy Hearth Inn.
+ -> "This generous inn gives a gift to every guest who stays the night. Guests
+    can unwind in the lobby on the second floor.
+054. Zill and Friends.
+ -> "Zill is the one in the middle. He likes to wander around town with his 
+    friends. He knows a lot about the town, and he might even have some info
+    for you."
+055. The Carpenters.
+ -> "These carpenters may be rough around the edges, but they do good work. 
+    They may seem tough, but they're in touch with their feminine side."
+056. Young Couple.
+ -> "Romio and Julietta grew up next door to one another. They're dating now, 
+    but they plan to marry once they get their pets' approval."
+057. Peaceful Hyrule 1.
+ -> "Carlov's Peaceful Hyrule. Scenery Series No, 1."
+058. Tranquil Hyrule 2.
+ -> "Carlov's Peaceful Hyrule. Scenery Series No, 2."
+059. Tranquil Hyrule 3.
+ -> "Carlov's Peaceful Hyrule. Scenery Series No, 3."
+060. Cucco!
+ -> "With a boisterous crow and a cute crest, these feathered friends are the
+    most popular pets in Hyrule. The baby chicks like small bugs."
+061. At Lon Lon Ranch.
+ -> "This small ranch lies just outside Hyrule Town. Father-and-daughter team
+    Talon and Malon run it, and they sell the finest milk in Hyrule!"
+062. The Wind Tribe.
+ -> "The people who built the Wind Ruins. They now live above the clouds, 
+    suspended by their own magic ability to control the wind."
+063. Gregal & the Ghost.
+ -> "An old man plagued by an evil spirit. Coming to his aid will bring you
+    benefit in the end, so if you meet him, you must find a way to help him."
+064. Tingle Siblings?
+ -> "Older brother Tingle (green) and his twin younger brothers Ankle (purple)
+    and Knuckle (blue). They believe fusing Kinstones will help them to meet
+    faeries."
+065. Eenie & Meenie.
+ -> "The Hyrulean vegetables grown in the fields are exquisitely delicious. 
+    Apparently, Brocco sells the best of their crops."
+066. Goron Merchant.
+ -> "This Goron appears when you successfully fuse certain Kinstone pieces. He
+    will sell you expensive, but rare, Kinstone pieces."
+067. Spookter & Spekter.
+ -> "Ghosts from the Royal Valley. The one in the blue cap is Spookter, and the
+    one in the red casp is Spekter. Spookter tries to be scary, but he's just
+    not."
+068. Sluggula.
+ -> "Appears in Minish dungeons. They drop from the ceiling unexpectedly. They
+    are slow, so take your time, and defeat them one by one."
+069. Scissors Beetle.
+ -> "Appears in Minish roads & dungeons. These monsters have sharp mandibles.
+    Hit them when they shoot these away. Avoid their attacks to get in close."
+070. Moldworm.
+ -> "Appears in Minish roads & dungeons. They come out of the ground when they
+    sense prey. If you get swallowed, you take damage and get all dirty!"
+071. Spiked Beetle.
+ -> "Appears in dungeons. Covered in hard, spiny shells. Fre attacks work on 
+    them. You have to flip them over to hurt them."
+072. Eyegore Statue.
+ -> "Appears in Castor Wilds. They move when you put an arrow in their eye. No
+    other attacks work. You can always just let them pass..."
+073. Business Scrub.
+ -> "Appears in caves, etx. Normally stay underground. They'll pop out and spit
+    seeds at you, but if you get to know 'em, they're not so bad."
+074. Armos.
+ -> "Appears in the Wind Ruins. Built by the Minish for the Wind Tribe long 
+    ago. They look like stone statues, but if you get too close, they move!"
+075. Keese.
+ -> "Appears in various areas. These bats live in dungeons and caves. Thier
+    movement is umpredictable, so use range weapons from a safe distance."
+076. Keaton. 
+ -> "Appears in various areas. This thieving fox preys upon travelers and
+    merchants. He may not be strong, but he will attack very quickly, so be
+    careful."
+077. Ghini.
+ -> "Appears in the Royal Valley, Dark Hyrule Castle, etc. These dark beasties
+    are attracted to light, and if they attack you, they may suck your life
+    away!"
+078. Gibdo. 
+ -> "Appears in the Palace of Winds. These mummies keep coming at you when you
+    attack. It's better to fight from a distance if you want to avoid damage."
+079. Rollobite.
+ -> "Appears in various areas. His hard shell protects him from swords, but
+    once he rolls into a ball, you can use the Gust Jar to draw him in."
+080. Spark.
+ -> "Appears in dungeons. They cling to walls and move quickly. Normal attacks
+    may not work, but the boomerang is pretty effective."
+081. Dark Nut. (Nut? Wtf...)
+ -> "Appears in Dark Hyrule Castle. These armor-clad soldiers are tough. Use
+    your shield and Roll Attack to find an opening in his defenses..."
+082. Red Dark Nut.
+ -> "Appears in Dark Hyrule Castle. These Dark Nut commanders are strong, but
+    if you relax and find an opening, you can still defeat them."
+083. Chaser.
+ -> "Appears in dungeons. They move quickly to chase you once they spot you. If
+    you attack, they'll stop. Use that to your advantage!"
+084. Rock Chuchu.
+ -> "Appears in various areas. These tough Chuchus have rocky heads. It will be
+    hard to damage them until you can knock that rock off."
+085. Moldorm.
+ -> "Appears in various areas. These guys move quickly and randomly. Trap them
+    in a corner and take them out quickly."
+086. Door Mimic.
+ -> "Appears in the Royal Valley & Dark Hyrule Castle. They look like doors, 
+    but they're really traps! If you get too close to one, it will fall down
+    on you!"
+087. Peahat.
+ -> "Appears on Mount Crenel, etc. These strange beasts hover on propeller-
+    like leaves. You can pull them out of the sky with your Gust Jar."
+088. Helmasaur.
+ -> "Appears in various areas. Their fronts are protected with metal masks, but
+    their backside aren't! Pop off that maso for an easy battle."
+089. Wall Master.
+ -> "Appears in dungeons. If these guys grab you, they'll send you back to the
+    start of the dungeon. Dodge them as they fall, then attack."
+090. Floor Master.
+ -> "Appears in dungeons. If these guys grab you, they'll send you back to the
+    start of the dungeon. Watch out when he attacks with others."
+091. Acro-Bandits.
+ -> "Appears in the Eastern Hills, etc. Five of them pop out at once. If you
+    smack each one as they pop out of the ground, they're a piece of cake."
+092. Bob-omb.
+ -> "Appears in dungeons. They ofter gather in groups in narrow areas. Once
+    activated, they go a little crazy. Take them out with arrows."
+093. Bombarossa.
+ -> "Appears in dungeons. They float in the air and explode when touched. Walk
+    carefully, and you may escape unhurt..."
+094. Like Like.
+ -> "Appears in caves, dungeons, etc. Don't let them grab you, they'll eat your
+    shield if they hold you long enough. Swing your sword to escape."
+095. Rupee Like.
+ -> "Appears in caves, dungeons, etc. This Rupee Like has a Rupee dangling 
+    from its head stalk. This clever lure attracts greedy and delicious 
+    heroes."
+096. Rope.
+ -> "Appears in various areas. They'll come straight for you if they spot you.
+    Just swing your sword when they charge at you."
+097. Boulder.
+ -> "Appears on Mount Crenel, etc. These huge boulders come crashing down from
+    cliff walls. They fall in a random pattern, so watch your step!"
+098. Ball & Chain Soldier.
+ -> "Appears in the Palace of Winds and Dark Hyrule Castle. They're not fast, 
+    but that iron ball is a bruiser! Try to hit them after they swing the 
+    ball."
+099. Spiny Beetle.
+ -> "Appears in various areas. They hide under common rocks and grass. Be 
+    careful, because they can pop out when you least expect it!"
+100. Spear Moblin.
+ -> "Appears in Minish Woods, etc. They rush you on sight. They also block 
+    head-on attacks with their spears, so circle around to attack."
+101. Bow Moblin.
+ -> "Appears in various areas. They fire arrows at you on sight. Block these
+    with your shield and then close in to attack."
+102. Cloud Piranha.
+ -> "Appears in the sky. They swim through clouds like fish in water. Attack 
+    them in that brief moment when they pop out!"
+103. Mulldozer.
+ -> "Appears in Minish roads, dungeons, etc. There are red and blue ones. They
+    may look small and weak, but their hard shells make them formidable."
+104. Pesto.
+ -> "Appears in Minish roads, dungeons, etc. There are red and blue ones. The
+    blue ones are stronger and throw things down on your head."
+105. Puffstool.
+ -> "Appears in Deepwood Shrine. These mushroom beasties scatter spores all 
+    over dungeons. When their caps are red, they are invincible."
+106. Wizzrobe.
+ -> "Appears in the Palace of Winds & Dark Hyrule Castle. They fire magic bolts
+    from afar. Hit them when they appear so they don't cast another spell!"
+107. Fire Wizzrobe.
+ -> "Appears in the Palace of Winds & Dark Hyrule Castle. They wield fire 
+    magic. Hit them when they appear so they don't cast another spell!"
+108. Ice Wizzrobe.
+ -> "Appears in the Palace of Winds & Dark Hyrule Castle. They wield ice magic.
+    They're weak against fire, so hit them with your Fire Rod!" (Fire Rod?)
+109. Wisp.
+ -> "Appears in dungeons. They float in midair. They won't hurt you, but if you
+    touch them, you won't be able to use your sword for a while."
+110. Octorok.
+ -> "Appears in various areas. There are red and blue ones. They've appeared in
+    every Zelda game to date. They spit rocks, so be careful!"
+111. Golden Octorok.
+ -> "Appears in... Well, we're not sure! The legendary Golden Octorok. It can't
+    be confirmed, but they are said to shoot chunks of pure gold..."
+112. Golden Tektite.
+ -> "Appears in... Well, we're not sure! The legendary Golden Tektite. It has
+    much more power."
+113. Golden Rope. 
+ -> "Appears in... Well, we're not sure! The legendary Golden Rope. It's much
+    more aggressive that the normal ones: it will attack you on sight."
+114. Crow & Takkuri.
+ -> "Appears in various areas. The black one is Crow. If you touch Takkuri, he
+    will steal Rupees from you, so be careful!"
+115. Lakitu.
+ -> "Appears in the sky. They gloat on clouds. They don't move, but they do 
+    throw lightning bolts. Steal their clouds with the Gust Jar."
+116. Stalfos.
+ -> "Appears in dungeons. Blue ones jump, and red ones throw bones. See what
+    happens when you remove their heads with the Gust Jar."
+117. Beetle.
+ -> "Appears in various areas. They appear under rocks and grass. If they grab
+    you, you won't be able to move. Swing your sword to get away."
+118. ChuChu.
+ -> "Appears in various areas. Chuchus come in many colors. Each color is a
+    little different, but ranged weapons work well against all."
+119. Tektite.
+ -> "Appears on Mount Crenel, etc. They move by jumping long distances. Their
+    movement can be unpredictable, so attack them when they are still."
+120. Trap.
+ -> "Appears in various areas. A trap with sharp blades. Some are triggered by
+    nearby intruders, while others follor a set path."
+121. Leever.
+ -> "Appears in Castor Wilds, Mount Crenel, etc. These baddies move freely 
+    underground and pop out for a surprise attack. Keep your shield up!"
+122. Madderpillar.
+ -> "Appears in Deepwood Shrine, etc. This catrpillar moves in a zigzag 
+    pattern. If you hit them on the nose, he gets upset and starts running
+    around."
+123. Spiny Chuchu.
+ -> "Appears in various areas. These Chuchus project spikes from their bodies
+    at the first sign of danger. Try a well-placed bomb."
+124. Octorok. (Should have left the original giant there...)
+ -> "Appears in the Temple of Droplets. Frozen solid by the power of the Water
+    Element. He's been frozen so long that his hunger is unbearable."
+125. Gyorg Pair.
+ -> "Appears in Palace of Winds. Females are larger than males. They fly around
+    the Palace of Winds, preying on adventurers."
+126. Biggoron.
+ -> "This is a legendary Goron with a body bigger than a mountain. It is so 
+    big, in fact, that no one has ever seen it all at once.
+127. Big Green Chuchu.
+ -> "Appears in Deepwood Shrine. A perfectly ordinary Chuchu. Though not much
+    of an enemy usually, they are terrifying to anyone Minish-sized."
+128. Gleerok.
+ -> "Appears in the Cave of Flames. A Gleeok with a hard, rocky shell found in 
+    Mount Crenel. Hiding in lava, this beast spews fire on everything it 
+    sees." (Notice the name is Gleerok but in the info it says Gleeok?)
+129. Mazaal.
+ -> "Appears in the Palace of Winds. Constructed by the Wind Tribe to repel
+    intruders, this sturdy machine cannot be destroyed by any external force."
+130. Big Blue Chuchu.
+ -> "Appears in the Temple of Droplets. An ordinary blue Chuchu. Fighting him
+    while Minish-sized is daunting, but just try to aviud that electric 
+    attack."
+131. Zelda and Link. (Switch Link with the name you entered on the file)
+ -> "Those two became fast friends because of Smith and the king of Hyrule. 
+    Zelda wishes that the sometimes unreliable Link were just a wee bit 
+    stronger."
+132. Minish Ezlo. (I liked Ezero more...)
+ -> "The Minish Ezlo, before he was cursed by Vatii. He is a famous Minish 
+    sage. Even among Minish inventors, he was renowned for his amazing 
+    creations."
+133. Black Knight.
+ -> "Appears in Dark Hyrule Castle. This is the strongest Dark Nut, with a good
+    balance of attack and defense. They will do anything to stop you."
+134. Vatii Reborn.
+ -> "The sorcered VAtii took this form after draining the power of the light
+    force from Princess Zelda. The evil beams from his eyes are devastating."
+135. Vatii Transfigured.
+ -> "Once Vatii's body has been shattered, this dark form rises up, all that
+    remains from the evil sorcered. Only the sacred Four Sword can defeat him."
+136. Vatii's Wrath.
+ -> "This is the embodiment of purest evil, the final form of the power-mad
+    Vatii. Its mind is comsumed with a hunger for destruction. Find its
+    weakness."
+_______________________________________________________________________________
+[009]----------------------------09. Sidequests--------------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+House Building:
+ -> If you speak to Goman after he appears in town, he will mention he has a
+    house that he would like to rent to someone, but needs a girl... Go figure.
+    Go to the Inn and speak to any of the 3 ex-godesses to place her in the
+    house. 
+    After a while, Gorman will move to the north-west part of town, near a 
+    Minish Hut. At this point walk towards the post office. You should see one
+    of the carpenters there, Kinfuse with him and later Gorman will have
+    yet another house. You can place another ex-Goddess here.
+    The third house however is still a mystery however. All we know is that
+    should be where the cat pen is (You know, the place you go through as
+    Minish for the Bracelets), but so far, the answer of how to is still
+    shrouded...
+     Effects of the Charms:
+     -> Din's: Doubles Strenght for a while.
+     -> Nayru's: Doubles Defense for a while.
+     -> Farore's: Raises Strenght and Defense slightly for a while.
+
+Minish Seed: (Mentioned to me by Yudy) (Information completed by Chris
+              Moeller)
+ -> Go to the Minish Town in the Woods and to the room where you found the
+    Blabber Nut. The Minish on the right upper side will ask for some Milk,
+    Crenel Hot Spring Water and some Red Potion in that order and one at a 
+    time. Take some time between each one and per each you turn in, the guy
+    in the lower right section of the Market in Town will sell three more
+    Picolytes. The first ones are Red, Green and White. The rest will appear
+    as you progress this quest.
+    -> Red: Increases odds of finding hearts. (100 Rupeers)
+    -> Green: Increases odds of finding Mysterious Shells. (200 Rupees)
+    -> White: Increases odds of finding Kinstones. (100 Rupees)
+    -> Blue: Increases odds of finding items such as bombs/arrows. (200 Rupees)
+    -> Yellow: Increases odds of finding Rupees. (200 Rupees)
+    -> Orange: Increases odds of finding stray faeries. (300 Rupees)
+
+Goron Digging and the Mirror Shield:
+ -> Ok, first, refer to the Kinfusion List and search for "Wall Device"; there
+    are 5 of them. Kinfuse with those things and do so with the top farmer in
+    the farm below the Ranch as well to get all 6 Gorons. Once you are done
+    with that and you get your bottle, Kinfuse with one of those Gorons to make
+    the Bigoron show up. AFTER you finish the game, he will take your Shield.
+    Go travel a while, finish Kinfusing, get Heart Pieces or what not and then
+    come back to get your Mirror Shield.
+_______________________________________________________________________________
+[010]-------------------------10. Thanks/Copyright-----------------------------
+¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯¯
+So far, thanks to:
+ -> Nintendo and Capcom for this great game.
+ -> Naomi Frosdick <hyper_ni@yahoo.co.uk> for the ASCII art up top.
+ -> Arjen Voogt <Grawl if you wish, grawler@gmail.com> for... Well, let's just
+    say he saved me a lot of work with a savestate he had... Not to mention he
+    has helped me with some heart pieces and viceversa. Neat stuff.
+ -> Paul Handog <shdwrlm3@gmail.com> for correcting me on the name of the Wind
+    Ruins, in which I mistakenly read wrong a mora and thus screwed the whole
+    name. So thank you.
+ -> Philip Crociata <zaxapac@hotmail.com> for telling me that the butterflies
+    affect some stuff, like swiming, shooting and digging! I had no idea >.<
+ -> Cr4zyBr4dy <Cr4zyBr4dy@aol.com> for pointing out a hidden hole with a 
+    Picori inside that also led me to find another Kinfusion.
+ -> Gareth Hill <grakleaf@softhome.net> for a correction of a typo I had made.
+ -> Mathieu Sivade <telestmonnom@hotmail.com> for pointing me to the last
+    Bow upgrade and mentioning that I made a mistake with the bomb upgrades.
+ -> Kenneth Chan <xcelsio@gmail.com> for correcting a Heart Piece and I
+    listed a fuse wrongly in the Fuse List section as compared to the Tiger
+    Scroll one.
+ -> Yudy <yudywanto@yahoo.com> for mentioning me the Minish Seed sidequest.
+ -> Chris Moeller <kode54@gmail.com> for completing the information for the
+    Minish Seed sidequest. Many sent this information, but he was the first.
+
+This FAQ/Walkthrough is copyright of Alan Quirino (grayfox_2510 (at) hotmail 
+(dot) com).
+
+Ok, so let us go over a few basic things...
+
+Ownership, Borrowing Info, Contributing, etc.:
+
+1) Please do not take any of this without my consent or at the very least,
+   without a written gratitude in wherever you posted this. I had to spend
+   quite some time getting all there is to this, or at least as close as
+   possible, and well, if you have written any document of this kind and
+   someone took something without gratitude then you must know it sucks... 
+
+2) Taking up part of the previos point, if you wish to take some information
+   from my guide, then make it reasonable... I mean, don't take a whole 
+   section. Nonetheless, give credit where it's due; golden rule of 
+   GameFAQs.com. I don't mind if I'm not told, as long as I'm given credit
+   for what I did to contribute.
+
+3) So, you notice a similarity between my guide and a piece of someone's else
+   but it looks out of place? What do you do? Simple, just let me know. 
+   It might be a coincidence, it might be plagiarize, who knows, but I'll 
+   contact the other author and find what's going on. Thank you for the 
+   support if you do notice this by the way.
+
+4) I try, but perhaps my efforts alone are not enough and thus I end up 
+   missing something here or there. Contributions are of course welcome, but
+   be sure to be looking at the latest version, which is always found here:
+   http://www.gamefaqs.com/features/recognition/8373.html
+   Or just to be sure, hit Ctrl+F5 while viewing this file to ensure it's not
+   a cached version. Also, be sure to put "Yakusoku no Chi Riviera" or the 
+   like as the subject of your mail. If you wish for me to put you under a
+   special name, include so. I normally also include e-mails just for
+   reference, but if you want otherwise, then please let me know.
+
+Permission, Posting, etc.:
+
+1) First and foremost, I am NOT allowing other sites to post my works. The only
+   sites that are allowed to host this is GameFAQs.com, and on the rare 
+   occasion GameSpot, but that's since they, and only they can directly link
+   to the former site. So save us both our time and do not ask for permission
+   to post this.
+
+2) So, assuming you inded had permissiong to post this... Do not change the
+   format, the font size, the font... Nothing. Why? Simple, the whole basis
+   of this guide is based on the current format, so changing it will simply
+   corrupt the whole file or make it hard to read. 
+
+3) Pay note that this is a free FAQ/Walkthrough. I make nothing out of this,
+   so why should you? In other words, don't charge people for this. If I
+   allowed this to be on display in your site, it must be free. Do not go
+   around distributing this asking for money either. In short, don't get
+   money at all for this...
+
+4) Yes, I do get questions about this... You are free to download this and
+   store it on your computer. No problem with that, just be careful with the
+   format unless you want to have trouble reading. But if you want to e-mail
+   me for any reason, make sure you are using the latest version...
+
+Mailing, Inquires, etc.:
+
+1) Ok, first of all, go to the TOC (Table of Contents). Then look at it
+   again, and again a third time. Sorry for stressing that out, but most often
+   the answers to your questions can be found in a particular section of the
+   guide. Make sure you are also viewing the latest version, which will always
+   be found at:
+   http://www.gamefaqs.com/features/recognition/8373.html
+   Hit Ctrl+F5 to make sure you aren't seeing a cached version. That aside,
+   if you still need to contact me for an inquire, then put a subject relevant
+   to the game such as, but not limited to "Yakusoku no Chi Riviera."
+   {No Subject) mails will be deleted 90% of the time, so...
+
+2) In addition to the previous point, I reserve the right to answer or not, and
+   as such, I will only answer questions that I missed to detail here at all,
+   or extreme cases. Mails asking about information that is already found here 
+   might, and probably will end up in the trash can on my mail account. 
+
+3) A few things though, use proper grammar and spelling for all that is holy.
+   Even if the answer can be found here, the odds of me answering a mail like
+   those will raise if you took the time to write properly. Now, I understand
+   not everyone knows English, heck, even mine ain't that good, but if so,
+   say so. Is that so much to ask?
+
+4) Lastly, I check my mail around twice a day. Some times even more, but on 
+   the rare occasion, allow up to two business days for a reply. If they are
+   gone and you haven't heard back from me, then either the mail got lost, both
+   mine or yours. That, or I ignored your mail for X reason, such as, but not
+   limited to: Crappy grammar, inquires already answered here, etc.
+
+So what if it's a long TOS, it needs to be done nowadays... *Rolls eyes*
+
+All trademarks and copyrights contained in his document are owned by their 
+                 respective trademark and copyright holders.
+
+Stop scrolling... There is nothing more below this!!

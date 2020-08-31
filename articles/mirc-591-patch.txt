@@ -1,0 +1,34 @@
+How to patch mIRC32.exe to stop responding to CTCP VERSION
+----------------------------------------------------------
+OK, the one reason for this is that I get asked how to do this all the time,
+and i'm fed up of saying the same thing, so here it is!
+
+To remove the CTCP VERSION reply from mIRC 5.91 within mIRC use the following command:
+
+ON WinNT/2k/XP:
+//rename mirc32.exe x | copy x mirc32.exe | bwrite mirc32.exe 1365720 x
+Then restart mIRC
+OR
+ON Win9x:
+//copy mirc32.exe mirc33.exe | bwrite mirc33.exe 1365720 x
+then exit mirc, delete mirc32.exe, rename mirc33.exe to mirc32.exe and load it up agian
+
+It actually uses the /bwrite command within mIRC to patch it.
+
+The real reason for posting it is that Khaled tries so hard to hide away the CTCP version reply,
+Whats the point, When it can easily and simply be patched within mIRC.
+He even has the cheek to put: Editing out the version reply, huh? :)
+Inside mIRC32.exe so that when you read it in a hex editor or such, you see that...
+
+Wanna know how to stop other CTCP responces? Place: 
+ctcp *:*:*: halt
+in your remotes somewhere and then you will have no CTCP responces
+But be warned, some IRC Servers require a CTCP reply and also,
+Oh and If you want a Fake VERSION reply use:
+ctcp 1:*:*: if ($1 == VERSION) { .ctcpreply $nick $1 HM2K's IRC Client | halt }
+in your remotes
+
+Remember Khaled worked hard on mIRC, so give the guy a little credit...
+Don't take out the version reply unless you really have too...
+
+-Thanx tonix for the /bwrite command

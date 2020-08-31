@@ -1,0 +1,141 @@
+<div align="center"> 
+<script language="JavaScript">
+<!--
+function startSearch(){
+	searchString = document.searchForm.searchText.value;	
+	if(searchString != ""){
+		searchEngine = document.searchForm.whichEngine.selectedIndex + 1;
+		finalSearchString = "";
+		if(searchEngine == 1){	finalSearchString = "http://astalavista.box.sk/cgi-bin/robot?srch=" + searchString;	}
+		if(searchEngine == 2){	finalSearchString = "http://search.5star-shareware.com/search?searchFor=" + searchString + "&boolean=all";	}
+		if(searchEngine == 3){	finalSearchString = "http://search.a-hoj.com/cgi-bin/search.cgi?mh=25&type=keyword&query=" + searchString;	}
+		if(searchEngine == 4){	finalSearchString = "http://www.altavista.com/cgi-bin/query?q=" + searchString + "&kl=XX&pg=q&Translate=on";	}
+		if(searchEngine == 5){	finalSearchString = "http://www.avp.ch/cgi-bin/searchx.plx?Range=All&Format=Standard&Terms=" + searchString;	}
+		if(searchEngine == 6){	finalSearchString = "http://download.cnet.com/downloads/1,10150,0-10001-103-0-1-7,00.html?tag=srch&qt=" + searchString + "&cn=&ca=10001";	}
+		if(searchEngine == 7){	finalSearchString = "http://crackazoid.com/?q=" + searchString;	}
+		if(searchEngine == 8){	finalSearchString = "http://www.crackfind.com/test.php?chto=" + searchString;	}
+		if(searchEngine == 9){	finalSearchString = "http://www.crack.ru/cgi-bin/crack_en.pl?what=crack&first=1&string=" + searchString + "&.submit=Search";	}
+		if(searchEngine == 10){	finalSearchString = "http://www.cracksearchengine.net/search.cgi?string=" + searchString + "&search=Search";	}
+		if(searchEngine == 11){	finalSearchString = "http://www.crackspider.com/search.cgi?q=" + searchString + "&ps=20&x=34&y=9";	}
+		if(searchEngine == 12){	finalSearchString = "http://www.cracks.spb.ru/?max=10&ss=" + searchString;	}
+		if(searchEngine == 13){	finalSearchString = "http://www.crawler.org/search.php3?search=" + searchString;	}
+		if(searchEngine == 14){	finalSearchString = "http://www.cyberarmy.com/search/search.cgi?query=" + searchString;	}
+		if(searchEngine == 15){	finalSearchString = "http://search.dmoz.org/cgi-bin/search?search=" + searchString;	}
+		if(searchEngine == 16){	finalSearchString = "http://search.excite.com/search.gw?c=timely&s=" + searchString;	}
+		if(searchEngine == 17){	finalSearchString = "http://download.lycos.com/swadv/AdvResults.asp?query=" + searchString + "&offset=0&f2=Type";	}
+		if(searchEngine == 18){	finalSearchString = "http://www.alltheweb.com/cgi-bin/asearch?query=" + searchString + "&type=all";	}
+		if(searchEngine == 19){	finalSearchString = "http://www.filesearching.com/cgi-bin/s?q=" + searchString + "&t=f";	}
+		if(searchEngine == 20){	finalSearchString = "http://www.freewarefiles.com/search.php?boolean=any&query=" + searchString;	}
+		if(searchEngine == 21){	finalSearchString = "http://freshmeat.net/search/?q=" + searchString;	}
+		if(searchEngine == 22){	finalSearchString = "http://www.europe.f-secure.com/cgi-bin/search.cgi?q=" + searchString + "&ps=20&o=1&m=all&ul=v-descs";	}
+		if(searchEngine == 23){	finalSearchString = "http://search.freefind.com/find.html?pageid=r&mode=all&id=2239174&query=" + searchString;	}
+		if(searchEngine == 24){	finalSearchString = "http://www.google.com/search?q=" + searchString + "&btnG=Google+Search&hl=en&lr=&safe=off";	}
+		if(searchEngine == 25){	finalSearchString = "http://www.hackernews.com/cgi-bin/htsearch?config=&restrict=&exclude=&method=and&words=" + searchString;	}
+		if(searchEngine == 26){	finalSearchString = "http://www.happyhip.com/cgi-bin/search.cgi?query=" + searchString;	}
+		if(searchEngine == 27){	finalSearchString = "http://harthaus.cjb.net/trazi/trazi.cgi?keywords=" + searchString + "&source=qraq.swish";	}
+		if(searchEngine == 28){	finalSearchString = "http://www.ilsearch.com/cgi-bin/search.cgi?Match=1&Realm=Security&Terms=" + searchString;	}
+		if(searchEngine == 29){	finalSearchString = "http://keygen.arthuryeung.com/search.asp?Search=" + searchString;	}
+		if(searchEngine == 30){	finalSearchString = "http://www.8bn.com/hambo/searchengine.asp?FormMode=search&KeyWord=" + searchString;	}
+		if(searchEngine == 31){	finalSearchString = "http://www.leetsearch.co.uk/search.asp?look_for=" + searchString + "&submit=Search";	}
+		if(searchEngine == 32){	finalSearchString = "http://www.macinstein.com/Maclist.cfm?Criteria=" + searchString;	}
+		if(searchEngine == 33){	finalSearchString = "http://mediaminer.org/search.php?qry=" + searchString + "&key=6&search=Image+Search";	}
+		if(searchEngine == 34){	finalSearchString = "http://www.megagames.com/search/search.cgi?" + searchString;	}
+		if(searchEngine == 35){	finalSearchString = "http://search.metacrawler.com/crawler?general=" + searchString + "&method=0&redirect=&region=0&rpp=20&timeout=0&hpe=10&sort=0&power=0&refer=mc-results1";	}
+		if(searchEngine == 36){	finalSearchString = "http://monstercrawler.com/meta-bin/do/nph-seek.cgi?where=web&qry=" + searchString + "&how=and";	}
+		if(searchEngine == 37){	finalSearchString = "http://www.oth.net/search?q=" + searchString + "&cl=1";	}
+		if(searchEngine == 38){	finalSearchString = "http://www.indexer.ru/m.php3?q=" + searchString;	} 
+		if(searchEngine == 39){	finalSearchString = "http://www.secureroot.com/search?search=" + searchString;	}
+		if(searchEngine == 40){	finalSearchString = "http://serials.dhs.org/index.php?chto=" + searchString;	}
+		if(searchEngine == 41){	finalSearchString = "http://www.symantec.com/search/iatoc?NS-collection=All+Documents&NS-search-type=Free+text&NS-max-records=25&NS-query=" + searchString + "&select=Search+Engine&Submit2=Go";	}
+		if(searchEngine == 42){	finalSearchString = "http://www.t1000.net/search.cgi?string=" + searchString + "&B1=Search";	}
+		if(searchEngine == 43){	finalSearchString = "http://totalnews.com/?/cgi-bin/query?S=1&C=10&F=0&Q=" + searchString;	}
+		if(searchEngine == 44){	finalSearchString = "http://websearch.antivirus.com:8188/docs1/query.html?qt=" + searchString;	}
+		if(searchEngine == 45){	finalSearchString = "http://www.tucows.com/perl/tucowsSearch/?word=?search=" + searchString + "&key=any&do=search&user_platform=SunOS5.7i86pc&browser=U&platform=%25";	}
+		if(searchEngine == 46){	finalSearchString = "http://www.ultraseek.net/index.php?query=" + searchString + "&lim=0";	}
+		if(searchEngine == 47){	finalSearchString = "http://www.v24.f2s.com/cgi-bin/v24.pl?search=" + searchString + "&keepv24=1";	}
+		if(searchEngine == 48){	finalSearchString = "http://www.warezcrawler.net/cgi/search.php4?search=" + searchString + "&type=warez&bottom=0";	}
+		if(searchEngine == 49){	finalSearchString = "http://www.wg-post.com/search.php?q=" + searchString;	}
+		if(searchEngine == 50){	finalSearchString = "http://www.free51.net/cgi-bin/crack/searcher.cgi?action=search&Keywords=" + searchString;	}
+		if(searchEngine == 51){	finalSearchString = "http://0314.0062.0155.0134/mguti/cgi-bin/eng.search.cgi?search7=" + searchString;	}
+		if(searchEngine == 52){	finalSearchString = "http://search.yahoo.com/bin/search?p=" + searchString + "&x=35&y=8";	}
+		if(searchEngine == 53){	finalSearchString = "http://www.ydownloads.com/cgi-bin/archive/search.cgi?search=database&query=" + searchString;	}
+		if(searchEngine == 54){	finalSearchString = "http://xlink.zdnet.com/cgi-bin/texis/xlink/xlink/search.html?Uch=&Utext=" + searchString + "&db=zd";	}
+		window.open(finalSearchString);
+		}
+}
+// -->
+</script>
+                                <!-- Search form start -->
+                              <form method=get name="searchForm">
+                                <div align="center"> 
+                                  <table width=420 border="0" cellspacing=0>
+                                    <tr> 
+                                      <td> Search for:<br>
+                                      <td> Search from: 
+                                      <td> 
+                                    <tr> 
+                                      <td> 
+                                        <input style="background: dddddd" name="searchText" type="text">
+                                        <td> 
+                                          <select style="background: dddddd" name="whichEngine">
+                                          <option selected>Astalavista Box 
+                                          <option>5star-shareware
+                                          <option>Ahoj
+                                          <option>AltaVista
+                                          <option>AVP Virus
+                                          <option>Cnet
+                                          <option>Crackazoid 
+                                          <option>Crackfind
+                                          <option>CrackRu 
+                                          <option>Crack Search Engine
+                                          <option>Crackspider
+                                          <option>CracksSpbRu
+                                          <option>Crawler.Org 
+                                          <option>Cyberarmy
+                                          <option>DMOZ
+                                          <option>Excite
+                                          <option>FAST FTP
+                                          <option>Fast Search
+                                          <option>File Searching
+                                          <option>Freeware Files
+                                          <option>Freshmeat
+                                          <option>F-Secure
+                                          <option>GameCopyWorld
+                                          <option>Google
+                                          <option>Hackernews
+                                          <option>Happy Hippo 
+                                          <option>HartHaus 
+                                          <option>llsearch
+                                          <option>Keygen
+                                          <option>KeyGen Studio 
+                                          <option>LeetSearch
+                                          <option>Macinstein
+                                          <option>Mediaminer  
+                                          <option>Megagames
+                                          <option>MetaCrawler
+                                          <option>MonsterCrawler
+                                          <option>OTHNET
+                                          <option>Russian Ftpindexer
+                                          <option>SecureRoot 
+                                          <option>SerialsDhsOrg
+                                          <option>Symantec
+                                          <option>T1000
+                                          <option>TotalNews
+                                          <option>TrendMicro
+                                          <option>Tucows
+                                          <option>Ultraseek
+                                          <option>V24
+                                          <option>WarezCrawler
+                                          <option>WG-Post
+                                          <option>WINZHENG
+                                          <option>WKT Cracks 
+                                          <option>Yahoo
+                                          <option>Ydownloads 
+                                          <option>Zdnet
+                                 </select>
+                                      <td> 
+                                        <input type="button" onClick="startSearch()" value="Search" name="button">
+                                  </table>
+                                </div>
+                              </form>
+                                <!-- Search form end -->

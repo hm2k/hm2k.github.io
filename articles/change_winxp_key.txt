@@ -1,0 +1,19 @@
+How to change your Windows XP Product Key
+-----------------------------------------
+
+Put this into oobetimer.reg (don't include the # lines):
+#---START---
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WPAEvents]
+"OOBETimer"=hex:ff,ff,ff,ff,ff,ff,ff
+
+#---END---
+Put it in c:\
+
+Go to Start > Run and type "cmd", at command prompt type:
+cd \
+regedit /s oobetimer.reg
+%SYSTEMROOT%\system32\oobe\msoobe /a
+
+Once you have done this, select "Yes I want to telephone a customer service representative to activate windows", click next and enter your location then click change product key, now enter your new key, then click update. Close it down, and your done.

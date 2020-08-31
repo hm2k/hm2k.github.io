@@ -1,0 +1,25 @@
+How to setup local hosts on Windows XP
+--------------------------------------
+
+Go to Start > Run, type in "C:\WINDOWS\system32\notepad.exe C:\WINDOWS\system32\drivers\etc\hosts" press enter or OK.
+
+Add your host(s)...
+
+After the block of #'s you will see:
+
+127.0.0.1       localhost
+
+Under that, add an entry for the server, if you are hosted on server.example.com and it has the IP 123.123.123.123, you would add:
+
+123.123.123.123	example.com
+123.123.123.123	www.example.com
+
+Then when you visit http://www.example.com/ in a browser, it will show up as your website until global DNS is working.
+
+This can also be used for ftp clients, simply use example.com as your ftp server, then use your username/password as normal.
+
+Where "example.com" is used, use your domain.
+
+If you get the message "welcome to white.phurix.com" it means your hosting package is not setup yet on our server.
+
+NOTICE: DO NOT FORGET TO REMOVE THIS ENTRY AFTER ABOUT 48 HOURS, OTHERWISE IT MAY AFFECT FUTURE CHANGES.

@@ -1,0 +1,2 @@
+;power script v0.3 usage: /power
+alias power { var %a 0 | var %b 0 | var %c 0 | while (%a < $chan(0)) { inc %a | if ($me isop $chan(%a)) { inc %c 1 | inc %b $nick($chan(%a),0) } } } { me is op'd in %c $+ / $+ $chan(0) channels and has power over %b users. }

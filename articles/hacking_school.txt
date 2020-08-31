@@ -1,0 +1,39 @@
+How I hacked (and defaced) my schools website.
+----------------------------------------------
+
+For all those who know me well, you should know this story in already.
+
+This is the background, imagine this. Its year 9 at high school and we have a new head of IT teacher and new IT technician, they are both extremely egotistical, saying things like:
+“I have been coding since I was 9 years old, and won competitions in computer magazines”.
+…Yeah right, so that is why you’re a teacher?...
+Ever since I met this guy, I never liked him, and he never liked me, why? I honestly don’t know, however he never liked anyone that posed a threat to him, (i.e. anyone that had a clue about using computers further than Microsoft Word).
+
+This is the teacher that used to connect to our machines using Netbus (until I started using Netbuster), and open our CD-ROM drives, “just for a laugh”. Another thing he used to do was pour coffee over students 400 page project and then throw it in the bin, just because they did not have a front cover. The hatred for this guy stemmed from there.
+
+And so I was constantly looking for holes, exploits and vulnerabilities within the school network, all of which I took advantage of and managed to get around anything that was put in front of me in terms of security. Some of the early things included accessing the server and running the teacher profile script to gain access to the “Teacher Public”, which was where the teachers stored and shared files. I remember finding some very interesting documents.
+
+I made the biggest progress when the head of IT had left his laptop hard drive completely shared and accessible over the network. A perfect opportunity to snatch any files that I felt had any valuable (Passwords, Utilities, Profiles, etc). One of them was the admin proxy script, which avoided the local proxy (running on the server) and connected the machine I was on straight to the router, allowing me to avoid a whole list of filters and logging. I also managed to grab a few other useful things, such as network tools, settings, documents and a Cuteftp .dat file (smdata.dat I believe).
+
+A few months passed, I used what I had for quite a while and never got detected. A few other things I did during this time was to firstly setup a fake hotmail page to grab passwords, secondly I installed a keylogger (kl2.zip - Key Logger 2) on certain machines. Nothing major happened. During this time I also discovered that with the cuteftp dat file I could import it into my copy of cuteftp, however I soon discovered that the file was password protected.
+
+I had to think outside the box, the my idea was to make a backup copy of my dat file and replace it with their dat file, I did this and ran cuteftp, sure enough no password was required. I was then faced with a few sites (mostly default and audiowarez), however there was one site listed that was not warez related or there by default, that was the schools ftp login to the web hosting, the host was “schoolsite.edex.net.uk”, the username was “s423”, all very simple, however the password was masked. I remembered a trick I used to grab dial-up passwords, I simply used a password grabber (SnadBoy's Revelation), and it worked! The password was: babbage, yes, all in lower case, no numbers, that’s babbage, as in Charles Babbage, Known to some as the "Father of Computing". This is simple stuff.
+
+Once I have the login details, I get an ftp proxy and connect in to it and have a browse around, I find that the technician is actually hosting his planetarium clan website on there. So, I do nothing, nothing at all, until I hear news that the head of IT and the technician is leaving the school to move to another school, together, at the same time. I wait, and wait, and they leave. I wait a bit longer. Then I upload thementor.txt (The Conscience of a Hacker by +++The Mentor+++), I leave that there for weeks, nothing, it remains for the entire time. Interesting…
+
+I get bored… and so, one day at a friends house with nothing better to do, we proxy in to the ftp account and download an image from the front page of the headmaster holding (at the time we didn’t realise what it was) a bible, offering it up to the priest in front of him. We wanted to deface the site in a small way, noticeable but not destructive, we decided upon a “Homer Simpson” style donut. Hilarious! We photoshop’ed the donut into the headmaster’s hand, it now looked as if he was holding this large comical purple donut. It was then uploaded. The fun begins…
+
+The site mains like this for roughly 3 weeks, with thementor.txt and the modified image in tact, without any sign of hassle, though some people did question it. This was boring, the way forward was to open a can of worms. One night I decided, for a laugh, to give out the password to a couple of my “geeky” friends, those who were interested anyway. It went from there. Once about 6 people had the password, there was no stopping the defacing. The entire site was changed, a picture of the school on the main page was set alight, the name of the school was changed, all the content was modified, funny, but somewhat excessive. I wait until people stop modifying it, until about 11pm, when I decide to go to bed, so I re-upload a backup copy of the site I have so the site is in a clean condition before I disappear, hoping that this will be the case in the morning…
+
+The following morning I wake up and head off to school. I make it through the day without any hassle until about lunch time, when I get news that a so called friend of mine has been boasting about how HE “hacked” the schools site, and HE changed it all. Unfortunately because this guy was such an idiot, it was simply a matter of time before someone told on him. And so by the end of lunch, he was called in to the headmaster’s office…
+
+In class I know that it only a matter of time before he breaks and tells them who else is involved and how he got the login details. And so without any time at all I am asked to head over to the headmasters office, where all involved (about 6 of us) all stand there and desperately discuss quietly what to do. My plan was to blame it all on the guy that let his ego get on top of him, we all agreed and so one by one we all went into the office trying to explain the situation to someone who understands as much about computers as I understand about the brain surgery.
+
+I am the last to go in, unfortunately it seems that after I had gone to bed, someone had changed the site again, completely defacing it this time all together, it also seems that they already know what’s going on (a friend tipped me off when he came out of the office), and so I have to tell them the truth. They tell me that they had to call Edex (Their ISP at the time) and get the account suspended. At this point I realise the power I had, I was the only person in the entire school who had access to that web site, not even the headmaster had access, and because of this they had to get the ISP to remove it.
+
+What I did was a hell of an experience and I have no regrets, apart from the fact I got a 5 day suspension for it, which involved staying at home doing very little, so it wasn’t all bad.
+
+After this, I was asked to help the new head of IT to restore the website. I gained a few things out of the whole experience: a reputation, a lesson on how not to trust anyone when hacking, I also learned that sometimes helping with security issues can be just as satisfying as breaking security.
+
+Enjoy!
+
+- HM2K

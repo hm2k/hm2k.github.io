@@ -1,0 +1,26 @@
+Make FireFox Faster
+--------------------------------------------------------------------------
+
+1.Type "about:config" into the address bar and hit return. Scroll down and look for the following entries:
+
+Quote:
+network.http.pipelining
+network.http.proxy.pipelining
+network.http.pipelining.maxrequests
+and browser.turbo.enabled
+
+Normally the browser will make one request to a web page at a time. When you enable pipelining it will make several at once, which really speeds up page loading.
+
+2. Alter the entries as follows:
+
+Set "network.http.pipelining" to "true"
+
+Set "network.http.proxy.pipelining" to "true"
+
+Set "network.http.pipelining.maxrequests" to some number like 30. This means it will make 30 requests at once. (Max can only be 8, but people report 30. The 30 open connections is incorrect)
+
+Set "browser.turbo.enabled" to "true"
+
+3. Lastly right-click anywhere and select New-> Integer. Name it "nglayout.initialpaint.delay" and set its value to "0". This value is the amount of time the browser waits before it acts on information it recieves.
+
+If you're using a broadband connection you'll load pages MUCH faster now!

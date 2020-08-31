@@ -1,0 +1,25 @@
+Useful Linux Commands
+----------------------
+(For use in bash via telnet or ssh)
+
+cd - Goes to your home directory
+cd directory - Goes into that directory
+cd .. - Goes down a directory
+dir or ls - Lists the contents of a directory
+lynx http://website.com/ - Web Browser
+wget http://website.com/filename.gz.tar - Directory download files
+rm -fr filename - Remove a file
+tar -zxvf filename.gz.tar - uncompress a gz.tar file
+tar -xvf filename.tar - uncompress a .tar file
+tar -czf filename.tgz fileorfolder - Compress a file or folder
+ps x - Shows you wants running
+kill -9 *pid* - Use this to kill running programs
+pico filename - Similar to notepad but for linux
+passwd username - Change a users password
+adduser username - Add a user
+mkdir directory - Create A directory
+mv oldfilename newfilename - Move a file or folder
+cp -Rf filename newfilename - Copy a filename
+
+Okay, so this isn't a very complex list of linux commands,
+but its the basics, it should be useful! :)

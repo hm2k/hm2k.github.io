@@ -1,0 +1,16 @@
+psyBNC Control Commands
+-----------------------
+
+Note: Please read the SCRIPTING file in the psybnc directory. 
+
+Basically a scripts must be placed in the /home/user/psybnc/scripts/USERx.SCRIPT folder.
+* Where "x" is you must put what number user you are in the psybnc.conf, usually this will be 1.
+
+If you wanted to give ALL users the same scripts you would use DEFAULT.SCRIPT instead of USERx.SCRIPT 
+
+For example you would "pico /home/user/psybnc/scripts/USER1.SCRIPT" and paste the code in.
+
+---BEGIN---
+server JOIN *!*@* #yourchannel * echo "MODE #f-ws +v $NICK"
+---END---
+After loading the scripts do: /SRELOAD on the psyBNC to activate the script.

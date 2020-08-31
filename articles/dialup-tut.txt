@@ -1,0 +1,31 @@
+Dial-Up Networking Tutorial
+---------------------------
+
+I made this tutorial because people kept asking me how to do it,
+so here it is:
+
+This tutorial is designed to help you use Internet Connections that
+
+are grabbed from SubSeven ie:
+
+[Connection: HM2K FREE ONLINE]
+login: HM2K
+password: HM2K
+phone number: 0845 1400105
+
+Go to the folder in 'My Computer' Called 'Dial-Up Networking' (DUN)
+Double click 'Make New Connection'
+Replace 'My Connection' with The Bit after 'Connection: '
+And click 'Next'
+As the Area code put the first 4 numbers
+As the Telephone number put the last digits
+then click 'Next'
+then click 'Finish'
+then go back to the Dial-Up Networking folder
+Double click The New Connection that you made
+
+Change the User name using the 'login'
+and the Password
+and click Save Password
+then click 'Connect'
+and now either click cancel or continuse to connect to the web

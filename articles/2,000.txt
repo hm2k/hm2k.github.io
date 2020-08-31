@@ -1,0 +1,32 @@
+mIRC #2,000 Exploit - How to use it and why its there
+-----------------------------------------------------
+
+This exploit occures when you attempt to join #2,000 or #anynumber,anynumber eg: #1,000 or #3,000 etc
+for example: /join #2,000
+This will make the mIRC client part all the channels that you are currerently in.
+Sometimes if you attemt to join it using different techniques, you will only join #2
+
+Apparenly the #2,000 bug is not ment to be there, and will be removed in future versions of mIRC
+But others say, it is actually ment to be there and can be be used for the following situations:
+
+Suppose there's a bot you want to kick off a certain channel (for example: this bot guards the channel and autokicks and maybe bans people who try to take over), but the only thing you are allowed to do with the bot is to make it join channels. No problemo! Simply make it join #2,000. 
+Someone you hate just got OPed by the owner of the channel, an AOP (Auto-OP: a person that has AOP gets automatically OPped whenever he joins the channel), an IRCOP, an OP etc. After a while, the guy that OPed that other guy you hated vanished. Now, if the OPed guy will leave and rejoin the channel, he will lose his OP because he doesn't have AOP.
+Simply ask him to join #2,000 (tell him that you want to speak with him about something or that it's some interesting channel. It doesn't matter, as long as it sounds convincing). He will join #2,000, get /parted from every channel, thus have to rejoin the channel - but this time, no OP!
+If someone has created a channel that you wanted to own but didn't register himself as the owner yet, you can ask him to join #2,000. He will get parted from the channel, and then all you'll have to do is to rejoin the channel, get OP (because you'll be the only one left in the channel) and register yourself with chanserv as the owner of the channel (it is recommended to ban the other guy that you hate so he won't be able to take over the channel or anything before you finish registering it)
+If someone has the "auto join on invite" (automatically joins a channel you are invited to) option turned on, you could invite him to #2,000
+You could even tell someone that it's because of the Y2K bug, and that he has to turn off his PC and send it to a computer store so they'll fix it and charge him for 200$.
+There are probably many many more uses for this bug, so try thinking up your own!
+
+It is called the #2,000 bug because it's like some kind of a Y2K bug in IRC, Why?
+Because, when joining #2,000, you're actually joining #2, and then 0, and then 0, and then 0.
+Joining 0 parts you from all the channels you're in, so this is why /join 0 will do the same thing.
+
+Some IRC clients, automatically add a # in front of channel names if not present.
+It will change it to "/join #0". mIRC's "/j" alias works in this way too I believe.
+Then this should stop the #2,000 bug from working.
+
+Go on try it your self, try it on your friends, type: /join #2,000
+
+Enjoy!
+
+-HM2K

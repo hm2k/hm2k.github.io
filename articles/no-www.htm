@@ -1,0 +1,61 @@
+<h1>Why www. is NOT deprecated.</h1>
+
+<p>Having no www.  is wrong. Why? </p>
+
+<ul>
+  <li>Having www  helps clarify the purpose of the url. ie: www is world wide web, webmail is for web based email, etc    </li>
+  <li>Using the www. subdomain allows your website to be more versatile in terms of DNS and changes of IP address.</li>
+  <li> The major websites still use the www. prefix. See http://www.google.com/search?q=www and http://www.alexa.com/site/ds/top_sites?ts_mode=lang&lang=en</li>
+  <li>www has been used since the dawn of the world wide web why would we stop using it now?</li>
+  <li>example.com is often not detected as a URL, however www.example.com is.</li>
+  <li>When communiticating URLs its shorter, easier and quicker to use www.example.com vs. http://example.com/</li>
+  <li>Removing the www. would not make sense, it would make more sense to change the prefix subdomain to web. allowing this to be the new standard.</li>
+  <li>People still use and want the www. prefix the same way they would use the ftp. prefix or wap. prefix.</li>
+  <li>Using the www. prefix helps readers of printed advertisements (tv, newspapers, flyers etc) define what it is.</li>
+  <li>Domains that use common TLDs (.com .net .org .co.uk) can be idenfiied as domains, however domains with unusual TLDs may not be idenfied (eg: example.me.uk, example.to, example.at, example.tt, etc).</li>
+  <li>Sometimes the content of example.com is different than the content of www.example.com</li>
+  <li>Name Server hosts (eg: ns1.example.com, ns2.example.com) must be unique, must have two, and must have different IPs, why shouldn't web hosts?</li>
+</ul>
+<h2>Why can't we just use both?</h2>
+<p>You can use both as long as you redirect your traffic from one to the other (eg: example.com redirects to www.example.com). Why?</p>
+<p>Well that is simple. It affects the way your website is optimised.</p>
+<p>As search engines see a subdomain as a seperate site if you run your website on www.example.com and example.com it effectivly means you have two copies of the same website. This means you are taking the focus from one website to two, if you wish to build up traffic it is best to make things as simple as possible for your visitors. Let them know that there is only one URL for your website, as this will considerably help you when people add backlinks to their website, or bookmark your website. It will also help with how search engines index and rank your website.</p>
+<p>Its quite important that when you start developing a website you decide whether your going to direct your visitors to www.example.com or example.com as you will need to focus on one.</p>
+<h2>Redirection</h2>
+<p>These redirection methods are used to redirect your domain (eg: example.com) or wildcard subdomain (ie: *.example.com) to www.example.com.</p>
+<h3>mod_rewrite method:  </h3>
+<p>Add this to your .htaccess file (providing mod_rewrite modual is installed in your apache). (See <a href="http://httpd.apache.org/docs/1.3/mod/mod_rewrite.html">Apache mod_rewrite</a>) </p>
+<code>RewriteEngine On<br>
+RewriteCond %{HTTP_HOST} !^www.example.com$ [NC]<br>
+RewriteRule ^(.*)$ http://www.example.com/$1 [R=301,L]<br>
+</code>
+<h3>php method:      </h3>
+<p>Place this at the top of your index.php in your php code.</p>
+<p><code>if ($_SERVER["HTTP_HOST"] != "www.example.com") { header("Location: http://www.example.com/"); die; }</code>
+</p>
+<h2>Hostnames, protocols and examples </h2>
+<ul>
+  <li>ftp.example.com - Used in conjunction with the ftp:// protocol (See <a href="http://www.ietf.org/rfc/rfc0959.txt">rfc0959</a>) </li>
+  <li>irc.example.com - Used in conjunction with the irc:// protocol (See <a href="http://www.ietf.org/rfc/rfc1459.txt">rfc1459</a>)</li>
+  <li>mail.example.com - The mail protocol is different, a mail server's IP must resolve to the mail server's host. (See <a href="http://www.ietf.org/rfc/rfc2821.txt">rfc2821</a>)</li>
+  <li>ns?.example.com - This forms the contruct of DNS, you may NOT use the domain name as a Name Server. (See <a href="http://www.ietf.org/rfc/rfc2782.txt">rfc2782</a>)</li>
+</ul>
+<p>As you can see in all these examples, as long as example.com is pointing to the same IP as the host, you could use the domain name instead of one of the hosts above. </p>
+<p>The <a href="http://spamcalc.net/docs/dnsspam.php">Spamcalc</a> website explains the original concept and usage of Subdomains/Hostnames. It explains that the original purpose of subdomains is to show a hierarchical (eg: computername.subdomain.domain.topleveldomain).</p>
+<p>This makes sense when looking at the above protocols and services. As originally, and still today depending on demands, each service is run on a seperate machine (or seperate machines) as an attempt to dispurse heavy usage loads. However unless you run a large international network and have many thousands of users chances are you do not need this kind of structure. It is also apparent that as computers are getting faster and faster they are more than capable of running all these services on one machine.</p>
+<p>As your website/services expand, it makes sense that you might need to shift your services onto different machines, to achieve this each machine will need a different IP address. Therefore they will require a different host, as both servers cannot use the domain name, they will need to be assigned the specific hostname, which will ultimatly depend on what service they will be running.</p>
+<p>Although it sounds complicated, its actually very simple, which is why it makes sense to use the prefix.</p>
+<h2>Arguments for the other way</h2>
+<p>Apart from the points made at no-www.org there are other reasons why www. has deprecated...</p>
+<ul>
+  <li>Browsers will understand a domain name is a website and add the http:// protocol to reach the website.</li>
+  <li>The &quot;World Wide Web&quot; phraze has become somewhat outdated, and is now simply known as &quot;The Web&quot; or web.</li>
+  <li>The youth of today can idenify that a domain (eg: example.com) is a website.</li>
+  <li>You don't send email to name@mail.example.com</li>
+</ul>
+<h2>Resources</h2>
+<ul>
+  <li><a href="http://www.yes-www.org/">www.yes-www.org</a> - An odd website for the www prefix</li>
+  <li><a href="http://no-www.org/">no-www.org</a> - A website against the www prefix </li>
+  <li><a href="http://www.rfc-editor.org/rfc/rfc2606.txt">rfc2606</a> - Explains the usage of example.com throughout this document </li>
+</ul>

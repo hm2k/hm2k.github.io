@@ -1,0 +1,179 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>yet another irc related bug - netgear edition - HM2K</title>
+<link href="news.css" rel="stylesheet" type="text/css">
+</head>
+<body><center><p><a href="/" title="HM2K"><img src="/img/hm2k.gif" alt="HM2K" width="150" height="80" border="0"></a></p><table border="0" cellspacing="1" cellpadding="3" width="80%">
+<tr>
+<td width="100%">
+<h1><img style="border: none;" alt="IRC icon" src="/img/irc.gif" />yet another irc related bug - netgear edition</h1>
+</td>
+</tr>
+<tr>
+<td width="100%">
+<font style="color:#666; font-size:14;">Yes thats right, there's another bug...<br /><br />Type:<br /><blockquote><div style="font-size: 13px;">quote:</div><hr style="border: 1px solid #ACA899;" /><div>DCC SEND "string" 0 0 0</div><hr style="border: 1px solid #ACA899;" /></blockquote><br /><br />On IRC, in a channel, and certain users of certain netgear products will disconnect.<br /><br />Apparently it works on the 614 and 624 router ranges and apparently some linksys routers too. Its probably to do with the build in firewall/protection.</font></td>
+</tr>
+<tr>
+<td width="100%">
+<table border="0" style="border-top: 1px dotted #f2f3f3" width="90%" cellspacing="0">
+<tr>
+<td><i><font style="font-size:11;	color:black;">03 Mar 2006 by HM2K</font></i><br> </td><td><div align=right>
+<font style="font-size:11;"><a href="#" onclick="window.open('/news/show_news.php?subaction=showcomments&amp;template=HM2K&amp;id=1141413208&amp;archive=&amp;start_from=&amp;ucat=5', '_News', 'HEIGHT=400,WIDTH=650,resizable=yes,scrollbars=yes');return false;">18 comments</a></font><br> 
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>Note: Comments are disabled.</p>
+<br /><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>Element</b> @ 16 Jul 2006 02:30 pm</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1153060208"></a>If your caught doing this on Rizon you will be klined. Also the quit message is (Read Error: Connection Reset by Peer). Of course that message dosen&#039;t have to relate to the bug, it could be a fault in the IRC system or someones firewall.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>Dave Myron</b> @ 25 Jun 2006 04:50 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1151211044"></a>Verified on a Netgear 614v6. <br /> <br />Also verified that switching to port 8001 on Freenode fixes it.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b><a  href="mailto:alexander.toresson@gmail.com">Eulex</a></b> @ 06 Mar 2006 07:32 pm</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141673569"></a>Verified to not work on a WGR614v4 (kinda), with the SPI firewall enabled and irc on port 6667. Someone sent DCC SEND 0 0 0 repeatedly in an irc channel. I&#039;ve tried sending the longer versions to myself, and that didn&#039;t do anything either. Does it have to be sent from the outside of the local network? in that case, the long version may still work</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>coward</b> @ 04 Mar 2006 10:29 pm</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141511341"></a>624 here. Verified to cause disconnects for just for IRC. I switched port, maybe it&#039;ll help.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>ZoFreX</b> @ 04 Mar 2006 09:53 pm</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141509209"></a>No offence Cilian but your comments are way off, it isn&#039;t up to the router to open ports like that. It&#039;s most likely just some really badly written anti-trojan action like startkeylogger, we will probably be seeing a few more of these in future.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>Cillian</b> @ 04 Mar 2006 09:35 pm</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141508120"></a>I&#039;m guessing, what this does is tricks the router into thinking you&#039;re doing a DCC send on IRC, so it tries to open a port.  And, if that port is invalid, it dies.  This would explain how changing the port helps - it would stop the router thinking it&#039;s IRC</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>StarCreator</b> @ 04 Mar 2006 10:23 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141467810"></a>My WGR614v6 was affected, until at someone&#039;s suggestion to disable the SPI (Stateful Packet Inspection) firewall.  Once I did that, poof, no more problems.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>Mark</b> @ 04 Mar 2006 08:18 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141460319"></a>Yeah, for a workaround, if your IRC server allows it, connect to a port other than 6667. Connecting to port 8001 on Freenode stops the exploit.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>strat1x</b> @ 04 Mar 2006 05:52 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141451540"></a>I have tested this and it does work on netgear and linksys modems. To not be vunlerable to this do not connect to port &quot;6667&quot; on IRC and you will be protected from getting owned.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>ingenio @ efnet</b> @ 04 Mar 2006 05:45 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141451115"></a>It works on some Netgear and some Linksys as well. We aren&#039;t sure yet - but we&#039;re guessing it only works on routers running the vxworks operating system. Old linksys routers appear to be unaffected.. and they run linux. This would explain why it works on multiple products with multiple firmware versions. Again, it appears to be a problem in vxworks.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>evilDagmar</b> @ 04 Mar 2006 05:20 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141449639"></a>It can also be fewer than 14 characters.  Basically, you just have to make it so that the one or more of the four parameters at the end isn&#039;t sane and *b3Wm*</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>viksit</b> @ 04 Mar 2006 04:57 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141448243"></a>Yes, netgear is verified. WG624 to be precise.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>evilDagmar</b> @ 04 Mar 2006 04:49 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141447784"></a>Appears to affect at least one version of the Linksys WRT54g as well.  Funx0rs!</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>ZoFreX</b> @ 04 Mar 2006 04:25 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141446331"></a>Confirmed that DCC and SEND both need to be caps.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>d03boy</b> @ 04 Mar 2006 04:25 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141446314"></a>I was playing with it and it is Netgear. I am affected by it... gg netgear</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>ZoFreX</b> @ 04 Mar 2006 04:19 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141445986"></a>ok just tested it: <br />DCC SEND 12345678901234 did not work <br />DCC SEND 123456789012345 did</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>ZoFreX</b> @ 04 Mar 2006 04:17 am</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141445862"></a>Works on Norton firewalls as well (provided they are out of date). Doesn&#039;t need the &quot;&quot; round what you send either.</td>
+    </tr>
+  </table>
+<br><table border="0" width="90%" height="40" cellspacing="" cellpadding="3">
+    <tr>
+      <td height="1" style="border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color: black;">by <b>Your Mom</b> @ 03 Mar 2006 09:22 pm</td>
+    </tr>
+    <tr>
+      <td height="40" valign="top" bgcolor="#F9F9F9" ><a name="1141420962"></a>It seems DCC SEND followed by any 14 or more characters does the trick, so even &quot;DCC SEND kfdsjkfklafjksdkfssjkfsjkl&quot; works.  Additionally DCC SEND needs to be in upper-case for it to work. <br /> <br />And can anyone for sure verify its Netgear? I had previously heard its Linksys..</td>
+    </tr>
+  </table>
+<br><form  onsubmit="return CNSubmitComment()"  method="post" name="comment" id="comment" action="">        Comments are disabled
+<div><input type="hidden" name="subaction" value="addcomment" /><input type="hidden" name="ucat" value="" /><input type="hidden" name="show" value="" /></div></form>
+                    
+ <script type="text/javascript" src="/news/remember.js"></script><script>CNreadCookie();</script><p class="footer">Copyright &copy; 2004-2005 <a href="/">HM2K</a>. All Rights Reserved.</p></center></body>
+</html>

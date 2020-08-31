@@ -1,0 +1,14 @@
+Problem:
+How do I restore the My Computer, My Documents, and My Network Places icons to the Windows XP desktop?
+
+Solution:
+When you install Windows XP, the new Start menu is enabled by default and the My Computer, My Documents, and My Network Places icons have been removed from the desktop.
+
+To restore some/all of these icons:
+
+1. Right-click an empty area of your desktop and press Properties.
+2. Select the Desktop tab.
+3. Press the Customize Desktop button.
+4. Select the General tab.
+5. Check the boxes for the icons you wish on your desktop.
+6. Press OK, Apply, and OK.

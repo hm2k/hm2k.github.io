@@ -1,0 +1,19 @@
+Amd Athlon 64 Winchester CPUs with Abit A8V and Asus AV8 Motherboards
+
+As the winchester CPU is newer than the motherboard, it may not post out of the box.
+
+For the Asus motherboards you can do the following:
+1. Download the latest BIOS to a floppy and rename it to A8V.ROM.
+2. Just unplug everything bar the floppy, vid card and stick one slot of ram into slot B1 ONLY.
+3. Then stick the floppy in, turn on and press ALT-F2 at the BIOS screen. It will then flash it for you and normal business will resume.
+
+As for the Abit motherboards:
+1. You either need a Newcastle core chip so you can do the bios update.
+2. A replacement bios, which you can either hotflash or buy
+3. Get Abit (based in stevenage) or the reseller to flash it
+4. In some cases you can place the ram in slot 3 (b1) and it will post, allowing you to do the bios update.
+
+Try the following links:
+http://www.motherboard-biosflash.co.uk/
+http://www.bootdisk.com/
+http://www.rojakpot.com/default.aspx?location=3&var1=62&var2=2

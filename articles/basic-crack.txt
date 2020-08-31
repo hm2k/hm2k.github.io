@@ -1,0 +1,34 @@
+Basic program cracking procedure
+--------------------------------
+Tutorial for first time crackers (newbies)
+
+Tools needed: (Try: http://kickme.to/protools)
+W32Dasm 8.93 or above
+HIEW 6.55 or above
+Patch making program
+
+OK, Firstly load an unchanged version of the program you are trying to crack
+if it requires a serial then try and register it, if not, you may have difficulty
+with this crack...
+Write down the error message somewhere!
+Open W32Dasm and disassemble the program, click go to Refs and click on string data refs,
+search for your error message you took note of before then double click on it.
+You should be taken to your error message with a set of instructions 
+below, search down till you find the call bar and take note of the offset code
+then search for the ref unconditional jump that should be above the error msg, 
+if its not then search for the nearest one above. 
+Go to the code offset location at the top the program and 
+type in the ref unconditional code and then press enter. 
+You will be taken to a new window which has the Jne bar on it, 
+take the offset code and close W32dasm. Start up Heiw and open up your unchanged
+version of the program and go to decode mode [F4] then select decode mode press [F5]
+then type in  your code ofset for the wrong serial then press [F3] to edit it, 
+just type 90 five times  it dosen't matter if it jumps some lines.
+Then press [F9] to update the program> Press [F5] and search for the 
+for the ref code you and press enter.
+You will be taken to the Jne bar the 4 numbers you will see 75 just press [F3]
+and type 74, then [F9] to update.
+
+BINGO! Run your program now, and with luck it should be cracked ;)
+
+Then get hold off a patch making program and put in the relivant information, all done!

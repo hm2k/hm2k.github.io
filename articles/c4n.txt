@@ -1,0 +1,197 @@
+Cracking Tips 4 Newbies
+-----------------------
+
+Do's and Don't
+--------------
+Do try to understand the code!
+Don't give up to fast, learn to crack needs time!
+Do Learn assembly!
+Don't forget to read all of tKC's Tutorials!
+
+------------------------------------------------------------
+Cracking a Windows program is most often more simple than a program 
+running in Dos. In Windows, it's hard to hide anything from anyone who 
+really looks for information, as long as Windows own functions are used.
+
+------------------------------------------------------------
+The easyest way to kill Nag Screens is to load your program and wait 
+till the Nag is shown. Write down the caption of this window and the 
+first words of the message. Open the exe in a hexeditor and search 
+for the noted string. If you have found the string, scroll up and 
+search for the hexstring 'FF FF FF 80'. If you found it replace 
+it with 'FF FF FF 90'.
+------------------------------------------------------------
+In almost all INI or CFG Files the ';' and '//' means the line
+is disabled!!! This is used for comments! Yeah, you check it! In the
+
+winice.dat is the ';' for comments, too.
+------------------------------------------------------------
+When serial catching always use the same serial number, so that you know
+what it looks like in hex. I prefer 123789. In hex it is 1E38D.
+Try to avoid serials like 123456789.
+------------------------------------------------------------
+If you step over a Call, check the content of any changed register.
+You may find the serial number here.
+------------------------------------------------------------
+Most programmers are lazy. Whenever a task must be done, the write a
+procedure or function. They call them when the task must be done.
+Usually programs that use the serial/name check, perform this tasks twice.
+
+Once when the serial is entered and the second one when the program is
+fired up. So patch the function and save a lot of work. To patch a
+function is often from advantage by CD-Checks, Nag Screens, Time or
+Date Checks, too.
+------------------------------------------------------------
+If a function returns as a value -1 by a registration check, this means
+normally not registered. 1 (and sometimes 0) means usually check passed.
+------------------------------------------------------------
+A program allows you i.e. a 20 days trial. Remember: most programmers
+are lazy! And lazy programmer might check the trail period like this:
+
+CMP DWORD PTR register, 14 <<-- 14 is 20 in hex
+JLE/JGE address            <<-- usually one of these conditional jumps
+    
+What we've got is 83 for CMP, 
+only several likely register options,
+14 for the 20 days and 7E for JLE or 7D for JGE.
+
+Load you favorite Hexeditor and do a little search.
+You may find this on one or more locations. Lets make the JLE (7E 33)
+that we've found into an unconditional jump (EB 33). I would check it,
+but normally it is cracked...
+------------------------------------------------------------
+Read all the tutorials you can find but firstly read the newbie ones
+
+as the advanced ones may just go over your head.
+Try: http://c-i-a.dhs.org/ and http://lw2000.cjb.net/
+------------------------------------------------------------
+Never, use NOP unless it is totally necessary.
+There are usually many better ways! For example you could write
+instead of 2x NOP better INC ECX, DEC ECX, or something like this.
+------------------------------------------------------------
+It is much better to start on the easy stuff using Hiew and W32DASM
+instead of using SoftICE etc
+------------------------------------------------------------
+If you have dificulty with cracking you need to find out for your self
+look at some manuals and tutorials, then if you get really stuck plan
+
+your question and ask a real cracker but listen to what he/she says
+this will help you not to be labled a lamer, this way you will be 
+labled a newbie and will be helped out and respected
+------------------------------------------------------------
+Once you can crack you need to be in some kind of group or crew
+Many well known onces only take in good crackers were as the new groups
+take usually what ever crackers possible.
+------------------------------------------------------------
+If you are going to distibute your cracks or serials the best place is
+#CRACKS on EFnet (See http://www.crackschan.com/ for more info)
+
+------------------------------------------------------------
+Here are some general functions we use for cracking:
+
+Hex:          Asm:      Means
+75 or 0F85    jne       jump if not equal
+74 or 0F84    je        jump if equal
+EB            jmp       jump directly to
+90            nop       no operation
+77 or 0F87    ja        jump if above
+0F86          jna       jump if not above
+0F83          jae       jump if above or equal
+0F82          jnae      jump if not above or equal
+0F82          jb        jump if below
+0F83          jnb       jump if not below
+
+0F86          jbe       jump if below or equal
+0F87          jnbe      jump if not below or equal
+0F8F          jg        jump if greater
+0F8E          jng       jump if not greater
+0F8D          jge       jump if greater or equal
+0F8C          jnge      jump if not greater or equal
+0F8C          jl        jump if less
+0F8D          jnl       jump if not less
+0F8E          jle       jump if less or equal
+0F8F          jnle      jump if not less or equal
+------------------------------------------------------------
+THE TOOLS TO USE:
+
+W32DASM 8.93
+Numega SmartCheck 6.03
+Softice 4.0
+Hiew 6.55
+Windows Commander 4.01
+PE-Sniffer 1.06
+THE CUSTOMISER 
+ProcView 3.1.1.2
+RegMon
+FileMon
+GetType
+Opcodes
+ProcDump 1.5
+BlindRead
+OpenList
+Snooper for Windows
+Kleptomania 2.0
+EXEScope 5.12
+UnArmadillo
+Fusion 1.x
+
+These can be got from: http://protools.cjb.net/
+------------------------------------------------------------
+
+SoftIce
+-------
+|--------------------|
+|     Registers      |  Use 'R' to edit
+|--------------------|
+|    Data Window     |  Use 'D' to view an address, 'E' to edit
+|--------------------|
+|    Code Window     |  Use 'U' to view an address, 'A' to insert asm code
+|--------------------|
+|   Command Window   |  Type commands and read output here
+|--------------------|
+
+Other important keys are (in the default key layout):
+'H'/F1   - On-line help
+F5/Ctr+D - Run
+F8       - Step into functions
+F10      - Step over functions
+F11      - Step out of function
+
+To check if SoftICE has loaded the symbols for GetWindowText, you enter SoftICE
+by pressing Ctrl+D and then write like this:
+       :exp getwindowtext
+If you don't get all the GetWindowText functions listed, you need to edit
+
+\SIW95\WINICE.DAT by removing the comment chars (';') from some of the 'exp='
+lines that follows this text: "Examples of export symbols that can be included
+for chicago" near the end of the file. You can remove comment chars from all of
+the lines, or to save memory, on just these files: kernel32.dll, user32.dll,
+
+gdi32.dll, which are the most important ones.
+When you're ready editing, you'll have to reboot the computer to make it work.
+
+WinDASM
+-------
+You can place the green bar in W32DASM with a doubleclick on a line.
+
+When you get your offset in W32DASM, you see in the statusbar 
+something like 'Offset E346Ah'. The 'h' means only hex - don't write 
+it in Hiew, too. Your Offset is E346A
+
+In W32DASM, always look, if your reference exists more than once.
+You search for your message in the SDR window, you doubleclick 
+your message and W32DASM goes to this location. Finish? NO!
+Doubleclick again on your string in the SDR window, to be sure
+this is the only reference!
+
+In W32DASM can all Call and Jump Cross Reference Addresses jumped
+
+by simply double right clicking on the reference address.
+To return to the reference, press F12.
+
+Hiew
+----
+Hiew can be started automaticly in decode mode.
+
+Simply open hiew.ini and change the 'StartMode' value from 'Text'
+to 'Code'.

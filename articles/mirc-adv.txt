@@ -1,0 +1,69 @@
+mIRC Guide Advanced Version
+---------------------------
+*** Note: This is very old ***
+
+mIRC can be downloaded from: http://www.mirc.com/
+
+OK the power points for mIRC scripting are the Aliases, Popups, & Remotes. And all scripts can be run only using the Remotes, so that is where I am going to begin.
+Have you ever wondered how people get there mIRC script to respond to things you type automaticly? Well thats just the remotes here is how its done.
+We use this as the template: 
+on <level>:TEXT:<matchtext>:<*><?><#[,#]>:<commands>
+
+This example responds to text only as it says TEXT, you can change this for others which we will come back to later.
+So in mIRC go to Tools on the File menu and click Remotes. Then click File/New and a new blank script will be made usually with the default name of script.mrc so keep that name you can save  it as something else later anyway. Now paste in the template and we will begin.
+ok so here is what you are going to do, you are going to make your script say Hi to someone who says hello in a channel.
+
+So we have to choose a level of user we usually set 1 as the level or *. What this means is that 1 is someone who is not in your user list and * means anyone. So this is what we get:
+on *:TEXT:<matchtext>:<*><?><#[,#]>:<commands>
+Then we choose the text that it is going to pick up and repond to. So we replace matchtext with hello, BUT they might say hello channel so we will need it to respond to that so we change hello to hello* it works the other way also, so if they say something hello we change it to *hello and then you can have it both ways if they say something hello somthing which is *hello* so were going to do it like this:
+
+on *:TEXT:hello*:<*><?><#[,#]>:<commands>
+We then need to know where it is going to repond to this text, will it be in global, in a msg, or in a channel of so what channel, for a global you would use a * and for in a msg you would use ? and for in ANY channel you would use # but if you wanted it in a chosen channel you would put #<channel> and if you wanted it in 2 channels you would put #<channel1>,#<channel2> and u can keep adding channels like that. So here we go this is what we want:
+
+on *:TEXT:hello*:#:<commands>
+Then we just have to fill the command section so we want it to say hi back to the person who said  hello. So this is what we do: /say $chan Hi $nick <<< this will be the command and it means that it will say to the channel that is in use Hi to the nick name that just said hello. If you want it to do 2 commands at one you put a | in between like this: /say $chan Hi $nick | /say $chan $nick says hello. but we don't want that so we use this:
+on *:TEXT:hello*:#:/say $chan Hi $nick
+
+And there you go one reponding text script, you can change this after to do what ever you want but be careful because ops can get anoyed with auto responses.
+
+These are all the different commands instead of TEXT try them sometime.
+Action, Ban, Chat, Close, Connect, Ctcp, CtcpReply, DccServer, DeHelp, DeOp, DeVoice, Dialog, Dns, Error, FileRcvd, FileSent, GetFail, Help, Hotlink, Input, Invite, Join, KeyDown, KeyUp, Kick, Load, MidiEnd, Mode, Nick, NoSound, Notice, Notify, OpOpen, Part, Ping, PlayEnd, Quit, Raw, RawMode, SendFail, Serv, ServerMode, ServerOp, Snotice, Start, Text, Topic, UnBan, Unotify, UserMode, Voice, Wallops, WaveEnd.
+
+All the information of these are in the help file suplied with mIRC
+
+OK then now then we want to make our script a bit better so this is what we do:
+above the "on *:TEXT:hello*:#:/say $chan Hi $nick" line type alias /hi //say $chan Hi $nick
+and then change "/say $chan Hi $nick" in the on *... line to /hi so you will end up with somthing like this:
+alias /hi //say $chan Hi $nick
+on *:TEXT:hello*:#:/hi
+And thats it you know how to use the aliases.
+
+Now we need to learn how to do popups
+The question is what would we want our popups to do?
+
+Well I thought that you would want to enable and disable the script so this is what we do, we add  a line at the top of the script called #script on and then one at the bottom called #script end
+so we end up with:
+#script on
+alias /hi //say $chan Hi $nick
+on *:TEXT:hello*:#:/hi
+#script end
+and now we have to add the popups section in so we start with "menu <menuplace>" and "<menuitem>:<commands>" so we do this: 
+menu query,nicklist,menubar,channel
+  -
+  Hello Script
+  .ON:.enable #script | /echo -a Hello Script wereON
+  .OFF :.disable #script | /echo -a Hello Script wanted 2OFF
+
+ok so what we have here is - is a seporator, Hello Script is the title, ON/OFF are choices which trigger a command to turn on/off the script so the final script looks like this:
+:::
+menu query,nicklist,menubar,channel
+  -
+  Hello Script
+  .ON:.enable #script | /echo -a Hello Script wereON
+  .OFF :.disable #script | /echo -a Hello Script wanted 2OFF
+#script on
+alias /hi //say $chan Hi $nick
+on *:TEXT:hello*:#:/hi
+#script end
+:::
+Now you can go out and try some other scripts, remember this is only and example so don't follow this for every TEXT script you try and do because your menu's will be very long other wise LOL
