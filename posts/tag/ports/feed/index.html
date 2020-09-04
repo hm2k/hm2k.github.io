@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>ports &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/ports/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 30 Mar 2011 14:46:02 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>How to find the fastest CVSUP mirror server</title>
+		<link>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server</link>
+					<comments>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 30 Mar 2011 14:41:42 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[csup]]></category>
+		<category><![CDATA[cvsup]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[ports]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=2316</guid>
+
+					<description><![CDATA[Some time ago I wrote about using fastest_cvsup, to find the fastest cvsup mirror server for use with csup on FreeBSD. fastest_cvsup is a system utility written in Perl that finds fastest CVSup mirror server for FreeBSD, OpenBSD or NetBSD. Here I&#8217;m going to tell you how to get started&#8230; Install First of all you need [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Some time ago I wrote about using fastest_cvsup, to find the fastest cvsup mirror server for use with <a href="http://www.hm2k.com/posts/freebsd-62-usrports-no-such-file-or-directory">csup on FreeBSD</a>.</p>
+<p>fastest_cvsup is a system utility written in Perl that finds fastest CVSup mirror server for FreeBSD, OpenBSD or NetBSD.</p>
+<p>Here I&#8217;m going to tell you how to get started&#8230;</p>
+<p><span id="more-2316"></span></p>
+<p><strong>Install</strong></p>
+<p>First of all you need to install it, there are a number of ways to do this, but on FreeBSD you probably want to install from ports:</p>
+<blockquote><p>cd /usr/ports/sysutils/fastest_cvsup/ &amp;&amp; make install clean</p>
+<p><em>Note: You MUST be root to install ports</em></p></blockquote>
+<p><strong>Get help</strong></p>
+<p>Once installed you are able to read more information about fastest_cvsup by issuing the following commands:</p>
+<blockquote><p>fastest_cvsup -h</p></blockquote>
+<p>This will display the general help.</p>
+<blockquote><p>man fastest_cvsup</p></blockquote>
+<p>This will display the more detailed manual page.</p>
+<p><strong>Usage examples</strong></p>
+<p>Here&#8217;s a few practical examples to get you started.</p>
+<p>This example will check to see which United Kingdom (uk) based servers are quickest:</p>
+<p><code># fastest_cvsup -c uk<br />
+&gt;&gt;  Querying servers in countries: uk<br />
+--&gt; Connecting to cvsup.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 136.71 ms<br />
+--&gt; Connecting to cvsup2.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 139.81 ms<br />
+--&gt; Connecting to cvsup3.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 134.28 ms<br />
+--&gt; Connecting to cvsup4.uk.freebsd.org [195.40.6.45]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 129.03 ms</code></p>
+<p><code> </code></p>
+<p><code>&gt;&gt;  Speed Daemons:<br />
+- 1st: cvsup4.uk.freebsd.org    129.03 ms<br />
+- 2st: cvsup3.uk.freebsd.org    134.28 ms<br />
+- 3st: cvsup.uk.freebsd.org     136.71 ms</code></p>
+<p>To find the fastest server in Europe you would use something like this:</p>
+<p><code># fastest_cvsup -q -c uk,ie,fr,de,fi,no,nl,ch</code></p>
+<p>Go nuts, test them all:</p>
+<p><code># fastest_cvsup -Q -r -c all</code></p>
+<p>This example will give you the times of just OpenBSD and NetBSD servers:</p>
+<p><code># fastest_cvsup -c openbsd,netbsd</code></p>
+<p>In this example we will use fastest_cvsup with the cvup command to update the ports using the fastest server in the United States (us):</p>
+<p><code># csup -g -L 2 -h `fastest_cvsup -Q -c us` /root/ports-supfile</code></p>
+<p><em>Note: &#8220;-Q&#8221; is used to make it super quiet which is useful when using in scripts or in-line commands.</em></p>
+<p><strong>Find out more</strong></p>
+<p>Visit the <a href="http://fastest-cvsup.sourceforge.net/">fastest_cvsup</a> website to find out more.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2316</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:17 by W3 Total Cache
+-->

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>mailchimp &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/mailchimp/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Mon, 30 Jan 2012 22:14:45 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Integrate a newsletter into your website</title>
+		<link>https://hm2k.org/posts/integrate-a-newsletter-into-your-website</link>
+					<comments>https://hm2k.org/posts/integrate-a-newsletter-into-your-website#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Wed, 07 Sep 2011 13:26:56 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[mailchimp]]></category>
+		<category><![CDATA[mailing lists]]></category>
+		<category><![CDATA[mailman]]></category>
+		<category><![CDATA[newsletter]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3257</guid>
+
+					<description><![CDATA[Over the years I&#8217;ve been asked how to integrate a newsletter into a website quite a few times. These days I often find myself recommending a third party service such as MailChimp, however I soon discovered that as brilliant as it is, MailChimp its not for everyone. For example, many of our web hosting clients [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/british-fuel-cost-per-mile" rel="bookmark" title="British fuel cost per mile">British fuel cost per mile </a> <small>I was trying to work out how to estimate how...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-copyright-your-website" rel="bookmark" title="How to Copyright your website">How to Copyright your website </a> <small>People often ask me how to go about getting their...</small></li>
+<li><a href="https://hm2k.org/posts/php-coding-standards-and-best-practices" rel="bookmark" title="PHP coding standards and best practices">PHP coding standards and best practices </a> <small>I have been using PHP for a long time now,...</small></li>
+<li><a href="https://hm2k.org/posts/free-icons" rel="bookmark" title="Free icon sets for your website">Free icon sets for your website </a> <small>If you don&#8217;t have the time to make your own...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="http://labs.phurix.net/upload/mailman-par-avion.png"><img loading="lazy" class="alignright size-medium wp-image-3260" title="Mailman powering our Newsletter" src="http://labs.phurix.net/upload/mailman-par-avion-300x165.png" alt="" width="300" height="165" srcset="https://hm2k.org/upload/mailman-par-avion-300x165.png 300w, https://hm2k.org/upload/mailman-par-avion.png 650w" sizes="(max-width: 300px) 100vw, 300px" /></a>Over the years I&#8217;ve been asked how to integrate a newsletter into a website quite a few times.</p>
+<p>These days I often find myself recommending a third party service such as <a href="http://mailchimp.com/">MailChimp</a>, however I soon discovered that as brilliant as it is, MailChimp its not for everyone.</p>
+<p>For example, many of our web hosting clients want to run their own mail campaigns through their own website rather than use a third party service.</p>
+<p><span id="more-3257"></span></p>
+<h3>What software should we use?</h3>
+<p>From memory there&#8217;s a few ways to do that:</p>
+<ul>
+<li><a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/CpanelDocs/MailingLists">Mailman</a> &#8211; Installed with cPanel</li>
+<li><a href="http://www.phplist.com/">PHPList</a> &#8211; Install yourself or through fantastico, I&#8217;m not a fan</li>
+<li><a href="http://www.greatcircle.com/majordomo/">Majordomo</a> &#8211; Not installed</li>
+</ul>
+<p>There&#8217;s quite a few other &#8220;<a href="http://en.wikipedia.org/wiki/Category:Free_mailing_lists">free mailing list</a>&#8221; solutions and there&#8217;s plenty of <a href="http://alternativeto.net/software/mailman/">alternatives to Mailman</a>, but Mailman is the preferred option for us, mainly because it&#8217;s reliable and established&#8230;</p>
+<blockquote><p>&#8220;cPanel currently uses Mailman, which is an open source product under the GNU Project&#8221;</p>
+<p>&#8211; <a href="http://www.cpanel.net/podcast?page_id=673">Adam Wien, Systems Administrator</a></p></blockquote>
+<p>It&#8217;s reassuring when software is used by a vendor such as cPanel, as you know it&#8217;s likely to be supported for the foreseeable future.</p>
+<p>It&#8217;s really easy to <a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/CpanelDocs/MailingLists">get started</a> with the Mailman Mailing Lists in cPanel, however there&#8217;s even a <a href="http://www.cpanel.net/media/tutorials/mailinglists.htm">video tutorial</a> if you&#8217;re a little unsure.</p>
+<blockquote><p>Tip: When you setup your mailing list call it &#8220;newsletter&#8221; so its purpose is easy to identify.</p></blockquote>
+<p>Now we&#8217;ve decided what software we&#8217;re using and we&#8217;ve setup our newsletter mailing list, we can now actually integrate it with our website.</p>
+<p>When I first started looking into this, there wasn&#8217;t many ways to integrate Mailman using PHP, just an outdated article entitled <a href="http://wiki.list.org/pages/viewpage.action?pageId=4030648#">How do I integrate Mailman with PHP, or any other web enabling technology?</a></p>
+<p>Don&#8217;t worry about that, because we&#8217;re here to help&#8230;</p>
+<h3>Introducing the Mailman Widget for WordPress</h3>
+<p>What we want to achieve here is a widget on our website so users are able to subscribe to our newsletter.</p>
+<p>If you&#8217;re using WordPress, this is no problem as we&#8217;ve got a WordPress Plugin to do it for you:</p>
+<ul>
+<li><a href="http://wordpress.org/extend/plugins/mailman-widget/">Mailman Widget</a></li>
+</ul>
+<p>Simply login to your WordPress site as you normally would and go to the <a href="http://codex.wordpress.org/Plugins_Add_New_Screen">Add New Plugin</a> screen. Just look for the &#8220;Mailman Widget&#8221;. If in doubt, take a look at the <a href="http://wordpress.org/extend/plugins/mailman-widget/screenshots/">Mailman Widget screenshots</a> to help you out.</p>
+<h3>Not using WordPress? Don&#8217;t panic!</h3>
+<p>We can use exactly the same library that&#8217;s used in the <em>Mailman Widget</em> on <em>any</em> PHP based website.</p>
+<ul>
+<li><a href="http://php-mailman.sourceforge.net/">PHP-Mailman</a></li>
+</ul>
+<p>Simply download the file and take a look at the example to get you started.</p>
+<h3>The future of PHP Mailman</h3>
+<p>In future, using PHP Mailman should be even easier as it is turned into a PHP Pear package called Services_Mailman.</p>
+<p>You can now download the Pear package via github:</p>
+<ul>
+<li><a href="https://github.com/pear/Services_Mailman">Services_Mailman</a></li>
+</ul>
+<p>Simply click the download button and extract the files. You can either require it like a normal class or install it as a Pear package by running the following:</p>
+<blockquote><p>pear install package.xml</p></blockquote>
+<p>Once the <a href="http://pear.php.net/pepr/pepr-proposal-show.php?id=672">proposal for Services_Mailman</a> has been passed, you should be able to simply do &#8220;pear install Services_Mailman&#8221; as it will be added to the Pear channel.</p>
+<h3>In summary</h3>
+<p>I hope this helps make it easier for you to add a newsletter to your website. Despite the rise of social media (such as twitter) email is still the number 1 way to communicate online, so it&#8217;s never been more important to keep in touch with your customers or peers.</p>
+<p><strong>Good luck!</strong></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/british-fuel-cost-per-mile" rel="bookmark" title="British fuel cost per mile">British fuel cost per mile </a> <small>I was trying to work out how to estimate how...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-copyright-your-website" rel="bookmark" title="How to Copyright your website">How to Copyright your website </a> <small>People often ask me how to go about getting their...</small></li>
+<li><a href="https://hm2k.org/posts/php-coding-standards-and-best-practices" rel="bookmark" title="PHP coding standards and best practices">PHP coding standards and best practices </a> <small>I have been using PHP for a long time now,...</small></li>
+<li><a href="https://hm2k.org/posts/free-icons" rel="bookmark" title="Free icon sets for your website">Free icon sets for your website </a> <small>If you don&#8217;t have the time to make your own...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/integrate-a-newsletter-into-your-website/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3257</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:02 by W3 Total Cache
+-->

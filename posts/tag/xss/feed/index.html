@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>xss &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/xss/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 02 Jun 2011 09:48:26 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>XSS: Get linked from Dmoz instantly</title>
+		<link>https://hm2k.org/posts/get-linked-from-dmoz-instantly</link>
+					<comments>https://hm2k.org/posts/get-linked-from-dmoz-instantly#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 24 Mar 2011 09:07:31 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[dmoz]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[xss]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=1881</guid>
+
+					<description><![CDATA[Recently, like many of you, I&#8217;ve had some trouble getting websites listed on the AOL owned &#8220;Open Directory Project&#8221; known as Dmoz. So, looking back at a post written by Oatmeal which explains how to get 20 .gov links in 20 minutes I wondered if the same was possible for Dmoz&#8230; After very little searching I [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/free-stuff" rel="bookmark" title="Free Stuff">Free Stuff </a> <small>I love free stuff, it&#8217;s probably why I like open...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Recently, like many of you, I&#8217;ve had some trouble getting websites listed on the AOL owned &#8220;Open Directory Project&#8221; known as Dmoz.</p>
+<p>So, looking back at a post written by <a href="http://0at.org/">Oatmeal</a> which explains <a href="http://www.seomoz.org/blog/xss-how-to-get-20-gov-links-in-20-minutes">how to get 20 .gov links in 20 minutes</a> I wondered if the same was possible for Dmoz&#8230;</p>
+<p><span id="more-1881"></span>After very little searching I soon discovered that the <strong>main search function of Dmoz is vulnerable</strong>.</p>
+<p>This means malicious users could easily place HTML code into the search form input box and manipulate the markup on the site (aka <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">Cross Site Scripting</a> or XSS).</p>
+<p>Here&#8217;s a proof of concept showing how you would link to <a href="http://www.rfc-editor.org/rfc/rfc2606.txt">example.com</a> with the anchor text as &#8220;Look, I made a link&#8221;:</p>
+<blockquote><p>http://www.dmoz.org/search?q=%3Ch1%3E%3Ca+href%3D%22http%3A%2F%2Fexample.com%22%3ELook%2C+I+made+a+link%3C%2Fa%3E%3C/h1%3E</p>
+<p><a href="http://www.dmoz.org/search?q=%3Ch1%3E%3Ca+href%3D%22http%3A%2F%2Fwww.example.com%22%3ELook%2C+I+made+a+link%3C%2Fa%3E%3C/h1%3E">View the compromised page</a> (<a href="http://i.imgur.com/1Aqad.png">screenshot</a>)</p></blockquote>
+<p>To make this affective, you would simply need to swap out the domain and the anchor text and (in theory) you would have to link to them from various other websites for them to eventually get indexed and start passing link juice for things like <a href="http://www.hm2k.com/projects/pagerank">PageRank</a>.</p>
+<p>This is not the first time that Dmoz has been subject to such a flaw, as in 2007 they were subject to a similar <a href="http://sla.ckers.org/forum/read.php?3,16280,16287">XSS vulnerability in their blog search</a>.</p>
+<p>There are many well established ways Dmoz could fix this (aside from fixing their site code) on the server but they have chosen not to. I&#8217;m not sure why.</p>
+<p>Is there any SEO value in these type of links? It&#8217;s uncertain.</p>
+<p>Is there a security risk? Yes, definitely.</p>
+<p>Dmoz is not the only site to ever become subject to an XSS exploit, <a href="http://www.theregister.co.uk/2010/09/22/twitter_xss_genesis/">twitter has</a><a href="http://www.darknet.org.uk/2010/01/researcher-uncovers-xss-flaws-in-twitter-and-google-calendar/"> been vulnerable</a> <a href="http://www.jemjabella.co.uk/2010/confirmed-twitter-xss-vulnerability/">plenty</a> <a href="http://www.davidnaylor.co.uk/twitter-exploit-still-works.html">of</a> <a href="http://www.davidnaylor.co.uk/massive-twitter-cross-site-scripting-vulnerability.html">times</a>, but by golly they fixed it.</p>
+<p>Will Dmoz pull their finger out or is he dead, <a href="http://www.dmoz.org/public/profile?editor=jimnoble">jim</a>?</p>
+<p><em>Note: <a href="http://www.dmoz.org/docs/en/public_abuse_faq_en.html">Dmoz Staff</a> were unavailable for comment at time of publication (email address was unreachable).</em></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/free-stuff" rel="bookmark" title="Free Stuff">Free Stuff </a> <small>I love free stuff, it&#8217;s probably why I like open...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/get-linked-from-dmoz-instantly/feed</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1881</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:44 by W3 Total Cache
+-->

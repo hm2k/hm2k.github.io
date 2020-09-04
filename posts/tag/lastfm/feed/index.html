@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>lastfm &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/lastfm/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Tue, 08 Dec 2009 12:21:43 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>PlusFM Track Feed</title>
+		<link>https://hm2k.org/posts/plusfm-track-feed</link>
+					<comments>https://hm2k.org/posts/plusfm-track-feed#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 12 Nov 2009 15:18:53 +0000</pubDate>
+				<category><![CDATA[General]]></category>
+		<category><![CDATA[audioscrobbler]]></category>
+		<category><![CDATA[foobar2000]]></category>
+		<category><![CDATA[last.fm]]></category>
+		<category><![CDATA[lastfm]]></category>
+		<category><![CDATA[plusfm]]></category>
+		<category><![CDATA[winamp]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=567</guid>
+
+					<description><![CDATA[Recently an online radio station I listen to called PlusFM stopped displaying track titles on their stream. This was a pain for quickly displaying the current track you were listening to, however I did figure out a work around&#8230; Here&#8217;s my setup&#8230; I have two machines in my office, one has a hifi system attached, [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/a-new-month" rel="bookmark" title="A new month">A new month </a> <small>First of all I&#8217;d like to say thanks to everyone...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Recently an online radio station I listen to called PlusFM stopped displaying track titles on their stream. This was a pain for quickly displaying the current track you were listening to, however I did figure out a work around&#8230;</p>
+<p><span id="more-567"></span>Here&#8217;s my setup&#8230;</p>
+<p>I have two machines in my office, one has a hifi system attached, the other does not.</p>
+<p>I use the lightweight media player <a href="http://en.wikipedia.org/wiki/Foobar2000">Foobar2000</a> (foobar2000.org), developed by Peter Pawlowski, a former freelance contractor for Nullsoft. So you know it&#8217;s a good alternative to Winamp.</p>
+<p>In Foobar2000 I add the location for PlusFM&#8217;s stream:</p>
+<blockquote><p><a href="http://91.121.48.90">http://91.121.48.90</a></p></blockquote>
+<p>I then use the last.fm plugin for audio scrobbling in Foobar2000 (<a href="http://www.mp3tag.de/en/fb2k.html">foo_audioscrobbler.dll</a>).</p>
+<p>This allows me to feed the track I&#8217;m listening to the last.fm API.</p>
+<p>I can then call their API and display the current track I&#8217;m playing on any device, anywhere in the world.</p>
+<p>I currently use it in combination with my &#8220;last.fm&#8221; mIRC script, which calls the API, reads the currently playing track, then displays it on screen when you trigger it using the /amp command.</p>
+<p>This mean that when I hear a song I like, I could display it to share it with others, or just display it for my own interest.</p>
+<p>This was great, until recently, when plusFM changed, and decided to stop displaying the track names on their feed&#8230;</p>
+<blockquote><p>* +HM2K is listening to www.plusfm.net &#8211; current track available on www.plusfm.net &lt;www.last.fm/user/hm2k&gt;</p></blockquote>
+<p>I understand that you guys want more hits to your site, but you&#8217;re messing up my last.fm feed.</p>
+<p>Perhaps PlusFM could sign up to last.fm and feed the audio scrobbler, then I can simply read it from there!</p>
+<p>Or perhaps I could read it directly from your site&#8230;</p>
+<p>So it turns out there&#8217;s a feed on the site I can read from instead&#8230;</p>
+<blockquote><p><a href="http://www.plusfm.net/titre_plusfm.php">http://www.plusfm.net/titre_plusfm.php</a></p></blockquote>
+<p>So I wrote a little script for it called plusfm.mrc&#8230;</p>
+<ul>
+<li>Download <a href="http://hm2k.googlecode.com/svn/trunk/code/mirc/plusfm.mrc">plusfm.mrc</a></li>
+<li>Usage: /plusfm</li>
+</ul>
+<blockquote><p>[12:16:48 pm] * HM2K now playing Justice &#8211; Genesis &lt;www.plusfm.net&gt;</p></blockquote>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/a-new-month" rel="bookmark" title="A new month">A new month </a> <small>First of all I&#8217;d like to say thanks to everyone...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/plusfm-track-feed/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">567</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:00 by W3 Total Cache
+-->

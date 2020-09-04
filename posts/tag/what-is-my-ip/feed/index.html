@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>what is my ip &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/what-is-my-ip/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Tue, 09 Aug 2011 09:01:08 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>What is my IP?</title>
+		<link>https://hm2k.org/posts/what-is-my-ip</link>
+					<comments>https://hm2k.org/posts/what-is-my-ip#respond</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Tue, 09 Aug 2011 08:48:14 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[ip address]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[regex]]></category>
+		<category><![CDATA[what is my ip]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3193</guid>
+
+					<description><![CDATA[An IP address is a unique number which identifies a machine on a network. On the Internet IP addresses are allocated in blocks to ISPs in each country by regional registries, making it possible to identify which country an IP address originated in. Often, if you are connected to the Internet behind a router, you [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" class="alignright size-medium wp-image-3199" title="500px-Coffee_IP.svg" src="http://labs.phurix.net/upload/500px-Coffee_IP.svg_-300x225.png" alt="" width="300" height="225" srcset="https://hm2k.org/upload/500px-Coffee_IP.svg_-300x225.png 300w, https://hm2k.org/upload/500px-Coffee_IP.svg_.png 500w" sizes="(max-width: 300px) 100vw, 300px" />An <a href="http://en.wikipedia.org/wiki/IP_address">IP address</a> is a unique number which identifies a machine on a network.</p>
+<p>On the Internet IP addresses are allocated in blocks to ISPs in each country by regional registries, making it possible to identify which country an IP address originated in.</p>
+<p>Often, if you are connected to the Internet behind a router, you share an online IP address with everyone else on your local area network (LAN).</p>
+<p>Sometimes you need to know your external IP address and using something like <a href="http://en.wikipedia.org/wiki/Ipconfig">ipconfig</a> will only return your LAN IP address (something like 192.168.0.1).</p>
+<p><span id="more-3193"></span>That is why many &#8220;what is my ip&#8221; websites exist, making it easy for you to lookup your external IP address.</p>
+<p>My favourite IP lookup service has been for a long time one run by NASDAQ-100 content delivery specialists &#8220;Akamai Technologies&#8221;:</p>
+<ul>
+<li><a href="http://whatismyip.akamai.com/">whatismyip.akamai.com</a></li>
+</ul>
+<p>It&#8217;s brilliant in its simplicity but it&#8217;s not very pretty.</p>
+<p>We decided to do something different. We made a pretty &#8220;What is my IP address?&#8221; lookup:</p>
+<ul>
+<li><a href="http://ip.phurix.net/">ip.phurix.net</a></li>
+</ul>
+<p>Part of its beauty is that the audience its aimed at is able to quickly read and understand the information at a glance, without any prompts. While those who don&#8217;t understand it can marvel at its pretty form and ponder over its usefulness.</p>
+<p>The other part of its beauty is that it&#8217;s <em>highly <a href="http://en.wiktionary.org/wiki/parsable">parsable</a></em>.</p>
+<p>It&#8217;s easy to parse the IP address, mainly because the presentation (CSS) is separate from the markup (HTML), but also because of the headers.</p>
+<p>Here&#8217;s a short demonstration to show how you can use the headers to get the IP address using this tool:</p>
+<blockquote><p>&lt;?php $h=get_headers(&#8216;http://ip.phurix.net&#8217;,1); echo trim($h[&#8216;Location&#8217;],&#8217;/&#8217;); ?&gt;</p></blockquote>
+<p>However, this method isn&#8217;t very portable, so may not be suitable if you&#8217;re checking against multiple sources at once.</p>
+<p>So instead, we can also demonstrate using a simple regular expression and a function that can get http contents (such as file_get_contents() in PHP).</p>
+<blockquote><p>&lt;?php echo preg_replace(&#8216;/.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*/s&#8217;,&#8217;$1&#8242;,file_get_contents(&#8216;http://ip.phurix.net&#8217;));?&gt;</p></blockquote>
+<p>The brilliance in this little snippet is that it will work with <em>any</em> useful &#8220;What is my IP?&#8221; lookup website.</p>
+<p>So as you can see, it&#8217;s really easy to work with as a pretty API as well.</p>
+<p>Beyond the IP address, you only need to look at the source code to understand that it&#8217;s easy to parse the other details.</p>
+<p>I hope you found this useful!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/what-is-my-ip/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3193</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:39 by W3 Total Cache
+-->

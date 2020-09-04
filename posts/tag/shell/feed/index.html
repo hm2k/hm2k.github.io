@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>shell &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/shell/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 25 May 2011 22:55:05 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Converting your logo to ASCII art</title>
+		<link>https://hm2k.org/posts/converting-your-logo-to-ascii-art</link>
+					<comments>https://hm2k.org/posts/converting-your-logo-to-ascii-art#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 25 May 2011 12:11:25 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[ascii]]></category>
+		<category><![CDATA[ascii art]]></category>
+		<category><![CDATA[figlet]]></category>
+		<category><![CDATA[irc]]></category>
+		<category><![CDATA[jpg]]></category>
+		<category><![CDATA[logo]]></category>
+		<category><![CDATA[pablodraw]]></category>
+		<category><![CDATA[putty]]></category>
+		<category><![CDATA[shell]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=2907</guid>
+
+					<description><![CDATA[If you&#8217;re a geek like me or you&#8217;ve just  seen Iron Man 2 you&#8217;ll probably like the idea of having a custom motd display something cool when you login to your shell or terminal server. Sure, you can use figlet to create a text banner, but how cool would it be if you could display your [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/email-address-on-your-website" rel="bookmark" title="email address on your website">email address on your website </a> <small>This is something that people don&#8217;t seem to realise, and...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>If you&#8217;re a geek like me or you&#8217;ve just  seen <a href="http://paolo.wordpress.com/2010/05/07/iron-man-2-etcmotd/">Iron Man 2</a> you&#8217;ll probably like the idea of having a custom <a href="http://en.wikipedia.org/wiki/Motd_(unix)">motd</a> display something cool when you login to your shell or terminal server.</p>
+<p>Sure, you can use <a href="http://en.wikipedia.org/wiki/FIGlet">figlet</a> to create a text banner, but how cool would it be if you could display your own logo instead. Right?</p>
+<p>Can an image be converted into <a href="http://en.wikipedia.org/wiki/ASCII_art">ASCII art</a>?</p>
+<p>Challenge accepted.</p>
+<p><span id="more-2907"></span>First of all, let&#8217;s get our logo image. We&#8217;re going to use the <a href="http://www.flickr.com/photos/38114693@N04/5632552278/in/photostream">Gallush logo</a> and to make it easier we&#8217;ll rehost the <a href="http://i.imgur.com/UQV1n.jpg">original image</a>. Let&#8217;s go&#8230;</p>
+<p>I started off by trying some online converts:</p>
+<ul>
+<li><a href="http://www.glassgiant.com/ascii/">GlassGiant ASCII Art Generator</a>
+<ul>
+<li><a href="http://pastie.org/pastes/1968509/text">Normal output</a></li>
+</ul>
+</li>
+<li><a href="http://ascii.mastervb.net/">mastervb.net ASCII Art</a>
+<ul>
+<li><a href="http://pastie.org/pastes/1968539/text">Highest quality output</a></li>
+</ul>
+</li>
+<li><a href="http://picascii.com/">picascii</a>
+<ul>
+<li><a href="http://pastie.org/pastes/1968559/text">Default output</a></li>
+</ul>
+</li>
+<li><a href="http://www.degraeve.com/img2txt.php">DeGraeve.com IMG2TXT</a>
+<ul>
+<li><a href="http://pastie.org/pastes/1968565/text">Default output</a></li>
+</ul>
+</li>
+<li><a href="http://lunatic.no/ol/img2aschtml.php">lunatic.no Image to HTML/ASCII</a>
+<ul>
+<li><a href="http://pastie.org/pastes/1968719/text">Output</a></li>
+</ul>
+</li>
+<li><a href="http://www.jennana.com/projects/ascii.php">jennana.com JPG2ASCII</a>
+<ul>
+<li><a href="http://www.jennana.com/projects/ascii.php?image=http%3A%2F%2Fi.imgur.com%2FUQV1n.jpg&amp;method=Best">Result</a></li>
+<li><a href="http://pastie.org/pastes/1968773/text">Output</a></li>
+</ul>
+</li>
+<li><a href="http://www.converthub.com/">ConvertHub.com</a> (as text/html)
+<ul>
+<li><a href="http://pastie.org/pastes/1968604/text">Output</a></li>
+</ul>
+</li>
+</ul>
+<p>There&#8217;s a lot out there, which got me thinking&#8230;</p>
+<p>What about software? Here&#8217;s the <a href="http://en.wikipedia.org/wiki/ASCII_art_converters">ASCII art converters</a> I found:</p>
+<ul>
+<li><a href="http://aa-project.sourceforge.net/aalib/">aalib</a> &#8211; outdated</li>
+<li><a href="https://sourceforge.net/projects/jpeg2ascii/">jpeg2ascii</a> &#8211; unfinished</li>
+<li><a href="http://csl.sublevel3.org/jp2a/">jp2a</a> &#8211; easy to install on FreeBSD
+<ul>
+<li><a href="http://pastie.org/pastes/1968666/text">Output</a></li>
+</ul>
+</li>
+<li><a href="http://caca.zoy.org/">libcaca</a></li>
+</ul>
+<p>What about scripts? There must be a PHP, Perl or Python script out there&#8230;</p>
+<ul>
+<li><a href="http://phpsnips.com/snippet.php?id=29">JPG to ASCII Converter PHP snippet</a></li>
+<li><a href="http://www.phpclasses.org/package/3907-PHP-Convert-image-to-HTML-with-ASCII-art-characters.html">Image2Char PHP Class</a></li>
+<li><a href="http://stevendkay.wordpress.com/2009/09/08/generating-ascii-art-from-photographs-in-python/">generating ASCII art from photographs in Python</a></li>
+<li><a href="http://tommih.blogspot.com/2009/01/image-to-ascii-art-with-python.html">pyascii</a></li>
+<li><a href="http://www.floodgap.com/software/ppmascii/">ppmascii (perl)</a></li>
+<li><a href="http://people.baicom.com/~agramajo/projects/png2ascii/">png2ascii.pl</a></li>
+<li><a href="http://search.cpan.org/~yanick/Term-Caca-0.97/lib/Term/Caca.pm">Term::Caca &#8211; perl interface for libcaca (Colour AsCii Art library)</a></li>
+<li><a href="https://sourceforge.net/projects/aalib-perl/">aalib-perl project</a></li>
+</ul>
+<p>Then a brainwave, I want the image to fit a standard terminal screen (80 columns by 24 rows, according to putty&#8217;s default settings).</p>
+<p>Since 1 pixel (usually) equates ASCII character, to make the ASCII art fit the screen I should resize the image from 128x128px to 24x24px.</p>
+<p>Unfortunately at that size (24&#215;24) it makes it almost impossible to work out what it&#8217;s meant to be, while at double the size (48&#215;48) you can still make out all the defining features of the image. This is <a href="http://i.imgur.com/zJEjp.jpg">the resized image</a>.</p>
+<p>After doing this, my favourite so far was from &#8220;converthub.com&#8221;, which results in something a little like <a href="http://pastie.org/pastes/1970718/text">this</a> which is exactly 24 lines so should fit your standard console screen.</p>
+<p>So here it is:</p>
+<p><a href="http://www.hm2k.com/upload/gallush-logo-putty.png"><img loading="lazy" class="aligncenter size-medium wp-image-2911" title="gallush-logo-putty" src="http://www.hm2k.com/upload/gallush-logo-putty-300x203.png" alt="" width="300" height="203" srcset="https://hm2k.org/upload/gallush-logo-putty-300x203.png 300w, https://hm2k.org/upload/gallush-logo-putty.png 608w" sizes="(max-width: 300px) 100vw, 300px" /></a>So as you can see, you can make out the logo pretty clearly and it fits on the screen! Pretty cool huh?</p>
+<p>Just need to render some text in figlet and use <a href="http://picoe.ca/products/pablodraw/">PabloDraw</a> to combine the two, and you should end up with something like this:</p>
+<p><a href="http://www.hm2k.com/upload/gallush-pablodraw.png"><img loading="lazy" class="aligncenter size-medium wp-image-2912" title="gallush-pablodraw" src="http://www.hm2k.com/upload/gallush-pablodraw-300x184.png" alt="" width="300" height="184" srcset="https://hm2k.org/upload/gallush-pablodraw-300x184.png 300w, https://hm2k.org/upload/gallush-pablodraw.png 929w" sizes="(max-width: 300px) 100vw, 300px" /></a><em>Note: I used the &#8220;Rounded&#8221; font on the <a href="http://patorjk.com/software/taag/">patorjk.com Text Ascii Art Generator</a>.</em></p>
+<p>Here&#8217;s what that looks like over PuTTY:</p>
+<p><a href="http://www.hm2k.com/upload/gallush-logo-putty-final.png"><img loading="lazy" class="aligncenter size-medium wp-image-2916" title="gallush-logo-putty-final" src="http://www.hm2k.com/upload/gallush-logo-putty-final-300x203.png" alt="" width="300" height="203" srcset="https://hm2k.org/upload/gallush-logo-putty-final-300x203.png 300w, https://hm2k.org/upload/gallush-logo-putty-final.png 603w" sizes="(max-width: 300px) 100vw, 300px" /></a>Kinda cool huh?</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/email-address-on-your-website" rel="bookmark" title="email address on your website">email address on your website </a> <small>This is something that people don&#8217;t seem to realise, and...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/converting-your-logo-to-ascii-art/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2907</post-id>	</item>
+		<item>
+		<title>HM2K&#8217;s code repository</title>
+		<link>https://hm2k.org/posts/hm2ks-code-repository</link>
+					<comments>https://hm2k.org/posts/hm2ks-code-repository#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 30 Jul 2009 16:19:43 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[AutoIT]]></category>
+		<category><![CDATA[Batch]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[hm2k]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[mIRC Script]]></category>
+		<category><![CDATA[repository]]></category>
+		<category><![CDATA[shell]]></category>
+		<category><![CDATA[TCL]]></category>
+		<category><![CDATA[VBScript]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=429</guid>
+
+					<description><![CDATA[HM2K&#8217;s code repository is now open for business! This repository is a collection of scripts and code i&#8217;ve written in various languages such as mIRC Script, Perl, PHP, TCL, AutoIT, JavaScript, Shell, VB Script and Batch. You can find the project here. You may browse the code here. You can raise issues here. At the [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/eggtcl-project" rel="bookmark" title="eggtcl project">eggtcl project </a> <small>I&#8217;m pleased to announce that the eggdrop TCL scripts from...</small></li>
+<li><a href="https://hm2k.org/posts/weather-tcl" rel="bookmark" title="weather.tcl">weather.tcl </a> <small>Update: This script is now part of the eggtcl project....</small></li>
+<li><a href="https://hm2k.org/posts/twitter-for-mirc" rel="bookmark" title="Twitter for mIRC">Twitter for mIRC </a> <small>I signed up for Twitter quite some months ago, but...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>HM2K&#8217;s code repository is now open for business!</p>
+<p><em>This repository is a collection of scripts and code i&#8217;ve written in various languages such as mIRC Script, Perl, PHP, TCL, AutoIT, JavaScript, Shell, VB Script and Batch.<span id="more-429"></span></em></p>
+<p>You can find the project <a href="http://code.google.com/p/hm2k/">here</a>.</p>
+<p>You may browse the code <a href="http://code.google.com/p/hm2k/source/browse/#svn/trunk/code">here</a>.</p>
+<p>You can raise issues <a href="http://code.google.com/p/hm2k/issues/list">here</a>.</p>
+<p>At the moment there&#8217;s only mIRC scripts and PHP code, but I hope to eventually upload all my code here.</p>
+<p>There are also no downloads, as I feel most people can comfortably browse the code or use SVN. Although I may add specific downloads on request.</p>
+<p>Watch this space.</p>
+<p>I hope you find this useful!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/eggtcl-project" rel="bookmark" title="eggtcl project">eggtcl project </a> <small>I&#8217;m pleased to announce that the eggdrop TCL scripts from...</small></li>
+<li><a href="https://hm2k.org/posts/weather-tcl" rel="bookmark" title="weather.tcl">weather.tcl </a> <small>Update: This script is now part of the eggtcl project....</small></li>
+<li><a href="https://hm2k.org/posts/twitter-for-mirc" rel="bookmark" title="Twitter for mIRC">Twitter for mIRC </a> <small>I signed up for Twitter quite some months ago, but...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/hm2ks-code-repository/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">429</post-id>	</item>
+		<item>
+		<title>How to restart the explorer shell in Windows XP</title>
+		<link>https://hm2k.org/posts/how-to-restart-the-explorer-shell-in-windows-xp</link>
+					<comments>https://hm2k.org/posts/how-to-restart-the-explorer-shell-in-windows-xp#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 09 Jan 2009 11:03:21 +0000</pubDate>
+				<category><![CDATA[explorer]]></category>
+		<category><![CDATA[restart]]></category>
+		<category><![CDATA[shell]]></category>
+		<category><![CDATA[xp]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=342</guid>
+
+					<description><![CDATA[If you have landed yourself here chances are you already know why you want to do this, but for those who don&#8217;t here&#8217;s why: When installing a new application, they sometimes require you to restart for them to work, often just restarting the Windows explorer shell will be sufficient for it to work as expected. [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/missing-accessories-shortcuts-from-start-menu-on-windows-xp" rel="bookmark" title="Missing accessories shortcuts from start menu on Windows XP">Missing accessories shortcuts from start menu on Windows XP </a> <small>I&#8217;m currently using a computer that has the &#8220;Remote Desktop...</small></li>
+<li><a href="https://hm2k.org/posts/my-avi-files-crash-explorerexe" rel="bookmark" title="My AVI files crash explorer.exe">My AVI files crash explorer.exe </a> <small>Often when I am browsing files using explorer I will...</small></li>
+<li><a href="https://hm2k.org/posts/print-dialog-does-not-appear" rel="bookmark" title="Print dialog does not appear in Outlook Express or Internet Explorer">Print dialog does not appear in Outlook Express or Internet Explorer </a> <small>Today I get a call. Outlook Express won&#8217;t print. I...</small></li>
+<li><a href="https://hm2k.org/posts/adding-fonts-into-photoshop-without-adding-them-to-windows" rel="bookmark" title="Adding fonts into photoshop without adding them to windows">Adding fonts into photoshop without adding them to windows </a> <small>If you use Photoshop for any kind of graphic or...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>If you have landed yourself here chances are you already know why you want to do this, but for those who don&#8217;t here&#8217;s why:</p>
+<p>When installing a new application, they sometimes require you to restart for them to work, often just restarting the Windows explorer shell will be sufficient for it to work as expected.</p>
+<p>Normally most people just kill it via Task Manager, but this can have adverse effects on your system (such as data loss), so here&#8217;s how to do it properly:</p>
+<p><span id="more-342"></span></p>
+<ol>
+<li>Go to Start -&gt; &#8220;Turn Off Computer&#8221;</li>
+<li>At the &#8220;Turn off computer&#8221; window, hold down CTRL+ALT+SHIFT and click on &#8220;Cancel&#8221;.
+<ul>
+<li>When this is done, explorer should cleanly exit and your start menu will have gone.</li>
+</ul>
+</li>
+<li>Hit CTRL+SHIFT+ESC to open Task Manager.</li>
+<li>Go to File -&gt; &#8220;New Task (Run&#8230;)&#8221;.</li>
+<li>Enter: &#8220;<em>explorer</em>&#8221; in the &#8220;Open&#8221; box, and press OK.
+<ul>
+<li>If your start menu appears, explorer has restarted successfully, otherwise try again or reboot.</li>
+</ul>
+</li>
+</ol>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/missing-accessories-shortcuts-from-start-menu-on-windows-xp" rel="bookmark" title="Missing accessories shortcuts from start menu on Windows XP">Missing accessories shortcuts from start menu on Windows XP </a> <small>I&#8217;m currently using a computer that has the &#8220;Remote Desktop...</small></li>
+<li><a href="https://hm2k.org/posts/my-avi-files-crash-explorerexe" rel="bookmark" title="My AVI files crash explorer.exe">My AVI files crash explorer.exe </a> <small>Often when I am browsing files using explorer I will...</small></li>
+<li><a href="https://hm2k.org/posts/print-dialog-does-not-appear" rel="bookmark" title="Print dialog does not appear in Outlook Express or Internet Explorer">Print dialog does not appear in Outlook Express or Internet Explorer </a> <small>Today I get a call. Outlook Express won&#8217;t print. I...</small></li>
+<li><a href="https://hm2k.org/posts/adding-fonts-into-photoshop-without-adding-them-to-windows" rel="bookmark" title="Adding fonts into photoshop without adding them to windows">Adding fonts into photoshop without adding them to windows </a> <small>If you use Photoshop for any kind of graphic or...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/how-to-restart-the-explorer-shell-in-windows-xp/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">342</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:25 by W3 Total Cache
+-->

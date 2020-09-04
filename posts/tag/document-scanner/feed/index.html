@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>document scanner &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/document-scanner/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Mon, 28 Mar 2011 18:40:56 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Scan to Excel</title>
+		<link>https://hm2k.org/posts/scan-to-excel</link>
+					<comments>https://hm2k.org/posts/scan-to-excel#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 24 Oct 2009 12:11:04 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[accountancy]]></category>
+		<category><![CDATA[convert]]></category>
+		<category><![CDATA[document scanner]]></category>
+		<category><![CDATA[excel]]></category>
+		<category><![CDATA[ocr]]></category>
+		<category><![CDATA[pdf]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[tif]]></category>
+		<category><![CDATA[tiff]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=546</guid>
+
+					<description><![CDATA[This week I&#8217;ve mostly been trying to figure out a way to digitalise some of my bank statements to make accountancy and archiving easier. I figured there must be a way to scan them in using a document scanner, then use OCR software to render the data into Excel. Of course, nothing does this natively, [&#8230;]<div class='yarpp-related-rss yarpp-related-none'>
+
+No related posts.
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>This week I&#8217;ve mostly been trying to figure out a way to digitalise some of my bank statements to make accountancy and archiving easier.</p>
+<p>I figured there must be a way to scan them in using a document scanner, then use OCR software to render the data into Excel.</p>
+<p>Of course, nothing does this natively, but there are ways to do it.</p>
+<p><span id="more-546"></span></p>
+<p>There are three parts to this process&#8230;</p>
+<ol>
+<li>Document scanning</li>
+<li>Data format conversion</li>
+<li>Optical character recognition (OCR)</li>
+</ol>
+<p>For the scanning part I used a Ricoh Aficio MP C4500, which not only acts as a Photocopier, but as a fax machine, network printer and network scanner.</p>
+<p>The main part is it&#8217;s ability to scan with <a href="http://en.wikipedia.org/wiki/Image_scanner#Document_processing">document processing</a>. This means (once configured) that it would only take a few minutes to scan a few hundred pages, rather than a few hours using a conventional scanner.</p>
+<p>This device has the ability to save scanned documents as PDF or TIF. I decided to use the more versatile TIF image format.</p>
+<p>I figured it would be easier to convert a standard image format than the proprietary PDF format. I very quickly discovered that it wasn&#8217;t that simple.</p>
+<p>To begin with I had heard good things about two leading OCR software packages&#8230;</p>
+<ul>
+<li>ABBYY FineReader 9.0</li>
+<li>Able2Extract Pro 5.0</li>
+</ul>
+<p>I found that neither of these software packages would accept TIF files, so I converted each directory of TIF files into a single PDF file using the <a href="http://www.dreamsyssoft.com/tiff-to-pdf/">DreamSys Tiff to PDF Converter</a>, which was a very quick and effective command-line tool for doing the task.</p>
+<p>I started trying out Able2Extract as I&#8217;d not used it before and I had read good things about it&#8217;s PDF to Excel conversion. The problem was it kept throwing up a &#8220;Fatal Internal Error #24&#8221; error which I was unable to work around.</p>
+<p>I had used ABBYY in the past and it turned out to be very good OCR software for converting to Word at least, however trying to configure it to scan the areas I wanted into Excel seemed almost impossible and took forever.</p>
+<p>I decided to go back to the drawing board&#8230;</p>
+<p>I quickly realised that there were a few &#8220;web 2.0&#8221; software as a service tools out there that could assist me&#8230;</p>
+<ul>
+<li><a href="http://www.finereaderonline.com/">ABBYY FineReader Online</a> (10 pages a day for free)</li>
+<li>NitroPDF <a href="http://www.pdftoexcelonline.com/">PDF to Excel</a> (free)</li>
+</ul>
+<p>There&#8217;s many universal &#8220;online document converters&#8221;, a few include&#8230;</p>
+<ul>
+<li><a href="http://www.zamzar.com/">Zamzar</a></li>
+<li><a href="http://www.cometdocs.com/">cometdocs</a></li>
+</ul>
+<p>My issue with most of these is that they would recognise the PDF, but not the images inside the PDF and use OCR to render them. They are only designed to take the text found in a PDF file and extract that to Excel.</p>
+<p>I also came across a few other software packages that will also convert from PDF files to Excel&#8230;</p>
+<ul>
+<li>deskUNPDF Professional by docudesk</li>
+<li>PDF2XL Enterprise by cogniview</li>
+<li>ExpressConversion Server by adlibsoftware</li>
+<li>PDF To XLS by verypdf</li>
+<li>Solid Converter PDF by soliddocuments</li>
+<li>TotalPDFConverter by coolutils</li>
+</ul>
+<p>With all this available proprietary software for converting from PDF to Excel (XLS or CSV) its obvious that it&#8217;s a service definitely in demand.</p>
+<p>So far I&#8217;m waiting on the following:</p>
+<ul>
+<li>Zamzar and others to email me their conversion of the PDF file I uploaded to them.</li>
+<li>Able2Extract&#8217;s support team to get back to me with regards to the error.</li>
+<li>For Cogniview PDF2XL Enterprise to download.</li>
+</ul>
+<p>Let&#8217;s see what gets the job done best, first, if any&#8230;</p>
+<p>Zamzar is unable to convert from PDF to XLS, directly or indirectly. While finereaderonline will only accept images, not PDF files, which is OK, but may take some time, especially at only 10 pages per day.</p>
+<p>Able2Extract were unable to help me with the error unless I sent them the PDF, which I can&#8217;t do due to it&#8217;s content.</p>
+<p>I sent DreamSys an email asking them to send these guys a sample output PDF instead, but I&#8217;ve heard nothing back as of yet.</p>
+<p>Able2Extract recommended I use their Sonic PDF Creator product to convert the original scanned TIFF files to a PDF which they claim their Able2Extract product will be able to read.</p>
+<p>I had a play with Sonic PDF Creator and appeared to be unable to import a directory of TIF files, just each TIF file individually. This seemed like a painstaking process.</p>
+<p>I needed to merge the TIF files together into 1 file to make it easier. PTGui Pro is able to stitch TIF files together, however it gave me an error saying:</p>
+<p>Error loading TIFF file: Unsupported number of bits per sample (only 8, 16 or 32 are supported) or unsupported sample format. Useless.</p>
+<p>Back to square one.</p>
+<p>I decided to try my luck with PDF2XL, which after a little teething problem getting a working copy to begin with seemed to be quite a neat package.</p>
+<p>PDF2XL was able to detect that the PDF I had given it (the one I created using Tiff 2 PDF) was a scanned document and began performing OCR on the file.</p>
+<p>The results were almost prefect, VERY impressive. It seems that PDF2XL is able to do what nothing else could, not even Able2Extract. Don&#8217;t waste your time with anything else. It seems that <a href="http://www.cogniview.com/pdf2xl.php">PDF2XL</a> is all you need.</p>
+<p>The only thing I will say is I had to tweak the OCR settings a little bit to get it to render the page correctly.</p>
+<p>Just when I thought everything was going great, I discovered another issue I had completely overlooked. The output was not in the correct order. I took a look at the original PDF and soon discovered that the images in the PDF were not in the correct order either.</p>
+<p>First off, I decided that I should rename all the images based on the sheet number, that way I could be sure that they were correctly ordered. I created a batch file to preview and rename the images, called &#8220;<a href="http://hm2k.googlecode.com/svn/trunk/code/batch/imgrename.bat">imgrename.bat</a>&#8220;. I was also able to use this to rename an entire directory at a time.</p>
+<p>I tried rebuilding the PDF using <em>DreamSys Tiff to PDF Converter</em> which I had used to create the PDF file in the first place, only to find that it was still out of order and I couldn&#8217;t influence the sorting. I had to find something else to do the job&#8230;</p>
+<p>Enter <a href="http://www.remotesensing.org/libtiff/">libtiff</a> and it&#8217;s windows counterpart <a href="http://gnuwin32.sourceforge.net/packages/tiff.htm">Tiff for Windows by GnuWin32</a>. Once I had a copy of this I was able to write another batch file that would not only combine the TIFF files (with pages) into a single TIFF file (using tiffcp.exe) but I was able to convert that into a PDF using (tiff2pdf.exe). I called this script &#8220;<a href="http://hm2k.googlecode.com/svn/trunk/code/batch/tiff2pdf.bat">tiff2pdf.bat</a>&#8220;.</p>
+<p>Bingo!</p>
+<p>All was successful&#8230;</p>
+<p>The next task is to firstly, cleanup anything bad in the CSV file left by OCR (cleancsv.bat) then to &#8220;normalise&#8221; the data&#8230;</p>
+<p>But that&#8217;s another story for another time. We&#8217;ve done what we set out to do which was to scan to excel and all is well on that front.</p>
+<p>Hope you find this useful. Enjoy!</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 880px; width: 1px; height: 1px;"><a class="NoDecorationRed" href="http://www.cogniview.com/pdf2xl-enterprise.php">PDF2XL Enterprise</a></div>
+<div class='yarpp-related-rss yarpp-related-none'>
+<p>No related posts.</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/scan-to-excel/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">546</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:39 by W3 Total Cache
+-->

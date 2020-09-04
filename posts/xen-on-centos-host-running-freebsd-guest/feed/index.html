@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Xen on CentOS Host running FreeBSD Guest	</title>
+	<atom:link href="https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/feed" rel="self" type="application/rss+xml" />
+	<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 04 Nov 2009 20:14:28 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+	<item>
+		<title>
+		By: Schade		</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/comment-page-1#comment-185452</link>
+
+		<dc:creator><![CDATA[Schade]]></dc:creator>
+		<pubDate>Wed, 04 Nov 2009 20:14:28 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest#comment-185452</guid>
+
+					<description><![CDATA[Seems FreeBSD now works with Xen; at least as DomU under FreeBSD 8.0...
+
+http://wiki.freebsd.org/FreeBSD/Xen]]></description>
+			<content:encoded><![CDATA[<p>Seems FreeBSD now works with Xen; at least as DomU under FreeBSD 8.0&#8230;</p>
+<p><a href="http://wiki.freebsd.org/FreeBSD/Xen" rel="nofollow ugc">http://wiki.freebsd.org/FreeBSD/Xen</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: BoeroBoy		</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/comment-page-1#comment-152443</link>
+
+		<dc:creator><![CDATA[BoeroBoy]]></dc:creator>
+		<pubDate>Wed, 01 Apr 2009 18:45:03 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest#comment-152443</guid>
+
+					<description><![CDATA[That&#039;s a real nice way to blog a topic like this.  I don&#039;t even have to google your points because you&#039;ve already done it and posted the links inside your post.  Rock on.]]></description>
+			<content:encoded><![CDATA[<p>That&#8217;s a real nice way to blog a topic like this.  I don&#8217;t even have to google your points because you&#8217;ve already done it and posted the links inside your post.  Rock on.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: freebsd software		</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/comment-page-1#comment-25453</link>
+
+		<dc:creator><![CDATA[freebsd software]]></dc:creator>
+		<pubDate>Thu, 22 Nov 2007 21:32:01 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest#comment-25453</guid>
+
+					<description><![CDATA[Thanks for the post, it&#039;s very usefull !]]></description>
+			<content:encoded><![CDATA[<p>Thanks for the post, it&#8217;s very usefull !</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Ian Bonnycastle		</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/comment-page-1#comment-24610</link>
+
+		<dc:creator><![CDATA[Ian Bonnycastle]]></dc:creator>
+		<pubDate>Mon, 19 Nov 2007 20:35:25 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest#comment-24610</guid>
+
+					<description><![CDATA[I&#039;ve been attempting to get this working for a week, except on an Ubuntu host (dom0). From what I can tell, recompiling the Ubuntu host to run a non-PAE hypervisor and kernel crashes the system (I.E. it complains something about running a non-PAE kernel on a PAE hypervisor, even though I made sure that both are non-PAE, etc.) I&#039;ve also tried to recompile the 7.0-BETA2 FreeBSD kernel to have all the XEN and PAE options enabled, but the stock GENERIC kernel doesn&#039;t have the XEN extensions and the Kip kernel source that I&#039;ve downloaded throws hundreds of compiler errors. So, from what I can tell, there is no way to get a PAE XEN kernel under FreeBSD 7.0 (at least BETA2). Also, when I&#039;ve gotten around the actual compiler errors, I ran across a line that said &quot;PAE under XEN not supported.&quot;, and actually stopped the compilation. So, I would think that using VMware server (which is where I went as well, after attempting Qemu, which I thought would be less CPU intensive, would be a better choice... it crashed too often and doesn&#039;t have very good networking support) is the only viable alternative. I really like the Xen methodology, but its pretty useless if its not supported ubiquitously.
+
+Ian]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;ve been attempting to get this working for a week, except on an Ubuntu host (dom0). From what I can tell, recompiling the Ubuntu host to run a non-PAE hypervisor and kernel crashes the system (I.E. it complains something about running a non-PAE kernel on a PAE hypervisor, even though I made sure that both are non-PAE, etc.) I&#8217;ve also tried to recompile the 7.0-BETA2 FreeBSD kernel to have all the XEN and PAE options enabled, but the stock GENERIC kernel doesn&#8217;t have the XEN extensions and the Kip kernel source that I&#8217;ve downloaded throws hundreds of compiler errors. So, from what I can tell, there is no way to get a PAE XEN kernel under FreeBSD 7.0 (at least BETA2). Also, when I&#8217;ve gotten around the actual compiler errors, I ran across a line that said &#8220;PAE under XEN not supported.&#8221;, and actually stopped the compilation. So, I would think that using VMware server (which is where I went as well, after attempting Qemu, which I thought would be less CPU intensive, would be a better choice&#8230; it crashed too often and doesn&#8217;t have very good networking support) is the only viable alternative. I really like the Xen methodology, but its pretty useless if its not supported ubiquitously.</p>
+<p>Ian</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Mark Foster		</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/comment-page-1#comment-10736</link>
+
+		<dc:creator><![CDATA[Mark Foster]]></dc:creator>
+		<pubDate>Sun, 12 Aug 2007 15:26:44 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest#comment-10736</guid>
+
+					<description><![CDATA[Good writeup, and nice to know CentOS-5 can do xen-dom0 out of the box.
+Too bad PAE gets in the way like that. They should make PAE-enabled domU kernel available or the default. VMware server does a pretty good job of running FreeBSD, another option is jail or qemu.]]></description>
+			<content:encoded><![CDATA[<p>Good writeup, and nice to know CentOS-5 can do xen-dom0 out of the box.<br />
+Too bad PAE gets in the way like that. They should make PAE-enabled domU kernel available or the default. VMware server does a pretty good job of running FreeBSD, another option is jail or qemu.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: hm2k		</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/comment-page-1#comment-6673</link>
+
+		<dc:creator><![CDATA[hm2k]]></dc:creator>
+		<pubDate>Wed, 11 Jul 2007 23:38:52 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest#comment-6673</guid>
+
+					<description><![CDATA[Ultimately, I gave up on Xen, and used vmware server.
+
+I&#039;ve yet to contact the developers, the general consensus I got from their sites, etc, is that development on this has stopped.
+
+I feel the Xen open source community is very disconnected.]]></description>
+			<content:encoded><![CDATA[<p>Ultimately, I gave up on Xen, and used vmware server.</p>
+<p>I&#8217;ve yet to contact the developers, the general consensus I got from their sites, etc, is that development on this has stopped.</p>
+<p>I feel the Xen open source community is very disconnected.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Mark		</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/comment-page-1#comment-6613</link>
+
+		<dc:creator><![CDATA[Mark]]></dc:creator>
+		<pubDate>Wed, 11 Jul 2007 15:36:04 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest#comment-6613</guid>
+
+					<description><![CDATA[I&#039;ve been investigating this as well and have run into the same problem.  Have you already contacted the developers you mentioned?]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;ve been investigating this as well and have run into the same problem.  Have you already contacted the developers you mentioned?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: simoncpu		</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/comment-page-1#comment-5658</link>
+
+		<dc:creator><![CDATA[simoncpu]]></dc:creator>
+		<pubDate>Thu, 05 Jul 2007 14:50:11 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest#comment-5658</guid>
+
+					<description><![CDATA[I wish i386 and amd64 FreeBSD Xen 3.1 domUs would be here soon. =)
+
+[ simon.cpu ]]]></description>
+			<content:encoded><![CDATA[<p>I wish i386 and amd64 FreeBSD Xen 3.1 domUs would be here soon. =)</p>
+<p>[ simon.cpu ]</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:56 by W3 Total Cache
+-->

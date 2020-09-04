@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>samba &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/samba/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Tue, 03 Nov 2009 13:02:14 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>The specified network name is no longer available samba</title>
+		<link>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba</link>
+					<comments>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 03 Nov 2009 13:02:14 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[centos]]></category>
+		<category><![CDATA[samba]]></category>
+		<category><![CDATA[smb]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=218</guid>
+
+					<description><![CDATA[I keep getting this error: Error Copying File or Folder Cannot copy xxx: The specified network name is no longer available. Why? Well, I&#8217;m trying to copy a folder from my Windows XP SP2 Pro workstation onto my network share drive, which in fact is a samba (smb) server running on my &#8220;CentOS release 4.6 [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I keep getting this error:</p>
+<blockquote><p>Error Copying File or Folder</p>
+<p>Cannot copy xxx: The specified network name is no longer available.</p></blockquote>
+<p>Why?</p>
+<p><span id="more-218"></span></p>
+<p>Well, I&#8217;m trying to copy a folder from my Windows XP SP2 Pro workstation onto my network share drive, which in fact is a samba (smb) server running on my &#8220;CentOS release 4.6 (Final)&#8221; box.</p>
+<p>First thing to do is to check the error logs (generally) at &#8220;/var/log/samba&#8221;&#8230;</p>
+<blockquote>
+<pre id="codemain" class="code">Sep  8 16:26:13 blade smbd[5913]: [2008/09/08 16:26:13, 0] lib/util_sock.c:read_data(534)
+Sep  8 16:26:13 blade smbd[5913]:   read_data: read failure for 4 bytes to client 192.168.0.3. Error = Connection reset by peer
+Sep  8 16:26:14 blade smbd[5914]: [2008/09/08 16:26:14, 0] lib/util_sock.c:set_socket_options(237)
+Sep  8 16:26:14 blade smbd[5914]:   Unknown socket option TCP_NODELAY_SO_RCVBUF
+Sep  8 16:26:14 blade smbd[5914]: [2008/09/08 16:26:14, 0] lib/util_sock.c:set_socket_options(237)
+Sep  8 16:26:14 blade smbd[5914]:   Unknown socket option SO_SNBUF</pre>
+</blockquote>
+<p>Doesn&#8217;t seem very helpful&#8230;</p>
+<p>I can&#8217;t work out why I&#8217;m getting these errors, why is the peer being reset?</p>
+<p>I <a href="http://www.mail-archive.com/samba@lists.samba.org/msg91461.html">learned that the peer</a> is the client machine that the server is peering to, which means the problem is that my workstation is disconnecting me.</p>
+<p>I checked my Event Viewer (%SystemRoot%\system32\eventvwr.msc), which said:</p>
+<blockquote><p>NetBT failed to process a request because it encountered OutOfResources exception(s) in the last 1 hour. Event ID: 4322</p></blockquote>
+<p>I might have known that the problem would be with windows and not linux.</p>
+<p>However, maybe I spoke too soon, as a quick search lands me on the <a href="http://rhn.redhat.com/errata/RHBA-2008-0711.html">redhat site</a>, which states:</p>
+<blockquote><p>* when Windows® clients performed file operations on files stored on a<br />
+Samba share, various error messages popped-up, and the &#8220;Event ID: 4322&#8221;<br />
+error was logged on the Windows® clients:</p>
+<p>NetBT failed to process a request because it encountered OutOfResources<br />
+exception(s) in the last 1 hour.</p></blockquote>
+<p>Which does describe the problem I&#8217;m having exactly, although i&#8217;ve only been experiencing this recently&#8230;</p>
+<p>On the other hand the Microsoft site suggests I should <a href="http://technet.microsoft.com/en-us/library/cc727761.aspx">Disable then Enable the network adapter</a>&#8230;</p>
+<p>I tried this, and it appeared to work&#8230; At least for now&#8230;</p>
+<p>Low and behold I soon got this error a short time later. Now what?</p>
+<p>I decided to take a look into the <a href="https://bugzilla.samba.org/show_bug.cgi?id=4796">samba bug</a> mentioned above. Apparently the problem is seen in Samba 3.0.25 and 3.0.25a, but not Samba 3.0.24. I am running 3.0.25b-1.el4_6.5 (smbd &#8211;version).</p>
+<p>After investigating my yum log (/var/log/yum.log) I see the following&#8230;</p>
+<blockquote><p>Jul 08 01:38:04 Updated: samba-common.i386 3.0.25b-1.el4_6.5<br />
+Jul 08 01:39:11 Updated: samba.i386 3.0.25b-1.el4_6.5<br />
+Jul 08 01:39:17 Updated: samba-client.i386 3.0.25b-1.el4_6.5</p></blockquote>
+<p>This means that it&#8217;s not very likely to be that as I&#8217;ve been running it for more than two months, and i&#8217;ve only recently switched to this workstation (after an uber hardware failure).</p>
+<p>I tried from another machine, and I can copy anything without seeing these errors&#8230; The plot thickens&#8230;</p>
+<p>I&#8217;m now convinced that the problem is with my workstation and not the server. Now what?</p>
+<p>I <a href="http://groups.google.com/group/linux.samba/browse_thread/thread/3dca4ea0d4e7ef9a/9d9832a09a83ae54">noticed a thread by a guy</a> who mentioned that his machine (like mine) was up to date, SP2, but did not have IE7, unlike my other machines. This interested me. Maybe his <a href="https://bugzilla.samba.org/show_bug.cgi?id=4796">bug isn&#8217;t fixed</a> in the version I&#8217;m using? I think it is, it&#8217;s quite old&#8230;</p>
+<p>However, it seems his solution was to upgrade to 3.0.25c and/or change the connection from &#8220;netbios-ssn&#8221; (port 139) to &#8220;microsoft-ds&#8221; (port 445)&#8230; somehow. I checked on both ends, and appears I&#8217;m already using &#8220;microsoft-ds&#8221; on this machine anyway&#8230;</p>
+<p>Frustration is starting to kick in&#8230;</p>
+<p>I&#8217;m out of ideas, perhaps I should roll back to an older version, see if that helps? My logs report this as been the previous version:</p>
+<blockquote><p>Jun 07 17:01:55 Updated: samba-common.i386 3.0.10-1.4E.12.2<br />
+Jun 07 17:04:29 Updated: samba-client.i386 3.0.10-1.4E.12.2<br />
+Jun 07 17:07:44 Updated: samba.i386 3.0.10-1.4E.12.2</p></blockquote>
+<p>I had second thoughts about this when reading the samba change log (rpm -q &#8211;changelog samba). There seems to be quite a few security fixes that I&#8217;d rather keep&#8230;</p>
+<p>I&#8217;m totally out of ideas&#8230; &#8220;yum remove samba&#8221; it is&#8230; However, apparently to install an old version I have to first install a plugin called &#8220;yum-allowdowngrade&#8221;.</p>
+<p>This is getting complicated, especially when it probably isn&#8217;t a problem with the server.</p>
+<p>I decided to try an updated version instead&#8230;</p>
+<blockquote><p>yum remove samba<br />
+yum remove samba-common<br />
+rpm -i http://charliebrady.org/samba/samba-common-3.0.30-0.i386.rpm</p>
+<p>rpm -i ftp://ftp.pbone.net/mirror/www.startcom.org/AS-4.0.0/os/i386/StartCom/RPMS/perl-Convert-ASN1-0.18-3.noarch.rpm<br />
+rpm -i http://charliebrady.org/samba/samba-3.0.30-0.i386.rpm<br />
+service samba start</p></blockquote>
+<p>It&#8217;s installed, and it started, however I appear to have lost my settings.</p>
+<blockquote><p>mv /etc/samba/smb.conf /etc/samba/smb.conf.recent<br />
+mv /etc/samba/smb.conf.rpmsave /etc/samba/smb.conf<br />
+service smb restart</p></blockquote>
+<p>Testing, and so far so good!</p>
+<p>In summary, when I was convinced it was the silly windows based client workstation, instead it was the insanely overly complex linux server. This could all be avoided if redhat/centos wasn&#8217;t so keen on <a href="http://www.redhat.com/security/updates/backporting/?sc_cid=3093">backporting</a> and I had the latest version in the first place.</p>
+<p>I look forward to the updates.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">218</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:23 by W3 Total Cache
+-->

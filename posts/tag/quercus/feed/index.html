@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>quercus &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/quercus/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 15 Apr 2010 12:29:29 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Getting started with Quercus in Google App Engine</title>
+		<link>https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine</link>
+					<comments>https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 15 Apr 2010 12:26:55 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[gae]]></category>
+		<category><![CDATA[google app engine]]></category>
+		<category><![CDATA[java]]></category>
+		<category><![CDATA[quercus]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=609</guid>
+
+					<description><![CDATA[Last year an article was written on a blog about how to run PHP on Google App Engine (GAE). The guide came with a pre-made package to get you started. However, Quercus has been updated since this was produced. Unfortunately the official Quercus website has very little detail to help us get started&#8230; Further research [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Last year an article was written on a blog about how to <a href="http://www.webdigi.co.uk/blog/2009/run-php-on-the-google-app-engine/">run PHP on Google App Engine (GAE)</a>.</p>
+<p>The guide came with a pre-made package to get you started.</p>
+<p>However, Quercus has been updated since this was produced.</p>
+<p><span id="more-609"></span>Unfortunately the <a href="http://quercus.caucho.com/">official Quercus website</a> has very little detail to help us get started&#8230;</p>
+<p>Further research lead me to a blog post by the company that makes Quercus entitled: <a href="http://blog.caucho.com/?p=187">Quercus on the Google App Engine</a></p>
+<p>It gives a general overview of what is required, but isn&#8217;t really very direct.</p>
+<p>I did also find an entry on their wiki for <a href="http://wiki.caucho.com/Quercus_Google_App_Engine">Quercus on Google App Engine</a>, which was more useful.</p>
+<p>Here&#8217;s what you need to do:</p>
+<ol>
+<li>Follow the <a href="http://code.google.com/appengine/docs/java/gettingstarted/creating.html">Google App Engine: Creating a Project getting started guide</a> to create your file structure and the xml files.</li>
+<li> Download the <a href="http://caucho.com/download">latest version of Resin</a> (ie: <a href="http://www.caucho.com/download/resin-4.0.6.zip">resin-4.0.6.zip</a>)</li>
+<li>From the zip, copy lib/resin.jar to your WEB-INF/lib</li>
+<li>Add GoogleQuercusServlet as a standard servlet and any params to web.xml (<a href="http://gist.github.com/367023">example web.xml</a>)</li>
+<li>Put your PHP files in your &#8220;war&#8221; directory.</li>
+<li>Use the <a href="http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Java">AppEngine Java SDK</a> appcfg to update.</li>
+</ol>
+<p>If you get this error:</p>
+<blockquote><p>java.lang.IllegalStateException: Found a jar file too large to upload: &#8220;&#8230;\WEB-INF\lib\resin.jar&#8221;.  Consider using &#8211;enable_jar_splitting.</p></blockquote>
+<p>Using the suggested option fixed this, which looks like this:</p>
+<blockquote><p>C:\appengine-java-sdk\bin\appcfg.cmd &#8211;enable_jar_splitting update war</p></blockquote>
+<p>That&#8217;s pretty much it to get you started, when you visit your app address, you should be able to call your PHP files.</p>
+<p>If you are looking for something a bit more advanced, take a look at these articles that explain how to get WordPress working:</p>
+<ul>
+<li><a href="http://blog.caucho.com/?p=196">Converting WordPress for Quercus on Google App Engine</a></li>
+<li><a href="http://www.caucho.com/articles/Quercus_on_GAE.pdf">Using Quercus® to Run the WordPress PHP blog on Google App Engine (pdf)</a></li>
+</ul>
+<p>For additional help I recommend you visit <a href="http://forum.caucho.com/forumdisplay.php?f=5">Caucho&#8217;s Quercus  Forums</a>.</p>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 575px; width: 1px; height: 1px; overflow: hidden;">Using Quercus® to Run the WordPress PHP blog on Google App EngineUsing Quercus® to Run the WordPress PHP blog on Google App Engine</div>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine/feed</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">609</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:19 by W3 Total Cache
+-->

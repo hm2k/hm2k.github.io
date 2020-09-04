@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>cache &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/cache/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Tue, 15 Mar 2011 19:54:16 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Premature optimization is the root of all evil</title>
+		<link>https://hm2k.org/posts/premature-optimization-is-the-root-of-all-evil</link>
+					<comments>https://hm2k.org/posts/premature-optimization-is-the-root-of-all-evil#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 22 Feb 2011 20:57:29 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[cache]]></category>
+		<category><![CDATA[Donald Knuth]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[Premature optimization]]></category>
+		<category><![CDATA[xdebug]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=696</guid>
+
+					<description><![CDATA[There&#8217;s loads of ways you can optimize your PHP code, however they are probably NOT the answer to your performance issues. A wiser man than myself once said: We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>There&#8217;s <a href="http://www.hm2k.com/posts/50-php-optimisation-tips-revisited">loads of ways</a> you can optimize your PHP code, however they are probably NOT the answer to your performance issues.</p>
+<p>A wiser man than myself once said:</p>
+<blockquote><p><em>We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.</em></p></blockquote>
+<p>This was originally said by <a href="http://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a>, the father of the <em>analysis of algorithms</em>.</p>
+<p>This can also be applied when working with programming languages such as PHP.</p>
+<p>Here&#8217;s some handy performance tips to point you in the right direction&#8230;</p>
+<p><span id="more-696"></span></p>
+<p><strong>Profile</strong> your code using a debugger is highly recommended as a way to find those bottlenecks that are slowing it down.</p>
+<p><a href="http://xdebug.org">Xdebug</a> is great, it&#8217;s open source, highly recommended by PHP experts everywhere, it easily integrates as a PHP extension and with any <a href="http://www.ibm.com/developerworks/opensource/library/os-php-ide/index.html">popular IDE</a>.</p>
+<p>Once configured, you can use <a href="http://www.xdebug.org/docs/profiler">Xdebug to profile your PHP scripts</a> and determine where the bottlenecks are in your code.</p>
+<p>You never know, the issue may not even be down to your code and instead be down to a database or network latency issue.</p>
+<p><strong>Upgrade</strong> PHP to the latest version. With every release developers have tweaked and optimised the code to improve performance.</p>
+<p>So if a particular core PHP function is your bottleneck, perhaps you&#8217;re due an upgrade.</p>
+<p><strong>Cache</strong> everything is the advice given by developers of large websites (such as <a href="http://highscalability.com/blog/2010/5/17/7-lessons-learned-while-building-reddit-to-270-million-page.html">reddit</a>).</p>
+<p>The <a href="http://php.net/memcache">Memcache module</a> can be used to improve performance by caching database results.</p>
+<p>If you use the Smarty template engine, then you can <a href="http://www.smarty.net/docsv2/en/caching.tpl">cache pages</a> that way.</p>
+<p>Otherwise you may find the <a href="http://pear.php.net/package/Cache_Lite">Cache_Lite</a> handy.</p>
+<p><strong>Ask</strong>. Once you&#8217;ve profiled your code and discovered your bottleneck the only thing left to do is speak to the community.</p>
+<p>The community know best because they&#8217;ve already done it.</p>
+<p>If you didn&#8217;t write it, remember to speak to the author and it&#8217;s community first, otherwise try these resources:</p>
+<ul>
+<li><a href="http://chat.efnet.org/">#PHP on EFnet</a> (<a href="irc://irc.efnet.org/php">IRC</a>)</li>
+<li><a href="http://php.net/mailing-lists.php">PHP Mailing lists</a></li>
+<li><a href="http://stackoverflow.com/questions/tagged/php">PHP on StackOverflow</a></li>
+<li><a href="http://www.reddit.com/r/PHP/">PHP on reddit.com</a></li>
+</ul>
+<p><em>Tip: The community is more likely to help you if you lurk a bit first, make some comments and see what it&#8217;s all about before start asking questions.</em></p>
+<p><strong>Don&#8217;t forget</strong> PHP never was and never will be built to be the best.</p>
+<p>That&#8217;s why <a href="http://najafali.com/php-is-better-than-ruby.html">Ruby developers make jokes</a> about PHP being better and why facebook developed <a href="http://en.wikipedia.org/wiki/HipHop_for_PHP">Hiphop for PHP</a>.</p>
+<p><a href="http://en.wikipedia.org/wiki/Rasmus_Lerdorf">Rasmus Lerdorf</a> (who started PHP) would probably agree that it&#8217;s more about getting the job done than &#8220;real programming&#8221;.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/premature-optimization-is-the-root-of-all-evil/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">696</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:31 by W3 Total Cache
+-->

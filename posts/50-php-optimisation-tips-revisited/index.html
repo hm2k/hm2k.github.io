@@ -1,0 +1,1234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 
+	<title>HM2K » 50+ PHP optimisation tips revisited</title>
+
+	<link rel="stylesheet" href="https://hm2k.org/wp-content/themes/hm2k/style.css" type="text/css" media="screen,print">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://hm2k.org/feed">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://hm2k.org/feed/atom">
+	
+	
+	<style type="text/css" media="screen">
+			</style>
+	
+		<link rel="archives" title="May 2012" href="https://hm2k.org/posts/2012/05">
+	<link rel="archives" title="March 2012" href="https://hm2k.org/posts/2012/03">
+	<link rel="archives" title="November 2011" href="https://hm2k.org/posts/2011/11">
+	<link rel="archives" title="October 2011" href="https://hm2k.org/posts/2011/10">
+	<link rel="archives" title="September 2011" href="https://hm2k.org/posts/2011/09">
+	<link rel="archives" title="August 2011" href="https://hm2k.org/posts/2011/08">
+	<link rel="archives" title="July 2011" href="https://hm2k.org/posts/2011/07">
+	<link rel="archives" title="June 2011" href="https://hm2k.org/posts/2011/06">
+	<link rel="archives" title="May 2011" href="https://hm2k.org/posts/2011/05">
+	<link rel="archives" title="April 2011" href="https://hm2k.org/posts/2011/04">
+	<link rel="archives" title="March 2011" href="https://hm2k.org/posts/2011/03">
+	<link rel="archives" title="February 2011" href="https://hm2k.org/posts/2011/02">
+	<link rel="archives" title="December 2010" href="https://hm2k.org/posts/2010/12">
+	<link rel="archives" title="November 2010" href="https://hm2k.org/posts/2010/11">
+	<link rel="archives" title="June 2010" href="https://hm2k.org/posts/2010/06">
+	<link rel="archives" title="May 2010" href="https://hm2k.org/posts/2010/05">
+	<link rel="archives" title="April 2010" href="https://hm2k.org/posts/2010/04">
+	<link rel="archives" title="February 2010" href="https://hm2k.org/posts/2010/02">
+	<link rel="archives" title="December 2009" href="https://hm2k.org/posts/2009/12">
+	<link rel="archives" title="November 2009" href="https://hm2k.org/posts/2009/11">
+	<link rel="archives" title="October 2009" href="https://hm2k.org/posts/2009/10">
+	<link rel="archives" title="September 2009" href="https://hm2k.org/posts/2009/09">
+	<link rel="archives" title="August 2009" href="https://hm2k.org/posts/2009/08">
+	<link rel="archives" title="July 2009" href="https://hm2k.org/posts/2009/07">
+	<link rel="archives" title="June 2009" href="https://hm2k.org/posts/2009/06">
+	<link rel="archives" title="April 2009" href="https://hm2k.org/posts/2009/04">
+	<link rel="archives" title="February 2009" href="https://hm2k.org/posts/2009/02">
+	<link rel="archives" title="January 2009" href="https://hm2k.org/posts/2009/01">
+	<link rel="archives" title="December 2008" href="https://hm2k.org/posts/2008/12">
+	<link rel="archives" title="November 2008" href="https://hm2k.org/posts/2008/11">
+	<link rel="archives" title="September 2008" href="https://hm2k.org/posts/2008/09">
+	<link rel="archives" title="July 2008" href="https://hm2k.org/posts/2008/07">
+	<link rel="archives" title="June 2008" href="https://hm2k.org/posts/2008/06">
+	<link rel="archives" title="May 2008" href="https://hm2k.org/posts/2008/05">
+	<link rel="archives" title="April 2008" href="https://hm2k.org/posts/2008/04">
+	<link rel="archives" title="March 2008" href="https://hm2k.org/posts/2008/03">
+	<link rel="archives" title="February 2008" href="https://hm2k.org/posts/2008/02">
+	<link rel="archives" title="January 2008" href="https://hm2k.org/posts/2008/01">
+	<link rel="archives" title="December 2007" href="https://hm2k.org/posts/2007/12">
+	<link rel="archives" title="November 2007" href="https://hm2k.org/posts/2007/11">
+	<link rel="archives" title="October 2007" href="https://hm2k.org/posts/2007/10">
+	<link rel="archives" title="August 2007" href="https://hm2k.org/posts/2007/08">
+	<link rel="archives" title="July 2007" href="https://hm2k.org/posts/2007/07">
+	<link rel="archives" title="June 2007" href="https://hm2k.org/posts/2007/06">
+	<link rel="archives" title="May 2007" href="https://hm2k.org/posts/2007/05">
+	<link rel="archives" title="April 2007" href="https://hm2k.org/posts/2007/04">
+	<link rel="archives" title="March 2007" href="https://hm2k.org/posts/2007/03">
+	<link rel="archives" title="February 2007" href="https://hm2k.org/posts/2007/02">
+	<link rel="archives" title="January 2007" href="https://hm2k.org/posts/2007/01">
+	<link rel="dns-prefetch" href="//platform-api.sharethis.com">
+
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="HM2K » 50+ PHP optimisation tips revisited Comments Feed" href="https://hm2k.org/posts/50-php-optimisation-tips-revisited/feed">
+<link rel="stylesheet" id="yarppWidgetCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.5.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="social_comments-css" href="https://hm2k.org/wp-content/plugins/social/assets/comments.css?ver=2.11" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/8.9/css/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/c/5.5.1/wp-includes/js/jquery/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#product=ga&amp;property=5f4131776f37880012707ba8" id="googleanalytics-platform-sharethis-js"></script>
+<link rel="alternate" type="application/json" href="https://hm2k.org/wp-json/wp/v2/posts/178">
+<link rel="prev" title="Geek in the Park 2008" href="https://hm2k.org/posts/geek-in-the-park-2008">
+<link rel="next" title="Seen script for mIRC updated" href="https://hm2k.org/posts/seen-script-for-mirc-updated">
+
+<link rel="canonical" href="https://hm2k.org/posts/50-php-optimisation-tips-revisited">
+
+<link rel="alternate" type="application/json+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2F50-php-optimisation-tips-revisited">
+<link rel="alternate" type="text/xml+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2F50-php-optimisation-tips-revisited&amp;format=xml">
+<style type="text/css">img#wpstats{display:none}</style></head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+	<div style="float:right; margin-right: 5px;">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-8789111894509366";
+/* 468x60, created 4/17/08 */
+google_ad_slot = "9389236395";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	<p><small><b>Have I helped you?</b> Please consider my <a href="http://tinyurl.com/hm2kwishlist">wishlist</a> or <a href="http://tinyurl.com/hm2kpaypal">donating</a>. Thanks!</small></p>
+<p>Don't forget to <a href="http://twitter.com/hm2k">follow me on twitter</a>.</p>
+	</div>
+	<h1><a href="https://hm2k.org">HM2K</a></h1>
+</div>
+
+
+<div id="content">
+
+			
+		<div class="post" id="post-178">
+	
+			<h2 class="posttitle"><a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited" rel="bookmark" title="Permanent link to 50+ PHP optimisation tips revisited">50+ PHP optimisation tips revisited</a></h2>
+			
+			<p class="postmeta"> 
+			May 20, 2008 at 5:51 pm 
+			· Filed under <a href="https://hm2k.org/posts/category/dev" rel="category tag">Development</a>						</p>
+		
+			<div class="postentry">
+			<p>After reading an article some time ago entitled “<a href="http://digg.com/programming/40_Tips_for_optimizing_your_php_Code">40 Tips for optimizing your php Code</a>” (and some others that are suspiciously similar), I decided to redo it, but properly this time with more accurate tips, providing references and citations for each and every one.</p>
+<p>The result is this list of over 50 PHP optimisation tips…</p>
+<p><strong>Update: The list is more like 50+ PHP tips and tricks these days.</strong></p>
+<p>Enjoy!</p>
+<p><span id="more-178"></span></p>
+<ol>
+<li><a href="http://www.php.net/echo"><em>echo</em></a> is faster than <a href="http://www.php.net/print"><em>print</em></a>. <a href="http://web.archive.org/web/20050407085143/http://dynacker.dotgeek.org/printvsecho/">[Citation]</a></li>
+<li>Wrap your string in single quotes (‘) instead of double quotes (“) is faster because PHP searches for variables inside “…” and not in ‘…’, use this when you’re not using variables you need evaluating in your string.  <a href="http://spindrop.us/2007/03/03/php-double-versus-single-quotes/">[Citation]</a></li>
+<li>Use sprintf instead of variables contained in double quotes, it’s about 10x faster. <a href="http://teroheikkinen.iki.fi/blog/php-s_different_echo_methods_performance_comparison/">[Citation]</a></li>
+<li>Use <a href="http://www.php.net/echo">echo</a>‘s multiple parameters (or stacked) instead of string concatenation. <a href="http://blog.libssh2.org/index.php?/archives/28-How-long-is-a-piece-of-string.html">[Citation]</a></li>
+<li>Use pre-calculations, set the maximum value for your for-loops before and not in the loop. ie: <a href="http://www.php.net/for">for</a> ($x=0; $x &lt; count($array); $x), this calls the count() function each time, use $max=count($array) instead before the for-loop starts. <a href="http://www.php.lt/benchmark/phpbench.php">[Citation]</a></li>
+<li>Unset or null your variables to free memory, especially large arrays. <a href="http://lists.nyphp.org/pipermail/talk/2003-January/001855.html">[Citation]</a></li>
+<li>Avoid magic like <a href="http://uk2.php.net/manual/en/language.oop5.overloading.php">__get, __set</a>, <a href="http://www.php.net/__autoload">__autoload</a>. <a href="http://www.ilia.ws/files/zend_performance.pdf">[Citation]</a></li>
+<li>Use require() instead of require_once() where possible. <a href="http://peter.mapledesign.co.uk/weblog/archives/writing-faster-php-code-1-require_once">[Citation]</a></li>
+<li>Use <a href="http://en.wikipedia.org/wiki/Path_(computing)">full paths</a> in includes and requires, less time spent on resolving the OS paths. <a href="http://t3.dotgnu.info/blog/php/include_once-mostly-harmless.html">[Citation]</a></li>
+<li>require() and include() are identical in every way except require halts if the file is missing. Performance wise there is very little difference. <a href="http://groups.google.com/group/php.general/browse_thread/thread/72332fe1ed21e104/b1650148cd6e3c17?lnk=st&amp;q=php+require+vs+include+performance#b1650148cd6e3c17">[Citation]</a></li>
+<li>Since PHP5, the time of when the script started executing can be found in $_SERVER[’REQUEST_TIME’], use this instead of time() or microtime(). <a href="http://www.php.net/time">[Citation]</a></li>
+<li><a href="http://www.php.net/pcre">PCRE</a> regex is quicker than <a href="http://www.php.net/ereg">EREG</a>, but always see if you can use quicker native functions such as <a href="http://www.php.net/strncasecmp">strncasecmp</a>, <a href="http://www.php.net/strpbrk">strpbrk</a> and <a href="http://www.php.net/stripos">stripos</a> instead. <a href="http://talks.php.net/show/php-best-practices/36">[Citation]</a></li>
+<li>When parsing with XML in PHP try <a href="http://www.bin-co.com/php/scripts/xml2array/">xml2array</a>, which makes use of the <a href="http://www.php.net/xml">PHP XML functions</a>, for HTML you can try PHP’s <a href="http://www.php.net/dom">DOM document</a> or <a href="http://www.php.net/domxml">DOM XML</a> in PHP4. <a href="http://htmlparsing.icenine.ca/">[Citation]</a></li>
+<li><a href="http://www.php.net/str_replace">str_replace</a> is faster than <a href="http://www.php.net/preg_replace">preg_replace</a>, str_replace is best overall, however <a href="http://www.php.net/strtr">strtr</a> is sometimes quicker with larger strings. Using array() inside str_replace is usually quicker than multiple str_replace. <a href="http://www.tummblr.com/web-development/php/php-speed-of-string-replacement-functions/">[Citation]</a></li>
+<li>“else if” statements are faster than <a href="http://en.wikipedia.org/wiki/Switch_statement">select statements</a> aka <a href="http://www.php.net/switch">case/switch</a>. <a href="http://www.php.lt/benchmark/phpbench.php">[Citation]</a></li>
+<li>Error suppression with @ is very slow. <a href="http://michelf.com/weblog/2005/bad-uses-of-the-at-operator/">[Citation]</a></li>
+<li>To reduce bandwidth usage turn on mod_deflate in Apache v2 <a href="http://howtoforge.com/apache2_mod_deflate">[Citation]</a> or for Apache v1 try mod_gzip. <a href="http://talks.php.net/show/php-best-practices/40">[Citation]</a></li>
+<li>Close your database connections when you’re done with them. <a href="http://uk.php.net/manual/en/function.mysql-close.php#69063">[Citation]</a></li>
+<li>$row[’id’] is <a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">7 times faster</a> than $row[id], because if you don’t supply quotes it has to guess which index you meant, assuming you didn’t mean a constant. <a href="http://www.php.net/constants#language.constants.syntax">[Citation]</a></li>
+<li>Use &lt;?php … ?&gt; tags when declaring PHP as all other styles are depreciated, including short tags. <a href="http://talks.php.net/show/php-best-practices/10">[Citation]</a></li>
+<li>Use strict code, avoid suppressing errors, notices and warnings thus resulting in cleaner code and less overheads. Consider having <a href="http://www.php.net/error_reporting">error_reporting(E_ALL)</a> always on. <a href="http://talks.php.net/show/php-best-practices/11">[Citation]</a></li>
+<li>PHP scripts are be served at 2-10 times slower by Apache httpd than a static page. Try to use static pages instead of server side scripts. <a href="http://talks.php.net/show/php-best-practices/34">[Citation]</a></li>
+<li>PHP scripts (unless cached) are compiled on the fly every time you call them. Install a PHP caching product (such as <a href="http://www.php.net/memcache">memcached</a> or <a href="http://eaccelerator.net/">eAccelerator</a> or <a href="http://sourceforge.net/projects/turck-mmcache/">Turck MMCache</a>) to typically increase performance by 25-100% by removing compile times. You can even <a href="http://www.cpanel.net/support/docs/ea/ea3/ea3php_php_extensionmgr.html">setup eAccelerator on cPanel using EasyApache3</a>. <a href="http://www.phpfive.net/php-opcode-caching-with-eaccelerator-article45.htm">[Citation]</a></li>
+<li>An alternative caching technique when you have pages that don’t change too frequently is to cache the HTML output of your PHP pages. Try <a href="http://smarty.php.net/">Smarty</a> or <a href="http://pear.php.net/Cache_Lite">Cache Lite</a>.  <a href="http://phplens.com/phpeverywhere/tuning-apache-php">[Citation]</a></li>
+<li>Use isset where possible in replace of strlen. (ie: if (strlen($foo) &lt; 5) { echo “Foo is too short”; } vs. if (!isset($foo{5})) { echo “Foo is too short”; } ). <a href="http://blog.dynom.nl/archives/String-length-vs-isset-to-check-string-lengths_20070807_5.html">[Citation]</a></li>
+<li>++$i is faster than $ i++, so <a href="http://www.hudzilla.org/phpwiki/index.php?title=Pre-increment_where_possible">use pre-increment where possible</a>. <a href="http://talks.php.net/show/php-best-practices/32">[Citation]</a></li>
+<li>Make use of the countless predefined functions of PHP, don’t attempt to build your own as the native ones will be far quicker; if you have very time and resource consuming functions, consider writing them as C extensions or modules. <a href="http://talks.php.net/show/php-best-practices/31">[Citation]</a></li>
+<li>Profile your code. A profiler shows you, which parts of your code consumes how many time. The <a href="http://xdebug.org/">Xdebug debugger</a> already contains a profiler. Profiling shows you the bottlenecks in overview. <a href="http://talks.php.net/show/php-best-practices/39">[Citation]</a></li>
+<li>Document your code. <a href="http://talks.php.net/show/php-best-practices/16">[Citation]</a></li>
+<li>Learn the difference between good and bad code. <a href="http://www.sitepoint.com/blogs/2007/05/25/good-and-bad-php-code/">[Citation]</a></li>
+<li>Stick to coding standards, it will make it easier for you to understand other people’s code and other people will be able to understand yours. <a href="http://talks.php.net/show/php-best-practices/15">[Citation]</a></li>
+<li>Separate code, content and presentation: keep your PHP code separate from your HTML. <a href="http://www.ibm.com/developerworks/library/wa-phprock1/index.html">[Citation]</a></li>
+<li>Don’t bother using complex template systems such as Smarty, use the one that’s included in PHP already, see <a href="http://www.php.net/ob_get_contents">ob_get_contents</a> and <a href="http://www.php.net/extract">extract</a>, and simply pull the data from your database. <a href="http://www.massassi.com/php/articles/template_engines/">[Citation]</a></li>
+<li>Never trust variables coming from user land (such as from $_POST) use <a href="http://www.php.net/mysql_real_escape_string">mysql_real_escape_string</a> when using mysql, and <a href="http://www.php.net/htmlspecialchars">htmlspecialchars</a> when outputting as HTML. <a href="http://talks.php.net/show/php-best-practices/19">[Citation]</a></li>
+<li>For security reasons never have anything that could expose information about paths, extensions and configuration, such as display_errors or <a href="http://www.php.net/phpinfo">phpinfo</a>() in your webroot. <a href="http://talks.php.net/show/php-best-practices/24">[Citation]</a></li>
+<li>Turn off <a href="http://www.php.net/register_globals">register_globals</a> (it’s disabled by default for a reason!). No script at production level should need this enabled as it is a security risk. Fix any scripts that require it on, and fix any scripts that require it off using <a href="http://uk.php.net/manual/en/security.globals.php#82542">unregister_globals()</a>. Do this now, as it’s set to be removed in PHP6. <a href="http://talks.php.net/show/php-best-practices/27">[Citation]</a></li>
+<li>Avoid using plain text when storing and evaluating passwords to avoid exposure, instead use a hash, such as an <a href="http://www.php.net/md5">md5</a> hash. <a href="http://talks.php.net/show/php-best-practices/28">[Citation]</a></li>
+<li>Use <a href="http://www.php.net/ip2long">ip2long</a>() and <a href="http://www.php.net/long2ip">long2ip</a>() to store IP addresses as integers instead of strings. <a href="http://blog.rightbrainnetworks.com/2006/09/18/10-things-you-probably-didnt-know-about-php/">[Citation]</a></li>
+<li>You can avoid reinventing the wheel by using the PEAR project, giving you existing code of a high standard. <a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">[Citation]</a></li>
+<li>When using header(‘Location: ‘.$url); remember to follow it with a die(); as the script continues to run even though the location has changed or avoid using it all together where possible. <a href="http://richardlynch.blogspot.com/2007/06/php-header-location-redirect-refresh.html">[Citation]</a></li>
+<li>In <a href="http://www.php.net/oop">OOP</a>, if a method can be a <a href="http://en.wikipedia.org/wiki/Method_(computer_science)#Static_methods">static method</a>, declare it static. Speed improvement is by a factor of 4. <a href="http://ilia.ws/files/frankfurt_perf.pdf">[Citation]</a>.</li>
+<li>Incrementing a local variable in an OOP method is the fastest. Nearly the same as calling a local variable in a function and incrementing a global variable is 2 times slow than a local variable. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Incrementing an object property (eg. $this-&gt;prop++) is 3 times slower than a local variable. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Incrementing an undefined local variable is 9-10 times slower than a pre-initialized one. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Just declaring a global variable without using it in a function slows things down (by about the same amount as incrementing a local var). PHP probably does a check to see if the global exists. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Method invocation appears to be independent of the number of methods defined in the class because I added 10 more methods to the test class (before and after the test method) with no change in performance. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Methods in derived classes run faster than ones defined in the base class. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>A function call with one parameter and an empty function body takes about the same time as doing 7-8 $localvar++ operations. A similar method call is of course about 15 $localvar++ operations. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Not everything has to be OOP, often it is just overhead, each method and object call consumes a lot of memory. <a href="http://talks.php.net/show/php-best-practices/33">[Citation]</a></li>
+<li>Never trust user data, escape your strings that you use in SQL queries using <a href="http://www.php.net/mysql_real_escape_string">mysql_real_escape_string</a>, instead of mysql_escape_string or addslashes. Also note that if <a href="http://www.php.net/magic_quotes_gpc">magic_quotes_gpc</a> is enabled you should use <a href="http://www.php.net/stripslashes">stripslashes</a> first. <a href="http://www.jemjabella.co.uk/articles/php-security-tips">[Citation]</a></li>
+<li>Avoid the PHP mail() function header injection issue. <a href="http://uk3.php.net/manual/en/function.mail.php#56788">[Citation]</a></li>
+<li>Unset your database variables (the password at a minimum), you shouldn’t need it after you make the database connection.</li>
+<li><a href="http://en.wikipedia.org/wiki/RTFM">RTFM!</a> PHP offers a <a href="http://www.php.net/manual/">fantastic manual</a>, possibly one of the best out there, which makes it a very hands on language, providing working examples and talking in plain English. Please USE IT! <a href="http://xkcd.com/293/">[Citation]</a></li>
+</ol>
+<p>If you still need help, try #PHP on the <a href="http://chat.efnet.org/">EFnet</a> IRC Network. (Read the !rules first).</p>
+<p>Also see:</p>
+<ul>
+<li>an <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php" target="_blank">Excellent Article</a> about optimizing PHP by John Lim</li>
+<li><a href="http://pear.php.net/manual/en/standards.php">PEAR coding standards</a></li>
+<li><a href="http://talks.php.net/show/php-best-practices/">PHP best practices</a> by ez.no (Use left and right keys to scroll through the pages)</li>
+<li><a href="http://phplens.com/phpeverywhere/tuning-apache-php">Tuning Apache and PHP for Speed on Unix</a></li>
+<li><a href="http://c2.com/cgi/wiki?PrematureOptimization">Premature Optimisation</a></li>
+<li><a href="http://ilia.ws/files/frankfurt_perf.pdf">PHP and Performance</a></li>
+<li><a href="http://www.scribd.com/doc/10633/Performance-Tuning-PHP">Performance Tuning PHP</a></li>
+<li><a href="http://www.ibm.com/developerworks/library/wa-phprock1/index.html">Develop rock-solid code in PHP</a></li>
+<li><a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">12 PHP optimization tips</a></li>
+<li><a href="http://blog.rightbrainnetworks.com/2006/09/18/10-things-you-probably-didnt-know-about-php/">10 things you (probably) didn’t know about PHP</a></li>
+</ul>
+<p>Think you’re a PHP guru now? See if you can <a href="http://www.nickhalstead.com/2007/05/23/php-interview-questions-from-yahoo/">answer these questions</a>.</p>
+<div class="yarpp-related">
+<p>Related posts:</p><ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/text-editors-revisited" rel="bookmark" title="Text editors revisited">Text editors revisited </a> <small>As a web developer my main tool is my text...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I’m sure we’re all...</small></li>
+</ol>
+</div>
+						</div>
+
+			<p class="postfeedback">
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited" rel="bookmark" title="Permanent link to 50+ PHP optimisation tips revisited" class="permalink">Permalink</a>
+			</p>
+			
+		</div>
+		
+		<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="https://hm2k.org/index.php?social_controller=auth&amp;social_action=reload_form&amp;redirect_to=https://hm2k.org/posts/50-php-optimisation-tips-revisited&amp;post_id=178">
+			Logging In...		</div>
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#respond" style="display:none;">cancel</a></small></h3><form action="https://hm2k.org/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=twitter&amp;post_id=178" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=facebook&amp;post_id=178" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p><p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value=""></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value=""><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value=""></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post It"> <input type="hidden" name="comment_post_ID" value="178" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0"><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value=""></p><div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="1cfafcb945"></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="3"></p></div></form>	</div>
+		</div>
+	<div id="social-tabs-comments">
+				<ul class="social-nav social-clearfix">
+			<li class="social-all social-tab-main social-current-tab"><a href="#" rel="social-all"><span>38 Replies</span></a></li>
+			<li class="social-wordpress"><a href="#" rel="wordpress"><span>0 Comments</span></a></li>
+			<li class="social-twitter"><a href="#" rel="social-twitter"><span>0 Tweets</span></a></li>
+			<li class="social-facebook"><a href="#" rel="social-facebook"><span>0 Facebook</span></a></li>
+			<li class="social-pingback"><a href="#" rel="social-pingback"><span>15 Pingbacks</span></a></li>
+		</ul>
+
+		
+		<div id="social-comments-tab-all" class="social-tabs-panel social-tabs-first-panel">
+			<div id="comments" class="social-comments">
+				<div class="social-last-reply-when">Last reply was December 6, 2012</div><div class="cf-clearfix"></div>				<ol class="social-commentlist">
+				<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::start_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::start_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>18</b><br>
+<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::end_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::end_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>42</b><br>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-69485">
+<div class="social-comment-inner social-clearfix" id="comment-69485">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0db3ac5609c60b3b43d1febcf7776baa?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0db3ac5609c60b3b43d1febcf7776baa?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://oopsilon.com/" rel="external nofollow ugc" class="url">Imran Nazar</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-69485" class="social-posted-when" target="_blank">May 20, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>All good points, but most of these are low-level optimisations. In the words of the indomitable Knuth, “premature optimization is the root of all evil”.</p>
+<p>Before looking into whether to use echo or print, it may be more advisable to check the algorithm being used by the code, and seeing whether it can be improved. The small tweaks discussed above may produce a few percentage points of speed increase, but an improved algorithm can yield speedups in the orders of magnitude.</p>
+<p>This article will prove useful in dissuading the endless flamewars over whether to use require_once, mind you.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-71313">
+<div class="social-comment-inner social-clearfix" id="comment-71313">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.gilbertpellegrom.co.uk/2008/05/28/50-php-optimisation-tips/" rel="external nofollow ugc" class="url">50+ PHP Optimisation Tips | Gilbert "Gilbitron" Pellegrom</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-71313" class="social-posted-when" target="_blank">May 28, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] intrigued. I would consider myself to be a competent php coder but some of the stuff in the article 50+ PHP Optimisation Tips is totally new to me. Well worth a look if your serious about php. [via […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-84298">
+<div class="social-comment-inner social-clearfix" id="comment-84298">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c4c4189d50ffb842a124e54c4a82804c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c4c4189d50ffb842a124e54c4a82804c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Chang Yeng</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-84298" class="social-posted-when" target="_blank">July 15, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi,<br>
+thank you very much. I learned so many thing from this article. good luck change yeng</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-87336">
+<div class="social-comment-inner social-clearfix" id="comment-87336">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://progtuts.info/55/php-optimization-tips/" rel="external nofollow ugc" class="url">PHP Optimization Tips | ProgTuts</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-87336" class="social-posted-when" target="_blank">July 28, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] 50+ PHP optimisation tips revisited […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-90842">
+<div class="social-comment-inner social-clearfix" id="comment-90842">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.desenvolvimentoparaweb.com/php/dicas-para-otimizar-codigos-php/" rel="external nofollow ugc" class="url">Dicas para otimizar códigos PHP | desenvolvimento para web</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-90842" class="social-posted-when" target="_blank">August 13, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] 50+ PHP optimisation tips revisited; […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-98584">
+<div class="social-comment-inner social-clearfix" id="comment-98584">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.hm2k.com/posts/for-vs-while-in-php" rel="external nofollow ugc" class="url">HM2K.com » For VS While in PHP</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-98584" class="social-posted-when" target="_blank">September 9, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] It’s a question I thought I should know the answer to after I spent a very long time researching 50+ PHP optimisation tips. […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-113303">
+<div class="social-comment-inner social-clearfix" id="comment-113303">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://anmsaiful.wordpress.com/2008/10/24/optimize-your-php-code-tips/" rel="external nofollow ugc" class="url">Optimize your PHP Code (Tips) « PLAY with PROBLEMS</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-113303" class="social-posted-when" target="_blank">October 24, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] <a href="http://www.hm2k.com/posts/50-PHP-optimisation-tips-revisited" rel="nofollow ugc">http://www.hm2k.com/posts/50-PHP-optimisation-tips-revisited</a> […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-113751">
+<div class="social-comment-inner social-clearfix" id="comment-113751">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.codemymedia.com/?p=27" rel="external nofollow ugc" class="url">Code My Media » 50+ PHP optimization tips</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-113751" class="social-posted-when" target="_blank">October 25, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] <a href="http://www.hm2k.com/posts/50-php-optimisation-tips-revisited" rel="nofollow ugc">http://www.hm2k.com/posts/50-php-optimisation-tips-revisited</a>   Written by admin in: Uncategorized | […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-141594">
+<div class="social-comment-inner social-clearfix" id="comment-141594">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.anmsaiful.net/blog/uncategorized/optimize-your-php-code-tips-tricks-and-techniques.html" rel="external nofollow ugc" class="url">CHECKMATE » Optimize your PHP Code - Tips, Tricks and Techniques</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-141594" class="social-posted-when" target="_blank">February 17, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] <a href="http://www.hm2k.com/posts/50-PHP-optimisation-tips-revisited" rel="nofollow ugc">http://www.hm2k.com/posts/50-PHP-optimisation-tips-revisited</a> […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-155513">
+<div class="social-comment-inner social-clearfix" id="comment-155513">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c851db0161590323bde10a9ddb53b350?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c851db0161590323bde10a9ddb53b350?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Peter</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-155513" class="social-posted-when" target="_blank">April 12, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Please update the Smarty link !</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-170894">
+<div class="social-comment-inner social-clearfix" id="comment-170894">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/df80ffb0f9149e665ab51bd6211cd383?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/df80ffb0f9149e665ab51bd6211cd383?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://techtrips.subinvarghese.in" rel="external nofollow ugc" class="url">Subin Varghese</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-170894" class="social-posted-when" target="_blank">July 15, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>This is regarding the 3rd point: ‘Use sprintf instead of variables contained in double quotes, it’s about 10x faster.’</p>
+<p>The citation which you are providing is linking to another page ‘http://fi.php.net/manual/en/function.print.php#66392’ which is providing the results of the test. What he is saying is that DONT use sprintf.<br>
+In his words:<br>
+“Third, stay away from heredoc, and absolutely stay away from [s]printf. They’re slow, and the alternatives are there.”</p>
+<p>Could you tell me what is right? or whether I interpreted it wrongly? In that case, I am sorry. 🙂</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-170938">
+<div class="social-comment-inner social-clearfix" id="comment-170938">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/6a7480fd9023a69a61822b56bdf61bc9?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/6a7480fd9023a69a61822b56bdf61bc9?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://bigwhoop.ch" rel="external nofollow ugc" class="url">Phil</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-170938" class="social-posted-when" target="_blank">July 15, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Micro-optimization almost never makes sense.</p>
+<p>Have a look at Stas’s superb list instead: <a href="http://php100.wordpress.com/2009/07/13/php-performance/" rel="nofollow ugc">http://php100.wordpress.com/2009/07/13/php-performance/</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-171039">
+<div class="social-comment-inner social-clearfix" id="comment-171039">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2dfbc507bfdd6351536b253263af8c27?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2dfbc507bfdd6351536b253263af8c27?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Max</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-171039" class="social-posted-when" target="_blank">July 17, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Great article, thank you so much!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-171181">
+<div class="social-comment-inner social-clearfix" id="comment-171181">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/a0c394e31c9740376635c8878cf5889e?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/a0c394e31c9740376635c8878cf5889e?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">K</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-171181" class="social-posted-when" target="_blank">July 18, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Great list. Good work. Some of your suggestions, such as $i++ vs ++$i are probably not relevant for most web sites, but it’s nice to know.</p>
+<p>I hate nitpickers, too bad that I am one of them today.</p>
+<p>Source:</p>
+<p><a href="http://groups.google.com/group/make-the-web-faster/browse_thread/thread/ddfbe82dd80408cc" rel="nofollow ugc">http://groups.google.com/group/make-the-web-faster/browse_thread/thread/ddfbe82dd80408cc</a></p>
+<p>I’m reposting the relevant points here.</p>
+<p>2: They have apparently improved string handling in the newer versions. “Benchmarks run against PHP 5.2 and 5.3 show that parsing double-quoted strings with interpolation is no slower (and often faster) than single-quoted strings using concatenation. When simple strings with no variables in them are used, the performance is clearly better with double-quoted strings due to implementation details in the engine. See the benchmark posted at .”</p>
+<p>4: This is exactly the opposite of correct advice. The engine handles multiple arguments to echo() in such a way that concatenation (or double-quoted string interpolation) is actually much faster. See the benchmark posted at .</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-171279">
+<div class="social-comment-inner social-clearfix" id="comment-171279">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/49ba916d093b776be1ee1e3cca87044d?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/49ba916d093b776be1ee1e3cca87044d?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Someone</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-171279" class="social-posted-when" target="_blank">July 19, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I disagree with all of the MySQL escape stuff. Use prepared statements and your data will be sanitised for you. <a href="http://au.php.net/manual/en/mysqli.prepare.php" rel="nofollow ugc">http://au.php.net/manual/en/mysqli.prepare.php</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-171520">
+<div class="social-comment-inner social-clearfix" id="comment-171520">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/d4bb788fb6684daa7ae330a4f245574c?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/d4bb788fb6684daa7ae330a4f245574c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">D Mali</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-171520" class="social-posted-when" target="_blank">July 21, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I liked the list, but many of the citations are worthless: off-topic, unfounded or untested, etc.  I was surprised at how much conjecture was used to ‘support’ conjecture.</p>
+<p>Perhaps the sources have changed their content(?).  If not, please don’t pretend to be documenting something when all that is happening is circular intuition.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-173802">
+<div class="social-comment-inner social-clearfix" id="comment-173802">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/672ae1a39c73113b1384ceae71b500a7?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/672ae1a39c73113b1384ceae71b500a7?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Another someone</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-173802" class="social-posted-when" target="_blank">August 10, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>@someone: Well it is in fact true that prepared statements sanitize user input automatically but that’s not the actual usage intention behind prepared statements. They exist for repeating an SQL query template multiple times with different parameters (e.g. inserting huge amounts of data). If you’re making use of a database query just once (which is the usual case in most PHP scripts) using the prepared statement mechanism, you have in reality two accesses to your database (1st preparing the statement, 2nd sending the data). If you make use of a plain SQL query it is just a single database access. So just go for the string escape function where applicable.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-173823">
+<div class="social-comment-inner social-clearfix" id="comment-173823">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/41d64fd9470ea56ae92de5cc369ecf18?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/41d64fd9470ea56ae92de5cc369ecf18?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.dzinepress.com" rel="external nofollow ugc" class="url">Dzinepress</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-173823" class="social-posted-when" target="_blank">August 10, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>really nice work you sharing here.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-175077">
+<div class="social-comment-inner social-clearfix" id="comment-175077">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/742f7de0e77b1259d4ec5843179d1092?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/742f7de0e77b1259d4ec5843179d1092?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.spiderlinks.info" rel="external nofollow ugc" class="url">free business directory</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-175077" class="social-posted-when" target="_blank">August 19, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Great tips thanks.<br>
+As a beginner in php it will help me.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-193515">
+<div class="social-comment-inner social-clearfix" id="comment-193515">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://isakib.com/45-must-read-php-articles-and-resources/" rel="external nofollow ugc" class="url">45 Must Read PHP Articles and Resources</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-193515" class="social-posted-when" target="_blank">January 8, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] 50+ PHP optimisation tips revisited […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-193903">
+<div class="social-comment-inner social-clearfix" id="comment-193903">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/68960b9d5ee154c09390c0c35fa581a4?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/68960b9d5ee154c09390c0c35fa581a4?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Genta</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-193903" class="social-posted-when" target="_blank">January 13, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>You are great</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-195048">
+<div class="social-comment-inner social-clearfix" id="comment-195048">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://hudchewman.wordpress.com/2010/01/26/50-php-optimisation-tips-revisited/" rel="external nofollow ugc" class="url">50+ PHP optimisation tips revisited « HudchewMan's Diary</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-195048" class="social-posted-when" target="_blank">January 26, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] ????? HM2K.com […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-200122">
+<div class="social-comment-inner social-clearfix" id="comment-200122">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://docs.urtechnology.com/2010/03/must-read-php-articles-and-resources/" rel="external nofollow ugc" class="url">Must Read PHP Articles and Resources « UR-Technology</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-200122" class="social-posted-when" target="_blank">March 7, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] 50+ PHP optimisation tips revisited […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-211101">
+<div class="social-comment-inner social-clearfix" id="comment-211101">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/5d8291b6107f0ebf4592c5fecfc9641c?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/5d8291b6107f0ebf4592c5fecfc9641c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Faruq Shaik</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-211101" class="social-posted-when" target="_blank">June 17, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Good article for php beginners .  Thanks .</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-218789">
+<div class="social-comment-inner social-clearfix" id="comment-218789">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/742f7de0e77b1259d4ec5843179d1092?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/742f7de0e77b1259d4ec5843179d1092?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.freelance-php-programmer.comn.us/" rel="external nofollow ugc" class="url">Freelance PHP Programmer</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-218789" class="social-posted-when" target="_blank">July 26, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I am a PHP programmer. I used to do lots of programming. But  i didn’t think about is performance. I dont even thought about to keep a standard. I think here after i can follow some strict rules in php programming. Anyway thank you for sharing the list of optimization rules with us.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-245871">
+<div class="social-comment-inner social-clearfix" id="comment-245871">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://blog.heartdisc.com/?p=19" rel="external nofollow ugc" class="url">Heartdisc » Blog Archive » 50+ PHP optimisation tips</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-245871" class="social-posted-when" target="_blank">November 1, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] 50+ PHP optimisation tips revisited […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-245906">
+<div class="social-comment-inner social-clearfix" id="comment-245906">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.aykutfarsak.com/php-optimizasyon-ipuclari" rel="external nofollow ugc" class="url">PHP Optimizasyon ?puçlar? | Aykut FARSAK</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-245906" class="social-posted-when" target="_blank">November 1, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] Short open tag (&lt; ? ) yerine standart tag? &lt; ?php … ? &gt; kullan?n (al?nt?) […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-266125">
+<div class="social-comment-inner social-clearfix" id="comment-266125">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://tutsbox.com/?p=5" rel="external nofollow ugc" class="url">TutsBox 50+ PHP optimisation tips revisited</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-266125" class="social-posted-when" target="_blank">January 9, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] source:<a href="http://www.hm2k.com/posts/50-php-optimisation-tips-revisited" rel="nofollow ugc">http://www.hm2k.com/posts/50-php-optimisation-tips-revisited</a> […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-276101">
+<div class="social-comment-inner social-clearfix" id="comment-276101">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://fra1ft.wordpress.com/2011/02/17/les-52-commandements-du-developpeur-php/" rel="external nofollow ugc" class="url">Les 52 commandements du développeur PHP… « L'antre du bricolo…</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-276101" class="social-posted-when" target="_blank">February 17, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] commandements sont une traduction du billet de chez HM2K que j’ai jugé très intéressant et que je souhaite faire partager aux développeurs non […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-277895">
+<div class="social-comment-inner social-clearfix" id="comment-277895">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.hm2k.com/posts/premature-optimization-is-the-root-of-all-evil" rel="external nofollow ugc" class="url">HM2K.com » Premature optimization is the root of all evil</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-277895" class="social-posted-when" target="_blank">February 22, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] loads of ways you can optimize your PHP code, however they are probably NOT the answer to your performance […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-290434">
+<div class="social-comment-inner social-clearfix" id="comment-290434">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/29569581b1c8230810b2701e533f04d9?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/29569581b1c8230810b2701e533f04d9?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://hostingbest.co.uk" rel="external nofollow ugc" class="url">Hosting Best</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-290434" class="social-posted-when" target="_blank">May 10, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Have bookmarked this page for use while PHP’ing, thanks for putting these tips on one page</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-294786">
+<div class="social-comment-inner social-clearfix" id="comment-294786">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/4f696b5914e9e7984eca11e2d80043ab?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/4f696b5914e9e7984eca11e2d80043ab?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.yourwebskills.com" rel="external nofollow ugc" class="url">DaiLaughing</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-294786" class="social-posted-when" target="_blank">June 13, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Point 2 is directly contradicted by the author’s citation for point 3 and that source doesn’t even mention sprintf.  Badly investigated and misleading – keep clear.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-306542">
+<div class="social-comment-inner social-clearfix" id="comment-306542">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/ee718a48267a70a79fc558f368c13e3d?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/ee718a48267a70a79fc558f368c13e3d?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.btips.net" rel="external nofollow ugc" class="url">Sadek</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-306542" class="social-posted-when" target="_blank">September 22, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Great list. Good work. Some of your suggestions, such as $i++ vs ++$i are probably not relevant for most web sites, but it’s nice to know.</p>
+<p>I hate nitpickers, too bad that I am one of them today.<br>
+Source: <a href="http://www.btips.net/2011/09/how-to-show-post-excerpt-in-wordpress-blog/" rel="nofollow ugc">http://www.btips.net/2011/09/how-to-show-post-excerpt-in-wordpress-blog/</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-310822">
+<div class="social-comment-inner social-clearfix" id="comment-310822">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/98722305d28a4df0558d25f6e038fab4?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/98722305d28a4df0558d25f6e038fab4?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://dj-techwork.net" rel="external nofollow ugc" class="url">djtechwork</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-310822" class="social-posted-when" target="_blank">October 20, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>A very complete tips. The citation makes it greater..<br>
+Thanks. It’s very useful for beginner like me</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-315028">
+<div class="social-comment-inner social-clearfix" id="comment-315028">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/9d92f0acf2342edae9887c54ca7de0b1?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/9d92f0acf2342edae9887c54ca7de0b1?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">deepak</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-315028" class="social-posted-when" target="_blank">November 4, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>gr8 one 🙂</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-340103">
+<div class="social-comment-inner social-clearfix" id="comment-340103">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/ee720bb51364882db2a0707d4470e518?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/ee720bb51364882db2a0707d4470e518?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Dre</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-340103" class="social-posted-when" target="_blank">January 10, 2012</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>great list … thanks a bunch for taking the time to write it down.. saves months.. years of bumping into issues for a programmer.. </p>
+<p>keep it up!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-362618">
+<div class="social-comment-inner social-clearfix" id="comment-362618">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/e8f1b679872435d5dd0d09d85f204395?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/e8f1b679872435d5dd0d09d85f204395?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Peter Smith</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-362618" class="social-posted-when" target="_blank">March 9, 2012</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>A lot of these tips result in an insignificant increase in performance: 1, 2, and 4 are prime examples (not sure about 3; 5 is actually a good tip). In fact, tip 1 isn’t even always true – sometimes the opposite holds.</p>
+<p>You might say that any increase is better than nothing, but I’d say it’s just distracting away from more important performance aspects.</p>
+<p>Trim this list down to 10, and you’ve got a good list.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-519066">
+<div class="social-comment-inner social-clearfix" id="comment-519066">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/6483c2f0fcf64b578c55ca0df7e01096?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/6483c2f0fcf64b578c55ca0df7e01096?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://js-bits.blogspot.com" rel="external nofollow ugc" class="url">Juan Mendes</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited#comment-519066" class="social-posted-when" target="_blank">December 6, 2012</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>You should change the title of the post to “50 premature optimization techniques”. Joking aside, It’s fine to mention these, but you should make it clear that most of these techniques don’t yield real measurable improvements in code (unless the code is crafted for one of these rules).</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+				</ol>
+							</div>
+		</div>
+			</div>
+	
+	</div>
+				
+		
+</div>
+
+
+<div id="sidebar">
+<ul>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+
+			<ul>
+				<li class="page_item page-item-8 page_item_has_children"><a href="https://hm2k.org/articles">Articles</a>
+<ul class="children">
+	<li class="page_item page-item-74"><a href="https://hm2k.org/articles/pagerank">Google PageRank Script</a></li>
+	<li class="page_item page-item-9"><a href="https://hm2k.org/articles/regex">Guide to regular expressions</a></li>
+	<li class="page_item page-item-99"><a href="https://hm2k.org/articles/how-to-ask-a-question">How to ask a question</a></li>
+	<li class="page_item page-item-131"><a href="https://hm2k.org/articles/morals-of-downloading">Morals of Downloading</a></li>
+	<li class="page_item page-item-39"><a href="https://hm2k.org/articles/remove-spyware">Remove Spyware</a></li>
+	<li class="page_item page-item-104"><a href="https://hm2k.org/articles/seo-faq">SEO FAQ</a></li>
+	<li class="page_item page-item-10"><a href="https://hm2k.org/articles/seo-tips">SEO Tips</a></li>
+	<li class="page_item page-item-50"><a href="https://hm2k.org/articles/software">Software</a></li>
+	<li class="page_item page-item-5"><a href="https://hm2k.org/articles/startkeylogger">startkeylogger</a></li>
+	<li class="page_item page-item-106"><a href="https://hm2k.org/articles/useful-linux-commands">Useful Linux Commands</a></li>
+	<li class="page_item page-item-111"><a href="https://hm2k.org/articles/ways-to-waste-time-online">Ways to waste time online</a></li>
+	<li class="page_item page-item-40"><a href="https://hm2k.org/articles/yes-www">www. is NOT deprecated</a></li>
+</ul>
+</li>
+<li class="page_item page-item-13"><a href="https://hm2k.org/contact">Contact</a></li>
+			</ul>
+
+			</li>
+<li id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+
+			<ul>
+					<li class="cat-item cat-item-44"><a href="https://hm2k.org/posts/category/business">Business</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://hm2k.org/posts/category/dev">Development</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://hm2k.org/posts/category/general">General</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://hm2k.org/posts/category/hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://hm2k.org/posts/category/internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-285"><a href="https://hm2k.org/posts/category/security-2">Security</a>
+</li>
+	<li class="cat-item cat-item-260"><a href="https://hm2k.org/posts/category/software">Software</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://hm2k.org/posts/category/sysadmin">Sysadmin</a>
+</li>
+			</ul>
+
+			</li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+
+			<ul>
+					<li><a href="https://hm2k.org/posts/2012/05">May 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2012/03">March 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2011/11">November 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/10">October 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/09">September 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/08">August 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/07">July 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/06">June 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/05">May 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/04">April 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/03">March 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/02">February 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2010/12">December 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/11">November 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/06">June 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/05">May 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/04">April 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/02">February 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2009/12">December 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/11">November 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/10">October 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/09">September 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/08">August 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/07">July 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/06">June 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/04">April 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/02">February 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/01">January 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2008/12">December 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/11">November 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/09">September 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/07">July 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/06">June 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/05">May 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/04">April 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/03">March 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/02">February 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/01">January 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2007/12">December 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/11">November 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/10">October 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/08">August 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/07">July 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/06">June 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/05">May 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/04">April 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/03">March 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/02">February 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/01">January 2007</a></li>
+			</ul>
+
+			</li>
+<li id="text-5" class="widget widget_text"><h2 class="widgettitle">About</h2>
+			<div class="textwidget"><p>Welcome to the HM2K. Here you’ll find our experiments and findings as part of our on going Internet engineering.</p>
+</div>
+		</li>
+<li id="linkcat-16" class="widget widget_links"><h2 class="widgettitle">Projects</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://deaduseful.com/">Domain Name Whois</a></li>
+<li><a href="https://eggtcl.github.io/">Eggdrop TCL</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-28" class="widget widget_links"><h2 class="widgettitle">Network</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://phurix.co.uk/">Phurix Web Hosting</a></li>
+<li><a href="https://suzuki4u.co.uk/" title="The only UK based Suzuki Forums">Suzuki Community</a></li>
+
+	</ul>
+</li>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>		
+Copyright © 2002-2020 HM2K.
+</p>
+</div>
+
+</div>
+
+<link rel="stylesheet" id="yarppRelatedCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.5.1" type="text/css" media="all">
+<script type="text/javascript" id="social_js-js-extra">
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hm2k.org/wp-content/plugins/social/assets/social.js?ver=2.11" id="social_js-js"></script>
+<script async="async" type="text/javascript" src="https://hm2k.org/wp-content/plugins/akismet/_inc/form.js?ver=4.1.6" id="akismet-form-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-202036.js" async="async" defer></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.9',blog:'181873647',post:'178',tz:'0',srv:'hm2k.org'} ]);
+	_stq.push([ 'clickTrackerInit', '181873647', '178' ]);
+</script>
+
+</body>
+</html>

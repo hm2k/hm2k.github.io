@@ -1,0 +1,761 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 
+	<title>HM2K » Configuring a FreeBSD IRC Shell Server</title>
+
+	<link rel="stylesheet" href="https://hm2k.org/wp-content/themes/hm2k/style.css" type="text/css" media="screen,print">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://hm2k.org/feed">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://hm2k.org/feed/atom">
+	
+	
+	<style type="text/css" media="screen">
+			</style>
+	
+		<link rel="archives" title="May 2012" href="https://hm2k.org/posts/2012/05">
+	<link rel="archives" title="March 2012" href="https://hm2k.org/posts/2012/03">
+	<link rel="archives" title="November 2011" href="https://hm2k.org/posts/2011/11">
+	<link rel="archives" title="October 2011" href="https://hm2k.org/posts/2011/10">
+	<link rel="archives" title="September 2011" href="https://hm2k.org/posts/2011/09">
+	<link rel="archives" title="August 2011" href="https://hm2k.org/posts/2011/08">
+	<link rel="archives" title="July 2011" href="https://hm2k.org/posts/2011/07">
+	<link rel="archives" title="June 2011" href="https://hm2k.org/posts/2011/06">
+	<link rel="archives" title="May 2011" href="https://hm2k.org/posts/2011/05">
+	<link rel="archives" title="April 2011" href="https://hm2k.org/posts/2011/04">
+	<link rel="archives" title="March 2011" href="https://hm2k.org/posts/2011/03">
+	<link rel="archives" title="February 2011" href="https://hm2k.org/posts/2011/02">
+	<link rel="archives" title="December 2010" href="https://hm2k.org/posts/2010/12">
+	<link rel="archives" title="November 2010" href="https://hm2k.org/posts/2010/11">
+	<link rel="archives" title="June 2010" href="https://hm2k.org/posts/2010/06">
+	<link rel="archives" title="May 2010" href="https://hm2k.org/posts/2010/05">
+	<link rel="archives" title="April 2010" href="https://hm2k.org/posts/2010/04">
+	<link rel="archives" title="February 2010" href="https://hm2k.org/posts/2010/02">
+	<link rel="archives" title="December 2009" href="https://hm2k.org/posts/2009/12">
+	<link rel="archives" title="November 2009" href="https://hm2k.org/posts/2009/11">
+	<link rel="archives" title="October 2009" href="https://hm2k.org/posts/2009/10">
+	<link rel="archives" title="September 2009" href="https://hm2k.org/posts/2009/09">
+	<link rel="archives" title="August 2009" href="https://hm2k.org/posts/2009/08">
+	<link rel="archives" title="July 2009" href="https://hm2k.org/posts/2009/07">
+	<link rel="archives" title="June 2009" href="https://hm2k.org/posts/2009/06">
+	<link rel="archives" title="April 2009" href="https://hm2k.org/posts/2009/04">
+	<link rel="archives" title="February 2009" href="https://hm2k.org/posts/2009/02">
+	<link rel="archives" title="January 2009" href="https://hm2k.org/posts/2009/01">
+	<link rel="archives" title="December 2008" href="https://hm2k.org/posts/2008/12">
+	<link rel="archives" title="November 2008" href="https://hm2k.org/posts/2008/11">
+	<link rel="archives" title="September 2008" href="https://hm2k.org/posts/2008/09">
+	<link rel="archives" title="July 2008" href="https://hm2k.org/posts/2008/07">
+	<link rel="archives" title="June 2008" href="https://hm2k.org/posts/2008/06">
+	<link rel="archives" title="May 2008" href="https://hm2k.org/posts/2008/05">
+	<link rel="archives" title="April 2008" href="https://hm2k.org/posts/2008/04">
+	<link rel="archives" title="March 2008" href="https://hm2k.org/posts/2008/03">
+	<link rel="archives" title="February 2008" href="https://hm2k.org/posts/2008/02">
+	<link rel="archives" title="January 2008" href="https://hm2k.org/posts/2008/01">
+	<link rel="archives" title="December 2007" href="https://hm2k.org/posts/2007/12">
+	<link rel="archives" title="November 2007" href="https://hm2k.org/posts/2007/11">
+	<link rel="archives" title="October 2007" href="https://hm2k.org/posts/2007/10">
+	<link rel="archives" title="August 2007" href="https://hm2k.org/posts/2007/08">
+	<link rel="archives" title="July 2007" href="https://hm2k.org/posts/2007/07">
+	<link rel="archives" title="June 2007" href="https://hm2k.org/posts/2007/06">
+	<link rel="archives" title="May 2007" href="https://hm2k.org/posts/2007/05">
+	<link rel="archives" title="April 2007" href="https://hm2k.org/posts/2007/04">
+	<link rel="archives" title="March 2007" href="https://hm2k.org/posts/2007/03">
+	<link rel="archives" title="February 2007" href="https://hm2k.org/posts/2007/02">
+	<link rel="archives" title="January 2007" href="https://hm2k.org/posts/2007/01">
+	<link rel="dns-prefetch" href="//platform-api.sharethis.com">
+
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="HM2K » Configuring a FreeBSD IRC Shell Server Comments Feed" href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/feed">
+<link rel="stylesheet" id="yarppWidgetCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.5.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="social_comments-css" href="https://hm2k.org/wp-content/plugins/social/assets/comments.css?ver=2.11" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/8.9/css/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/c/5.5.1/wp-includes/js/jquery/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#product=ga&amp;property=5f4131776f37880012707ba8" id="googleanalytics-platform-sharethis-js"></script>
+<link rel="alternate" type="application/json" href="https://hm2k.org/wp-json/wp/v2/posts/127">
+<link rel="prev" title="Developing a Facebook Application on PHP4" href="https://hm2k.org/posts/developing-a-facebook-application-on-php4">
+<link rel="next" title="Why I registered mIRC" href="https://hm2k.org/posts/regmirc">
+
+<link rel="canonical" href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server">
+
+<link rel="alternate" type="application/json+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fconfiguring-a-freebsd-irc-shell-server">
+<link rel="alternate" type="text/xml+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fconfiguring-a-freebsd-irc-shell-server&amp;format=xml">
+<style type="text/css">img#wpstats{display:none}</style></head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+	<div style="float:right; margin-right: 5px;">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-8789111894509366";
+/* 468x60, created 4/17/08 */
+google_ad_slot = "9389236395";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	<p><small><b>Have I helped you?</b> Please consider my <a href="http://tinyurl.com/hm2kwishlist">wishlist</a> or <a href="http://tinyurl.com/hm2kpaypal">donating</a>. Thanks!</small></p>
+<p>Don't forget to <a href="http://twitter.com/hm2k">follow me on twitter</a>.</p>
+	</div>
+	<h1><a href="https://hm2k.org">HM2K</a></h1>
+</div>
+
+
+<div id="content">
+
+			
+		<div class="post" id="post-127">
+	
+			<h2 class="posttitle"><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Permanent link to Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server</a></h2>
+			
+			<p class="postmeta"> 
+			August 22, 2007 at 9:46 pm 
+			· Filed under <a href="https://hm2k.org/posts/category/internet" rel="category tag">Internet</a>						</p>
+		
+			<div class="postentry">
+			<p>This is a brief guide created to help configure a secure FreeBSD as an IRC shell server.</p>
+<p>In this case I will be running FreeBSD 6.0, with bash shell, SSHd, named (bind), httpd (Apache2+PHP4), FTPd (pure-ftpd).<span id="more-127"></span></p>
+<p>Note: In many cases, if you don’t wish to review the config when adding to it you can do: echo ‘&lt;string&gt;’ &gt;&gt; &lt;file&gt; (ie: echo ‘accounting_enable=”YES”‘ &gt;&gt; /etc/rc.conf)</p>
+<p><strong>sshd</strong></p>
+<ul>
+<li>edit /etc/ssh/sshd_config</li>
+<li>Add line “Port 22” – This is default, BUT change to another port if you want to be even more secure.</li>
+<li>Add line “Protocol 2” – We don’t want protocol 1, just 2.</li>
+<li>Add line “LoginGraceTime 1m” – If you don’t login within 1 min, it will timeout.</li>
+<li>Add line “PermitRootLogin no” – You should not allow direct root login via ssh, use su.</li>
+<li>Add line “MaxAuthTries 3” – If you get your login incorrect 3 times, you’re doing something wrong anyway.</li>
+<li>Add line “X11Forwarding no” – You don’t run Xwindows on a server muppet!</li>
+<li>Add line “MaxStartups 15:30:60” – This means, after 15 concurrent unauthed connections, 30% of connections will be dropped, until it reaches a max of 60, then it’s full.</li>
+</ul>
+<p><strong>sysctl</strong></p>
+<ul>
+<li>You can read each current setting by doing sysctl &lt;setting&gt; (ie: sysctl kern.securelevel)</li>
+<li>If you are unsure about using a setting you can use “sysctl -w &lt;setting&gt;” to temporary set, until you next reboot.</li>
+<li>edit /etc/sysctl.conf</li>
+<li>Add line “security.bsd.see_other_uids=0” – We don’t want users to see each other’s processes.</li>
+<li>Add line “kern.securelevel=1” – By default it is -1, you don’t need this unless you’re running Xwindows, run at least 0.</li>
+<li>Add line “net.inet.tcp.blackhole=2” – This will drop ALL tcp packets that are received on a CLOSED port and not reply.</li>
+<li>Add line “net.inet.udp.blackhole=1” – This will drop ALL udp packets that are received on a CLOSED port and not reply.</li>
+<li>Add line “kern.ipc.somaxconn=1024” – Default is 128, this means we can have more concurrent connections. If like you me you have plenty of bandwidth, this is best, otherwise if you get attacked, you’ll reach 128 very quickly.</li>
+<li>Add line “net.inet.icmp.icmplim=50” – Default is 200, you shouldn’t need this many, set it to 50 to reduce the amount of ICMPs sent back per second.</li>
+<li>Add line “net.inet.ip.rtexpire=2” – Default is 3600, See the <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/securing-freebsd.html#AEN18452">FreeBSD handbook: Denial Of Service Attacks</a>.</li>
+<li>Add line “net.inet.ip.rtminexpire=2” – Default is 10, See the <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/securing-freebsd.html#AEN18452">FreeBSD handbook: Denial Of Service Attacks</a>.</li>
+<li>Add line “net.inet.tcp.always_keepalive=1” – This will help discover dead connections and clears them.</li>
+<li>Add line “net.inet.ip.random_id=1” – This is optional, but I like the idea. It gives you random PIDs instead of sequential.</li>
+</ul>
+<p>This is my “/etc/sysctl.conf”:</p>
+<blockquote><p>security.bsd.see_other_uids=0<br>
+kern.securelevel=1<br>
+net.inet.tcp.blackhole=2<br>
+net.inet.udp.blackhole=1<br>
+kern.ipc.somaxconn=1024<br>
+net.inet.icmp.icmplim=50<br>
+net.inet.ip.rtexpire=2<br>
+net.inet.ip.rtminexpire=2<br>
+net.inet.tcp.always_keepalive=1<br>
+net.inet.ip.random_id=1</p></blockquote>
+<p><strong>rc.conf</strong></p>
+<ul>
+<li> edit /etc/rc.conf</li>
+<li>Add line ‘portmap_enable=”NO”‘ – You only need this if you’re using NFS, which we’re not.</li>
+<li>Add line ‘sendmail_enable=”NO”‘ – This will tell sendmail to only listen on the localhost, it’s not a good idea to leave a mail server open to spam on a shell server.</li>
+<li>Add line ‘nfs_server_enable=”NO”‘ – As above, we don’t need NFS.</li>
+<li>Add line ‘nfs_client_enable=”NO”‘ – Again, no NFS, not even a client.</li>
+<li>Add line ‘accounting_enable=”YES”‘ – This enables <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/security-accounting.html">process accounting</a>. (You need to do touch /var/account/acct &amp;&amp; accton /var/account/acct).</li>
+<li>Add line ‘clear_tmp_enable=”YES”‘ – This will clear the “/tmp” dir at boot time.</li>
+<li>Add line ‘syslogd_flags=”-ss”‘ – This stops syslogd from broadcasting on port 514.</li>
+<li>Add line ‘enable_quotas=”YES”‘ – Assuming you’re running a shell server, you want quotas enabled.</li>
+<li>Add line ‘check_quotas=”YES”‘ –  This will help keep your users within their quotas.</li>
+<li>Add line ‘ntpdate_enable=”YES”‘ – This will enable ntpdate, which will keep your date/time up-to-date.</li>
+<li>Add line ‘update_motd=”NO”‘ – This will ensure that the FreeBSD details aren’t added to the /etc/motd on each reboot. We don’t want to broadcast this information.</li>
+<li>Check for ‘inetd_enable’ – Set it to NO, or add inetd_enable=”NO”, if it’s not there.</li>
+<li>Check for ‘named_enable’ – Okay, so running named will increase overheads, but if this is a shell box it probably makes sense to run your own dns server as IRC relies a lot on resolving hosts.</li>
+<li>Check for ‘log_in_vain’ – You may have set this based on what you read else where, but I recommend having this as “NO”, because it logs events on non-open ports, which could cause a ddos.</li>
+</ul>
+<p>The latter half of my “/etc/rc.conf” looks like this:</p>
+<blockquote><p>inetd_enable=”NO”<br>
+linux_enable=”YES”<br>
+sshd_enable=”YES”</p>
+<p>portmap_enable=”NO”<br>
+sendmail_enable=”NO”<br>
+nfs_server_enable=”NO”<br>
+nfs_client_enable=”NO”<br>
+accounting_enable=”YES”<br>
+clear_tmp_enable=”YES”<br>
+syslogd_flags=”-ss”<br>
+enable_quotas=”YES”<br>
+check_quotas=”YES”<br>
+ntpdate_enable=”YES”<br>
+update_motd=”NO”<br>
+named_enable=”YES”</p></blockquote>
+<p><strong>Firewall</strong></p>
+<p>For a shell server, a firewall may not be required, but for many others it may be required.</p>
+<ul>
+<li> edit /etc/firewall.rules – for a shell server, you can do the following:
+<ul>
+<li>You need to allow new connections for services on the following ports: 21 (ftpd), 22 (sshd), 53 (dns), 80 (httpd).</li>
+<li>If you are running any other core services, you will need to open the ports for those too. Remember, the first 1024 ports are reserved for root services.</li>
+</ul>
+<ul>
+<li>If you run an IRC shell server, you should open a range (ie: 2000-4000) for your users services. (such as eggdrops and psybncs).</li>
+<li>No other new connections to other ports should be allowed.</li>
+<li>All other traffic is okay.</li>
+</ul>
+</li>
+<li>Don’t forget to “chmod 600 /etc/firewall.rules”</li>
+<li>Add line ‘firewall_enable=”YES”‘ – We want a firewall enabled.</li>
+<li>Add line ‘firewall_logging=”YES”‘ – Logging the firewall can be useful.</li>
+<li>Add line ‘firewall_script=”/etc/firewall.rules”‘ – It needs to know where to find the rules. (don’t forget to touch /etc/firewall.rules)</li>
+</ul>
+<p><strong>Date and Time</strong></p>
+<p>You must ensure your system’s date/time is correct, otherwise SSH may fail and logs will be incorrect.</p>
+<ul>
+<li> As above, ensure you have ‘ntpdate_enable=”YES”‘ in your “rc.conf”.</li>
+<li>For first time use: “touch /etc/ntp.conf &amp;&amp; echo /etc/ntp.conf &gt;&gt; server uk.pool.ntp.org prefer &amp;&amp; echo /etc/ntp.conf &gt;&gt; driftfile /var/db/ntp.drift”</li>
+<li>Run: ntpdate uk.pool.ntp.org</li>
+</ul>
+<p><strong>Login.conf</strong></p>
+<p>Using <a href="http://www.freebsd.org/cgi/man.cgi?query=login.conf&amp;sektion=5">login.conf</a> you can create custom classes for your users giving them all sorts of limits and restrictions.</p>
+<ul>
+<li>edit /etc/login.conf</li>
+<li>If you change the “passwd_format” in the Default class to read “:passwd_format=blf:\”, this will give you blowfish password hashes, for better security, but you need to rebuild your login database by doing: “cap_mkdb /etc/login.conf”, and update all passwords by doing “passwd &lt;user&gt;” as root (check “/etc/master.passwd” all passwords will start with $2 if done correctly), don’t forget to edit /etc/auth.conf to “crypt_default=blf” also. This step isn’t required, but recommended.</li>
+<li>There are lots more options, you need to read the handbook for the “<a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/users-limiting.html">login.conf</a>” file.</li>
+<li>Run “cap_mkdb /etc/login.conf” when you’re done to update the database.</li>
+</ul>
+<p><strong>pure-ftpd</strong></p>
+<p>Instructions are as follows:</p>
+<ul>
+<li>cd /usr/ports/ftp/pure-ftpd &amp;&amp; make install</li>
+<li>cp /usr/local/etc/pure-ftpd.conf.sample  /usr/local/etc/pure-ftpd.conf</li>
+<li>edit  /usr/local/etc/pure-ftpd.conf (if required)
+<ul>
+<li>Change “NoAnonymous                 no” to yes</li>
+</ul>
+</li>
+<li>/usr/local/sbin/pure-config.pl /usr/local/etc/pure-ftpd.conf</li>
+<li>echo ‘<font size="-1">pureftpd_enable=”YES”</font>‘ &gt;&gt; /etc/rc.conf</li>
+</ul>
+<p><strong>Apache 2</strong></p>
+<ul>
+<li>edit /usr/local/etc/apache2/httpd.conf</li>
+<li>change the “ServerAdmin” line with your email address.</li>
+<li>change the “ServerTokens” line from “Full” to “Prod”, this means only “Apache” will be displayed.</li>
+<li>echo ‘<font size="-1">httpd_enable=”YES”</font>‘ &gt;&gt; /etc/rc.conf</li>
+</ul>
+<p><strong>oidentd</strong></p>
+<ul>
+<li>echo <font size="-1">‘oidentd_enable=”YES”</font>‘ &gt;&gt; /etc/rc.conf</li>
+<li> edit /usr/local/etc/oidentd.conf</li>
+<li>Ensure the defaults deny everything, and that root has a different reply, ie:</li>
+</ul>
+<blockquote><p>default {<br>
+default {<br>
+deny spoof<br>
+deny spoof_all<br>
+deny spoof_privport<br>
+deny random<br>
+deny random_numeric<br>
+deny numeric<br>
+deny hide<br>
+}<br>
+}</p>
+<p>user root {<br>
+default {<br>
+force reply “UNKNOWN”<br>
+}<br>
+}</p></blockquote>
+<p>Note: You can add a user, if you want to allow spoof for certain users, and allow that.</p>
+<p><strong>Files and Permissions</strong></p>
+<ul>
+<li>“find / -perm -2000 -ls &amp;&amp; find / -perm -4000 -ls” – This lists binaries that everyone can currently access.</li>
+<li>Use “chmod a-s &lt;file&gt;” to remove access or “chmod o-rwx &lt;file&gt;” to allow just for wheel users.</li>
+<li>“chmod 640 /etc/crontab” – This will allow only root and wheel users to see it. Users don’t need to know what processes are started by cron.</li>
+<li>“chmod 600 /etc/rc.conf” – Users don’t need to access this.</li>
+<li>“chmod 600 /etc/sysctl.conf” – Users don’t need to access this.</li>
+<li>“chmod 0750 /root” – Stops non-wheel users from viewing root files.</li>
+<li>“chmod 640 /var/db/locate.database” – You don’t want all users to see all the files on your system.</li>
+<li>edit /etc/motd – Change this to say what you like.</li>
+<li>“touch /etc/COPYRIGHT” – This will remove the copyright info.</li>
+</ul>
+<p><strong>ToDo</strong></p>
+<ul>
+<li>Provide an in-depth example of a firewall script</li>
+<li>Provide details about working with Quotas</li>
+<li>Provide better usage of login.conf</li>
+</ul>
+<p><strong>Additional Security</strong></p>
+<ul>
+<li>Try <a href="http://www.onlamp.com/pub/a/bsd/2003/03/20/FreeBSD_Basics.html">checking system integrity with tripwire</a>.</li>
+<li>Keep things up to date with <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html">cvsup</a>.</li>
+</ul>
+<p><strong>Resources</strong></p>
+<ul>
+<li><a href="http://www.freebsd.org/security/">FeeBSD Security Information</a></li>
+<li><a href="http://www.defcon1.org/html/Security/Secure-Guide/secure-guide.html">Defcon1 Security Guide</a></li>
+<li><a href="http://www.dal.net/admin/vote/seceval.php3">A basic guide to securing FreeBSD (DALnet)</a></li>
+<li><a href="http://www.bsdguides.org/guides/freebsd/security/harden.php">Hardening FreeBSD (bsdguides.org)</a></li>
+<li><a href="http://silverwraith.com/papers/freebsd-ddos.php">Protecting yourself with FreeBSD</a></li>
+<li><a href="http://www.freebsdblog.org/archives/2005/06/a_sample_of_etc_1.html">sysctl.conf Sample (Freebsdblog.org)</a></li>
+<li><a href="http://www.onlamp.com/pub/a/bsd/2002/08/08/FreeBSD_Basics.html">Securing FreeBSD (ONlamp.com)</a></li>
+<li><a href="http://www.windowsecurity.com/whitepapers/FreeBSD_Security_HowTo.html">FreeBSD Security HowTo (windowssecurity.com)</a></li>
+<li><a href="http://www.ethereal.net/~tristan/freebsd/">tris’ FreeBSD setup info</a></li>
+<li><a href="http://www.cpanel.net/docs/seminar/freebsd.pdf">cPanel FreeBSD Seminar</a></li>
+</ul>
+<p><strong>Final notes</strong></p>
+<p>I’ve written this as more of a reference, i’ve more than likely missed a few things, so feel free to add your own comments.</p>
+<div class="yarpp-related">
+<p>Related posts:</p><ol>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just “yum install subversion”. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I’ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+</ol>
+</div>
+						</div>
+
+			<p class="postfeedback">
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Permanent link to Configuring a FreeBSD IRC Shell Server" class="permalink">Permalink</a>
+			</p>
+			
+		</div>
+		
+		<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="https://hm2k.org/index.php?social_controller=auth&amp;social_action=reload_form&amp;redirect_to=https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server&amp;post_id=127">
+			Logging In...		</div>
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#respond" style="display:none;">cancel</a></small></h3><form action="https://hm2k.org/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=twitter&amp;post_id=127" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=facebook&amp;post_id=127" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p><p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value=""></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value=""><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value=""></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post It"> <input type="hidden" name="comment_post_ID" value="127" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0"><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value=""></p><div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="92ffe55530"></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="52"></p></div></form>	</div>
+		</div>
+	<div id="social-tabs-comments">
+				<ul class="social-nav social-clearfix">
+			<li class="social-all social-tab-main social-current-tab"><a href="#" rel="social-all"><span>10 Replies</span></a></li>
+			<li class="social-wordpress"><a href="#" rel="wordpress"><span>0 Comments</span></a></li>
+			<li class="social-twitter"><a href="#" rel="social-twitter"><span>0 Tweets</span></a></li>
+			<li class="social-facebook"><a href="#" rel="social-facebook"><span>0 Facebook</span></a></li>
+			<li class="social-pingback"><a href="#" rel="social-pingback"><span>0 Pingbacks</span></a></li>
+		</ul>
+
+		
+		<div id="social-comments-tab-all" class="social-tabs-panel social-tabs-first-panel">
+			<div id="comments" class="social-comments">
+				<div class="social-last-reply-when">Last reply was December 8, 2010</div><div class="cf-clearfix"></div>				<ol class="social-commentlist">
+				<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::start_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::start_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>18</b><br>
+<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::end_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::end_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>42</b><br>
+<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-13579">
+<div class="social-comment-inner social-clearfix" id="comment-13579">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://ww.hm2k.com/" rel="external nofollow ugc" class="url">hm2k</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-13579" class="social-posted-when" target="_blank">September 3, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I think pretty much in freebsd 6.0+</p>
+<p>kern.ps_showallprocs=0<br>
+kern.ps_argsopen=0</p>
+<p>Are no longer required, and a replaced by…</p>
+<p>security.bsd.see_other_uids=0</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-18262">
+<div class="social-comment-inner social-clearfix" id="comment-18262">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/4f64c9f81bb0d4ee969aaf7b4a5a6f40?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">rdns</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-18262" class="social-posted-when" target="_blank">October 16, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>hi!</p>
+<p>this is the most useful guide for shell admin<br>
+i’ll bookmark this<br>
+thanks a lot!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-36916">
+<div class="social-comment-inner social-clearfix" id="comment-36916">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/161e3cc604fc3006911e0119f7d9785a?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/161e3cc604fc3006911e0119f7d9785a?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">ruslie</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-36916" class="social-posted-when" target="_blank">January 19, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>hi my psybnc ident has ~ string for example ~test@xx.xxx.xxx.xx<br>
+how to fix it?<br>
+thanks</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-80023">
+<div class="social-comment-inner social-clearfix" id="comment-80023">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/38e2d4ecb2bc2d56eca167e3a59e60aa?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/38e2d4ecb2bc2d56eca167e3a59e60aa?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">krasko</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-80023" class="social-posted-when" target="_blank">July 3, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>realy nice</p>
+<p>thank you!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-94926">
+<div class="social-comment-inner social-clearfix" id="comment-94926">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c3e7d8adb3364ebd9c7649c7d7c01821?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c3e7d8adb3364ebd9c7649c7d7c01821?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">deadpan</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-94926" class="social-posted-when" target="_blank">August 28, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>great guide so far, any info on how to setup some sort of signup form that would allow a user to pick the user name and whatnot and have it added to the system?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-104221">
+<div class="social-comment-inner social-clearfix" id="comment-104221">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/ee65fb57087042e13235c2c038683f19?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/ee65fb57087042e13235c2c038683f19?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Taimur</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-104221" class="social-posted-when" target="_blank">September 28, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>A perfect guide for a shell co. administrator.</p>
+<p>Thanks!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-111335">
+<div class="social-comment-inner social-clearfix" id="comment-111335">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/8fd4a9468ed4acb612e8071cd0eed681?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/8fd4a9468ed4acb612e8071cd0eed681?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.portmap.org" rel="external nofollow ugc" class="url">prez</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-111335" class="social-posted-when" target="_blank">October 19, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hey Ruslie,</p>
+<p>You’ll need to install oidentd or similar on the system in which your psyBNC runs on. (Identd Daemon!)</p>
+<p>(prez@DALnet / prez@EFnet / prez@Rizon)<br>
+                  email: <a href="mailto:prez@dal.net">prez@dal.net</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-202358">
+<div class="social-comment-inner social-clearfix" id="comment-202358">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/161e3cc604fc3006911e0119f7d9785a?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/161e3cc604fc3006911e0119f7d9785a?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Ruslie</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-202358" class="social-posted-when" target="_blank">March 26, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>waw it has been 2 years since i asked that question 🙂</p>
+<p>and thank you prez 🙂</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-210472">
+<div class="social-comment-inner social-clearfix" id="comment-210472">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/8fd4a9468ed4acb612e8071cd0eed681?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/8fd4a9468ed4acb612e8071cd0eed681?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.portmap.org" rel="external nofollow ugc" class="url">prez</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-210472" class="social-posted-when" target="_blank">June 14, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>No problem Ruslie. I figure, better late than never. 😉 Haha.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-257037">
+<div class="social-comment-inner social-clearfix" id="comment-257037">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/031aa5942f7d295e72874626a18c5655?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/031aa5942f7d295e72874626a18c5655?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">t1m1976</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comment-257037" class="social-posted-when" target="_blank">December 8, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I actually can’t seem to get my FreeBSD 8.1 auth to work with IRC either. I’ve tried using the built-in auth, oidentd and pidentd. I’ve modifed the configuration files for both oidentd and pidentd and have tried using .oidentd.conf in a user’s home directory too. I have verified that the IRC servers are sending the request and that my host is answering those requests (/var/log/security and the verbose logging through ipfw). I have disabled the router firewall completely, but have not tried router DMZ mode. Still, I can not get any IRC servers to say anything other than * No Ident Response.</p>
+<p>Here’s the funny thing though:</p>
+<p>“auth” always returns user as root. I can not figure out why and have been wondering for a few days how to change that.</p>
+<p>“pidentd” always returns the user the daemon is running as (ie: the one configured in /usr/local/etc/identd.conf). If I omit the daemon server user, it will default to nobody. The latest version of pidentd also gives me a strange response, where it omits a space before the username so it smacks the username right up against the : before it. I’m not sure if that matters or not.</p>
+<p>“oidentd” didn’t seem to work for me either, but most people seem to be using this. I don’t really want to use that if I can get the built-in “auth” to return something other than root, though.</p>
+<p>Anyways, I know this comment section is not specifically for ident issues but I just thought I would mention it since I saw someone else comment about that too.</p>
+<p>Thanks for putting this page up; the suggestions are very useful.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+				</ol>
+							</div>
+		</div>
+			</div>
+	
+	</div>
+				
+		
+</div>
+
+
+<div id="sidebar">
+<ul>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+
+			<ul>
+				<li class="page_item page-item-8 page_item_has_children"><a href="https://hm2k.org/articles">Articles</a>
+<ul class="children">
+	<li class="page_item page-item-74"><a href="https://hm2k.org/articles/pagerank">Google PageRank Script</a></li>
+	<li class="page_item page-item-9"><a href="https://hm2k.org/articles/regex">Guide to regular expressions</a></li>
+	<li class="page_item page-item-99"><a href="https://hm2k.org/articles/how-to-ask-a-question">How to ask a question</a></li>
+	<li class="page_item page-item-131"><a href="https://hm2k.org/articles/morals-of-downloading">Morals of Downloading</a></li>
+	<li class="page_item page-item-39"><a href="https://hm2k.org/articles/remove-spyware">Remove Spyware</a></li>
+	<li class="page_item page-item-104"><a href="https://hm2k.org/articles/seo-faq">SEO FAQ</a></li>
+	<li class="page_item page-item-10"><a href="https://hm2k.org/articles/seo-tips">SEO Tips</a></li>
+	<li class="page_item page-item-50"><a href="https://hm2k.org/articles/software">Software</a></li>
+	<li class="page_item page-item-5"><a href="https://hm2k.org/articles/startkeylogger">startkeylogger</a></li>
+	<li class="page_item page-item-106"><a href="https://hm2k.org/articles/useful-linux-commands">Useful Linux Commands</a></li>
+	<li class="page_item page-item-111"><a href="https://hm2k.org/articles/ways-to-waste-time-online">Ways to waste time online</a></li>
+	<li class="page_item page-item-40"><a href="https://hm2k.org/articles/yes-www">www. is NOT deprecated</a></li>
+</ul>
+</li>
+<li class="page_item page-item-13"><a href="https://hm2k.org/contact">Contact</a></li>
+			</ul>
+
+			</li>
+<li id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+
+			<ul>
+					<li class="cat-item cat-item-44"><a href="https://hm2k.org/posts/category/business">Business</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://hm2k.org/posts/category/dev">Development</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://hm2k.org/posts/category/general">General</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://hm2k.org/posts/category/hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://hm2k.org/posts/category/internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-285"><a href="https://hm2k.org/posts/category/security-2">Security</a>
+</li>
+	<li class="cat-item cat-item-260"><a href="https://hm2k.org/posts/category/software">Software</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://hm2k.org/posts/category/sysadmin">Sysadmin</a>
+</li>
+			</ul>
+
+			</li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+
+			<ul>
+					<li><a href="https://hm2k.org/posts/2012/05">May 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2012/03">March 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2011/11">November 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/10">October 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/09">September 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/08">August 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/07">July 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/06">June 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/05">May 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/04">April 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/03">March 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/02">February 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2010/12">December 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/11">November 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/06">June 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/05">May 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/04">April 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/02">February 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2009/12">December 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/11">November 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/10">October 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/09">September 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/08">August 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/07">July 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/06">June 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/04">April 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/02">February 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/01">January 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2008/12">December 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/11">November 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/09">September 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/07">July 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/06">June 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/05">May 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/04">April 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/03">March 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/02">February 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/01">January 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2007/12">December 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/11">November 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/10">October 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/08">August 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/07">July 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/06">June 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/05">May 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/04">April 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/03">March 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/02">February 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/01">January 2007</a></li>
+			</ul>
+
+			</li>
+<li id="text-5" class="widget widget_text"><h2 class="widgettitle">About</h2>
+			<div class="textwidget"><p>Welcome to the HM2K. Here you’ll find our experiments and findings as part of our on going Internet engineering.</p>
+</div>
+		</li>
+<li id="linkcat-16" class="widget widget_links"><h2 class="widgettitle">Projects</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://deaduseful.com/">Domain Name Whois</a></li>
+<li><a href="https://eggtcl.github.io/">Eggdrop TCL</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-28" class="widget widget_links"><h2 class="widgettitle">Network</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://phurix.co.uk/">Phurix Web Hosting</a></li>
+<li><a href="https://suzuki4u.co.uk/" title="The only UK based Suzuki Forums">Suzuki Community</a></li>
+
+	</ul>
+</li>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>		
+Copyright © 2002-2020 HM2K.
+</p>
+</div>
+
+</div>
+
+<link rel="stylesheet" id="yarppRelatedCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.5.1" type="text/css" media="all">
+<script type="text/javascript" id="social_js-js-extra">
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hm2k.org/wp-content/plugins/social/assets/social.js?ver=2.11" id="social_js-js"></script>
+<script async="async" type="text/javascript" src="https://hm2k.org/wp-content/plugins/akismet/_inc/form.js?ver=4.1.6" id="akismet-form-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-202036.js" async="async" defer></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.9',blog:'181873647',post:'127',tz:'0',srv:'hm2k.org'} ]);
+	_stq.push([ 'clickTrackerInit', '181873647', '127' ]);
+</script>
+
+</body>
+</html>

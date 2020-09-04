@@ -1,0 +1,599 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 
+	<title>HM2K » Creating subdomains from directories using mod_rewrite in Apache .htaccess</title>
+
+	<link rel="stylesheet" href="https://hm2k.org/wp-content/themes/hm2k/style.css" type="text/css" media="screen,print">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://hm2k.org/feed">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://hm2k.org/feed/atom">
+	
+	
+	<style type="text/css" media="screen">
+			</style>
+	
+		<link rel="archives" title="May 2012" href="https://hm2k.org/posts/2012/05">
+	<link rel="archives" title="March 2012" href="https://hm2k.org/posts/2012/03">
+	<link rel="archives" title="November 2011" href="https://hm2k.org/posts/2011/11">
+	<link rel="archives" title="October 2011" href="https://hm2k.org/posts/2011/10">
+	<link rel="archives" title="September 2011" href="https://hm2k.org/posts/2011/09">
+	<link rel="archives" title="August 2011" href="https://hm2k.org/posts/2011/08">
+	<link rel="archives" title="July 2011" href="https://hm2k.org/posts/2011/07">
+	<link rel="archives" title="June 2011" href="https://hm2k.org/posts/2011/06">
+	<link rel="archives" title="May 2011" href="https://hm2k.org/posts/2011/05">
+	<link rel="archives" title="April 2011" href="https://hm2k.org/posts/2011/04">
+	<link rel="archives" title="March 2011" href="https://hm2k.org/posts/2011/03">
+	<link rel="archives" title="February 2011" href="https://hm2k.org/posts/2011/02">
+	<link rel="archives" title="December 2010" href="https://hm2k.org/posts/2010/12">
+	<link rel="archives" title="November 2010" href="https://hm2k.org/posts/2010/11">
+	<link rel="archives" title="June 2010" href="https://hm2k.org/posts/2010/06">
+	<link rel="archives" title="May 2010" href="https://hm2k.org/posts/2010/05">
+	<link rel="archives" title="April 2010" href="https://hm2k.org/posts/2010/04">
+	<link rel="archives" title="February 2010" href="https://hm2k.org/posts/2010/02">
+	<link rel="archives" title="December 2009" href="https://hm2k.org/posts/2009/12">
+	<link rel="archives" title="November 2009" href="https://hm2k.org/posts/2009/11">
+	<link rel="archives" title="October 2009" href="https://hm2k.org/posts/2009/10">
+	<link rel="archives" title="September 2009" href="https://hm2k.org/posts/2009/09">
+	<link rel="archives" title="August 2009" href="https://hm2k.org/posts/2009/08">
+	<link rel="archives" title="July 2009" href="https://hm2k.org/posts/2009/07">
+	<link rel="archives" title="June 2009" href="https://hm2k.org/posts/2009/06">
+	<link rel="archives" title="April 2009" href="https://hm2k.org/posts/2009/04">
+	<link rel="archives" title="February 2009" href="https://hm2k.org/posts/2009/02">
+	<link rel="archives" title="January 2009" href="https://hm2k.org/posts/2009/01">
+	<link rel="archives" title="December 2008" href="https://hm2k.org/posts/2008/12">
+	<link rel="archives" title="November 2008" href="https://hm2k.org/posts/2008/11">
+	<link rel="archives" title="September 2008" href="https://hm2k.org/posts/2008/09">
+	<link rel="archives" title="July 2008" href="https://hm2k.org/posts/2008/07">
+	<link rel="archives" title="June 2008" href="https://hm2k.org/posts/2008/06">
+	<link rel="archives" title="May 2008" href="https://hm2k.org/posts/2008/05">
+	<link rel="archives" title="April 2008" href="https://hm2k.org/posts/2008/04">
+	<link rel="archives" title="March 2008" href="https://hm2k.org/posts/2008/03">
+	<link rel="archives" title="February 2008" href="https://hm2k.org/posts/2008/02">
+	<link rel="archives" title="January 2008" href="https://hm2k.org/posts/2008/01">
+	<link rel="archives" title="December 2007" href="https://hm2k.org/posts/2007/12">
+	<link rel="archives" title="November 2007" href="https://hm2k.org/posts/2007/11">
+	<link rel="archives" title="October 2007" href="https://hm2k.org/posts/2007/10">
+	<link rel="archives" title="August 2007" href="https://hm2k.org/posts/2007/08">
+	<link rel="archives" title="July 2007" href="https://hm2k.org/posts/2007/07">
+	<link rel="archives" title="June 2007" href="https://hm2k.org/posts/2007/06">
+	<link rel="archives" title="May 2007" href="https://hm2k.org/posts/2007/05">
+	<link rel="archives" title="April 2007" href="https://hm2k.org/posts/2007/04">
+	<link rel="archives" title="March 2007" href="https://hm2k.org/posts/2007/03">
+	<link rel="archives" title="February 2007" href="https://hm2k.org/posts/2007/02">
+	<link rel="archives" title="January 2007" href="https://hm2k.org/posts/2007/01">
+	<link rel="dns-prefetch" href="//platform-api.sharethis.com">
+
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="HM2K » Creating subdomains from directories using mod_rewrite in Apache .htaccess Comments Feed" href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess/feed">
+<link rel="stylesheet" id="yarppWidgetCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.5.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="social_comments-css" href="https://hm2k.org/wp-content/plugins/social/assets/comments.css?ver=2.11" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/8.9/css/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/c/5.5.1/wp-includes/js/jquery/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#product=ga&amp;property=5f4131776f37880012707ba8" id="googleanalytics-platform-sharethis-js"></script>
+<link rel="alternate" type="application/json" href="https://hm2k.org/wp-json/wp/v2/posts/110">
+<link rel="prev" title="Supercalifragilisticexpialidocious" href="https://hm2k.org/posts/supercalifragilisticexpialidocious">
+<link rel="next" title="How to unlock a Samsung E720 mobile phone" href="https://hm2k.org/posts/how-to-unlock-a-samsung-e720-mobile-phone">
+
+<link rel="canonical" href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess">
+
+<link rel="alternate" type="application/json+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fcreating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess">
+<link rel="alternate" type="text/xml+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fcreating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess&amp;format=xml">
+<style type="text/css">img#wpstats{display:none}</style></head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+	<div style="float:right; margin-right: 5px;">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-8789111894509366";
+/* 468x60, created 4/17/08 */
+google_ad_slot = "9389236395";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	<p><small><b>Have I helped you?</b> Please consider my <a href="http://tinyurl.com/hm2kwishlist">wishlist</a> or <a href="http://tinyurl.com/hm2kpaypal">donating</a>. Thanks!</small></p>
+<p>Don't forget to <a href="http://twitter.com/hm2k">follow me on twitter</a>.</p>
+	</div>
+	<h1><a href="https://hm2k.org">HM2K</a></h1>
+</div>
+
+
+<div id="content">
+
+			
+		<div class="post" id="post-110">
+	
+			<h2 class="posttitle"><a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess" rel="bookmark" title="Permanent link to Creating subdomains from directories using mod_rewrite in Apache .htaccess">Creating subdomains from directories using mod_rewrite in Apache .htaccess</a></h2>
+			
+			<p class="postmeta"> 
+			March 16, 2007 at 12:25 am 
+			· Filed under Uncategorised						</p>
+		
+			<div class="postentry">
+			<p>The idea was to have the ability to create unlimited subdomains simply by creating an appropreate directory for it in your html root directory.</p>
+<p>Since most people don’t have direct access to their httpd.conf, the obvious solution was to create a method using mod_rewrite within “.htaccess”. This also allowed it to be setup very easily and quickly.</p>
+<p><span id="more-110"></span>I have no immediate use for this solution, however I know it will come in very handy in the future.</p>
+<p>Someone I know was trying to figure this out earlier today, so I took it upon myself to figure out how to work out a solution for this problem.</p>
+<p>After much discussion with #apache @ EFnet, in particular TBF, we came about the following solution.</p>
+<blockquote><p>#Grab the subdomain from the domain<br>
+RewriteCond %{HTTP_HOST} ^([^.]+).hm2k.org$<br>
+#Make sure the subdomain is not www or example<br>
+RewriteCond %{1} !^(www|example)$<br>
+#Check if the directory actually exists before we go there<br>
+RewriteCond /home/hm2k/public_html/%1 -d<br>
+#This stops it from looping<br>
+RewriteCond %{REQUEST_FILENAME} !^/home/hm2k/public_html/<br>
+#Finally, this is the actual rewrite<br>
+RewriteRule (.*) /home/hm2k/public_html/%1/$1 [Last]</p></blockquote>
+<p>Thanks to all those who helped, I hope this comes in useful to someone.</p>
+<p><strike>1136331104</strike></p>
+<div class="yarpp-related">
+<p>Related posts:</p><ol>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I’m sure we’re all...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+<li><a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="PHPizabi – creating a dating site">PHPizabi – creating a dating site </a> <small>During the summer of 2007 I decided to purchase a...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there’s two scripts. The main...</small></li>
+</ol>
+</div>
+						</div>
+
+			<p class="postfeedback">
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess" rel="bookmark" title="Permanent link to Creating subdomains from directories using mod_rewrite in Apache .htaccess" class="permalink">Permalink</a>
+			</p>
+			
+		</div>
+		
+		<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="https://hm2k.org/index.php?social_controller=auth&amp;social_action=reload_form&amp;redirect_to=https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess&amp;post_id=110">
+			Logging In...		</div>
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#respond" style="display:none;">cancel</a></small></h3><form action="https://hm2k.org/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=twitter&amp;post_id=110" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=facebook&amp;post_id=110" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p><p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value=""></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value=""><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value=""></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post It"> <input type="hidden" name="comment_post_ID" value="110" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0"><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value=""></p><div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="686f929e93"></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="220"></p></div></form>	</div>
+		</div>
+	<div id="social-tabs-comments">
+				<ul class="social-nav social-clearfix">
+			<li class="social-all social-tab-main social-current-tab"><a href="#" rel="social-all"><span>11 Replies</span></a></li>
+			<li class="social-wordpress"><a href="#" rel="wordpress"><span>0 Comments</span></a></li>
+			<li class="social-twitter"><a href="#" rel="social-twitter"><span>0 Tweets</span></a></li>
+			<li class="social-facebook"><a href="#" rel="social-facebook"><span>0 Facebook</span></a></li>
+			<li class="social-pingback"><a href="#" rel="social-pingback"><span>1 Pingback</span></a></li>
+		</ul>
+
+		
+		<div id="social-comments-tab-all" class="social-tabs-panel social-tabs-first-panel">
+			<div id="comments" class="social-comments">
+				<div class="social-last-reply-when">Last reply was January 25, 2013</div><div class="cf-clearfix"></div>				<ol class="social-commentlist">
+				<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::start_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::start_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>18</b><br>
+<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::end_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::end_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>42</b><br>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-11634">
+<div class="social-comment-inner social-clearfix" id="comment-11634">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0bfc2560301d8191ffe2bae75285590d?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0bfc2560301d8191ffe2bae75285590d?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.gamemonarch.com" rel="external nofollow ugc" class="url">Justice McCay</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-11634" class="social-posted-when" target="_blank">August 20, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>How can I go about redirecting a directory to a subdomain using modrewrite?</p>
+<p>I have already set-up the subdomain in my control panel. How can I go about making site.com/oldname to newname.site.com using modrewrite?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-11912">
+<div class="social-comment-inner social-clearfix" id="comment-11912">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/d717fdc14652bac4afcd36ad9de04831?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/d717fdc14652bac4afcd36ad9de04831?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">md5hash</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-11912" class="social-posted-when" target="_blank">August 23, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>i cant get it to work</p>
+<p>i want this <a href="http://subdomain1.portal/" rel="nofollow ugc">http://subdomain1.portal/</a> from <a href="http://portal/subdomain1/" rel="nofollow ugc">http://portal/subdomain1/</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-23662">
+<div class="social-comment-inner social-clearfix" id="comment-23662">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c28b00be173ab48eb956edc5aa90f569?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c28b00be173ab48eb956edc5aa90f569?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.picturesofcats.ca" rel="external nofollow ugc" class="url">Rickywh</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-23662" class="social-posted-when" target="_blank">November 15, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I tried this just now, replaced hm2k.org in the first line with my domain, then ran phpinfo() to get my DOCUMENT_ROOT, which is set to /home/rickywh/domains/mydomain.com/public_html</p>
+<p>i then changed set this path in the three lines that are relevant and saved it to a file called .htaccess, when i visited my main domain by going mydomain.com, i got internal server error message.  but when trying to go to subdomain.mydomain.com, it displayed the message about it being a shared website that hast multiple users or something,  so i guess it half works.  hehe</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-53365">
+<div class="social-comment-inner social-clearfix" id="comment-53365">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/45deb4096a74ae411fab527d4ede48af?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/45deb4096a74ae411fab527d4ede48af?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">ivailo sym</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-53365" class="social-posted-when" target="_blank">March 24, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>don’t work<br>
+why?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-82501">
+<div class="social-comment-inner social-clearfix" id="comment-82501">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/e9abca235befe446cecdaf11fbdb0b42?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/e9abca235befe446cecdaf11fbdb0b42?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">OMG</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-82501" class="social-posted-when" target="_blank">July 11, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Omg it doesn’t work … searching everywhere and found a big nothing  about how to make SubDomains with the help of the .htaccess if you don’t have access to  httpd.conf. When I tipe <a href="http://subdomain.mydomain.com" rel="nofollow ugc">http://subdomain.mydomain.com</a>  I need it to go to htdocs/subdomain/</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-99398">
+<div class="social-comment-inner social-clearfix" id="comment-99398">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/ea323d05d364bc138ceb904b514f1048?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/ea323d05d364bc138ceb904b514f1048?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Al V</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-99398" class="social-posted-when" target="_blank">September 12, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>This solution is exactly what I need and have been unable to find. I added my site information without success.</p>
+<p>Your solution was pasted into my Document Root “.htaccess” file under </p>
+<p>  RewriteEngine on</p>
+<p>All instances of “hm2k.org” were replaced with “mydomainname”</p>
+<p>“www|example” was replaced with “mydomainname”</p>
+<p>“REQUEST_FILENAME” was replaced with “REQUEST_subdomainname”</p>
+<p>After checking and rechecking, I am unable to determine what I am doing wrong. Any help will be appreciated.</p>
+<p>Thanks,</p>
+<p>Al</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-115777">
+<div class="social-comment-inner social-clearfix" id="comment-115777">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/f8decaba1d9969c1d8ca084ee0dba216?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/f8decaba1d9969c1d8ca084ee0dba216?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.snippetdb.com" rel="external nofollow ugc" class="url">Snippissimo</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-115777" class="social-posted-when" target="_blank">November 1, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Without adding wildcard subdomains to the DNS I’m not sure how this would work.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-166687">
+<div class="social-comment-inner social-clearfix" id="comment-166687">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/46ee06c7c1d5021845dd37eefb35b491?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/46ee06c7c1d5021845dd37eefb35b491?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">geekgirl4christ</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-166687" class="social-posted-when" target="_blank">June 16, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>This works great!  It fixed my problem perfect!   Thank you!  🙂</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-299487">
+<div class="social-comment-inner social-clearfix" id="comment-299487">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://xhtmlforum.de/65277-sublinks.html#post498870" rel="external nofollow ugc" class="url">Sublinks - XHTMLforum</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-299487" class="social-posted-when" target="_blank">July 26, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] nicht mehr sicher, aber lassen sich nicht mithilfe von mod_rewrite virtuelle subdomains anlegen?  creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-503377">
+<div class="social-comment-inner social-clearfix" id="comment-503377">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/b78745b07db6fe83e7c3b7accaacb573?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/b78745b07db6fe83e7c3b7accaacb573?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://validme.in" rel="external nofollow ugc" class="url">addwizz admin</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-503377" class="social-posted-when" target="_blank">November 24, 2012</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Dear sir, I need to Create the Sub Domains Using .htaccess with out use of my Domain Control Panel it is Possible…. Pls let me know how?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-579402">
+<div class="social-comment-inner social-clearfix" id="comment-579402">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2835be47bdcc433ca17629247e56fd6b?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2835be47bdcc433ca17629247e56fd6b?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.goldenworld.com" rel="external nofollow ugc" class="url">Nirav</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comment-579402" class="social-posted-when" target="_blank">January 25, 2013</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>how to access direct throught sub domain of main domain using .htaccess in php?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+				</ol>
+							</div>
+		</div>
+			</div>
+	
+	</div>
+				
+		
+</div>
+
+
+<div id="sidebar">
+<ul>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+
+			<ul>
+				<li class="page_item page-item-8 page_item_has_children"><a href="https://hm2k.org/articles">Articles</a>
+<ul class="children">
+	<li class="page_item page-item-74"><a href="https://hm2k.org/articles/pagerank">Google PageRank Script</a></li>
+	<li class="page_item page-item-9"><a href="https://hm2k.org/articles/regex">Guide to regular expressions</a></li>
+	<li class="page_item page-item-99"><a href="https://hm2k.org/articles/how-to-ask-a-question">How to ask a question</a></li>
+	<li class="page_item page-item-131"><a href="https://hm2k.org/articles/morals-of-downloading">Morals of Downloading</a></li>
+	<li class="page_item page-item-39"><a href="https://hm2k.org/articles/remove-spyware">Remove Spyware</a></li>
+	<li class="page_item page-item-104"><a href="https://hm2k.org/articles/seo-faq">SEO FAQ</a></li>
+	<li class="page_item page-item-10"><a href="https://hm2k.org/articles/seo-tips">SEO Tips</a></li>
+	<li class="page_item page-item-50"><a href="https://hm2k.org/articles/software">Software</a></li>
+	<li class="page_item page-item-5"><a href="https://hm2k.org/articles/startkeylogger">startkeylogger</a></li>
+	<li class="page_item page-item-106"><a href="https://hm2k.org/articles/useful-linux-commands">Useful Linux Commands</a></li>
+	<li class="page_item page-item-111"><a href="https://hm2k.org/articles/ways-to-waste-time-online">Ways to waste time online</a></li>
+	<li class="page_item page-item-40"><a href="https://hm2k.org/articles/yes-www">www. is NOT deprecated</a></li>
+</ul>
+</li>
+<li class="page_item page-item-13"><a href="https://hm2k.org/contact">Contact</a></li>
+			</ul>
+
+			</li>
+<li id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+
+			<ul>
+					<li class="cat-item cat-item-44"><a href="https://hm2k.org/posts/category/business">Business</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://hm2k.org/posts/category/dev">Development</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://hm2k.org/posts/category/general">General</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://hm2k.org/posts/category/hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://hm2k.org/posts/category/internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-285"><a href="https://hm2k.org/posts/category/security-2">Security</a>
+</li>
+	<li class="cat-item cat-item-260"><a href="https://hm2k.org/posts/category/software">Software</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://hm2k.org/posts/category/sysadmin">Sysadmin</a>
+</li>
+			</ul>
+
+			</li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+
+			<ul>
+					<li><a href="https://hm2k.org/posts/2012/05">May 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2012/03">March 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2011/11">November 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/10">October 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/09">September 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/08">August 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/07">July 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/06">June 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/05">May 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/04">April 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/03">March 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/02">February 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2010/12">December 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/11">November 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/06">June 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/05">May 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/04">April 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/02">February 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2009/12">December 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/11">November 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/10">October 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/09">September 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/08">August 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/07">July 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/06">June 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/04">April 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/02">February 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/01">January 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2008/12">December 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/11">November 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/09">September 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/07">July 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/06">June 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/05">May 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/04">April 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/03">March 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/02">February 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/01">January 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2007/12">December 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/11">November 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/10">October 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/08">August 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/07">July 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/06">June 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/05">May 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/04">April 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/03">March 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/02">February 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/01">January 2007</a></li>
+			</ul>
+
+			</li>
+<li id="text-5" class="widget widget_text"><h2 class="widgettitle">About</h2>
+			<div class="textwidget"><p>Welcome to the HM2K. Here you’ll find our experiments and findings as part of our on going Internet engineering.</p>
+</div>
+		</li>
+<li id="linkcat-16" class="widget widget_links"><h2 class="widgettitle">Projects</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://deaduseful.com/">Domain Name Whois</a></li>
+<li><a href="https://eggtcl.github.io/">Eggdrop TCL</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-28" class="widget widget_links"><h2 class="widgettitle">Network</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://phurix.co.uk/">Phurix Web Hosting</a></li>
+<li><a href="https://suzuki4u.co.uk/" title="The only UK based Suzuki Forums">Suzuki Community</a></li>
+
+	</ul>
+</li>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>		
+Copyright © 2002-2020 HM2K.
+</p>
+</div>
+
+</div>
+
+<link rel="stylesheet" id="yarppRelatedCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.5.1" type="text/css" media="all">
+<script type="text/javascript" id="social_js-js-extra">
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hm2k.org/wp-content/plugins/social/assets/social.js?ver=2.11" id="social_js-js"></script>
+<script async="async" type="text/javascript" src="https://hm2k.org/wp-content/plugins/akismet/_inc/form.js?ver=4.1.6" id="akismet-form-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-202036.js" async="async" defer></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.9',blog:'181873647',post:'110',tz:'0',srv:'hm2k.org'} ]);
+	_stq.push([ 'clickTrackerInit', '181873647', '110' ]);
+</script>
+
+</body>
+</html>

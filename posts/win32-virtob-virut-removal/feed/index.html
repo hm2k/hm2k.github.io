@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Win32 Virtob/Virut removal	</title>
+	<atom:link href="https://hm2k.org/posts/win32-virtob-virut-removal/feed" rel="self" type="application/rss+xml" />
+	<link>https://hm2k.org/posts/win32-virtob-virut-removal</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 02 Jun 2010 06:49:11 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+	<item>
+		<title>
+		By: Demonwolf		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-2#comment-209158</link>
+
+		<dc:creator><![CDATA[Demonwolf]]></dc:creator>
+		<pubDate>Wed, 02 Jun 2010 06:49:11 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-209158</guid>
+
+					<description><![CDATA[Hey all.
+
+I am a network admin at two schools. Schools prove to be extremely difficult to handle because we all know what young students are like, they don&#039;t want to read a virus warning and go ahead anyway because they want the program they created at home to run and show their friends. Virtob/Virut have proven to be a formidable nightmare to deal with. Especially when coupled with a Mabezat infection that creates .exe duplicates of itself, even over networks. 
+
+But I have found a solution. I use Hiren 10.4 and boot into the MiniXP. It boots pretty quickly and works like a charm. With the MiniXP, I run Dr. Web (Included on Hiren) and it clears out the majority of the infections. Then I enable the network shares with the useful network function on the desktop. Then I connect into the PC using the c$ network share (preferably from a notebook directly to the infected PC through LAN) and do a full scan with an up-to-date antivirus. I used BitDefender 2010. This finds a few more infections but clears 99% of them and asks what to do with the other 1% if there are any. Generally deleting them isn&#039;t an issue because of what I plan next.
+
+Once I have checked through everything, I do a Windows XP Repair to fix and/or replace damaged files. Thereafter, ensuring the BitDefender Client Security was updated to the newest version (Which includes a forced USB scan WMI script that is amazing) and that it has been set up correctly. Then it is just a case of repairing a few installations of applications (Nero, Pastel, Office) and all works wonderfully again.
+
+The catch comes in that you have to make 100% sure the computer is clean before reattaching it to a network. If any PC on the network has even one infection of either, you have to redo the entire network within 48 hours. If you work for schools, use school holidays to your advantage. 4-5 hours at each machine generally works beautifully. If you have multiple machines that are almost identical, Hiren does have cloning software.
+
+Recap:
+1) Hiren 10.4 (One released each month so it might be on 10.6 now. Newer is generally better)
+2) MiniXP
+3) Dr. Web full scan
+4) Enable Network in MiniXP
+5) Scan remotely with updated decent antivirus (BitDefender, Kasperski. Norton is NOT decent)
+6) Repair Windows
+7) Check Antivirus and Firewall installed correctly and up to date
+8) Repair any applications that won&#039;t work
+9) Attach to clean network
+
+
+And it is that simple.
+
+I hope this alternative helps some people. It couples together many of the various other ideas on the website above and I have had a 90% success rate with most virus infections, not just Virtob/Virut or Mabezat.
+
+One last thing to watch out for, one of the telltale signs you have a serious problem is that when Login in, before you get to a desktop it logs you back out. This is a problem with the registry (HKLM\Software\Microsoft\Windows NT\CurrentVersion\WinLogon\UserInit should read &quot;C:\WINDOWS\system32\userinit.exe,&quot; without quotes) and/or the userinit.exe file in %systemroot%\System32. If someone manages to login but doesn&#039;t get icons and start bar, Explorer.exe and/or Explorer.scf are corrupt. You might also want to check the Shell entry under the same key of the registry above. It should read &quot;Explorer.exe&quot; without quotes.]]></description>
+			<content:encoded><![CDATA[<p>Hey all.</p>
+<p>I am a network admin at two schools. Schools prove to be extremely difficult to handle because we all know what young students are like, they don&#8217;t want to read a virus warning and go ahead anyway because they want the program they created at home to run and show their friends. Virtob/Virut have proven to be a formidable nightmare to deal with. Especially when coupled with a Mabezat infection that creates .exe duplicates of itself, even over networks. </p>
+<p>But I have found a solution. I use Hiren 10.4 and boot into the MiniXP. It boots pretty quickly and works like a charm. With the MiniXP, I run Dr. Web (Included on Hiren) and it clears out the majority of the infections. Then I enable the network shares with the useful network function on the desktop. Then I connect into the PC using the c$ network share (preferably from a notebook directly to the infected PC through LAN) and do a full scan with an up-to-date antivirus. I used BitDefender 2010. This finds a few more infections but clears 99% of them and asks what to do with the other 1% if there are any. Generally deleting them isn&#8217;t an issue because of what I plan next.</p>
+<p>Once I have checked through everything, I do a Windows XP Repair to fix and/or replace damaged files. Thereafter, ensuring the BitDefender Client Security was updated to the newest version (Which includes a forced USB scan WMI script that is amazing) and that it has been set up correctly. Then it is just a case of repairing a few installations of applications (Nero, Pastel, Office) and all works wonderfully again.</p>
+<p>The catch comes in that you have to make 100% sure the computer is clean before reattaching it to a network. If any PC on the network has even one infection of either, you have to redo the entire network within 48 hours. If you work for schools, use school holidays to your advantage. 4-5 hours at each machine generally works beautifully. If you have multiple machines that are almost identical, Hiren does have cloning software.</p>
+<p>Recap:<br />
+1) Hiren 10.4 (One released each month so it might be on 10.6 now. Newer is generally better)<br />
+2) MiniXP<br />
+3) Dr. Web full scan<br />
+4) Enable Network in MiniXP<br />
+5) Scan remotely with updated decent antivirus (BitDefender, Kasperski. Norton is NOT decent)<br />
+6) Repair Windows<br />
+7) Check Antivirus and Firewall installed correctly and up to date<br />
+8) Repair any applications that won&#8217;t work<br />
+9) Attach to clean network</p>
+<p>And it is that simple.</p>
+<p>I hope this alternative helps some people. It couples together many of the various other ideas on the website above and I have had a 90% success rate with most virus infections, not just Virtob/Virut or Mabezat.</p>
+<p>One last thing to watch out for, one of the telltale signs you have a serious problem is that when Login in, before you get to a desktop it logs you back out. This is a problem with the registry (HKLM\Software\Microsoft\Windows NT\CurrentVersion\WinLogon\UserInit should read &#8220;C:\WINDOWS\system32\userinit.exe,&#8221; without quotes) and/or the userinit.exe file in %systemroot%\System32. If someone manages to login but doesn&#8217;t get icons and start bar, Explorer.exe and/or Explorer.scf are corrupt. You might also want to check the Shell entry under the same key of the registry above. It should read &#8220;Explorer.exe&#8221; without quotes.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Blakey		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-204187</link>
+
+		<dc:creator><![CDATA[Blakey]]></dc:creator>
+		<pubDate>Sun, 18 Apr 2010 20:27:44 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-204187</guid>
+
+					<description><![CDATA[BIG BRAINS WANTED:
+Please if you are a super smart geek please help me find a way to use windbg.exe (microsoft file via filestube) to reset the Kernel.
+Win32 VIRUT patches the Kernel, (IMO) and this makes it imposable to delete/fix. Help us use a Kernel Debugger and prevent this evil crap fuck of a patching virus from repatching our Kernel on every reboot. 
+
+To find WinDbg.exe: Google &quot; Filestube WinDbg_20v6.6.07.5.exe&quot; - to download a legit copy of MicroSoft&#039;s WinDbg Kernel Debugger.
+
+Questions I have are:
+In WinDbg.exe, I will use command, ‘!chkimg -f nt’, without quotes,
+and need to know if &quot;symbols are required for this action?  Symbols are data sets for the debugger, and are like 650Mb.
+Are they needed for an !chkimg command?
+
+Is there a way to run WinDbg.exe in DOS before WinXP boots up? If so, How?
+
+You see, I know alot, but I&#039;m also missing basic PC programming fundamentals. HELP US!!!
+I KNOW THIS WILL WORK, I JUST DON&#039;T KNOW HOW TO IMPLEMENT THE PROCEDURES.
+
+REFORMATTING IS NOT AN OPTION, IT&quot;S FAILURE!
+HELP US BRAINIACS!!!!  
+Nerds Unite!
+
+Blakey]]></description>
+			<content:encoded><![CDATA[<p>BIG BRAINS WANTED:<br />
+Please if you are a super smart geek please help me find a way to use windbg.exe (microsoft file via filestube) to reset the Kernel.<br />
+Win32 VIRUT patches the Kernel, (IMO) and this makes it imposable to delete/fix. Help us use a Kernel Debugger and prevent this evil crap fuck of a patching virus from repatching our Kernel on every reboot. </p>
+<p>To find WinDbg.exe: Google &#8221; Filestube WinDbg_20v6.6.07.5.exe&#8221; &#8211; to download a legit copy of MicroSoft&#8217;s WinDbg Kernel Debugger.</p>
+<p>Questions I have are:<br />
+In WinDbg.exe, I will use command, ‘!chkimg -f nt’, without quotes,<br />
+and need to know if &#8220;symbols are required for this action?  Symbols are data sets for the debugger, and are like 650Mb.<br />
+Are they needed for an !chkimg command?</p>
+<p>Is there a way to run WinDbg.exe in DOS before WinXP boots up? If so, How?</p>
+<p>You see, I know alot, but I&#8217;m also missing basic PC programming fundamentals. HELP US!!!<br />
+I KNOW THIS WILL WORK, I JUST DON&#8217;T KNOW HOW TO IMPLEMENT THE PROCEDURES.</p>
+<p>REFORMATTING IS NOT AN OPTION, IT&#8221;S FAILURE!<br />
+HELP US BRAINIACS!!!!<br />
+Nerds Unite!</p>
+<p>Blakey</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: P*ssed off Teenager		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-203246</link>
+
+		<dc:creator><![CDATA[P*ssed off Teenager]]></dc:creator>
+		<pubDate>Wed, 07 Apr 2010 09:09:32 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-203246</guid>
+
+					<description><![CDATA[GUYSS hello. 
+Basically, i have the same problem with my brothers computer - i tried to download a PC game from an internet site. [yesterday.]
+Once the file had finished downloading, the computer immediately detected it, and shut off, with a warning screen. Turning the computer back on, I realised something was wrong when three links to porno sites had shown up on the computer. i deleted them, and the file that i originally downloaded, emptied the recycle bin, and hoped it ended at that.
+However, this morning, my brother told me the links had returned to his desktop. I ran a system scan, and yes, the computer detected several different viruses, but said i had to PAY TO ACTIVATE THE SCANNER. SO I COULD NOT REMOVE THE VIRUS. or malware, whatever the heck they are. now, for some reason, i cannot open internet explorer on the computer anymore, so either its been moved, removed, or infected.
+The virus had five parts to it, but i could delete the first four, but left me with one which i could not access, because &#039;the file was in use&#039;. Someone mentioned that there are multiple instances - they are correct. They were named VT_1, VT_2 ...
+Im actually really annoyed, i cannot get rid of this virus and i cannot download any virus scanner because the internet explorer is gone.
+HELP.]]></description>
+			<content:encoded><![CDATA[<p>GUYSS hello.<br />
+Basically, i have the same problem with my brothers computer &#8211; i tried to download a PC game from an internet site. [yesterday.]<br />
+Once the file had finished downloading, the computer immediately detected it, and shut off, with a warning screen. Turning the computer back on, I realised something was wrong when three links to porno sites had shown up on the computer. i deleted them, and the file that i originally downloaded, emptied the recycle bin, and hoped it ended at that.<br />
+However, this morning, my brother told me the links had returned to his desktop. I ran a system scan, and yes, the computer detected several different viruses, but said i had to PAY TO ACTIVATE THE SCANNER. SO I COULD NOT REMOVE THE VIRUS. or malware, whatever the heck they are. now, for some reason, i cannot open internet explorer on the computer anymore, so either its been moved, removed, or infected.<br />
+The virus had five parts to it, but i could delete the first four, but left me with one which i could not access, because &#8216;the file was in use&#8217;. Someone mentioned that there are multiple instances &#8211; they are correct. They were named VT_1, VT_2 &#8230;<br />
+Im actually really annoyed, i cannot get rid of this virus and i cannot download any virus scanner because the internet explorer is gone.<br />
+HELP.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Win32 Virtob/Virut removal &#171; Klikdids&#39; Blog		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-202983</link>
+
+		<dc:creator><![CDATA[Win32 Virtob/Virut removal &#171; Klikdids&#39; Blog]]></dc:creator>
+		<pubDate>Sat, 03 Apr 2010 03:31:18 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-202983</guid>
+
+					<description><![CDATA[[...] http://www.hm2k.com [...]]]></description>
+			<content:encoded><![CDATA[<p>[&#8230;] <a href="http://www.hm2k.com" rel="nofollow ugc">http://www.hm2k.com</a> [&#8230;]</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: jim		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-183608</link>
+
+		<dc:creator><![CDATA[jim]]></dc:creator>
+		<pubDate>Sat, 24 Oct 2009 01:52:02 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-183608</guid>
+
+					<description><![CDATA[I found TRUE information here: http://www.jeann2.com/blog/index.php?post_id=154
+The article does not advertise any AV, i believe this guy is fighting against it.
+One good point i did not find in any other site: he proved the virus self installed in the master boot record.]]></description>
+			<content:encoded><![CDATA[<p>I found TRUE information here: <a href="http://www.jeann2.com/blog/index.php?post_id=154" rel="nofollow ugc">http://www.jeann2.com/blog/index.php?post_id=154</a><br />
+The article does not advertise any AV, i believe this guy is fighting against it.<br />
+One good point i did not find in any other site: he proved the virus self installed in the master boot record.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: simon		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-182706</link>
+
+		<dc:creator><![CDATA[simon]]></dc:creator>
+		<pubDate>Sat, 17 Oct 2009 22:40:01 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-182706</guid>
+
+					<description><![CDATA[Hi all
+
+For the last week i have been dealing with this Virut and what a nightmare it has been. Previously decided to follow a sequence of anti virus programs...1. Malwarebytes, 2. Superantispware,3. Combo fix, 4. Root repeal, 5. Mgtools. All free downloads.  1 and 2 went ok but when i got to installing 3 it informed me the virut had infected set up file. So here i am about to try the advise on this page.  Normally I would just format and carry on but it is not my computer and there is alot of personal programs and data. Fingers crossed, will let you know of progress.  Learning alot!!!!!!
+
+PS. This was virus was originally downloaded as a Heur virus i beleive.]]></description>
+			<content:encoded><![CDATA[<p>Hi all</p>
+<p>For the last week i have been dealing with this Virut and what a nightmare it has been. Previously decided to follow a sequence of anti virus programs&#8230;1. Malwarebytes, 2. Superantispware,3. Combo fix, 4. Root repeal, 5. Mgtools. All free downloads.  1 and 2 went ok but when i got to installing 3 it informed me the virut had infected set up file. So here i am about to try the advise on this page.  Normally I would just format and carry on but it is not my computer and there is alot of personal programs and data. Fingers crossed, will let you know of progress.  Learning alot!!!!!!</p>
+<p>PS. This was virus was originally downloaded as a Heur virus i beleive.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Steven		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-178156</link>
+
+		<dc:creator><![CDATA[Steven]]></dc:creator>
+		<pubDate>Mon, 14 Sep 2009 16:08:10 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-178156</guid>
+
+					<description><![CDATA[This will fix the virut virus and you will need to install a 2nd windows on a seperate partition if you dont already have it (dw if you dont want it afterwards just remove it)
+
+ 1.	go to a proxy site then from there go to the avg site to download their 
+virut remover put this in your c drive
+2.	Run msconfig
+3.	Change Boot tab to safe boot &#038; alternate shell (doesn&#039;t load explorer and
+leaves it free to repair)
+4.	Reboot
+5.	When dos box type &quot;cd c:\&quot;
+6.	Type &quot;rmvirut (all your drive letters ie: C:\ D:\ etc)&quot;
+7.	Let it run through.
+8.	Scan any folder it finds the virut again
+9.	Then Scan all your windows folders (depends on how many multiboots you have 
+and its pays to have at least 2 with this virus)
+10.	Lastly Scan C:\windows\explorer.exe (the evil heart of the virus)
+11.	Then type msconfig
+12.	Change Boot tab to remove safe boot
+13.	Reboot
+14.	Then boot into another boot of windows and open cmd.exe scan everything 
+again paying particular attention to folders with the virus in it
+
+
+All done, can now go to antivirus  &#038; mircrosoft websites
+
+PS I dont deserve credit for this my mate found/tweaked this fix in the 1st place and I just tweaked it a bit further to help out the noobs]]></description>
+			<content:encoded><![CDATA[<p>This will fix the virut virus and you will need to install a 2nd windows on a seperate partition if you dont already have it (dw if you dont want it afterwards just remove it)</p>
+<p> 1.	go to a proxy site then from there go to the avg site to download their<br />
+virut remover put this in your c drive<br />
+2.	Run msconfig<br />
+3.	Change Boot tab to safe boot &amp; alternate shell (doesn&#8217;t load explorer and<br />
+leaves it free to repair)<br />
+4.	Reboot<br />
+5.	When dos box type &#8220;cd c:\&#8221;<br />
+6.	Type &#8220;rmvirut (all your drive letters ie: C:\ D:\ etc)&#8221;<br />
+7.	Let it run through.<br />
+8.	Scan any folder it finds the virut again<br />
+9.	Then Scan all your windows folders (depends on how many multiboots you have<br />
+and its pays to have at least 2 with this virus)<br />
+10.	Lastly Scan C:\windows\explorer.exe (the evil heart of the virus)<br />
+11.	Then type msconfig<br />
+12.	Change Boot tab to remove safe boot<br />
+13.	Reboot<br />
+14.	Then boot into another boot of windows and open cmd.exe scan everything<br />
+again paying particular attention to folders with the virus in it</p>
+<p>All done, can now go to antivirus  &amp; mircrosoft websites</p>
+<p>PS I dont deserve credit for this my mate found/tweaked this fix in the 1st place and I just tweaked it a bit further to help out the noobs</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: JsBc		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-177126</link>
+
+		<dc:creator><![CDATA[JsBc]]></dc:creator>
+		<pubDate>Fri, 04 Sep 2009 04:50:26 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-177126</guid>
+
+					<description><![CDATA[I really need some quick help here please. I&#039;ve got this awful virus. Does this work if I have Vista installed on the infected pc? I don&#039;t know if bart&#039;s pe will work, if not is there something for Vista?. Thanks]]></description>
+			<content:encoded><![CDATA[<p>I really need some quick help here please. I&#8217;ve got this awful virus. Does this work if I have Vista installed on the infected pc? I don&#8217;t know if bart&#8217;s pe will work, if not is there something for Vista?. Thanks</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Jin kazuma		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-173165</link>
+
+		<dc:creator><![CDATA[Jin kazuma]]></dc:creator>
+		<pubDate>Wed, 05 Aug 2009 10:01:44 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-173165</guid>
+
+					<description><![CDATA[I did exactly as you said now my computer wont log on when i log on it syas its missing windows components and just restarts]]></description>
+			<content:encoded><![CDATA[<p>I did exactly as you said now my computer wont log on when i log on it syas its missing windows components and just restarts</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Gary Osterholt		</title>
+		<link>https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-172801</link>
+
+		<dc:creator><![CDATA[Gary Osterholt]]></dc:creator>
+		<pubDate>Sat, 01 Aug 2009 05:30:23 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/win32-virtobvirut-removal#comment-172801</guid>
+
+					<description><![CDATA[What&#039;s the best way to get the virus off an external hard drive with the Virus on it?
+
+Thanks
+Gary]]></description>
+			<content:encoded><![CDATA[<p>What&#8217;s the best way to get the virus off an external hard drive with the Virus on it?</p>
+<p>Thanks<br />
+Gary</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:55 by W3 Total Cache
+-->

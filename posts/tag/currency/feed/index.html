@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>currency &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/currency/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Fri, 29 Jul 2011 11:57:30 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Universal Currency Converter TCL for Eggdrop</title>
+		<link>https://hm2k.org/posts/universal-currency-converter-tcl-for-eggdrop</link>
+					<comments>https://hm2k.org/posts/universal-currency-converter-tcl-for-eggdrop#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 25 Feb 2010 14:41:31 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[converter]]></category>
+		<category><![CDATA[currency]]></category>
+		<category><![CDATA[eggdrop]]></category>
+		<category><![CDATA[TCL]]></category>
+		<category><![CDATA[ucc]]></category>
+		<category><![CDATA[xe.com]]></category>
+		<category><![CDATA[yahoo]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=602</guid>
+
+					<description><![CDATA[Update: This script is now part of the eggtcl project. This is a currency converter written in TCL for Eggdrop, which is similar to the ucc.mrc I wrote for mIRC. I used to use the xeucc.tcl, but that script no longer works and hasn&#8217;t been updated since 2008. &#62; !ucc 9 usd gbp &#60;Bot&#62; Could not [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/tinysong-tcl-script-for-eggdrop" rel="bookmark" title="TinySong TCL script for Eggdrop">TinySong TCL script for Eggdrop </a> <small>If you&#8217;ve not heard of TinySong, you&#8217;re missing out! TinySong...</small></li>
+<li><a href="https://hm2k.org/posts/trac-tcl-for-eggdrop" rel="bookmark" title="Trac TCL for eggdrop">Trac TCL for eggdrop </a> <small>I&#8217;ve recently had some fun installing Trac project management software...</small></li>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><strong><em>Update: This script is now part of the <a href="http://www.eggtcl.com/">eggtcl project</a>.</em></strong></p>
+<p>This is a currency converter written in TCL for Eggdrop, which is similar to the ucc.mrc I wrote for mIRC.</p>
+<p>I used to use the <a href="http://members.dandy.net/~fbn/xeucc.tcl.txt">xeucc.tcl</a>, but that script no longer works and hasn&#8217;t been updated since 2008.</p>
+<blockquote><p>&gt; !ucc 9 usd gbp<br />
+&lt;Bot&gt; Could not obtain results from XE.com, sorry!</p></blockquote>
+<p><span id="more-602"></span>Further more xeucc.tcl uses the XE.com website to gather the information, however they don&#8217;t like us doing this, and have since added the following message:</p>
+<blockquote><p>WARNING: Automated extraction of rates is prohibited under the Terms of Use.</p></blockquote>
+<p>Other scripts such as Incith&#8217;s Exchange also use a website. This one uses Yahoo Finance. The problem is that this website is subject to change at any time without prior notice.</p>
+<p>Parsing a website that is subject to change is not always a good idea. Instead what is needed is an API which is easy to parse and extract the data and also unlikely to change formatting.</p>
+<p>Although XE.com does have an API, it is not free. This is no good.</p>
+<p>I have decided instead to use the <a href="http://developer.yahoo.com/">Yahoo Developer Network</a> Currency Converter API, which is much easier to parse and permits this kind of usage.</p>
+<p>There is a choice of two URLs which you can call to get the data:</p>
+<blockquote><p><a href="http://finance.yahoo.com/d/quotes.csv?e=.csv&amp;f=sl1d1t1&amp;s=USDGBP=X">http://finance.yahoo.com/d/quotes.csv?e=.csv&amp;f=sl1d1t1&amp;s=USDGBP=X</a></p>
+<p><a href="http://download.finance.yahoo.com/d/?f=sl1d1t1&amp;s=USDGBP=X">http://download.finance.yahoo.com/d/?f=sl1d1t1&amp;s=USDGBP=X</a></p></blockquote>
+<p>Both examples should provide you with a csv file to download which will contain the currency information.</p>
+<p>I have used the second URL in my script.</p>
+<p><strong>Usage</strong></p>
+<blockquote><p>&gt; .ucc<br />
+&lt;Bot&gt; Usage: .ucc &lt;amount&gt; &lt;from&gt; &lt;to&gt;<br />
+&gt; .ucc 9 usd gbp<br />
+&lt;Bot&gt; HM2K, * UCC: 9 USD is 5.8905 GBP as of 2/25/2010 9:22am</p></blockquote>
+<p><strong>Download</strong></p>
+<ul>
+<li>Download <a href="http://hm2k.googlecode.com/svn/trunk/code/tcl/ucc.tcl">ucc.tcl</a></li>
+</ul>
+<p>If you like it, or even if you don&#8217;t, please leave a comment below. Thanks.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/tinysong-tcl-script-for-eggdrop" rel="bookmark" title="TinySong TCL script for Eggdrop">TinySong TCL script for Eggdrop </a> <small>If you&#8217;ve not heard of TinySong, you&#8217;re missing out! TinySong...</small></li>
+<li><a href="https://hm2k.org/posts/trac-tcl-for-eggdrop" rel="bookmark" title="Trac TCL for eggdrop">Trac TCL for eggdrop </a> <small>I&#8217;ve recently had some fun installing Trac project management software...</small></li>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/universal-currency-converter-tcl-for-eggdrop/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">602</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:36 by W3 Total Cache
+-->

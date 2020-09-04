@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>IMG_FILTER_GRAYSCALE &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/img_filter_grayscale/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Fri, 11 Dec 2009 17:43:18 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>How to convert an image to greyscale using PHP</title>
+		<link>https://hm2k.org/posts/how-to-convert-an-image-to-greyscale-using-php</link>
+					<comments>https://hm2k.org/posts/how-to-convert-an-image-to-greyscale-using-php#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 10 Dec 2009 14:39:30 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[conver]]></category>
+		<category><![CDATA[convert]]></category>
+		<category><![CDATA[gray]]></category>
+		<category><![CDATA[grayscale]]></category>
+		<category><![CDATA[grey]]></category>
+		<category><![CDATA[greyscale]]></category>
+		<category><![CDATA[image]]></category>
+		<category><![CDATA[imagefilter]]></category>
+		<category><![CDATA[IMG_FILTER_GRAYSCALE]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=583</guid>
+
+					<description><![CDATA[I was trying to find a neat way to grey out some &#8220;powered by&#8221; logos for a website I&#8217;m developing. I remembered reading about this very thing in .net magazine/august 2009 (i191,p100), which said: &#8220;Sponsor and associate logos can be a challenge for a designer who is making a valiant attempt to create a cohesive [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/mounting-an-iso-image" rel="bookmark" title="Mounting an ISO image">Mounting an ISO image </a> <small>An ISO image usually refers to an archived copy of...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-bulk-convert-wma-to-mp3" rel="bookmark" title="How to bulk convert WMA to MP3">How to bulk convert WMA to MP3 </a> <small>So you just downloaded an entire album, and it&#8217;s in...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I was trying to find a neat way to grey out some &#8220;powered by&#8221; logos for a website I&#8217;m developing.</p>
+<p>I remembered reading about this very thing in <a href="http://en.wikipedia.org/wiki/.net_%28magazine%29">.net magazine</a>/<a href="http://www.badassideas.com/downloads/net191swarren.pdf">august 2009 (i191,p100)</a>, which said:</p>
+<blockquote><p><em>&#8220;Sponsor and associate logos can be a challenge for a designer who is making a valiant attempt to create a cohesive website layout. Logos can be contrasting colour schemes and can be displayed at a wide range of different aspect ratios. When faced with this challenge, I recommend greying out the logos and having them appear in their respective colours upon mouse-over. When placing logos next to each other, I’d consider using visual weight versus actual size to determine spacing.&#8221;</em></p>
+<p>&#8211; <a href="http://badassideas.com/">Samantha Warren @ badassideas.com</a></p></blockquote>
+<p>So, sure we&#8217;ve established that it&#8217;s a good idea, the question is how to achieve it&#8230;</p>
+<p><span id="more-583"></span>It&#8217;s really quite simple, there&#8217;s two parts:</p>
+<ol>
+<li>Convert the image to greyscale using PHP.</li>
+<li>Write HTML and javascript that will change the image source on mouseover.</li>
+</ol>
+<p>Before I get started, I need to point out that because I&#8217;m British, I use &#8220;Grey&#8221;, instead of the American &#8220;Gray&#8221;, apart from in the actual code.</p>
+<p>I very quickly discovered a number of ways to convert an image from colour to greyscale, however the easiest way appeared to be using the <a href="http://php.net/manual/en/function.imagefilter.php">imagefilter()</a> function with the IMG_FILTER_GRAYSCALE greyscale filter which produced the results I was looking for. I found you can also very <a href="http://www.talkincode.com/add-effects-to-images-using-image-filters-with-php-266.html">easily add all sorts of effects to images using PHP</a>.</p>
+<p>I kept it simple and wrote a function that would convert an image from jpeg, gif or png to a png greyscale image. I called it <a href="http://hm2k.googlecode.com/svn/trunk/code/php/functions/imagegray.php">imagegray()</a>.</p>
+<p>It&#8217;s very easy to use, you just pass the filename to the function and it will display the image in greyscale. For example:</p>
+<blockquote><p>&lt;?php</p>
+<p>$i=isset($_REQUEST[&#8216;i&#8217;])?$_REQUEST[&#8216;i&#8217;]:&#8221;;<br />
+if ($i) { imagegrey($i); }</p>
+<p>?&gt;</p></blockquote>
+<p>Next, it&#8217;s onto the HTML, which although isn&#8217;t exactly difficult, you may stumble if you&#8217;re unsure&#8230;</p>
+<blockquote><p>&lt;img onmouseover=&#8221;this.src=&#8217;image.jpg'&#8221; onmouseout=&#8221;this.src=&#8217;imagegrey.php?i=image.jpg'&#8221; src=&#8221;imagegrey.php?i=image.jpg&#8221; alt=&#8221;image&#8221; border=&#8221;0&#8243;&gt;</p></blockquote>
+<p>That&#8217;s it, that&#8217;s all there is to it.</p>
+<p>If you run a large site, for scalability reasons you may wish to involve caching, but for most small sites, this method is quick and effective.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/mounting-an-iso-image" rel="bookmark" title="Mounting an ISO image">Mounting an ISO image </a> <small>An ISO image usually refers to an archived copy of...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-bulk-convert-wma-to-mp3" rel="bookmark" title="How to bulk convert WMA to MP3">How to bulk convert WMA to MP3 </a> <small>So you just downloaded an entire album, and it&#8217;s in...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/how-to-convert-an-image-to-greyscale-using-php/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">583</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:56 by W3 Total Cache
+-->

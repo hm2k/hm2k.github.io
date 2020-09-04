@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: PHPbase web framework	</title>
+	<atom:link href="https://hm2k.org/posts/phpbase-web-framework/feed" rel="self" type="application/rss+xml" />
+	<link>https://hm2k.org/posts/phpbase-web-framework</link>
+	<description>Research and development</description>
+	<lastBuildDate>Sun, 12 Jul 2009 21:44:36 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+	<item>
+		<title>
+		By: Emanuel Giurgea		</title>
+		<link>https://hm2k.org/posts/phpbase-web-framework/comment-page-1#comment-170524</link>
+
+		<dc:creator><![CDATA[Emanuel Giurgea]]></dc:creator>
+		<pubDate>Sun, 12 Jul 2009 21:44:36 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/phpbase-web-framework#comment-170524</guid>
+
+					<description><![CDATA[Hi,
+
+I found this page accidentaly, but i&#039;ll answer some of the questions :).
+
+First of all what you got from that websites its a very small part and unmodularize framework of what we used to call Phpbase, and later it become OXYBase.
+
+The framework its for our internal use only, the only time it was distributed freely on the internet was when we made some small projects for that guy with adveritments you mentioned above ( i think there are about 10+ applications he got from us ).
+
+If anyone has problem using that has questions or needs a newer version ( compatibile with php5, and modularized ), mail me at emanuel@oxylus-development.com, its nice to see somebody was able to reuse some of our work .
+
+Take care
+Emanuel Giurgea
+OXYLUS Development.]]></description>
+			<content:encoded><![CDATA[<p>Hi,</p>
+<p>I found this page accidentaly, but i&#8217;ll answer some of the questions :).</p>
+<p>First of all what you got from that websites its a very small part and unmodularize framework of what we used to call Phpbase, and later it become OXYBase.</p>
+<p>The framework its for our internal use only, the only time it was distributed freely on the internet was when we made some small projects for that guy with adveritments you mentioned above ( i think there are about 10+ applications he got from us ).</p>
+<p>If anyone has problem using that has questions or needs a newer version ( compatibile with php5, and modularized ), mail me at <a href="mailto:emanuel@oxylus-development.com">emanuel@oxylus-development.com</a>, its nice to see somebody was able to reuse some of our work .</p>
+<p>Take care<br />
+Emanuel Giurgea<br />
+OXYLUS Development.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Maurice		</title>
+		<link>https://hm2k.org/posts/phpbase-web-framework/comment-page-1#comment-99659</link>
+
+		<dc:creator><![CDATA[Maurice]]></dc:creator>
+		<pubDate>Sat, 13 Sep 2008 20:31:05 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/phpbase-web-framework#comment-99659</guid>
+
+					<description><![CDATA[Ok after some search in the code I found the handling for the checkboxes.
+
+To store checkbox items in the correct way do the following.
+-In the database create the checkbox items as INT(1)
+
+Then locate and edit ../admin/lib/sqladmin.php
+- locate the line:      switch ($val[&quot;type&quot;]) {
+  (this is somewhere around line 204 in the code)
+
+- Add the folowing code;
+case &quot;checkbox&quot;:
+  $_POST[$key]=isset($_POST[$key]);
+break;
+
+- Safe the file and voila.
+
+Goodluck guys.]]></description>
+			<content:encoded><![CDATA[<p>Ok after some search in the code I found the handling for the checkboxes.</p>
+<p>To store checkbox items in the correct way do the following.<br />
+-In the database create the checkbox items as INT(1)</p>
+<p>Then locate and edit ../admin/lib/sqladmin.php<br />
+&#8211; locate the line:      switch ($val[&#8220;type&#8221;]) {<br />
+  (this is somewhere around line 204 in the code)</p>
+<p>&#8211; Add the folowing code;<br />
+case &#8220;checkbox&#8221;:<br />
+  $_POST[$key]=isset($_POST[$key]);<br />
+break;</p>
+<p>&#8211; Safe the file and voila.</p>
+<p>Goodluck guys.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Maurice		</title>
+		<link>https://hm2k.org/posts/phpbase-web-framework/comment-page-1#comment-99589</link>
+
+		<dc:creator><![CDATA[Maurice]]></dc:creator>
+		<pubDate>Sat, 13 Sep 2008 14:00:19 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/phpbase-web-framework#comment-99589</guid>
+
+					<description><![CDATA[Hello all.
+I am currently working on a car dealer website and I see a problem above from Martin with the checkboxes. I experience the same here. Was someone able allready to solve that issue?
+You can use checkboxes and store a &#039;checked&#039; value but you can not uncheck them anymore.
+Hope someone can help, thanks guys.]]></description>
+			<content:encoded><![CDATA[<p>Hello all.<br />
+I am currently working on a car dealer website and I see a problem above from Martin with the checkboxes. I experience the same here. Was someone able allready to solve that issue?<br />
+You can use checkboxes and store a &#8216;checked&#8217; value but you can not uncheck them anymore.<br />
+Hope someone can help, thanks guys.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Arthur Manning		</title>
+		<link>https://hm2k.org/posts/phpbase-web-framework/comment-page-1#comment-83833</link>
+
+		<dc:creator><![CDATA[Arthur Manning]]></dc:creator>
+		<pubDate>Mon, 14 Jul 2008 14:04:34 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/phpbase-web-framework#comment-83833</guid>
+
+					<description><![CDATA[I had to dig through this code for someone wanting to use it for a car dealer website.  File uploads for ads were not uploading.  Some code comments are very useless and look like the work of some high-school kid just learning PHP.  Not very easy to navigate or debug.  I got very nervous seeing an &#039;eval()&#039; function based on customer-configurable .xml file data (very dangerous and likely easily broken/hacked).]]></description>
+			<content:encoded><![CDATA[<p>I had to dig through this code for someone wanting to use it for a car dealer website.  File uploads for ads were not uploading.  Some code comments are very useless and look like the work of some high-school kid just learning PHP.  Not very easy to navigate or debug.  I got very nervous seeing an &#8216;eval()&#8217; function based on customer-configurable .xml file data (very dangerous and likely easily broken/hacked).</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Martin		</title>
+		<link>https://hm2k.org/posts/phpbase-web-framework/comment-page-1#comment-76142</link>
+
+		<dc:creator><![CDATA[Martin]]></dc:creator>
+		<pubDate>Wed, 18 Jun 2008 22:42:46 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/phpbase-web-framework#comment-76142</guid>
+
+					<description><![CDATA[Hey all, i&#039;m actually editing the script car-dealer-website for another kind of script and im bumping off my head for a silly thing; 
+
+I used  for a regular checkbox. The checkbox works fine but when it comes to uncheck the checkbox the form doesnt take in charge the new value for this checkbox which is suppose to be &#039;nothing&#039; because I&#039;ve unchecked it.
+
+I dont know if you guys really understand what I mean..
+
+When I check the checkbox and send the form, it works fine and the database takes in charge my value but when I go to edit this form and uncheck the checkbox, the database keep the old value ... 
+
+What I want is when it comes to uncheck the chexbox this value is reseted to &#039;nothing&#039;.
+
+Any ideas?]]></description>
+			<content:encoded><![CDATA[<p>Hey all, i&#8217;m actually editing the script car-dealer-website for another kind of script and im bumping off my head for a silly thing; </p>
+<p>I used  for a regular checkbox. The checkbox works fine but when it comes to uncheck the checkbox the form doesnt take in charge the new value for this checkbox which is suppose to be &#8216;nothing&#8217; because I&#8217;ve unchecked it.</p>
+<p>I dont know if you guys really understand what I mean..</p>
+<p>When I check the checkbox and send the form, it works fine and the database takes in charge my value but when I go to edit this form and uncheck the checkbox, the database keep the old value &#8230; </p>
+<p>What I want is when it comes to uncheck the chexbox this value is reseted to &#8216;nothing&#8217;.</p>
+<p>Any ideas?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Florin		</title>
+		<link>https://hm2k.org/posts/phpbase-web-framework/comment-page-1#comment-27540</link>
+
+		<dc:creator><![CDATA[Florin]]></dc:creator>
+		<pubDate>Wed, 05 Dec 2007 00:43:00 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/phpbase-web-framework#comment-27540</guid>
+
+					<description><![CDATA[Hi,
+
+I found this framework on the internet too and I got in contact with the guys from oxylus. This was some kind of limitated framework for applications released as GPL. I managed to get their commercial framwork and it has nothing to do with the one you discuss. It modular, and the most importants its fully compatible with php5.
+
+From what i can see even i&#039;m a novice on this the code looks preaty neat, but without proper documentation its kinds useless.]]></description>
+			<content:encoded><![CDATA[<p>Hi,</p>
+<p>I found this framework on the internet too and I got in contact with the guys from oxylus. This was some kind of limitated framework for applications released as GPL. I managed to get their commercial framwork and it has nothing to do with the one you discuss. It modular, and the most importants its fully compatible with php5.</p>
+<p>From what i can see even i&#8217;m a novice on this the code looks preaty neat, but without proper documentation its kinds useless.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: hm2k		</title>
+		<link>https://hm2k.org/posts/phpbase-web-framework/comment-page-1#comment-26173</link>
+
+		<dc:creator><![CDATA[hm2k]]></dc:creator>
+		<pubDate>Mon, 26 Nov 2007 21:37:46 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/phpbase-web-framework#comment-26173</guid>
+
+					<description><![CDATA[Ah yes, I did come across oxylus-development.com on my travels after finding &quot;oxylus.ro&quot; in one of the email addresses for one of the developers. As it seems their &quot;service management&quot; system, which was last updated 04-Oct-2006, appears to use a slightly updated version of the libs.
+
+I had a look at the code, it seems (excluding comment changes), only common.php, database.php, forms.php, html.php and template.php has significantly changed.
+
+There appears to be a few fixes added, and some missing.
+
+It&#039;s an interesting framework to look at, but ultimately it&#039;s bad code, and it would require a revamp to survive PHP4 becoming obsolete at the end of this year.]]></description>
+			<content:encoded><![CDATA[<p>Ah yes, I did come across oxylus-development.com on my travels after finding &#8220;oxylus.ro&#8221; in one of the email addresses for one of the developers. As it seems their &#8220;service management&#8221; system, which was last updated 04-Oct-2006, appears to use a slightly updated version of the libs.</p>
+<p>I had a look at the code, it seems (excluding comment changes), only common.php, database.php, forms.php, html.php and template.php has significantly changed.</p>
+<p>There appears to be a few fixes added, and some missing.</p>
+<p>It&#8217;s an interesting framework to look at, but ultimately it&#8217;s bad code, and it would require a revamp to survive PHP4 becoming obsolete at the end of this year.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Striker		</title>
+		<link>https://hm2k.org/posts/phpbase-web-framework/comment-page-1#comment-26167</link>
+
+		<dc:creator><![CDATA[Striker]]></dc:creator>
+		<pubDate>Mon, 26 Nov 2007 21:19:40 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/phpbase-web-framework#comment-26167</guid>
+
+					<description><![CDATA[I&#039;m a PHP n00b poking around with a web dev project at work.
+
+I found those spam-like pages and was interested in how the framework ticked.  I&#039;ve been working with it for awhile and have learned a lot about PHP the devleopment of a user-based login system with MySQL functionality.
+
+Here&#039;s their latest site with updated framework.  Looks like this framework is still in use, they have a more complete release that requires purchase.  0.2 is open source and free to use.
+
+http://www.oxylus-development.com/
+
+Enjoy everyone :)]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;m a PHP n00b poking around with a web dev project at work.</p>
+<p>I found those spam-like pages and was interested in how the framework ticked.  I&#8217;ve been working with it for awhile and have learned a lot about PHP the devleopment of a user-based login system with MySQL functionality.</p>
+<p>Here&#8217;s their latest site with updated framework.  Looks like this framework is still in use, they have a more complete release that requires purchase.  0.2 is open source and free to use.</p>
+<p><a href="http://www.oxylus-development.com/" rel="nofollow ugc">http://www.oxylus-development.com/</a></p>
+<p>Enjoy everyone 🙂</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:14 by W3 Total Cache
+-->

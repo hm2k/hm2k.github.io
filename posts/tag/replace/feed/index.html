@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>replace &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/replace/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 23 Mar 2011 11:23:26 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Replace strings MySQL</title>
+		<link>https://hm2k.org/posts/replace-strings-in-mysq</link>
+					<comments>https://hm2k.org/posts/replace-strings-in-mysq#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 23 Mar 2011 11:23:26 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[mysql]]></category>
+		<category><![CDATA[replace]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=646</guid>
+
+					<description><![CDATA[If you ever need to make big changes to your site, such as moving directory or changing the domain name you&#8217;ll know that you&#8217;ll have to make changes to the database for that to take affect. First of all, before you make any adhoc changes like these to your database, ALWAYS take a backup. Many [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>If you ever need to make big changes to your site, such as moving directory or changing the domain name you&#8217;ll know that you&#8217;ll have to make changes to the database for that to take affect.</p>
+<p><span id="more-646"></span></p>
+<p>First of all, before you make any adhoc changes like these to your database, ALWAYS take a backup.</p>
+<p>Many of us use wordpress, and what you sometimes find is that if you move your blog into a subdirectory your content (such as images) will not point to the right place.</p>
+<p>So, here&#8217;s what I did to fix that:</p>
+<blockquote><p>UPDATE wp_posts SET post_content = REPLACE(post_content, &#8216;../wp-content/&#8217;, &#8216;/blog/wp-content/&#8217;);</p></blockquote>
+<p>This will update the wp_posts table, changing all occurrences of &#8220;../wp-content/&#8221; to the new &#8220;/blog/wp-content/&#8221; folder in the post_content field.</p>
+<p>Pretty nifty.</p>
+<p>If you&#8217;re using Drupal, and have changed the domain of your site, here&#8217;s what you need to do:</p>
+<blockquote><p>UPDATE node_revisions SET body = REPLACE(body, &#8216;old.example.com&#8217;, &#8216;new.example.com&#8217;);</p>
+<p>UPDATE node_revisions SET teaser = REPLACE(teaser, &#8216;old.example.com&#8217;, &#8216;new.example.com&#8217;);</p></blockquote>
+<p>Obviously &#8220;old.example.com&#8221; is your old domain, and &#8220;new.example.com&#8221; is your new domain.</p>
+<p>If you do change the domain of your site, you should also put a <a href="http://en.wikipedia.org/wiki/URL_redirection">301 URL redirect</a> in place too.</p>
+<p>This method of replacing strings in MySQL can also be useful if you are changing the directory of your Drupal installation.</p>
+<p>If you need any help, just drop me a comment below.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/replace-strings-in-mysq/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">646</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:21 by W3 Total Cache
+-->

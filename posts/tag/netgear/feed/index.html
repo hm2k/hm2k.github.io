@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>netgear &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/netgear/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Mon, 14 Sep 2009 20:37:25 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Customising the Netgear DG834G</title>
+		<link>https://hm2k.org/posts/customising-the-netgear-dg834g</link>
+					<comments>https://hm2k.org/posts/customising-the-netgear-dg834g#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 14 Sep 2009 20:35:08 +0000</pubDate>
+				<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[customising]]></category>
+		<category><![CDATA[dg834g]]></category>
+		<category><![CDATA[hacking]]></category>
+		<category><![CDATA[netgear]]></category>
+		<category><![CDATA[router]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=212</guid>
+
+					<description><![CDATA[I started writing this article a long time ago, however after researching the DG834G I soon found many more articles and sites dedicated to hacking or customising the Netgear DG834G router. Recently I have discovered that many of these sources are now going offline. The thing is about this router, even though it has been [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/psp-firmware-and-homebrew" rel="bookmark" title="PSP firmware and homebrew">PSP firmware and homebrew </a> <small>I decided to go all out, and purchase possibly the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I started writing this article a long time ago, however after researching the <a href="http://en.wikipedia.org/wiki/Netgear_DG834G">DG834G</a> I soon found many more articles and sites dedicated to hacking or customising the <a href="http://www.netgear.com/Products/RoutersandGateways/WirelessGRouters/DG834G.aspx">Netgear DG834G router</a>.</p>
+<p>Recently I have discovered that many of these sources are now going offline. The thing is about this router, even though it has been around since at least 2004, is that it is still in use and more importantly, still available to purchase, yet <a href="http://www.reddit.com/r/technology/comments/7rg8k/how_come_laptops_are_vastly_more_powerful_and/">hardly changed in price</a>.</p>
+<p>So, the purpose of this article is to provide you with information on how to customise your Netgear DG834G router. I hope you find it useful.</p>
+<p><span id="more-212"></span></p>
+<p>The web interface provides little scope for customization, however it is possible to put the router in a debug mode.</p>
+<p>To enable debug mode, you simply visit the following URL in your web browser:</p>
+<blockquote><p><a href="http://192.168.0.1/setup.cgi?todo=debug">http://192.168.0.1/setup.cgi?todo=debug</a></p>
+<p><em>Note: Where &#8220;192.168.0.1&#8221; is, put your router&#8217;s IP address.</em></p></blockquote>
+<p>This will allow users on the LAN to connect to the router via telnet to the embedded Linux system running <a href="http://www.busybox.net/">BusyBox</a>.</p>
+<blockquote><p><a href="telnet://192.168.0.1">telnet://192.168.0.1</a></p>
+<p><em>Note: Again, where &#8220;192.168.0.1&#8221; is, put your router&#8217;s IP address.</em></p></blockquote>
+<p>If that isn&#8217;t enough, the more adventurous can replace the built-in firmware with the customer firmware such as <a href="http://openwrt.org/">OpenWrt</a> or <a href="https://gna.org/projects/opendg">openDG834</a>.</p>
+<p>I have one of these routers running at home myself, however I had to configure it in a fairly unique way to pass all handling to my server (which now acts like a router), because I could not figure out a native way to forward from the external IP on one port (eg: 8080) to an internal IP on another port (eg: 80). I also experienced a problem when using the latest firmware from Netgear where I was <a href="http://www.linuxquestions.org/questions/linux-networking-3/home-network-gateway-and-accessing-sshd-from-outside-477242/">unable to connect</a> remotely to anything within my network.</p>
+<p>To overcome these issues I&#8217;m considering either reconfiguring my router using a custom firmware or buying a <a href="http://clkuk.tradedoubler.com/click?p(50662)a(1634641)g(16472718)url(http://www.dabs.com/learn-more/networking-and-communication/draytek--what-happens-if-your-broadband-goes-down--5281.html)">Vigor 2820 router</a> for <a href="http://www.fixr.co.uk/2009/06/03/when-broadband-fails/">when broadband fails</a>. Either way means downtime, which is something I like to avoid.</p>
+<p>If you have any useful information, please feel free to add it as a comment on this post. If you have a complex question, you could try the <a href="http://forum1.netgear.com/forumdisplay.php?f=34">Netgear forums for this router</a>.</p>
+<p>There&#8217;s loads more information out there, more than you probably care to investigate, much of it can now only be found via the web archive, so I hope you find this useful.</p>
+<p>Resources:</p>
+<ul>
+<li><a href="http://web.archive.org/web/20080119003657/http://www.suburbia.com.au/%7Edan/">The Little DG834G Page</a> (archived)</li>
+<li><a href="http://web.archive.org/web/20080116194411/http://www.1337h4x0r5.org/1/">Hacking the Netgear DG834G</a> (archived)</li>
+<li><a href="http://web.archive.org/web/20080129095528/http://walliteam.com/dg834/">walliteam.com hacking the DG834 wiki</a> (archived)</li>
+<li><a href="http://web.archive.org/web/20070124233723/http://members.iinet.net.au/%7Emlanagan/">Mike&#8217;s DG834 Firmware Page</a> (archived)</li>
+<li><a href="http://oldwiki.openwrt.org/OpenWrtDocs%282f%29Hardware%282f%29Netgear%282f%29DG834GT.html">OpenWrtDocs/Hardware/Netgear/DG834GT</a> (old wiki)</li>
+<li><a href="http://www.nat32.com/nat32e/htm/dg834g.htm">HOW TO use the Netgear DG834G ADSL Modem/Router</a></li>
+<li><a href="http://doomed.profusehost.net/dg834.php?page=info">Netgear DG834v2 Hacking Page</a></li>
+<li><a href="http://www.asininemonkey.com/articles/files/tag-netgear.php">Asinine Monkey&#8217;s DG834GT Page</a></li>
+<li><a href="http://forum.openwrt.org/viewforum.php?id=3">OpenWRT Netgear DG834G Forum</a> (Archive &#8211; read only)</li>
+<li><a href="http://dgteam.ilbello.com/">DGTeam unofficial custom firmware</a></li>
+<li><a href="http://www.skyuser.co.uk/forum/sky-router/18286-flashing-new-sky-netgear-dg834gt-router.html#post113504">Steps to Flashing a Sky Netgear DG834GT Router</a></li>
+</ul>
+<p><em>If you do find this article useful and want more information, let me know and I&#8217;ll see what I can do! Thanks!</em></p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 462px; width: 1px; height: 1px;">http://www.linuxquestions.org/questions/linux-networking-3/home-network-gateway-and-accessing-sshd-from-outside-477242/</div>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/psp-firmware-and-homebrew" rel="bookmark" title="PSP firmware and homebrew">PSP firmware and homebrew </a> <small>I decided to go all out, and purchase possibly the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/customising-the-netgear-dg834g/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">212</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:08 by W3 Total Cache
+-->

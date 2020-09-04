@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 
+	<title>HM2K » PHPizabi – creating a dating site</title>
+
+	<link rel="stylesheet" href="https://hm2k.org/wp-content/themes/hm2k/style.css" type="text/css" media="screen,print">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://hm2k.org/feed">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://hm2k.org/feed/atom">
+	
+	
+	<style type="text/css" media="screen">
+			</style>
+	
+		<link rel="archives" title="May 2012" href="https://hm2k.org/posts/2012/05">
+	<link rel="archives" title="March 2012" href="https://hm2k.org/posts/2012/03">
+	<link rel="archives" title="November 2011" href="https://hm2k.org/posts/2011/11">
+	<link rel="archives" title="October 2011" href="https://hm2k.org/posts/2011/10">
+	<link rel="archives" title="September 2011" href="https://hm2k.org/posts/2011/09">
+	<link rel="archives" title="August 2011" href="https://hm2k.org/posts/2011/08">
+	<link rel="archives" title="July 2011" href="https://hm2k.org/posts/2011/07">
+	<link rel="archives" title="June 2011" href="https://hm2k.org/posts/2011/06">
+	<link rel="archives" title="May 2011" href="https://hm2k.org/posts/2011/05">
+	<link rel="archives" title="April 2011" href="https://hm2k.org/posts/2011/04">
+	<link rel="archives" title="March 2011" href="https://hm2k.org/posts/2011/03">
+	<link rel="archives" title="February 2011" href="https://hm2k.org/posts/2011/02">
+	<link rel="archives" title="December 2010" href="https://hm2k.org/posts/2010/12">
+	<link rel="archives" title="November 2010" href="https://hm2k.org/posts/2010/11">
+	<link rel="archives" title="June 2010" href="https://hm2k.org/posts/2010/06">
+	<link rel="archives" title="May 2010" href="https://hm2k.org/posts/2010/05">
+	<link rel="archives" title="April 2010" href="https://hm2k.org/posts/2010/04">
+	<link rel="archives" title="February 2010" href="https://hm2k.org/posts/2010/02">
+	<link rel="archives" title="December 2009" href="https://hm2k.org/posts/2009/12">
+	<link rel="archives" title="November 2009" href="https://hm2k.org/posts/2009/11">
+	<link rel="archives" title="October 2009" href="https://hm2k.org/posts/2009/10">
+	<link rel="archives" title="September 2009" href="https://hm2k.org/posts/2009/09">
+	<link rel="archives" title="August 2009" href="https://hm2k.org/posts/2009/08">
+	<link rel="archives" title="July 2009" href="https://hm2k.org/posts/2009/07">
+	<link rel="archives" title="June 2009" href="https://hm2k.org/posts/2009/06">
+	<link rel="archives" title="April 2009" href="https://hm2k.org/posts/2009/04">
+	<link rel="archives" title="February 2009" href="https://hm2k.org/posts/2009/02">
+	<link rel="archives" title="January 2009" href="https://hm2k.org/posts/2009/01">
+	<link rel="archives" title="December 2008" href="https://hm2k.org/posts/2008/12">
+	<link rel="archives" title="November 2008" href="https://hm2k.org/posts/2008/11">
+	<link rel="archives" title="September 2008" href="https://hm2k.org/posts/2008/09">
+	<link rel="archives" title="July 2008" href="https://hm2k.org/posts/2008/07">
+	<link rel="archives" title="June 2008" href="https://hm2k.org/posts/2008/06">
+	<link rel="archives" title="May 2008" href="https://hm2k.org/posts/2008/05">
+	<link rel="archives" title="April 2008" href="https://hm2k.org/posts/2008/04">
+	<link rel="archives" title="March 2008" href="https://hm2k.org/posts/2008/03">
+	<link rel="archives" title="February 2008" href="https://hm2k.org/posts/2008/02">
+	<link rel="archives" title="January 2008" href="https://hm2k.org/posts/2008/01">
+	<link rel="archives" title="December 2007" href="https://hm2k.org/posts/2007/12">
+	<link rel="archives" title="November 2007" href="https://hm2k.org/posts/2007/11">
+	<link rel="archives" title="October 2007" href="https://hm2k.org/posts/2007/10">
+	<link rel="archives" title="August 2007" href="https://hm2k.org/posts/2007/08">
+	<link rel="archives" title="July 2007" href="https://hm2k.org/posts/2007/07">
+	<link rel="archives" title="June 2007" href="https://hm2k.org/posts/2007/06">
+	<link rel="archives" title="May 2007" href="https://hm2k.org/posts/2007/05">
+	<link rel="archives" title="April 2007" href="https://hm2k.org/posts/2007/04">
+	<link rel="archives" title="March 2007" href="https://hm2k.org/posts/2007/03">
+	<link rel="archives" title="February 2007" href="https://hm2k.org/posts/2007/02">
+	<link rel="archives" title="January 2007" href="https://hm2k.org/posts/2007/01">
+	<link rel="dns-prefetch" href="//platform-api.sharethis.com">
+
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="HM2K » PHPizabi – creating a dating site Comments Feed" href="https://hm2k.org/posts/phpizabi-creating-a-dating-site/feed">
+<link rel="stylesheet" id="yarppWidgetCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.5.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="social_comments-css" href="https://hm2k.org/wp-content/plugins/social/assets/comments.css?ver=2.11" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/8.9/css/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/c/5.5.1/wp-includes/js/jquery/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#product=ga&amp;property=5f4131776f37880012707ba8" id="googleanalytics-platform-sharethis-js"></script>
+<link rel="alternate" type="application/json" href="https://hm2k.org/wp-json/wp/v2/posts/301">
+<link rel="prev" title="Don’t forget to run make test!" href="https://hm2k.org/posts/dont-forget-to-run-make-test">
+<link rel="next" title="Missing Mediaid.bin file" href="https://hm2k.org/posts/missing-mediaidbin-file">
+
+<link rel="canonical" href="https://hm2k.org/posts/phpizabi-creating-a-dating-site">
+
+<link rel="alternate" type="application/json+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fphpizabi-creating-a-dating-site">
+<link rel="alternate" type="text/xml+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fphpizabi-creating-a-dating-site&amp;format=xml">
+<style type="text/css">img#wpstats{display:none}</style></head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+	<div style="float:right; margin-right: 5px;">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-8789111894509366";
+/* 468x60, created 4/17/08 */
+google_ad_slot = "9389236395";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	<p><small><b>Have I helped you?</b> Please consider my <a href="http://tinyurl.com/hm2kwishlist">wishlist</a> or <a href="http://tinyurl.com/hm2kpaypal">donating</a>. Thanks!</small></p>
+<p>Don't forget to <a href="http://twitter.com/hm2k">follow me on twitter</a>.</p>
+	</div>
+	<h1><a href="https://hm2k.org">HM2K</a></h1>
+</div>
+
+
+<div id="content">
+
+			
+		<div class="post" id="post-301">
+	
+			<h2 class="posttitle"><a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="Permanent link to PHPizabi – creating a dating site">PHPizabi – creating a dating site</a></h2>
+			
+			<p class="postmeta"> 
+			December 23, 2008 at 11:00 am 
+			· Filed under <a href="https://hm2k.org/posts/category/dev" rel="category tag">Development</a>						</p>
+		
+			<div class="postentry">
+			<p>During the summer of 2007 I decided to purchase a new domain name with a dating theme.</p>
+<p>The idea was to start a dating website. Although a fairly saturated market place, I figured it’d be another one to add to my profile.</p>
+<p><span id="more-301"></span>Earlier on in the year I remember coming across an article on the .net magazine website, entitled “<a href="http://www.netmag.co.uk/zine/develop-tutorials/date_part1">Creating your own dating site</a>” (<a href="http://www.netmag.co.uk/zine/develop-tutorials/date_part2">part2</a>, <a href="http://www.netmag.co.uk/zine/develop-tutorials/date_part3">part3</a>).</p>
+<p>In the article <a href="http://www.spodgod.com/">Karl Hodge</a> explains how PHPizabi is the ideal social networking site engine with messaging and chat features.</p>
+<p>One of the most interesting statements very early on in this article is this:</p>
+<blockquote><p>PHPizabi is a refreshingly professional, 100 per cent open source, social networking and dating application.</p></blockquote>
+<p>But we’ll come back to this later.</p>
+<p>We begin with the preparation steps, where we see a screenshot of the author’s attempt: “<a href="http://dogmeet.net/">dogmeet.net</a>” – it looks pretty neat.</p>
+<p>Sure i’m a pretty advanced user, so I’ll skip this and jump directly to the comments to see what’s been said.</p>
+<blockquote><p>just google phpizabi and you get <a href="http://www.phpizabi.net/" target="_blank">www.phpizabi.net</a> – it’s open source which means you can download it all from the interweb.</p></blockquote>
+<p>Thanks Sam, this should get me started.</p>
+<p>Visiting the site, I’m greeted with quite a pretty looking site, however the last entry in their news is a vulnerability report from back in August 2008, I figured this would be fixed by now and proceeded to download regardless.</p>
+<p>The file I got given was “<a href="http://www.phpizabi.net/?L=downloads.downloadcore&amp;X=dist.core.download&amp;latest=1">PHPizabi_0.848b_C1_HFP1.zip</a>“.</p>
+<p>I skip to step 2: Installation.</p>
+<p>I quickly notice that the installation I’m using is nothing like the (better looking) screenshots in the tutorial, but I thought “never mind it must be a newer version”.</p>
+<p>Upon completion of the fairly straightforward installation I get straight to work.</p>
+<p>First thing I look at is the themes. There is only one provided and it looks nothing like the (better looking) one seen on the article. Strange, I thought, perhaps they are using a different package.</p>
+<p>From here I proceeded to to investigate what other themes I can get for free. I soon found out that “not many” was the answer, although I did find a link entitled “<a href="http://digg.com/programming/PhpIzabi_Mods_24_mods_themes_FREE_DOWNLOAD">PhpIzabi Mods, 24 mods &amp; themes:FREE DOWNLOAD</a>“. I figured it may be worth a look at.</p>
+<p>Pretty wrong. The themes were no better coded than the shipped one. Poor markup, poor use of CSS, and just generally not very good looking.</p>
+<p>This would take some time to cleanup. I started anyway.</p>
+<p>I cleaned up the “frame.tpl” making it all XHTML, removed the table layout, and added new styles to handle it. I also cleaned up “home.tpl” and a few more of the tpl files.</p>
+<p>I eventually started getting somewhere, so decided to browse around the site I had started to form. Some of the pages simply didn’t look right, and wouldn’t populate correctly. I decided to look at the code.</p>
+<p>In a way, I wish I never had. In the “index.php” I noticed a lot of poor coding, stuff that I’d not seen since about 2005, makes sense since the copyright says 2005, and last modification date was September 3rd 2006.</p>
+<p>This isn’t very reassuring, this would need a LOT of work to bring it up to speed for 2008. Perhaps I downloaded the wrong version? There must be a more up to date version or a simply better version?</p>
+<p>It was at this point that I decided to read the included documentation starting with the “UPDATE_README.TXT”. Here I find this:</p>
+<blockquote><p>To perform an update from PHPizabi 0.4XX, please visit the PIO website to download<br>
+the latest migration tool – <a href="http://online.phpizabi.net">http://online.phpizabi.net</a></p></blockquote>
+<p>Interesting. 0.4XX must have been a fairly popular version for them to create a migration tool for and I also found that the “phpizabi online” contained lots of mods and themes.</p>
+<p>However, looking at the “core” releases I found that the latest release was “Mar. 5th 2007”. This is not good for any project.</p>
+<p>What the hell is going on here? Time to do some <a href="http://www.google.co.uk/search?q=phpizabi">research</a>.</p>
+<p>I came across the <a href="http://demo.phpizabi.net/">PHPizabi demo site</a>, which looks similar to the version I have (apart from the mention of Alicia), only it has broken pages too (see <a href="http://demo.phpizabi.net/?L=inkspot.index">Inkspot</a>). I’m convinced I have the wrong version now.</p>
+<p>This is when I discover phpizabi.com, and their <a href="http://www.phpizabi.com/?L=info.about">about</a> section:</p>
+<blockquote><p>PHPizabi was founded in mid 2005 by Jeff Knipp whom hired Claude Desjardens to code a personal website. A short time later Claude and Jeff agreed to become 50/50 partners and the personal project became what was destined to be known as PHPizabi.</p>
+<p>In August 2005 the first release of PHPizabi was made available to the general public to download free of charge. PHPizabi has gained international fame through various publications as one of the best free community software on the market and has a broad following of users.</p>
+<p>In November 2006, Jeff was illegally removed from the PHPizabi project by Claude Desjardens. Though legal remedy has not been ruled out, the best interest of the community was taken into consideration and thus the creation of this site which was created to offer the community an alternative to the non-community oriented support provided by the PHPizabi.net site.</p>
+<p>Where the net site surrounds themselves around those only wishing to make a buck or two by allowing people to sell 1 line code mods for ridiculous prices, we believe in the open source community spirit. While we do have the Mod Club, we have many mods that are free, and as always support is 100% free.</p></blockquote>
+<p>Turns out there’s <a href="http://chris.instantspot.com/blog/2006/12/15/PHPizabi-got-jacked">legal issues surrounding this project</a>. This is no good.</p>
+<p>I decided to return the original article and try and figure out where it all went so wrong.</p>
+<p>On the first page, I find the following statements which I had clearly missed:</p>
+<blockquote><p>Find the file PHPizabi_0.415b_R3.zip on this issue’s CD and drag it over to your hard drive</p>
+<p>return to the CD and find the file 0415bR3_sphfixHFP.zip</p></blockquote>
+<p>As it seems, they ARE using a different version, it appears to be the earlier 0.4XX version mentioned in the upgrade text in the newer version. I found this:</p>
+<blockquote><p><a href="http://www.phpizabi.net/legacy_packages/PHPizabi_0.415b_R4.zip">PHPizabi 0.415b R4</a> 6.03Mb      11/23/2005      No support      Encrypted (IonCube)</p></blockquote>
+<p>Low and behold here we have the version mentioned in the article, released back in 2005, however it has IonCube Encryption on the core files. Odd because I remember the article saying that it was 100% open source. Guess not.</p>
+<p>Further research via <a href="http://news.google.co.uk/archivesearch?q=phpizabi">google news</a> finds me an article describing <a href="http://www.vupen.com/english/advisories/2008/0585">a known vulnerability in PHPizabi</a>. I also discovered that there is <a href="http://xforce.iss.net/xforce/xfdb/44509">still no fix</a>, dubbing PHPizabi as <a href="http://digg.com/programming/PHPizabi_the_most_hackable_Dating_Script_on_the_Internet_2">the most hackable Dating Script on the Internet</a>. There’s no end to security issues in PHPizabi.</p>
+<p>It seems I’m not alone, others have also had <a href="http://forums.digitalpoint.com/showthread.php?t=455622">bad experiences with PHPizabi</a> and apparently <a href="http://www.byrobert.com/robblog/2007/03/03/phpizabis-dating-software-is-greatbut-one-in-support-sucks/">support sucks even when you pay</a>.</p>
+<p>So what now? I CANNOT use this, it’s unprofessional, barely usable, unmaintainable, poorly coded and worst of all vulnerable to exploitation. This project is dead.</p>
+<p>So with the help of my earlier research, and <a href="http://en.wikipedia.org/wiki/Comparison_of_social_networking_software">wikipedia</a>, I found some alternatives:</p>
+<ul>
+<li><a href="http://www.tufat.com/s_free_dating_system.htm">OSDate</a></li>
+<li><a href="http://www.boonex.com/products/dolphin/">Boonex Dolphin</a></li>
+<li><a href="http://www.dzoic.com/">DZOIC</a></li>
+<li><a href="http://www.socialengine.net/">SocialEngine</a></li>
+<li><a href="http://www.phpfox.com/">phpFox</a></li>
+<li><a href="http://www.barnraiser.org/aroundme">AroundMe</a></li>
+<li><a href="http://peopleaggregator.net/">PeopleAggregator</a></li>
+<li><a href="http://elgg.org/">ELGG</a></li>
+<li><a href="http://developer.mugshot.org/">Mugshot</a></li>
+<li><a href="http://drupal.org/">Drupal</a></li>
+<li><a href="http://communityserver.com/">Community Server</a></li>
+<li><a href="http://www.joomla.org/">Joomla!</a></li>
+<li><a href="http://virtuoso.openlinksw.com/wiki/main/Main/Ods">ODS</a></li>
+</ul>
+<p>Also checkout this <a href="http://www.techcrunch.com/wp-content/white_label_social_networking_solutions_chart2.html">social networking solution comparison table at techcrunch</a>.</p>
+<p>What did you decide to go with and why?</p>
+<p>Hopefully a “refreshingly professional, 100 per cent open source, social networking and dating application”, but I don’t hold high hopes.</p>
+<p><strong>UPDATE:</strong> I decided to share my article with the <a href="http://www.phpizabi.com/forum/">PHPizabi.com forum</a>, however I guess they didn’t agree with me as I’m banned. The reply post notification via email from blackbook says: “yea ya like giving links to my paid mods for free..your banned dude”, thanks, as good as an excuse as any I guess, but it begs the question: now who’s “wishing to make a buck or two”? Besides, let’s face it, if nobody is going to want to use PHPizabi, who’s going to want to use the mods anyway?</p>
+<p><strong>UPDATE2: </strong>I’m looking at writing a dating site solution using CakePHP as the framework, based on Matt Inman’s <a href="http://mingle2.com/blog/view/how-i-built-mingle2">Mingle2</a>. I sympathise with his decision to write his own solution. Wish me luck!</p>
+<div class="yarpp-related">
+<p>Related posts:</p><ol>
+<li><a href="https://hm2k.org/posts/new-site" rel="bookmark" title="New Site">New Site </a> <small>For some time I have been meaning to update my...</small></li>
+<li><a href="https://hm2k.org/posts/cex-co-uk-site-errors" rel="bookmark" title="Cex.co.uk site errors">Cex.co.uk site errors </a> <small>After browsing the cex.co.uk website for some time I came...</small></li>
+<li><a href="https://hm2k.org/posts/creating-a-digg-clone-for-your-niche-market" rel="bookmark" title="Creating a Digg clone for your niche market">Creating a Digg clone for your niche market </a> <small>First of all you need to choose your weapon: Code...</small></li>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What’s wrong with low version numbers?">What’s wrong with low version numbers? </a> <small>In a presentation entitled “Why I hate Django”, Cal Henderson...</small></li>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+</ol>
+</div>
+						</div>
+
+			<p class="postfeedback">
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="Permanent link to PHPizabi – creating a dating site" class="permalink">Permalink</a>
+			</p>
+			
+		</div>
+		
+		<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="https://hm2k.org/index.php?social_controller=auth&amp;social_action=reload_form&amp;redirect_to=https://hm2k.org/posts/phpizabi-creating-a-dating-site&amp;post_id=301">
+			Logging In...		</div>
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#respond" style="display:none;">cancel</a></small></h3><form action="https://hm2k.org/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=twitter&amp;post_id=301" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=facebook&amp;post_id=301" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p><p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value=""></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value=""><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value=""></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post It"> <input type="hidden" name="comment_post_ID" value="301" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0"><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value=""></p><div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="d957cec7be"></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="197"></p></div></form>	</div>
+		</div>
+	<div id="social-tabs-comments">
+				<ul class="social-nav social-clearfix">
+			<li class="social-all social-tab-main social-current-tab"><a href="#" rel="social-all"><span>13 Replies</span></a></li>
+			<li class="social-wordpress"><a href="#" rel="wordpress"><span>0 Comments</span></a></li>
+			<li class="social-twitter"><a href="#" rel="social-twitter"><span>0 Tweets</span></a></li>
+			<li class="social-facebook"><a href="#" rel="social-facebook"><span>0 Facebook</span></a></li>
+			<li class="social-pingback"><a href="#" rel="social-pingback"><span>0 Pingbacks</span></a></li>
+		</ul>
+
+		
+		<div id="social-comments-tab-all" class="social-tabs-panel social-tabs-first-panel">
+			<div id="comments" class="social-comments">
+				<div class="social-last-reply-when">Last reply was January 6, 2011</div><div class="cf-clearfix"></div>				<ol class="social-commentlist">
+				<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::start_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::start_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>18</b><br>
+<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::end_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::end_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>42</b><br>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-133425">
+<div class="social-comment-inner social-clearfix" id="comment-133425">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/5cc60dfa6209112a5476f25eda4b090c?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/5cc60dfa6209112a5476f25eda4b090c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">MontesBoogey</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-133425" class="social-posted-when" target="_blank">January 9, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Dude, u hit this one on the nose! I’ve been looking through miles of code trying to figure out why phpizabi, the “master social net cms” was running like an old man desperately trying to get one off, and,  after reading your well put together article,  ive decided that phpizabi is simply a vegitated body on life support. Pull the plug! Upon first inspection Phpizabi looks promising. A “potential adultfriendfinder or myspace” and features alot of great mods and alotta free content…. but…. The support is only free cause it sucks (as does the payed support), the code is shotty at best, and the themes are impossible to work with! before this i was trying to work with phpnuke and drupal. phpnuke was not the best cms, but easy to work with and I am greatfull to have started with it, great script for starters barely learning php and working with cms. Beyond that, it sucks. Drupal, though I didnt get too far into, is quite promising. Not sure how it would hold up on a “pay for premium” platform, but from what i have seen it is a powerful social net script. Although, when you have a fresh installation there re few if any promising features. Lots of free mods and themes though. Well bud, kudos to you for exposing this dead, potential hack-frenzy of a script. I will continue to check back on this page simply to see what else you may discover. </p>
+<p>Thanx,<br>
+Your friend from Cali,<br>
+D. C. Montes</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-136017">
+<div class="social-comment-inner social-clearfix" id="comment-136017">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/386cfd3a8cb13c7821e22578c0b3dac5?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/386cfd3a8cb13c7821e22578c0b3dac5?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">R.M.Taylor</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-136017" class="social-posted-when" target="_blank">January 21, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I use this script and with minimal effort you can address the hacking vunerablility, most sites run the core and do not use the security updates HFP2 and HFP3 and this leaves them open to attack, with these implemented hacking is less likely, i say less likely as nothing is un-hackable if they are detemined enough. There is rumoured to be a new release from the phpizabi.com site on the way, with all the bugs that have been found over the years ironed out and mods that have been created already built-in . When the release date is i dont know but its pretty much a done deal.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-138536">
+<div class="social-comment-inner social-clearfix" id="comment-138536">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/d6e71346b451957c316114a9458fa6f1?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/d6e71346b451957c316114a9458fa6f1?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.SurfAdventureTravel.com" rel="external nofollow ugc" class="url">SurfAdventureTravel</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-138536" class="social-posted-when" target="_blank">February 2, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I’ve only just started researching Dating Scripts again for another client, and It’s refreshing to read a straight-up, as it happened, assault on a product. Non-fluff, with references in place. I’m not getting good vibes on the ‘off-the-shelf’ open-source options available, and I guess it all comes down to picking the most extensible option, (cleanest model, tight syntax – does it exist?!?!?!) functionality/expansion/load-wise, with the tightest security and the least amount of ‘flaws’ or customisation required. In the end, you’ll need to have a good development team backing you or be a capable developer in order to take your chosen platform to the next level.</p>
+<p>Your article is quality, I’ll be back too.</p>
+<p>Thanks Bra.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-140972">
+<div class="social-comment-inner social-clearfix" id="comment-140972">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/408e770ca55e9818d30400bd4878c0ba?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/408e770ca55e9818d30400bd4878c0ba?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://iSpyWithMy.com" rel="external nofollow ugc" class="url">iSpyWithMy.com</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-140972" class="social-posted-when" target="_blank">February 14, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Many thanks for this article, saves us a lot of time and needless hassle, well put together and documented.</p>
+<p>Time to search elsewhere.</p>
+<p>All the best!</p>
+<p>Mark</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-151040">
+<div class="social-comment-inner social-clearfix" id="comment-151040">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/e6af005fedadeccfc34640b91e72b8d0?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/e6af005fedadeccfc34640b91e72b8d0?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.adultwork.org.uk" rel="external nofollow ugc" class="url">Jon</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-151040" class="social-posted-when" target="_blank">March 27, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi great write up keep the good work, I did download this with the intention of using this software, but I have now decided it may not be suitable. Great work Guy</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-163745">
+<div class="social-comment-inner social-clearfix" id="comment-163745">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/6e0a921d1847656d0811c65d1cdb96f5?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/6e0a921d1847656d0811c65d1cdb96f5?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.web100.com.ua" rel="external nofollow ugc" class="url">iryna</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-163745" class="social-posted-when" target="_blank">May 27, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Nowadays corporate and little communities become very popular. One of the instruments that helps to develop social network is Elgg. Is really one of the best in social network development. We have experience in work with Elgg. And during the recent time we are working on development of social network for medical workers on Elgg framework. Description of this social network you can find at <a href="http://www.web100.com.ua/eng/expertise/social-networks/index.html" rel="nofollow ugc">http://www.web100.com.ua/eng/expertise/social-networks/index.html</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-196735">
+<div class="social-comment-inner social-clearfix" id="comment-196735">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c9a9da38fb4ac4ecf9c15c7f0435c185?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c9a9da38fb4ac4ecf9c15c7f0435c185?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Bernardo Castro</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-196735" class="social-posted-when" target="_blank">February 6, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi, good work, i install phpizabi in my localhost por test, not a result great. thanks!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-198578">
+<div class="social-comment-inner social-clearfix" id="comment-198578">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/8570390d000e68f5fd2c5fbb11cbd8e4?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/8570390d000e68f5fd2c5fbb11cbd8e4?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">marty reese</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-198578" class="social-posted-when" target="_blank">February 22, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>my friend i am also preparing to create a dating website for specific clientel but i have no clue where to start.. please if anyone can help to get me up and running i would work something out for compensation… i just really need help soon as i have already a solid base of clients waiting… thanks… and God bless!!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-204373">
+<div class="social-comment-inner social-clearfix" id="comment-204373">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/96924571f94e9667051f3160bc4b4ac5?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/96924571f94e9667051f3160bc4b4ac5?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">help</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-204373" class="social-posted-when" target="_blank">April 21, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>hello friends<br>
+i am not able to find the link .</p>
+<p>can you please tell me from where i  can download phpizabi.</p>
+<p>thanks</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-205229">
+<div class="social-comment-inner social-clearfix" id="comment-205229">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/d0e23b7ef00a5c7b762ac1017024de63?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/d0e23b7ef00a5c7b762ac1017024de63?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Peter P.</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-205229" class="social-posted-when" target="_blank">April 29, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Nice article</p>
+<p>But why the hell do you compare free and open-source solutions with commercial ones in the thousands of dollar marks? You need to make sure readers know that half of your alternatives are very expensive and most likely not an option for them.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-205627">
+<div class="social-comment-inner social-clearfix" id="comment-205627">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.hm2k.com/" rel="external nofollow ugc" class="url">hm2k</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-205627" class="social-posted-when" target="_blank">May 4, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>@Peter P. I’m not aware of any of the alternatives I’ve listed being $1000 or more and many of them are free or open source.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-226971">
+<div class="social-comment-inner social-clearfix" id="comment-226971">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/cdff5fea69d4b08bbe201d44f5180685?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/cdff5fea69d4b08bbe201d44f5180685?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">KELECHI</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-226971" class="social-posted-when" target="_blank">August 13, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>SIR, THANKS FOR YOUR SUPPORT.I WANT TO DEVELOP THE SITE ON MY PC BEFORE UPLOADING TO REMOTE SERVE.PLEASE INFORM ME ABOUT THE STEPS TO INSTALL  ON LOCAL HOST.<br>
+THANKS</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-265146">
+<div class="social-comment-inner social-clearfix" id="comment-265146">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/5dbf20289807f8740229615a3ee4734c?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/5dbf20289807f8740229615a3ee4734c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://datingred.com" rel="external nofollow ugc" class="url">topknocka</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site#comment-265146" class="social-posted-when" target="_blank">January 6, 2011</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>@Kelechi –<br>
+If your local machine is running Windows, download and install a package called Appserv. It simulates a server environment on your PC. Upload all of your files to a directory within the WWW directory in Appserv, then browse to <a href="http://localhost/%24directory" rel="nofollow ugc">http://localhost/$directory</a> name$/ and your install script should run.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+				</ol>
+							</div>
+		</div>
+			</div>
+	
+	</div>
+				
+		
+</div>
+
+
+<div id="sidebar">
+<ul>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+
+			<ul>
+				<li class="page_item page-item-8 page_item_has_children"><a href="https://hm2k.org/articles">Articles</a>
+<ul class="children">
+	<li class="page_item page-item-74"><a href="https://hm2k.org/articles/pagerank">Google PageRank Script</a></li>
+	<li class="page_item page-item-9"><a href="https://hm2k.org/articles/regex">Guide to regular expressions</a></li>
+	<li class="page_item page-item-99"><a href="https://hm2k.org/articles/how-to-ask-a-question">How to ask a question</a></li>
+	<li class="page_item page-item-131"><a href="https://hm2k.org/articles/morals-of-downloading">Morals of Downloading</a></li>
+	<li class="page_item page-item-39"><a href="https://hm2k.org/articles/remove-spyware">Remove Spyware</a></li>
+	<li class="page_item page-item-104"><a href="https://hm2k.org/articles/seo-faq">SEO FAQ</a></li>
+	<li class="page_item page-item-10"><a href="https://hm2k.org/articles/seo-tips">SEO Tips</a></li>
+	<li class="page_item page-item-50"><a href="https://hm2k.org/articles/software">Software</a></li>
+	<li class="page_item page-item-5"><a href="https://hm2k.org/articles/startkeylogger">startkeylogger</a></li>
+	<li class="page_item page-item-106"><a href="https://hm2k.org/articles/useful-linux-commands">Useful Linux Commands</a></li>
+	<li class="page_item page-item-111"><a href="https://hm2k.org/articles/ways-to-waste-time-online">Ways to waste time online</a></li>
+	<li class="page_item page-item-40"><a href="https://hm2k.org/articles/yes-www">www. is NOT deprecated</a></li>
+</ul>
+</li>
+<li class="page_item page-item-13"><a href="https://hm2k.org/contact">Contact</a></li>
+			</ul>
+
+			</li>
+<li id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+
+			<ul>
+					<li class="cat-item cat-item-44"><a href="https://hm2k.org/posts/category/business">Business</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://hm2k.org/posts/category/dev">Development</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://hm2k.org/posts/category/general">General</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://hm2k.org/posts/category/hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://hm2k.org/posts/category/internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-285"><a href="https://hm2k.org/posts/category/security-2">Security</a>
+</li>
+	<li class="cat-item cat-item-260"><a href="https://hm2k.org/posts/category/software">Software</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://hm2k.org/posts/category/sysadmin">Sysadmin</a>
+</li>
+			</ul>
+
+			</li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+
+			<ul>
+					<li><a href="https://hm2k.org/posts/2012/05">May 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2012/03">March 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2011/11">November 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/10">October 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/09">September 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/08">August 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/07">July 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/06">June 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/05">May 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/04">April 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/03">March 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/02">February 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2010/12">December 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/11">November 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/06">June 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/05">May 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/04">April 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/02">February 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2009/12">December 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/11">November 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/10">October 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/09">September 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/08">August 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/07">July 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/06">June 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/04">April 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/02">February 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/01">January 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2008/12">December 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/11">November 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/09">September 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/07">July 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/06">June 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/05">May 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/04">April 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/03">March 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/02">February 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/01">January 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2007/12">December 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/11">November 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/10">October 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/08">August 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/07">July 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/06">June 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/05">May 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/04">April 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/03">March 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/02">February 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/01">January 2007</a></li>
+			</ul>
+
+			</li>
+<li id="text-5" class="widget widget_text"><h2 class="widgettitle">About</h2>
+			<div class="textwidget"><p>Welcome to the HM2K. Here you’ll find our experiments and findings as part of our on going Internet engineering.</p>
+</div>
+		</li>
+<li id="linkcat-16" class="widget widget_links"><h2 class="widgettitle">Projects</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://deaduseful.com/">Domain Name Whois</a></li>
+<li><a href="https://eggtcl.github.io/">Eggdrop TCL</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-28" class="widget widget_links"><h2 class="widgettitle">Network</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://phurix.co.uk/">Phurix Web Hosting</a></li>
+<li><a href="https://suzuki4u.co.uk/" title="The only UK based Suzuki Forums">Suzuki Community</a></li>
+
+	</ul>
+</li>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>		
+Copyright © 2002-2020 HM2K.
+</p>
+</div>
+
+</div>
+
+<link rel="stylesheet" id="yarppRelatedCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.5.1" type="text/css" media="all">
+<script type="text/javascript" id="social_js-js-extra">
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hm2k.org/wp-content/plugins/social/assets/social.js?ver=2.11" id="social_js-js"></script>
+<script async="async" type="text/javascript" src="https://hm2k.org/wp-content/plugins/akismet/_inc/form.js?ver=4.1.6" id="akismet-form-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-202036.js" async="async" defer></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.9',blog:'181873647',post:'301',tz:'0',srv:'hm2k.org'} ]);
+	_stq.push([ 'clickTrackerInit', '181873647', '301' ]);
+</script>
+
+</body>
+</html>

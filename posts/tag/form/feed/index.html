@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>form &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/form/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Tue, 11 Aug 2009 01:07:21 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>How to correctly make a PHP contact form</title>
+		<link>https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form</link>
+					<comments>https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 05 Feb 2007 22:13:09 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[contact]]></category>
+		<category><![CDATA[form]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/how-to-correctly-make-a-php-contact-form</guid>
+
+					<description><![CDATA[I use contact forms on many websites, and over the years I have discovered many problems with using them, including hijacking, mail injection, server hacks, XSS and platform issues. The main cause of this is simply due to lack of validation and error checking. Firstly you must fully understand how forms work with PHP. When [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/contact" rel="bookmark" title="Contact">Contact </a> <small>There are a number of ways to contact us: Find...</small></li>
+<li><a href="https://hm2k.org/posts/dont-forget-to-run-make-test" rel="bookmark" title="Don&#8217;t forget to run make test!">Don&#8217;t forget to run make test! </a> <small>During my install of PHP5 on FreeBSD&#8230; Build complete. Don&#8217;t...</small></li>
+<li><a href="https://hm2k.org/posts/exim-on-another-port-for-smtp" rel="bookmark" title="exim on another port for smtp">exim on another port for smtp </a> <small>When a business I know had trouble with their broadband...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-minimize-microsoft-office-outlook-to-the-system-tray" rel="bookmark" title="How to Minimize Microsoft Office Outlook to the System Tray">How to Minimize Microsoft Office Outlook to the System Tray </a> <small>Open your registry and find or create the key below....</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I use contact forms on many websites, and over the years I have discovered many problems with using them, including hijacking, mail injection, server hacks, XSS and platform issues.</p>
+<p>The main cause of this is simply due to lack of validation and error checking.</p>
+<p>Firstly you must fully understand how forms work with PHP. When you set the form &#8220;method&#8221; to POST, it sends the data to PHP as a super global variable called &#8220;$_POST&#8221;. In the HTML each &#8220;input&#8221; has a &#8220;name&#8221;, that is used to identify the related data.</p>
+<p>For example, there is an input field named &#8220;message&#8221;, to retrieve this in PHP you simply use &#8220;$_POST[&#8216;message&#8217;]&#8221;, we will be using this method to pass the data between the form and PHP for processing.</p>
+<p>This is a fine example of how NOT to do it,  so what is wrong with this method you may ask?</p>
+<p>Here are some of the issues we need to overcome:</p>
+<ul>
+<li>Data directly input into the mail() function without processing</li>
+<li>Does data from input fields contain malicious code</li>
+<li>Check user input is not empty</li>
+<li>Validation on user inputs</li>
+<li>If the email address the user entered is real</li>
+<li>Whether the email successfully sent or not</li>
+<li>Ensure the correct data is processed</li>
+<li>Which website the form was sent from</li>
+<li>The IP address of the sender</li>
+<li>Display the form at appropriate times</li>
+<li>Append additional fields to the end of the message</li>
+</ul>
+<p>Download here: <a href="/?dl=contact.phps">PHP Contact Form by HM2K v1.0.1</a></p>
+<p>The comments I have made within the code explains the reason what it does, and why it is included.</p>
+<p>I hope this solves some of the problems people experience with contact forms.</p>
+<p><em>Additional Notes:</em></p>
+<ul>
+<li>phpro.com offers further details on <a href="http://phpro.org/tutorials/Validating-User-Input.html">User Input Validation</a>, ideal for more advanced forms.</li>
+<li>In this example I have not used <a href="http://faq.css-standards.org/Forms">tableless CSS friendly forms</a>, just keep the focus on the PHP.</li>
+<li>You may also wish to add a <a href="http://www.white-hat-web-design.co.uk/articles/php-captcha.php">captcha security code</a> for added anti-spam protection.</li>
+</ul>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/contact" rel="bookmark" title="Contact">Contact </a> <small>There are a number of ways to contact us: Find...</small></li>
+<li><a href="https://hm2k.org/posts/dont-forget-to-run-make-test" rel="bookmark" title="Don&#8217;t forget to run make test!">Don&#8217;t forget to run make test! </a> <small>During my install of PHP5 on FreeBSD&#8230; Build complete. Don&#8217;t...</small></li>
+<li><a href="https://hm2k.org/posts/exim-on-another-port-for-smtp" rel="bookmark" title="exim on another port for smtp">exim on another port for smtp </a> <small>When a business I know had trouble with their broadband...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-minimize-microsoft-office-outlook-to-the-system-tray" rel="bookmark" title="How to Minimize Microsoft Office Outlook to the System Tray">How to Minimize Microsoft Office Outlook to the System Tray </a> <small>Open your registry and find or create the key below....</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">71</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:46 by W3 Total Cache
+-->

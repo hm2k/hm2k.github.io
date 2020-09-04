@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Apache &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/apache/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 21 Jan 2009 12:58:10 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>suPHP and .phps PHP code highlighting support</title>
+		<link>https://hm2k.org/posts/suphp-and-phps</link>
+					<comments>https://hm2k.org/posts/suphp-and-phps#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 17 Jul 2008 12:27:12 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[Apache]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=214</guid>
+
+					<description><![CDATA[Today a user on one of my web servers asked me why .phps files would only download and not show the highlighted PHP code as expected. This is usually done by adding the following to your &#8220;httpd.conf&#8221;&#8230; AddType &#8216;application/x-httpd-php-source&#8217; .phps We use the cPanel web hosting control panel and to improve security cPanel recommend using [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+<li><a href="https://hm2k.org/posts/php-getmxrr-support-for-windows" rel="bookmark" title="PHP getmxrr() support for windows">PHP getmxrr() support for windows </a> <small>As many of you may be aware there&#8217;s a lack...</small></li>
+<li><a href="https://hm2k.org/posts/mydigitallife-info-stole-my-code" rel="bookmark" title="mydigitallife.info stole my code">mydigitallife.info stole my code </a> <small>I wrote a little script for an article on fixr.co.uk...</small></li>
+<li><a href="https://hm2k.org/posts/tech-support-blog" rel="bookmark" title="Tech support blog">Tech support blog </a> <small>I&#8217;ve recently launched a tech support job, which combines aspects...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Today a user on one of my web servers asked me why .phps files would only download and not show the highlighted PHP code as expected.</p>
+<p>This is usually done by adding the following to your &#8220;httpd.conf&#8221;&#8230;</p>
+<blockquote><p>AddType &#8216;application/x-httpd-php-source&#8217; .phps</p></blockquote>
+<p>We use the cPanel web hosting control panel and to improve security <a href="http://www.cpanel.net/support/docs/ea/ea3/ea3php_hardening_php.html">cPanel recommend using suPHP</a>, which allows PHP scripts to run as a user rather than &#8220;nobody&#8221;.</p>
+<p>This means that adding the above line to &#8220;httpd.conf&#8221; <a href="http://lists.marsching.com/pipermail/suphp/2005-January/000638.html">does not work with suPHP</a>.</p>
+<p>So what can be done?</p>
+<p><span id="more-214"></span></p>
+<p>The official word is located in the <a href="http://www.suphp.org/FAQ.html">suPHP FAQ</a>, which says:</p>
+<blockquote><p><strong> Does suPHP support code highlighting by using the &#8220;.phps&#8221; extension?</strong></p>
+<p>suPHP itself has no support for code highlighting. The main reason      is that PHP-CGI does not support any input parameter to activate      code highlighting. However there is a solution based on a small      PHP script and some rewrite rules. You can find the discussion at      <a href="http://forums.macosxhints.com/archive/index.php/t-23595.html">http://forums.macosxhints.com/archive/index.php/t-23595.html</a>.</p></blockquote>
+<p>So I decided to checkout the suggested link.</p>
+<p>I noticed that even though the FAQ suggested using rewrite rules, the forum did not provide any kind of working solution.</p>
+<p>Using the PHP code supplied, and a bit of rewrite ingenuity we can get this working as expected.</p>
+<p>First, create a file called &#8220;phpsource.php&#8221;, in this file paste the following code:</p>
+<blockquote><p>&lt;?php<br />
+if (substr($_GET[&#8216;file&#8217;],strpos($_GET[&#8216;file&#8217;],&#8217;.&#8217;)) == &#8216;.phps&#8217;) {<br />
+highlight_file($_GET[&#8216;file&#8217;]);<br />
+}<br />
+?&gt;</p></blockquote>
+<p>Then, in your &#8220;.htaccess&#8221;, paste the following code:</p>
+<blockquote><p>RewriteRule ^(.+\.phps)$ phpsource.php?file=$1 [L]</p>
+<p><em>Note: If you don&#8217;t already have rewrites turned on </em><em>in your &#8220;.htaccess&#8221; file,</em><em> you will also need the line &#8220;RewriteEngine On&#8221; at the top.</em></p></blockquote>
+<p>What this will do is pass all &#8220;.phps&#8221; files through your &#8220;phpsource.php&#8221; script, and output a highlighted version.</p>
+<p>The benefits of this solution is that it&#8217;s portable (will work on any server); it won&#8217;t(/shouldn&#8217;t) break when you upgrade apache or PHP; it&#8217;s pretty secure as it&#8217;ll only handle .phps files, as expected; it&#8217;s quick and effective.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+<li><a href="https://hm2k.org/posts/php-getmxrr-support-for-windows" rel="bookmark" title="PHP getmxrr() support for windows">PHP getmxrr() support for windows </a> <small>As many of you may be aware there&#8217;s a lack...</small></li>
+<li><a href="https://hm2k.org/posts/mydigitallife-info-stole-my-code" rel="bookmark" title="mydigitallife.info stole my code">mydigitallife.info stole my code </a> <small>I wrote a little script for an article on fixr.co.uk...</small></li>
+<li><a href="https://hm2k.org/posts/tech-support-blog" rel="bookmark" title="Tech support blog">Tech support blog </a> <small>I&#8217;ve recently launched a tech support job, which combines aspects...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/suphp-and-phps/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">214</post-id>	</item>
+		<item>
+		<title>Friendly URLs (revisited)</title>
+		<link>https://hm2k.org/posts/friendly-urls</link>
+					<comments>https://hm2k.org/posts/friendly-urls#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 16 Jun 2008 12:02:59 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/friendly-urls</guid>
+
+					<description><![CDATA[Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all familiar with URLs that look like this: http://www.example.com/?nav=page These type of URLs aren&#8217;t particularly &#8220;friendly&#8221;, they are known as dynamic URLs. As a rule of thumb search engines such as Google don&#8217;t like them as much as &#8220;static URLs&#8221;. However, Google has recently released an [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess" rel="bookmark" title="Creating subdomains from directories using mod_rewrite in Apache .htaccess">Creating subdomains from directories using mod_rewrite in Apache .htaccess </a> <small>The idea was to have the ability to create unlimited...</small></li>
+<li><a href="https://hm2k.org/posts/word-separators-in-urls" rel="bookmark" title="Word separators in URLs">Word separators in URLs </a> <small>In the world of web development and search engine optimisation...</small></li>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><strong>Turn dynamic URLs into friendly URLs</strong></p>
+<p>I&#8217;m sure we&#8217;re all familiar with <a href="http://en.wikipedia.org/wiki/URL">URLs</a> that look like this:</p>
+<blockquote><p>http://www.example.com/?nav=page</p></blockquote>
+<p>These type of URLs aren&#8217;t particularly &#8220;friendly&#8221;, they are known as dynamic URLs. As a rule of thumb search engines such as Google don&#8217;t like them as much as &#8220;static URLs&#8221;.</p>
+<p>However, Google has recently released an article on this very subject entitled <a href="http://googlewebmastercentral.blogspot.com/2008/09/dynamic-urls-vs-static-urls.html">Dynamic URLs vs. static URLs</a>, I recommend you give it a read so you fully understand what we&#8217;re talking about.</p>
+<p><a href="http://www.google.co.uk/intl/en/webmasters/guidelines.html"><span id="more-53"></span>Google</a> suggests that many search engine crawlers do not like dynamic URLs as much as static URLs.</p>
+<p>A &#8220;static&#8221; or &#8220;friendly&#8221; version of the above URL could be as follows:</p>
+<blockquote><p>http://www.example.com/page.html</p></blockquote>
+<p>Here&#8217;s how it&#8217;s done&#8230;</p>
+<p><strong>Solution 1</strong></p>
+<p>Apache&#8217;s <a href="http://httpd.apache.org/docs/1.3/mod/mod_rewrite.html">mod_rewrite</a> can be easily used via a file called &#8220;.htaccess&#8221; to turn dynamic urls into friendly urls.</p>
+<p>Here is an example of how it&#8217;s done:</p>
+<blockquote><p>#Turn on the Rewrite Engine<br />
+RewriteEngine on<br />
+#Set the base path<br />
+RewriteBase /<br />
+#Check that the lookup isn&#8217;t an existing file<br />
+RewriteCond %{REQUEST_FILENAME} !-f<br />
+#Check that the lookup isn&#8217;t an existing directory<br />
+RewriteCond %{REQUEST_FILENAME} !-d<br />
+#Check that the file isn&#8217;t index.php (avoid looping)<br />
+RewriteCond %{REQUEST_URI} !^index\.php$<br />
+#Force all .html lookups to the index file<br />
+RewriteRule (.+)*\.html index.php?nav=$1 [QSA,L]<br />
+#Note: QSA=query string append;L=Last, no more rules</p></blockquote>
+<p>This will rewrite all paths ending in &#8220;.html&#8221; to your index file.</p>
+<p>From there, it&#8217;s simply a case of tailoring the rewrite to your requirements.</p>
+<p>Checkout the <a href="http://www.ilovejackdaniels.com/mod_rewrite_cheat_sheet.png">mod_rewrite cheat sheet</a> for more help on rewrites.</p>
+<p><strong>Solution 2</strong></p>
+<p>If you ARE using PHP, a better way might be to just hand over ALL the path information to your &#8220;index.php&#8221; and handle it from there.</p>
+<p>The rewrite to do that looks something like this:</p>
+<blockquote><p>RewriteEngine on<br />
+RewriteBase /<br />
+RewriteCond %{REQUEST_FILENAME} !-f<br />
+RewriteCond %{REQUEST_FILENAME} !-d<br />
+RewriteCond %{REQUEST_URI} !^index\.php$<br />
+RewriteRule ^(.+)$ index.php/$1 [QSA,L]</p></blockquote>
+<p>As per above this will only rewrite paths that don&#8217;t exist.</p>
+<p>It doesn&#8217;t work out any slower than the above solution, as either way you&#8217;re passing it to PHP, and rewrites are fairly slow to begin with.</p>
+<p>In your &#8220;index.php&#8221;, you can parse $_SERVER[&#8216;PATH_INFO&#8217;] (or $_SERVER[&#8216;ORIG_PATH_INFO&#8217;]) for the path information. It may be quicker and easier to <a href="http://www.php.net/explode">explode</a> the path by &#8220;/&#8221;, and find the information you need using a <a href="http://www.php.net/foreach">foreach</a> rather than using regex in <a href="http://www.php.net/preg_match">preg_match</a>.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess" rel="bookmark" title="Creating subdomains from directories using mod_rewrite in Apache .htaccess">Creating subdomains from directories using mod_rewrite in Apache .htaccess </a> <small>The idea was to have the ability to create unlimited...</small></li>
+<li><a href="https://hm2k.org/posts/word-separators-in-urls" rel="bookmark" title="Word separators in URLs">Word separators in URLs </a> <small>In the world of web development and search engine optimisation...</small></li>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/friendly-urls/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">53</post-id>	</item>
+		<item>
+		<title>Configuring a FreeBSD IRC Shell Server</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server</link>
+					<comments>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 22 Aug 2007 21:46:59 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server</guid>
+
+					<description><![CDATA[This is a brief guide created to help configure a secure FreeBSD as an IRC shell server. In this case I will be running FreeBSD 6.0, with bash shell, SSHd, named (bind), httpd (Apache2+PHP4), FTPd (pure-ftpd). Note: In many cases, if you don&#8217;t wish to review the config when adding to it you can do: [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>This is a brief guide created to help configure a secure FreeBSD as an IRC shell server.</p>
+<p>In this case I will be running FreeBSD 6.0, with bash shell, SSHd, named (bind), httpd (Apache2+PHP4), FTPd (pure-ftpd).<span id="more-127"></span></p>
+<p>Note: In many cases, if you don&#8217;t wish to review the config when adding to it you can do: echo &#8216;&lt;string&gt;&#8217; &gt;&gt; &lt;file&gt; (ie: echo &#8216;accounting_enable=&#8221;YES&#8221;&#8216; &gt;&gt; /etc/rc.conf)</p>
+<p><strong>sshd</strong></p>
+<ul>
+<li>edit /etc/ssh/sshd_config</li>
+<li>Add line &#8220;Port 22&#8221; &#8211; This is default, BUT change to another port if you want to be even more secure.</li>
+<li>Add line &#8220;Protocol 2&#8221; &#8211; We don&#8217;t want protocol 1, just 2.</li>
+<li>Add line &#8220;LoginGraceTime 1m&#8221; &#8211; If you don&#8217;t login within 1 min, it will timeout.</li>
+<li>Add line &#8220;PermitRootLogin no&#8221; &#8211; You should not allow direct root login via ssh, use su.</li>
+<li>Add line &#8220;MaxAuthTries 3&#8221; &#8211; If you get your login incorrect 3 times, you&#8217;re doing something wrong anyway.</li>
+<li>Add line &#8220;X11Forwarding no&#8221; &#8211; You don&#8217;t run Xwindows on a server muppet!</li>
+<li>Add line &#8220;MaxStartups 15:30:60&#8221; &#8211; This means, after 15 concurrent unauthed connections, 30% of connections will be dropped, until it reaches a max of 60, then it&#8217;s full.</li>
+</ul>
+<p><strong>sysctl</strong></p>
+<ul>
+<li>You can read each current setting by doing sysctl &lt;setting&gt; (ie: sysctl kern.securelevel)</li>
+<li>If you are unsure about using a setting you can use &#8220;sysctl -w &lt;setting&gt;&#8221; to temporary set, until you next reboot.</li>
+<li>edit /etc/sysctl.conf</li>
+<li>Add line &#8220;security.bsd.see_other_uids=0&#8221; &#8211; We don&#8217;t want users to see each other&#8217;s processes.</li>
+<li>Add line &#8220;kern.securelevel=1&#8221; &#8211; By default it is -1, you don&#8217;t need this unless you&#8217;re running Xwindows, run at least 0.</li>
+<li>Add line &#8220;net.inet.tcp.blackhole=2&#8221; &#8211; This will drop ALL tcp packets that are received on a CLOSED port and not reply.</li>
+<li>Add line &#8220;net.inet.udp.blackhole=1&#8221; &#8211; This will drop ALL udp packets that are received on a CLOSED port and not reply.</li>
+<li>Add line &#8220;kern.ipc.somaxconn=1024&#8221; &#8211; Default is 128, this means we can have more concurrent connections. If like you me you have plenty of bandwidth, this is best, otherwise if you get attacked, you&#8217;ll reach 128 very quickly.</li>
+<li>Add line &#8220;net.inet.icmp.icmplim=50&#8221; &#8211; Default is 200, you shouldn&#8217;t need this many, set it to 50 to reduce the amount of ICMPs sent back per second.</li>
+<li>Add line &#8220;net.inet.ip.rtexpire=2&#8221; &#8211; Default is 3600, See the <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/securing-freebsd.html#AEN18452">FreeBSD handbook: Denial Of Service Attacks</a>.</li>
+<li>Add line &#8220;net.inet.ip.rtminexpire=2&#8221; &#8211; Default is 10, See the <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/securing-freebsd.html#AEN18452">FreeBSD handbook: Denial Of Service Attacks</a>.</li>
+<li>Add line &#8220;net.inet.tcp.always_keepalive=1&#8221; &#8211; This will help discover dead connections and clears them.</li>
+<li>Add line &#8220;net.inet.ip.random_id=1&#8221; &#8211; This is optional, but I like the idea. It gives you random PIDs instead of sequential.</li>
+</ul>
+<p>This is my &#8220;/etc/sysctl.conf&#8221;:</p>
+<blockquote><p>security.bsd.see_other_uids=0<br />
+kern.securelevel=1<br />
+net.inet.tcp.blackhole=2<br />
+net.inet.udp.blackhole=1<br />
+kern.ipc.somaxconn=1024<br />
+net.inet.icmp.icmplim=50<br />
+net.inet.ip.rtexpire=2<br />
+net.inet.ip.rtminexpire=2<br />
+net.inet.tcp.always_keepalive=1<br />
+net.inet.ip.random_id=1</p></blockquote>
+<p><strong>rc.conf</strong></p>
+<ul>
+<li> edit /etc/rc.conf</li>
+<li>Add line &#8216;portmap_enable=&#8221;NO&#8221;&#8216; &#8211; You only need this if you&#8217;re using NFS, which we&#8217;re not.</li>
+<li>Add line &#8216;sendmail_enable=&#8221;NO&#8221;&#8216; &#8211; This will tell sendmail to only listen on the localhost, it&#8217;s not a good idea to leave a mail server open to spam on a shell server.</li>
+<li>Add line &#8216;nfs_server_enable=&#8221;NO&#8221;&#8216; &#8211; As above, we don&#8217;t need NFS.</li>
+<li>Add line &#8216;nfs_client_enable=&#8221;NO&#8221;&#8216; &#8211; Again, no NFS, not even a client.</li>
+<li>Add line &#8216;accounting_enable=&#8221;YES&#8221;&#8216; &#8211; This enables <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/security-accounting.html">process accounting</a>. (You need to do touch /var/account/acct &amp;&amp; accton /var/account/acct).</li>
+<li>Add line &#8216;clear_tmp_enable=&#8221;YES&#8221;&#8216; &#8211; This will clear the &#8220;/tmp&#8221; dir at boot time.</li>
+<li>Add line &#8216;syslogd_flags=&#8221;-ss&#8221;&#8216; &#8211; This stops syslogd from broadcasting on port 514.</li>
+<li>Add line &#8216;enable_quotas=&#8221;YES&#8221;&#8216; &#8211; Assuming you&#8217;re running a shell server, you want quotas enabled.</li>
+<li>Add line &#8216;check_quotas=&#8221;YES&#8221;&#8216; &#8211;  This will help keep your users within their quotas.</li>
+<li>Add line &#8216;ntpdate_enable=&#8221;YES&#8221;&#8216; &#8211; This will enable ntpdate, which will keep your date/time up-to-date.</li>
+<li>Add line &#8216;update_motd=&#8221;NO&#8221;&#8216; &#8211; This will ensure that the FreeBSD details aren&#8217;t added to the /etc/motd on each reboot. We don&#8217;t want to broadcast this information.</li>
+<li>Check for &#8216;inetd_enable&#8217; &#8211; Set it to NO, or add inetd_enable=&#8221;NO&#8221;, if it&#8217;s not there.</li>
+<li>Check for &#8216;named_enable&#8217; &#8211; Okay, so running named will increase overheads, but if this is a shell box it probably makes sense to run your own dns server as IRC relies a lot on resolving hosts.</li>
+<li>Check for &#8216;log_in_vain&#8217; &#8211; You may have set this based on what you read else where, but I recommend having this as &#8220;NO&#8221;, because it logs events on non-open ports, which could cause a ddos.</li>
+</ul>
+<p>The latter half of my &#8220;/etc/rc.conf&#8221; looks like this:</p>
+<blockquote><p>inetd_enable=&#8221;NO&#8221;<br />
+linux_enable=&#8221;YES&#8221;<br />
+sshd_enable=&#8221;YES&#8221;</p>
+<p>portmap_enable=&#8221;NO&#8221;<br />
+sendmail_enable=&#8221;NO&#8221;<br />
+nfs_server_enable=&#8221;NO&#8221;<br />
+nfs_client_enable=&#8221;NO&#8221;<br />
+accounting_enable=&#8221;YES&#8221;<br />
+clear_tmp_enable=&#8221;YES&#8221;<br />
+syslogd_flags=&#8221;-ss&#8221;<br />
+enable_quotas=&#8221;YES&#8221;<br />
+check_quotas=&#8221;YES&#8221;<br />
+ntpdate_enable=&#8221;YES&#8221;<br />
+update_motd=&#8221;NO&#8221;<br />
+named_enable=&#8221;YES&#8221;</p></blockquote>
+<p><strong>Firewall</strong></p>
+<p>For a shell server, a firewall may not be required, but for many others it may be required.</p>
+<ul>
+<li> edit /etc/firewall.rules &#8211; for a shell server, you can do the following:
+<ul>
+<li>You need to allow new connections for services on the following ports: 21 (ftpd), 22 (sshd), 53 (dns), 80 (httpd).</li>
+<li>If you are running any other core services, you will need to open the ports for those too. Remember, the first 1024 ports are reserved for root services.</li>
+</ul>
+<ul>
+<li>If you run an IRC shell server, you should open a range (ie: 2000-4000) for your users services. (such as eggdrops and psybncs).</li>
+<li>No other new connections to other ports should be allowed.</li>
+<li>All other traffic is okay.</li>
+</ul>
+</li>
+<li>Don&#8217;t forget to &#8220;chmod 600 /etc/firewall.rules&#8221;</li>
+<li>Add line &#8216;firewall_enable=&#8221;YES&#8221;&#8216; &#8211; We want a firewall enabled.</li>
+<li>Add line &#8216;firewall_logging=&#8221;YES&#8221;&#8216; &#8211; Logging the firewall can be useful.</li>
+<li>Add line &#8216;firewall_script=&#8221;/etc/firewall.rules&#8221;&#8216; &#8211; It needs to know where to find the rules. (don&#8217;t forget to touch /etc/firewall.rules)</li>
+</ul>
+<p><strong>Date and Time</strong></p>
+<p>You must ensure your system&#8217;s date/time is correct, otherwise SSH may fail and logs will be incorrect.</p>
+<ul>
+<li> As above, ensure you have &#8216;ntpdate_enable=&#8221;YES&#8221;&#8216; in your &#8220;rc.conf&#8221;.</li>
+<li>For first time use: &#8220;touch /etc/ntp.conf &amp;&amp; echo /etc/ntp.conf &gt;&gt; server uk.pool.ntp.org prefer &amp;&amp; echo /etc/ntp.conf &gt;&gt; driftfile /var/db/ntp.drift&#8221;</li>
+<li>Run: ntpdate uk.pool.ntp.org</li>
+</ul>
+<p><strong>Login.conf</strong></p>
+<p>Using <a href="http://www.freebsd.org/cgi/man.cgi?query=login.conf&amp;sektion=5">login.conf</a> you can create custom classes for your users giving them all sorts of limits and restrictions.</p>
+<ul>
+<li>edit /etc/login.conf</li>
+<li>If you change the &#8220;passwd_format&#8221; in the Default class to read &#8220;:passwd_format=blf:\&#8221;, this will give you blowfish password hashes, for better security, but you need to rebuild your login database by doing: &#8220;cap_mkdb /etc/login.conf&#8221;, and update all passwords by doing &#8220;passwd &lt;user&gt;&#8221; as root (check &#8220;/etc/master.passwd&#8221; all passwords will start with $2 if done correctly), don&#8217;t forget to edit /etc/auth.conf to &#8220;crypt_default=blf&#8221; also. This step isn&#8217;t required, but recommended.</li>
+<li>There are lots more options, you need to read the handbook for the &#8220;<a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/users-limiting.html">login.conf</a>&#8221; file.</li>
+<li>Run &#8220;cap_mkdb /etc/login.conf&#8221; when you&#8217;re done to update the database.</li>
+</ul>
+<p><strong>pure-ftpd</strong></p>
+<p>Instructions are as follows:</p>
+<ul>
+<li>cd /usr/ports/ftp/pure-ftpd &amp;&amp; make install</li>
+<li>cp /usr/local/etc/pure-ftpd.conf.sample  /usr/local/etc/pure-ftpd.conf</li>
+<li>edit  /usr/local/etc/pure-ftpd.conf (if required)
+<ul>
+<li>Change &#8220;NoAnonymous                 no&#8221; to yes</li>
+</ul>
+</li>
+<li>/usr/local/sbin/pure-config.pl /usr/local/etc/pure-ftpd.conf</li>
+<li>echo &#8216;<font size="-1">pureftpd_enable=&#8221;YES&#8221;</font>&#8216; &gt;&gt; /etc/rc.conf</li>
+</ul>
+<p><strong>Apache 2</strong></p>
+<ul>
+<li>edit /usr/local/etc/apache2/httpd.conf</li>
+<li>change the &#8220;ServerAdmin&#8221; line with your email address.</li>
+<li>change the &#8220;ServerTokens&#8221; line from &#8220;Full&#8221; to &#8220;Prod&#8221;, this means only &#8220;Apache&#8221; will be displayed.</li>
+<li>echo &#8216;<font size="-1">httpd_enable=&#8221;YES&#8221;</font>&#8216; &gt;&gt; /etc/rc.conf</li>
+</ul>
+<p><strong>oidentd</strong></p>
+<ul>
+<li>echo <font size="-1">&#8216;oidentd_enable=&#8221;YES&#8221;</font>&#8216; &gt;&gt; /etc/rc.conf</li>
+<li> edit /usr/local/etc/oidentd.conf</li>
+<li>Ensure the defaults deny everything, and that root has a different reply, ie:</li>
+</ul>
+<blockquote><p>default {<br />
+default {<br />
+deny spoof<br />
+deny spoof_all<br />
+deny spoof_privport<br />
+deny random<br />
+deny random_numeric<br />
+deny numeric<br />
+deny hide<br />
+}<br />
+}</p>
+<p>user root {<br />
+default {<br />
+force reply &#8220;UNKNOWN&#8221;<br />
+}<br />
+}</p></blockquote>
+<p>Note: You can add a user, if you want to allow spoof for certain users, and allow that.</p>
+<p><strong>Files and Permissions</strong></p>
+<ul>
+<li>&#8220;find / -perm -2000 -ls &amp;&amp; find / -perm -4000 -ls&#8221; &#8211; This lists binaries that everyone can currently access.</li>
+<li>Use &#8220;chmod a-s &lt;file&gt;&#8221; to remove access or &#8220;chmod o-rwx &lt;file&gt;&#8221; to allow just for wheel users.</li>
+<li>&#8220;chmod 640 /etc/crontab&#8221; &#8211; This will allow only root and wheel users to see it. Users don&#8217;t need to know what processes are started by cron.</li>
+<li>&#8220;chmod 600 /etc/rc.conf&#8221; &#8211; Users don&#8217;t need to access this.</li>
+<li>&#8220;chmod 600 /etc/sysctl.conf&#8221; &#8211; Users don&#8217;t need to access this.</li>
+<li>&#8220;chmod 0750 /root&#8221; &#8211; Stops non-wheel users from viewing root files.</li>
+<li>&#8220;chmod 640 /var/db/locate.database&#8221; &#8211; You don&#8217;t want all users to see all the files on your system.</li>
+<li>edit /etc/motd &#8211; Change this to say what you like.</li>
+<li>&#8220;touch /etc/COPYRIGHT&#8221; &#8211; This will remove the copyright info.</li>
+</ul>
+<p><strong>ToDo</strong></p>
+<ul>
+<li>Provide an in-depth example of a firewall script</li>
+<li>Provide details about working with Quotas</li>
+<li>Provide better usage of login.conf</li>
+</ul>
+<p><strong>Additional Security</strong></p>
+<ul>
+<li>Try <a href="http://www.onlamp.com/pub/a/bsd/2003/03/20/FreeBSD_Basics.html">checking system integrity with tripwire</a>.</li>
+<li>Keep things up to date with <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html">cvsup</a>.</li>
+</ul>
+<p><strong>Resources</strong></p>
+<ul>
+<li><a href="http://www.freebsd.org/security/">FeeBSD Security Information</a></li>
+<li><a href="http://www.defcon1.org/html/Security/Secure-Guide/secure-guide.html">Defcon1 Security Guide</a></li>
+<li><a href="http://www.dal.net/admin/vote/seceval.php3">A basic guide to securing FreeBSD (DALnet)</a></li>
+<li><a href="http://www.bsdguides.org/guides/freebsd/security/harden.php">Hardening FreeBSD (bsdguides.org)</a></li>
+<li><a href="http://silverwraith.com/papers/freebsd-ddos.php">Protecting yourself with FreeBSD</a></li>
+<li><a href="http://www.freebsdblog.org/archives/2005/06/a_sample_of_etc_1.html">sysctl.conf Sample (Freebsdblog.org)</a></li>
+<li><a href="http://www.onlamp.com/pub/a/bsd/2002/08/08/FreeBSD_Basics.html">Securing FreeBSD (ONlamp.com)</a></li>
+<li><a href="http://www.windowsecurity.com/whitepapers/FreeBSD_Security_HowTo.html">FreeBSD Security HowTo (windowssecurity.com)</a></li>
+<li><a href="http://www.ethereal.net/~tristan/freebsd/">tris&#8217; FreeBSD setup info</a></li>
+<li><a href="http://www.cpanel.net/docs/seminar/freebsd.pdf">cPanel FreeBSD Seminar</a></li>
+</ul>
+<p><strong>Final notes</strong></p>
+<p>I&#8217;ve written this as more of a reference, i&#8217;ve more than likely missed a few things, so feel free to add your own comments.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/feed</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">127</post-id>	</item>
+		<item>
+		<title>Creating subdomains from directories using mod_rewrite in Apache .htaccess</title>
+		<link>https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess</link>
+					<comments>https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 16 Mar 2007 00:25:32 +0000</pubDate>
+				<category><![CDATA[Apache]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess</guid>
+
+					<description><![CDATA[The idea was to have the ability to create unlimited subdomains simply by creating an appropreate directory for it in your html root directory. Since most people don&#8217;t have direct access to their httpd.conf, the obvious solution was to create a method using mod_rewrite within &#8220;.htaccess&#8221;. This also allowed it to be setup very easily [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+<li><a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="PHPizabi &#8211; creating a dating site">PHPizabi &#8211; creating a dating site </a> <small>During the summer of 2007 I decided to purchase a...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>The idea was to have the ability to create unlimited subdomains simply by creating an appropreate directory for it in your html root directory.</p>
+<p>Since most people don&#8217;t have direct access to their httpd.conf, the obvious solution was to create a method using mod_rewrite within &#8220;.htaccess&#8221;. This also allowed it to be setup very easily and quickly.</p>
+<p><span id="more-110"></span>I have no immediate use for this solution, however I know it will come in very handy in the future.</p>
+<p>Someone I know was trying to figure this out earlier today, so I took it upon myself to figure out how to work out a solution for this problem.</p>
+<p>After much discussion with #apache @ EFnet, in particular TBF, we came about the following solution.</p>
+<blockquote><p>#Grab the subdomain from the domain<br />
+RewriteCond %{HTTP_HOST} ^([^.]+).hm2k.org$<br />
+#Make sure the subdomain is not www or example<br />
+RewriteCond %{1} !^(www|example)$<br />
+#Check if the directory actually exists before we go there<br />
+RewriteCond /home/hm2k/public_html/%1 -d<br />
+#This stops it from looping<br />
+RewriteCond %{REQUEST_FILENAME} !^/home/hm2k/public_html/<br />
+#Finally, this is the actual rewrite<br />
+RewriteRule (.*) /home/hm2k/public_html/%1/$1 [Last]</p></blockquote>
+<p>Thanks to all those who helped, I hope this comes in useful to someone.</p>
+<p><strike>1136331104</strike></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+<li><a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="PHPizabi &#8211; creating a dating site">PHPizabi &#8211; creating a dating site </a> <small>During the summer of 2007 I decided to purchase a...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">110</post-id>	</item>
+		<item>
+		<title>Focus on one domain</title>
+		<link>https://hm2k.org/posts/focus-on-one-domain</link>
+					<comments>https://hm2k.org/posts/focus-on-one-domain#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 30 Jan 2007 01:02:13 +0000</pubDate>
+				<category><![CDATA[Apache]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/focus-on-one-domain</guid>
+
+					<description><![CDATA[Why you should be focusing on one domain name for one site Often you will find yourself buying a domain for your project (eg: example.com), however these days to secure the brand you have to buy all the associated domains (eg: example.net, example.org, example.co.uk, example.info, etc). I then find that visitors will end up entering [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/inveiscom-cn-domain-scam" rel="bookmark" title="Inveis.com .cn domain scam">Inveis.com .cn domain scam </a> <small>Today I received the following email from toby.yang@inveis.com&#8230; [Note: If...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+<li><a href="https://hm2k.org/posts/domain-example-com-has-exceeded-the-max-emails-per-hour-200-allowed-message-discarded" rel="bookmark" title="Domain example.com has exceeded the max emails per hour (200) allowed. Message discarded.">Domain example.com has exceeded the max emails per hour (200) allowed. Message discarded. </a> <small>Got this error with cpanel? Domain example.com has exceeded the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><strong>Why you should be focusing on one domain name for one site</strong></p>
+<p>Often you will find yourself buying a domain for your project (eg: example.com), however these days to secure the brand you have to buy all the associated domains (eg: example.net, example.org, example.co.uk, example.info, etc).</p>
+<p>I then find that visitors will end up entering the sites at different points from different domains, depending on how they find it, or what they have been told.</p>
+<p><span id="more-54"></span>The problem with this is its confusing, and its confusing for the user. The solution is to decide on one domain name, and focus on that, then simply redirect all traffic from the other domains to your main domain name.</p>
+<p>This will also help enforce your brand name by ensuring the user always gets redirected to the correct domain, even if they visit the others by mistake.</p>
+<p>In addition to this, Google states &#8220;<a href="http://www.google.com/support/webmasters/bin/answer.py?answer=35769">Don&#8217;t create multiple pages, subdomains, or domains with substantially duplicate content.</a>&#8220;, therefore by redirecting traffic to one domain, rather than having duplicates you stand more chance of your domain not being marked as &#8220;bad&#8221; by search engines. (Also see <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=44231">What&#8217;s a preferred domain?</a>)</p>
+<p>On a very similar note, another common problem is the &#8220;www.&#8221; prefix on domains, sometimes people include when visiting a URL, other times they do not. The problem with this is that &#8220;www.example.com&#8221; is considered an entirely different domain than &#8220;example.com&#8221; by search engines. By redirecting traffic that is NONE &#8220;www.example.com&#8221; we can still continue our focus and maintain our brand name.</p>
+<p><strong>How?</strong></p>
+<p>One method is using <a href="http://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=93633">301 redirects</a> to redirect from other domains, to your main one.</p>
+<p>We can do this by using mod_rewrite for Apache or ISAPI_Rewrite for IIS.</p>
+<p><strong>Apache mod_rewrite (.htaccess)</strong></p>
+<blockquote><p>RewriteEngine On</p>
+<p>RewriteCond %{HTTP_HOST} !^www\.example\.com$ [NC]<br />
+RewriteRule ^(.*)$ http://www.example.com/$1 [R=301,QSA,L]</p></blockquote>
+<p><em>Note: The QSA flag will append the query string to the rewritten URL.</em></p>
+<p><strong>IIS mod rewrite using ISAPI filter (mod_rewrite.ini)</strong></p>
+<blockquote><p>RewriteCond Host: !^www\.example\.com</p>
+<p>RewriteRule ^/(.*)$ http://www\.example\.com/$1 [I,RP]</p></blockquote>
+<p><em>Note: Some find ^(.*)$ works, others find ^/(.*)$ works. I&#8217;ll let you decide which to use.</em></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/inveiscom-cn-domain-scam" rel="bookmark" title="Inveis.com .cn domain scam">Inveis.com .cn domain scam </a> <small>Today I received the following email from toby.yang@inveis.com&#8230; [Note: If...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+<li><a href="https://hm2k.org/posts/domain-example-com-has-exceeded-the-max-emails-per-hour-200-allowed-message-discarded" rel="bookmark" title="Domain example.com has exceeded the max emails per hour (200) allowed. Message discarded.">Domain example.com has exceeded the max emails per hour (200) allowed. Message discarded. </a> <small>Got this error with cpanel? Domain example.com has exceeded the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/focus-on-one-domain/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">54</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:26 by W3 Total Cache
+-->

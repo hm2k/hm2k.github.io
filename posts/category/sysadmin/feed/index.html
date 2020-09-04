@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Sysadmin &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/category/sysadmin/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Sun, 06 May 2012 16:28:24 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Unable to update nameservers: Nameserver doesn&#8217;t exist at the registry</title>
+		<link>https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry</link>
+					<comments>https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Sun, 06 May 2012 16:28:24 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[dns]]></category>
+		<category><![CDATA[nameservers]]></category>
+		<category><![CDATA[opensrs]]></category>
+		<category><![CDATA[tucows]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3349</guid>
+
+					<description><![CDATA[If you have domains with TuCows OpenSRS you may be faced with this error when you try and set custom name servers on your domain through the OpenSRS manage interface: Unable to update nameservers: Nameserver [ns2.example.co.uk] doesn&#8217;t exist at the registry. Especially if you&#8217;ve recently set a new glue up. In the OpenSRS domain manager [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/php-opensrs-client" rel="bookmark" title="PHP OpenSRS Client">PHP OpenSRS Client </a> <small>This is only a quick message to say that I...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>If you have domains with TuCows OpenSRS you may be faced with this error when you try and set custom name servers on your domain through the <a href="https://manage.opensrs.net/index.cgi">OpenSRS manage interface</a>:</p>
+<p style="padding-left: 30px;">Unable to update nameservers: Nameserver [ns2.example.co.uk] doesn&#8217;t exist at the registry.</p>
+<p>Especially if you&#8217;ve recently set a <a href="http://www.nominet.org.uk/registrars/systems/data/nameservers/">new glue up</a>.</p>
+<p>In the OpenSRS domain manager it says:</p>
+<p style="padding-left: 30px;">** IMPORTANT: Before adding additional name servers to your configuration, you should be sure that the name server has setup correctly. 24 &#8211; 48 hours after you submit a request for an additional name server, it will be in the rotation for authoritative lookups and if it is not setup correctly, your site will take a long time to resolve when visitors try to find you.</p>
+<p>You can ignore this for now, here&#8217;s what you need to do first&#8230;</p>
+<p>You, or your admin who has access to the OpenSRS reseller interface needs to find the page in there entitled &#8220;Add Nameserver to All Foreign Registries&#8221; as per <a href="http://www.opensrs.com/docs/opensrsrwi/add_nameserver_to_all_foreign_registries.htm">these instructions</a>:</p>
+<p style="padding-left: 30px;">Add Nameserver to All Foreign Registries<br />
+This interface allows you to add Registered Nameservers to all of the Registries to which the OpenSRS system is connected. If you want to use a COM/NET/ORG nameserver (default.opensrs.net) on a .BIZ domain, you have to first add it to the “foreign” .BIZ Registry using this option. The reason for this is because each Registry keeps a database of “registered nameservers”, and new nameservers at “foreign” registries need to be explicitly added before they can be used to resolve domains in that TLD. Use this interface when you get the error “Unable to add nameservers: Command failed: unable to verify existence of nameserver” when trying to add a foreign nameserver to a domain.</p>
+<p style="padding-left: 30px;">To add a nameserver to all foreign registries</p>
+<ol>
+<li>In the Domain Management section of the RWI, click Add Nameserver to All Foreign Registries.</li>
+<li>In the Nameserver text box, enter the nameserver.</li>
+<li>Click Add Nameserver.</li>
+</ol>
+<p><a href="http://labs.phurix.net/upload/OpenSRS.png"><img loading="lazy" class="aligncenter" title="OpenSRS" src="http://labs.phurix.net/upload/OpenSRS-300x193.png" alt="" width="300" height="193" /></a></p>
+<p>Once you do that you should see a message that says:</p>
+<p style="padding-left: 30px;">.com registry: Successfully added<br />
+.asia registry: Successfully added<br />
+.xxx registry: Successfully added<br />
+.com.au registry: Successfully added<br />
+.biz registry: Successfully added<br />
+.bz registry: Successfully added<br />
+.ca registry: Successfully added<br />
+.cc registry: Successfully added<br />
+.com.cn registry: Successfully added<br />
+.co registry: Successfully added<br />
+.in registry: Successfully added<br />
+.info registry: Successfully added<br />
+.es registry: Successfully added<br />
+.me registry: Successfully added<br />
+.mobi registry: Successfully added<br />
+.name registry: Successfully added<br />
+.nl registry: Successfully added<br />
+.org registry: Successfully added<br />
+.tv registry: Successfully added<br />
+.us registry: Successfully added<br />
+.ws registry: Successfully added<br />
+.pro registry: Successfully added</p>
+<p>Or similar.</p>
+<p>Now we give it 24-48 hours, then you can set custom name servers on your domain via the OpenSRS manage interface.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/php-opensrs-client" rel="bookmark" title="PHP OpenSRS Client">PHP OpenSRS Client </a> <small>This is only a quick message to say that I...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3349</post-id>	</item>
+		<item>
+		<title>Migrating IMAP mailboxes to a cPanel server</title>
+		<link>https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server</link>
+					<comments>https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Mon, 07 Nov 2011 23:02:22 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[centos]]></category>
+		<category><![CDATA[cpanel]]></category>
+		<category><![CDATA[imap]]></category>
+		<category><![CDATA[imapsync]]></category>
+		<category><![CDATA[migration]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3322</guid>
+
+					<description><![CDATA[A customer got in touch with us and explained their situation. They need to setup their email on the go and configure some forwarders. Their issue was that they were never given access to the control panel by the account holder and have since lost touch. This unfortunately left them in a situation where they [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>A customer got in touch with us and explained their situation.<a href="http://labs.phurix.net/upload/Envelope.png"><img loading="lazy" class="alignright size-full wp-image-3328" title="Envelope" src="http://labs.phurix.net/upload/Envelope.png" alt="" width="256" height="256" srcset="https://hm2k.org/upload/Envelope.png 256w, https://hm2k.org/upload/Envelope-150x150.png 150w" sizes="(max-width: 256px) 100vw, 256px" /></a></p>
+<p>They need to setup their email on the go and configure some forwarders. Their issue was that they were never given access to the control panel by the account holder and have since lost touch.</p>
+<p>This unfortunately left them in a situation where they had no control over their hosting, they asked me to help them out.</p>
+<p>My task was to migrate their existing IMAP mailboxes to their hosting account on one of our cPanel servers&#8230;</p>
+<p><span id="more-3322"></span></p>
+<p>The first thing I did was get their UK domain onto our TAG giving us control over that for a small cost of £10+VAT, which the customer was only happy to pay.</p>
+<p>There are other ways to get control of the domain without the cost, such as dealing with the host directly but in this case, fasthosts refuses to communicate with you unless you&#8217;re a customer. Ridiculous.</p>
+<p>From here on inward, you&#8217;ll need root access to cPanel WHM on your server, or know someone who has.</p>
+<p>At this point you need to start to create your mailboxes on the new server that match up to the existing ones.</p>
+<p>The only issue with this is that you may find you can&#8217;t add &#8220;Remote Domains&#8221; (domains hosted elsewhere).</p>
+<blockquote><p>This item lets you allow cPanel users to create parked and addon domains that resolve to other servers. To make your selection, click the button corresponding to the option you wish to use. This value defaults to Off.</p>
+<p>Warning: Enabling this option can cause major security issues. We strongly recommend that you do not enable this option.</p></blockquote>
+<p>You&#8217;ll need to &#8220;<a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/WHMDocs/TweakSettings#Domains">Allow Remote Domains</a>&#8221; (Under &#8220;Tweak Settings&#8221; in WHM) so you&#8217;re able to add the domain. Once added, you can turn it off again.</p>
+<p>As I said, once the domain is added you can <a href="http://www.cpanel.net/media/tutorials/emailaccounts.htm">create your mailboxes</a> in cPanel to match what you already have.</p>
+<p>I then went ahead and added them to the customer&#8217;s email client (Outlook 2007) to make sure everything was working as expected (it was).</p>
+<p>They should have two sets of accounts added for each email address, the only difference between them should be the servers they use.</p>
+<h3>Migrating</h3>
+<p>This is where the fun starts.</p>
+<p>If you&#8217;ve tried moving messages before in Outlook you&#8217;ll know it&#8217;s pretty slow. The issue is that, you&#8217;re downloading the message from the existing server, copying it to your computer, then uploading it to the other server.</p>
+<p>This is a slow process, especially if you&#8217;re on regular UK broadband. In addition to that, you&#8217;ll find that Outlook will lock up while it waits for the server to respond.</p>
+<p>I tested moving a few thousand messages: it took 8 hours. At this rate it would take around a week to do all of the accounts which isn&#8217;t feasible in a live environment.</p>
+<p>Thunderbird isn&#8217;t much better. There had to be a better solution&#8230;</p>
+<p>I got in touch with cPanel, as they have a dedicated &#8220;migration&#8221; team, however they were asking for shell, ftp or control panel access, none of which the customer had.</p>
+<p>At first I had considered a server side, IMAP compatible email client such as Mutt or PINE, but I felt this may be a bit cumbersome.</p>
+<p>Enter imapsync&#8230;</p>
+<h3>imapsync</h3>
+<p>After a quick search I came across imapsync which appears to be the solution I was looking for.</p>
+<p>It&#8217;s written in Perl and is open source so there&#8217;s no reason it shouldn&#8217;t run on a CentOS server.</p>
+<p>To install imapsync on CentOS (with cPanel) you&#8217;ll need to do the following:</p>
+<p>First of all, imapsync isn&#8217;t in any of the official CentOS repositories so you need to install the <a href="http://wiki.centos.org/AdditionalResources/Repositories/RPMForge">RPMForge repository</a>.</p>
+<p>So, for example, on a CentOS 4 i386 install I would do:</p>
+<blockquote><p>wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el4.rf.i386.rpm</p>
+<p>rpm -i rpmforge-release-0.5.2-2.el4.rf.i386.rpm</p></blockquote>
+<p>Now it&#8217;s installed, you can utilise it by using yum combined with &#8220;&#8211;enablerepo=rpmforge&#8221; to install imapsync.</p>
+<p>However, before you go ahead and do that, you need to realise that because cPanel has it&#8217;s own set of perl modules and blocks the OS ones, you need to disable the &#8220;exclude&#8221; line in the yum configuration file.</p>
+<blockquote><p>nano -w /etc/yum.conf</p>
+<p>Note: Use whatever editor you prefer, I&#8217;m using nano. The -w is for no word wrap as this file contains long lines.</p></blockquote>
+<p>In this file, you need to comment out the following like:</p>
+<blockquote><p>#exclude=apache* bind-chroot courier* dovecot* exim* filesystem httpd* mod_ssl* mysql* nsd* perl* php* pr$</p></blockquote>
+<p>The hash (#) at the beginning means it&#8217;ll no longer be parsed, so nothing is excluded.</p>
+<p>Now you can go ahead and install imapsync trouble free:</p>
+<blockquote><p>yum install imapsync &#8211;enablerepo=rpmforge</p></blockquote>
+<p>This should install imapsync and any dependencies (such as the required perl modules).</p>
+<p>The only advice that cPanel gave me when doing this is:</p>
+<blockquote><p>It is possible this could break some components of cPanel, but it should be generally repairable as long as you run &#8220;/scripts/checkperlmodules &#8211;full &#8211;force&#8221; afterwards to rebuild/reinstall the cPanel versions of the various modules.</p></blockquote>
+<p>I suggest you also do that once imapsync is installed to ensure you don&#8217;t break anything in cPanel.</p>
+<h3>Migration</h3>
+<p>Now we have imapsync installed we can actually use it&#8230;</p>
+<blockquote>
+<pre>imapsync \
+       --host1 mail.example.co.uk --authmech1 PLAIN --user1 joe.blogs@example.co.uk --password1 12345678 \
+       --host2 lemon.phurix.com --authmech2 PLAIN --user2 joe.blogs@example.co.uk --password2 99999999</pre>
+</blockquote>
+<p>This should be enough to get you going, but do be aware of the SECURITY issues outlined in the <a href="http://ks.lamiral.info/imapsync/README">imapsync README</a>.</p>
+<p>Once this is done, all you need to do is get the name servers (or just the MX) changed on the domain to new hosting and after about 4 hours you should be good to go.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3322</post-id>	</item>
+		<item>
+		<title>Announcing Phurix Labs</title>
+		<link>https://hm2k.org/posts/announcing-phurix-labs</link>
+					<comments>https://hm2k.org/posts/announcing-phurix-labs#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 14 Jul 2011 23:06:31 +0000</pubDate>
+				<category><![CDATA[Business]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[phurix]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=3017</guid>
+
+					<description><![CDATA[I&#8217;ve been thinking about retiring this site for some time now, but have been toying with the pros and cons. A decision had to be made. You see, the context of the HM2K blog has always had a subtle undertone of my business and the work I do online. That business is Phurix web hosting. [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;ve been thinking about retiring this site for some time now, but have been toying with the pros and cons.</p>
+<p>A decision had to be made.</p>
+<p><span id="more-3017"></span></p>
+<p>You see, the context of the HM2K blog has always had a subtle undertone of my business and the work I do online. That business is Phurix web hosting.</p>
+<p>Phurix has always supported me and the blog, but unfortunately, because of other commitments I have less and less time to write and publish.</p>
+<p>At first I thought the best solution would be to shut down the blog and call it a day, while a colleague said he thinks I should keep it online.</p>
+<p>I&#8217;ve been thinking about a solution for a long time but then, while I was on holiday, it hit me.</p>
+<p>Merge it into the Phurix brand and it made sense too:</p>
+<ul>
+<li>HM2K.com was a hard concept to explain</li>
+<ul>
+<li>Easier concept: Phurix Labs:&#8221;Where we experiment with ideas and findings&#8221;</li>
+</ul>
+<li>HM2K.com had no context, it would often seem random</li>
+<ul>
+<li>Makes more sense in the context of the business</li>
+</ul>
+<li>HM2K.com had no real focus or agenda</li>
+<ul>
+<li>Focus on what is important: the business</li>
+</ul>
+<li>HM2K.com was a burden on one person</li>
+<ul>
+<li>Shared with Phurix</li>
+</ul>
+<li>HM2K.com was not making money</li>
+<ul>
+<li>By improving brand awareness business will increase</li>
+</ul>
+</ul>
+<p>A proposal was put forward and it went better than expected, it all seemed to fit together nicely. Perfect!</p>
+<p>The decision was made and I have no regrets.</p>
+<p><span class="Apple-style-span" style="color: #444444; font-family: Georgia, 'Bitstream Charter', serif; line-height: 24px; font-size: medium;">Today, we started by introducing a new &#8220;Phurix Labs&#8221; theme to HM2K.com, so that&#8217;s phase one is done.</span></p>
+<p>Over the next few days, the website will be migrated from here to &#8220;labs.phurix.net&#8221; (where it now belongs). That&#8217;s phaze two.</p>
+<p>Thanks for reading and I hope you continue to support the new Phurix Labs project.</p>
+<p>These are exciting times, watch this space!</p>
+<p><strong>About Phurix</strong></p>
+<p>Since 2004, Phurix has offered affordable and reliable hosting services with a no nonsense approach. Phurix will continue to provide a high quality of service and engage with customers to ensure its future and growth.</p>
+<p><em>Authorised cPanel Partner and OpenSRS partner.</em></p>
+<p><em></em><strong>About Phurix Labs</strong></p>
+<p>Phurix Labs is where we experiment with ideas and findings. You&#8217;ll find all sorts of useful tools and information.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/announcing-phurix-labs/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3017</post-id>	</item>
+		<item>
+		<title>How to find the fastest CVSUP mirror server</title>
+		<link>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server</link>
+					<comments>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 30 Mar 2011 14:41:42 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[csup]]></category>
+		<category><![CDATA[cvsup]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[ports]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=2316</guid>
+
+					<description><![CDATA[Some time ago I wrote about using fastest_cvsup, to find the fastest cvsup mirror server for use with csup on FreeBSD. fastest_cvsup is a system utility written in Perl that finds fastest CVSup mirror server for FreeBSD, OpenBSD or NetBSD. Here I&#8217;m going to tell you how to get started&#8230; Install First of all you need [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Some time ago I wrote about using fastest_cvsup, to find the fastest cvsup mirror server for use with <a href="http://www.hm2k.com/posts/freebsd-62-usrports-no-such-file-or-directory">csup on FreeBSD</a>.</p>
+<p>fastest_cvsup is a system utility written in Perl that finds fastest CVSup mirror server for FreeBSD, OpenBSD or NetBSD.</p>
+<p>Here I&#8217;m going to tell you how to get started&#8230;</p>
+<p><span id="more-2316"></span></p>
+<p><strong>Install</strong></p>
+<p>First of all you need to install it, there are a number of ways to do this, but on FreeBSD you probably want to install from ports:</p>
+<blockquote><p>cd /usr/ports/sysutils/fastest_cvsup/ &amp;&amp; make install clean</p>
+<p><em>Note: You MUST be root to install ports</em></p></blockquote>
+<p><strong>Get help</strong></p>
+<p>Once installed you are able to read more information about fastest_cvsup by issuing the following commands:</p>
+<blockquote><p>fastest_cvsup -h</p></blockquote>
+<p>This will display the general help.</p>
+<blockquote><p>man fastest_cvsup</p></blockquote>
+<p>This will display the more detailed manual page.</p>
+<p><strong>Usage examples</strong></p>
+<p>Here&#8217;s a few practical examples to get you started.</p>
+<p>This example will check to see which United Kingdom (uk) based servers are quickest:</p>
+<p><code># fastest_cvsup -c uk<br />
+&gt;&gt;  Querying servers in countries: uk<br />
+--&gt; Connecting to cvsup.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 136.71 ms<br />
+--&gt; Connecting to cvsup2.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 139.81 ms<br />
+--&gt; Connecting to cvsup3.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 134.28 ms<br />
+--&gt; Connecting to cvsup4.uk.freebsd.org [195.40.6.45]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 129.03 ms</code></p>
+<p><code> </code></p>
+<p><code>&gt;&gt;  Speed Daemons:<br />
+- 1st: cvsup4.uk.freebsd.org    129.03 ms<br />
+- 2st: cvsup3.uk.freebsd.org    134.28 ms<br />
+- 3st: cvsup.uk.freebsd.org     136.71 ms</code></p>
+<p>To find the fastest server in Europe you would use something like this:</p>
+<p><code># fastest_cvsup -q -c uk,ie,fr,de,fi,no,nl,ch</code></p>
+<p>Go nuts, test them all:</p>
+<p><code># fastest_cvsup -Q -r -c all</code></p>
+<p>This example will give you the times of just OpenBSD and NetBSD servers:</p>
+<p><code># fastest_cvsup -c openbsd,netbsd</code></p>
+<p>In this example we will use fastest_cvsup with the cvup command to update the ports using the fastest server in the United States (us):</p>
+<p><code># csup -g -L 2 -h `fastest_cvsup -Q -c us` /root/ports-supfile</code></p>
+<p><em>Note: &#8220;-Q&#8221; is used to make it super quiet which is useful when using in scripts or in-line commands.</em></p>
+<p><strong>Find out more</strong></p>
+<p>Visit the <a href="http://fastest-cvsup.sourceforge.net/">fastest_cvsup</a> website to find out more.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2316</post-id>	</item>
+		<item>
+		<title>Installing Subversion on a cPanel Server</title>
+		<link>https://hm2k.org/posts/installing-subversion-on-a-cpanel-server</link>
+					<comments>https://hm2k.org/posts/installing-subversion-on-a-cpanel-server#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 21 Dec 2010 17:37:50 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[centos]]></category>
+		<category><![CDATA[centos4]]></category>
+		<category><![CDATA[el4]]></category>
+		<category><![CDATA[rpmforge]]></category>
+		<category><![CDATA[subversion]]></category>
+		<category><![CDATA[svn]]></category>
+		<category><![CDATA[yum]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=684</guid>
+
+					<description><![CDATA[It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You get this error message: Error: Missing Dependency: perl(URI) &#62;= 1.17 is needed by package It&#8217;s not a problem in CentOS, no, it&#8217;s a restriction created by cPanel to control what is installed using yum. Here&#8217;s what you do: Edit your &#8220;/etc/yum.conf&#8221; file. Remove &#8220;perl*&#8221; from [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server" rel="bookmark" title="Migrating IMAP mailboxes to a cPanel server">Migrating IMAP mailboxes to a cPanel server </a> <small>A customer got in touch with us and explained their...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>It should be easy right? Just &#8220;yum install subversion&#8221;.</p>
+<p>Nope. You get this error message:</p>
+<blockquote><p>Error: Missing Dependency: perl(URI) &gt;= 1.17 is needed by package</p></blockquote>
+<p><span id="more-684"></span>It&#8217;s not a problem in CentOS, no, it&#8217;s a restriction created by cPanel to control what is installed using yum.</p>
+<p>Here&#8217;s what you do:</p>
+<ul>
+<li>Edit your &#8220;/etc/yum.conf&#8221; file.</li>
+<li>Remove &#8220;perl*&#8221; from the &#8220;exclude&#8221; line.</li>
+<li>Run your &#8220;yum install subversion&#8221;</li>
+<li>Add the &#8220;perl*&#8221; back to the &#8220;exclude&#8221; line in the yum file.</li>
+</ul>
+<p>That&#8217;s it! It will install as expected.</p>
+<p><strong>Update</strong></p>
+<p>If you&#8217;re using CentOS4 you may get the following error when exporting:</p>
+<pre>[user@server ~]$ svn export http://server/svn/project/directory/filename
+svn: REPORT request failed on '/svn/project/!svn/vcc/default'
+svn:
+Cannot replace a directory from within</pre>
+<p>This is caused by <a href="http://subversion.tigris.org/issues/show_bug.cgi?id=1708" rel="nofollow">a bug</a> which was <a href="http://svn.collab.net/viewvc/svn?view=revision&amp;revision=12686" rel="nofollow">fixed</a> and released in subversion version 1.2.0, however, RHEL4 (Redhat Enterprise Linux 4) and CentOS 4 use Subversion 1.1.4 from 2005 which doesn&#8217;t have this fix.</p>
+<p>The solution is to install the latest version of SVN from a third party repository such as <a href="http://wiki.centos.org/AdditionalResources/Repositories/RPMForge">RPMForge</a>:</p>
+<blockquote><p>wget http://pkgs.repoforge.org/rpmforge-release/rpmforge-release-0.5.2-2.el4.rf.i386.rpm</p>
+<p>rpm -Uhv rpmforge-release-0.5.2-2.el4.rf.i386.rpm</p></blockquote>
+<p>Once RPMForge (and RPMForge extras) is setup, simply run:</p>
+<blockquote><p>yum install &#8211;enablerepo=rpmforge-extras subversion</p></blockquote>
+<p>That&#8217;s it!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server" rel="bookmark" title="Migrating IMAP mailboxes to a cPanel server">Migrating IMAP mailboxes to a cPanel server </a> <small>A customer got in touch with us and explained their...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/installing-subversion-on-a-cpanel-server/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">684</post-id>	</item>
+		<item>
+		<title>error: no dbpath has been set</title>
+		<link>https://hm2k.org/posts/error-no-dbpath-has-been-set</link>
+					<comments>https://hm2k.org/posts/error-no-dbpath-has-been-set#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 11 Dec 2010 20:39:19 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[centos]]></category>
+		<category><![CDATA[openvz]]></category>
+		<category><![CDATA[rpmdb]]></category>
+		<category><![CDATA[trac]]></category>
+		<category><![CDATA[yum]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=676</guid>
+
+					<description><![CDATA[I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded from CentOS4 to CentOS5, here&#8217;s what I&#8217;m seeing when trying to rum a yum install of mod_python: [root@coffee ~]# yum install mod_python Loaded plugins: fastestmirror error: no dbpath has been set error: cannot open Packages database in /%{_dbpath} Traceback (most recent call last): File &#8220;/usr/bin/yum&#8221;, [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/openvz-container-already-locked" rel="bookmark" title="OpenVZ: Container already locked">OpenVZ: Container already locked </a> <small>f you received this message when you try and stop...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/cex-co-uk-site-errors" rel="bookmark" title="Cex.co.uk site errors">Cex.co.uk site errors </a> <small>After browsing the cex.co.uk website for some time I came...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<div id="_mcePaste">I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded from CentOS4 to CentOS5, here&#8217;s what I&#8217;m seeing when trying to rum a yum install of mod_python:</div>
+<blockquote>
+<div>[root@coffee ~]# yum install mod_python</div>
+<div id="_mcePaste">Loaded plugins: fastestmirror</div>
+<div id="_mcePaste">error: no dbpath has been set</div>
+<div id="_mcePaste">error: cannot open Packages database in /%{_dbpath}</div>
+<div id="_mcePaste">Traceback (most recent call last):</div>
+<div id="_mcePaste">File &#8220;/usr/bin/yum&#8221;, line 29, in ?</div>
+<div id="_mcePaste">yummain.user_main(sys.argv[1:], exit_code=True)</div>
+<div id="_mcePaste">File &#8220;/usr/share/yum-cli/yummain.py&#8221;, line 309, in user_main</div>
+<div id="_mcePaste">errcode = main(args)</div>
+<div id="_mcePaste">File &#8220;/usr/share/yum-cli/yummain.py&#8221;, line 157, in main</div>
+<div id="_mcePaste">base.getOptionsConfig(args)</div>
+<div id="_mcePaste">File &#8220;/usr/share/yum-cli/cli.py&#8221;, line 187, in getOptionsConfig</div>
+<div id="_mcePaste">self.conf</div>
+<div id="_mcePaste">File &#8220;/usr/lib/python2.4/site-packages/yum/__init__.py&#8221;, line 664, in &lt;lambda&gt;</div>
+<div id="_mcePaste">conf = property(fget=lambda self: self._getConfig(),</div>
+<div id="_mcePaste">File &#8220;/usr/lib/python2.4/site-packages/yum/__init__.py&#8221;, line 239, in _getConfig</div>
+<div id="_mcePaste">self._conf = config.readMainConfig(startupconf)</div>
+<div id="_mcePaste">File &#8220;/usr/lib/python2.4/site-packages/yum/config.py&#8221;, line 804, in readMainConfig</div>
+<div id="_mcePaste">yumvars[&#8216;releasever&#8217;] = _getsysver(startupconf.installroot, startupconf.distroverpkg)</div>
+<div id="_mcePaste">File &#8220;/usr/lib/python2.4/site-packages/yum/config.py&#8221;, line 877, in _getsysver</div>
+<div id="_mcePaste">idx = ts.dbMatch(&#8216;provides&#8217;, distroverpkg)</div>
+<div id="_mcePaste">TypeError: rpmdb open failed</div>
+</blockquote>
+<div>Here&#8217;s how to fix it:</div>
+<blockquote>
+<div>[root@coffee ~]# rm /dev/urandom</div>
+<div id="_mcePaste">rm: remove regular file `/dev/urandom&#8217;? y</div>
+<div id="_mcePaste">[root@coffee ~]# mknod -m 644 /dev/urandom c 1 9</div>
+</blockquote>
+<p>Nothing else seems to work, but this does indeed seem to solve the problem.</p>
+<p>Perhaps I&#8217;ll finally get Trac installed&#8230;</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/openvz-container-already-locked" rel="bookmark" title="OpenVZ: Container already locked">OpenVZ: Container already locked </a> <small>f you received this message when you try and stop...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/cex-co-uk-site-errors" rel="bookmark" title="Cex.co.uk site errors">Cex.co.uk site errors </a> <small>After browsing the cex.co.uk website for some time I came...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/error-no-dbpath-has-been-set/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">676</post-id>	</item>
+		<item>
+		<title>OpenVZ: Container already locked</title>
+		<link>https://hm2k.org/posts/openvz-container-already-locked</link>
+					<comments>https://hm2k.org/posts/openvz-container-already-locked#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 10 Dec 2010 13:22:39 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=673</guid>
+
+					<description><![CDATA[f you received this message when you try and stop the VE&#8230; [root@server ~]# vzctl stop 104 Container already locked Here&#8217;s how to fix it: Delete the lock file [root@server ~]# rm /vz/lock/104.lck rm: remove regular file `/vz/lock/104.lck'? y Kill the checkpoint [root@server ~]# vzctl chkpnt 104 --kill Killing... I also submitted this article onto the [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-disable-windows-messenger" rel="bookmark" title="How to Disable Windows Messenger">How to Disable Windows Messenger </a> <small>Why would you want to disable Windows Messenger? Well you...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>f you received this message when you try and stop the VE&#8230;</p>
+<pre>[root@server ~]# vzctl stop 104
+Container already locked</pre>
+<p><span id="more-673"></span>Here&#8217;s <em>how to</em> fix it:</p>
+<ul>
+<li>Delete the lock file</li>
+</ul>
+<pre>[root@server ~]# rm /vz/lock/104.lck
+rm: remove regular file `/vz/lock/104.lck'? y</pre>
+<ul>
+<li>Kill the checkpoint</li>
+</ul>
+<pre>[root@server ~]# vzctl chkpnt 104 --kill
+Killing...</pre>
+<p>I also submitted this article onto the OpenVZ Wiki entitled &#8220;<a href="http://wiki.openvz.org/Container_already_locked">Container already locked</a>&#8220;.</p>
+<p>I did this because, there was nothing found on the OpenVZ website with regards to this before now:</p>
+<blockquote><p>Your search &#8211; site:openvz.org &#8220;Container already locked&#8221; &#8211; did not match any documents.</p></blockquote>
+<p>Hope this helps!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-disable-windows-messenger" rel="bookmark" title="How to Disable Windows Messenger">How to Disable Windows Messenger </a> <small>Why would you want to disable Windows Messenger? Well you...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/openvz-container-already-locked/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">673</post-id>	</item>
+		<item>
+		<title>exim on another port for smtp</title>
+		<link>https://hm2k.org/posts/exim-on-another-port-for-smtp</link>
+					<comments>https://hm2k.org/posts/exim-on-another-port-for-smtp#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 25 Nov 2010 14:58:35 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[25]]></category>
+		<category><![CDATA[587]]></category>
+		<category><![CDATA[exim]]></category>
+		<category><![CDATA[smtp]]></category>
+		<category><![CDATA[three]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=661</guid>
+
+					<description><![CDATA[When a business I know had trouble with their broadband I was fortunately able to get them back online by using the redundant mobile broadband on the router. The only issue then was that they couldn&#8217;t send email on port 25 through the Three mobile network. The solution is to change the outgoing SMTP from [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/ftp-server-for-windows" rel="bookmark" title="FTP server for windows">FTP server for windows </a> <small>I have been on the lookout for a decent FTP...</small></li>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form" rel="bookmark" title="How to correctly make a PHP contact form">How to correctly make a PHP contact form </a> <small>I use contact forms on many websites, and over the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>When a business I know had trouble with their broadband I was fortunately able to get them back online by using the redundant mobile broadband on the router.</p>
+<p>The only issue then was that they <a href="http://www.three.co.uk/Help_Support/Mobile_Broadband_Help">couldn&#8217;t send email on port 25 through the Three mobile network</a>.</p>
+<p>The solution is to change the outgoing SMTP from port 25 to port 587.</p>
+<p>Because I keep forgetting myself, here&#8217;s how you do it on cPanel:</p>
+<p><span id="more-661"></span>You can run Exim on another port by going to the <em>Service Manager</em> in WebHost Manager and then enabling <em>exim on another port</em> and choosing the port number.</p>
+<p>If it&#8217;s still not working, your firewall (iptables) is probably blocking it, so here&#8217;s what you need to do:</p>
+<p>First find the iptables for port 25:</p>
+<blockquote><p>root@server [/]# iptables-save | grep &#8220;port 25&#8221;<br />
+-A INPUT -i venet0 -p tcp -m tcp &#8211;dport 25 -j ACCEPT<br />
+-A INPUT -i venet0 -p tcp -m tcp &#8211;sport 25 -j ACCEPT<br />
+-A OUTPUT -o venet0 -p tcp -m tcp &#8211;sport 25 -j ACCEPT<br />
+-A OUTPUT -o venet0 -p tcp -m tcp &#8211;dport 25 -j ACCEPT</p></blockquote>
+<p>Once you have that, copy each line and replace 25 with 587 and enter those in, like so:</p>
+<blockquote><p>iptables -A INPUT -i venet0 -p tcp -m tcp &#8211;dport 587 -j ACCEPT<br />
+iptables -A INPUT -i venet0 -p tcp -m tcp &#8211;sport 587 -j ACCEPT<br />
+iptables -A OUTPUT -o venet0 -p tcp -m tcp &#8211;sport 587 -j ACCEPT<br />
+iptables -A OUTPUT -o venet0 -p tcp -m tcp &#8211;dport 587 -j ACCEPT</p></blockquote>
+<p>Finally, you should check it works by using telnet from another machine:</p>
+<blockquote><p>[user@server2~]$ telnet mail.server.example.com 587<br />
+Trying 1.2.3.4&#8230;<br />
+Connected to mail.server.example.com (1.2.3.4).<br />
+Escape character is &#8216;^]&#8217;.<br />
+220-server.example.com ESMTP Exim 4.69 #1 Fri, 26 Nov 2010 16:54:07 +0000<br />
+220-We do not authorize the use of this system to transport unsolicited,<br />
+220 and/or bulk e-mail.</p></blockquote>
+<p>If you see a message similar to the above it has worked, so now you can save iptables and restart the service:</p>
+<ul>
+<li>iptables-save</li>
+<li>service iptables restart</li>
+</ul>
+<p>Done!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/ftp-server-for-windows" rel="bookmark" title="FTP server for windows">FTP server for windows </a> <small>I have been on the lookout for a decent FTP...</small></li>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form" rel="bookmark" title="How to correctly make a PHP contact form">How to correctly make a PHP contact form </a> <small>I use contact forms on many websites, and over the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/exim-on-another-port-for-smtp/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">661</post-id>	</item>
+		<item>
+		<title>The specified network name is no longer available samba</title>
+		<link>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba</link>
+					<comments>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 03 Nov 2009 13:02:14 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[centos]]></category>
+		<category><![CDATA[samba]]></category>
+		<category><![CDATA[smb]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=218</guid>
+
+					<description><![CDATA[I keep getting this error: Error Copying File or Folder Cannot copy xxx: The specified network name is no longer available. Why? Well, I&#8217;m trying to copy a folder from my Windows XP SP2 Pro workstation onto my network share drive, which in fact is a samba (smb) server running on my &#8220;CentOS release 4.6 [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I keep getting this error:</p>
+<blockquote><p>Error Copying File or Folder</p>
+<p>Cannot copy xxx: The specified network name is no longer available.</p></blockquote>
+<p>Why?</p>
+<p><span id="more-218"></span></p>
+<p>Well, I&#8217;m trying to copy a folder from my Windows XP SP2 Pro workstation onto my network share drive, which in fact is a samba (smb) server running on my &#8220;CentOS release 4.6 (Final)&#8221; box.</p>
+<p>First thing to do is to check the error logs (generally) at &#8220;/var/log/samba&#8221;&#8230;</p>
+<blockquote>
+<pre id="codemain" class="code">Sep  8 16:26:13 blade smbd[5913]: [2008/09/08 16:26:13, 0] lib/util_sock.c:read_data(534)
+Sep  8 16:26:13 blade smbd[5913]:   read_data: read failure for 4 bytes to client 192.168.0.3. Error = Connection reset by peer
+Sep  8 16:26:14 blade smbd[5914]: [2008/09/08 16:26:14, 0] lib/util_sock.c:set_socket_options(237)
+Sep  8 16:26:14 blade smbd[5914]:   Unknown socket option TCP_NODELAY_SO_RCVBUF
+Sep  8 16:26:14 blade smbd[5914]: [2008/09/08 16:26:14, 0] lib/util_sock.c:set_socket_options(237)
+Sep  8 16:26:14 blade smbd[5914]:   Unknown socket option SO_SNBUF</pre>
+</blockquote>
+<p>Doesn&#8217;t seem very helpful&#8230;</p>
+<p>I can&#8217;t work out why I&#8217;m getting these errors, why is the peer being reset?</p>
+<p>I <a href="http://www.mail-archive.com/samba@lists.samba.org/msg91461.html">learned that the peer</a> is the client machine that the server is peering to, which means the problem is that my workstation is disconnecting me.</p>
+<p>I checked my Event Viewer (%SystemRoot%\system32\eventvwr.msc), which said:</p>
+<blockquote><p>NetBT failed to process a request because it encountered OutOfResources exception(s) in the last 1 hour. Event ID: 4322</p></blockquote>
+<p>I might have known that the problem would be with windows and not linux.</p>
+<p>However, maybe I spoke too soon, as a quick search lands me on the <a href="http://rhn.redhat.com/errata/RHBA-2008-0711.html">redhat site</a>, which states:</p>
+<blockquote><p>* when Windows® clients performed file operations on files stored on a<br />
+Samba share, various error messages popped-up, and the &#8220;Event ID: 4322&#8221;<br />
+error was logged on the Windows® clients:</p>
+<p>NetBT failed to process a request because it encountered OutOfResources<br />
+exception(s) in the last 1 hour.</p></blockquote>
+<p>Which does describe the problem I&#8217;m having exactly, although i&#8217;ve only been experiencing this recently&#8230;</p>
+<p>On the other hand the Microsoft site suggests I should <a href="http://technet.microsoft.com/en-us/library/cc727761.aspx">Disable then Enable the network adapter</a>&#8230;</p>
+<p>I tried this, and it appeared to work&#8230; At least for now&#8230;</p>
+<p>Low and behold I soon got this error a short time later. Now what?</p>
+<p>I decided to take a look into the <a href="https://bugzilla.samba.org/show_bug.cgi?id=4796">samba bug</a> mentioned above. Apparently the problem is seen in Samba 3.0.25 and 3.0.25a, but not Samba 3.0.24. I am running 3.0.25b-1.el4_6.5 (smbd &#8211;version).</p>
+<p>After investigating my yum log (/var/log/yum.log) I see the following&#8230;</p>
+<blockquote><p>Jul 08 01:38:04 Updated: samba-common.i386 3.0.25b-1.el4_6.5<br />
+Jul 08 01:39:11 Updated: samba.i386 3.0.25b-1.el4_6.5<br />
+Jul 08 01:39:17 Updated: samba-client.i386 3.0.25b-1.el4_6.5</p></blockquote>
+<p>This means that it&#8217;s not very likely to be that as I&#8217;ve been running it for more than two months, and i&#8217;ve only recently switched to this workstation (after an uber hardware failure).</p>
+<p>I tried from another machine, and I can copy anything without seeing these errors&#8230; The plot thickens&#8230;</p>
+<p>I&#8217;m now convinced that the problem is with my workstation and not the server. Now what?</p>
+<p>I <a href="http://groups.google.com/group/linux.samba/browse_thread/thread/3dca4ea0d4e7ef9a/9d9832a09a83ae54">noticed a thread by a guy</a> who mentioned that his machine (like mine) was up to date, SP2, but did not have IE7, unlike my other machines. This interested me. Maybe his <a href="https://bugzilla.samba.org/show_bug.cgi?id=4796">bug isn&#8217;t fixed</a> in the version I&#8217;m using? I think it is, it&#8217;s quite old&#8230;</p>
+<p>However, it seems his solution was to upgrade to 3.0.25c and/or change the connection from &#8220;netbios-ssn&#8221; (port 139) to &#8220;microsoft-ds&#8221; (port 445)&#8230; somehow. I checked on both ends, and appears I&#8217;m already using &#8220;microsoft-ds&#8221; on this machine anyway&#8230;</p>
+<p>Frustration is starting to kick in&#8230;</p>
+<p>I&#8217;m out of ideas, perhaps I should roll back to an older version, see if that helps? My logs report this as been the previous version:</p>
+<blockquote><p>Jun 07 17:01:55 Updated: samba-common.i386 3.0.10-1.4E.12.2<br />
+Jun 07 17:04:29 Updated: samba-client.i386 3.0.10-1.4E.12.2<br />
+Jun 07 17:07:44 Updated: samba.i386 3.0.10-1.4E.12.2</p></blockquote>
+<p>I had second thoughts about this when reading the samba change log (rpm -q &#8211;changelog samba). There seems to be quite a few security fixes that I&#8217;d rather keep&#8230;</p>
+<p>I&#8217;m totally out of ideas&#8230; &#8220;yum remove samba&#8221; it is&#8230; However, apparently to install an old version I have to first install a plugin called &#8220;yum-allowdowngrade&#8221;.</p>
+<p>This is getting complicated, especially when it probably isn&#8217;t a problem with the server.</p>
+<p>I decided to try an updated version instead&#8230;</p>
+<blockquote><p>yum remove samba<br />
+yum remove samba-common<br />
+rpm -i http://charliebrady.org/samba/samba-common-3.0.30-0.i386.rpm</p>
+<p>rpm -i ftp://ftp.pbone.net/mirror/www.startcom.org/AS-4.0.0/os/i386/StartCom/RPMS/perl-Convert-ASN1-0.18-3.noarch.rpm<br />
+rpm -i http://charliebrady.org/samba/samba-3.0.30-0.i386.rpm<br />
+service samba start</p></blockquote>
+<p>It&#8217;s installed, and it started, however I appear to have lost my settings.</p>
+<blockquote><p>mv /etc/samba/smb.conf /etc/samba/smb.conf.recent<br />
+mv /etc/samba/smb.conf.rpmsave /etc/samba/smb.conf<br />
+service smb restart</p></blockquote>
+<p>Testing, and so far so good!</p>
+<p>In summary, when I was convinced it was the silly windows based client workstation, instead it was the insanely overly complex linux server. This could all be avoided if redhat/centos wasn&#8217;t so keen on <a href="http://www.redhat.com/security/updates/backporting/?sc_cid=3093">backporting</a> and I had the latest version in the first place.</p>
+<p>I look forward to the updates.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">218</post-id>	</item>
+		<item>
+		<title>Ident Spoofing</title>
+		<link>https://hm2k.org/posts/ident-spoofing</link>
+					<comments>https://hm2k.org/posts/ident-spoofing#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2009 12:23:01 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[ident]]></category>
+		<category><![CDATA[oidentd]]></category>
+		<category><![CDATA[rfc1413]]></category>
+		<category><![CDATA[spoofing]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=517</guid>
+
+					<description><![CDATA[Today I wrote about Oidentd on Wikipedia. Ident as per RFC 1413 is used for a few different services, in particular IRC. A feature of oidentd that my users find useful is ident spoofing. Ident is important on IRC as some servers do not allow you to connect unless you have an ident, while others [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Today I wrote about <a href="http://en.wikipedia.org/wiki/Oidentd">Oidentd</a> on Wikipedia. <a href="http://en.wikipedia.org/wiki/Ident">Ident</a> as per <a href="http://tools.ietf.org/html/rfc1413">RFC 1413</a> is used for a few different services, in particular <a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</a>. A feature of oidentd that my users find useful is ident spoofing.</p>
+<p><span id="more-517"></span>Ident is important on IRC as some servers do not allow you to connect unless you have an ident, while others do, you find yourself with a tide (~) prefix before your username. These are sometimes banned. For example:</p>
+<blockquote><p>HM2K!HM2K@ROFL.name</p>
+<p><em>#This is an example of a real user with a real ident</em></p>
+<p>baduser!~asdfg@123.123.123.123</p>
+<p><em>#This is an example of a possible exploited system</em></p></blockquote>
+<p>Generally the ident server (such as oidentd) will return the user&#8217;s username as the ident when it is requested, however on my servers, I allow some of my users to spoof their ident.</p>
+<p>This means they can change their ident to whatever they like, regardless of their username.</p>
+<p>To do this, you need to create the <a href="http://linux.die.net/man/5/oidentd.conf"><em>$HOME/.oidentd.conf</em></a> file, with the following content:</p>
+<blockquote><p>global { reply &#8216;$ident&#8217;}</p>
+<p><em>#Note: Where $ident is, replace with the ident you want.</em></p></blockquote>
+<p>I know some users find this a bit difficult or confusing, so I created a script to do it for them.</p>
+<ul>
+<li><a href="http://hm2k.googlecode.com/svn/trunk/code/shell/setident.sh">setident.sh</a> &#8211; A script used to set your ident</li>
+</ul>
+<p>It&#8217;s works fine using the sh unix shell on FreeBSD.</p>
+<p>If you are on my shell servers, you should be able to take advantage of this using the &#8220;setident&#8221; command.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/ident-spoofing/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">517</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:22:57 by W3 Total Cache
+-->

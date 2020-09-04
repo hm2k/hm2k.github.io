@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>FreeBSD &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/freebsd/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Tue, 09 Aug 2011 20:39:31 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>How to find the fastest CVSUP mirror server</title>
+		<link>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server</link>
+					<comments>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 30 Mar 2011 14:41:42 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[csup]]></category>
+		<category><![CDATA[cvsup]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[ports]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=2316</guid>
+
+					<description><![CDATA[Some time ago I wrote about using fastest_cvsup, to find the fastest cvsup mirror server for use with csup on FreeBSD. fastest_cvsup is a system utility written in Perl that finds fastest CVSup mirror server for FreeBSD, OpenBSD or NetBSD. Here I&#8217;m going to tell you how to get started&#8230; Install First of all you need [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Some time ago I wrote about using fastest_cvsup, to find the fastest cvsup mirror server for use with <a href="http://www.hm2k.com/posts/freebsd-62-usrports-no-such-file-or-directory">csup on FreeBSD</a>.</p>
+<p>fastest_cvsup is a system utility written in Perl that finds fastest CVSup mirror server for FreeBSD, OpenBSD or NetBSD.</p>
+<p>Here I&#8217;m going to tell you how to get started&#8230;</p>
+<p><span id="more-2316"></span></p>
+<p><strong>Install</strong></p>
+<p>First of all you need to install it, there are a number of ways to do this, but on FreeBSD you probably want to install from ports:</p>
+<blockquote><p>cd /usr/ports/sysutils/fastest_cvsup/ &amp;&amp; make install clean</p>
+<p><em>Note: You MUST be root to install ports</em></p></blockquote>
+<p><strong>Get help</strong></p>
+<p>Once installed you are able to read more information about fastest_cvsup by issuing the following commands:</p>
+<blockquote><p>fastest_cvsup -h</p></blockquote>
+<p>This will display the general help.</p>
+<blockquote><p>man fastest_cvsup</p></blockquote>
+<p>This will display the more detailed manual page.</p>
+<p><strong>Usage examples</strong></p>
+<p>Here&#8217;s a few practical examples to get you started.</p>
+<p>This example will check to see which United Kingdom (uk) based servers are quickest:</p>
+<p><code># fastest_cvsup -c uk<br />
+&gt;&gt;  Querying servers in countries: uk<br />
+--&gt; Connecting to cvsup.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 136.71 ms<br />
+--&gt; Connecting to cvsup2.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 139.81 ms<br />
+--&gt; Connecting to cvsup3.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 134.28 ms<br />
+--&gt; Connecting to cvsup4.uk.freebsd.org [195.40.6.45]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 129.03 ms</code></p>
+<p><code> </code></p>
+<p><code>&gt;&gt;  Speed Daemons:<br />
+- 1st: cvsup4.uk.freebsd.org    129.03 ms<br />
+- 2st: cvsup3.uk.freebsd.org    134.28 ms<br />
+- 3st: cvsup.uk.freebsd.org     136.71 ms</code></p>
+<p>To find the fastest server in Europe you would use something like this:</p>
+<p><code># fastest_cvsup -q -c uk,ie,fr,de,fi,no,nl,ch</code></p>
+<p>Go nuts, test them all:</p>
+<p><code># fastest_cvsup -Q -r -c all</code></p>
+<p>This example will give you the times of just OpenBSD and NetBSD servers:</p>
+<p><code># fastest_cvsup -c openbsd,netbsd</code></p>
+<p>In this example we will use fastest_cvsup with the cvup command to update the ports using the fastest server in the United States (us):</p>
+<p><code># csup -g -L 2 -h `fastest_cvsup -Q -c us` /root/ports-supfile</code></p>
+<p><em>Note: &#8220;-Q&#8221; is used to make it super quiet which is useful when using in scripts or in-line commands.</em></p>
+<p><strong>Find out more</strong></p>
+<p>Visit the <a href="http://fastest-cvsup.sourceforge.net/">fastest_cvsup</a> website to find out more.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2316</post-id>	</item>
+		<item>
+		<title>Ident Spoofing</title>
+		<link>https://hm2k.org/posts/ident-spoofing</link>
+					<comments>https://hm2k.org/posts/ident-spoofing#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2009 12:23:01 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[ident]]></category>
+		<category><![CDATA[oidentd]]></category>
+		<category><![CDATA[rfc1413]]></category>
+		<category><![CDATA[spoofing]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=517</guid>
+
+					<description><![CDATA[Today I wrote about Oidentd on Wikipedia. Ident as per RFC 1413 is used for a few different services, in particular IRC. A feature of oidentd that my users find useful is ident spoofing. Ident is important on IRC as some servers do not allow you to connect unless you have an ident, while others [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Today I wrote about <a href="http://en.wikipedia.org/wiki/Oidentd">Oidentd</a> on Wikipedia. <a href="http://en.wikipedia.org/wiki/Ident">Ident</a> as per <a href="http://tools.ietf.org/html/rfc1413">RFC 1413</a> is used for a few different services, in particular <a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</a>. A feature of oidentd that my users find useful is ident spoofing.</p>
+<p><span id="more-517"></span>Ident is important on IRC as some servers do not allow you to connect unless you have an ident, while others do, you find yourself with a tide (~) prefix before your username. These are sometimes banned. For example:</p>
+<blockquote><p>HM2K!HM2K@ROFL.name</p>
+<p><em>#This is an example of a real user with a real ident</em></p>
+<p>baduser!~asdfg@123.123.123.123</p>
+<p><em>#This is an example of a possible exploited system</em></p></blockquote>
+<p>Generally the ident server (such as oidentd) will return the user&#8217;s username as the ident when it is requested, however on my servers, I allow some of my users to spoof their ident.</p>
+<p>This means they can change their ident to whatever they like, regardless of their username.</p>
+<p>To do this, you need to create the <a href="http://linux.die.net/man/5/oidentd.conf"><em>$HOME/.oidentd.conf</em></a> file, with the following content:</p>
+<blockquote><p>global { reply &#8216;$ident&#8217;}</p>
+<p><em>#Note: Where $ident is, replace with the ident you want.</em></p></blockquote>
+<p>I know some users find this a bit difficult or confusing, so I created a script to do it for them.</p>
+<ul>
+<li><a href="http://hm2k.googlecode.com/svn/trunk/code/shell/setident.sh">setident.sh</a> &#8211; A script used to set your ident</li>
+</ul>
+<p>It&#8217;s works fine using the sh unix shell on FreeBSD.</p>
+<p>If you are on my shell servers, you should be able to take advantage of this using the &#8220;setident&#8221; command.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/ident-spoofing/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">517</post-id>	</item>
+		<item>
+		<title>Don&#8217;t forget to run make test!</title>
+		<link>https://hm2k.org/posts/dont-forget-to-run-make-test</link>
+					<comments>https://hm2k.org/posts/dont-forget-to-run-make-test#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 13 Nov 2008 16:17:26 +0000</pubDate>
+				<category><![CDATA[FreeBSD]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=289</guid>
+
+					<description><![CDATA[During my install of PHP5 on FreeBSD&#8230; Build complete. Don&#8217;t forget to run &#8216;make test&#8217;. amber# make test make: don&#8217;t know how to make test. Stop It made me laugh anyway.<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form" rel="bookmark" title="How to correctly make a PHP contact form">How to correctly make a PHP contact form </a> <small>I use contact forms on many websites, and over the...</small></li>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+<li><a href="https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest" rel="bookmark" title="Xen on CentOS Host running FreeBSD Guest">Xen on CentOS Host running FreeBSD Guest </a> <small>Recently i&#8217;ve been investigating Xen. In short, Xen is open...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>During my install of PHP5 on FreeBSD&#8230;</p>
+<blockquote><p>Build complete.<br />
+Don&#8217;t forget to run &#8216;make test&#8217;.</p>
+<p>amber# make test<br />
+make: don&#8217;t know how to make test. Stop</p></blockquote>
+<p>It made me laugh anyway.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form" rel="bookmark" title="How to correctly make a PHP contact form">How to correctly make a PHP contact form </a> <small>I use contact forms on many websites, and over the...</small></li>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+<li><a href="https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest" rel="bookmark" title="Xen on CentOS Host running FreeBSD Guest">Xen on CentOS Host running FreeBSD Guest </a> <small>Recently i&#8217;ve been investigating Xen. In short, Xen is open...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/dont-forget-to-run-make-test/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">289</post-id>	</item>
+		<item>
+		<title>Setting up a FreeBSD socks proxy server for use with mIRC</title>
+		<link>https://hm2k.org/posts/freebsd-socks-proxy-for-mirc</link>
+					<comments>https://hm2k.org/posts/freebsd-socks-proxy-for-mirc#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 18 Sep 2008 03:51:48 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=220</guid>
+
+					<description><![CDATA[Update: Looking for the sss.pl? Try the Simple Sockets Server project page. I&#8217;m getting fed up with my current IRC BNC software. At the moment I&#8217;m using psyBNC, which means I have to connect to it like you would an IRC server, then issue commands to that to tell it to connect to the IRC [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/ftp-server-for-windows" rel="bookmark" title="FTP server for windows">FTP server for windows </a> <small>I have been on the lookout for a decent FTP...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><em>Update: Looking for the sss.pl? Try the <a href="https://sourceforge.net/projects/ssspl/">Simple Sockets Server</a> project page.</em></p>
+<p>I&#8217;m getting fed up with my current IRC BNC software. At the moment I&#8217;m using psyBNC, which means I have to connect to it like you would an IRC server, then issue commands to that to tell it to connect to the IRC server of your choice.</p>
+<p>I no longer need the features of psyBNC and decided that there must be a better way.</p>
+<p>At first I started looking at other, more basic BNC software, but then worked out that they work in very much the same way as psyBNC in the fact that you have to first connect to it, then tell it where to connect to.</p>
+<p>So I thought&#8230; What about a socks5 proxy?</p>
+<p><span id="more-220"></span></p>
+<p>My BNC currently runs on my FreeBSD server, which I use for my IRC activity as it has plenty of IPs and lots of Vhosts.</p>
+<p>mIRC can connect to an IRC Server through a Socks4, Socks5, or Proxy firewall.</p>
+<p>In mIRC the fields the Firewall/Proxy dialogue box are as follows: Firewall Support &lt;None|Server|DCC|Both&gt;; Protocol &lt;Socks4|Socks5|Proxy&gt;; Hostname; User ID; Password; Port.</p>
+<p>Judging by this, what I need is some kind of Socks daemon/server that has the ability to allow for a username or user id and a password.</p>
+<p>I had a look at using OpenSSH&#8217;s Socks compatible dynamic forwarding by doing the following:</p>
+<blockquote><p>ssh -D&lt;port&gt; user@hostname</p></blockquote>
+<p>However, I discovered that the hostname was required, and I could not connect to any host on demand as expected.</p>
+<p>So I decided to look at <a href="http://www.freshports.org/search.php?stype=shortdescription&amp;method=match&amp;query=socks">FreshPorts for Socks</a> software, there are a few options&#8230;</p>
+<ul>
+<li>3proxy &#8211; russian software, not a fan of this, it lacks documentation and support</li>
+<li>csocks &#8211; i386 only, no good on x64 machines</li>
+<li>nylon &#8211; seems pretty neat, tested it out, it has no options for username/password auth</li>
+<li>p5-Socks &#8211; a perl module, not a daemon</li>
+<li>proxy-connect &#8211; lacks proper maintenance</li>
+<li>prtunnel &#8211; poor documentation, doesn&#8217;t appear to do the task I want</li>
+<li>socks5 &#8211; &#8220;NEC has a funky license for this software&#8221;</li>
+<li>ss5 &#8211; bingo!</li>
+<li>tsocks &#8211; &#8220;Allow non SOCKS aware applications to use SOCKS without modification&#8221; &#8212; not what I want.</li>
+</ul>
+<p><a href="http://ss5.sourceforge.net/">ss5</a> appears to be what I am looking for&#8230;</p>
+<blockquote><p><code class="code">cd /usr/ports/net/ss5/ &amp;&amp; make install clean</code></p></blockquote>
+<p>Based on the <a href="http://linux.die.net/man/1/ss5">ss5 manual page</a> I decided to create a ss5.conf file, which looked like this:</p>
+<blockquote><p>set SS5_SOCKS_USER hm2k<br />
+set SS5_SOCKS_PORT 33333<br />
+set SS5_SOCKS_ADDR rofl.name<br />
+set SS5_PASSWORD_FILE ~/ss5/ss5.passwd<br />
+set SS5_CONFIG_FILE ~/ss5/ss5.conf<br />
+set SS5_LOG_FILE ~/ss5/ss5.log<br />
+auth 0.0.0.0/0 &#8211; u<br />
+permit u 0.0.0.0/0 &#8211; 0.0.0.0/0 &#8211; &#8211; &#8211; &#8211; &#8211;</p></blockquote>
+<p>Once I&#8217;d done this, I tried to run it. I found that I wasn&#8217;t able to specify a config file meaning I probably wasn&#8217;t able to run this under anything other than root.</p>
+<p>One thing I didn&#8217;t understand is that the <a href="http://ss5.sourceforge.net/configuration.htm">ss5 configuration documentation</a> say one of the variables (which the manual says to put into the config file) allows you to specify a config file. Which does not make sense!</p>
+<p>So I decided to take a different approach, and coded my own SOCKS5 Server Script in perl&#8230;</p>
+<p>I call it <a href="http://sourceforge.net/projects/ssspl">Simple Socks Server for Perl (sss.pl)</a>.</p>
+<p>I hope someone else finds my script useful, and with any luck user feedback will drive me to develop it further.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/ftp-server-for-windows" rel="bookmark" title="FTP server for windows">FTP server for windows </a> <small>I have been on the lookout for a decent FTP...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/freebsd-socks-proxy-for-mirc/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">220</post-id>	</item>
+		<item>
+		<title>longip perl script</title>
+		<link>https://hm2k.org/posts/longip-script</link>
+					<comments>https://hm2k.org/posts/longip-script#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 25 Jun 2008 23:52:29 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[Linux]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=210</guid>
+
+					<description><![CDATA[I wanted to create a script that would convert a normal IP address to a long IP, just like mIRC Script&#8217;s $longip alias. $longip(address) Converts an IP address into a long value and vice-versa. $longip(158.152.50.239)  returns 2660774639 $longip(2660774639)       returns 158.152.50.239 What I was originally trying to do was increase an IP by 1, but due [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/seen-script-for-mirc-updated" rel="bookmark" title="Seen script for mIRC updated">Seen script for mIRC updated </a> <small>Looking for someone? huh? Well, look no further, this script...</small></li>
+<li><a href="https://hm2k.org/posts/tinysong-tcl-script-for-eggdrop" rel="bookmark" title="TinySong TCL script for Eggdrop">TinySong TCL script for Eggdrop </a> <small>If you&#8217;ve not heard of TinySong, you&#8217;re missing out! TinySong...</small></li>
+<li><a href="https://hm2k.org/posts/portal-script" rel="bookmark" title="Finding a Portal Script">Finding a Portal Script </a> <small>I spent a long time today searching for a PHP...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I wanted to create a script that would convert a normal IP address to a long IP, just like mIRC Script&#8217;s $longip alias.</p>
+<blockquote><p><span style="font-weight: bold; font-size: 9pt; font-family: 'Verdana'; color: #00007f;">$longip(address)</span></p>
+<p><span style="color: #000000;">Converts an IP address into a long value and  vice-versa.</span></p>
+<p><span style="color: #000000;">$longip(158.152.50.239)  returns  2660774639</span></p>
+<p><span style="color: #000000;">$longip(2660774639)       returns  158.152.50.239</span></p></blockquote>
+<p>What I was originally trying to do was increase an IP by 1, but due to the octets only allowing up to 255, this became increasingly difficult to do.</p>
+<p>What I decided to do in the end was convert the IP to a &#8220;longip&#8221; then increase it by 1, then convert the IP BACK to normal IP.</p>
+<p>This required a way to convert an IP to and from longIP, I was told it could be done purely using shell script, here&#8217;s what I did&#8230;</p>
+<p><span id="more-210"></span></p>
+<p>I decided that shell script wasn&#8217;t powerful enough for what I wanted, and that I could do it easier in perl, this is the result:</p>
+<blockquote><p>#!/usr/bin/perl</p>
+<p># longip by HM2K 2008 (Updated: 17/01/08)</p>
+<p># Description: Converts (Short) IPs to Long Ips and visa versa.<br />
+# Usage: ./longip.pl &lt;ip&gt;</p>
+<p>use warnings;<br />
+use strict;<br />
+use Socket;</p>
+<p>sub longip {<br />
+my $input=shift;<br />
+if ($input =~ /\d+\.\d+\.\d+\.\d+/) { return ip2long($input); }<br />
+else { return long2ip($input); }<br />
+}</p>
+<p>sub ip2long { return unpack(&#8220;l*&#8221;, pack(&#8220;l*&#8221;, unpack(&#8220;N*&#8221;, inet_aton(shift)))); }</p>
+<p>sub long2ip { return inet_ntoa(pack(&#8220;N*&#8221;, shift)); }</p>
+<p>print longip(shift);</p></blockquote>
+<p>Thanks for the assistance from #perlhelp (EFnet).</p>
+<p>It&#8217;s also worth noting that cls (EFnet) created a shell script version called &#8220;ipconv.sh&#8221;, which is about 50 long lines in total (too long for such a simple task imo), however it didn&#8217;t convert how I wanted. If you ask him (or me) nicely, you may receive a copy.</p>
+<p>Update: I also found a version of &#8220;<a href="http://libconnect.cvs.sourceforge.net/viewvc/*checkout*/libconnect/libconnect-cvs/doc/tools/ipconv.sh?revision=1.1.1.1&amp;content-type=text%2Fplain">ipconv.sh</a>&#8221; in libconnect.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/seen-script-for-mirc-updated" rel="bookmark" title="Seen script for mIRC updated">Seen script for mIRC updated </a> <small>Looking for someone? huh? Well, look no further, this script...</small></li>
+<li><a href="https://hm2k.org/posts/tinysong-tcl-script-for-eggdrop" rel="bookmark" title="TinySong TCL script for Eggdrop">TinySong TCL script for Eggdrop </a> <small>If you&#8217;ve not heard of TinySong, you&#8217;re missing out! TinySong...</small></li>
+<li><a href="https://hm2k.org/posts/portal-script" rel="bookmark" title="Finding a Portal Script">Finding a Portal Script </a> <small>I spent a long time today searching for a PHP...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/longip-script/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">210</post-id>	</item>
+		<item>
+		<title>FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;</title>
+		<link>https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory</link>
+					<comments>https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 16 Jan 2008 14:26:07 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/freebsd-62-usrports-no-such-file-or-directory</guid>
+
+					<description><![CDATA[I recently setup a new FreeBSD 6.2 server, only to find the following: server# cd /usr/ports /usr/ports: No such file or directory. I panicked a little bit, as I&#8217;ve not setup a freeBSD server in a while, so I tried to recall what I did last time. I remembered that all I did last time [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest" rel="bookmark" title="Xen on CentOS Host running FreeBSD Guest">Xen on CentOS Host running FreeBSD Guest </a> <small>Recently i&#8217;ve been investigating Xen. In short, Xen is open...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I recently setup a new FreeBSD 6.2 server, only to find the following:</p>
+<blockquote><p>server# cd /usr/ports<br />
+/usr/ports: No such file or directory.</p></blockquote>
+<p><span id="more-165"></span>I panicked a little bit, as I&#8217;ve not setup a freeBSD server in a while, so I tried to recall what I did last time.</p>
+<p>I remembered that all I did last time was use &#8220;cvsup&#8221;, however&#8230;</p>
+<blockquote><p>server# cvsup<br />
+cvsup: Command not found.</p></blockquote>
+<p>Panic!</p>
+<p>Here&#8217;s the deal&#8230; apparently the &#8220;<a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html">cvsup</a>&#8221; command is no longer used, and instead we&#8217;ve now got &#8220;<a href="http://www.freshports.org/net/csup/">csup</a>&#8220;, which apparently is a rewrite of cvsup in C. This can be quite confusion if you were not aware of the change (like myself).</p>
+<p>Now we know this we can log in as the &#8220;root&#8221; user, and setup the ports:</p>
+<p>First of all, copy the example &#8220;ports-supfile&#8221; (needed for csup) to your root directory.</p>
+<blockquote><p>server# cp /usr/share/examples/cvsup/ports-supfile /root/ports-supfile</p></blockquote>
+<p>Now we run the csup command:</p>
+<blockquote><p>server# <span class="postbody">csup /root/ports-supfile</span><br />
+Name lookup failure for &#8220;CHANGE_THIS.FreeBSD.org&#8221;: hostname nor servname provided, or not known</p></blockquote>
+<p>Obviously there&#8217;s a problem. We need to edit the &#8220;ports-supfile&#8221; and change the host, or do we&#8230;?</p>
+<blockquote><p>server# csup<br />
+Usage: csup [options] supfile<br />
+Options:<br />
+-1           Don&#8217;t retry automatically on failure (same as &#8220;-r 0&#8221;)<br />
+-4           Force usage of IPv4 addresses<br />
+-6           Force usage of IPv6 addresses<br />
+-A addr      Bind local socket to a specific address<br />
+-b base      Override supfile&#8217;s &#8220;base&#8221; directory<br />
+-c collDir   Subdirectory of &#8220;base&#8221; for collections (default &#8220;sup&#8221;)<br />
+-d delLimit  Allow at most &#8220;delLimit&#8221; file deletions (default unlimited)<br />
+<strong>-h host      Override supfile&#8217;s &#8220;host&#8221; name</strong><br />
+-i pattern   Include only files/directories matching pattern.<br />
+May be repeated for an OR operation.  Default is<br />
+to include each entire collection.<br />
+-k           Keep bad temporary files when fixups are required<br />
+-l lockfile  Lock file during update; fail if already locked<br />
+-L n         Verbosity level (0..2, default 1)<br />
+-p port      Alternate server port (default 5999)<br />
+-r n         Maximum retries on transient errors (default unlimited)<br />
+-s           Don&#8217;t stat client files; trust the checkouts file<br />
+-v           Print version and exit<br />
+-z           Enable compression for all collections<br />
+-Z           Disable compression for all collections</p></blockquote>
+<p>We can use the -h option of csup to supply a host override, we now just need to <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html#CVSUP-MIRRORS">find a cvsup host</a> to use. Select one that is closest to your server, for example, my server is in the <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html#HANDBOOK-MIRRORS-CHAPTER-SGML-MIRRORS-UK-CVSUP">UK</a>, so I would use &#8220;cvsup.uk.FreeBSD.org&#8221;. You could also use <a href="http://www.freshports.org/sysutils/fastest_cvsup/">fastest_cvsup</a>, to find the fastest one for you.</p>
+<p>Now we issue the command again, but now with the -h option:</p>
+<blockquote><p>server# <span class="postbody">csup -h </span>cvsup.uk.FreeBSD.org<span class="postbody"> /root/ports-supfile</span></p></blockquote>
+<p>And with any luck, providing your server has an internet connection the process should begin.</p>
+<p><em>Note: I hate using the &#8220;vi&#8221; editor and since this system hasn&#8217;t got ports yet, I can&#8217;t install my preferred editor &#8220;nano&#8221;, once I have nano installed via ports, I would edit the ports-supfile with the selected cvsup hostname, meaning I do not have to supply one in the future when I come to update the ports.</em></p>
+<p>Hope this helps somebody!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest" rel="bookmark" title="Xen on CentOS Host running FreeBSD Guest">Xen on CentOS Host running FreeBSD Guest </a> <small>Recently i&#8217;ve been investigating Xen. In short, Xen is open...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">165</post-id>	</item>
+		<item>
+		<title>Configuring a FreeBSD IRC Shell Server</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server</link>
+					<comments>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 22 Aug 2007 21:46:59 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server</guid>
+
+					<description><![CDATA[This is a brief guide created to help configure a secure FreeBSD as an IRC shell server. In this case I will be running FreeBSD 6.0, with bash shell, SSHd, named (bind), httpd (Apache2+PHP4), FTPd (pure-ftpd). Note: In many cases, if you don&#8217;t wish to review the config when adding to it you can do: [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>This is a brief guide created to help configure a secure FreeBSD as an IRC shell server.</p>
+<p>In this case I will be running FreeBSD 6.0, with bash shell, SSHd, named (bind), httpd (Apache2+PHP4), FTPd (pure-ftpd).<span id="more-127"></span></p>
+<p>Note: In many cases, if you don&#8217;t wish to review the config when adding to it you can do: echo &#8216;&lt;string&gt;&#8217; &gt;&gt; &lt;file&gt; (ie: echo &#8216;accounting_enable=&#8221;YES&#8221;&#8216; &gt;&gt; /etc/rc.conf)</p>
+<p><strong>sshd</strong></p>
+<ul>
+<li>edit /etc/ssh/sshd_config</li>
+<li>Add line &#8220;Port 22&#8221; &#8211; This is default, BUT change to another port if you want to be even more secure.</li>
+<li>Add line &#8220;Protocol 2&#8221; &#8211; We don&#8217;t want protocol 1, just 2.</li>
+<li>Add line &#8220;LoginGraceTime 1m&#8221; &#8211; If you don&#8217;t login within 1 min, it will timeout.</li>
+<li>Add line &#8220;PermitRootLogin no&#8221; &#8211; You should not allow direct root login via ssh, use su.</li>
+<li>Add line &#8220;MaxAuthTries 3&#8221; &#8211; If you get your login incorrect 3 times, you&#8217;re doing something wrong anyway.</li>
+<li>Add line &#8220;X11Forwarding no&#8221; &#8211; You don&#8217;t run Xwindows on a server muppet!</li>
+<li>Add line &#8220;MaxStartups 15:30:60&#8221; &#8211; This means, after 15 concurrent unauthed connections, 30% of connections will be dropped, until it reaches a max of 60, then it&#8217;s full.</li>
+</ul>
+<p><strong>sysctl</strong></p>
+<ul>
+<li>You can read each current setting by doing sysctl &lt;setting&gt; (ie: sysctl kern.securelevel)</li>
+<li>If you are unsure about using a setting you can use &#8220;sysctl -w &lt;setting&gt;&#8221; to temporary set, until you next reboot.</li>
+<li>edit /etc/sysctl.conf</li>
+<li>Add line &#8220;security.bsd.see_other_uids=0&#8221; &#8211; We don&#8217;t want users to see each other&#8217;s processes.</li>
+<li>Add line &#8220;kern.securelevel=1&#8221; &#8211; By default it is -1, you don&#8217;t need this unless you&#8217;re running Xwindows, run at least 0.</li>
+<li>Add line &#8220;net.inet.tcp.blackhole=2&#8221; &#8211; This will drop ALL tcp packets that are received on a CLOSED port and not reply.</li>
+<li>Add line &#8220;net.inet.udp.blackhole=1&#8221; &#8211; This will drop ALL udp packets that are received on a CLOSED port and not reply.</li>
+<li>Add line &#8220;kern.ipc.somaxconn=1024&#8221; &#8211; Default is 128, this means we can have more concurrent connections. If like you me you have plenty of bandwidth, this is best, otherwise if you get attacked, you&#8217;ll reach 128 very quickly.</li>
+<li>Add line &#8220;net.inet.icmp.icmplim=50&#8221; &#8211; Default is 200, you shouldn&#8217;t need this many, set it to 50 to reduce the amount of ICMPs sent back per second.</li>
+<li>Add line &#8220;net.inet.ip.rtexpire=2&#8221; &#8211; Default is 3600, See the <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/securing-freebsd.html#AEN18452">FreeBSD handbook: Denial Of Service Attacks</a>.</li>
+<li>Add line &#8220;net.inet.ip.rtminexpire=2&#8221; &#8211; Default is 10, See the <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/securing-freebsd.html#AEN18452">FreeBSD handbook: Denial Of Service Attacks</a>.</li>
+<li>Add line &#8220;net.inet.tcp.always_keepalive=1&#8221; &#8211; This will help discover dead connections and clears them.</li>
+<li>Add line &#8220;net.inet.ip.random_id=1&#8221; &#8211; This is optional, but I like the idea. It gives you random PIDs instead of sequential.</li>
+</ul>
+<p>This is my &#8220;/etc/sysctl.conf&#8221;:</p>
+<blockquote><p>security.bsd.see_other_uids=0<br />
+kern.securelevel=1<br />
+net.inet.tcp.blackhole=2<br />
+net.inet.udp.blackhole=1<br />
+kern.ipc.somaxconn=1024<br />
+net.inet.icmp.icmplim=50<br />
+net.inet.ip.rtexpire=2<br />
+net.inet.ip.rtminexpire=2<br />
+net.inet.tcp.always_keepalive=1<br />
+net.inet.ip.random_id=1</p></blockquote>
+<p><strong>rc.conf</strong></p>
+<ul>
+<li> edit /etc/rc.conf</li>
+<li>Add line &#8216;portmap_enable=&#8221;NO&#8221;&#8216; &#8211; You only need this if you&#8217;re using NFS, which we&#8217;re not.</li>
+<li>Add line &#8216;sendmail_enable=&#8221;NO&#8221;&#8216; &#8211; This will tell sendmail to only listen on the localhost, it&#8217;s not a good idea to leave a mail server open to spam on a shell server.</li>
+<li>Add line &#8216;nfs_server_enable=&#8221;NO&#8221;&#8216; &#8211; As above, we don&#8217;t need NFS.</li>
+<li>Add line &#8216;nfs_client_enable=&#8221;NO&#8221;&#8216; &#8211; Again, no NFS, not even a client.</li>
+<li>Add line &#8216;accounting_enable=&#8221;YES&#8221;&#8216; &#8211; This enables <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/security-accounting.html">process accounting</a>. (You need to do touch /var/account/acct &amp;&amp; accton /var/account/acct).</li>
+<li>Add line &#8216;clear_tmp_enable=&#8221;YES&#8221;&#8216; &#8211; This will clear the &#8220;/tmp&#8221; dir at boot time.</li>
+<li>Add line &#8216;syslogd_flags=&#8221;-ss&#8221;&#8216; &#8211; This stops syslogd from broadcasting on port 514.</li>
+<li>Add line &#8216;enable_quotas=&#8221;YES&#8221;&#8216; &#8211; Assuming you&#8217;re running a shell server, you want quotas enabled.</li>
+<li>Add line &#8216;check_quotas=&#8221;YES&#8221;&#8216; &#8211;  This will help keep your users within their quotas.</li>
+<li>Add line &#8216;ntpdate_enable=&#8221;YES&#8221;&#8216; &#8211; This will enable ntpdate, which will keep your date/time up-to-date.</li>
+<li>Add line &#8216;update_motd=&#8221;NO&#8221;&#8216; &#8211; This will ensure that the FreeBSD details aren&#8217;t added to the /etc/motd on each reboot. We don&#8217;t want to broadcast this information.</li>
+<li>Check for &#8216;inetd_enable&#8217; &#8211; Set it to NO, or add inetd_enable=&#8221;NO&#8221;, if it&#8217;s not there.</li>
+<li>Check for &#8216;named_enable&#8217; &#8211; Okay, so running named will increase overheads, but if this is a shell box it probably makes sense to run your own dns server as IRC relies a lot on resolving hosts.</li>
+<li>Check for &#8216;log_in_vain&#8217; &#8211; You may have set this based on what you read else where, but I recommend having this as &#8220;NO&#8221;, because it logs events on non-open ports, which could cause a ddos.</li>
+</ul>
+<p>The latter half of my &#8220;/etc/rc.conf&#8221; looks like this:</p>
+<blockquote><p>inetd_enable=&#8221;NO&#8221;<br />
+linux_enable=&#8221;YES&#8221;<br />
+sshd_enable=&#8221;YES&#8221;</p>
+<p>portmap_enable=&#8221;NO&#8221;<br />
+sendmail_enable=&#8221;NO&#8221;<br />
+nfs_server_enable=&#8221;NO&#8221;<br />
+nfs_client_enable=&#8221;NO&#8221;<br />
+accounting_enable=&#8221;YES&#8221;<br />
+clear_tmp_enable=&#8221;YES&#8221;<br />
+syslogd_flags=&#8221;-ss&#8221;<br />
+enable_quotas=&#8221;YES&#8221;<br />
+check_quotas=&#8221;YES&#8221;<br />
+ntpdate_enable=&#8221;YES&#8221;<br />
+update_motd=&#8221;NO&#8221;<br />
+named_enable=&#8221;YES&#8221;</p></blockquote>
+<p><strong>Firewall</strong></p>
+<p>For a shell server, a firewall may not be required, but for many others it may be required.</p>
+<ul>
+<li> edit /etc/firewall.rules &#8211; for a shell server, you can do the following:
+<ul>
+<li>You need to allow new connections for services on the following ports: 21 (ftpd), 22 (sshd), 53 (dns), 80 (httpd).</li>
+<li>If you are running any other core services, you will need to open the ports for those too. Remember, the first 1024 ports are reserved for root services.</li>
+</ul>
+<ul>
+<li>If you run an IRC shell server, you should open a range (ie: 2000-4000) for your users services. (such as eggdrops and psybncs).</li>
+<li>No other new connections to other ports should be allowed.</li>
+<li>All other traffic is okay.</li>
+</ul>
+</li>
+<li>Don&#8217;t forget to &#8220;chmod 600 /etc/firewall.rules&#8221;</li>
+<li>Add line &#8216;firewall_enable=&#8221;YES&#8221;&#8216; &#8211; We want a firewall enabled.</li>
+<li>Add line &#8216;firewall_logging=&#8221;YES&#8221;&#8216; &#8211; Logging the firewall can be useful.</li>
+<li>Add line &#8216;firewall_script=&#8221;/etc/firewall.rules&#8221;&#8216; &#8211; It needs to know where to find the rules. (don&#8217;t forget to touch /etc/firewall.rules)</li>
+</ul>
+<p><strong>Date and Time</strong></p>
+<p>You must ensure your system&#8217;s date/time is correct, otherwise SSH may fail and logs will be incorrect.</p>
+<ul>
+<li> As above, ensure you have &#8216;ntpdate_enable=&#8221;YES&#8221;&#8216; in your &#8220;rc.conf&#8221;.</li>
+<li>For first time use: &#8220;touch /etc/ntp.conf &amp;&amp; echo /etc/ntp.conf &gt;&gt; server uk.pool.ntp.org prefer &amp;&amp; echo /etc/ntp.conf &gt;&gt; driftfile /var/db/ntp.drift&#8221;</li>
+<li>Run: ntpdate uk.pool.ntp.org</li>
+</ul>
+<p><strong>Login.conf</strong></p>
+<p>Using <a href="http://www.freebsd.org/cgi/man.cgi?query=login.conf&amp;sektion=5">login.conf</a> you can create custom classes for your users giving them all sorts of limits and restrictions.</p>
+<ul>
+<li>edit /etc/login.conf</li>
+<li>If you change the &#8220;passwd_format&#8221; in the Default class to read &#8220;:passwd_format=blf:\&#8221;, this will give you blowfish password hashes, for better security, but you need to rebuild your login database by doing: &#8220;cap_mkdb /etc/login.conf&#8221;, and update all passwords by doing &#8220;passwd &lt;user&gt;&#8221; as root (check &#8220;/etc/master.passwd&#8221; all passwords will start with $2 if done correctly), don&#8217;t forget to edit /etc/auth.conf to &#8220;crypt_default=blf&#8221; also. This step isn&#8217;t required, but recommended.</li>
+<li>There are lots more options, you need to read the handbook for the &#8220;<a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/users-limiting.html">login.conf</a>&#8221; file.</li>
+<li>Run &#8220;cap_mkdb /etc/login.conf&#8221; when you&#8217;re done to update the database.</li>
+</ul>
+<p><strong>pure-ftpd</strong></p>
+<p>Instructions are as follows:</p>
+<ul>
+<li>cd /usr/ports/ftp/pure-ftpd &amp;&amp; make install</li>
+<li>cp /usr/local/etc/pure-ftpd.conf.sample  /usr/local/etc/pure-ftpd.conf</li>
+<li>edit  /usr/local/etc/pure-ftpd.conf (if required)
+<ul>
+<li>Change &#8220;NoAnonymous                 no&#8221; to yes</li>
+</ul>
+</li>
+<li>/usr/local/sbin/pure-config.pl /usr/local/etc/pure-ftpd.conf</li>
+<li>echo &#8216;<font size="-1">pureftpd_enable=&#8221;YES&#8221;</font>&#8216; &gt;&gt; /etc/rc.conf</li>
+</ul>
+<p><strong>Apache 2</strong></p>
+<ul>
+<li>edit /usr/local/etc/apache2/httpd.conf</li>
+<li>change the &#8220;ServerAdmin&#8221; line with your email address.</li>
+<li>change the &#8220;ServerTokens&#8221; line from &#8220;Full&#8221; to &#8220;Prod&#8221;, this means only &#8220;Apache&#8221; will be displayed.</li>
+<li>echo &#8216;<font size="-1">httpd_enable=&#8221;YES&#8221;</font>&#8216; &gt;&gt; /etc/rc.conf</li>
+</ul>
+<p><strong>oidentd</strong></p>
+<ul>
+<li>echo <font size="-1">&#8216;oidentd_enable=&#8221;YES&#8221;</font>&#8216; &gt;&gt; /etc/rc.conf</li>
+<li> edit /usr/local/etc/oidentd.conf</li>
+<li>Ensure the defaults deny everything, and that root has a different reply, ie:</li>
+</ul>
+<blockquote><p>default {<br />
+default {<br />
+deny spoof<br />
+deny spoof_all<br />
+deny spoof_privport<br />
+deny random<br />
+deny random_numeric<br />
+deny numeric<br />
+deny hide<br />
+}<br />
+}</p>
+<p>user root {<br />
+default {<br />
+force reply &#8220;UNKNOWN&#8221;<br />
+}<br />
+}</p></blockquote>
+<p>Note: You can add a user, if you want to allow spoof for certain users, and allow that.</p>
+<p><strong>Files and Permissions</strong></p>
+<ul>
+<li>&#8220;find / -perm -2000 -ls &amp;&amp; find / -perm -4000 -ls&#8221; &#8211; This lists binaries that everyone can currently access.</li>
+<li>Use &#8220;chmod a-s &lt;file&gt;&#8221; to remove access or &#8220;chmod o-rwx &lt;file&gt;&#8221; to allow just for wheel users.</li>
+<li>&#8220;chmod 640 /etc/crontab&#8221; &#8211; This will allow only root and wheel users to see it. Users don&#8217;t need to know what processes are started by cron.</li>
+<li>&#8220;chmod 600 /etc/rc.conf&#8221; &#8211; Users don&#8217;t need to access this.</li>
+<li>&#8220;chmod 600 /etc/sysctl.conf&#8221; &#8211; Users don&#8217;t need to access this.</li>
+<li>&#8220;chmod 0750 /root&#8221; &#8211; Stops non-wheel users from viewing root files.</li>
+<li>&#8220;chmod 640 /var/db/locate.database&#8221; &#8211; You don&#8217;t want all users to see all the files on your system.</li>
+<li>edit /etc/motd &#8211; Change this to say what you like.</li>
+<li>&#8220;touch /etc/COPYRIGHT&#8221; &#8211; This will remove the copyright info.</li>
+</ul>
+<p><strong>ToDo</strong></p>
+<ul>
+<li>Provide an in-depth example of a firewall script</li>
+<li>Provide details about working with Quotas</li>
+<li>Provide better usage of login.conf</li>
+</ul>
+<p><strong>Additional Security</strong></p>
+<ul>
+<li>Try <a href="http://www.onlamp.com/pub/a/bsd/2003/03/20/FreeBSD_Basics.html">checking system integrity with tripwire</a>.</li>
+<li>Keep things up to date with <a href="http://www.freebsd.org/doc/en_US.ISO8859-1/books/handbook/cvsup.html">cvsup</a>.</li>
+</ul>
+<p><strong>Resources</strong></p>
+<ul>
+<li><a href="http://www.freebsd.org/security/">FeeBSD Security Information</a></li>
+<li><a href="http://www.defcon1.org/html/Security/Secure-Guide/secure-guide.html">Defcon1 Security Guide</a></li>
+<li><a href="http://www.dal.net/admin/vote/seceval.php3">A basic guide to securing FreeBSD (DALnet)</a></li>
+<li><a href="http://www.bsdguides.org/guides/freebsd/security/harden.php">Hardening FreeBSD (bsdguides.org)</a></li>
+<li><a href="http://silverwraith.com/papers/freebsd-ddos.php">Protecting yourself with FreeBSD</a></li>
+<li><a href="http://www.freebsdblog.org/archives/2005/06/a_sample_of_etc_1.html">sysctl.conf Sample (Freebsdblog.org)</a></li>
+<li><a href="http://www.onlamp.com/pub/a/bsd/2002/08/08/FreeBSD_Basics.html">Securing FreeBSD (ONlamp.com)</a></li>
+<li><a href="http://www.windowsecurity.com/whitepapers/FreeBSD_Security_HowTo.html">FreeBSD Security HowTo (windowssecurity.com)</a></li>
+<li><a href="http://www.ethereal.net/~tristan/freebsd/">tris&#8217; FreeBSD setup info</a></li>
+<li><a href="http://www.cpanel.net/docs/seminar/freebsd.pdf">cPanel FreeBSD Seminar</a></li>
+</ul>
+<p><strong>Final notes</strong></p>
+<p>I&#8217;ve written this as more of a reference, i&#8217;ve more than likely missed a few things, so feel free to add your own comments.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/feed</wfw:commentRss>
+			<slash:comments>10</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">127</post-id>	</item>
+		<item>
+		<title>Xen on CentOS Host running FreeBSD Guest</title>
+		<link>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest</link>
+					<comments>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 05 Jul 2007 14:37:17 +0000</pubDate>
+				<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[Linux]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/xen-on-centos-host-running-freebsd-guest</guid>
+
+					<description><![CDATA[Recently i&#8217;ve been investigating Xen. In short, Xen is open source virtualisation software that provides you with the ability to split a physical hardware server (host or dom0) into multiple virtual servers (guest or domU). What makes Xen so special above the rest is that it offers such a wide span of guest operating systems. [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Recently i&#8217;ve been investigating <a href="http://en.wikipedia.org/wiki/Xen">Xen</a>. In short, Xen is open source <a href="http://en.wikipedia.org/wiki/Virtualization">virtualisation</a> software that provides you with the ability to split a physical hardware server (host or dom0) into multiple virtual servers (guest or domU).</p>
+<p>What makes Xen so special above the rest is that it offers such a wide span of guest operating systems.<span id="more-125"></span></p>
+<p>I am a big fan of CentOS so I have chosen this as my host, but Xen as a host will pretty much run on any Linux based OS, NetBSD, or even Solaris.</p>
+<p>Just as a side note, the system I will be running this on is P4 3.0 CPU with 2GB ram.</p>
+<p>To begin with I tried <a href="http://www.xensource.com/download/dl_31tarballs.html">Xen 3.1</a> (32 bit PAE SMP) on CentOS 4, during this time I came across the following resources&#8230;</p>
+<ul>
+<li><a href="http://mark.foster.cc/wiki/index.php/Xen_on_CentOS-4">Xen on CentOS-4</a></li>
+<li><a href="http://www.xensource.com/files/xen_install_windows.pdf">How to Install Windows on Xen</a></li>
+<li><a href="http://wiki.xensource.com/xenwiki/GettingStarted">GettingStarted (XenSource Wiki)</a></li>
+<li><a href="http://wiki.centos.org/HowTos/Xen">CentOS Xen Wiki Documents</a></li>
+<li><a href="http://www.centos.org/docs/5/html/Virtualization-en-US/">CentOS 5 Virtualization Guide</a></li>
+<li><a href="http://www.redhat.com/rhel/virtualization/">RedHat Virtualization</a></li>
+<li><a href="http://www.howtoforge.com/centos_5.0_xen">Installing Xen On CentOS 5.0 (i386)</a></li>
+</ul>
+<p>I soon discovered that CentOS 5 had far better native support for Xen than CentOS 4.</p>
+<p>Therefore, CentOS 5 was to be used, once installed you could simply do &#8220;yum groupinstall Virtualization&#8221;, and it would install Xen for you ready to use out of the box. More or less.</p>
+<p>So this is great right? Xen installs on CentOS 5 via the virtualisation group pretty much hassle free, which means we have the dom0 setup.</p>
+<p>The next step is to create a guest or DomU. There are plenty to choose from (Many Linux Distros, NetBSD, FreeBSD, OpenBSD, Solaris, and even Windows XP &amp; 2003 Server), but we want FreeBSD.  This is where the fun begins! We find the following resources:</p>
+<ul>
+<li><a href="http://txrx.org/xen/">FreeBSD 5.3 Xen DomU Install HOWTO</a> &#8211; Outdated (For Xen 2.2 not Xen 3.0)</li>
+<li><a href="http://www.yuanjue.net/xen/howto.html">How to install FreeBSD as domU</a></li>
+<li><a href="http://www.fsmware.com/xenofreebsd/7.0/STATUS">Status of FreeBSD xen guest</a></li>
+<li><a href="http://wiki.xensource.com/xenwiki/FreeBSDdomU">FreeBSD as DomU/Guest HOWTO</a></li>
+</ul>
+<p>Okay, fine no problem. Right?</p>
+<p>Yes, until you get an error like this:</p>
+<blockquote><p>ERROR: Non PAE-kernel on PAE host.</p></blockquote>
+<p>Which effectively means that the CentOS 5 Dom0 (Host) is running a PAE kernel, yet what we&#8217;re trying to install as a domU (Guest) is a non PAE kernel.</p>
+<p>So, what is <a href="http://en.wikipedia.org/wiki/Physical_Address_Extension">PAE</a>? basically it gives your system the ability to handle 4GB of RAM or more (max 64GB RAM) , if you have less than 4GB, you don&#8217;t really need it. It&#8217;s primarily a fix for x86 processors, providing they support it, 64-bit processors don&#8217;t need it.</p>
+<p>So how do we fix this problem? I investigated and found the following resources:</p>
+<ul>
+<li><a href="http://wiki.xensource.com/xenwiki/32-bit%2C_64-bit%2C_and_PAE%2C_oh_my%21">32-bit, 64-bit, and PAE, oh my! (Xen Wiki)</a></li>
+<li><a href="http://groups.google.com/group/yuanjue/browse_thread/thread/ec4261c9511c1dca">FreeBSD as domU (YUAN Jue&#8217;s Group)</a></li>
+<li><a href="http://lists.xensource.com/archives/html/xen-users/2006-12/msg00268.html">FreeBSD under Xen (xen-users mail list)</a></li>
+<li><a href="http://rink.nu/blog/20070528143357.009067.html">FreeBSD/xen (rink.nu)</a></li>
+</ul>
+<p>In conclusion there are two options:</p>
+<ol>
+<li>Recompile the CentOS 5 dom0 (Host) with a non-PAE kernel with Xen.</li>
+<li>Recompile the FreeBSD domU (Guest) with a PAE kernel.</li>
+</ol>
+<p><strong>So what are the problems?</strong></p>
+<p>Option 1 would mean moving away from the native kernel, meaning that each time a new update comes up the kernel would have to be rebuilt manually. Although building the kernel without PAE will decrease overheads, building the kernel manually may lose performance. Considering this is the host, it&#8217;s vital that it is stable, therefore this is lesser of an option.</p>
+<p>Option 2 is apparently really easy to do, practially a flick of a switch, providing you understand what you are doing with FreeBSD and Xen. Unfortunately, my skills in this area are limited.</p>
+<p><strong>Where do we go from here?</strong></p>
+<p>Well, considering option 1 is the least favourable option, as it seems, the only way to go is to contact the people who know with regards to running FreeBSD as a DomU&#8230;</p>
+<ul>
+<li><a href="http://www.fsmware.com/">Kip Macy</a></li>
+<li><a href="http://www.yuanjue.net/">YUAN Jue</a></li>
+<li><a href="http://rink.nu/">Rink Springer</a></li>
+<li><a href="http://txrx.org/xen/">Chris Brookes</a></li>
+</ul>
+<p>Alternativly&#8230;</p>
+<ul>
+<li><a href="http://www.centos.org/modules/newbb/">CentOS Forums</a></li>
+<li><a href="http://lists.xensource.com/">Xen Mailing Lists</a></li>
+<li><a href="http://freebsdforums.org/forums/">BSD Forums</a></li>
+</ul>
+<p>Any feedback or comments will be greatfully received.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/xen-on-centos-host-running-freebsd-guest/feed</wfw:commentRss>
+			<slash:comments>8</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">125</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:47 by W3 Total Cache
+-->

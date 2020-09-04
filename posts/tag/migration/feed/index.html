@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>migration &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/migration/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Mon, 07 Nov 2011 23:02:22 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Migrating IMAP mailboxes to a cPanel server</title>
+		<link>https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server</link>
+					<comments>https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Mon, 07 Nov 2011 23:02:22 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[centos]]></category>
+		<category><![CDATA[cpanel]]></category>
+		<category><![CDATA[imap]]></category>
+		<category><![CDATA[imapsync]]></category>
+		<category><![CDATA[migration]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3322</guid>
+
+					<description><![CDATA[A customer got in touch with us and explained their situation. They need to setup their email on the go and configure some forwarders. Their issue was that they were never given access to the control panel by the account holder and have since lost touch. This unfortunately left them in a situation where they [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>A customer got in touch with us and explained their situation.<a href="http://labs.phurix.net/upload/Envelope.png"><img loading="lazy" class="alignright size-full wp-image-3328" title="Envelope" src="http://labs.phurix.net/upload/Envelope.png" alt="" width="256" height="256" srcset="https://hm2k.org/upload/Envelope.png 256w, https://hm2k.org/upload/Envelope-150x150.png 150w" sizes="(max-width: 256px) 100vw, 256px" /></a></p>
+<p>They need to setup their email on the go and configure some forwarders. Their issue was that they were never given access to the control panel by the account holder and have since lost touch.</p>
+<p>This unfortunately left them in a situation where they had no control over their hosting, they asked me to help them out.</p>
+<p>My task was to migrate their existing IMAP mailboxes to their hosting account on one of our cPanel servers&#8230;</p>
+<p><span id="more-3322"></span></p>
+<p>The first thing I did was get their UK domain onto our TAG giving us control over that for a small cost of £10+VAT, which the customer was only happy to pay.</p>
+<p>There are other ways to get control of the domain without the cost, such as dealing with the host directly but in this case, fasthosts refuses to communicate with you unless you&#8217;re a customer. Ridiculous.</p>
+<p>From here on inward, you&#8217;ll need root access to cPanel WHM on your server, or know someone who has.</p>
+<p>At this point you need to start to create your mailboxes on the new server that match up to the existing ones.</p>
+<p>The only issue with this is that you may find you can&#8217;t add &#8220;Remote Domains&#8221; (domains hosted elsewhere).</p>
+<blockquote><p>This item lets you allow cPanel users to create parked and addon domains that resolve to other servers. To make your selection, click the button corresponding to the option you wish to use. This value defaults to Off.</p>
+<p>Warning: Enabling this option can cause major security issues. We strongly recommend that you do not enable this option.</p></blockquote>
+<p>You&#8217;ll need to &#8220;<a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/WHMDocs/TweakSettings#Domains">Allow Remote Domains</a>&#8221; (Under &#8220;Tweak Settings&#8221; in WHM) so you&#8217;re able to add the domain. Once added, you can turn it off again.</p>
+<p>As I said, once the domain is added you can <a href="http://www.cpanel.net/media/tutorials/emailaccounts.htm">create your mailboxes</a> in cPanel to match what you already have.</p>
+<p>I then went ahead and added them to the customer&#8217;s email client (Outlook 2007) to make sure everything was working as expected (it was).</p>
+<p>They should have two sets of accounts added for each email address, the only difference between them should be the servers they use.</p>
+<h3>Migrating</h3>
+<p>This is where the fun starts.</p>
+<p>If you&#8217;ve tried moving messages before in Outlook you&#8217;ll know it&#8217;s pretty slow. The issue is that, you&#8217;re downloading the message from the existing server, copying it to your computer, then uploading it to the other server.</p>
+<p>This is a slow process, especially if you&#8217;re on regular UK broadband. In addition to that, you&#8217;ll find that Outlook will lock up while it waits for the server to respond.</p>
+<p>I tested moving a few thousand messages: it took 8 hours. At this rate it would take around a week to do all of the accounts which isn&#8217;t feasible in a live environment.</p>
+<p>Thunderbird isn&#8217;t much better. There had to be a better solution&#8230;</p>
+<p>I got in touch with cPanel, as they have a dedicated &#8220;migration&#8221; team, however they were asking for shell, ftp or control panel access, none of which the customer had.</p>
+<p>At first I had considered a server side, IMAP compatible email client such as Mutt or PINE, but I felt this may be a bit cumbersome.</p>
+<p>Enter imapsync&#8230;</p>
+<h3>imapsync</h3>
+<p>After a quick search I came across imapsync which appears to be the solution I was looking for.</p>
+<p>It&#8217;s written in Perl and is open source so there&#8217;s no reason it shouldn&#8217;t run on a CentOS server.</p>
+<p>To install imapsync on CentOS (with cPanel) you&#8217;ll need to do the following:</p>
+<p>First of all, imapsync isn&#8217;t in any of the official CentOS repositories so you need to install the <a href="http://wiki.centos.org/AdditionalResources/Repositories/RPMForge">RPMForge repository</a>.</p>
+<p>So, for example, on a CentOS 4 i386 install I would do:</p>
+<blockquote><p>wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el4.rf.i386.rpm</p>
+<p>rpm -i rpmforge-release-0.5.2-2.el4.rf.i386.rpm</p></blockquote>
+<p>Now it&#8217;s installed, you can utilise it by using yum combined with &#8220;&#8211;enablerepo=rpmforge&#8221; to install imapsync.</p>
+<p>However, before you go ahead and do that, you need to realise that because cPanel has it&#8217;s own set of perl modules and blocks the OS ones, you need to disable the &#8220;exclude&#8221; line in the yum configuration file.</p>
+<blockquote><p>nano -w /etc/yum.conf</p>
+<p>Note: Use whatever editor you prefer, I&#8217;m using nano. The -w is for no word wrap as this file contains long lines.</p></blockquote>
+<p>In this file, you need to comment out the following like:</p>
+<blockquote><p>#exclude=apache* bind-chroot courier* dovecot* exim* filesystem httpd* mod_ssl* mysql* nsd* perl* php* pr$</p></blockquote>
+<p>The hash (#) at the beginning means it&#8217;ll no longer be parsed, so nothing is excluded.</p>
+<p>Now you can go ahead and install imapsync trouble free:</p>
+<blockquote><p>yum install imapsync &#8211;enablerepo=rpmforge</p></blockquote>
+<p>This should install imapsync and any dependencies (such as the required perl modules).</p>
+<p>The only advice that cPanel gave me when doing this is:</p>
+<blockquote><p>It is possible this could break some components of cPanel, but it should be generally repairable as long as you run &#8220;/scripts/checkperlmodules &#8211;full &#8211;force&#8221; afterwards to rebuild/reinstall the cPanel versions of the various modules.</p></blockquote>
+<p>I suggest you also do that once imapsync is installed to ensure you don&#8217;t break anything in cPanel.</p>
+<h3>Migration</h3>
+<p>Now we have imapsync installed we can actually use it&#8230;</p>
+<blockquote>
+<pre>imapsync \
+       --host1 mail.example.co.uk --authmech1 PLAIN --user1 joe.blogs@example.co.uk --password1 12345678 \
+       --host2 lemon.phurix.com --authmech2 PLAIN --user2 joe.blogs@example.co.uk --password2 99999999</pre>
+</blockquote>
+<p>This should be enough to get you going, but do be aware of the SECURITY issues outlined in the <a href="http://ks.lamiral.info/imapsync/README">imapsync README</a>.</p>
+<p>Once this is done, all you need to do is get the name servers (or just the MX) changed on the domain to new hosting and after about 4 hours you should be good to go.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3322</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:04 by W3 Total Cache
+-->

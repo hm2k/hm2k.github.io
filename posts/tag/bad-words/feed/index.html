@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>bad words &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/bad-words/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 17 Aug 2011 13:05:40 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Google&#8217;s Official Profanity API</title>
+		<link>https://hm2k.org/posts/googles-official-profanity-api</link>
+					<comments>https://hm2k.org/posts/googles-official-profanity-api#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Wed, 17 Aug 2011 10:09:15 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[bad words]]></category>
+		<category><![CDATA[json]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[profanity]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3180</guid>
+
+					<description><![CDATA[Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new website which asks: &#8220;What do you love?&#8221; (wdyl.com). So, perhaps I was a bit hasty writing off WhoisX. The list of profanities was discovered in the Javascript on the website, however Google reacted quickly and switched this to a URL lookup instead of a Javascript one therefore keeping [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.wdyl.com/?q=butt hole lane"><img loading="lazy" class="alignright size-medium wp-image-3230" title="Butt_Hole_Road" src="http://i.imgur.com/U2IWJ.jpg" alt="" width="300" height="199" /></a>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new website which asks: <a href="http://wdyl.com/">&#8220;What do you love?&#8221;</a> (wdyl.com).</p>
+<p>So, perhaps I was a bit hasty <a href="http://labs.phurix.net/posts/the-rise-and-fall-of-whoisx">writing off WhoisX</a>.</p>
+<p>The list of profanities was <a href="http://fffff.at/googles-official-list-of-bad-words/">discovered</a> in the Javascript on the website, however Google reacted quickly and switched this to a URL lookup instead of a Javascript one therefore keeping the list away from prying eyes.</p>
+<p>However, what this does mean is now we have an API to play with:<span id="more-3180"></span></p>
+<blockquote><p><a href="http://www.wdyl.com/profanity?q=xxx">http://www.wdyl.com/profanity?q=xxx</a></p></blockquote>
+<p>This will return a true JSON response:</p>
+<blockquote><p>{&#8220;response&#8221;: &#8220;true&#8221;}</p></blockquote>
+<p>While looking up something like &#8220;lol&#8221; will return a false response:</p>
+<blockquote><p><a href="http://www.wdyl.com/profanity?q=lol">http://www.wdyl.com/profanity?q=lol</a></p>
+<p>{&#8220;response&#8221;: &#8220;false&#8221;}</p></blockquote>
+<p>All in all a pretty simple and easy way to figure out whether Google thinks it is a bad word or not.</p>
+<p>On the down side, you can&#8217;t easily use it on your site, as, if you try to call it by AJAX you&#8217;ll be faced by the following error:</p>
+<blockquote><p>XMLHttpRequest cannot load http://www.wdyl.com/profanity. Origin http://example.org is not allowed by Access-Control-Allow-Origin.</p></blockquote>
+<p>On the upside, we don&#8217;t want to do that anyway, we can to use it from PHP.</p>
+<blockquote>
+<pre>&lt;?php
+
+$q=isset($_REQUEST['q'])?urlencode($_REQUEST['q']):'';
+readfile('http://www.wdyl.com/profanity?q='.$q);
+
+?&gt;</pre>
+</blockquote>
+<p>That&#8217;s right, that&#8217;s all there is to it. Simply copy that into the a file called &#8220;profanity.php&#8221; and you&#8217;re ready to go!</p>
+<p>Now you can do a <a href="http://api.jquery.com/jQuery.getJSON/">JSON cal</a>l to your &#8216;profanity.php&#8217; to tell you whether the word is bad or not.</p>
+<p>If that&#8217;s not enough, you could try using the Google Profanity API to avoid displaying ads on pages that contain profanities.</p>
+<p>Now if only there was a way to avoid the <a href="http://en.wikipedia.org/wiki/Scunthorpe_problem">Scunthorp problem</a>&#8230;</p>
+<p>Going back to the reported Adsense problem on WhoisX.co.uk, the example query was:</p>
+<blockquote><p>adult-hardcore-sex.cuntspace.me.uk</p></blockquote>
+<p>Passing this to the API returned false.</p>
+<p>But, changing all the non-word characters to spaces has a different effect:</p>
+<blockquote><p>adult hardcore sex cuntspace me uk</p>
+<p>{&#8220;response&#8221;: &#8220;true&#8221;}</p></blockquote>
+<p>This is done in PHP using a simple regular expression:</p>
+<blockquote><p>echo preg_replace(&#8216;/[\W+]/&#8217;,&#8217; &#8216;,&#8217;adult-hardcore-sex.cuntspace.me.uk&#8217;);</p></blockquote>
+<p>I&#8217;m not sure this exactly solves the Scunthorp problem, but it definitely does identify &#8220;sex&#8221; as an adult theme which is perfect.</p>
+<p>Now to turn it into a usable function:</p>
+<blockquote>
+<pre>&lt;?php
+
+function is_profanity($q,$json=0) {
+	$q=urlencode(preg_replace('/[\W+]/',' ',$q));
+	$p=file_get_contents('http://www.wdyl.com/profanity?q='.$q);
+	if ($json) { return $p; }
+	$p=json_decode($p);
+	return ($p-&gt;response=='true')?1:0;
+}
+
+$q=isset($_REQUEST['q'])?$_REQUEST['q']:'';
+echo is_profanity($q);
+
+?&gt;</pre>
+</blockquote>
+<p>We can use this function to check whether the query is considered a profanity or not. If it is, it will return a 1, otherwise a 0 is returned.</p>
+<p>This function can now be used to include kittens (or whatever) rather than Google Adsense Ads on a pages with &#8220;<a href="https://www.google.com/adsense/support/as/bin/answer.py?hl=en&amp;answer=105957">adult themed</a>&#8221; content.</p>
+<p>Brilliant!</p>
+<p>Now to submit for <a href="https://www.google.com/adsense/support/bin/request.py?contact_type=policy_violation_appeal">reconsideration</a>&#8230;</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/googles-official-profanity-api/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3180</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:28 by W3 Total Cache
+-->

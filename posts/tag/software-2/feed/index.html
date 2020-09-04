@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>software &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/software-2/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Sun, 18 Mar 2012 22:59:03 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Scan to Excel</title>
+		<link>https://hm2k.org/posts/scan-to-excel</link>
+					<comments>https://hm2k.org/posts/scan-to-excel#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 24 Oct 2009 12:11:04 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[accountancy]]></category>
+		<category><![CDATA[convert]]></category>
+		<category><![CDATA[document scanner]]></category>
+		<category><![CDATA[excel]]></category>
+		<category><![CDATA[ocr]]></category>
+		<category><![CDATA[pdf]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[tif]]></category>
+		<category><![CDATA[tiff]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=546</guid>
+
+					<description><![CDATA[This week I&#8217;ve mostly been trying to figure out a way to digitalise some of my bank statements to make accountancy and archiving easier. I figured there must be a way to scan them in using a document scanner, then use OCR software to render the data into Excel. Of course, nothing does this natively, [&#8230;]<div class='yarpp-related-rss yarpp-related-none'>
+
+No related posts.
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>This week I&#8217;ve mostly been trying to figure out a way to digitalise some of my bank statements to make accountancy and archiving easier.</p>
+<p>I figured there must be a way to scan them in using a document scanner, then use OCR software to render the data into Excel.</p>
+<p>Of course, nothing does this natively, but there are ways to do it.</p>
+<p><span id="more-546"></span></p>
+<p>There are three parts to this process&#8230;</p>
+<ol>
+<li>Document scanning</li>
+<li>Data format conversion</li>
+<li>Optical character recognition (OCR)</li>
+</ol>
+<p>For the scanning part I used a Ricoh Aficio MP C4500, which not only acts as a Photocopier, but as a fax machine, network printer and network scanner.</p>
+<p>The main part is it&#8217;s ability to scan with <a href="http://en.wikipedia.org/wiki/Image_scanner#Document_processing">document processing</a>. This means (once configured) that it would only take a few minutes to scan a few hundred pages, rather than a few hours using a conventional scanner.</p>
+<p>This device has the ability to save scanned documents as PDF or TIF. I decided to use the more versatile TIF image format.</p>
+<p>I figured it would be easier to convert a standard image format than the proprietary PDF format. I very quickly discovered that it wasn&#8217;t that simple.</p>
+<p>To begin with I had heard good things about two leading OCR software packages&#8230;</p>
+<ul>
+<li>ABBYY FineReader 9.0</li>
+<li>Able2Extract Pro 5.0</li>
+</ul>
+<p>I found that neither of these software packages would accept TIF files, so I converted each directory of TIF files into a single PDF file using the <a href="http://www.dreamsyssoft.com/tiff-to-pdf/">DreamSys Tiff to PDF Converter</a>, which was a very quick and effective command-line tool for doing the task.</p>
+<p>I started trying out Able2Extract as I&#8217;d not used it before and I had read good things about it&#8217;s PDF to Excel conversion. The problem was it kept throwing up a &#8220;Fatal Internal Error #24&#8221; error which I was unable to work around.</p>
+<p>I had used ABBYY in the past and it turned out to be very good OCR software for converting to Word at least, however trying to configure it to scan the areas I wanted into Excel seemed almost impossible and took forever.</p>
+<p>I decided to go back to the drawing board&#8230;</p>
+<p>I quickly realised that there were a few &#8220;web 2.0&#8221; software as a service tools out there that could assist me&#8230;</p>
+<ul>
+<li><a href="http://www.finereaderonline.com/">ABBYY FineReader Online</a> (10 pages a day for free)</li>
+<li>NitroPDF <a href="http://www.pdftoexcelonline.com/">PDF to Excel</a> (free)</li>
+</ul>
+<p>There&#8217;s many universal &#8220;online document converters&#8221;, a few include&#8230;</p>
+<ul>
+<li><a href="http://www.zamzar.com/">Zamzar</a></li>
+<li><a href="http://www.cometdocs.com/">cometdocs</a></li>
+</ul>
+<p>My issue with most of these is that they would recognise the PDF, but not the images inside the PDF and use OCR to render them. They are only designed to take the text found in a PDF file and extract that to Excel.</p>
+<p>I also came across a few other software packages that will also convert from PDF files to Excel&#8230;</p>
+<ul>
+<li>deskUNPDF Professional by docudesk</li>
+<li>PDF2XL Enterprise by cogniview</li>
+<li>ExpressConversion Server by adlibsoftware</li>
+<li>PDF To XLS by verypdf</li>
+<li>Solid Converter PDF by soliddocuments</li>
+<li>TotalPDFConverter by coolutils</li>
+</ul>
+<p>With all this available proprietary software for converting from PDF to Excel (XLS or CSV) its obvious that it&#8217;s a service definitely in demand.</p>
+<p>So far I&#8217;m waiting on the following:</p>
+<ul>
+<li>Zamzar and others to email me their conversion of the PDF file I uploaded to them.</li>
+<li>Able2Extract&#8217;s support team to get back to me with regards to the error.</li>
+<li>For Cogniview PDF2XL Enterprise to download.</li>
+</ul>
+<p>Let&#8217;s see what gets the job done best, first, if any&#8230;</p>
+<p>Zamzar is unable to convert from PDF to XLS, directly or indirectly. While finereaderonline will only accept images, not PDF files, which is OK, but may take some time, especially at only 10 pages per day.</p>
+<p>Able2Extract were unable to help me with the error unless I sent them the PDF, which I can&#8217;t do due to it&#8217;s content.</p>
+<p>I sent DreamSys an email asking them to send these guys a sample output PDF instead, but I&#8217;ve heard nothing back as of yet.</p>
+<p>Able2Extract recommended I use their Sonic PDF Creator product to convert the original scanned TIFF files to a PDF which they claim their Able2Extract product will be able to read.</p>
+<p>I had a play with Sonic PDF Creator and appeared to be unable to import a directory of TIF files, just each TIF file individually. This seemed like a painstaking process.</p>
+<p>I needed to merge the TIF files together into 1 file to make it easier. PTGui Pro is able to stitch TIF files together, however it gave me an error saying:</p>
+<p>Error loading TIFF file: Unsupported number of bits per sample (only 8, 16 or 32 are supported) or unsupported sample format. Useless.</p>
+<p>Back to square one.</p>
+<p>I decided to try my luck with PDF2XL, which after a little teething problem getting a working copy to begin with seemed to be quite a neat package.</p>
+<p>PDF2XL was able to detect that the PDF I had given it (the one I created using Tiff 2 PDF) was a scanned document and began performing OCR on the file.</p>
+<p>The results were almost prefect, VERY impressive. It seems that PDF2XL is able to do what nothing else could, not even Able2Extract. Don&#8217;t waste your time with anything else. It seems that <a href="http://www.cogniview.com/pdf2xl.php">PDF2XL</a> is all you need.</p>
+<p>The only thing I will say is I had to tweak the OCR settings a little bit to get it to render the page correctly.</p>
+<p>Just when I thought everything was going great, I discovered another issue I had completely overlooked. The output was not in the correct order. I took a look at the original PDF and soon discovered that the images in the PDF were not in the correct order either.</p>
+<p>First off, I decided that I should rename all the images based on the sheet number, that way I could be sure that they were correctly ordered. I created a batch file to preview and rename the images, called &#8220;<a href="http://hm2k.googlecode.com/svn/trunk/code/batch/imgrename.bat">imgrename.bat</a>&#8220;. I was also able to use this to rename an entire directory at a time.</p>
+<p>I tried rebuilding the PDF using <em>DreamSys Tiff to PDF Converter</em> which I had used to create the PDF file in the first place, only to find that it was still out of order and I couldn&#8217;t influence the sorting. I had to find something else to do the job&#8230;</p>
+<p>Enter <a href="http://www.remotesensing.org/libtiff/">libtiff</a> and it&#8217;s windows counterpart <a href="http://gnuwin32.sourceforge.net/packages/tiff.htm">Tiff for Windows by GnuWin32</a>. Once I had a copy of this I was able to write another batch file that would not only combine the TIFF files (with pages) into a single TIFF file (using tiffcp.exe) but I was able to convert that into a PDF using (tiff2pdf.exe). I called this script &#8220;<a href="http://hm2k.googlecode.com/svn/trunk/code/batch/tiff2pdf.bat">tiff2pdf.bat</a>&#8220;.</p>
+<p>Bingo!</p>
+<p>All was successful&#8230;</p>
+<p>The next task is to firstly, cleanup anything bad in the CSV file left by OCR (cleancsv.bat) then to &#8220;normalise&#8221; the data&#8230;</p>
+<p>But that&#8217;s another story for another time. We&#8217;ve done what we set out to do which was to scan to excel and all is well on that front.</p>
+<p>Hope you find this useful. Enjoy!</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 880px; width: 1px; height: 1px;"><a class="NoDecorationRed" href="http://www.cogniview.com/pdf2xl-enterprise.php">PDF2XL Enterprise</a></div>
+<div class='yarpp-related-rss yarpp-related-none'>
+<p>No related posts.</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/scan-to-excel/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">546</post-id>	</item>
+		<item>
+		<title>W32Dasm</title>
+		<link>https://hm2k.org/posts/w32dasm</link>
+					<comments>https://hm2k.org/posts/w32dasm#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 13 Oct 2009 15:55:43 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[disassembler]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[w32dasm]]></category>
+		<category><![CDATA[win32dasm]]></category>
+		<category><![CDATA[windows]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=526</guid>
+
+					<description><![CDATA[W32Dasm (or Win32DASM) doesn&#8217;t seem to exist on the map any more, but it&#8217;s still a very useful programmers tool, especially if you like reverse engineering. W32Dasm is a Windows 32-bit (Win32) disassembler. What it does is display the programs routines in assembly code, which makes it easier for you to trace what the software [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What&#8217;s wrong with low version numbers?">What&#8217;s wrong with low version numbers? </a> <small>In a presentation entitled &#8220;Why I hate Django&#8221;, Cal Henderson...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>W32Dasm (or Win32DASM) doesn&#8217;t seem to exist on the map any more, but it&#8217;s still a very useful programmers tool, especially if you like reverse engineering.</p>
+<p>W32Dasm is a Windows 32-bit (Win32) <a href="http://en.wikipedia.org/wiki/Disassembler">disassembler</a>. What it does is display the programs routines in assembly code, which makes it easier for you to trace what the software is doing.</p>
+<p>I like to use this software every once in a while, but recently I found there were no decent sources for this software.</p>
+<p><span id="more-526"></span>However, I soon located a copy that I had on my computer from a while back, in a directory named &#8220;w32ds893&#8221;.</p>
+<p>The help file details a website which appears to be down, but there is an archived version.</p>
+<blockquote><p><a href="http://web.archive.org/web/20020203211452/http://www.expage.com/page/w32dasm">http://www.expage.com/page/w32dasm</a></p></blockquote>
+<p>This takes you to another now defunct site, which is also archived:</p>
+<blockquote><p><a href="http://web.archive.org/web/20020204180925/http://members.home.net/w32dasm/">members.home.net/w32dasm/</a></p></blockquote>
+<p>As you can see from that page you can download w32dasm v8.7 as w32ds87.zip, but not the latest version.</p>
+<p>I uploaded w32ds893.zip which contains &#8220;<strong>W32DSM89.EXE</strong>&#8220;, which is the latest known version:</p>
+<ul>
+<li><a href="http://www.2shared.com/file/z9Fweb8q/w32ds893.html">w32ds893.zip</a> (2shared)</li>
+<li><a href="http://www.4shared.com/file/118537627/1ebea2e3/w32ds893.html">w32ds893.zip</a> (4shared)</li>
+<li><a href="http://www.megaupload.com/?d=ZDRI71UF">w32ds893.zip</a> (MegaUpload)</li>
+<li><a href="http://www.multiupload.com/R8UCFWH954">w32ds893.zip</a> (MultiUpload)</li>
+<li><a href="http://www.megaupload.com/?d=ZDRI71UF">w32ds893.zip</a> (third party)</li>
+</ul>
+<p>I don&#8217;t know where this was originally sourced from, but I know it works fine.</p>
+<p><em>Note: If you have any questions or know of any updates, please feel free to add a comment below. Thanks.</em></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What&#8217;s wrong with low version numbers?">What&#8217;s wrong with low version numbers? </a> <small>In a presentation entitled &#8220;Why I hate Django&#8221;, Cal Henderson...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/w32dasm/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">526</post-id>	</item>
+		<item>
+		<title>Pingotron</title>
+		<link>https://hm2k.org/posts/pingotron</link>
+					<comments>https://hm2k.org/posts/pingotron#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 01 Oct 2009 11:23:44 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[icmp]]></category>
+		<category><![CDATA[ping]]></category>
+		<category><![CDATA[pingotron]]></category>
+		<category><![CDATA[software]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=276</guid>
+
+					<description><![CDATA[I&#8217;ve been meaning to publish a post about Pingotron for some time now, but now I fear it&#8217;s already too late. Quite a few months back I was looking for an application that could sit on my desktop and tell me instantly if any of my servers had stopped responding by ping. There&#8217;s probably hundreds [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/find-the-ip-address-of-a-seized-website" rel="bookmark" title="Find the ip address of a seized website">Find the ip address of a seized website </a> <small>So your favorite site is now displaying the following message:...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><em>I&#8217;ve been meaning to publish a post about Pingotron for some time now, but now I fear it&#8217;s already too late.</em></p>
+<p>Quite a few months back I was looking for an application that could sit on my desktop and tell me instantly if any of my servers had stopped responding by <a href="http://en.wikipedia.org/wiki/Ping">ping</a>.</p>
+<p><span id="more-276"></span>There&#8217;s probably hundreds of ways of monitoring services, including paid for web services such as <a href="http://www.pingdom.com/">Pingdom</a>, and open source software that runs on your web server such as <a href="http://www.nagios.org/">Nagios</a>. None of them really hit the spot for the services I wanted to monitor, or they were expensive.</p>
+<p>A quick and easy way to monitor services that was fairly non-intrusive was what I wanted. Enough detail to tell you that a server was unreachable by ping and when it happened.</p>
+<p><a href="http://express-press-release.net/46/PR%20-%20Quick%20Troubleshooting%20or%20How%20to%20Be%20Always%20On%20the%20Watch.php">Pingotron</a> seemed ideal&#8230;</p>
+<blockquote><p><em>Pingotron</em> is a computer program for controlling and monitoring network devices, such as computers, network printers, routers and other devices, on TCP/IP networks. The program has two versions: Pingotron (basic) and Pingotron PRO.</p>
+<p>A list of desired hosts that you wish to control are entered into the program.</p>
+<p>The program sends ICMP “echo request” packets to each host and listens for ICMP “echo response” replies. Various properties (ping interval, size of packet, time-out request) can be configured for each host. The program can notify an administrator when a problem arises with any host with an alert sound, e-mail, blinking tray notification and/or network notification. The PRO version has an alarm history log feature, alarm statistics, and ping history and ping statistics for all hosts, in addition, it has a multi-user mode.</p></blockquote>
+<p>I started to use it, however, straight away I came across an odd issue which seemed to only affect the <a href="http://en.wikipedia.org/wiki/Netgear_DG834G">DG834 series routers</a>.</p>
+<p>The software reported the ping response from these routers as an &#8220;unknown response&#8221;, while in windows regular ping, they responded just fine.</p>
+<p>It was clear that the software seemed to think that the response was malformed, perhaps it wass, however regular windows ping does not.</p>
+<p>I emailed the details over to the author via the support email address. I got a response the same day.</p>
+<p><em>Anatoly Dobrinin</em> fixed the bug, provided me with the latest PRO version download and a valid serial number to register it as a full version.</p>
+<p>What a great author! I was impressed. Sure I would never have paid for this software, as there were clearly free solutions, so this was great!</p>
+<p>This was last year in 2008. This year, I find that if you visit Pingotron.com you find yourself at some kind of ad filled domain parking page. Fortunately you can still find an <a href="http://web.archive.org/web/20080720072228/http://www.pingotron.com/">archived copy of Pingotron.com</a> in the web archive.</p>
+<p><strong>Update:</strong> As Pingotron appears to be no more I have decided to share my resources&#8230;</p>
+<blockquote><p>Hello,</p>
+<p>Thank you for your message.</p>
+<p>This bug has been fixed today.</p>
+<p>Please download and install the program again.</p>
+<p>You can download the program here:</p>
+<p><a href="http://www.pingotron.com/setup_pro.zip">http://www.pingotron.com/setup_pro.zip</a></p>
+<p>You can use this registration code to register  the pro version:</p>
+<p>EET4-3EZS-VTK0-M0U7</p>
+<p>Best regards,<br />
+Anatoly Dobrinin</p></blockquote>
+<p><em>Note: If Anatoly would like me to remove this, feel free to contact me.</em></p>
+<p><em>A copy of <a href="http://www.megaupload.com/?d=FMZ5OM5I">setup_pro.zip</a> can be found on megaupload.<br />
+</em></p>
+<p><strong>Further Update: </strong>I had another issue that I tried to report, but since pingotron.com is unreachable, nothing can be done about it.</p>
+<p>It wasn&#8217;t a major issue. The issue was that sometimes when explorer crashes, the Pingotron icon does not reappear in the system tray.</p>
+<p>There was no way to recover the icon or window, without killing the &#8220;Pingotron.exe&#8221; and restarting it. Running &#8220;Pingotron.exe&#8221; again would only give you the error &#8220;The program is already running!&#8221;.</p>
+<p>I solved this by writing a script using AutoIT which would Check if the Pingotron window exists, restore it, otherwise run &#8220;Pingotron.exe&#8221;. I called it <a href="http://hm2k.googlecode.com/svn/trunk/code/autoit/Start_Pingotron.au3">Start Pingotron</a>.</p>
+<p>Anyway, since Pingotron is clearly no longer in active development, I am wondering is there&#8217;s anything else to use instead. Any ideas? Let me know.</p>
+<p>Perhaps I&#8217;ll just end up writing my own service instead&#8230;</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 884px; width: 1px; height: 1px;">I noticed that sometimes when explorer crashes, the pingotron icon does not reappear in the system tray.</div>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/find-the-ip-address-of-a-seized-website" rel="bookmark" title="Find the ip address of a seized website">Find the ip address of a seized website </a> <small>So your favorite site is now displaying the following message:...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/pingotron/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">276</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:27 by W3 Total Cache
+-->

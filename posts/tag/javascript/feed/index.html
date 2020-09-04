@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>JavaScript &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/javascript/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 23 Sep 2009 08:36:40 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>jQuery sucks at browser detection</title>
+		<link>https://hm2k.org/posts/jquery-sucks-at-browser-detection</link>
+					<comments>https://hm2k.org/posts/jquery-sucks-at-browser-detection#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 22 Sep 2009 16:16:18 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[browser]]></category>
+		<category><![CDATA[detection]]></category>
+		<category><![CDATA[internet explorer]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[jquery]]></category>
+		<category><![CDATA[layout engine]]></category>
+		<category><![CDATA[opera]]></category>
+		<category><![CDATA[sniffer]]></category>
+		<category><![CDATA[useragent]]></category>
+		<category><![CDATA[version]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=507</guid>
+
+					<description><![CDATA[This week i&#8217;ve been tweaking a little site I&#8217;ve started called &#8220;ismybrowseruptodate.com&#8220;, which is designed to assist people who don&#8217;t know whether their browser is up-to-date or not. At first I thought this would be simple, because I knew jQuery had browser detection and had a variable called jQuery.browser.version, which would be very useful for [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/css-seo" rel="bookmark" title="Does using CSS affect SEO?">Does using CSS affect SEO? </a> <small>I get asked this question time and time again. People...</small></li>
+<li><a href="https://hm2k.org/posts/10-reasons-why-phpbb3-sucks" rel="bookmark" title="10 reasons why phpBB3 sucks!">10 reasons why phpBB3 sucks! </a> <small>I&#8217;ve been using phpBBv2 for a long while now, on...</small></li>
+<li><a href="https://hm2k.org/posts/dont-forget-to-run-make-test" rel="bookmark" title="Don&#8217;t forget to run make test!">Don&#8217;t forget to run make test! </a> <small>During my install of PHP5 on FreeBSD&#8230; Build complete. Don&#8217;t...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>This week i&#8217;ve been tweaking a little site I&#8217;ve started called &#8220;<a href="http://ismybrowseruptodate.com/">ismybrowseruptodate.com</a>&#8220;, which is designed to assist people who don&#8217;t know whether their browser is up-to-date or not.</p>
+<p>At first I thought this would be simple, because I knew jQuery had browser detection and had a variable called <a href="http://docs.jquery.com/Utilities/jQuery.browser.version">jQuery.browser.version</a>, which would be very useful for checking the browser version, or so I thought.</p>
+<p><span id="more-507"></span>Don&#8217;t get me wrong here, I think jQuery is a fantastic javascript framework and is great at helping you to avoid reinventing the wheel, but it sucks at browser detection!</p>
+<p>On closer inspection I see that jQuery is deprecating this variable in place for better ways of <a href="http://xkr.us/js/detect">browser detection</a>, namely by <a href="http://developer.apple.com/internet/webcontent/objectdetection.html">not detecting the browser, but detecting technologies (via objects)</a> instead.</p>
+<p>As such, you can already see evidence of the jQuery team <a href="http://www.reddit.com/r/programming/comments/7l2mr/jquery_removes_all_browser_sniffing/">deprecating the browser sniffing</a> by removing references to the jquery.browser variable.</p>
+<p>The problem is that even now it still exists in jQuery because it is being used for backwards compatibility and by plugins. It can&#8217;t just be removed, so it must still be maintained.</p>
+<p>As we know, jQuery sucks at browser detection because they&#8217;ve been detecting by browser, instead of by technologies all along, so what else is new?</p>
+<p>Not long ago Opera Software released the latest version of their <a href="http://www.opera.com/">Opera Browser</a>, which is version 10, however, during trials they came across some issues where some sites would detect the wrong version, forcing Opera to <a href="http://dev.opera.com/articles/view/opera-ua-string-changes/">make changes to Opera&#8217;s user agent string</a>.</p>
+<p>Guess what?</p>
+<p>jQuery is detecting the wrong version number for Opera. It&#8217;s detecting &#8220;Opera v10&#8221; as &#8220;Opera v9.80&#8221;.</p>
+<p>However, in this instance it isn&#8217;t much of a problem because jQuery is moving it&#8217;s dependencies away from browser sniffing to technology detection, and opera made changes to their user agent string to handle it.</p>
+<p>So what is the problem?</p>
+<p>The problem is that jQuery is not maintained to cope with the changes to the user agent string and that they are getting engine versions confused with browser versions. Let&#8217;s take a look at the <a href="http://dev.jquery.com/export/6582/trunk/jquery/src/core.js">actual core code</a>:</p>
+<blockquote><p>(userAgent.match( /.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/ ) [0,&#8217;0&#8242;])[1]</p></blockquote>
+<p>As you can see it has 4 checks&#8230;</p>
+<ul>
+<li>rv=Revision of the Gecko &#8220;layout engine&#8221;.</li>
+<li>it=Version of the WebKit &#8220;layout engine&#8221;.</li>
+<li>ra=Version of Opera, and NOT &#8220;Presto&#8221; it&#8217;s layout engine.</li>
+<li>ie=Version of Internet Explorer, but NOT &#8220;Trident&#8221; it&#8217;s layout engine.</li>
+</ul>
+<p>After that you can see the browser checks it does&#8230;</p>
+<blockquote><p>safari: /webkit/.test( userAgent ),<br />
+opera: /opera/.test( userAgent ),<br />
+msie: /msie/.test( userAgent ) &amp;&amp; !/opera/.test( userAgent ),<br />
+mozilla: /mozilla/.test( userAgent ) &amp;&amp; !/(compatible|webkit)/.test( userAgent )</p></blockquote>
+<p>As you can see, it lists 4 browsers, some test for the layout engine, some test for the browser name, mozilla is a test for neither and what about Google Chrome?</p>
+<p>The problem is that many browsers use the same layout engine, but may result in different version numbers.</p>
+<p>So, the question is, are we detecting the <a href="http://en.wikipedia.org/wiki/Web_browser">web browser</a> or the <a href="http://en.wikipedia.org/wiki/Layout_engine">layout engine</a>?</p>
+<p>If it&#8217;s browsers, the version match is all wrong and doesn&#8217;t consider the changes made to Opera&#8217;s user agent string; and if it&#8217;s layout engines it&#8217;s detecting the wrong version numbers from the browser rather than the engine.</p>
+<p>For jQuery at least, considering there are only about <a href="http://en.wikipedia.org/wiki/List_of_layout_engines">20 notable layout engines</a>, it would make more sense to match those rather than the literally hundreds of browsers, many of which are based on the same layout engine.</p>
+<p>So how do we fix this?</p>
+<p>It depends what you want to detect, whether it be the browser or the layout engine. The problem is that if you change this now, older code will no longer be compatible, as the problem with version numbers will arise.</p>
+<p>I have raised this as a bug <a href="http://dev.jquery.com/ticket/5279">#5279</a> with the jQuery team, but I don&#8217;t expect much to be done about it.</p>
+<p>Instead, I have created and am using a better browser sniffer on &#8220;<a href="http://ismybrowseruptodate.com/">ismybrowseruptodate.com</a>&#8221; in javascript, however at the moment it is not open source code. If you are interested, let me know and I will release it as open source, along with the layout engine sniffer and detection I started developing too.</p>
+<p>Enjoy!</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 452px; width: 1px; height: 1px;">// Use of jQuery.browser is deprecated.<br />
+// It&#8217;s included for backwards compatibility and plugins,<br />
+// although they should work to migrate away.<br />
+browser: {<br />
+version: (/.+(?:rv|it|ra|ie)[\/: ]([\d.]+)/.exec(userAgent) || [0,&#8217;0&#8242;])[1],<br />
+safari: /webkit/.test( userAgent ),<br />
+opera: /opera/.test( userAgent ),<br />
+msie: /msie/.test( userAgent ) &amp;&amp; !/opera/.test( userAgent ),<br />
+mozilla: /mozilla/.test( userAgent ) &amp;&amp; !/(compatible|webkit)/.test( userAgent )<br />
+}</div>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/css-seo" rel="bookmark" title="Does using CSS affect SEO?">Does using CSS affect SEO? </a> <small>I get asked this question time and time again. People...</small></li>
+<li><a href="https://hm2k.org/posts/10-reasons-why-phpbb3-sucks" rel="bookmark" title="10 reasons why phpBB3 sucks!">10 reasons why phpBB3 sucks! </a> <small>I&#8217;ve been using phpBBv2 for a long while now, on...</small></li>
+<li><a href="https://hm2k.org/posts/dont-forget-to-run-make-test" rel="bookmark" title="Don&#8217;t forget to run make test!">Don&#8217;t forget to run make test! </a> <small>During my install of PHP5 on FreeBSD&#8230; Build complete. Don&#8217;t...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/jquery-sucks-at-browser-detection/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">507</post-id>	</item>
+		<item>
+		<title>HM2K&#8217;s code repository</title>
+		<link>https://hm2k.org/posts/hm2ks-code-repository</link>
+					<comments>https://hm2k.org/posts/hm2ks-code-repository#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 30 Jul 2009 16:19:43 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[AutoIT]]></category>
+		<category><![CDATA[Batch]]></category>
+		<category><![CDATA[code]]></category>
+		<category><![CDATA[hm2k]]></category>
+		<category><![CDATA[JavaScript]]></category>
+		<category><![CDATA[mIRC Script]]></category>
+		<category><![CDATA[repository]]></category>
+		<category><![CDATA[shell]]></category>
+		<category><![CDATA[TCL]]></category>
+		<category><![CDATA[VBScript]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=429</guid>
+
+					<description><![CDATA[HM2K&#8217;s code repository is now open for business! This repository is a collection of scripts and code i&#8217;ve written in various languages such as mIRC Script, Perl, PHP, TCL, AutoIT, JavaScript, Shell, VB Script and Batch. You can find the project here. You may browse the code here. You can raise issues here. At the [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/eggtcl-project" rel="bookmark" title="eggtcl project">eggtcl project </a> <small>I&#8217;m pleased to announce that the eggdrop TCL scripts from...</small></li>
+<li><a href="https://hm2k.org/posts/weather-tcl" rel="bookmark" title="weather.tcl">weather.tcl </a> <small>Update: This script is now part of the eggtcl project....</small></li>
+<li><a href="https://hm2k.org/posts/twitter-for-mirc" rel="bookmark" title="Twitter for mIRC">Twitter for mIRC </a> <small>I signed up for Twitter quite some months ago, but...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>HM2K&#8217;s code repository is now open for business!</p>
+<p><em>This repository is a collection of scripts and code i&#8217;ve written in various languages such as mIRC Script, Perl, PHP, TCL, AutoIT, JavaScript, Shell, VB Script and Batch.<span id="more-429"></span></em></p>
+<p>You can find the project <a href="http://code.google.com/p/hm2k/">here</a>.</p>
+<p>You may browse the code <a href="http://code.google.com/p/hm2k/source/browse/#svn/trunk/code">here</a>.</p>
+<p>You can raise issues <a href="http://code.google.com/p/hm2k/issues/list">here</a>.</p>
+<p>At the moment there&#8217;s only mIRC scripts and PHP code, but I hope to eventually upload all my code here.</p>
+<p>There are also no downloads, as I feel most people can comfortably browse the code or use SVN. Although I may add specific downloads on request.</p>
+<p>Watch this space.</p>
+<p>I hope you find this useful!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/eggtcl-project" rel="bookmark" title="eggtcl project">eggtcl project </a> <small>I&#8217;m pleased to announce that the eggdrop TCL scripts from...</small></li>
+<li><a href="https://hm2k.org/posts/weather-tcl" rel="bookmark" title="weather.tcl">weather.tcl </a> <small>Update: This script is now part of the eggtcl project....</small></li>
+<li><a href="https://hm2k.org/posts/twitter-for-mirc" rel="bookmark" title="Twitter for mIRC">Twitter for mIRC </a> <small>I signed up for Twitter quite some months ago, but...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/hm2ks-code-repository/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">429</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:58 by W3 Total Cache
+-->

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>cex &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/cex/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Fri, 14 Aug 2009 09:08:22 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Cex.co.uk site errors</title>
+		<link>https://hm2k.org/posts/cex-co-uk-site-errors</link>
+					<comments>https://hm2k.org/posts/cex-co-uk-site-errors#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 14 Aug 2009 08:29:24 +0000</pubDate>
+				<category><![CDATA[cex]]></category>
+		<category><![CDATA[security]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=450</guid>
+
+					<description><![CDATA[After browsing the cex.co.uk website for some time I came across a few errors on the site&#8230; The first one was when I visited this page a few months back&#8230; PHP Warning:  imagejpeg() [&#60;a href=&#8217;function.imagejpeg&#8217;&#62;function.imagejpeg&#60;/a&#62;]: Unable to open &#8216;c:\Inetpub\wwwroot\images\products\gaming\\5017783016963.jpg&#8217; for writing: No such file or directory in D:\websites\ukwwwroot\includes\functions\functions.inc.php on line 580 I also came across [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="PHPizabi &#8211; creating a dating site">PHPizabi &#8211; creating a dating site </a> <small>During the summer of 2007 I decided to purchase a...</small></li>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>After browsing the <a href="http://www.cex.co.uk/">cex.co.uk</a> website for some time I came across a few errors on the site&#8230;</p>
+<p><span id="more-450"></span>The first one was when I visited <a href="http://www.cex.co.uk/products/Gaming/PC%20Gaming/PC%20CD-ROM/index.php?sku=5017783016963">this page</a> a few months back&#8230;</p>
+<blockquote><p>PHP Warning:  imagejpeg() [&lt;a href=&#8217;function.imagejpeg&#8217;&gt;function.imagejpeg&lt;/a&gt;]: Unable to open &#8216;c:\Inetpub\wwwroot\images\products\gaming\\5017783016963.jpg&#8217; for writing: No such file or directory in D:\websites\ukwwwroot\includes\functions\functions.inc.php on line 580</p></blockquote>
+<p>I also came across a couple of other errors reported by other users on their very own forum&#8230;</p>
+<blockquote><p>PHP Warning: include(include/templates/side_r_uncached.php) [function.include]: failed to open stream: No such file or directory in D:\websites\ukwwwroot\sell\order_monitor_complete.php on line 188<br />
+PHP Warning: include() [function.include]: Failed opening &#8216;include/templates/side_r_uncached.php&#8217; for inclusion (include_path=&#8217;C:\PHP\pear;d:\websites\ukwwwroot&#8217;) in D:\websites\ukwwwroot\sell\order_monitor_complete.php on line 188</p>
+<p>PHP Warning: include(include/templates/side_r_uncached.php) [function.include]: failed to open stream: No such file or directory in D:\websites\ukwwwroot\sell\order_monitor_complete.php on line 188<br />
+PHP Warning: include() [function.include]: Failed opening &#8216;include/templates/side_r_uncached.php&#8217; for inclusion (include_path=&#8217;C:\php528nts\pear;d:\websites\ukwwwroot&#8217;) in D:\websites\ukwwwroot\sell\order_monitor_complete.php on line 188</p></blockquote>
+<p>I&#8217;m not sure whether these errors really give too much away, but they are still a security risk by releasing information that you don&#8217;t want us to know.</p>
+<p>Such as that you&#8217;re using Windows to serve your site and the paths you&#8217;re including from.</p>
+<p><strong>Security Experts:</strong> I&#8217;m not seeing any obvious vulnerabilities, are you?</p>
+<p><strong>Cex:</strong> I&#8217;m available for consultancy and can fix these errors for you.</p>
+<p>Let&#8217;s see who gets there first&#8230;</p>
+<p>Times are hard hey?</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="PHPizabi &#8211; creating a dating site">PHPizabi &#8211; creating a dating site </a> <small>During the summer of 2007 I decided to purchase a...</small></li>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+<li><a href="https://hm2k.org/posts/error-no-dbpath-has-been-set" rel="bookmark" title="error: no dbpath has been set">error: no dbpath has been set </a> <small>I&#8217;ve recently been having trouble with a OpenVZ VPS upgraded...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/cex-co-uk-site-errors/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">450</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:31 by W3 Total Cache
+-->

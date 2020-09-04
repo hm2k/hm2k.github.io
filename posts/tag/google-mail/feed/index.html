@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>google mail &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/google-mail/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Fri, 13 Nov 2009 16:05:06 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Gmail needs an API</title>
+		<link>https://hm2k.org/posts/gmail-needs-an-api</link>
+					<comments>https://hm2k.org/posts/gmail-needs-an-api#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2009 16:05:06 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[gmail]]></category>
+		<category><![CDATA[google mail]]></category>
+		<category><![CDATA[wave]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=570</guid>
+
+					<description><![CDATA[Yesterday I spent some time investigating Google Wave. A very interesting new product from Google. Not only that but an interesting protocol. If you think about it, Google has mostly only used other protocols for communication in the past, now it&#8217;s creating it&#8217;s own. They clearly want to create a completely new protocol that will [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-not-to-use-phpmailer" rel="bookmark" title="How not to use PHPMailer">How not to use PHPMailer </a> <small>I came across PHPMailer usage the other day on a...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Yesterday I spent some time investigating Google Wave. A very interesting new product from Google. Not only that but an interesting protocol.</p>
+<p>If you think about it, Google has mostly only used other protocols for communication in the past, now it&#8217;s creating it&#8217;s own. They clearly want to create a completely new protocol that will effectively be the future of these old primitive protocols.</p>
+<p>For this to catch on, it will either have to run directly along side smtp and xmmp or layer on top of them.</p>
+<p>We&#8217;re going to need a way to pass requests over http to smtp or pop3/imap, and what better way to do it than with gmail?</p>
+<p>Sure, but there&#8217;s no API&#8230;</p>
+<p><span id="more-570"></span></p>
+<p>It&#8217;s argued that all you need to do is roll your own &#8220;api&#8221; or library class to use smtp and imap server provided by Google Mail (gmail) to send and receive emails.</p>
+<p>The problem with this is that you&#8217;re forced to hand the app your username and password. Naturally this raises security concerns.</p>
+<p>Of course this isn&#8217;t a big problem if you only use your own username and password and manage to store it on your server security.</p>
+<p>The problem comes when others want to use their gmail accounts with your web app. They have not choice but to hand over their username and password. What can possibly go wrong?</p>
+<ul>
+<li>Their username and password gives you FULL access to their account, including account actions such as changing passwords.</li>
+</ul>
+<p>My proposal would be for an API that allowed you to interface with gmail, in particular to send emails (which has the biggest scope here).</p>
+<p>To access the API you could generate an API Key from within gmail that would allow you to interface with gmail, but limited to mailing functions, rather than account settings.</p>
+<p>An alternative to this is similar to the &#8220;GoogleCode.com Password&#8221;, used by project members when checking out or committing source code changes, or when using command-line tools to upload files to the project &#8220;Downloads&#8221; tab.</p>
+<p>If you could set a &#8220;Google Mail SMTP Password&#8221; or similar, which would only permit you to access the gmail SMTP server, but not gmail itself, this would also allow you to overcome the security issues mentioned above.</p>
+<p>However, this alternative wouldn&#8217;t help towards integration with Google Wave as much as an api would.</p>
+<p>In summary, to resolve the security issue an API is an option, but for Google Wave integration too, it&#8217;s essentially a must.</p>
+<p>I hope someone at Google reads this and agrees with me, for that matter, I hope you or anyone reading this agrees with me.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-not-to-use-phpmailer" rel="bookmark" title="How not to use PHPMailer">How not to use PHPMailer </a> <small>I came across PHPMailer usage the other day on a...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/gmail-needs-an-api/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">570</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:50 by W3 Total Cache
+-->

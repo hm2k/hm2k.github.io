@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Configuring a FreeBSD IRC Shell Server	</title>
+	<atom:link href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/feed" rel="self" type="application/rss+xml" />
+	<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 08 Dec 2010 05:44:56 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+	<item>
+		<title>
+		By: t1m1976		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-257037</link>
+
+		<dc:creator><![CDATA[t1m1976]]></dc:creator>
+		<pubDate>Wed, 08 Dec 2010 05:44:56 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-257037</guid>
+
+					<description><![CDATA[I actually can&#039;t seem to get my FreeBSD 8.1 auth to work with IRC either. I&#039;ve tried using the built-in auth, oidentd and pidentd. I&#039;ve modifed the configuration files for both oidentd and pidentd and have tried using .oidentd.conf in a user&#039;s home directory too. I have verified that the IRC servers are sending the request and that my host is answering those requests (/var/log/security and the verbose logging through ipfw). I have disabled the router firewall completely, but have not tried router DMZ mode. Still, I can not get any IRC servers to say anything other than * No Ident Response.
+
+Here&#039;s the funny thing though:
+
+&quot;auth&quot; always returns user as root. I can not figure out why and have been wondering for a few days how to change that.
+
+&quot;pidentd&quot; always returns the user the daemon is running as (ie: the one configured in /usr/local/etc/identd.conf). If I omit the daemon server user, it will default to nobody. The latest version of pidentd also gives me a strange response, where it omits a space before the username so it smacks the username right up against the : before it. I&#039;m not sure if that matters or not.
+
+&quot;oidentd&quot; didn&#039;t seem to work for me either, but most people seem to be using this. I don&#039;t really want to use that if I can get the built-in &quot;auth&quot; to return something other than root, though.
+
+Anyways, I know this comment section is not specifically for ident issues but I just thought I would mention it since I saw someone else comment about that too.
+
+Thanks for putting this page up; the suggestions are very useful.]]></description>
+			<content:encoded><![CDATA[<p>I actually can&#8217;t seem to get my FreeBSD 8.1 auth to work with IRC either. I&#8217;ve tried using the built-in auth, oidentd and pidentd. I&#8217;ve modifed the configuration files for both oidentd and pidentd and have tried using .oidentd.conf in a user&#8217;s home directory too. I have verified that the IRC servers are sending the request and that my host is answering those requests (/var/log/security and the verbose logging through ipfw). I have disabled the router firewall completely, but have not tried router DMZ mode. Still, I can not get any IRC servers to say anything other than * No Ident Response.</p>
+<p>Here&#8217;s the funny thing though:</p>
+<p>&#8220;auth&#8221; always returns user as root. I can not figure out why and have been wondering for a few days how to change that.</p>
+<p>&#8220;pidentd&#8221; always returns the user the daemon is running as (ie: the one configured in /usr/local/etc/identd.conf). If I omit the daemon server user, it will default to nobody. The latest version of pidentd also gives me a strange response, where it omits a space before the username so it smacks the username right up against the : before it. I&#8217;m not sure if that matters or not.</p>
+<p>&#8220;oidentd&#8221; didn&#8217;t seem to work for me either, but most people seem to be using this. I don&#8217;t really want to use that if I can get the built-in &#8220;auth&#8221; to return something other than root, though.</p>
+<p>Anyways, I know this comment section is not specifically for ident issues but I just thought I would mention it since I saw someone else comment about that too.</p>
+<p>Thanks for putting this page up; the suggestions are very useful.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: prez		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-210472</link>
+
+		<dc:creator><![CDATA[prez]]></dc:creator>
+		<pubDate>Mon, 14 Jun 2010 01:56:44 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-210472</guid>
+
+					<description><![CDATA[No problem Ruslie. I figure, better late than never. ;) Haha.]]></description>
+			<content:encoded><![CDATA[<p>No problem Ruslie. I figure, better late than never. 😉 Haha.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Ruslie		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-202358</link>
+
+		<dc:creator><![CDATA[Ruslie]]></dc:creator>
+		<pubDate>Fri, 26 Mar 2010 15:32:56 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-202358</guid>
+
+					<description><![CDATA[waw it has been 2 years since i asked that question :)
+
+and thank you prez :)]]></description>
+			<content:encoded><![CDATA[<p>waw it has been 2 years since i asked that question 🙂</p>
+<p>and thank you prez 🙂</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: prez		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-111335</link>
+
+		<dc:creator><![CDATA[prez]]></dc:creator>
+		<pubDate>Sun, 19 Oct 2008 06:34:27 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-111335</guid>
+
+					<description><![CDATA[Hey Ruslie,
+
+You&#039;ll need to install oidentd or similar on the system in which your psyBNC runs on. (Identd Daemon!)
+
+(prez@DALnet / prez@EFnet / prez@Rizon)
+                  email: prez@dal.net]]></description>
+			<content:encoded><![CDATA[<p>Hey Ruslie,</p>
+<p>You&#8217;ll need to install oidentd or similar on the system in which your psyBNC runs on. (Identd Daemon!)</p>
+<p>(prez@DALnet / prez@EFnet / prez@Rizon)<br />
+                  email: <a href="mailto:prez@dal.net">prez@dal.net</a></p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Taimur		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-104221</link>
+
+		<dc:creator><![CDATA[Taimur]]></dc:creator>
+		<pubDate>Sun, 28 Sep 2008 06:06:41 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-104221</guid>
+
+					<description><![CDATA[A perfect guide for a shell co. administrator.
+
+Thanks!]]></description>
+			<content:encoded><![CDATA[<p>A perfect guide for a shell co. administrator.</p>
+<p>Thanks!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: deadpan		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-94926</link>
+
+		<dc:creator><![CDATA[deadpan]]></dc:creator>
+		<pubDate>Thu, 28 Aug 2008 03:25:25 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-94926</guid>
+
+					<description><![CDATA[great guide so far, any info on how to setup some sort of signup form that would allow a user to pick the user name and whatnot and have it added to the system?]]></description>
+			<content:encoded><![CDATA[<p>great guide so far, any info on how to setup some sort of signup form that would allow a user to pick the user name and whatnot and have it added to the system?</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: krasko		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-80023</link>
+
+		<dc:creator><![CDATA[krasko]]></dc:creator>
+		<pubDate>Thu, 03 Jul 2008 10:02:55 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-80023</guid>
+
+					<description><![CDATA[realy nice
+
+thank you!]]></description>
+			<content:encoded><![CDATA[<p>realy nice</p>
+<p>thank you!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: ruslie		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-36916</link>
+
+		<dc:creator><![CDATA[ruslie]]></dc:creator>
+		<pubDate>Sat, 19 Jan 2008 05:03:22 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-36916</guid>
+
+					<description><![CDATA[hi my psybnc ident has ~ string for example ~test@xx.xxx.xxx.xx 
+how to fix it?
+thanks]]></description>
+			<content:encoded><![CDATA[<p>hi my psybnc ident has ~ string for example ~test@xx.xxx.xxx.xx<br />
+how to fix it?<br />
+thanks</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: rdns		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-18262</link>
+
+		<dc:creator><![CDATA[rdns]]></dc:creator>
+		<pubDate>Tue, 16 Oct 2007 04:33:52 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-18262</guid>
+
+					<description><![CDATA[hi!
+
+this is the most useful guide for shell admin
+i&#039;ll bookmark this
+thanks a lot!]]></description>
+			<content:encoded><![CDATA[<p>hi!</p>
+<p>this is the most useful guide for shell admin<br />
+i&#8217;ll bookmark this<br />
+thanks a lot!</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: hm2k		</title>
+		<link>https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server/comment-page-1#comment-13579</link>
+
+		<dc:creator><![CDATA[hm2k]]></dc:creator>
+		<pubDate>Mon, 03 Sep 2007 20:22:12 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/configuring-a-freebsd-irc-shell-server#comment-13579</guid>
+
+					<description><![CDATA[I think pretty much in freebsd 6.0+
+
+kern.ps_showallprocs=0
+kern.ps_argsopen=0
+
+Are no longer required, and a replaced by...
+
+security.bsd.see_other_uids=0]]></description>
+			<content:encoded><![CDATA[<p>I think pretty much in freebsd 6.0+</p>
+<p>kern.ps_showallprocs=0<br />
+kern.ps_argsopen=0</p>
+<p>Are no longer required, and a replaced by&#8230;</p>
+<p>security.bsd.see_other_uids=0</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:23:01 by W3 Total Cache
+-->

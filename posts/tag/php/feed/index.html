@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>php &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/php/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Mon, 30 Jan 2012 22:14:45 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Is Google PageRank dead?</title>
+		<link>https://hm2k.org/posts/is-google-pagerank-dead</link>
+					<comments>https://hm2k.org/posts/is-google-pagerank-dead#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Thu, 06 Oct 2011 21:30:30 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[pagerank]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3314</guid>
+
+					<description><![CDATA[PageRank is dead, long live PageRank. As we said recently, there&#8217;s been lots of speculation as to whether PageRank is dead or not. It isn&#8217;t, just Google are moving the goals a bit. Basically, they don&#8217;t want you to focus on PageRank but it&#8217;s still massively important to them. All this talk of dead, reminds me of [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>PageRank is dead, long live PageRank.<img loading="lazy" class="alignright size-medium wp-image-3317" title="Dead Parrot" src="http://labs.phurix.net/upload/dead-parrot-1-300x168.png" alt="" width="300" height="168" srcset="https://hm2k.org/upload/dead-parrot-1-300x168.png 300w, https://hm2k.org/upload/dead-parrot-1.png 853w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>As we said <a href="http://labs.phurix.net/posts/pagerank-viewer-launch">recently</a>, there&#8217;s been lots of speculation as to whether PageRank is dead or not. It isn&#8217;t, just Google are moving the goals a bit. Basically, they don&#8217;t want you to focus on PageRank but it&#8217;s still massively important to them.</p>
+<p>All this talk of dead, reminds me of the <a href="http://en.wikipedia.org/wiki/Dead_Parrot_sketch">Monty Python dead parrot sketch</a>, only in this case, it isn&#8217;t dead. An anti-dead-parrot if you will.</p>
+<p>So what&#8217;s with all the <a href="http://www.google.co.uk/news?q=pagerank+dead">news about PageRank being dead</a>? Google just changed their code, that&#8217;s all&#8230;</p>
+<p><span id="more-3314"></span></p>
+<h3>What&#8217;s going on then?</h3>
+<p>Originally, everyone used the code in the Internet Explorer plugin, then the Firefox plugin came along.</p>
+<p>The common thing about both was the URL they used to lookup the PageRank:</p>
+<blockquote><p>http://toolbarqueries.google.com/search?client=navclient-auto&amp;ch=%s&amp;features=Rank&amp;q=info:%s</p>
+<p>Note: The first %s is the checkhash, while the second is the actual URL you&#8217;re looking up.</p></blockquote>
+<p>Back in August, <a href="http://james.slaterspage.com/scraping-google-related-with-bonus-pagerank/">James Slater</a> was investigating the new <a href="https://chrome.google.com/webstore/detail/cikfgcnnhcibkipoldbjegmeojnkaled">Google Related chrome plugin</a> only to discover the new PageRank lookup URLs:</p>
+<blockquote><p>http://toolbarqueries.google.com/tbr?client=navclient-auto&amp;ch=%s&amp;features=Rank&amp;q=info:%s</p></blockquote>
+<p>Also, if you used to use the host &#8220;www.google.com&#8221; this no longer works either, use &#8220;toolbarqueries.google.com&#8221; instead.</p>
+<h3>Let there be code!</h3>
+<p>As part of our ongoing commitment to our <a href="http://pagerank.phurix.net/">PageRank lookup tool</a>, not only have we fixed our code, but we&#8217;ve released working PageRank scripts to GitHub.</p>
+<ul>
+<li><a href="https://github.com/phurix/pagerank/">PageRank on GitHub</a></li>
+</ul>
+<p>PageRank is dead, long live PageRank.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/is-google-pagerank-dead/feed</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3314</post-id>	</item>
+		<item>
+		<title>Integrate a newsletter into your website</title>
+		<link>https://hm2k.org/posts/integrate-a-newsletter-into-your-website</link>
+					<comments>https://hm2k.org/posts/integrate-a-newsletter-into-your-website#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Wed, 07 Sep 2011 13:26:56 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[mailchimp]]></category>
+		<category><![CDATA[mailing lists]]></category>
+		<category><![CDATA[mailman]]></category>
+		<category><![CDATA[newsletter]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3257</guid>
+
+					<description><![CDATA[Over the years I&#8217;ve been asked how to integrate a newsletter into a website quite a few times. These days I often find myself recommending a third party service such as MailChimp, however I soon discovered that as brilliant as it is, MailChimp its not for everyone. For example, many of our web hosting clients [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/british-fuel-cost-per-mile" rel="bookmark" title="British fuel cost per mile">British fuel cost per mile </a> <small>I was trying to work out how to estimate how...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-copyright-your-website" rel="bookmark" title="How to Copyright your website">How to Copyright your website </a> <small>People often ask me how to go about getting their...</small></li>
+<li><a href="https://hm2k.org/posts/php-coding-standards-and-best-practices" rel="bookmark" title="PHP coding standards and best practices">PHP coding standards and best practices </a> <small>I have been using PHP for a long time now,...</small></li>
+<li><a href="https://hm2k.org/posts/free-icons" rel="bookmark" title="Free icon sets for your website">Free icon sets for your website </a> <small>If you don&#8217;t have the time to make your own...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="http://labs.phurix.net/upload/mailman-par-avion.png"><img loading="lazy" class="alignright size-medium wp-image-3260" title="Mailman powering our Newsletter" src="http://labs.phurix.net/upload/mailman-par-avion-300x165.png" alt="" width="300" height="165" srcset="https://hm2k.org/upload/mailman-par-avion-300x165.png 300w, https://hm2k.org/upload/mailman-par-avion.png 650w" sizes="(max-width: 300px) 100vw, 300px" /></a>Over the years I&#8217;ve been asked how to integrate a newsletter into a website quite a few times.</p>
+<p>These days I often find myself recommending a third party service such as <a href="http://mailchimp.com/">MailChimp</a>, however I soon discovered that as brilliant as it is, MailChimp its not for everyone.</p>
+<p>For example, many of our web hosting clients want to run their own mail campaigns through their own website rather than use a third party service.</p>
+<p><span id="more-3257"></span></p>
+<h3>What software should we use?</h3>
+<p>From memory there&#8217;s a few ways to do that:</p>
+<ul>
+<li><a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/CpanelDocs/MailingLists">Mailman</a> &#8211; Installed with cPanel</li>
+<li><a href="http://www.phplist.com/">PHPList</a> &#8211; Install yourself or through fantastico, I&#8217;m not a fan</li>
+<li><a href="http://www.greatcircle.com/majordomo/">Majordomo</a> &#8211; Not installed</li>
+</ul>
+<p>There&#8217;s quite a few other &#8220;<a href="http://en.wikipedia.org/wiki/Category:Free_mailing_lists">free mailing list</a>&#8221; solutions and there&#8217;s plenty of <a href="http://alternativeto.net/software/mailman/">alternatives to Mailman</a>, but Mailman is the preferred option for us, mainly because it&#8217;s reliable and established&#8230;</p>
+<blockquote><p>&#8220;cPanel currently uses Mailman, which is an open source product under the GNU Project&#8221;</p>
+<p>&#8211; <a href="http://www.cpanel.net/podcast?page_id=673">Adam Wien, Systems Administrator</a></p></blockquote>
+<p>It&#8217;s reassuring when software is used by a vendor such as cPanel, as you know it&#8217;s likely to be supported for the foreseeable future.</p>
+<p>It&#8217;s really easy to <a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/CpanelDocs/MailingLists">get started</a> with the Mailman Mailing Lists in cPanel, however there&#8217;s even a <a href="http://www.cpanel.net/media/tutorials/mailinglists.htm">video tutorial</a> if you&#8217;re a little unsure.</p>
+<blockquote><p>Tip: When you setup your mailing list call it &#8220;newsletter&#8221; so its purpose is easy to identify.</p></blockquote>
+<p>Now we&#8217;ve decided what software we&#8217;re using and we&#8217;ve setup our newsletter mailing list, we can now actually integrate it with our website.</p>
+<p>When I first started looking into this, there wasn&#8217;t many ways to integrate Mailman using PHP, just an outdated article entitled <a href="http://wiki.list.org/pages/viewpage.action?pageId=4030648#">How do I integrate Mailman with PHP, or any other web enabling technology?</a></p>
+<p>Don&#8217;t worry about that, because we&#8217;re here to help&#8230;</p>
+<h3>Introducing the Mailman Widget for WordPress</h3>
+<p>What we want to achieve here is a widget on our website so users are able to subscribe to our newsletter.</p>
+<p>If you&#8217;re using WordPress, this is no problem as we&#8217;ve got a WordPress Plugin to do it for you:</p>
+<ul>
+<li><a href="http://wordpress.org/extend/plugins/mailman-widget/">Mailman Widget</a></li>
+</ul>
+<p>Simply login to your WordPress site as you normally would and go to the <a href="http://codex.wordpress.org/Plugins_Add_New_Screen">Add New Plugin</a> screen. Just look for the &#8220;Mailman Widget&#8221;. If in doubt, take a look at the <a href="http://wordpress.org/extend/plugins/mailman-widget/screenshots/">Mailman Widget screenshots</a> to help you out.</p>
+<h3>Not using WordPress? Don&#8217;t panic!</h3>
+<p>We can use exactly the same library that&#8217;s used in the <em>Mailman Widget</em> on <em>any</em> PHP based website.</p>
+<ul>
+<li><a href="http://php-mailman.sourceforge.net/">PHP-Mailman</a></li>
+</ul>
+<p>Simply download the file and take a look at the example to get you started.</p>
+<h3>The future of PHP Mailman</h3>
+<p>In future, using PHP Mailman should be even easier as it is turned into a PHP Pear package called Services_Mailman.</p>
+<p>You can now download the Pear package via github:</p>
+<ul>
+<li><a href="https://github.com/pear/Services_Mailman">Services_Mailman</a></li>
+</ul>
+<p>Simply click the download button and extract the files. You can either require it like a normal class or install it as a Pear package by running the following:</p>
+<blockquote><p>pear install package.xml</p></blockquote>
+<p>Once the <a href="http://pear.php.net/pepr/pepr-proposal-show.php?id=672">proposal for Services_Mailman</a> has been passed, you should be able to simply do &#8220;pear install Services_Mailman&#8221; as it will be added to the Pear channel.</p>
+<h3>In summary</h3>
+<p>I hope this helps make it easier for you to add a newsletter to your website. Despite the rise of social media (such as twitter) email is still the number 1 way to communicate online, so it&#8217;s never been more important to keep in touch with your customers or peers.</p>
+<p><strong>Good luck!</strong></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/british-fuel-cost-per-mile" rel="bookmark" title="British fuel cost per mile">British fuel cost per mile </a> <small>I was trying to work out how to estimate how...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-copyright-your-website" rel="bookmark" title="How to Copyright your website">How to Copyright your website </a> <small>People often ask me how to go about getting their...</small></li>
+<li><a href="https://hm2k.org/posts/php-coding-standards-and-best-practices" rel="bookmark" title="PHP coding standards and best practices">PHP coding standards and best practices </a> <small>I have been using PHP for a long time now,...</small></li>
+<li><a href="https://hm2k.org/posts/free-icons" rel="bookmark" title="Free icon sets for your website">Free icon sets for your website </a> <small>If you don&#8217;t have the time to make your own...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/integrate-a-newsletter-into-your-website/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3257</post-id>	</item>
+		<item>
+		<title>Google&#8217;s Official Profanity API</title>
+		<link>https://hm2k.org/posts/googles-official-profanity-api</link>
+					<comments>https://hm2k.org/posts/googles-official-profanity-api#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Wed, 17 Aug 2011 10:09:15 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[bad words]]></category>
+		<category><![CDATA[json]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[profanity]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3180</guid>
+
+					<description><![CDATA[Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new website which asks: &#8220;What do you love?&#8221; (wdyl.com). So, perhaps I was a bit hasty writing off WhoisX. The list of profanities was discovered in the Javascript on the website, however Google reacted quickly and switched this to a URL lookup instead of a Javascript one therefore keeping [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.wdyl.com/?q=butt hole lane"><img loading="lazy" class="alignright size-medium wp-image-3230" title="Butt_Hole_Road" src="http://i.imgur.com/U2IWJ.jpg" alt="" width="300" height="199" /></a>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new website which asks: <a href="http://wdyl.com/">&#8220;What do you love?&#8221;</a> (wdyl.com).</p>
+<p>So, perhaps I was a bit hasty <a href="http://labs.phurix.net/posts/the-rise-and-fall-of-whoisx">writing off WhoisX</a>.</p>
+<p>The list of profanities was <a href="http://fffff.at/googles-official-list-of-bad-words/">discovered</a> in the Javascript on the website, however Google reacted quickly and switched this to a URL lookup instead of a Javascript one therefore keeping the list away from prying eyes.</p>
+<p>However, what this does mean is now we have an API to play with:<span id="more-3180"></span></p>
+<blockquote><p><a href="http://www.wdyl.com/profanity?q=xxx">http://www.wdyl.com/profanity?q=xxx</a></p></blockquote>
+<p>This will return a true JSON response:</p>
+<blockquote><p>{&#8220;response&#8221;: &#8220;true&#8221;}</p></blockquote>
+<p>While looking up something like &#8220;lol&#8221; will return a false response:</p>
+<blockquote><p><a href="http://www.wdyl.com/profanity?q=lol">http://www.wdyl.com/profanity?q=lol</a></p>
+<p>{&#8220;response&#8221;: &#8220;false&#8221;}</p></blockquote>
+<p>All in all a pretty simple and easy way to figure out whether Google thinks it is a bad word or not.</p>
+<p>On the down side, you can&#8217;t easily use it on your site, as, if you try to call it by AJAX you&#8217;ll be faced by the following error:</p>
+<blockquote><p>XMLHttpRequest cannot load http://www.wdyl.com/profanity. Origin http://example.org is not allowed by Access-Control-Allow-Origin.</p></blockquote>
+<p>On the upside, we don&#8217;t want to do that anyway, we can to use it from PHP.</p>
+<blockquote>
+<pre>&lt;?php
+
+$q=isset($_REQUEST['q'])?urlencode($_REQUEST['q']):'';
+readfile('http://www.wdyl.com/profanity?q='.$q);
+
+?&gt;</pre>
+</blockquote>
+<p>That&#8217;s right, that&#8217;s all there is to it. Simply copy that into the a file called &#8220;profanity.php&#8221; and you&#8217;re ready to go!</p>
+<p>Now you can do a <a href="http://api.jquery.com/jQuery.getJSON/">JSON cal</a>l to your &#8216;profanity.php&#8217; to tell you whether the word is bad or not.</p>
+<p>If that&#8217;s not enough, you could try using the Google Profanity API to avoid displaying ads on pages that contain profanities.</p>
+<p>Now if only there was a way to avoid the <a href="http://en.wikipedia.org/wiki/Scunthorpe_problem">Scunthorp problem</a>&#8230;</p>
+<p>Going back to the reported Adsense problem on WhoisX.co.uk, the example query was:</p>
+<blockquote><p>adult-hardcore-sex.cuntspace.me.uk</p></blockquote>
+<p>Passing this to the API returned false.</p>
+<p>But, changing all the non-word characters to spaces has a different effect:</p>
+<blockquote><p>adult hardcore sex cuntspace me uk</p>
+<p>{&#8220;response&#8221;: &#8220;true&#8221;}</p></blockquote>
+<p>This is done in PHP using a simple regular expression:</p>
+<blockquote><p>echo preg_replace(&#8216;/[\W+]/&#8217;,&#8217; &#8216;,&#8217;adult-hardcore-sex.cuntspace.me.uk&#8217;);</p></blockquote>
+<p>I&#8217;m not sure this exactly solves the Scunthorp problem, but it definitely does identify &#8220;sex&#8221; as an adult theme which is perfect.</p>
+<p>Now to turn it into a usable function:</p>
+<blockquote>
+<pre>&lt;?php
+
+function is_profanity($q,$json=0) {
+	$q=urlencode(preg_replace('/[\W+]/',' ',$q));
+	$p=file_get_contents('http://www.wdyl.com/profanity?q='.$q);
+	if ($json) { return $p; }
+	$p=json_decode($p);
+	return ($p-&gt;response=='true')?1:0;
+}
+
+$q=isset($_REQUEST['q'])?$_REQUEST['q']:'';
+echo is_profanity($q);
+
+?&gt;</pre>
+</blockquote>
+<p>We can use this function to check whether the query is considered a profanity or not. If it is, it will return a 1, otherwise a 0 is returned.</p>
+<p>This function can now be used to include kittens (or whatever) rather than Google Adsense Ads on a pages with &#8220;<a href="https://www.google.com/adsense/support/as/bin/answer.py?hl=en&amp;answer=105957">adult themed</a>&#8221; content.</p>
+<p>Brilliant!</p>
+<p>Now to submit for <a href="https://www.google.com/adsense/support/bin/request.py?contact_type=policy_violation_appeal">reconsideration</a>&#8230;</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/googles-official-profanity-api/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3180</post-id>	</item>
+		<item>
+		<title>What is my IP?</title>
+		<link>https://hm2k.org/posts/what-is-my-ip</link>
+					<comments>https://hm2k.org/posts/what-is-my-ip#respond</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Tue, 09 Aug 2011 08:48:14 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[ip address]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[regex]]></category>
+		<category><![CDATA[what is my ip]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3193</guid>
+
+					<description><![CDATA[An IP address is a unique number which identifies a machine on a network. On the Internet IP addresses are allocated in blocks to ISPs in each country by regional registries, making it possible to identify which country an IP address originated in. Often, if you are connected to the Internet behind a router, you [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" class="alignright size-medium wp-image-3199" title="500px-Coffee_IP.svg" src="http://labs.phurix.net/upload/500px-Coffee_IP.svg_-300x225.png" alt="" width="300" height="225" srcset="https://hm2k.org/upload/500px-Coffee_IP.svg_-300x225.png 300w, https://hm2k.org/upload/500px-Coffee_IP.svg_.png 500w" sizes="(max-width: 300px) 100vw, 300px" />An <a href="http://en.wikipedia.org/wiki/IP_address">IP address</a> is a unique number which identifies a machine on a network.</p>
+<p>On the Internet IP addresses are allocated in blocks to ISPs in each country by regional registries, making it possible to identify which country an IP address originated in.</p>
+<p>Often, if you are connected to the Internet behind a router, you share an online IP address with everyone else on your local area network (LAN).</p>
+<p>Sometimes you need to know your external IP address and using something like <a href="http://en.wikipedia.org/wiki/Ipconfig">ipconfig</a> will only return your LAN IP address (something like 192.168.0.1).</p>
+<p><span id="more-3193"></span>That is why many &#8220;what is my ip&#8221; websites exist, making it easy for you to lookup your external IP address.</p>
+<p>My favourite IP lookup service has been for a long time one run by NASDAQ-100 content delivery specialists &#8220;Akamai Technologies&#8221;:</p>
+<ul>
+<li><a href="http://whatismyip.akamai.com/">whatismyip.akamai.com</a></li>
+</ul>
+<p>It&#8217;s brilliant in its simplicity but it&#8217;s not very pretty.</p>
+<p>We decided to do something different. We made a pretty &#8220;What is my IP address?&#8221; lookup:</p>
+<ul>
+<li><a href="http://ip.phurix.net/">ip.phurix.net</a></li>
+</ul>
+<p>Part of its beauty is that the audience its aimed at is able to quickly read and understand the information at a glance, without any prompts. While those who don&#8217;t understand it can marvel at its pretty form and ponder over its usefulness.</p>
+<p>The other part of its beauty is that it&#8217;s <em>highly <a href="http://en.wiktionary.org/wiki/parsable">parsable</a></em>.</p>
+<p>It&#8217;s easy to parse the IP address, mainly because the presentation (CSS) is separate from the markup (HTML), but also because of the headers.</p>
+<p>Here&#8217;s a short demonstration to show how you can use the headers to get the IP address using this tool:</p>
+<blockquote><p>&lt;?php $h=get_headers(&#8216;http://ip.phurix.net&#8217;,1); echo trim($h[&#8216;Location&#8217;],&#8217;/&#8217;); ?&gt;</p></blockquote>
+<p>However, this method isn&#8217;t very portable, so may not be suitable if you&#8217;re checking against multiple sources at once.</p>
+<p>So instead, we can also demonstrate using a simple regular expression and a function that can get http contents (such as file_get_contents() in PHP).</p>
+<blockquote><p>&lt;?php echo preg_replace(&#8216;/.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*/s&#8217;,&#8217;$1&#8242;,file_get_contents(&#8216;http://ip.phurix.net&#8217;));?&gt;</p></blockquote>
+<p>The brilliance in this little snippet is that it will work with <em>any</em> useful &#8220;What is my IP?&#8221; lookup website.</p>
+<p>So as you can see, it&#8217;s really easy to work with as a pretty API as well.</p>
+<p>Beyond the IP address, you only need to look at the source code to understand that it&#8217;s easy to parse the other details.</p>
+<p>I hope you found this useful!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/what-is-my-ip/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3193</post-id>	</item>
+		<item>
+		<title>PageRank Viewer Launch</title>
+		<link>https://hm2k.org/posts/pagerank-viewer-launch</link>
+					<comments>https://hm2k.org/posts/pagerank-viewer-launch#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Wed, 03 Aug 2011 14:55:28 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[pagerank]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3142</guid>
+
+					<description><![CDATA[Back in 2007, we were developing code for our domain lookup service. One of the features we wanted was to display the Google PageRank of a domain right there in the lookup along side the whois details. At the time we didn&#8217;t know how to pull this information and there was very limited details on [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="http://pagerank.phurix.net/"><img loading="lazy" class="alignright" title="pagerank" src="http://labs.phurix.net/upload/pagerank-300x225.png" alt="" width="300" height="225" /></a>Back in 2007, we were developing code for our domain lookup service.</p>
+<p>One of the features we wanted was to display the Google PageRank of a domain right there in the lookup along side the whois details.</p>
+<p>At the time we didn&#8217;t know how to pull this information and there was very limited details on it, so some research was required which resulted in a <a href="http://labs.phurix.net/projects/pagerank">PageRank PHP script</a>.</p>
+<p>Over time, the resulting &#8220;pagerank.php&#8221; script became very popular and was developed further by fixing bugs and making it easier to use.</p>
+<p>Now we wanted to show off our work in the form of a demo, so we launched a website&#8230;</p>
+<p><span id="more-3142"></span>We&#8217;ve had a demo of the <a href="http://pagerankviewer.com/">PageRank Viewer</a> online since 2010, but this week we&#8217;ve developed a whole new site along side entirely new code.</p>
+<p>The original code we used was reverse engineered from the Internet Explorer toolbar, however it was much later that improved code based on the Google Toolbar for Mozilla Firefox surfaced.</p>
+<p>The code from the Google Toolbar for Mozilla Firefox was interesting. By downloading the plugin &#8220;xpi&#8221; file, unzipping it and taking a look at the javascript you are able to see that Google regards PageRank quite highly or has sense of humour:</p>
+<blockquote><p>HASH_SEED_=&#8221;Mining PageRank is AGAINST GOOGLE&#8217;S TERMS OF SERVICE. Yes, I&#8217;m talking to you, scammer.&#8221;;</p></blockquote>
+<p>The simplicity of this code made it very easy to port over to any scripting language. So along side the launch of the all new PageRank Viewer website, we&#8217;re also shipping code in PHP, Python, Perl, TCL, C++ and D, all with the new code so you can write your own solution.</p>
+<p>We bring this to you just in time too, there&#8217;s a perceived deprecation of PageRank after Google didn&#8217;t offer any official PageRank tool in their Google Chrome web browser.</p>
+<p>PageRank was removed from webmaster tools, dismissed by a Google employee who said:</p>
+<blockquote><p>&#8220;it was silly to tell people not to think about it, but then to show them the data, implying that they should look at it&#8221;</p>
+<p>&#8211; <a href="http://www.google.com/support/forum/p/Webmasters/thread?tid=6a1d6250e26e9e48&amp;hl=en">Susan Moskwa 14/10/2009</a></p></blockquote>
+<p>Although we agree with the point Google is trying to make, we felt there is still a lot of value on PageRank to webmasters.</p>
+<p>For example, Google have made it very clear that having a reliable web hosting provider will help with ranking.</p>
+<p>With that in mind, we decided to redevelop the PageRank Viewer and release new code to improve availability of PageRank lookups.</p>
+<p>We welcome the all new <a href="http://pagerank.phurix.net/">PageRank Viewer</a> to the family as a Phurix Labs project.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/pagerank-viewer-launch/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3142</post-id>	</item>
+		<item>
+		<title>Over sixteen ways to obfuscate e-mail addresses</title>
+		<link>https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses</link>
+					<comments>https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sun, 03 Apr 2011 10:10:28 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[email]]></category>
+		<category><![CDATA[obfuscate]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=1891</guid>
+
+					<description><![CDATA[Back in 2007 I wrote about email addresses on your website and how to avoid putting your email address in plain text. A guy I know, named &#8220;csarven&#8221; also wrote about methods to hide email addresses from page source providing over 16 concepts for hiding your email address. This was useful, but not practical, so [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/email-address-on-your-website" rel="bookmark" title="email address on your website">email address on your website </a> <small>This is something that people don&#8217;t seem to realise, and...</small></li>
+<li><a href="https://hm2k.org/articles/ways-to-waste-time-online" rel="bookmark" title="Ways to waste time online">Ways to waste time online </a> <small>I compiled a short list of sites that you can...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Back in 2007 I wrote about<a href="http://www.hm2k.com/posts/email-address-on-your-website"> email addresses on your website</a> and how to avoid putting your email address in plain text.</p>
+<p>A guy I know, named &#8220;csarven&#8221; also wrote about <a href="http://www.csarven.ca/hiding-email-addresses">methods to hide email addresses from page source</a> providing over 16 concepts for hiding your email address.</p>
+<p>This was useful, but not practical, so I decided to write a PHP class&#8230;</p>
+<p><span id="more-1891"></span>I began writing the <a href="http://obfuscate.sourceforge.net/">Obfuscate Email PHP Library</a> as a proof of concept to show the various methods in action, but then I decided to release the code as well as a demonstration website.</p>
+<p>The demonstration website is based on a concept outlined by tilllate.com in their &#8220;<a href="http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/">nine ways to obfuscate e-mail addresses compared</a>&#8221; article.</p>
+<p>In this article the author has setup 9 different email addresses and put them on their website using 9 different obfuscation techniques.</p>
+<p>They then waited one and a half years for the mailboxes to receive emails and then reviewed the results.</p>
+<p>The Obfuscate project is using a very similar concept, but instead it is using a free email service to provide disposable email addresses without any configuration.</p>
+<p>At first <a href="http://en.wikipedia.org/wiki/Mailinator">mailinator</a> was used, however emails are kept for just a few hours which makes it almost impossible to measure results. Meanwhile the <a href="http://www.dispostable.com/">dispostable</a> service keeps email for up to two days and there is no registration required.</p>
+<p>The theory is that the &#8220;plain&#8221; email address should received more email than the others and the most successful methods will receive no emails at all.</p>
+<p>The project website will be indexed by the search engines and the spam bots should start to crawl the website for email addresses.</p>
+<p>Now we wait for the results&#8230;</p>
+<p>In the meantime you can use the <a href="http://obfuscate.sourceforge.net/">Obfuscate Email PHP Library</a> to choose one of over 16 methods of obfuscation you feel is most suitable for you.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/email-address-on-your-website" rel="bookmark" title="email address on your website">email address on your website </a> <small>This is something that people don&#8217;t seem to realise, and...</small></li>
+<li><a href="https://hm2k.org/articles/ways-to-waste-time-online" rel="bookmark" title="Ways to waste time online">Ways to waste time online </a> <small>I compiled a short list of sites that you can...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1891</post-id>	</item>
+		<item>
+		<title>get_favicon() php function</title>
+		<link>https://hm2k.org/posts/get_favicon-php-function</link>
+					<comments>https://hm2k.org/posts/get_favicon-php-function#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 15 Mar 2011 12:45:43 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[favicon]]></category>
+		<category><![CDATA[function]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=593</guid>
+
+					<description><![CDATA[I was after a php function that would get the favicon for a supplied domain, I did attempt to write my own but it proved more complex than I had first anticipated. Never fear, I did a quick google and came across a couple of sites. http://www.peej.co.uk/projects/favatars.html I tried this code, but it returned nothing. [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/rglob-php" rel="bookmark" title="rglob.php">rglob.php </a> <small>Today I was having a look on PHP.net and noticed...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I was after a php function that would get the favicon for a supplied domain, I did attempt to write my own but it proved more complex than I had first anticipated.  <span id="more-593"></span>Never fear, I did a quick google and came across a couple of sites.</p>
+<ul>
+<li><a href="http://www.peej.co.uk/projects/favatars.html">http://www.peej.co.uk/projects/favatars.html</a></li>
+</ul>
+<p>I tried this code, but it returned nothing. I attempted to fix it, but it still didn&#8217;t really perform very well.</p>
+<ul>
+<li><a href="http://www.josephtinsley.com/39/2009-11-10/google-favicon-api-php-code/">http://www.josephtinsley.com/39/2009-11-10/google-favicon-api-php-code/</a></li>
+</ul>
+<p>This was interesting, it seems that google has an API for returning favicons&#8230;</p>
+<blockquote><p>function get_favicon($host) { return &#8216;http://www.google.com/s2/favicons?domain=&#8217;.$host; }</p></blockquote>
+<p>That was easy.  Also, if you don&#8217;t fancy using Google (some people don&#8217;t) you can try one of these instead:</p>
+<ul>
+<li>http://duckduckgo.com/i/%s.ico</li>
+<li>http://getfavicon.appspot.com/%s</li>
+<li>http://www.getfavicon.org/?url=%s</li>
+</ul>
+<p>Where %s is, but the host or domain name.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/rglob-php" rel="bookmark" title="rglob.php">rglob.php </a> <small>Today I was having a look on PHP.net and noticed...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/get_favicon-php-function/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">593</post-id>	</item>
+		<item>
+		<title>Premature optimization is the root of all evil</title>
+		<link>https://hm2k.org/posts/premature-optimization-is-the-root-of-all-evil</link>
+					<comments>https://hm2k.org/posts/premature-optimization-is-the-root-of-all-evil#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 22 Feb 2011 20:57:29 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[cache]]></category>
+		<category><![CDATA[Donald Knuth]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[Premature optimization]]></category>
+		<category><![CDATA[xdebug]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=696</guid>
+
+					<description><![CDATA[There&#8217;s loads of ways you can optimize your PHP code, however they are probably NOT the answer to your performance issues. A wiser man than myself once said: We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>There&#8217;s <a href="http://www.hm2k.com/posts/50-php-optimisation-tips-revisited">loads of ways</a> you can optimize your PHP code, however they are probably NOT the answer to your performance issues.</p>
+<p>A wiser man than myself once said:</p>
+<blockquote><p><em>We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%.</em></p></blockquote>
+<p>This was originally said by <a href="http://en.wikipedia.org/wiki/Donald_Knuth">Donald Knuth</a>, the father of the <em>analysis of algorithms</em>.</p>
+<p>This can also be applied when working with programming languages such as PHP.</p>
+<p>Here&#8217;s some handy performance tips to point you in the right direction&#8230;</p>
+<p><span id="more-696"></span></p>
+<p><strong>Profile</strong> your code using a debugger is highly recommended as a way to find those bottlenecks that are slowing it down.</p>
+<p><a href="http://xdebug.org">Xdebug</a> is great, it&#8217;s open source, highly recommended by PHP experts everywhere, it easily integrates as a PHP extension and with any <a href="http://www.ibm.com/developerworks/opensource/library/os-php-ide/index.html">popular IDE</a>.</p>
+<p>Once configured, you can use <a href="http://www.xdebug.org/docs/profiler">Xdebug to profile your PHP scripts</a> and determine where the bottlenecks are in your code.</p>
+<p>You never know, the issue may not even be down to your code and instead be down to a database or network latency issue.</p>
+<p><strong>Upgrade</strong> PHP to the latest version. With every release developers have tweaked and optimised the code to improve performance.</p>
+<p>So if a particular core PHP function is your bottleneck, perhaps you&#8217;re due an upgrade.</p>
+<p><strong>Cache</strong> everything is the advice given by developers of large websites (such as <a href="http://highscalability.com/blog/2010/5/17/7-lessons-learned-while-building-reddit-to-270-million-page.html">reddit</a>).</p>
+<p>The <a href="http://php.net/memcache">Memcache module</a> can be used to improve performance by caching database results.</p>
+<p>If you use the Smarty template engine, then you can <a href="http://www.smarty.net/docsv2/en/caching.tpl">cache pages</a> that way.</p>
+<p>Otherwise you may find the <a href="http://pear.php.net/package/Cache_Lite">Cache_Lite</a> handy.</p>
+<p><strong>Ask</strong>. Once you&#8217;ve profiled your code and discovered your bottleneck the only thing left to do is speak to the community.</p>
+<p>The community know best because they&#8217;ve already done it.</p>
+<p>If you didn&#8217;t write it, remember to speak to the author and it&#8217;s community first, otherwise try these resources:</p>
+<ul>
+<li><a href="http://chat.efnet.org/">#PHP on EFnet</a> (<a href="irc://irc.efnet.org/php">IRC</a>)</li>
+<li><a href="http://php.net/mailing-lists.php">PHP Mailing lists</a></li>
+<li><a href="http://stackoverflow.com/questions/tagged/php">PHP on StackOverflow</a></li>
+<li><a href="http://www.reddit.com/r/PHP/">PHP on reddit.com</a></li>
+</ul>
+<p><em>Tip: The community is more likely to help you if you lurk a bit first, make some comments and see what it&#8217;s all about before start asking questions.</em></p>
+<p><strong>Don&#8217;t forget</strong> PHP never was and never will be built to be the best.</p>
+<p>That&#8217;s why <a href="http://najafali.com/php-is-better-than-ruby.html">Ruby developers make jokes</a> about PHP being better and why facebook developed <a href="http://en.wikipedia.org/wiki/HipHop_for_PHP">Hiphop for PHP</a>.</p>
+<p><a href="http://en.wikipedia.org/wiki/Rasmus_Lerdorf">Rasmus Lerdorf</a> (who started PHP) would probably agree that it&#8217;s more about getting the job done than &#8220;real programming&#8221;.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/premature-optimization-is-the-root-of-all-evil/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">696</post-id>	</item>
+		<item>
+		<title>rglob.php</title>
+		<link>https://hm2k.org/posts/rglob-php</link>
+					<comments>https://hm2k.org/posts/rglob-php#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 08 Feb 2011 12:55:24 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[glob]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[recursive]]></category>
+		<category><![CDATA[rglob]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=689</guid>
+
+					<description><![CDATA[Today I was having a look on PHP.net and noticed a PHP contest so I decided to submit one of my functions. I chose the rglob() function. I first wrote the simple recursive glob() function rglob for php.net back in 2008. I chose it because (according to Google Analytics) it&#8217;s the second most popular PHP function in [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/premature-optimization-is-the-root-of-all-evil" rel="bookmark" title="Premature optimization is the root of all evil">Premature optimization is the root of all evil </a> <small>There&#8217;s loads of ways you can optimize your PHP code,...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Today I was having a look on PHP.net and noticed a PHP contest so I decided to submit one of my functions.</p>
+<p>I chose the <a href="http://code.google.com/p/hm2k/source/browse/trunk/code/php/functions/rglob.php">rglob() function</a>.</p>
+<p><span id="more-689"></span></p>
+<p>I first wrote the simple <a href="http://www.google.co.uk/search?&amp;q=recursion">recursive</a> glob() function <a href="http://www.php.net/manual/en/function.glob.php#87221">rglob for php.net back in 2008</a>.</p>
+<p>I chose it because (according to Google Analytics) it&#8217;s the second most popular PHP function in my open source code collection, which means people are actually using it and it&#8217;s more simpler yet comprehensive than the most popular (file_post_contents).</p>
+<p>The proof is there that you are actually using it, so now perhaps you can do something for me&#8230;</p>
+<div style="border: 1px solid #2D73A5; padding: 2px; width: 100px; text-align: center;"><a style="text-decoration: none;" href="http://projects.westhost.com/contest/php/function/rglob/123"><img src="http://projects.westhost.com/contest/php/images/thumb.png" alt="" /><br />
+<span style="padding: 2px;">Vote for my PHP code on WestHost</span></a></div>
+<p>Thanks!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/premature-optimization-is-the-root-of-all-evil" rel="bookmark" title="Premature optimization is the root of all evil">Premature optimization is the root of all evil </a> <small>There&#8217;s loads of ways you can optimize your PHP code,...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/rglob-php/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">689</post-id>	</item>
+		<item>
+		<title>50+ PHP optimisation tips revisited</title>
+		<link>https://hm2k.org/posts/50-php-optimisation-tips-revisited</link>
+					<comments>https://hm2k.org/posts/50-php-optimisation-tips-revisited#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 20 May 2008 17:51:28 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Optimisation]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=178</guid>
+
+					<description><![CDATA[After reading an article some time ago entitled &#8220;40 Tips for optimizing your php Code&#8221; (and some others that are suspiciously similar), I decided to redo it, but properly this time with more accurate tips, providing references and citations for each and every one. The result is this list of over 50 PHP optimisation tips&#8230; [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/text-editors-revisited" rel="bookmark" title="Text editors revisited">Text editors revisited </a> <small>As a web developer my main tool is my text...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>After reading an article some time ago entitled &#8220;<a href="http://digg.com/programming/40_Tips_for_optimizing_your_php_Code">40 Tips for optimizing your php Code</a>&#8221; (and some others that are suspiciously similar), I decided to redo it, but properly this time with more accurate tips, providing references and citations for each and every one.</p>
+<p>The result is this list of over 50 PHP optimisation tips&#8230;</p>
+<p><strong>Update: The list is more like 50+ PHP tips and tricks these days.</strong></p>
+<p>Enjoy!</p>
+<p><span id="more-178"></span></p>
+<ol>
+<li><a href="http://www.php.net/echo"><em>echo</em></a> is faster than <a href="http://www.php.net/print"><em>print</em></a>. <a href="http://web.archive.org/web/20050407085143/http://dynacker.dotgeek.org/printvsecho/">[Citation]</a></li>
+<li>Wrap your string in single quotes (&#8216;) instead of double quotes (&#8220;) is faster because PHP searches for variables inside &#8220;&#8230;&#8221; and not in &#8216;&#8230;&#8217;, use this when you&#8217;re not using variables you need evaluating in your string.  <a href="http://spindrop.us/2007/03/03/php-double-versus-single-quotes/">[Citation]</a></li>
+<li>Use sprintf instead of variables contained in double quotes, it&#8217;s about 10x faster. <a href="http://teroheikkinen.iki.fi/blog/php-s_different_echo_methods_performance_comparison/">[Citation]</a></li>
+<li>Use <a href="http://www.php.net/echo">echo</a>&#8216;s multiple parameters (or stacked) instead of string concatenation. <a href="http://blog.libssh2.org/index.php?/archives/28-How-long-is-a-piece-of-string.html">[Citation]</a></li>
+<li>Use pre-calculations, set the maximum value for your for-loops before and not in the loop. ie: <a href="http://www.php.net/for">for</a> ($x=0; $x &lt; count($array); $x), this calls the count() function each time, use $max=count($array) instead before the for-loop starts. <a href="http://www.php.lt/benchmark/phpbench.php">[Citation]</a></li>
+<li>Unset or null your variables to free memory, especially large arrays. <a href="http://lists.nyphp.org/pipermail/talk/2003-January/001855.html">[Citation]</a></li>
+<li>Avoid magic like <a href="http://uk2.php.net/manual/en/language.oop5.overloading.php">__get, __set</a>, <a href="http://www.php.net/__autoload">__autoload</a>. <a href="http://www.ilia.ws/files/zend_performance.pdf">[Citation]</a></li>
+<li>Use require() instead of require_once() where possible. <a href="http://peter.mapledesign.co.uk/weblog/archives/writing-faster-php-code-1-require_once">[Citation]</a></li>
+<li>Use <a href="http://en.wikipedia.org/wiki/Path_(computing)">full paths</a> in includes and requires, less time spent on resolving the OS paths. <a href="http://t3.dotgnu.info/blog/php/include_once-mostly-harmless.html">[Citation]</a></li>
+<li>require() and include() are identical in every way except require halts if the file is missing. Performance wise there is very little difference. <a href="http://groups.google.com/group/php.general/browse_thread/thread/72332fe1ed21e104/b1650148cd6e3c17?lnk=st&amp;q=php+require+vs+include+performance#b1650148cd6e3c17">[Citation]</a></li>
+<li>Since PHP5, the time of when the script started executing can be found in $_SERVER[’REQUEST_TIME’], use this instead of time() or microtime(). <a href="http://www.php.net/time">[Citation]</a></li>
+<li><a href="http://www.php.net/pcre">PCRE</a> regex is quicker than <a href="http://www.php.net/ereg">EREG</a>, but always see if you can use quicker native functions such as <a href="http://www.php.net/strncasecmp">strncasecmp</a>, <a href="http://www.php.net/strpbrk">strpbrk</a> and <a href="http://www.php.net/stripos">stripos</a> instead. <a href="http://talks.php.net/show/php-best-practices/36">[Citation]</a></li>
+<li>When parsing with XML in PHP try <a href="http://www.bin-co.com/php/scripts/xml2array/">xml2array</a>, which makes use of the <a href="http://www.php.net/xml">PHP XML functions</a>, for HTML you can try PHP&#8217;s <a href="http://www.php.net/dom">DOM document</a> or <a href="http://www.php.net/domxml">DOM XML</a> in PHP4. <a href="http://htmlparsing.icenine.ca/">[Citation]</a></li>
+<li><a href="http://www.php.net/str_replace">str_replace</a> is faster than <a href="http://www.php.net/preg_replace">preg_replace</a>, str_replace is best overall, however <a href="http://www.php.net/strtr">strtr</a> is sometimes quicker with larger strings. Using array() inside str_replace is usually quicker than multiple str_replace. <a href="http://www.tummblr.com/web-development/php/php-speed-of-string-replacement-functions/">[Citation]</a></li>
+<li>&#8220;else if&#8221; statements are faster than <a href="http://en.wikipedia.org/wiki/Switch_statement">select statements</a> aka <a href="http://www.php.net/switch">case/switch</a>. <a href="http://www.php.lt/benchmark/phpbench.php">[Citation]</a></li>
+<li>Error suppression with @ is very slow. <a href="http://michelf.com/weblog/2005/bad-uses-of-the-at-operator/">[Citation]</a></li>
+<li>To reduce bandwidth usage turn on mod_deflate in Apache v2 <a href="http://howtoforge.com/apache2_mod_deflate">[Citation]</a> or for Apache v1 try mod_gzip. <a href="http://talks.php.net/show/php-best-practices/40">[Citation]</a></li>
+<li>Close your database connections when you&#8217;re done with them. <a href="http://uk.php.net/manual/en/function.mysql-close.php#69063">[Citation]</a></li>
+<li>$row[’id’] is <a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">7 times faster</a> than $row[id], because if you don&#8217;t supply quotes it has to guess which index you meant, assuming you didn&#8217;t mean a constant. <a href="http://www.php.net/constants#language.constants.syntax">[Citation]</a></li>
+<li>Use &lt;?php &#8230; ?&gt; tags when declaring PHP as all other styles are depreciated, including short tags. <a href="http://talks.php.net/show/php-best-practices/10">[Citation]</a></li>
+<li>Use strict code, avoid suppressing errors, notices and warnings thus resulting in cleaner code and less overheads. Consider having <a href="http://www.php.net/error_reporting">error_reporting(E_ALL)</a> always on. <a href="http://talks.php.net/show/php-best-practices/11">[Citation]</a></li>
+<li>PHP scripts are be served at 2-10 times slower by Apache httpd than a static page. Try to use static pages instead of server side scripts. <a href="http://talks.php.net/show/php-best-practices/34">[Citation]</a></li>
+<li>PHP scripts (unless cached) are compiled on the fly every time you call them. Install a PHP caching product (such as <a href="http://www.php.net/memcache">memcached</a> or <a href="http://eaccelerator.net/">eAccelerator</a> or <a href="http://sourceforge.net/projects/turck-mmcache/">Turck MMCache</a>) to typically increase performance by 25-100% by removing compile times. You can even <a href="http://www.cpanel.net/support/docs/ea/ea3/ea3php_php_extensionmgr.html">setup eAccelerator on cPanel using EasyApache3</a>. <a href="http://www.phpfive.net/php-opcode-caching-with-eaccelerator-article45.htm">[Citation]</a></li>
+<li>An alternative caching technique when you have pages that don&#8217;t change too frequently is to cache the HTML output of your PHP pages. Try <a href="http://smarty.php.net/">Smarty</a> or <a href="http://pear.php.net/Cache_Lite">Cache Lite</a>.  <a href="http://phplens.com/phpeverywhere/tuning-apache-php">[Citation]</a></li>
+<li>Use isset where possible in replace of strlen. (ie: if (strlen($foo) &lt; 5) { echo &#8220;Foo is too short&#8221;; } vs. if (!isset($foo{5})) { echo &#8220;Foo is too short&#8221;; } ). <a href="http://blog.dynom.nl/archives/String-length-vs-isset-to-check-string-lengths_20070807_5.html">[Citation]</a></li>
+<li>++$i is faster than $ i++, so <a href="http://www.hudzilla.org/phpwiki/index.php?title=Pre-increment_where_possible">use pre-increment where possible</a>. <a href="http://talks.php.net/show/php-best-practices/32">[Citation]</a></li>
+<li>Make use of the countless predefined functions of PHP, don&#8217;t attempt to build your own as the native ones will be far quicker; if you have very time and resource consuming functions, consider writing them as C extensions or modules. <a href="http://talks.php.net/show/php-best-practices/31">[Citation]</a></li>
+<li>Profile your code. A profiler shows you, which parts of your code consumes how many time. The <a href="http://xdebug.org/">Xdebug debugger</a> already contains a profiler. Profiling shows you the bottlenecks in overview. <a href="http://talks.php.net/show/php-best-practices/39">[Citation]</a></li>
+<li>Document your code. <a href="http://talks.php.net/show/php-best-practices/16">[Citation]</a></li>
+<li>Learn the difference between good and bad code. <a href="http://www.sitepoint.com/blogs/2007/05/25/good-and-bad-php-code/">[Citation]</a></li>
+<li>Stick to coding standards, it will make it easier for you to understand other people&#8217;s code and other people will be able to understand yours. <a href="http://talks.php.net/show/php-best-practices/15">[Citation]</a></li>
+<li>Separate code, content and presentation: keep your PHP code separate from your HTML. <a href="http://www.ibm.com/developerworks/library/wa-phprock1/index.html">[Citation]</a></li>
+<li>Don&#8217;t bother using complex template systems such as Smarty, use the one that&#8217;s included in PHP already, see <a href="http://www.php.net/ob_get_contents">ob_get_contents</a> and <a href="http://www.php.net/extract">extract</a>, and simply pull the data from your database. <a href="http://www.massassi.com/php/articles/template_engines/">[Citation]</a></li>
+<li>Never trust variables coming from user land (such as from $_POST) use <a href="http://www.php.net/mysql_real_escape_string">mysql_real_escape_string</a> when using mysql, and <a href="http://www.php.net/htmlspecialchars">htmlspecialchars</a> when outputting as HTML. <a href="http://talks.php.net/show/php-best-practices/19">[Citation]</a></li>
+<li>For security reasons never have anything that could expose information about paths, extensions and configuration, such as display_errors or <a href="http://www.php.net/phpinfo">phpinfo</a>() in your webroot. <a href="http://talks.php.net/show/php-best-practices/24">[Citation]</a></li>
+<li>Turn off <a href="http://www.php.net/register_globals">register_globals</a> (it&#8217;s disabled by default for a reason!). No script at production level should need this enabled as it is a security risk. Fix any scripts that require it on, and fix any scripts that require it off using <a href="http://uk.php.net/manual/en/security.globals.php#82542">unregister_globals()</a>. Do this now, as it&#8217;s set to be removed in PHP6. <a href="http://talks.php.net/show/php-best-practices/27">[Citation]</a></li>
+<li>Avoid using plain text when storing and evaluating passwords to avoid exposure, instead use a hash, such as an <a href="http://www.php.net/md5">md5</a> hash. <a href="http://talks.php.net/show/php-best-practices/28">[Citation]</a></li>
+<li>Use <a href="http://www.php.net/ip2long">ip2long</a>() and <a href="http://www.php.net/long2ip">long2ip</a>() to store IP addresses as integers instead of strings. <a href="http://blog.rightbrainnetworks.com/2006/09/18/10-things-you-probably-didnt-know-about-php/">[Citation]</a></li>
+<li>You can avoid reinventing the wheel by using the PEAR project, giving you existing code of a high standard. <a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">[Citation]</a></li>
+<li>When using header(&#8216;Location: &#8216;.$url); remember to follow it with a die(); as the script continues to run even though the location has changed or avoid using it all together where possible. <a href="http://richardlynch.blogspot.com/2007/06/php-header-location-redirect-refresh.html">[Citation]</a></li>
+<li>In <a href="http://www.php.net/oop">OOP</a>, if a method can be a <a href="http://en.wikipedia.org/wiki/Method_(computer_science)#Static_methods">static method</a>, declare it static. Speed improvement is by a factor of 4. <a href="http://ilia.ws/files/frankfurt_perf.pdf">[Citation]</a>.</li>
+<li>Incrementing a local variable in an OOP method is the fastest. Nearly the same as calling a local variable in a function and incrementing a global variable is 2 times slow than a local variable. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Incrementing an object property (eg. $this-&gt;prop++) is 3 times slower than a local variable. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Incrementing an undefined local variable is 9-10 times slower than a pre-initialized one. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Just declaring a global variable without using it in a function slows things down (by about the same amount as incrementing a local var). PHP probably does a check to see if the global exists. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Method invocation appears to be independent of the number of methods defined in the class because I added 10 more methods to the test class (before and after the test method) with no change in performance. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Methods in derived classes run faster than ones defined in the base class. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>A function call with one parameter and an empty function body takes about the same time as doing 7-8 $localvar++ operations. A similar method call is of course about 15 $localvar++ operations. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Not everything has to be OOP, often it is just overhead, each method and object call consumes a lot of memory. <a href="http://talks.php.net/show/php-best-practices/33">[Citation]</a></li>
+<li>Never trust user data, escape your strings that you use in SQL queries using <a href="http://www.php.net/mysql_real_escape_string">mysql_real_escape_string</a>, instead of mysql_escape_string or addslashes. Also note that if <a href="http://www.php.net/magic_quotes_gpc">magic_quotes_gpc</a> is enabled you should use <a href="http://www.php.net/stripslashes">stripslashes</a> first. <a href="http://www.jemjabella.co.uk/articles/php-security-tips">[Citation]</a></li>
+<li>Avoid the PHP mail() function header injection issue. <a href="http://uk3.php.net/manual/en/function.mail.php#56788">[Citation]</a></li>
+<li>Unset your database variables (the password at a minimum), you shouldn&#8217;t need it after you make the database connection.</li>
+<li><a href="http://en.wikipedia.org/wiki/RTFM">RTFM!</a> PHP offers a <a href="http://www.php.net/manual/">fantastic manual</a>, possibly one of the best out there, which makes it a very hands on language, providing working examples and talking in plain English. Please USE IT! <a href="http://xkcd.com/293/">[Citation]</a></li>
+</ol>
+<p>If you still need help, try #PHP on the <a href="http://chat.efnet.org/">EFnet</a> IRC Network. (Read the !rules first).</p>
+<p>Also see:</p>
+<ul>
+<li>an <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php" target="_blank">Excellent Article</a> about optimizing PHP by John Lim</li>
+<li><a href="http://pear.php.net/manual/en/standards.php">PEAR coding standards</a></li>
+<li><a href="http://talks.php.net/show/php-best-practices/">PHP best practices</a> by ez.no (Use left and right keys to scroll through the pages)</li>
+<li><a href="http://phplens.com/phpeverywhere/tuning-apache-php">Tuning Apache and PHP for Speed on Unix</a></li>
+<li><a href="http://c2.com/cgi/wiki?PrematureOptimization">Premature Optimisation</a></li>
+<li><a href="http://ilia.ws/files/frankfurt_perf.pdf">PHP and Performance</a></li>
+<li><a href="http://www.scribd.com/doc/10633/Performance-Tuning-PHP">Performance Tuning PHP</a></li>
+<li><a href="http://www.ibm.com/developerworks/library/wa-phprock1/index.html">Develop rock-solid code in PHP</a></li>
+<li><a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">12 PHP optimization tips</a></li>
+<li><a href="http://blog.rightbrainnetworks.com/2006/09/18/10-things-you-probably-didnt-know-about-php/">10 things you (probably) didn’t know about PHP</a></li>
+</ul>
+<p>Think you&#8217;re a PHP guru now? See if you can <a href="http://www.nickhalstead.com/2007/05/23/php-interview-questions-from-yahoo/">answer these questions</a>.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/text-editors-revisited" rel="bookmark" title="Text editors revisited">Text editors revisited </a> <small>As a web developer my main tool is my text...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/50-php-optimisation-tips-revisited/feed</wfw:commentRss>
+			<slash:comments>38</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">178</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:15 by W3 Total Cache
+-->

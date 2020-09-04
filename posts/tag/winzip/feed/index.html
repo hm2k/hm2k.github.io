@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>winzip &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/winzip/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Mon, 26 Oct 2009 10:52:57 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Compression Utilities</title>
+		<link>https://hm2k.org/posts/compression-utilities</link>
+					<comments>https://hm2k.org/posts/compression-utilities#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 13 Mar 2007 02:21:19 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[7-zip]]></category>
+		<category><![CDATA[compression]]></category>
+		<category><![CDATA[squeez]]></category>
+		<category><![CDATA[winace]]></category>
+		<category><![CDATA[winrar]]></category>
+		<category><![CDATA[winzip]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/compression-utilities</guid>
+
+					<description><![CDATA[For years now, for whatever reason I have used WinZip. I don&#8217;t really know why I continued to use it for so long as from WinZip 8 onwards, I was under the impression that it was going down hill. Over the year&#8217;s i&#8217;ve used other compression formats other than &#8220;.zip&#8221;, including &#8220;.rar&#8221; and &#8220;.ace&#8221;. The [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/editor" rel="bookmark" title="A good text editor">A good text editor </a> <small>I have been looking for a good open source or...</small></li>
+<li><a href="https://hm2k.org/posts/mounting-an-iso-image" rel="bookmark" title="Mounting an ISO image">Mounting an ISO image </a> <small>An ISO image usually refers to an archived copy of...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-extract-photos-from-an-exe" rel="bookmark" title="How to extract photos from an exe">How to extract photos from an exe </a> <small>I wasn&#8217;t going to write about this, but I liked...</small></li>
+<li><a href="https://hm2k.org/posts/tracking-ebay-auctions" rel="bookmark" title="Tracking eBay auctions">Tracking eBay auctions </a> <small>These days I find myself buying all sorts of things...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>For years now, for whatever reason I have used <a href="http://www.winzip.com/">WinZip</a>. I don&#8217;t really know why I continued to use it for so long as from WinZip 8 onwards, I was under the impression that it was going down hill.</p>
+<p>Over the year&#8217;s i&#8217;ve used other compression formats other than &#8220;.zip&#8221;, including &#8220;.rar&#8221; and &#8220;.ace&#8221;. The problem I soon discovered with WinZip is its inability to allow me to open some of these types of archives.</p>
+<p><span id="more-94"></span>Roll in WinRAR. <a href="http://www.rarlab.com/">WinRAR</a> was quite a choice application, and was sort of considered the &#8220;hacker&#8221; version of WinZip due to the nature of its users and the way it could be used, including the ability to split rar files into many separate files making it easy for distribution. Prior to this you would require the use of &#8220;splitting&#8221; software, that would allow you to split and recombine files such as zip files.</p>
+<p>For some time I used <a href="http://www.winzip.com/">WinZip</a>, <a href="http://www.rarlab.com/">WinRAR</a><a href="http://www.rarlab.com/"></a>, then also <a href="http://www.winace.com/">WinAce</a> (probably used it once ever) along side each other, with WinZip as my default for most.</p>
+<p>It got to WinZip 10, and I was still pretty much in this same rut, until RARsoft were giving away licenses (rar.key) for WinRAR 3.51 (<a href="http://googlesystem.blogspot.com/2006/07/winrar-free-today.html">details here</a>). I managed to bag myself a couple of free licenses before the offer expired.</p>
+<p>However, this got me thinking&#8230; What is the best overall compression utility? Do I really need more than one?</p>
+<p>I spoke to a few people I know online about this very subject. After some discussion the point I took was that &#8220;<a href="http://www.7-zip.org/">7-zip</a>&#8221; was the best for the job&#8230;  I decided to investigate further&#8230;</p>
+<p>Firstly, it must be pointed out that compression utilities are sometimes known as file archivers, as they often offer the ability for zero compression, yet still group many files together into one archive.</p>
+<p>As per usual the Wikipedia has quite an extensive comparison for this particular subject (<a href="http://en.wikipedia.org/wiki/Comparison_of_file_archivers">Comparison of file archivers</a>). As outlined earlier I wanted to see which one was &#8220;best overall&#8221; and I wanted to use as few as possible.</p>
+<p>To achieve this I decided to first checkout which applications has what format support for both reading and writing. (Ignore the mac formats, we&#8217;re talking windows!)</p>
+<p><a href="http://www.7-zip.org/">7-Zip</a> lacked the ability to read or write RAR, LHA, ACE, and ARJ.</p>
+<p><a href="http://www.winzip.com/">WinZip</a> doesn&#8217;t do 7z or  ace and lacks the ability to write anything that isn&#8217;t zip.</p>
+<p><a href="http://www.rarlab.com/">WinRAR</a> can literally read anything, but lacks the ability to write anything other than RAR or ZIP.</p>
+<p>I discovered that the best application overall for both reading and writing ability was an application called <a href="http://www.speedproject.de/enu/squeez/">Squeez</a>. However, graphical design of this application isn&#8217;t exactly fantastic.</p>
+<p>After further discussion with some friends I discovered a statistical site named &#8220;<a href="http://www.maximumcompression.com/">Maximum Compression</a>&#8221; which benchmarks compression formats and utilities. I decided to review the results to see if it could sway my vote.</p>
+<p>If you take a look at the tests on an individual basis, you will soon discover that the applications of choice do not often appear in the top 10, but do begin to appear in the top 20. But not to worry as the other applications on top seem to offer very limited features and format support when checking against the comparison table.</p>
+<p>After some time viewing you begin to notice that there&#8217;s simply only two contenders when it comes to best compression, AND features. They are Squeez and 7zip. However a point must be made that 7-Zip actually out performs Squeez by 2 places in the summery of all the tests, but then Squeez has far more format support.</p>
+<p>Overall it is clear there is one leading application, that is <a href="http://www.speedproject.de/enu/squeez/">Squeez</a>. Well done Squeez.</p>
+<p>Having said this, although Squeez seems the best on paper, the problem arises when you actually begin to use the user interface.</p>
+<p>In fact, it comes prior to that. The application is German based, which puts me off a little, their website isn&#8217;t exactly fantastic, and the application costs 27.95 EUR. Regardless I tried this application, and soon discovered that its interface is as ugly as the website, with a poor splash screen, and bad use of context menus, I found this application difficult to work with.</p>
+<p>So, I came to another conclusion. WinRAR offered everything I required. It offers me the ability to read many archive file types, and then some, and if I need to create an achieve I can simply create a zip or rar. OK, it didn&#8217;t do as well as Squeez on the tests, but its a nice application.</p>
+<p>Another thing to note about WinRAR is that it isn&#8217;t normally free, although simtel are sponsoring rarsoft to give away <a href="http://web.archive.org/web/20060904072711/http://wcarchive.cdrom.com/pub/simtelnet/win95/compress/rarkey.rar">free license for WinRAR 3.51</a> (non-upgradable). So if you DO like WinRAR, then do please buy the latest version.</p>
+<p>Alternatively, 7-Zip is open source and falls under the GPL license agreement, meaning you do not have to pay anything to download or use this application. Remember, although 7-Zip lacks in format support and usability compared with WinRAR, its still quick and free.</p>
+<p>In conclusion the only thing I can truly take away from this is that WinZip is crap. It lacks the format support and costs $29.95, it really isn&#8217;t worth it, when you can get it for free.</p>
+<p>I now use <a href="http://www.rarlab.com/">WinRAR</a>, and <a href="http://www.speedproject.de/enu/squeez/">Squeez</a> on special occasions.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/editor" rel="bookmark" title="A good text editor">A good text editor </a> <small>I have been looking for a good open source or...</small></li>
+<li><a href="https://hm2k.org/posts/mounting-an-iso-image" rel="bookmark" title="Mounting an ISO image">Mounting an ISO image </a> <small>An ISO image usually refers to an archived copy of...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-extract-photos-from-an-exe" rel="bookmark" title="How to extract photos from an exe">How to extract photos from an exe </a> <small>I wasn&#8217;t going to write about this, but I liked...</small></li>
+<li><a href="https://hm2k.org/posts/tracking-ebay-auctions" rel="bookmark" title="Tracking eBay auctions">Tracking eBay auctions </a> <small>These days I find myself buying all sorts of things...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/compression-utilities/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">94</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:42 by W3 Total Cache
+-->

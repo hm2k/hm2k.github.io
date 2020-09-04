@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Software &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/category/software/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Sun, 18 Mar 2012 22:59:03 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Presenting Coinb.in</title>
+		<link>https://hm2k.org/posts/presenting-coinb-in</link>
+					<comments>https://hm2k.org/posts/presenting-coinb-in#respond</comments>
+		
+		<dc:creator><![CDATA[James Henry]]></dc:creator>
+		<pubDate>Wed, 27 Jul 2011 10:22:20 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Software]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3070</guid>
+
+					<description><![CDATA[Bitcoin is a peer-to-peer cryto currency and we&#8217;ve been working on a free service for bitcoin users to help with accepting payments. Coinb.in is what is known as a &#8220;Bitcoin eWallet Service&#8221; with an easily accessible API aimed at web developers, to allow the acceptance of bitcoins and to process the payments automatically and anonymously from our network via [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/tracking-an-ip-address" rel="bookmark" title="Tracking an IP address">Tracking an IP address </a> <small>In my job I have to manage lots of machines...</small></li>
+<li><a href="https://hm2k.org/posts/longip-script" rel="bookmark" title="longip perl script">longip perl script </a> <small>I wanted to create a script that would convert a...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" class="alignright" title="Coinb,in - automate bitcoin transactions" src="https://coinb.in/images/coinbin.gif" alt="" width="210" height="52" />Bitcoin is a peer-to-peer cryto currency and we&#8217;ve been working on a free service for bitcoin users to help with accepting payments.</p>
+<p><strong><a href="https://coinb.in">Coinb.in</a></strong> is what is known as a &#8220;Bitcoin eWallet Service&#8221; with an easily accessible API aimed at web developers, to allow the acceptance of bitcoins and to process the payments automatically and anonymously from our network via an unbranded interface, at no fee, without having to run a bitcoin client.</p>
+<p><em>Coinb.in</em> works by providing your customer with a unique wallet address, which is linked to your account. The <em>coinb.in</em> service then checks the Bitcoin p2p network at regular intervals. Once the payment has been confirmed, you will receive a notification by email and the transaction data will be sent to a script of your choice, which can then be used to process the order and populate your database.</p>
+<p><span id="more-3070"></span></p>
+<p>There are a number of different ways to implement <em>Coinb.in</em>. The most simple and least complex way would be to implement a &#8220;buy it now&#8221; button, which does not require the user to register first.</p>
+<p>For example, on a small project we run, called <a href="http://www.gallush.com">Gallush</a> the following code could be added to <a href="http://www.gallush.com/buy/shell-services/starter-shell/">a product page</a> as a bitcoin &#8220;buy it now&#8221; button.</p>
+<blockquote>
+<pre>&lt;script src="http://coinb.in/merchant.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    var cb = {'uid':'2',
+    'amount':'3.00',
+    'fromcurrency':'USD',
+    'description':'Starter shell. 1 month',
+    'ref':'I10',
+    'requestemail':1,
+    'callback':'http://www.gallush.com/btc-payments.php'};
+&lt;/script&gt;
+&lt;a href="javascript:;" onClick="coinbin(cb);"&gt;Buy it now!&lt;/a&gt;</pre>
+</blockquote>
+<p><script type="text/javascript" src="http://coinb.in/merchant.js"></script><script type="text/javascript">// <![CDATA[
+    var cb = {'uid':'2',
+    'amount':'3.00',
+    'fromcurrency':'USD',
+    'description':'Starter shell. 1 month',
+    'ref':'I10',
+    'requestemail':1,
+    'callback':'http://www.gallush.com/btc-payments.php'};
+// ]]&gt;</script><br />
+Here&#8217;s an example: <a onclick="coinbin(cb);" href="javascript:;">Buy it now!</a></p>
+<p>The html and javascript above, would generate a link that would require no site registration because when it is clicked it will request that the visitor enters in their email address before they can continue, because of the &amp;requestemail parameter being set.</p>
+<p>Once the user has provided their email address, coinb.in will convert 3 USD to the equivalent value in bitcoins, and return this value plus an address to make a payment to.</p>
+<p>The &amp;description parameter  should contain a full description of the purchase and the &amp;reference parameter in our example contains the item id (I10).</p>
+<p>Once the user had made a payment, and it has been confirmed 6 times, all of the above data and additional transaction data is then sent to the callback URL provided so that it may populate the database and process the order accordingly.</p>
+<p>Coinb.in comes complete with, examples, <a href="https://coinb.in/documentation.html">documentation</a> and an API that can output the results into several different formats including XML and JSON objects</p>
+<p>Now the question is, would you buy <a href="http://www.phurix.co.uk">web hosting</a> with bitcoins?</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/tracking-an-ip-address" rel="bookmark" title="Tracking an IP address">Tracking an IP address </a> <small>In my job I have to manage lots of machines...</small></li>
+<li><a href="https://hm2k.org/posts/longip-script" rel="bookmark" title="longip perl script">longip perl script </a> <small>I wanted to create a script that would convert a...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/presenting-coinb-in/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3070</post-id>	</item>
+		<item>
+		<title>Announcing Phurix Labs</title>
+		<link>https://hm2k.org/posts/announcing-phurix-labs</link>
+					<comments>https://hm2k.org/posts/announcing-phurix-labs#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 14 Jul 2011 23:06:31 +0000</pubDate>
+				<category><![CDATA[Business]]></category>
+		<category><![CDATA[Development]]></category>
+		<category><![CDATA[Hardware]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[phurix]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=3017</guid>
+
+					<description><![CDATA[I&#8217;ve been thinking about retiring this site for some time now, but have been toying with the pros and cons. A decision had to be made. You see, the context of the HM2K blog has always had a subtle undertone of my business and the work I do online. That business is Phurix web hosting. [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I&#8217;ve been thinking about retiring this site for some time now, but have been toying with the pros and cons.</p>
+<p>A decision had to be made.</p>
+<p><span id="more-3017"></span></p>
+<p>You see, the context of the HM2K blog has always had a subtle undertone of my business and the work I do online. That business is Phurix web hosting.</p>
+<p>Phurix has always supported me and the blog, but unfortunately, because of other commitments I have less and less time to write and publish.</p>
+<p>At first I thought the best solution would be to shut down the blog and call it a day, while a colleague said he thinks I should keep it online.</p>
+<p>I&#8217;ve been thinking about a solution for a long time but then, while I was on holiday, it hit me.</p>
+<p>Merge it into the Phurix brand and it made sense too:</p>
+<ul>
+<li>HM2K.com was a hard concept to explain</li>
+<ul>
+<li>Easier concept: Phurix Labs:&#8221;Where we experiment with ideas and findings&#8221;</li>
+</ul>
+<li>HM2K.com had no context, it would often seem random</li>
+<ul>
+<li>Makes more sense in the context of the business</li>
+</ul>
+<li>HM2K.com had no real focus or agenda</li>
+<ul>
+<li>Focus on what is important: the business</li>
+</ul>
+<li>HM2K.com was a burden on one person</li>
+<ul>
+<li>Shared with Phurix</li>
+</ul>
+<li>HM2K.com was not making money</li>
+<ul>
+<li>By improving brand awareness business will increase</li>
+</ul>
+</ul>
+<p>A proposal was put forward and it went better than expected, it all seemed to fit together nicely. Perfect!</p>
+<p>The decision was made and I have no regrets.</p>
+<p><span class="Apple-style-span" style="color: #444444; font-family: Georgia, 'Bitstream Charter', serif; line-height: 24px; font-size: medium;">Today, we started by introducing a new &#8220;Phurix Labs&#8221; theme to HM2K.com, so that&#8217;s phase one is done.</span></p>
+<p>Over the next few days, the website will be migrated from here to &#8220;labs.phurix.net&#8221; (where it now belongs). That&#8217;s phaze two.</p>
+<p>Thanks for reading and I hope you continue to support the new Phurix Labs project.</p>
+<p>These are exciting times, watch this space!</p>
+<p><strong>About Phurix</strong></p>
+<p>Since 2004, Phurix has offered affordable and reliable hosting services with a no nonsense approach. Phurix will continue to provide a high quality of service and engage with customers to ensure its future and growth.</p>
+<p><em>Authorised cPanel Partner and OpenSRS partner.</em></p>
+<p><em></em><strong>About Phurix Labs</strong></p>
+<p>Phurix Labs is where we experiment with ideas and findings. You&#8217;ll find all sorts of useful tools and information.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/announcing-phurix-labs/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3017</post-id>	</item>
+		<item>
+		<title>How to find the fastest CVSUP mirror server</title>
+		<link>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server</link>
+					<comments>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 30 Mar 2011 14:41:42 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[csup]]></category>
+		<category><![CDATA[cvsup]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[ports]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=2316</guid>
+
+					<description><![CDATA[Some time ago I wrote about using fastest_cvsup, to find the fastest cvsup mirror server for use with csup on FreeBSD. fastest_cvsup is a system utility written in Perl that finds fastest CVSup mirror server for FreeBSD, OpenBSD or NetBSD. Here I&#8217;m going to tell you how to get started&#8230; Install First of all you need [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Some time ago I wrote about using fastest_cvsup, to find the fastest cvsup mirror server for use with <a href="http://www.hm2k.com/posts/freebsd-62-usrports-no-such-file-or-directory">csup on FreeBSD</a>.</p>
+<p>fastest_cvsup is a system utility written in Perl that finds fastest CVSup mirror server for FreeBSD, OpenBSD or NetBSD.</p>
+<p>Here I&#8217;m going to tell you how to get started&#8230;</p>
+<p><span id="more-2316"></span></p>
+<p><strong>Install</strong></p>
+<p>First of all you need to install it, there are a number of ways to do this, but on FreeBSD you probably want to install from ports:</p>
+<blockquote><p>cd /usr/ports/sysutils/fastest_cvsup/ &amp;&amp; make install clean</p>
+<p><em>Note: You MUST be root to install ports</em></p></blockquote>
+<p><strong>Get help</strong></p>
+<p>Once installed you are able to read more information about fastest_cvsup by issuing the following commands:</p>
+<blockquote><p>fastest_cvsup -h</p></blockquote>
+<p>This will display the general help.</p>
+<blockquote><p>man fastest_cvsup</p></blockquote>
+<p>This will display the more detailed manual page.</p>
+<p><strong>Usage examples</strong></p>
+<p>Here&#8217;s a few practical examples to get you started.</p>
+<p>This example will check to see which United Kingdom (uk) based servers are quickest:</p>
+<p><code># fastest_cvsup -c uk<br />
+&gt;&gt;  Querying servers in countries: uk<br />
+--&gt; Connecting to cvsup.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 136.71 ms<br />
+--&gt; Connecting to cvsup2.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 139.81 ms<br />
+--&gt; Connecting to cvsup3.uk.freebsd.org [131.111.8.41]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 134.28 ms<br />
+--&gt; Connecting to cvsup4.uk.freebsd.org [195.40.6.45]...<br />
+- server replied: OK 17 0 SNAP_16_1h CVSup server ready<br />
+- time taken: 129.03 ms</code></p>
+<p><code> </code></p>
+<p><code>&gt;&gt;  Speed Daemons:<br />
+- 1st: cvsup4.uk.freebsd.org    129.03 ms<br />
+- 2st: cvsup3.uk.freebsd.org    134.28 ms<br />
+- 3st: cvsup.uk.freebsd.org     136.71 ms</code></p>
+<p>To find the fastest server in Europe you would use something like this:</p>
+<p><code># fastest_cvsup -q -c uk,ie,fr,de,fi,no,nl,ch</code></p>
+<p>Go nuts, test them all:</p>
+<p><code># fastest_cvsup -Q -r -c all</code></p>
+<p>This example will give you the times of just OpenBSD and NetBSD servers:</p>
+<p><code># fastest_cvsup -c openbsd,netbsd</code></p>
+<p>In this example we will use fastest_cvsup with the cvup command to update the ports using the fastest server in the United States (us):</p>
+<p><code># csup -g -L 2 -h `fastest_cvsup -Q -c us` /root/ports-supfile</code></p>
+<p><em>Note: &#8220;-Q&#8221; is used to make it super quiet which is useful when using in scripts or in-line commands.</em></p>
+<p><strong>Find out more</strong></p>
+<p>Visit the <a href="http://fastest-cvsup.sourceforge.net/">fastest_cvsup</a> website to find out more.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/freebsd-62-usrports-no-such-file-or-directory" rel="bookmark" title="FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221;">FreeBSD 6.2 &#8220;/usr/ports: No such file or directory&#8221; </a> <small>I recently setup a new FreeBSD 6.2 server, only to...</small></li>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2316</post-id>	</item>
+		<item>
+		<title>Scan to Excel</title>
+		<link>https://hm2k.org/posts/scan-to-excel</link>
+					<comments>https://hm2k.org/posts/scan-to-excel#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sat, 24 Oct 2009 12:11:04 +0000</pubDate>
+				<category><![CDATA[Software]]></category>
+		<category><![CDATA[accountancy]]></category>
+		<category><![CDATA[convert]]></category>
+		<category><![CDATA[document scanner]]></category>
+		<category><![CDATA[excel]]></category>
+		<category><![CDATA[ocr]]></category>
+		<category><![CDATA[pdf]]></category>
+		<category><![CDATA[scan]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[tif]]></category>
+		<category><![CDATA[tiff]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=546</guid>
+
+					<description><![CDATA[This week I&#8217;ve mostly been trying to figure out a way to digitalise some of my bank statements to make accountancy and archiving easier. I figured there must be a way to scan them in using a document scanner, then use OCR software to render the data into Excel. Of course, nothing does this natively, [&#8230;]<div class='yarpp-related-rss yarpp-related-none'>
+
+No related posts.
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>This week I&#8217;ve mostly been trying to figure out a way to digitalise some of my bank statements to make accountancy and archiving easier.</p>
+<p>I figured there must be a way to scan them in using a document scanner, then use OCR software to render the data into Excel.</p>
+<p>Of course, nothing does this natively, but there are ways to do it.</p>
+<p><span id="more-546"></span></p>
+<p>There are three parts to this process&#8230;</p>
+<ol>
+<li>Document scanning</li>
+<li>Data format conversion</li>
+<li>Optical character recognition (OCR)</li>
+</ol>
+<p>For the scanning part I used a Ricoh Aficio MP C4500, which not only acts as a Photocopier, but as a fax machine, network printer and network scanner.</p>
+<p>The main part is it&#8217;s ability to scan with <a href="http://en.wikipedia.org/wiki/Image_scanner#Document_processing">document processing</a>. This means (once configured) that it would only take a few minutes to scan a few hundred pages, rather than a few hours using a conventional scanner.</p>
+<p>This device has the ability to save scanned documents as PDF or TIF. I decided to use the more versatile TIF image format.</p>
+<p>I figured it would be easier to convert a standard image format than the proprietary PDF format. I very quickly discovered that it wasn&#8217;t that simple.</p>
+<p>To begin with I had heard good things about two leading OCR software packages&#8230;</p>
+<ul>
+<li>ABBYY FineReader 9.0</li>
+<li>Able2Extract Pro 5.0</li>
+</ul>
+<p>I found that neither of these software packages would accept TIF files, so I converted each directory of TIF files into a single PDF file using the <a href="http://www.dreamsyssoft.com/tiff-to-pdf/">DreamSys Tiff to PDF Converter</a>, which was a very quick and effective command-line tool for doing the task.</p>
+<p>I started trying out Able2Extract as I&#8217;d not used it before and I had read good things about it&#8217;s PDF to Excel conversion. The problem was it kept throwing up a &#8220;Fatal Internal Error #24&#8221; error which I was unable to work around.</p>
+<p>I had used ABBYY in the past and it turned out to be very good OCR software for converting to Word at least, however trying to configure it to scan the areas I wanted into Excel seemed almost impossible and took forever.</p>
+<p>I decided to go back to the drawing board&#8230;</p>
+<p>I quickly realised that there were a few &#8220;web 2.0&#8221; software as a service tools out there that could assist me&#8230;</p>
+<ul>
+<li><a href="http://www.finereaderonline.com/">ABBYY FineReader Online</a> (10 pages a day for free)</li>
+<li>NitroPDF <a href="http://www.pdftoexcelonline.com/">PDF to Excel</a> (free)</li>
+</ul>
+<p>There&#8217;s many universal &#8220;online document converters&#8221;, a few include&#8230;</p>
+<ul>
+<li><a href="http://www.zamzar.com/">Zamzar</a></li>
+<li><a href="http://www.cometdocs.com/">cometdocs</a></li>
+</ul>
+<p>My issue with most of these is that they would recognise the PDF, but not the images inside the PDF and use OCR to render them. They are only designed to take the text found in a PDF file and extract that to Excel.</p>
+<p>I also came across a few other software packages that will also convert from PDF files to Excel&#8230;</p>
+<ul>
+<li>deskUNPDF Professional by docudesk</li>
+<li>PDF2XL Enterprise by cogniview</li>
+<li>ExpressConversion Server by adlibsoftware</li>
+<li>PDF To XLS by verypdf</li>
+<li>Solid Converter PDF by soliddocuments</li>
+<li>TotalPDFConverter by coolutils</li>
+</ul>
+<p>With all this available proprietary software for converting from PDF to Excel (XLS or CSV) its obvious that it&#8217;s a service definitely in demand.</p>
+<p>So far I&#8217;m waiting on the following:</p>
+<ul>
+<li>Zamzar and others to email me their conversion of the PDF file I uploaded to them.</li>
+<li>Able2Extract&#8217;s support team to get back to me with regards to the error.</li>
+<li>For Cogniview PDF2XL Enterprise to download.</li>
+</ul>
+<p>Let&#8217;s see what gets the job done best, first, if any&#8230;</p>
+<p>Zamzar is unable to convert from PDF to XLS, directly or indirectly. While finereaderonline will only accept images, not PDF files, which is OK, but may take some time, especially at only 10 pages per day.</p>
+<p>Able2Extract were unable to help me with the error unless I sent them the PDF, which I can&#8217;t do due to it&#8217;s content.</p>
+<p>I sent DreamSys an email asking them to send these guys a sample output PDF instead, but I&#8217;ve heard nothing back as of yet.</p>
+<p>Able2Extract recommended I use their Sonic PDF Creator product to convert the original scanned TIFF files to a PDF which they claim their Able2Extract product will be able to read.</p>
+<p>I had a play with Sonic PDF Creator and appeared to be unable to import a directory of TIF files, just each TIF file individually. This seemed like a painstaking process.</p>
+<p>I needed to merge the TIF files together into 1 file to make it easier. PTGui Pro is able to stitch TIF files together, however it gave me an error saying:</p>
+<p>Error loading TIFF file: Unsupported number of bits per sample (only 8, 16 or 32 are supported) or unsupported sample format. Useless.</p>
+<p>Back to square one.</p>
+<p>I decided to try my luck with PDF2XL, which after a little teething problem getting a working copy to begin with seemed to be quite a neat package.</p>
+<p>PDF2XL was able to detect that the PDF I had given it (the one I created using Tiff 2 PDF) was a scanned document and began performing OCR on the file.</p>
+<p>The results were almost prefect, VERY impressive. It seems that PDF2XL is able to do what nothing else could, not even Able2Extract. Don&#8217;t waste your time with anything else. It seems that <a href="http://www.cogniview.com/pdf2xl.php">PDF2XL</a> is all you need.</p>
+<p>The only thing I will say is I had to tweak the OCR settings a little bit to get it to render the page correctly.</p>
+<p>Just when I thought everything was going great, I discovered another issue I had completely overlooked. The output was not in the correct order. I took a look at the original PDF and soon discovered that the images in the PDF were not in the correct order either.</p>
+<p>First off, I decided that I should rename all the images based on the sheet number, that way I could be sure that they were correctly ordered. I created a batch file to preview and rename the images, called &#8220;<a href="http://hm2k.googlecode.com/svn/trunk/code/batch/imgrename.bat">imgrename.bat</a>&#8220;. I was also able to use this to rename an entire directory at a time.</p>
+<p>I tried rebuilding the PDF using <em>DreamSys Tiff to PDF Converter</em> which I had used to create the PDF file in the first place, only to find that it was still out of order and I couldn&#8217;t influence the sorting. I had to find something else to do the job&#8230;</p>
+<p>Enter <a href="http://www.remotesensing.org/libtiff/">libtiff</a> and it&#8217;s windows counterpart <a href="http://gnuwin32.sourceforge.net/packages/tiff.htm">Tiff for Windows by GnuWin32</a>. Once I had a copy of this I was able to write another batch file that would not only combine the TIFF files (with pages) into a single TIFF file (using tiffcp.exe) but I was able to convert that into a PDF using (tiff2pdf.exe). I called this script &#8220;<a href="http://hm2k.googlecode.com/svn/trunk/code/batch/tiff2pdf.bat">tiff2pdf.bat</a>&#8220;.</p>
+<p>Bingo!</p>
+<p>All was successful&#8230;</p>
+<p>The next task is to firstly, cleanup anything bad in the CSV file left by OCR (cleancsv.bat) then to &#8220;normalise&#8221; the data&#8230;</p>
+<p>But that&#8217;s another story for another time. We&#8217;ve done what we set out to do which was to scan to excel and all is well on that front.</p>
+<p>Hope you find this useful. Enjoy!</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 880px; width: 1px; height: 1px;"><a class="NoDecorationRed" href="http://www.cogniview.com/pdf2xl-enterprise.php">PDF2XL Enterprise</a></div>
+<div class='yarpp-related-rss yarpp-related-none'>
+<p>No related posts.</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/scan-to-excel/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">546</post-id>	</item>
+		<item>
+		<title>W32Dasm</title>
+		<link>https://hm2k.org/posts/w32dasm</link>
+					<comments>https://hm2k.org/posts/w32dasm#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 13 Oct 2009 15:55:43 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[disassembler]]></category>
+		<category><![CDATA[software]]></category>
+		<category><![CDATA[w32dasm]]></category>
+		<category><![CDATA[win32dasm]]></category>
+		<category><![CDATA[windows]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=526</guid>
+
+					<description><![CDATA[W32Dasm (or Win32DASM) doesn&#8217;t seem to exist on the map any more, but it&#8217;s still a very useful programmers tool, especially if you like reverse engineering. W32Dasm is a Windows 32-bit (Win32) disassembler. What it does is display the programs routines in assembly code, which makes it easier for you to trace what the software [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What&#8217;s wrong with low version numbers?">What&#8217;s wrong with low version numbers? </a> <small>In a presentation entitled &#8220;Why I hate Django&#8221;, Cal Henderson...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>W32Dasm (or Win32DASM) doesn&#8217;t seem to exist on the map any more, but it&#8217;s still a very useful programmers tool, especially if you like reverse engineering.</p>
+<p>W32Dasm is a Windows 32-bit (Win32) <a href="http://en.wikipedia.org/wiki/Disassembler">disassembler</a>. What it does is display the programs routines in assembly code, which makes it easier for you to trace what the software is doing.</p>
+<p>I like to use this software every once in a while, but recently I found there were no decent sources for this software.</p>
+<p><span id="more-526"></span>However, I soon located a copy that I had on my computer from a while back, in a directory named &#8220;w32ds893&#8221;.</p>
+<p>The help file details a website which appears to be down, but there is an archived version.</p>
+<blockquote><p><a href="http://web.archive.org/web/20020203211452/http://www.expage.com/page/w32dasm">http://www.expage.com/page/w32dasm</a></p></blockquote>
+<p>This takes you to another now defunct site, which is also archived:</p>
+<blockquote><p><a href="http://web.archive.org/web/20020204180925/http://members.home.net/w32dasm/">members.home.net/w32dasm/</a></p></blockquote>
+<p>As you can see from that page you can download w32dasm v8.7 as w32ds87.zip, but not the latest version.</p>
+<p>I uploaded w32ds893.zip which contains &#8220;<strong>W32DSM89.EXE</strong>&#8220;, which is the latest known version:</p>
+<ul>
+<li><a href="http://www.2shared.com/file/z9Fweb8q/w32ds893.html">w32ds893.zip</a> (2shared)</li>
+<li><a href="http://www.4shared.com/file/118537627/1ebea2e3/w32ds893.html">w32ds893.zip</a> (4shared)</li>
+<li><a href="http://www.megaupload.com/?d=ZDRI71UF">w32ds893.zip</a> (MegaUpload)</li>
+<li><a href="http://www.multiupload.com/R8UCFWH954">w32ds893.zip</a> (MultiUpload)</li>
+<li><a href="http://www.megaupload.com/?d=ZDRI71UF">w32ds893.zip</a> (third party)</li>
+</ul>
+<p>I don&#8217;t know where this was originally sourced from, but I know it works fine.</p>
+<p><em>Note: If you have any questions or know of any updates, please feel free to add a comment below. Thanks.</em></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What&#8217;s wrong with low version numbers?">What&#8217;s wrong with low version numbers? </a> <small>In a presentation entitled &#8220;Why I hate Django&#8221;, Cal Henderson...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/w32dasm/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">526</post-id>	</item>
+		<item>
+		<title>Pingotron</title>
+		<link>https://hm2k.org/posts/pingotron</link>
+					<comments>https://hm2k.org/posts/pingotron#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 01 Oct 2009 11:23:44 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Software]]></category>
+		<category><![CDATA[icmp]]></category>
+		<category><![CDATA[ping]]></category>
+		<category><![CDATA[pingotron]]></category>
+		<category><![CDATA[software]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=276</guid>
+
+					<description><![CDATA[I&#8217;ve been meaning to publish a post about Pingotron for some time now, but now I fear it&#8217;s already too late. Quite a few months back I was looking for an application that could sit on my desktop and tell me instantly if any of my servers had stopped responding by ping. There&#8217;s probably hundreds [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/find-the-ip-address-of-a-seized-website" rel="bookmark" title="Find the ip address of a seized website">Find the ip address of a seized website </a> <small>So your favorite site is now displaying the following message:...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><em>I&#8217;ve been meaning to publish a post about Pingotron for some time now, but now I fear it&#8217;s already too late.</em></p>
+<p>Quite a few months back I was looking for an application that could sit on my desktop and tell me instantly if any of my servers had stopped responding by <a href="http://en.wikipedia.org/wiki/Ping">ping</a>.</p>
+<p><span id="more-276"></span>There&#8217;s probably hundreds of ways of monitoring services, including paid for web services such as <a href="http://www.pingdom.com/">Pingdom</a>, and open source software that runs on your web server such as <a href="http://www.nagios.org/">Nagios</a>. None of them really hit the spot for the services I wanted to monitor, or they were expensive.</p>
+<p>A quick and easy way to monitor services that was fairly non-intrusive was what I wanted. Enough detail to tell you that a server was unreachable by ping and when it happened.</p>
+<p><a href="http://express-press-release.net/46/PR%20-%20Quick%20Troubleshooting%20or%20How%20to%20Be%20Always%20On%20the%20Watch.php">Pingotron</a> seemed ideal&#8230;</p>
+<blockquote><p><em>Pingotron</em> is a computer program for controlling and monitoring network devices, such as computers, network printers, routers and other devices, on TCP/IP networks. The program has two versions: Pingotron (basic) and Pingotron PRO.</p>
+<p>A list of desired hosts that you wish to control are entered into the program.</p>
+<p>The program sends ICMP “echo request” packets to each host and listens for ICMP “echo response” replies. Various properties (ping interval, size of packet, time-out request) can be configured for each host. The program can notify an administrator when a problem arises with any host with an alert sound, e-mail, blinking tray notification and/or network notification. The PRO version has an alarm history log feature, alarm statistics, and ping history and ping statistics for all hosts, in addition, it has a multi-user mode.</p></blockquote>
+<p>I started to use it, however, straight away I came across an odd issue which seemed to only affect the <a href="http://en.wikipedia.org/wiki/Netgear_DG834G">DG834 series routers</a>.</p>
+<p>The software reported the ping response from these routers as an &#8220;unknown response&#8221;, while in windows regular ping, they responded just fine.</p>
+<p>It was clear that the software seemed to think that the response was malformed, perhaps it wass, however regular windows ping does not.</p>
+<p>I emailed the details over to the author via the support email address. I got a response the same day.</p>
+<p><em>Anatoly Dobrinin</em> fixed the bug, provided me with the latest PRO version download and a valid serial number to register it as a full version.</p>
+<p>What a great author! I was impressed. Sure I would never have paid for this software, as there were clearly free solutions, so this was great!</p>
+<p>This was last year in 2008. This year, I find that if you visit Pingotron.com you find yourself at some kind of ad filled domain parking page. Fortunately you can still find an <a href="http://web.archive.org/web/20080720072228/http://www.pingotron.com/">archived copy of Pingotron.com</a> in the web archive.</p>
+<p><strong>Update:</strong> As Pingotron appears to be no more I have decided to share my resources&#8230;</p>
+<blockquote><p>Hello,</p>
+<p>Thank you for your message.</p>
+<p>This bug has been fixed today.</p>
+<p>Please download and install the program again.</p>
+<p>You can download the program here:</p>
+<p><a href="http://www.pingotron.com/setup_pro.zip">http://www.pingotron.com/setup_pro.zip</a></p>
+<p>You can use this registration code to register  the pro version:</p>
+<p>EET4-3EZS-VTK0-M0U7</p>
+<p>Best regards,<br />
+Anatoly Dobrinin</p></blockquote>
+<p><em>Note: If Anatoly would like me to remove this, feel free to contact me.</em></p>
+<p><em>A copy of <a href="http://www.megaupload.com/?d=FMZ5OM5I">setup_pro.zip</a> can be found on megaupload.<br />
+</em></p>
+<p><strong>Further Update: </strong>I had another issue that I tried to report, but since pingotron.com is unreachable, nothing can be done about it.</p>
+<p>It wasn&#8217;t a major issue. The issue was that sometimes when explorer crashes, the Pingotron icon does not reappear in the system tray.</p>
+<p>There was no way to recover the icon or window, without killing the &#8220;Pingotron.exe&#8221; and restarting it. Running &#8220;Pingotron.exe&#8221; again would only give you the error &#8220;The program is already running!&#8221;.</p>
+<p>I solved this by writing a script using AutoIT which would Check if the Pingotron window exists, restore it, otherwise run &#8220;Pingotron.exe&#8221;. I called it <a href="http://hm2k.googlecode.com/svn/trunk/code/autoit/Start_Pingotron.au3">Start Pingotron</a>.</p>
+<p>Anyway, since Pingotron is clearly no longer in active development, I am wondering is there&#8217;s anything else to use instead. Any ideas? Let me know.</p>
+<p>Perhaps I&#8217;ll just end up writing my own service instead&#8230;</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 884px; width: 1px; height: 1px;">I noticed that sometimes when explorer crashes, the pingotron icon does not reappear in the system tray.</div>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/find-the-ip-address-of-a-seized-website" rel="bookmark" title="Find the ip address of a seized website">Find the ip address of a seized website </a> <small>So your favorite site is now displaying the following message:...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/pingotron/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">276</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:22:55 by W3 Total Cache
+-->

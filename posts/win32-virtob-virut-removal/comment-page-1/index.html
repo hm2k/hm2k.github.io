@@ -1,0 +1,1627 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 
+	<title>HM2K » Win32 Virtob/Virut removal</title>
+
+	<link rel="stylesheet" href="https://hm2k.org/wp-content/themes/hm2k/style.css" type="text/css" media="screen,print">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://hm2k.org/feed">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://hm2k.org/feed/atom">
+	
+	
+	<style type="text/css" media="screen">
+			</style>
+	
+		<link rel="archives" title="May 2012" href="https://hm2k.org/posts/2012/05">
+	<link rel="archives" title="March 2012" href="https://hm2k.org/posts/2012/03">
+	<link rel="archives" title="November 2011" href="https://hm2k.org/posts/2011/11">
+	<link rel="archives" title="October 2011" href="https://hm2k.org/posts/2011/10">
+	<link rel="archives" title="September 2011" href="https://hm2k.org/posts/2011/09">
+	<link rel="archives" title="August 2011" href="https://hm2k.org/posts/2011/08">
+	<link rel="archives" title="July 2011" href="https://hm2k.org/posts/2011/07">
+	<link rel="archives" title="June 2011" href="https://hm2k.org/posts/2011/06">
+	<link rel="archives" title="May 2011" href="https://hm2k.org/posts/2011/05">
+	<link rel="archives" title="April 2011" href="https://hm2k.org/posts/2011/04">
+	<link rel="archives" title="March 2011" href="https://hm2k.org/posts/2011/03">
+	<link rel="archives" title="February 2011" href="https://hm2k.org/posts/2011/02">
+	<link rel="archives" title="December 2010" href="https://hm2k.org/posts/2010/12">
+	<link rel="archives" title="November 2010" href="https://hm2k.org/posts/2010/11">
+	<link rel="archives" title="June 2010" href="https://hm2k.org/posts/2010/06">
+	<link rel="archives" title="May 2010" href="https://hm2k.org/posts/2010/05">
+	<link rel="archives" title="April 2010" href="https://hm2k.org/posts/2010/04">
+	<link rel="archives" title="February 2010" href="https://hm2k.org/posts/2010/02">
+	<link rel="archives" title="December 2009" href="https://hm2k.org/posts/2009/12">
+	<link rel="archives" title="November 2009" href="https://hm2k.org/posts/2009/11">
+	<link rel="archives" title="October 2009" href="https://hm2k.org/posts/2009/10">
+	<link rel="archives" title="September 2009" href="https://hm2k.org/posts/2009/09">
+	<link rel="archives" title="August 2009" href="https://hm2k.org/posts/2009/08">
+	<link rel="archives" title="July 2009" href="https://hm2k.org/posts/2009/07">
+	<link rel="archives" title="June 2009" href="https://hm2k.org/posts/2009/06">
+	<link rel="archives" title="April 2009" href="https://hm2k.org/posts/2009/04">
+	<link rel="archives" title="February 2009" href="https://hm2k.org/posts/2009/02">
+	<link rel="archives" title="January 2009" href="https://hm2k.org/posts/2009/01">
+	<link rel="archives" title="December 2008" href="https://hm2k.org/posts/2008/12">
+	<link rel="archives" title="November 2008" href="https://hm2k.org/posts/2008/11">
+	<link rel="archives" title="September 2008" href="https://hm2k.org/posts/2008/09">
+	<link rel="archives" title="July 2008" href="https://hm2k.org/posts/2008/07">
+	<link rel="archives" title="June 2008" href="https://hm2k.org/posts/2008/06">
+	<link rel="archives" title="May 2008" href="https://hm2k.org/posts/2008/05">
+	<link rel="archives" title="April 2008" href="https://hm2k.org/posts/2008/04">
+	<link rel="archives" title="March 2008" href="https://hm2k.org/posts/2008/03">
+	<link rel="archives" title="February 2008" href="https://hm2k.org/posts/2008/02">
+	<link rel="archives" title="January 2008" href="https://hm2k.org/posts/2008/01">
+	<link rel="archives" title="December 2007" href="https://hm2k.org/posts/2007/12">
+	<link rel="archives" title="November 2007" href="https://hm2k.org/posts/2007/11">
+	<link rel="archives" title="October 2007" href="https://hm2k.org/posts/2007/10">
+	<link rel="archives" title="August 2007" href="https://hm2k.org/posts/2007/08">
+	<link rel="archives" title="July 2007" href="https://hm2k.org/posts/2007/07">
+	<link rel="archives" title="June 2007" href="https://hm2k.org/posts/2007/06">
+	<link rel="archives" title="May 2007" href="https://hm2k.org/posts/2007/05">
+	<link rel="archives" title="April 2007" href="https://hm2k.org/posts/2007/04">
+	<link rel="archives" title="March 2007" href="https://hm2k.org/posts/2007/03">
+	<link rel="archives" title="February 2007" href="https://hm2k.org/posts/2007/02">
+	<link rel="archives" title="January 2007" href="https://hm2k.org/posts/2007/01">
+	<link rel="dns-prefetch" href="//platform-api.sharethis.com">
+
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="HM2K » Win32 Virtob/Virut removal Comments Feed" href="https://hm2k.org/posts/win32-virtob-virut-removal/feed">
+<link rel="stylesheet" id="yarppWidgetCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.5.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="social_comments-css" href="https://hm2k.org/wp-content/plugins/social/assets/comments.css?ver=2.11" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/8.9/css/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/c/5.5.1/wp-includes/js/jquery/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#product=ga&amp;property=5f4131776f37880012707ba8" id="googleanalytics-platform-sharethis-js"></script>
+<link rel="alternate" type="application/json" href="https://hm2k.org/wp-json/wp/v2/posts/146">
+<link rel="prev" title="UK Trademark Law" href="https://hm2k.org/posts/uk-trademark-law">
+<link rel="next" title="How to create a boot CD for Windows ME" href="https://hm2k.org/posts/how-to-create-a-boot-cd-for-windows-me">
+
+<link rel="canonical" href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comments">
+
+<link rel="alternate" type="application/json+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fwin32-virtob-virut-removal">
+<link rel="alternate" type="text/xml+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fwin32-virtob-virut-removal&amp;format=xml">
+<style type="text/css">img#wpstats{display:none}</style></head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+	<div style="float:right; margin-right: 5px;">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-8789111894509366";
+/* 468x60, created 4/17/08 */
+google_ad_slot = "9389236395";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	<p><small><b>Have I helped you?</b> Please consider my <a href="http://tinyurl.com/hm2kwishlist">wishlist</a> or <a href="http://tinyurl.com/hm2kpaypal">donating</a>. Thanks!</small></p>
+<p>Don't forget to <a href="http://twitter.com/hm2k">follow me on twitter</a>.</p>
+	</div>
+	<h1><a href="https://hm2k.org">HM2K</a></h1>
+</div>
+
+
+<div id="content">
+
+			
+		<div class="post" id="post-146">
+	
+			<h2 class="posttitle"><a href="https://hm2k.org/posts/win32-virtob-virut-removal" rel="bookmark" title="Permanent link to Win32 Virtob/Virut removal">Win32 Virtob/Virut removal</a></h2>
+			
+			<p class="postmeta"> 
+			November 8, 2007 at 7:54 pm 
+			· Filed under Uncategorised						</p>
+		
+			<div class="postentry">
+			<p>Today I got handed a machine riddled with a virus that <a href="http://www.avast.com/eng/avast_4_home.html">avast!</a> detects as “<a href="http://www.bitdefender.com/VIRUS-1000070-en--Win32.Virtob.Gen.html">Win32 Virtob</a>“, also known as “<a href="http://free.grisoft.com/doc/66558/">Win32 Virut</a>“.</p>
+<p><span id="more-146"></span>Virtob is a worm that spreads around your system on the back of executable files (.exe and .src), once the virus is running in the system memory, every executable you run after that will consequently be infected with the virus.</p>
+<p>Once a system is infected it becomes very difficult to remove.</p>
+<p>I discovered the system was infected with this worm when I installed avast! on the system. Avast! soon identified the virus in the infected files offering me a choice to repair, delete or move to chest.</p>
+<p>I very quickly found that “repair” never worked, delete was a bad choice as they could be system executables that are needed, and so move to chest would also be a bad choice.</p>
+<p>I had to find another approach.</p>
+<p>There were two options, I learned that <a href="ftp://ftp.drweb.com/pub/drweb/cureit/drweb-cureit.exe">Dr Web CureIT</a> was able to “cure” the files. I was also told that AVG offered a <a href="http://www.grisoft.com/doc/34/us/crp/2/ndi/67762">Virut Removal Tool</a>.</p>
+<ul>
+<li>Download the above files (on a clean system).</li>
+<li>Create a boot CD, using <a href="http://www.nu2.nu/pebuilder/">Bart’s PE builder</a>, or download <a href="http://minipe.org/">miniPE</a> (on a clean system) and put them on the CD
+<ul>
+<li>or on a memory stick (preferably as read only).</li>
+</ul>
+</li>
+<li>Reboot into the CD.</li>
+<li>Run the downloaded software against the infected hard drives.</li>
+</ul>
+<p>Once the system is disinfected reboot normally, then:</p>
+<ul>
+<li>Go to Start -&gt; Run, type: sfc /scannow
+<ul>
+<li>Note: This may require your Windows CD, or an i386 directory.</li>
+</ul>
+</li>
+<li>Run a full system scan using at least two up-to-date antivirus applications. (<a href="http://en.wikipedia.org/wiki/List_of_antivirus_software">List of antivirus software</a>)</li>
+<li>Reinstall any software that appears to be corrupt or missing.</li>
+<li>Ensure your windows updates are up-to-date (Especially ensure you have <a href="http://support.microsoft.com/?kbid=890830">this one</a>).</li>
+<li>I also recommend you delete your “Temporary Internet Files” and delete all content from your %tmp% directory.</li>
+</ul>
+<div class="yarpp-related">
+<p>Related posts:</p><ol>
+<li><a href="https://hm2k.org/posts/so-how-did-i-get-infected-in-the-first-place" rel="bookmark" title="So how did I get infected in the first place?">So how did I get infected in the first place? </a> <small>People often ask me how their system got infected in...</small></li>
+<li><a href="https://hm2k.org/posts/cannot-delete-folder" rel="bookmark" title="Cannot delete Folder">Cannot delete Folder </a> <small>No doubt at some point you will have experienced this...</small></li>
+<li><a href="https://hm2k.org/posts/windows-genuine-advantage-removal" rel="bookmark" title="Windows Genuine Advantage Removal">Windows Genuine Advantage Removal </a> <small>First of all for those that don’t know, Windows Genuine...</small></li>
+<li><a href="https://hm2k.org/posts/my-avi-files-crash-explorerexe" rel="bookmark" title="My AVI files crash explorer.exe">My AVI files crash explorer.exe </a> <small>Often when I am browsing files using explorer I will...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-the-best-antivirus-software" rel="bookmark" title="What is the best antivirus software?">What is the best antivirus software? </a> <small>This is a question that I get asked very often....</small></li>
+</ol>
+</div>
+						</div>
+
+			<p class="postfeedback">
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal" rel="bookmark" title="Permanent link to Win32 Virtob/Virut removal" class="permalink">Permalink</a>
+			</p>
+			
+		</div>
+		
+		<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="https://hm2k.org/index.php?social_controller=auth&amp;social_action=reload_form&amp;redirect_to=https://hm2k.org/posts/win32-virtob-virut-removal&amp;post_id=146">
+			Logging In...		</div>
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#respond" style="display:none;">cancel</a></small></h3><form action="https://hm2k.org/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=twitter&amp;post_id=146" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=facebook&amp;post_id=146" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p><p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value=""></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value=""><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value=""></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post It"> <input type="hidden" name="comment_post_ID" value="146" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0"><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value=""></p><div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="5d176d000a"></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="65"></p></div></form>	</div>
+		</div>
+	<div id="social-tabs-comments">
+				<ul class="social-nav social-clearfix">
+			<li class="social-all social-tab-main social-current-tab"><a href="#" rel="social-all"><span>51 Replies</span></a></li>
+			<li class="social-wordpress"><a href="#" rel="wordpress"><span>0 Comments</span></a></li>
+			<li class="social-twitter"><a href="#" rel="social-twitter"><span>0 Tweets</span></a></li>
+			<li class="social-facebook"><a href="#" rel="social-facebook"><span>0 Facebook</span></a></li>
+			<li class="social-pingback"><a href="#" rel="social-pingback"><span>2 Pingbacks</span></a></li>
+		</ul>
+
+		
+		<div id="social-comments-tab-all" class="social-tabs-panel social-tabs-first-panel">
+			<div id="comments" class="social-comments">
+				<div class="social-last-reply-when">Last reply was April 18, 2010</div><div class="cf-clearfix"></div>				<ol class="social-commentlist">
+				<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::start_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::start_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>18</b><br>
+<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::end_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::end_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>42</b><br>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-27295">
+<div class="social-comment-inner social-clearfix" id="comment-27295">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/ec0af6aee8b7a865d3f44cf7954be98b?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/ec0af6aee8b7a865d3f44cf7954be98b?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">René</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-27295" class="social-posted-when" target="_blank">December 3, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi<br>
+how do I get rit of the virus win32.virtob?<br>
+I have read all that in this site, and I cant delete the virus 🙁<br>
+I dont know what to do anymore. I have tryed servial times booting my windows and everytime I finished reinstall windows the virus is coming back.<br>
+Can anyone help me. Please.<br>
+send msg to my e-mail</p>
+<p>&gt;René</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-34278">
+<div class="social-comment-inner social-clearfix" id="comment-34278">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/941f791dc66bbe8ec81a0a1aee6e756c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/941f791dc66bbe8ec81a0a1aee6e756c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.alphapc.co.uk" rel="external nofollow ugc" class="url">Paul Derbyshire</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-34278" class="social-posted-when" target="_blank">January 8, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>—  Just for info for other people finding this —</p>
+<p>Dr Web CureIT worked for me whereas the AVG removal tool did not. </p>
+<p>Also instead of using BartPE an alternative way to do this is to take out the hard drive from the infected machine and connect it to another computer. From there you can scan it with your own AV software knowing that none of the potentially infected files are in use and therefore unfixable.</p>
+<p>To the website creator:<br>
+Great site and many thanks. How the feck do you get the time to fix stuff AND do this?<br>
+Paul<br>
+Alpha PC</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-37724">
+<div class="social-comment-inner social-clearfix" id="comment-37724">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/912f21f1204a32171440c5ddbcd4bb2a?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/912f21f1204a32171440c5ddbcd4bb2a?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Chris</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-37724" class="social-posted-when" target="_blank">January 23, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>It workt beautifully the BARTPE and CUREIT combo thanx a lot!!!!!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-47170">
+<div class="social-comment-inner social-clearfix" id="comment-47170">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/f99366a8d8e8dc45dea20f78d9ea10fe?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/f99366a8d8e8dc45dea20f78d9ea10fe?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Bernd</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-47170" class="social-posted-when" target="_blank">February 26, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I also got infected by doing a “dumb” thing … executing some weird file coming<br>
+ from a weird source on my home system.<br>
+ AVG , Avira and other scanners found some of the virtob/Virut variants but only were<br>
+ doing their “rename/move” or “quarantining” things.<br>
+ Dr. Web’s “CureIT” did a great job instead , also for my system. Most of the files<br>
+ (except those with newest variants) reappear clean after a full volume scan.<br>
+Insofar the virtob/virut infection is easy to identify since the virus attaches itself<br>
+into empty spaces at the end of the executables (in most cases) and redirects the<br>
+entry vector to itself, the ending vector of the viral code then points to the original<br>
+entry of the host executable.<br>
+Because there are many variants around, it is recommended to re-scan a<br>
+previously infected system, although even cleaned up with tools, repeatedly,<br>
+from time to time as there are post-cleaning detections possible due to continued<br>
+signature updates by the scanners as well as for cleaning tools.</p>
+<p>My tips are: keep installed virus scanners, Anti Spy- and Anti- Malware programs<br>
+updated daily if possible.<br>
+A non-updated scanner is like a nonexistent scanner running out of date<br>
+very quickly and just consuming system time for no sense.<br>
+(Against new infections appearing after the last update,<br>
+there won’t be any protection).</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-51854">
+<div class="social-comment-inner social-clearfix" id="comment-51854">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/f3125c21f3526c7eef5cdf85aba77de4?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/f3125c21f3526c7eef5cdf85aba77de4?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">J.W. Bush</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-51854" class="social-posted-when" target="_blank">March 15, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thnx GOD.. you publish this paper.. All american will be thank to you! DONT FORGET to vote OBAMA!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-67790">
+<div class="social-comment-inner social-clearfix" id="comment-67790">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/b6bd094e86f41fcb079651299cc9e8ff?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/b6bd094e86f41fcb079651299cc9e8ff?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">sure-blophy</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-67790" class="social-posted-when" target="_blank">May 10, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Last year I used Dr Cure-it to get rid of w32.virut.w.  Had to scan several times to do this because it w32v would move around I guess.  This last month I made the mistake of downloading Googols free antispyware (Norton)etc.   Guess what?  My PC was immediately infected with w32v.  This showed up the first scan.  On the second scan about 5 more showed up and was eliminated but one of the w32v resisted being deleted or wipe off.  </p>
+<p>I almost believe that Norton did this deliberately, ie, introduce w32v, to motivate the user to buy their non-free anti-spyware.  </p>
+<p>ANYWAY AS YOU MIGHT GUESS DR. CURE-IT WAS UNABLE TO GET RID OF IT  … EVEN A NEWLY UPDATED ONE!!!</p>
+<p>if you know what to do besides reformatting my HD please let me know.</p>
+<p>TIA  ;=)</p>
+<p>Meanwhile I’m going to download an  Update of Dr CureIt again and re-scan.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-68200">
+<div class="social-comment-inner social-clearfix" id="comment-68200">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/a5a4103bd79e749970f5f0f536860ff4?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/a5a4103bd79e749970f5f0f536860ff4?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">akk234</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-68200" class="social-posted-when" target="_blank">May 13, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>i am no geek and could not exactly follow the steps .<br>
+it will be very  kind of u to just elaborate the steps a bit more.<br>
+i really appreciate ur effort but i am sorry i have to ask u 4 a little more effort.<br>
+hope to get a reply soon.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-68205">
+<div class="social-comment-inner social-clearfix" id="comment-68205">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://ww.hm2k.com/" rel="external nofollow ugc" class="url">hm2k</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-68205" class="social-posted-when" target="_blank">May 13, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Which part did you find difficult to follow?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-85928">
+<div class="social-comment-inner social-clearfix" id="comment-85928">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/f1f1a78b737d4b9709bf12f0b7fe58a5?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/f1f1a78b737d4b9709bf12f0b7fe58a5?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">silu</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-85928" class="social-posted-when" target="_blank">July 22, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>my pc was goin pity fine . till yeserday. then sudenly a toolbar came int o the screen sayin that the system will be shut down in 15 mins. the bit defenmder is sayin its a win32.virtob virus. i havnt got a updated version . i am gonna try this out. mean while i am using th epc in safe mode. dont know what to do . some people told me that the virus would defragment the hard drive leadin to its crash. can you give a suggestion as what to do</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-91595">
+<div class="social-comment-inner social-clearfix" id="comment-91595">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/3978690193167bb649482bb72a722fa2?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/3978690193167bb649482bb72a722fa2?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">mikkypops</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-91595" class="social-posted-when" target="_blank">August 16, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>thanks hm2k – i been looking for a solution to this for days and now that other useful info helps with other things too now</p>
+<p>for the people who dont have the computer knowledge, unplug your hard drive out of your computer, put it in an external drive or just plug it in on the inside of a non-infected computer, make sure all the antivirus programs are up to date and scan it, especially with the cure-it. then when you plug it back into the original machine, install windows repairing it, then you should be able to install all your other programs<br>
+knowing that the possibility you dont have all the programs that are on your computer because most likely source for this bug is from illegal software installations from certain websites and torrents. music downloading included. funny enough that is the easiest way to do it, so hope that could help a little further</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-100880">
+<div class="social-comment-inner social-clearfix" id="comment-100880">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/cd6291768b0f4db037b0f03667d393e9?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/cd6291768b0f4db037b0f03667d393e9?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Syam</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-100880" class="social-posted-when" target="_blank">September 18, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>If you still ahve teh issue, Use avast and do a scan at boot time. You will have no option but to delete the exe files effected by the damn thing. Once done use the sfc /scannow and  use Xp CD whena sked for. This is what i did and it did solve.<br>
+Avira and avast detects it and warns, I ddinot pay heed and had to pay a huge price…</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-113989">
+<div class="social-comment-inner social-clearfix" id="comment-113989">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/a6d1a62f8f737f4fd25f3d419ed25afc?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/a6d1a62f8f737f4fd25f3d419ed25afc?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">joneywalker4u</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-113989" class="social-posted-when" target="_blank">October 26, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thanks man it worked somewhat to cure w32.virut but too many files were infected and symantec antivirus deleted them before I could recover them via cure it.<br>
+Thanks once again.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-115130">
+<div class="social-comment-inner social-clearfix" id="comment-115130">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/6edf9be422e2ac91da94fb2d8e426e43?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/6edf9be422e2ac91da94fb2d8e426e43?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">fekalierex</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-115130" class="social-posted-when" target="_blank">October 29, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>i have same problem. i found that it’s very suspicious when many programs that self crc-check wont run. Then i found that my programs after compilation and renaming from .ex_ to .exe grows up for about 50 kb. Today i had idea to check one of programs with content comparator. First file had non-exe extension and second was exe file of same program. It found 3 diffirencies. One in begin of file (i think it is like code call procedure used to execute viral code. Second was in middle and last was big code block that is actual virus. Some programs works with this append good, some checks crc and wont launch and sometimes (this was on patch-crack programs) can be unrecoverable corrupted (virut.b have problem infecting my gamecam crack so it began growing till it became 2 gb big.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-119440">
+<div class="social-comment-inner social-clearfix" id="comment-119440">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/a2662b2bf567044420702d0d7f555c70?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/a2662b2bf567044420702d0d7f555c70?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Blacksmith</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-119440" class="social-posted-when" target="_blank">November 13, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Alright, I’ve grown extremely frustrated at this point. Considering that the company that sent me my computer did NOT give me a disc of my OS, I pretty much can’t do what you’re saying. As such, would that count as me being fucked? Seriously, I can’t get rid of this damn annoying virus.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-131255">
+<div class="social-comment-inner social-clearfix" id="comment-131255">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/6edf9be422e2ac91da94fb2d8e426e43?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/6edf9be422e2ac91da94fb2d8e426e43?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">FekalieRex</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-131255" class="social-posted-when" target="_blank">December 29, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Well, i now completely removed this virus. I used DR. WEB CureIt! Firstly i started with fast scan, to leave my system folders clean from that shit. Then i rebooted my PC, so my PC can’t have viruses loaded in it’s memory. After i loaded CureIt! i selected in options only to check executable program structures: Exes, DLLs, SCReensavers, since i have too many files on PC and i won’t to spend 5 hours to just check my downloaded HTML materials and for example office 2003 help files. Then i ran full check. I also found some little shit and another serious virus that infects DLLs – win32.besso. It healed all my infected programs (only original “source” virus exe wasn’t healed – it been removed). Now my PC is clean. I also heard rumor that Virut will reappear after healing. I say: it will not reappear. If some apps says that they corrupted probably by a virus, it may be probably due to inaccurate virus removal – just reinstall app. Second thing is that CureIt! is free tool, and so it have limitations, like no archive healing, so don’t think your archives are clear. You better re-check them after unpack (I unpacked my old file wiper project from ZIP and when i ran it (i lost that it was compiled when PC was infected) my whole disk was reinfected.) And your PC will be OK!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-132828">
+<div class="social-comment-inner social-clearfix" id="comment-132828">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2d9f60d6b2ff3c90526c38be74b7b783?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2d9f60d6b2ff3c90526c38be74b7b783?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">guruman</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-132828" class="social-posted-when" target="_blank">January 6, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>virut has a lot of variants dr.web can cure few of them not all </p>
+<p>but it.s good to now that there.s some ppl tryin to get a cure for this infection </p>
+<p>btw it spreads very fast and once if your pc is infected it pose a threat always </p>
+<p>new<br>
+it comes through msn </p>
+<p>old<br>
+it exist for a long long time still no cure and microsoft doesent try to get some firewall protection against this infection<br>
+or they can.t</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-139295">
+<div class="social-comment-inner social-clearfix" id="comment-139295">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/a4473228bd4fb4b87396b5c3531c2a2a?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/a4473228bd4fb4b87396b5c3531c2a2a?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Stew</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-139295" class="social-posted-when" target="_blank">February 6, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>By the way, that BartPE crap, failed to produce an ISO or burn a disc 5 times in a row.  It’s kept muttering something about being able to delete log files???</p>
+<p>Another hour of my life I’ll never get back after trying to fix Bill Gates’ crap!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-139362">
+<div class="social-comment-inner social-clearfix" id="comment-139362">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/b853218192d22b5f986231f897492606?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/b853218192d22b5f986231f897492606?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Naz</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-139362" class="social-posted-when" target="_blank">February 6, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi, I was wodnering if someone knows about W32.virut.cf !!! please help me to remove this virus from my system.<br>
+Thanks</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-140200">
+<div class="social-comment-inner social-clearfix" id="comment-140200">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/07b9c6c417a0b4297b49dc49704e5acd?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/07b9c6c417a0b4297b49dc49704e5acd?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Blu3hand</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-140200" class="social-posted-when" target="_blank">February 10, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I must say that dr Web CureIT solved my problem. It infected almost every .exe files I have in system32. So it was a nasty thing to remove.<br>
+But not everything was cured. avast still showed one or two files with it (it was still spreading).<br>
+But no worries; a full system scan and a reboot will solve that problem.<br>
+^^</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-141688">
+<div class="social-comment-inner social-clearfix" id="comment-141688">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/5588c0999220615d26809d82c3415530?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/5588c0999220615d26809d82c3415530?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.xedecimal.net:81" rel="external nofollow ugc" class="url">Xedecimal</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-141688" class="social-posted-when" target="_blank">February 17, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>This is absolutely wonderful, after I let AVG tear the crap out of files until a reinstall of operating system, only to get affected again the moment microsoft’s side let it right back in as always, I was kinda caught either deleting anything in my backup that was executable or just archiving it away and picking out files that weren’t executable. This Dr. Web Scanner actually FIXES the files, not just deletes them. And I wouldn’t have found it if it wasn’t for you. Thank you very very much.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-142193">
+<div class="social-comment-inner social-clearfix" id="comment-142193">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/64bf9264d9a8f2f868dd86f908e949ca?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/64bf9264d9a8f2f868dd86f908e949ca?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Centspud</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-142193" class="social-posted-when" target="_blank">February 21, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>This infection is nearly impossible to remove-  If you have the latest variant that I got  couple days ago….you cannot download or install anything.  I’ve run Combofix, Malwarebytes, AVG, Spyware Doctor, Avira, Dr Web Cureit, plus a few more.   Each found some but not all of the infection….after each reboot-  It just stated over with infecting files and spewing TCP traffic.   Because it infects system files, these need to be cleanly replaced.   </p>
+<p>This infected a totally up to date machine with the latest MS Updates and a full AV &amp; Spyware package running-   If I ever get a few clean scans…this machine will be wiped.  Why would you want to trust the system anyway after such an ordeal?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-144427">
+<div class="social-comment-inner social-clearfix" id="comment-144427">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/6682ae561c685ad0a6957c886ec4336c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/6682ae561c685ad0a6957c886ec4336c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Try this removal method, WORKED FOR ME</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-144427" class="social-posted-when" target="_blank">March 3, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Like many of you who posted here, I’ve been affected by this nasty virus for some time now and it has been a real headache trying to eradicate it from my system. Even though I was able to restore my system to working condition, the virus remained on my system constantly attempting to connect to the internet (luckily my BitDefender Firewall was usually able to block it).</p>
+<p>After doing a bit of research, I was able to find and run a series of tools that so far APPEAR to have eradicated the virus from my system. As many of you know this is a very tricky virus that appears to infect everything it touches so try to follow my directions as closely as possible.</p>
+<p>Note: My system is running Windows XP Service Pack 3, so those using other operating systems may have to tweak these directions slightly.</p>
+<p>1. Firstly, download these free tools from the internet and move them to the infected machine.</p>
+<p>Symantec Virut Removal Tool – <a href="http://www.softpedia.com/progDownload/W32-Virut-Removal-Tool-Download-121930.html" rel="nofollow ugc">http://www.softpedia.com/progDownload/W32-Virut-Removal-Tool-Download-121930.html</a></p>
+<p>Dr. Web CureIt Scanner – <a href="http://www.freedrweb.com/" rel="nofollow ugc">http://www.freedrweb.com/</a></p>
+<p>ATF Cleaner – <a href="http://www.download.com/ATF-Cleaner/3000-18512_4-89432.html?tag=mncol" rel="nofollow ugc">http://www.download.com/ATF-Cleaner/3000-18512_4-89432.html?tag=mncol</a></p>
+<p>2. You want to disable System Restore on your computer. This can be done by viewing the System Restore tab in your System Properties. Next you want to disconnect your computer from any network cables it may be connected to. Make sure to disable any means your computer may have of connecting to the internet (such as disabling any wireless network adapters).</p>
+<p>3. Start your computer in Safe Mode (login to the account with the highest administrative privileges, of course).</p>
+<p>4. You want to open the file DrWeb.exe which you downloaded. As soon as it opens, it will run a quick system scan which won’t take very long (a few minutes). If you are indeed infected with this virus, the scanner will detect some of your infected files during this scan. Allow the scanner to cure/repair the files it finds (on my machine, the virus came up as “Win32.Virut.56”). When the quick scan completes, minimize the Dr. Web scanner for now.</p>
+<p>5. THIS IS IMPORTANT: Like I said, this virus can spread onto other computers and devices quite easily, so you want to plug in any removable flash drives or hard drives that may have been connected to the infected computer while it was infected. Make sure you have plenty of time to allow your computer to sit idle while additional scans are performed with these peripherals connected (like 6 hours).</p>
+<p>6. If Dr.Web managed to find some of the “Virut” infected files on your machine, you want to now go on to open the file FixVirut.com which you downloaded. It is a tool I found online which was recently released by Symantec to repair files infected by this virus. This tool is quite self-explanatory and simple to use, just run it. It may take a few hours. The tool may ask you to reboot when it finishes, but do not reboot yet(When i ran the tool it found 2700+ infected files on my system, mostly .exe files, and terminated two process threads running in my winlogon.exe file. The tool creates a simple log of infected files within the same folder the tool is run from.)</p>
+<p>7. After FixVirut.com finishes running, you want to return to Dr.Web to run a complete system scan. Before you start the complete system scan, enter Dr.Web’s settings configuration (do this by pressing F9, not hard to find) go to the File Types tab and uncheck “Files in archives” (If you leave this setting checked, Dr.Web will take forever unpacking and scanning inside all the archive-type files on your computer. This virus doesn’t appear to attack the CONTENTS of archives in any case. If you think you need it and have the extra time to burn, you can leave it checked).</p>
+<p>8. Running the Dr.Web complete virus scan is very important. It will pick up any infected files the Symantec tool may have missed. Also, it picked up a couple of Trojan downloaders and suspicious files I believe were affiliated with this virus. In addition, those connected peripherals that may have been infected as some time will be scanned and cured during this complete scan. Click “Yes to all” the first time this program asks to cure an infected file and it will basically do the rest. Be aware that the scan will pause and ask you what to do if it comes across a file it cannot cure. This entire process will take several hours.</p>
+<p>9. When the scan finishes, go through the list of infected and suspicious files. Manually quarantine (move) or delete any suspicious files Dr.Web may have left alone, just to be on the safe side, unless those files are VERY important on your particular computer.</p>
+<p>10. Be happy, because most of the hard work is done. When you are done with Dr.Web you can close it and open the ATF-Cleaner.exe file you downloaded. Click “Select All” at the bottom to select every category then click “Empty Selected” to begin the deletion process. This will basically remove all the TEMP files from your computer, which is OK because you really don’t need them. This step may not be necessary but I did it simply as a precaution.</p>
+<p>11. Next I went into my systemroot TEMP folder and manually deleted all the files inside. (For me, the file path was “C:\WINNT\Temp”. For others it may be “C:\WINDOWS\TEMP”) Again this may not be necessary, but I did it as a precaution to be on the safe side.</p>
+<p>12. And now you’re done. You can run another quick express scan in Dr.Web to double check if you want, but right now your computer should be clean. Restart your computer normally. If you don’t already have one, I recommend getting some sophisticated Antivirus and Firewall software (ie. not Windows Firewall). It was the lack of such software that got me in this mess in the first place.</p>
+<p>I hope this information helps some of you clean your computers of this nasty virus. It was by reading a variety of other people’s posts that eventually allowed me to figure out how to get rid of Virut, and stay better protected in the future.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-145059">
+<div class="social-comment-inner social-clearfix" id="comment-145059">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/da6951b738d959a338e73aaaa8dda9d2?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/da6951b738d959a338e73aaaa8dda9d2?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Chanlô</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-145059" class="social-posted-when" target="_blank">March 5, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Dr Web  now offers to download a free Live CD with the  Dr Web CureIT tool on it. So you can download it, burn it on a CD, then boot on the CD and launch the scan &amp; repair. This is the best solution because like this the system files can also be repaired because they aren’t in use.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-153038">
+<div class="social-comment-inner social-clearfix" id="comment-153038">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/9d9f0f55c9cb0422b6006937e70ccead?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/9d9f0f55c9cb0422b6006937e70ccead?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Stephen</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-153038" class="social-posted-when" target="_blank">April 3, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>The Dr Web live CD gives me hope but, can someone please tell me how to keep the scanning engine running? I have this running on two systems. The scanning engine runs until the CD drive, or something else decides to sleep. A key stroke or mouse movement awakens the Linux OS but, the Dr Web scan refuses to continue.<br>
+Any suggestions?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback even thread-even depth-1 social-comment social-clearfix social-pingback" id="li-comment-155764">
+<div class="social-comment-inner social-clearfix" id="comment-155764">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.adilfahim.com/blog/2009/04/virus-attack-virtobcritical/" rel="external nofollow ugc" class="url">Virus Attack Virtob…….(Critical) — Adil Fahim’s Blog</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-155764" class="social-posted-when" target="_blank">April 13, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] <a href="http://www.hm2k.com/posts/win32-virtob-virut-removal" rel="nofollow ugc">http://www.hm2k.com/posts/win32-virtob-virut-removal</a> […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-156213">
+<div class="social-comment-inner social-clearfix" id="comment-156213">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/17441a7fd06ff4987ccb8ccd178e3050?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/17441a7fd06ff4987ccb8ccd178e3050?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Nicolas</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-156213" class="social-posted-when" target="_blank">April 15, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Very helpful! solved my problem with this post, instead of using a WinPE bootdisk, I booted from a USB live linux (Ubuntu) and installed WINE (to run windows programs) then executed CureIT on the mounted windows volume.  Thinking on ditching windows altogether now  ; )</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-156488">
+<div class="social-comment-inner social-clearfix" id="comment-156488">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2d9f60d6b2ff3c90526c38be74b7b783?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2d9f60d6b2ff3c90526c38be74b7b783?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Grunge</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-156488" class="social-posted-when" target="_blank">April 16, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>mate i have 1 comment about virut </p>
+<p>Y can.t never clean virut infection </p>
+<p>dr.web is a good av and yes he can repair files infected with virut<br>
+but while scanning if u recieve          virut.51 (= no cure)<br>
+virut.5 cure totaly<br>
+virut.15 cure totaly</p>
+<p>i just met this virut codes for 51 repartitioning full disk save only txt and .doc files<br>
+couse any file can be infected</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-156560">
+<div class="social-comment-inner social-clearfix" id="comment-156560">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/9e7aebc21d84176bd9d2c0e78554dc77?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/9e7aebc21d84176bd9d2c0e78554dc77?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Gabriel</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-156560" class="social-posted-when" target="_blank">April 16, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hello, I got infected with Virut when my antivirus was uninstalled. I’m not an expert, I’d say I’m very familiar with computers and Operating systems.</p>
+<p>I don’t recall wich version of Virut it was but I can tell you the latest tools (April 2009) and removals didn’t work:</p>
+<p>Symantec, Avira, AVG, Trend Micro, Dr web, and a few other tools – All Failed. I kept cleaning the registry and I had system restore off, I even restored windows system files over and over from my other pc, but no luck.</p>
+<p>After losing a week over this I decided to take some experts advise (who already had told me I was wasting my time) and backed up my data and formated.</p>
+<p>So, what I can tell you is:</p>
+<p>All Antivirus companies say Virut risk is LOW but take the experts advise, if you get infected, don’t bother, backup and format.</p>
+<p>The only way to remove it is to simultaneously clean all the infected and that’s currently impossible I belieave.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-156562">
+<div class="social-comment-inner social-clearfix" id="comment-156562">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/9e7aebc21d84176bd9d2c0e78554dc77?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/9e7aebc21d84176bd9d2c0e78554dc77?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Gabriel</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-156562" class="social-posted-when" target="_blank">April 16, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I forgot to mention, I blocked the connections to the Polish IRC server from the virus backdoor, but that only prevented it from spread faster and from allowing someone to access my computer.</p>
+<p>In safe mode with network it was hard to stop it without a firewall program it allways acessed the IRC server. This is the ONLY malware/virus I ever got in 20 years that forced me to format an HD. I had never needed to format a computer due to errors or virus, this was the first time.</p>
+<p>Basicly, you get Virut, you format.</p>
+<p>Cheers</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-156884">
+<div class="social-comment-inner social-clearfix" id="comment-156884">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/8121b0ff763670f57e2e7011f7ac74d3?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/8121b0ff763670f57e2e7011f7ac74d3?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Paril</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-156884" class="social-posted-when" target="_blank">April 18, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I’ve got some new information about the virus I just picked up while infected with it myself.</p>
+<p>Here’s a piece of fun info: Virut infects AVG’s cleanup tool when you run it, it will be picked up by AVG after it :p</p>
+<p>Some variants, like the one I have, will do a few things too:</p>
+<p>1) Change several policies that make it very difficult, if not impossible, to change specific settings:<br>
+a) Disabling Folder Options<br>
+b) Allowing hidden files<br>
+c) Removing extensions for known types<br>
+2) Creates a hidden log file in root with information on files downloaded to your computer and where they are gotten from!<br>
+If you can access this log, you will see several lists of links such as (made up) ://64.35.11.562:7000/bababa.exe and a bunch of chinese host redirection services (such as 6688.org). If you can, submit this list to your favored site or as many anti-virus sites as possible and list this as possible sources for the Virut virus. Hopefully we can get some of these hosts blocked!</p>
+<p>Also, I found out with the Group Policy editor in Windows XP Pro, you can actually PREVENT reader_s from opening, by adding a policy to disallow the following program names:<br>
+*reader_s*<br>
+*TEMP/*.exe<br>
+*TEMP/*.tmp</p>
+<p>Of course this may just impede the virus from going anywhere, you still have the damn thing.</p>
+<p>Currently doing a second run on my hard drive to rid of Virut.</p>
+<p>I’ve also noticed that it doesn’t just target ran executables but will also find it’s way to executables in the same FOLDER as the ran executable (one example is MSN Messenger: it loaded it with MsgPlus (an addon), but it also targetted the uninstallers for the specific software).</p>
+<p>Hopefully we can rid ourselves of this (likely) Chinese pest.</p>
+<p>-Paril</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-157037">
+<div class="social-comment-inner social-clearfix" id="comment-157037">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/e1d648d2ae8d86ffe82c8becbb7aff76?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/e1d648d2ae8d86ffe82c8becbb7aff76?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">norman</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-157037" class="social-posted-when" target="_blank">April 18, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>i’ve been infected with the win32.virut virus. im not sure which version i have but for some reason its caused me to lose all administrative access to my computer, no explorer.exe, and it actually blocks certain websites (especially virut removal sites) from being accessed. it says that my web browser cant connect. i’ve tried it from multiple web browsers too. i dont have my xp disc to format and reboot from either. does this mean my system is completely screwed? please help.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-157446">
+<div class="social-comment-inner social-clearfix" id="comment-157446">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/ecdfcc9abfba8c3dd2b8f556b7e5f513?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/ecdfcc9abfba8c3dd2b8f556b7e5f513?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">buttkick</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-157446" class="social-posted-when" target="_blank">April 20, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I’m a geek, and very experienced with computers. This is the second virus I get, that is annoying to deal with, the first was the famous CIH. Both are masterpieces.</p>
+<p>Gabriel: It’s possible to clean this virus.<br>
+It’s a very hard work,  but it is possible, I have done it in my PC with windows 2003. Took me almost 2 days to fully clean, this past weekend.</p>
+<p>This virus is so clever, that it doesn’t let you access any antivirus URL to download any tool, so you have to find another way, like a<br>
+Linux Live CD, Bart PE, or an uninfected windows on another drive, partition or folder; it doesn’t infect the boot of the pc or MBR, but once it touches any infected .exe, it starts all over again. In fact, the windows boot is infected only when windows starts, not before that, because it puts some .sys files on \windows\system32\drivers. not outside of windows.  If somebody knows better, correct me.<br>
+You can install another windows system on the same drive, and then put an antivirus there in the new windows, to start the removal. It’s important to make this with a resident in memory antivirus to work. I had to use avast, because it was the only one that I could download to run on windows 2003, kaspersky and dr web, dont have a way to download their “servers” product. I sent e-mail, but it was a weekend, and nobody answered. On XP it’s possible to try kaspersky  kav or kis  2009, or dr web full product. It’s a license problem only.<br>
+Once you have the memory resident antivirus that detect it, you can start the removal or cleaning with avptool or dr web.</p>
+<p>I had to run Linux Live CD (PClinuxOS MiniME) to download dr web and kaspersky and others antivirus that didn’t work,  Bart PE (that is very slow…) and later use AVPTOOL from kaspersky and Dr. Web.<br>
+The worst was F-PROT, it never detected anything, making me reinstall and clean everything again, c’mon guys, you were good on old dos days… get yourself together.</p>
+<p>The only antivirus programs that clean 100% this virus, that I know are, Dr. Web and Kaspersky. Some others detect but don’t clean it.</p>
+<p>It’s very important to say that, RMVIRUT.EXE from AVG, and SYMANTEC free TOOLS to remove it, are from 2007, THEY DON’T WORK ON NEW VARIANTS, they don’t even detect it.</p>
+<p>Both have FREE TOOLS that are capable of doing that.<br>
+<a href="http://avptool.virusinfo.info/en/" rel="nofollow ugc">http://avptool.virusinfo.info/en/</a><br>
+<a href="http://www.freedrweb.com/download+cureit/" rel="nofollow ugc">http://www.freedrweb.com/download+cureit/</a></p>
+<p>Dr Web Live cd could do the trick too, but I haven’t tried.<br>
+I think Kaspersky is a better solution, I trust it more, but it is slower. Kaspersky seems to be the best antivirus out there, now in 2009, you know this things change.<br>
+Some files gonna be corrupted, but that’s a minority. if need them rescue the backups made by the antivirus, and try to clean with different tools, or reinstall the programs.</p>
+<p>It’s good that this antivirus is very “loud” you notice right away when it infects, because it puts .exes and programs in memory all over the place, otherwise, it could be much more dangerous, but the .exe infection is very fast. I had almost 13000 .exes infected. in few hours.</p>
+<p>That’s it. What a painful thing it was 🙂</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-158729">
+<div class="social-comment-inner social-clearfix" id="comment-158729">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/d78e83531efc0f6f6121034ede3334a4?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/d78e83531efc0f6f6121034ede3334a4?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">An Idiot</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-158729" class="social-posted-when" target="_blank">April 27, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I am such a dumbshit when it comes to Windows anymore… I too, have contracted this virus and have elected to go the format route. However, I was curious as to what danger infected files on backup drives would pose to a fresh installation of XP on the main drive? The installation/main drive is fodder with all replaceable data, however, I have an internal drive and external drive with irreplaceable infected data, what should I do with those?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-158881">
+<div class="social-comment-inner social-clearfix" id="comment-158881">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0857ea7c85136c105a86cdea89f8e266?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0857ea7c85136c105a86cdea89f8e266?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Lekan</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-158881" class="social-posted-when" target="_blank">April 28, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I dont know who can help. My pc is infected with the win32 Virut. I have tried several times but unable to clean it. My biggest problem is that I have another 2 hard drives connect to my pc which are very important. Anytime I reformat my pc, installed CA Antivirus update it and do a full scan on those harddrive before accessing them. But as soon as I tried installing softwares or programs that asrre saved on them the virus will be back again causing me to reformat again and again. I am now looking for a tool or antivirus that can remove the virus from the hardrives as i have done a full system scan and waiting now</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-159597">
+<div class="social-comment-inner social-clearfix" id="comment-159597">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/7255018a0d9949a19792e846446eb6b0?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/7255018a0d9949a19792e846446eb6b0?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Deslin</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-159597" class="social-posted-when" target="_blank">May 3, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>To answer the question about what danger the infected files on backup drives pose to a fresh XP install, a BIG danger.  If the backup drives are connected to the computer with a clean XP installed, once the infected files are accessed, they will cause the virus to start spawning itself again and infect the winlogon.exe and other files as the virus did at first infection.  The safest bet is to completely wipe all drives and start over. Also don’t forget to first delete all partitions and then recreate them and from there formatting and installing XP can continue.  Many people have had reinfection occur after several formats/XP installs because of failing to TOTALLY wipe the drive.  If files are needed from an infected drive after a new install on a clean drive, using an Ubuntu LiveCD can be an option to safely attach the infected drive(s) as Windows viruses simply cannot operate in a Linux environment. If you decide to go this route, be EXTREMELY careful that you do not simply transfer every file from the infected drive or EXE/SCR/PHP/HTML files from it as they may be infected and you will have to start all over again with wiping everything clean. Only backup files that are not targeted types by Virut.<br>
+As to the previous question about reinfection and CA Antivirus scans, there again the drive(s) need to be completely wiped clean before attempting to install Windows again.  As I mentioned before, a deletion of ALL partitions and recreation of them before formatting to NTFS/FAT32 and Windows installation is done.  Also, AV scans can only make things worse if the program being used doesn’t have real-time scanning enabled as files that are accessed by the scan can become infected faster as they are being called into the API.  Doing any online scans is also ill-advised as other malware can be downloaded by Virut when an infected machine is connected to the internet. Firewalls can help prevent this, but keep in mind Virut also attempts to kill firewalls, leaving you wide open to more downloads or even remote access to your machine through the virus’s IRC bot feature.  Keep in mind while there are tools out there that are designed to remove Virut, they will not work on every version of the virus as there are many variants and the latest ones have had more layers of encryption added to them, making them more difficult to detect and clean.  Even if infected programs (MSN Messenger for example, any user installed software) are deleted as are files created by Virut (other malware and the .tmp.exe files it creates), the infection will almost certainly still remain as it’s first moves after infection are to attach itself to system critical files that cannot be deleted by AV scanners.  As much as I hate to say it, at this point the best solution to getting rid of Virut infections is a total hard drive wipe and starting over.  If you have another computer you can use for now and you are a strong believer in miracles, you can try waiting out on Microsoft/AV companies to see if in the future they figure out a removal/repair method and leave your infected machine off as much as possible to prevent further infection and destruction of Windows (eventually Virut will make windows inaccessable in most cases).<br>
+I hope I cleared up a few questions asked on this forum. To anyone infected and reading this, I feel your pain as my main computer is currently infected.  I’ve backed up files I don’t want to lose and disconnected it from the internet and have been trying many unconventional methods of removal as I have nothing to lose on that computer anymore. I doubt I’ll be successful in removing it completely, but I figured I’d try anyway. It took a lot of out of the box thinking to create this nasty virus and it will take the same to kill it.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-161298">
+<div class="social-comment-inner social-clearfix" id="comment-161298">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0857ea7c85136c105a86cdea89f8e266?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0857ea7c85136c105a86cdea89f8e266?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">lekan</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-161298" class="social-posted-when" target="_blank">May 14, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>FOUND A SOLUTION THAT WORKED FOR ME.I still can’t believe that all of this big guys Norton, CA and the rest cannot provide a simple removal of virus that was created by a single hacker. It’s really as big shame on Microsoft and this big guys if all exe files that run on windows can be modified easily by this virus which means windows is not safe. Pls  before you go ahead with this my simple instruction that help me removed the virus completely from my pc. Copy all you important files and back them up on a removable media be it a flash disk or external hardrive. Do not run any scan with any antivirus program at this moment as you might risk infecting more files. Uninstall you antivirus from your pc as the scanning will corrupt more files. Once you are done backing up your files. Unplug or disconnect from the internet. I must tell you that it’s only Avira that can remove this virus. I have reinstall windows more than 10 times and my pc keep getting infected after I connect my external hardrive which contained my backup files after fully reformating my pc and updating my antiviru. So it’s very useless paying for subscription for an Antivirus software if they cannot protect or clean your pc. A free Avira was able to clean what a paid version of AVG, Kasperky and CA cannot clean. The worst out of the 3 antivirus was CA which get disable automatically after reboting with my external hardrive connect. Here is the simple instruction you dont have to reformat your pc</p>
+<p>Download Dr.web cure it  (Free)<br>
+Avira Antivir (Free)<br>
+Win Xp (if your not reformat) which means the damage is not too much</p>
+<p>Keep this two files on a clean storage media and make sure you download them from a computer that is not infected with this virus. Write them on a CD or a flash drive that can be locked (readonly) so that the files are not corrupted.</p>
+<p>After backing up your important files, do a reformat. Not the quick one but a full reformat.  once done with reformating. Or if you feel you dont want to reformat you pc you can now run dwebcureit and let it run to remove the virus from the memory. Now right click on my computer and click on properties, select system restore and turn it off. After that is done, press F9 and file type and click on user masks add .exe to it  and unchecked Files in archives apply and click ok and run the scan. Let drwebcure cure the files and delect the ones that cannot be delete. After the scan. Restart in safemode and scan with drwebcure it. Run windows normally and run drwebcureit again following the sames procedure. After the 3rd scan install Avira run a scan with it. You dont have to update it. After the scan with Avira, restart again in safemode and run another scan with avira. The run windows normally, update avira and run another scan. After the scan is done and windows is clean, connect you external or backup drive. DO NOT RUN OR TRY TO OPEN THE EXTERNAL DRIVE. scan all the drives with avira. if some windows files are currupted or missing you can now run Go to Start -&gt; Run, type: sfc /scannow</p>
+<p>And that’s all</p>
+<p>Step by Step<br>
+(1) Download Dr.web cure it  (Free)<br>
+(2) Avira Antivir (Free)<br>
+(3) Win Xp (if your not reformat) which means the damage is not too much<br>
+(4) Run drwebcureit (normal windows) to check for virus in memory<br>
+(5) Disable system restore<br>
+(6) Run drwebcureit (normal windows) full scan<br>
+(7) Run drwebcureit (safe mode) full scan<br>
+(8) Install Avira and run Avira (normal windows)<br>
+(9) Run Avira (safe mode)<br>
+(10) Update and run Avira again (Normal windows)<br>
+(11) Connect your back up drives and run a scan</p>
+<p>Pls if this help you post a comment back to help other. I have battle with this virus for a week now</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-166030">
+<div class="social-comment-inner social-clearfix" id="comment-166030">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/4b727ab05a3b4b64875959015b6c9131?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/4b727ab05a3b4b64875959015b6c9131?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Chris F</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-166030" class="social-posted-when" target="_blank">June 12, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I have an even eaiser fix for Virut. Backup Important documents and do a fresh install of windows. Microsoft has made windows so disposable, its almost eaiser to reformat and reinstall than it is to repair. Especially when you are fighting a nasty worm.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-167621">
+<div class="social-comment-inner social-clearfix" id="comment-167621">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/1b45b0dfa6efcbc2a54ca1633a20f32f?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/1b45b0dfa6efcbc2a54ca1633a20f32f?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">lekan</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-167621" class="social-posted-when" target="_blank">June 23, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>What about infected backup documents? End up reinfecting windows.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-169503">
+<div class="social-comment-inner social-clearfix" id="comment-169503">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/bd2b97b9b8c10917ec916bf9156e014c?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/bd2b97b9b8c10917ec916bf9156e014c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">blues</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-169503" class="social-posted-when" target="_blank">July 6, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I’ve managed to clean my machine.<br>
+Bart-PE with various anti-virus solutions failed, symantec fremoval tool ailed, Dr web failed. Another weekend lost. The cure is below:<br>
+ – Switch off system restore.<br>
+ – Download Avira boot disk (linux based, with their anti-virus), and run a scan from this (found 1600 files)<br>
+ – Boot from XP disk, into windows console, do fixmbr and fixboot.<br>
+ – Re-load windows (I did a clean install). Means I have all my clean files though.<br>
+– Re-run both symantec and AVG anti-virus (found nothing with wither).</p>
+<p>Good luck!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-170501">
+<div class="social-comment-inner social-clearfix" id="comment-170501">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/806975f2c5f515e2fc2ff30173792c36?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/806975f2c5f515e2fc2ff30173792c36?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">jambangracun</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-170501" class="social-posted-when" target="_blank">July 12, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>huuuuufff……… thanks alot…….<br>
+i’ve been hopeless and helpless for 2 weeks.<br>
+thanks again</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-171035">
+<div class="social-comment-inner social-clearfix" id="comment-171035">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2b2f6502cd4b5055d40245f1d1dc535b?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2b2f6502cd4b5055d40245f1d1dc535b?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Andry</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-171035" class="social-posted-when" target="_blank">July 17, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I manage to fix few computers infected by VIRTOB with bitdefender, But you must have a clean computer running bitdefender and scan the infected harddrive on that computer, You might need to do an inplace repair of windows after the scan. BITDEFENDER rocks because it disinfect the files instead of deleting or moving it to the quarantine. </p>
+<p>Peace</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-172801">
+<div class="social-comment-inner social-clearfix" id="comment-172801">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/feda1918487c228edf61074db5b3010a?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/feda1918487c228edf61074db5b3010a?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Gary Osterholt</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-172801" class="social-posted-when" target="_blank">August 1, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>What’s the best way to get the virus off an external hard drive with the Virus on it?</p>
+<p>Thanks<br>
+Gary</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-173165">
+<div class="social-comment-inner social-clearfix" id="comment-173165">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2f7c4438451f8fc8dfade81ff854f956?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2f7c4438451f8fc8dfade81ff854f956?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Jin kazuma</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-173165" class="social-posted-when" target="_blank">August 5, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I did exactly as you said now my computer wont log on when i log on it syas its missing windows components and just restarts</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-177126">
+<div class="social-comment-inner social-clearfix" id="comment-177126">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/d9b88ef7e1f2363239079872d0975aa9?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/d9b88ef7e1f2363239079872d0975aa9?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">JsBc</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-177126" class="social-posted-when" target="_blank">September 4, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I really need some quick help here please. I’ve got this awful virus. Does this work if I have Vista installed on the infected pc? I don’t know if bart’s pe will work, if not is there something for Vista?. Thanks</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-178156">
+<div class="social-comment-inner social-clearfix" id="comment-178156">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/41f7817b19938ad913adcfbbac70015c?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/41f7817b19938ad913adcfbbac70015c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Steven</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-178156" class="social-posted-when" target="_blank">September 14, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>This will fix the virut virus and you will need to install a 2nd windows on a seperate partition if you dont already have it (dw if you dont want it afterwards just remove it)</p>
+<p> 1.	go to a proxy site then from there go to the avg site to download their<br>
+virut remover put this in your c drive<br>
+2.	Run msconfig<br>
+3.	Change Boot tab to safe boot &amp; alternate shell (doesn’t load explorer and<br>
+leaves it free to repair)<br>
+4.	Reboot<br>
+5.	When dos box type “cd c:\”<br>
+6.	Type “rmvirut (all your drive letters ie: C:\ D:\ etc)”<br>
+7.	Let it run through.<br>
+8.	Scan any folder it finds the virut again<br>
+9.	Then Scan all your windows folders (depends on how many multiboots you have<br>
+and its pays to have at least 2 with this virus)<br>
+10.	Lastly Scan C:\windows\explorer.exe (the evil heart of the virus)<br>
+11.	Then type msconfig<br>
+12.	Change Boot tab to remove safe boot<br>
+13.	Reboot<br>
+14.	Then boot into another boot of windows and open cmd.exe scan everything<br>
+again paying particular attention to folders with the virus in it</p>
+<p>All done, can now go to antivirus  &amp; mircrosoft websites</p>
+<p>PS I dont deserve credit for this my mate found/tweaked this fix in the 1st place and I just tweaked it a bit further to help out the noobs</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-182706">
+<div class="social-comment-inner social-clearfix" id="comment-182706">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/d9d12830f32a4dedad0db9f75d594b5d?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/d9d12830f32a4dedad0db9f75d594b5d?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">simon</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-182706" class="social-posted-when" target="_blank">October 17, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi all</p>
+<p>For the last week i have been dealing with this Virut and what a nightmare it has been. Previously decided to follow a sequence of anti virus programs…1. Malwarebytes, 2. Superantispware,3. Combo fix, 4. Root repeal, 5. Mgtools. All free downloads.  1 and 2 went ok but when i got to installing 3 it informed me the virut had infected set up file. So here i am about to try the advise on this page.  Normally I would just format and carry on but it is not my computer and there is alot of personal programs and data. Fingers crossed, will let you know of progress.  Learning alot!!!!!!</p>
+<p>PS. This was virus was originally downloaded as a Heur virus i beleive.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-183608">
+<div class="social-comment-inner social-clearfix" id="comment-183608">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/f51ae6093e07b8af5fda654bc3c4eb69?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/f51ae6093e07b8af5fda654bc3c4eb69?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">jim</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-183608" class="social-posted-when" target="_blank">October 24, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>I found TRUE information here: <a href="http://www.jeann2.com/blog/index.php?post_id=154" rel="nofollow ugc">http://www.jeann2.com/blog/index.php?post_id=154</a><br>
+The article does not advertise any AV, i believe this guy is fighting against it.<br>
+One good point i did not find in any other site: he proved the virus self installed in the master boot record.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="pingback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-pingback" id="li-comment-202983">
+<div class="social-comment-inner social-clearfix" id="comment-202983">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://klikdid.wordpress.com/2010/03/31/win32-virtobvirut-removal/" rel="external nofollow ugc" class="url">Win32 Virtob/Virut removal « Klikdids' Blog</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-pingback">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-202983" class="social-posted-when" target="_blank">April 3, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>[…] <a href="http://www.hm2k.com" rel="nofollow ugc">http://www.hm2k.com</a> […]</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-203246">
+<div class="social-comment-inner social-clearfix" id="comment-203246">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c20b7cdd1858cdc28b00749178bbebab?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c20b7cdd1858cdc28b00749178bbebab?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">P*ssed off Teenager</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-203246" class="social-posted-when" target="_blank">April 7, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>GUYSS hello.<br>
+Basically, i have the same problem with my brothers computer – i tried to download a PC game from an internet site. [yesterday.]<br>
+Once the file had finished downloading, the computer immediately detected it, and shut off, with a warning screen. Turning the computer back on, I realised something was wrong when three links to porno sites had shown up on the computer. i deleted them, and the file that i originally downloaded, emptied the recycle bin, and hoped it ended at that.<br>
+However, this morning, my brother told me the links had returned to his desktop. I ran a system scan, and yes, the computer detected several different viruses, but said i had to PAY TO ACTIVATE THE SCANNER. SO I COULD NOT REMOVE THE VIRUS. or malware, whatever the heck they are. now, for some reason, i cannot open internet explorer on the computer anymore, so either its been moved, removed, or infected.<br>
+The virus had five parts to it, but i could delete the first four, but left me with one which i could not access, because ‘the file was in use’. Someone mentioned that there are multiple instances – they are correct. They were named VT_1, VT_2 …<br>
+Im actually really annoyed, i cannot get rid of this virus and i cannot download any virus scanner because the internet explorer is gone.<br>
+HELP.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-204187">
+<div class="social-comment-inner social-clearfix" id="comment-204187">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/9ba8227b353fa32951eee0b655a35b32?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/9ba8227b353fa32951eee0b655a35b32?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Blakey</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/win32-virtob-virut-removal/comment-page-1#comment-204187" class="social-posted-when" target="_blank">April 18, 2010</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>BIG BRAINS WANTED:<br>
+Please if you are a super smart geek please help me find a way to use windbg.exe (microsoft file via filestube) to reset the Kernel.<br>
+Win32 VIRUT patches the Kernel, (IMO) and this makes it imposable to delete/fix. Help us use a Kernel Debugger and prevent this evil crap fuck of a patching virus from repatching our Kernel on every reboot. </p>
+<p>To find WinDbg.exe: Google ” Filestube WinDbg_20v6.6.07.5.exe” – to download a legit copy of MicroSoft’s WinDbg Kernel Debugger.</p>
+<p>Questions I have are:<br>
+In WinDbg.exe, I will use command, ‘!chkimg -f nt’, without quotes,<br>
+and need to know if “symbols are required for this action?  Symbols are data sets for the debugger, and are like 650Mb.<br>
+Are they needed for an !chkimg command?</p>
+<p>Is there a way to run WinDbg.exe in DOS before WinXP boots up? If so, How?</p>
+<p>You see, I know alot, but I’m also missing basic PC programming fundamentals. HELP US!!!<br>
+I KNOW THIS WILL WORK, I JUST DON’T KNOW HOW TO IMPLEMENT THE PROCEDURES.</p>
+<p>REFORMATTING IS NOT AN OPTION, IT”S FAILURE!<br>
+HELP US BRAINIACS!!!!<br>
+Nerds Unite!</p>
+<p>Blakey</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+				</ol>
+								<nav id="comment-nav-below">
+					<h1 class="assistive-text">Comment navigation</h1>
+					<div class="nav-previous"></div>
+					<div class="nav-next"><a href="https://hm2k.org/posts/win32-virtob-virut-removal#comments">Newer Comments →</a></div>
+				</nav>
+							</div>
+		</div>
+			</div>
+	
+	</div>
+				
+		
+</div>
+
+
+<div id="sidebar">
+<ul>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+
+			<ul>
+				<li class="page_item page-item-8 page_item_has_children"><a href="https://hm2k.org/articles">Articles</a>
+<ul class="children">
+	<li class="page_item page-item-74"><a href="https://hm2k.org/articles/pagerank">Google PageRank Script</a></li>
+	<li class="page_item page-item-9"><a href="https://hm2k.org/articles/regex">Guide to regular expressions</a></li>
+	<li class="page_item page-item-99"><a href="https://hm2k.org/articles/how-to-ask-a-question">How to ask a question</a></li>
+	<li class="page_item page-item-131"><a href="https://hm2k.org/articles/morals-of-downloading">Morals of Downloading</a></li>
+	<li class="page_item page-item-39"><a href="https://hm2k.org/articles/remove-spyware">Remove Spyware</a></li>
+	<li class="page_item page-item-104"><a href="https://hm2k.org/articles/seo-faq">SEO FAQ</a></li>
+	<li class="page_item page-item-10"><a href="https://hm2k.org/articles/seo-tips">SEO Tips</a></li>
+	<li class="page_item page-item-50"><a href="https://hm2k.org/articles/software">Software</a></li>
+	<li class="page_item page-item-5"><a href="https://hm2k.org/articles/startkeylogger">startkeylogger</a></li>
+	<li class="page_item page-item-106"><a href="https://hm2k.org/articles/useful-linux-commands">Useful Linux Commands</a></li>
+	<li class="page_item page-item-111"><a href="https://hm2k.org/articles/ways-to-waste-time-online">Ways to waste time online</a></li>
+	<li class="page_item page-item-40"><a href="https://hm2k.org/articles/yes-www">www. is NOT deprecated</a></li>
+</ul>
+</li>
+<li class="page_item page-item-13"><a href="https://hm2k.org/contact">Contact</a></li>
+			</ul>
+
+			</li>
+<li id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+
+			<ul>
+					<li class="cat-item cat-item-44"><a href="https://hm2k.org/posts/category/business">Business</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://hm2k.org/posts/category/dev">Development</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://hm2k.org/posts/category/general">General</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://hm2k.org/posts/category/hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://hm2k.org/posts/category/internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-285"><a href="https://hm2k.org/posts/category/security-2">Security</a>
+</li>
+	<li class="cat-item cat-item-260"><a href="https://hm2k.org/posts/category/software">Software</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://hm2k.org/posts/category/sysadmin">Sysadmin</a>
+</li>
+			</ul>
+
+			</li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+
+			<ul>
+					<li><a href="https://hm2k.org/posts/2012/05">May 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2012/03">March 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2011/11">November 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/10">October 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/09">September 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/08">August 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/07">July 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/06">June 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/05">May 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/04">April 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/03">March 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/02">February 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2010/12">December 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/11">November 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/06">June 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/05">May 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/04">April 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/02">February 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2009/12">December 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/11">November 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/10">October 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/09">September 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/08">August 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/07">July 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/06">June 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/04">April 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/02">February 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/01">January 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2008/12">December 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/11">November 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/09">September 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/07">July 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/06">June 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/05">May 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/04">April 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/03">March 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/02">February 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/01">January 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2007/12">December 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/11">November 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/10">October 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/08">August 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/07">July 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/06">June 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/05">May 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/04">April 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/03">March 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/02">February 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/01">January 2007</a></li>
+			</ul>
+
+			</li>
+<li id="text-5" class="widget widget_text"><h2 class="widgettitle">About</h2>
+			<div class="textwidget"><p>Welcome to the HM2K. Here you’ll find our experiments and findings as part of our on going Internet engineering.</p>
+</div>
+		</li>
+<li id="linkcat-16" class="widget widget_links"><h2 class="widgettitle">Projects</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://deaduseful.com/">Domain Name Whois</a></li>
+<li><a href="https://eggtcl.github.io/">Eggdrop TCL</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-28" class="widget widget_links"><h2 class="widgettitle">Network</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://phurix.co.uk/">Phurix Web Hosting</a></li>
+<li><a href="https://suzuki4u.co.uk/" title="The only UK based Suzuki Forums">Suzuki Community</a></li>
+
+	</ul>
+</li>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>		
+Copyright © 2002-2020 HM2K.
+</p>
+</div>
+
+</div>
+
+<link rel="stylesheet" id="yarppRelatedCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.5.1" type="text/css" media="all">
+<script type="text/javascript" id="social_js-js-extra">
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hm2k.org/wp-content/plugins/social/assets/social.js?ver=2.11" id="social_js-js"></script>
+<script async="async" type="text/javascript" src="https://hm2k.org/wp-content/plugins/akismet/_inc/form.js?ver=4.1.6" id="akismet-form-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-202036.js" async="async" defer></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.9',blog:'181873647',post:'146',tz:'0',srv:'hm2k.org'} ]);
+	_stq.push([ 'clickTrackerInit', '181873647', '146' ]);
+</script>
+
+</body>
+</html>

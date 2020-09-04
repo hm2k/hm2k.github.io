@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>hacked &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/hacked/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 02 Jun 2011 10:41:49 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Has friendster been hacked?</title>
+		<link>https://hm2k.org/posts/has-friendster-been-hacked</link>
+					<comments>https://hm2k.org/posts/has-friendster-been-hacked#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 01 Jun 2011 16:08:14 +0000</pubDate>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[email]]></category>
+		<category><![CDATA[friendster]]></category>
+		<category><![CDATA[hacked]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[spam]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=2925</guid>
+
+					<description><![CDATA[I noticed an unusual email when I checked my Gmail account today. Sure it was spam, but this one was tagged with a &#8220;Password&#8221; tag, a tag that I used to filter any emails that contain an old password. Low and behold there was my password displayed right in the email. So, of course, the first [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/hacked-my-school" rel="bookmark" title="How I hacked my schools website &#8211; a look into the past">How I hacked my schools website &#8211; a look into the past </a> <small>When I was about 16 I hacked my schools website,...</small></li>
+<li><a href="https://hm2k.org/posts/how-not-to-use-phpmailer" rel="bookmark" title="How not to use PHPMailer">How not to use PHPMailer </a> <small>I came across PHPMailer usage the other day on a...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I noticed an unusual email when I checked my Gmail account today.</p>
+<p>Sure it was spam, but this one was tagged with a &#8220;Password&#8221; tag, a tag that I used to filter any emails that contain an old password.</p>
+<p>Low and behold there was my password displayed right in the email. So, of course, the first thing to do was to check the <a href="http://pastie.org/pastes/2003898/text">email headers</a> to see how the email was routed.</p>
+<p>I could not believe it!<span id="more-2925"></span></p>
+<blockquote><p>To: &#8220;password1&#8221; &lt;friendster@example.org&gt;</p>
+<p><em>Note: my password is not password1, I replaced it with that.</em></p></blockquote>
+<p>They had inserted my password instead of my name in the &#8220;To&#8221; part of the email headers.</p>
+<p>The email address they sent to was an alias which I had used specifically for friendster so I knew. However, according to the email headers it definitely did not come from the friendster servers.</p>
+<p>How did the spammers manage to get my password and email address?</p>
+<p>I&#8217;ve certainly not used the account since about 2005, so it can&#8217;t be me.</p>
+<p>Does friendster store their passwords in plain text?</p>
+<p>I figured the easiest way to check is to issue a &#8220;forgot password&#8221; request and see what happens.</p>
+<ul>
+<li>It&#8217;s official: Friendster is a <a href="http://plaintextoffenders.com/">plain text offender</a>.</li>
+</ul>
+<p>I received an &#8220;<a href="http://pastie.org/pastes/2004005/text">Your Friendster account information</a>&#8221; email which contained my password in plain text right in the email.</p>
+<p><a href="http://www.hm2k.com/upload/friendster-password.jpg"><img loading="lazy" class="aligncenter size-medium wp-image-2927" title="friendster password" src="http://www.hm2k.com/upload/friendster-password-300x213.jpg" alt="" width="300" height="213" srcset="https://hm2k.org/upload/friendster-password-300x213.jpg 300w, https://hm2k.org/upload/friendster-password.jpg 618w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Yes, this means is that it is absolutely possible that if somebody <em>did </em>hack into friendster they could recover my password (and everyone elses) from their database.</p>
+<p><strong>What does this mean for friendster?</strong></p>
+<p>Well, probably not a lot since most people are waving <a href="http://lifestyle.inquirer.net/1972/bye-bye-friendster">bye-bye to friendster</a> anyway as friendster starts to delete all user data from their servers.</p>
+<p><em>My tip: Don&#8217;t delay, <a href="http://www.friendster.com/cancelaccount.php">delete it today!</a></em></p>
+<p><strong>Update 02/06/11</strong></p>
+<p>Yesterday I emailed friendster to notify them of a serious security concern, today I received this reply:</p>
+<blockquote><p>Thank you for reporting this to us.  We take reports like this seriously  and we shall make the proper investigation on your concern.   Unfortunately, we don&#8217;t have a specific time frame on when the  investigation will be completed. We apologize for the inconvenience.</p>
+<p>Regards,</p>
+<p>Frank</p>
+<p>Customer Support</p></blockquote>
+<p>P.S. Thanks for your comments, I&#8217;m glad I&#8217;m not alone. Keep them coming!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/hacked-my-school" rel="bookmark" title="How I hacked my schools website &#8211; a look into the past">How I hacked my schools website &#8211; a look into the past </a> <small>When I was about 16 I hacked my schools website,...</small></li>
+<li><a href="https://hm2k.org/posts/how-not-to-use-phpmailer" rel="bookmark" title="How not to use PHPMailer">How not to use PHPMailer </a> <small>I came across PHPMailer usage the other day on a...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/has-friendster-been-hacked/feed</wfw:commentRss>
+			<slash:comments>8</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2925</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:52 by W3 Total Cache
+-->

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>getmxrr &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/getmxrr/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Mon, 19 Jan 2009 20:13:32 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>PHP getmxrr() support for windows</title>
+		<link>https://hm2k.org/posts/php-getmxrr-support-for-windows</link>
+					<comments>https://hm2k.org/posts/php-getmxrr-support-for-windows#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 06 Jan 2009 22:23:41 +0000</pubDate>
+				<category><![CDATA[getmxrr]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=332</guid>
+
+					<description><![CDATA[As many of you may be aware there&#8217;s a lack of getmxrr() support in Windows, which dates back as far as 1999. It&#8217;s not a major problem for me as an individual because I never use WIN32 PHP in production, but for development and for the purpose of wide distribution it can raise an issue. [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/windows-genuine-advantage-removal" rel="bookmark" title="Windows Genuine Advantage Removal">Windows Genuine Advantage Removal </a> <small>First of all for those that don&#8217;t know, Windows Genuine...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-create-a-boot-cd-for-windows-me" rel="bookmark" title="How to create a boot CD for Windows ME">How to create a boot CD for Windows ME </a> <small>Today I was given a machine that has Windows ME...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-disable-windows-messenger" rel="bookmark" title="How to Disable Windows Messenger">How to Disable Windows Messenger </a> <small>Why would you want to disable Windows Messenger? Well you...</small></li>
+<li><a href="https://hm2k.org/posts/tech-support-blog" rel="bookmark" title="Tech support blog">Tech support blog </a> <small>I&#8217;ve recently launched a tech support job, which combines aspects...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>As many of you may be aware there&#8217;s <a href="http://bugs.php.net/bug.php?id=5311">a lack of getmxrr() support in Windows</a>, which dates back as far as <a href="http://bugs.php.net/bug.php?id=1660">1999</a>.</p>
+<p>It&#8217;s not a major problem for me as an individual because I never use WIN32 PHP in production, but for development and for the purpose of wide distribution it can raise an issue.</p>
+<p>Apparently the lack of support in win32 is due to the <a href="http://bugs.php.net/bug.php?id=7288">lack of &#8220;res_search&#8221; in &#8220;bindlib_w32&#8221;</a>, I&#8217;m surprised this hasn&#8217;t been fixed already.</p>
+<p>The official PHP.net documentation for the  <a href="http://www.php.net/getmxrr">getmxrr()</a> function states:</p>
+<blockquote><p><strong class="note">Note</strong>:          This function is not implemented on Windows platforms. Try the     <a class="link external" href="http://pear.php.net/">» PEAR</a> class     <a class="link external" href="http://pear.php.net/package/Net_DNS">» Net_DNS</a>.</p></blockquote>
+<p>However, there are problems with this suggestion&#8230;</p>
+<p><span id="more-332"></span></p>
+<ol>
+<li>Some users don&#8217;t have access to install the required PEAR module.</li>
+<li><em>pear/Net_DNS requires PHP extension &#8220;mhash&#8221;</em> &#8211; some users may not have this installed.</li>
+<li>The Net_DNS class does not have a direct equivalent to getmxrr() so results may not be as expected.</li>
+<li>It&#8217;s not a portable solution, especially if some users experience the above issues.</li>
+</ol>
+<p>This isn&#8217;t going to be a realistic option for many users.</p>
+<p>So, what are the alternatives? Do they have any issues?</p>
+<ol>
+<li>Use <a href="http://www.php.net/exec">exec()</a> in conjunction with &#8220;<a href="http://support.microsoft.com/kb/200525">nslookup.exe</a>&#8220;.
+<ul>
+<li>When safe mode is enabled, you can only execute files within the safe_mode_exec_dir. For practical reasons, it is currently not allowed to have .. components in the path to the executable.</li>
+<li>&#8220;nslookup.exe&#8221; may not exist on the system.</li>
+<li>PHP may not have permission to run &#8220;nslookup.exe&#8221;.</li>
+</ul>
+</li>
+<li>Write your own class/function to <a href="http://www.php.net/fsockopen">fsockopen()</a> via UDP to a name server and parse the returned information.
+<ul>
+<li>Long and overly complex.</li>
+<li>Requires understanding of the <a href="http://www.dns.net/dnsrd/rfc/">DNS related RFCs</a>.</li>
+<li>Reinventing the wheel, as Net_DNS already handles this.</li>
+<li>Results may not be as expected.</li>
+</ul>
+</li>
+<li>Fix the implementation problem in PHP core.
+<ul>
+<li>Not very simple to implement.</li>
+<li>May be a complex issue.</li>
+<li>Not backwards compatible.</li>
+</ul>
+</li>
+</ol>
+<p>I think the obvious option here is to run with the first option of using &#8220;nslookup&#8221; and hope for the best.</p>
+<p>With any luck you will find the &#8220;<a href="http://www.google.com/search?q=&quot;getmxrr()+support+for+Windows&quot;+site%3Aphp.net+OR+site%3Agoogle.com">getmxrr() support for Windows</a>&#8221; function in on the <a href="http://www.php.net/getmxrr">getmxrr()</a> manual page (<em>find the latest <a href="?dl=getmxrr.phps">here</a></em>).</p>
+<p><strong>NEWS FLASH!</strong></p>
+<p>As I write this, and go over the article again, check my links, I see an update on the <a href="http://bugs.php.net/bug.php?id=5311">PHP Bug #5311</a> tracker:</p>
+<blockquote>
+<pre class="note">As a new year present, all DNS functions are now available on windows,
+5.3 and 6 (head).</pre>
+</blockquote>
+<p>This is good news, all that remains is for <a href="http://pear.php.net/package/PHP_Compat">PHP_Compat</a> to catch up and use the above suggestions <img src="https://s.w.org/images/core/emoji/13.0.0/72x72/1f642.png" alt="🙂" class="wp-smiley" style="height: 1em; max-height: 1em;" /></p>
+<p>Good luck.</p>
+<p><strong>Update:</strong> I am now helping the PHP_Compat team. View the <a href="http://pear.php.net/bugs/bug.php?id=15531">getmxrr() support for windows feature request</a>.</p>
+<p><strong>Update2:</strong> I have now decided to support <a href="http://www.php.net/checkdnsrr">checkdnsrr()</a> as well. <a href="?dl=checkdnsrr.phps">Download checkdnsrr() support for windows</a>.</p>
+<p><strong>Update3:</strong> I have now decided to support <a href="http://www.php.net/dns_get_record">dns_get_record()</a> as well. Coming soon.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/windows-genuine-advantage-removal" rel="bookmark" title="Windows Genuine Advantage Removal">Windows Genuine Advantage Removal </a> <small>First of all for those that don&#8217;t know, Windows Genuine...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-create-a-boot-cd-for-windows-me" rel="bookmark" title="How to create a boot CD for Windows ME">How to create a boot CD for Windows ME </a> <small>Today I was given a machine that has Windows ME...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-disable-windows-messenger" rel="bookmark" title="How to Disable Windows Messenger">How to Disable Windows Messenger </a> <small>Why would you want to disable Windows Messenger? Well you...</small></li>
+<li><a href="https://hm2k.org/posts/tech-support-blog" rel="bookmark" title="Tech support blog">Tech support blog </a> <small>I&#8217;ve recently launched a tech support job, which combines aspects...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/php-getmxrr-support-for-windows/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">332</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:48 by W3 Total Cache
+-->

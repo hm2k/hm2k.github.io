@@ -1,0 +1,1733 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="http://labs.phurix.net/wp-content/plugins/google-sitemap-generator/sitemap.xsl"?><!-- generator="wordpress/3.8.4" -->
+<!-- sitemap-generator-url="http://www.arnebrachhold.de" sitemap-generator-version="3.4" -->
+<!-- generated-on="August 7, 2014 12:15 pm" -->
+<!-- Debug: Total comment count: 1582 -->
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">	<url>
+		<loc>http://labs.phurix.net/</loc>
+		<lastmod>2013-02-17T11:07:20+00:00</lastmod>
+		<changefreq>daily</changefreq>
+		<priority>1.0</priority>
+	</url>
+<!-- Debug: Start Postings -->
+<!-- Debug: Priority report of postID 3379: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/phurix-accepts-bitcoin</loc>
+		<lastmod>2013-02-17T11:07:20+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/how-to-ask-a-question</loc>
+		<lastmod>2013-01-26T15:56:10+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 51: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/anti-email-spam-in-the-uk</loc>
+		<lastmod>2012-05-15T23:17:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/pagerank</loc>
+		<lastmod>2012-05-10T21:36:09+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 3349: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry</loc>
+		<lastmod>2012-05-06T16:28:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 526: Comments: 10 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/w32dasm</loc>
+		<lastmod>2012-03-18T22:59:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/seo-faq</loc>
+		<lastmod>2012-02-02T15:42:13+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 3257: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/integrate-a-newsletter-into-your-website</loc>
+		<lastmod>2012-01-30T22:14:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 3322: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/migrating-imap-mailboxes-to-a-cpanel-server</loc>
+		<lastmod>2011-11-07T23:02:22+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 1891: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses</loc>
+		<lastmod>2011-11-03T17:58:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 3314: Comments: 5 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/is-google-pagerank-dead</loc>
+		<lastmod>2011-10-06T21:30:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 684: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/installing-subversion-on-a-cpanel-server</loc>
+		<lastmod>2011-09-07T23:26:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 93: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-setup-tucows-opensrs</loc>
+		<lastmod>2011-08-24T13:11:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/contact</loc>
+		<lastmod>2011-08-19T23:35:26+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 3180: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/googles-official-profanity-api</loc>
+		<lastmod>2011-08-17T13:05:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 3051: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/the-rise-and-fall-of-whoisx</loc>
+		<lastmod>2011-08-15T08:33:38+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 134: Comments: 20 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/regmirc</loc>
+		<lastmod>2011-08-10T16:45:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/software</loc>
+		<lastmod>2011-08-10T08:25:42+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 220: Comments: 11 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/freebsd-socks-proxy-for-mirc</loc>
+		<lastmod>2011-08-09T20:39:31+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 3193: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/what-is-my-ip</loc>
+		<lastmod>2011-08-09T09:01:08+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 560: Comments: 8 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/weather-tcl</loc>
+		<lastmod>2011-08-07T23:27:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 3142: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/pagerank-viewer-launch</loc>
+		<lastmod>2011-08-03T14:55:28+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 602: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/universal-currency-converter-tcl-for-eggdrop</loc>
+		<lastmod>2011-07-29T11:57:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 3009: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/eggtcl-project</loc>
+		<lastmod>2011-07-28T10:48:35+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 3070: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/presenting-coinb-in</loc>
+		<lastmod>2011-07-27T11:00:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 3013: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/domain-slamming</loc>
+		<lastmod>2011-07-25T20:13:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/startkeylogger</loc>
+		<lastmod>2011-07-21T15:12:57+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 3017: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/announcing-phurix-labs</loc>
+		<lastmod>2011-07-15T10:45:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/regex</loc>
+		<lastmod>2011-06-02T11:24:17+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 2925: Comments: 8 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/has-friendster-been-hacked</loc>
+		<lastmod>2011-06-02T10:41:49+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 1881: Comments: 5 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/get-linked-from-dmoz-instantly</loc>
+		<lastmod>2011-06-02T09:48:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 2907: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/converting-your-logo-to-ascii-art</loc>
+		<lastmod>2011-05-25T22:55:05+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/yes-www</loc>
+		<lastmod>2011-04-07T16:22:51+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 121: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/email-address-on-your-website</loc>
+		<lastmod>2011-03-30T20:24:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 186: Comments: 18 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/twitter-for-mirc</loc>
+		<lastmod>2011-03-30T20:22:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 2316: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-find-the-fastest-cvsup-mirror-server</loc>
+		<lastmod>2011-03-30T14:46:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 546: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/scan-to-excel</loc>
+		<lastmod>2011-03-28T18:40:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 276: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/pingotron</loc>
+		<lastmod>2011-03-28T18:40:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 646: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/replace-strings-in-mysq</loc>
+		<lastmod>2011-03-23T11:23:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 593: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/get_favicon-php-function</loc>
+		<lastmod>2011-03-21T00:40:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 145: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-copyright-your-website</loc>
+		<lastmod>2011-03-17T23:11:23+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 178: Comments: 38 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/50-php-optimisation-tips-revisited</loc>
+		<lastmod>2011-03-16T11:19:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 102: Comments: 5 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/creating-a-digg-clone-for-your-niche-market</loc>
+		<lastmod>2011-03-16T01:21:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 171: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/word-separators-in-urls</loc>
+		<lastmod>2011-03-16T01:20:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/remove-spyware</loc>
+		<lastmod>2011-03-15T23:13:30+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 696: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/premature-optimization-is-the-root-of-all-evil</loc>
+		<lastmod>2011-03-15T19:54:16+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 689: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/rglob-php</loc>
+		<lastmod>2011-03-15T19:53:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/useful-linux-commands</loc>
+		<lastmod>2011-03-15T16:47:59+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 661: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/exim-on-another-port-for-smtp</loc>
+		<lastmod>2011-03-11T11:34:54+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 680: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/trac-tcl-for-eggdrop</loc>
+		<lastmod>2010-12-15T13:48:27+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 676: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/error-no-dbpath-has-been-set</loc>
+		<lastmod>2010-12-11T20:40:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 673: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/openvz-container-already-locked</loc>
+		<lastmod>2010-12-10T13:22:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 667: Comments: 10 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/find-the-ip-address-of-a-seized-website</loc>
+		<lastmod>2010-12-01T13:10:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 655: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/uk-business-license</loc>
+		<lastmod>2010-11-25T17:47:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 651: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/british-fuel-cost-per-mile</loc>
+		<lastmod>2010-11-11T19:18:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 205: Comments: 30 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/what-is-a-valid-email-address</loc>
+		<lastmod>2010-10-07T15:01:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 612: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/tinysong-tcl-script-for-eggdrop</loc>
+		<lastmod>2010-06-06T15:59:35+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 201: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/seen-script-for-mirc-updated</loc>
+		<lastmod>2010-06-06T09:34:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 629: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/whoisx-relaunch</loc>
+		<lastmod>2010-06-04T10:08:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 179: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/10-wordpress-performance-optimisation-tips</loc>
+		<lastmod>2010-05-27T10:43:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 615: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/upgrade-co-uk-sucks</loc>
+		<lastmod>2010-05-05T09:00:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 573: Comments: 6 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/worldtime-tcl</loc>
+		<lastmod>2010-05-04T12:15:36+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 609: Comments: 5 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/getting-started-with-quercus-in-google-app-engine</loc>
+		<lastmod>2010-04-15T12:29:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 301: Comments: 13 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/phpizabi-creating-a-dating-site</loc>
+		<lastmod>2009-12-14T16:24:01+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 583: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-convert-an-image-to-greyscale-using-php</loc>
+		<lastmod>2009-12-11T17:43:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 567: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/plusfm-track-feed</loc>
+		<lastmod>2009-12-08T12:21:43+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 579: Comments: 4 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/php-opensrs-client</loc>
+		<lastmod>2009-11-25T13:42:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 570: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/gmail-needs-an-api</loc>
+		<lastmod>2009-11-13T16:05:06+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 218: Comments: 4 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/the-specified-network-name-is-no-longer-available-samba</loc>
+		<lastmod>2009-11-03T13:02:14+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 94: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/compression-utilities</loc>
+		<lastmod>2009-10-26T10:52:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 541: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/mydigitallife-info-stole-my-code</loc>
+		<lastmod>2009-10-14T14:05:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 517: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/ident-spoofing</loc>
+		<lastmod>2009-10-14T12:23:01+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 515: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/efnet-uk</loc>
+		<lastmod>2009-10-09T11:42:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 512: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/cssbase</loc>
+		<lastmod>2009-09-23T09:02:23+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 507: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/jquery-sucks-at-browser-detection</loc>
+		<lastmod>2009-09-23T08:36:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 210: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/longip-script</loc>
+		<lastmod>2009-09-16T22:56:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 212: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/customising-the-netgear-dg834g</loc>
+		<lastmod>2009-09-14T20:37:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 491: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/lame-botnet</loc>
+		<lastmod>2009-09-05T16:06:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 479: Comments: 4 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/the-google-translate-recursion-bug</loc>
+		<lastmod>2009-09-04T15:55:06+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 488: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/extend-blackberry-ring-time</loc>
+		<lastmod>2009-09-02T17:06:09+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 476: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-not-to-use-phpmailer</loc>
+		<lastmod>2009-08-24T21:49:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 470: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/adding-fonts-into-photoshop-without-adding-them-to-windows</loc>
+		<lastmod>2009-08-19T17:09:33+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 452: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/dvd-collection-software</loc>
+		<lastmod>2009-08-17T10:33:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 464: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/inspiration-for-navigation-menus-in-web-design</loc>
+		<lastmod>2009-08-15T23:11:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 450: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/cex-co-uk-site-errors</loc>
+		<lastmod>2009-08-14T09:08:22+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 164: Comments: 118 of 1582 = 0.1 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/create-a-unique-company-name</loc>
+		<lastmod>2009-08-14T08:48:00+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 71: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-correctly-make-a-php-contact-form</loc>
+		<lastmod>2009-08-11T01:07:21+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 441: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/tricked-by-fake-uk-sites</loc>
+		<lastmod>2009-08-01T12:01:09+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 422: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/tech-support-blog</loc>
+		<lastmod>2009-08-01T11:54:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 431: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/icon-software</loc>
+		<lastmod>2009-08-01T11:50:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 429: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/hm2ks-code-repository</loc>
+		<lastmod>2009-08-01T11:50:08+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 426: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/domain-example-com-has-exceeded-the-max-emails-per-hour-200-allowed-message-discarded</loc>
+		<lastmod>2009-07-15T15:34:36+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 408: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/using-your-own-url-as-your-openid-with-wordpress</loc>
+		<lastmod>2009-04-16T22:16:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 135: Comments: 11 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/installing-ioncube-loader-with-cpanel-on-centos</loc>
+		<lastmod>2009-03-12T12:56:22+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 204: Comments: 10 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/firefox-always-on-top</loc>
+		<lastmod>2009-02-25T12:25:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 380: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/opencart-v079-released</loc>
+		<lastmod>2009-02-17T12:51:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 387: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/cannot-redeclare-pclziputilpathreduction</loc>
+		<lastmod>2009-02-17T12:51:29+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 20: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/which-is-the-best-operating-system</loc>
+		<lastmod>2009-01-26T21:26:31+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 54: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/focus-on-one-domain</loc>
+		<lastmod>2009-01-21T12:58:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 332: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/php-getmxrr-support-for-windows</loc>
+		<lastmod>2009-01-19T20:13:32+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 26: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/ftp-client</loc>
+		<lastmod>2009-01-15T12:17:13+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 27: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/ftp-server-for-windows</loc>
+		<lastmod>2009-01-15T12:16:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 29: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/editor</loc>
+		<lastmod>2009-01-15T12:16:35+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 36: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/cannot-delete-folder</loc>
+		<lastmod>2009-01-15T12:15:15+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 44: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/exporting-emails-with-the-dates-from-microsoft-outlook</loc>
+		<lastmod>2009-01-15T12:14:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 49: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/no-more-nero</loc>
+		<lastmod>2009-01-15T12:14:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 342: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-restart-the-explorer-shell-in-windows-xp</loc>
+		<lastmod>2009-01-09T11:21:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 202: Comments: 5 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/free-icons</loc>
+		<lastmod>2009-01-06T10:41:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 322: Comments: 14 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/missing-mediaidbin-file</loc>
+		<lastmod>2009-01-04T15:05:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 153: Comments: 19 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-search-by-nearest-uk-postcode-in-php</loc>
+		<lastmod>2008-12-03T19:15:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 289: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/dont-forget-to-run-make-test</loc>
+		<lastmod>2008-11-13T16:17:26+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 165: Comments: 11 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/freebsd-62-usrports-no-such-file-or-directory</loc>
+		<lastmod>2008-11-12T23:51:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 53: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/friendly-urls</loc>
+		<lastmod>2008-11-12T13:54:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 97: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/changing-your-windows-xp-product-key</loc>
+		<lastmod>2008-10-28T20:41:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/morals-of-downloading</loc>
+		<lastmod>2008-10-08T13:14:22+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 75: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/mounting-an-iso-image</loc>
+		<lastmod>2008-09-29T13:14:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 174: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/marketing-concepts</loc>
+		<lastmod>2008-09-25T16:36:20+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 241: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/whats-wrong-with-low-version-numbers</loc>
+		<lastmod>2008-09-25T10:27:35+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 199: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/geek-in-the-park-2008</loc>
+		<lastmod>2008-09-18T03:54:03+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 231: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/tracking-an-ip-address</loc>
+		<lastmod>2008-09-16T17:37:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 229: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-extract-photos-from-an-exe</loc>
+		<lastmod>2008-09-16T15:57:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 219: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/for-vs-while-in-php</loc>
+		<lastmod>2008-09-09T22:54:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 216: Comments: 6 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/print-dialog-does-not-appear</loc>
+		<lastmod>2008-09-04T11:43:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 137: Comments: 12 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/transfering-domains-from-godaddycom-to-tucows-opensrs</loc>
+		<lastmod>2008-09-04T10:29:52+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 214: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/suphp-and-phps</loc>
+		<lastmod>2008-07-17T14:33:09+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 208: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/what-is-a-hacker</loc>
+		<lastmod>2008-06-24T22:05:12+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 172: Comments: 5 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/text-editors-revisited</loc>
+		<lastmod>2008-06-17T10:16:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 24: Comments: 7 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/css-seo</loc>
+		<lastmod>2008-06-04T09:38:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 177: Comments: 5 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/ecommerce-shopping-cart-software</loc>
+		<lastmod>2008-06-03T14:46:11+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 188: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/recording-an-irc-channel-on-windows</loc>
+		<lastmod>2008-05-23T14:54:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/ways-to-waste-time-online</loc>
+		<lastmod>2008-05-23T13:53:31+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 193: Comments: 13 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-bulk-convert-wma-to-mp3</loc>
+		<lastmod>2008-05-23T13:04:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 182: Comments: 25 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/10-reasons-why-phpbb3-sucks</loc>
+		<lastmod>2008-05-17T23:49:37+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 194: Comments: 20 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/arrange-icons-by-modified-in-a-music-folder</loc>
+		<lastmod>2008-05-15T09:52:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 195: Comments: 12 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/samsung-ml-4500-xp-driver-install</loc>
+		<lastmod>2008-05-14T13:29:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 52: Comments: 15 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/what-is-the-best-antivirus-software</loc>
+		<lastmod>2008-05-12T09:34:44+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 191: Comments: 57 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/no-message-alerts-problem-on-nokia-n95</loc>
+		<lastmod>2008-04-30T02:05:37+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 187: Comments: 61 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/bt-web-clicks</loc>
+		<lastmod>2008-04-17T20:23:36+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 184: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/google-adsense-wont-let-me-in</loc>
+		<lastmod>2008-04-17T16:31:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 183: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/inveiscom-cn-domain-scam</loc>
+		<lastmod>2008-04-17T16:30:55+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 181: Comments: 9 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/adding-table-controls-and-support-to-tinymce-in-wordpress</loc>
+		<lastmod>2008-04-08T23:41:51+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 173: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file</loc>
+		<lastmod>2008-04-07T20:45:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 180: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/missing-accessories-shortcuts-from-start-menu-on-windows-xp</loc>
+		<lastmod>2008-03-27T14:27:05+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles/seo-tips</loc>
+		<lastmod>2008-03-26T14:32:05+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: Priority report of postID 98: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-addremove-words-in-the-firefox-custom-spell-check-dictionary</loc>
+		<lastmod>2008-03-24T11:41:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 32: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/txt-spk-iz-gr8</loc>
+		<lastmod>2008-03-20T18:05:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 151: Comments: 9 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/correct-documents-and-settings-folder-on-windows-2000</loc>
+		<lastmod>2008-03-17T19:03:48+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 169: Comments: 22 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/rip-and-decode-mp3s-via-myspace-music-player</loc>
+		<lastmod>2008-02-19T13:53:36+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 157: Comments: 9 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/hacked-my-school</loc>
+		<lastmod>2008-01-25T10:40:50+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 168: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/so-how-did-i-get-infected-in-the-first-place</loc>
+		<lastmod>2008-01-24T15:19:02+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 127: Comments: 10 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/configuring-a-freebsd-irc-shell-server</loc>
+		<lastmod>2008-01-16T23:10:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 162: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings</loc>
+		<lastmod>2008-01-14T11:32:16+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 159: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/next-time-im-buying-a-mac</loc>
+		<lastmod>2007-12-27T16:34:51+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 158: Comments: 8 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/hp-software-update</loc>
+		<lastmod>2007-11-30T12:56:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 152: Comments: 8 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/phpbase-web-framework</loc>
+		<lastmod>2007-11-29T00:13:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 150: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-create-a-boot-cd-for-windows-me</loc>
+		<lastmod>2007-11-14T22:01:42+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 146: Comments: 51 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/win32-virtob-virut-removal</loc>
+		<lastmod>2007-11-09T00:03:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 144: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/uk-trademark-law</loc>
+		<lastmod>2007-11-05T14:40:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 141: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-disable-windows-messenger</loc>
+		<lastmod>2007-11-02T15:07:24+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 100: Comments: 24 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/start-your-own-free-email-service</loc>
+		<lastmod>2007-10-17T21:04:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 110: Comments: 11 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess</loc>
+		<lastmod>2007-10-17T21:00:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 112: Comments: 43 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-unlock-a-samsung-e720-mobile-phone</loc>
+		<lastmod>2007-10-17T21:00:06+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 118: Comments: 12 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-can-i-recycle-my-computer-hardware</loc>
+		<lastmod>2007-10-17T20:58:59+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 41: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/php-coding-standards-and-best-practices</loc>
+		<lastmod>2007-10-17T20:58:44+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 105: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/supercalifragilisticexpialidocious</loc>
+		<lastmod>2007-10-17T20:58:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 30: Comments: 58 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/mp4-player</loc>
+		<lastmod>2007-10-17T11:30:47+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 80: Comments: 119 of 1582 = 0.1 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/ihtoom-pmp</loc>
+		<lastmod>2007-10-17T11:30:10+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 68: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/msn-via-irc</loc>
+		<lastmod>2007-10-17T03:22:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 72: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/a-new-month</loc>
+		<lastmod>2007-10-17T03:12:01+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 62: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/windows-genuine-advantage-removal</loc>
+		<lastmod>2007-10-17T03:11:17+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 16: Comments: 7 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/eticket</loc>
+		<lastmod>2007-10-17T03:08:34+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 92: Comments: 8 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/psp-firmware-and-homebrew</loc>
+		<lastmod>2007-10-17T03:07:40+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 34: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/social-bookmarking</loc>
+		<lastmod>2007-10-17T03:03:44+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 95: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/free-stuff</loc>
+		<lastmod>2007-10-17T03:03:19+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 124: Comments: 10 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/developing-a-facebook-application-on-php4</loc>
+		<lastmod>2007-10-17T02:47:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 119: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/motorola-v3x-review</loc>
+		<lastmod>2007-10-16T23:31:25+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 122: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/the-requested-url-cpanel-was-not-found-on-this-server</loc>
+		<lastmod>2007-10-16T23:30:46+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 123: Comments: 71 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/my-avi-files-crash-explorerexe</loc>
+		<lastmod>2007-10-16T23:30:31+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 125: Comments: 8 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/xen-on-centos-host-running-freebsd-guest</loc>
+		<lastmod>2007-10-16T23:29:41+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 108: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-minimize-microsoft-office-outlook-to-the-system-tray</loc>
+		<lastmod>2007-03-27T01:07:35+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 87: Comments: 18 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/fixing-a-faulty-laptop-dc-jack-connector</loc>
+		<lastmod>2007-03-19T00:58:18+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 64: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/how-to-print-to-a-text-file</loc>
+		<lastmod>2007-03-15T03:20:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 22: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/telemarketing</loc>
+		<lastmod>2007-03-15T03:19:56+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 23: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/mobile-unlocked</loc>
+		<lastmod>2007-03-15T02:00:04+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 66: Comments: 113 of 1582 = 0.1 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/parts-inside-your-printer-are-at-the-end-of-their-service-life</loc>
+		<lastmod>2007-02-14T22:54:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 76: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/siemens-cx65-review</loc>
+		<lastmod>2007-02-14T22:41:54+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 57: Comments: 4 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/fax-to-email</loc>
+		<lastmod>2007-02-02T17:28:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 63: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/dvd-decoders-and-other-codecs</loc>
+		<lastmod>2007-01-29T10:39:07+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 61: Comments: 2 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/i-forgot-my-windows-logon-password</loc>
+		<lastmod>2007-01-28T11:20:30+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 42: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/safely-remove-hardware-icon</loc>
+		<lastmod>2007-01-25T12:53:58+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 65: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/my-computer-has-problems-what-can-i-do</loc>
+		<lastmod>2007-01-24T01:44:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 46: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/legally-listen-to-music-online-for-free</loc>
+		<lastmod>2007-01-22T01:17:52+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 18: Comments: 1 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/migrating-from-windows-to-linux</loc>
+		<lastmod>2007-01-20T12:44:16+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 21: Comments: 3 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/portal-script</loc>
+		<lastmod>2007-01-19T01:15:57+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 28: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/tracking-ebay-auctions</loc>
+		<lastmod>2007-01-19T01:09:39+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 15: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/new-site</loc>
+		<lastmod>2007-01-19T01:08:53+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+<!-- Debug: Priority report of postID 1: Comments: 0 of 1582 = 0 points -->
+	<url>
+		<loc>http://labs.phurix.net/posts/hello-world</loc>
+		<lastmod>2007-01-19T01:08:45+00:00</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.1</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/articles</loc>
+		<lastmod>2007-01-17T16:14:35+00:00</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.6</priority>
+	</url>
+<!-- Debug: End Postings -->
+<!-- Debug: Start Cats -->
+	<url>
+		<loc>http://labs.phurix.net/posts/category/business</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/category/dev</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/category/general</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/category/hardware</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/category/internet</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/category/security-2</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/category/software</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/category/sysadmin</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.5</priority>
+	</url>
+<!-- Debug: End Cats -->
+<!-- Debug: Start Archive -->
+	<url>
+		<loc>http://labs.phurix.net/posts/2013/02</loc>
+		<lastmod>2013-02-17T11:07:20+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2012/05</loc>
+		<lastmod>2012-05-06T16:28:24+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2012/03</loc>
+		<lastmod>2012-03-23T15:23:22+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/11</loc>
+		<lastmod>2011-11-07T23:02:22+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/10</loc>
+		<lastmod>2011-10-06T21:30:30+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/09</loc>
+		<lastmod>2011-09-07T13:26:56+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/08</loc>
+		<lastmod>2011-08-17T10:09:15+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/07</loc>
+		<lastmod>2011-07-27T10:22:20+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/06</loc>
+		<lastmod>2011-06-01T16:08:14+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/05</loc>
+		<lastmod>2011-05-25T12:11:25+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/04</loc>
+		<lastmod>2011-04-03T10:10:28+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/03</loc>
+		<lastmod>2011-03-30T14:41:42+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2011/02</loc>
+		<lastmod>2011-02-22T20:57:29+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2010/12</loc>
+		<lastmod>2010-12-21T17:37:50+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2010/11</loc>
+		<lastmod>2010-11-25T14:58:35+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2010/06</loc>
+		<lastmod>2010-06-06T15:59:35+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2010/05</loc>
+		<lastmod>2010-05-04T16:45:08+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2010/04</loc>
+		<lastmod>2010-04-15T12:26:55+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2010/02</loc>
+		<lastmod>2010-02-25T14:41:31+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/12</loc>
+		<lastmod>2009-12-10T14:39:30+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/11</loc>
+		<lastmod>2009-11-25T13:42:50+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/10</loc>
+		<lastmod>2009-10-24T12:11:04+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/09</loc>
+		<lastmod>2009-09-23T13:40:56+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/08</loc>
+		<lastmod>2009-08-24T14:39:50+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/07</loc>
+		<lastmod>2009-07-30T16:19:43+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/06</loc>
+		<lastmod>2009-06-18T16:24:12+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/04</loc>
+		<lastmod>2009-04-16T22:09:33+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/02</loc>
+		<lastmod>2009-02-17T12:49:27+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2009/01</loc>
+		<lastmod>2009-01-09T11:03:21+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/12</loc>
+		<lastmod>2008-12-23T11:00:36+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/11</loc>
+		<lastmod>2008-11-13T16:17:26+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/09</loc>
+		<lastmod>2008-09-25T10:27:35+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/07</loc>
+		<lastmod>2008-07-17T12:27:12+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/06</loc>
+		<lastmod>2008-06-25T23:52:29+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/05</loc>
+		<lastmod>2008-05-26T22:05:24+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/04</loc>
+		<lastmod>2008-04-30T02:04:46+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/03</loc>
+		<lastmod>2008-03-28T13:20:12+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/02</loc>
+		<lastmod>2008-02-29T11:36:10+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2008/01</loc>
+		<lastmod>2008-01-30T16:49:58+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/12</loc>
+		<lastmod>2007-12-13T10:58:24+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/11</loc>
+		<lastmod>2007-11-30T12:56:10+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/10</loc>
+		<lastmod>2007-10-31T16:12:40+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/08</loc>
+		<lastmod>2007-08-22T21:46:59+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/07</loc>
+		<lastmod>2007-07-05T14:37:17+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/06</loc>
+		<lastmod>2007-06-13T20:05:16+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/05</loc>
+		<lastmod>2007-05-31T17:55:53+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/04</loc>
+		<lastmod>2007-04-25T14:33:08+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/03</loc>
+		<lastmod>2007-03-27T01:07:35+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/02</loc>
+		<lastmod>2007-02-28T13:51:58+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+	<url>
+		<loc>http://labs.phurix.net/posts/2007/01</loc>
+		<lastmod>2007-01-31T00:53:49+00:00</lastmod>
+		<changefreq>yearly</changefreq>
+		<priority>0.5</priority>
+	</url>
+<!-- Debug: End Archive -->
+<!-- Debug: Start Custom Pages -->
+<!-- Debug: End Custom Pages -->
+<!-- Debug: Start additional URLs -->
+<!-- Debug: End additional URLs -->
+</urlset>

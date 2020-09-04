@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>openid delegation &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/openid-delegation/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 16 Apr 2009 22:16:25 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Using Your Own URL as Your OpenID with WordPress</title>
+		<link>https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress</link>
+					<comments>https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 16 Apr 2009 22:09:33 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[openid]]></category>
+		<category><![CDATA[openid delegation]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=408</guid>
+
+					<description><![CDATA[Today I decided to join stackoverflow.com, which requires you to login using OpenID. It was pretty simple to get signed up with myopenid.com, but while I was on the stackoverflow login page I noticed a little message which I found interesting: Use your own URL Want to add OpenID support to your website? It&#8217;s as [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/adding-table-controls-and-support-to-tinymce-in-wordpress" rel="bookmark" title="Adding table controls and support to TinyMCE in WordPress">Adding table controls and support to TinyMCE in WordPress </a> <small>One thing wordpress has always lacked is the ability to...</small></li>
+<li><a href="https://hm2k.org/posts/cannot-redeclare-pclziputilpathreduction" rel="bookmark" title="Cannot redeclare pclziputilpathreduction()">Cannot redeclare pclziputilpathreduction() </a> <small>I had this issue today, I found that you need...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Today I decided to join <a href="http://www.stackoverflow.com/">stackoverflow.com</a>, which requires you to login using <a href="http://openid.net/get/">OpenID</a>.</p>
+<p>It was pretty simple to get signed up with <a href="https://www.myopenid.com/">myopenid.com</a>, but while I was on the <a href="http://stackoverflow.com/users/login?returnurl=%2f">stackoverflow login page</a> I noticed a little message which I found interesting:<span id="more-408"></span></p>
+<blockquote>
+<h4>Use your own URL</h4>
+<p>Want to add OpenID support to <em>your</em> website?</p>
+<p>It&#8217;s as easy as adding two HTML header tags!</p>
+<p><a href="http://blog.stackoverflow.com/2009/01/using-your-own-url-as-your-openid/">Read more..</a></p></blockquote>
+<p>It basically would mean I could use &#8220;hm2k.com&#8221; instead of &#8220;hm2k.myopenid.com&#8221; to login with OpenID, which is pretty neat. There&#8217;s also a section in the help on <a href="https://www.myopenid.com/help#own_domain">myOpenID.com for using your own domain</a>, which confirms this.</p>
+<p>Seems easy enough, I thought. Then I took into consideration that I&#8217;m using wordpress, sure not a major problem, I can simply hard code it into my theme, but then do I really want to do that? No, of course not.</p>
+<p>WordPress is renound for it&#8217;s ability to be compltely dynamic, I want to stick in line with that. More importantly, I want my OpenID URL to work regardless of what theme I&#8217;m using.</p>
+<p>So I decided to start looking into it. I soon discovered someone over at wordpress.com had the same idea and had requested a way to <a href="http://en.forums.wordpress.com/topic/add-openid-delegation-link-to-head">add OpenID delegation link to head</a>.</p>
+<p>At first I thought about getting a plugin that would inject the required lines of HTML into the head, however after some quite extensive research I found what I was looking for&#8230;</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-409" title="OpenID Delegation" src="http://www.hm2k.com/upload/screenshot-5.png" alt="OpenID Delegation" width="550" height="141" srcset="https://hm2k.org/upload/screenshot-5.png 550w, https://hm2k.org/upload/screenshot-5-300x76.png 300w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p><a href="http://wordpress.org/extend/plugins/openid/">The WordPress OpenID Plugin</a> allows users authorized to use the OpenID Provider can delegate to a different provider, among other things.</p>
+<p>Once you have installed and activated the plugin you need to do the following:</p>
+<ol>
+<li>Go to the OpenID settings page (/wp-admin/options-general.php?page=openid)</li>
+<li>Set the &#8220;Blog Owner&#8221; as yourself, and click &#8220;Save Changes&#8221;.</li>
+<li>Go to your profile (/wp-admin/profile.php) and scroll to the bottom where it says &#8220;OpenID Delegation&#8221;.</li>
+<li>In the edit box you would provide your OpenID URL (ie: http://hm2k.myopenid.com/)</li>
+</ol>
+<p>Now when I check the source code of my site I see the following HTML in the &lt;head&gt;:</p>
+<blockquote><p>&lt;link rel=&#8221;openid2.provider&#8221; href=&#8221;http://www.myopenid.com/server&#8221; /&gt;<br />
+&lt;link rel=&#8221;openid2.local_id&#8221; href=&#8221;http://hm2k.myopenid.com/&#8221; /&gt;<br />
+&lt;link rel=&#8221;openid.server&#8221; href=&#8221;http://www.myopenid.com/server&#8221; /&gt;<br />
+&lt;link rel=&#8221;openid.delegate&#8221; href=&#8221;http://hm2k.myopenid.com/&#8221; /&gt;</p></blockquote>
+<p>Perfect!</p>
+<p>I hope you find this as useful as I have.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/adding-table-controls-and-support-to-tinymce-in-wordpress" rel="bookmark" title="Adding table controls and support to TinyMCE in WordPress">Adding table controls and support to TinyMCE in WordPress </a> <small>One thing wordpress has always lacked is the ability to...</small></li>
+<li><a href="https://hm2k.org/posts/cannot-redeclare-pclziputilpathreduction" rel="bookmark" title="Cannot redeclare pclziputilpathreduction()">Cannot redeclare pclziputilpathreduction() </a> <small>I had this issue today, I found that you need...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">408</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:11 by W3 Total Cache
+-->

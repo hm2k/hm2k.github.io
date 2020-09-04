@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>zoneinfo &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/zoneinfo/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Tue, 04 May 2010 12:15:36 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>worldtime.tcl</title>
+		<link>https://hm2k.org/posts/worldtime-tcl</link>
+					<comments>https://hm2k.org/posts/worldtime-tcl#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 20 Nov 2009 10:04:23 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[eggdrop]]></category>
+		<category><![CDATA[TCL]]></category>
+		<category><![CDATA[timezones]]></category>
+		<category><![CDATA[worldtime]]></category>
+		<category><![CDATA[zoneinfo]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=573</guid>
+
+					<description><![CDATA[Sometimes you need to know the time somewhere else in the world. I find it useful to get my eggdrop to return the time of another timezone&#8230; &#62; .tz london &#60;Bot&#62; HM2K, The time for the london timezone is Fri Feb 13 23:31:30 2009 However, much like my old weather.tcl, I realised that my worldtime.tcl [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/weather-tcl" rel="bookmark" title="weather.tcl">weather.tcl </a> <small>Update: This script is now part of the eggtcl project....</small></li>
+<li><a href="https://hm2k.org/posts/which-is-the-best-operating-system" rel="bookmark" title="Which is the best operating system?">Which is the best operating system? </a> <small>I&#8217;ve done my research and i&#8217;ve discovered there&#8217;s only 6...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Sometimes you need to know the time somewhere else in the world. I find it useful to get my eggdrop to return the time of another timezone&#8230;</p>
+<blockquote>
+<pre>&gt; .tz london
+&lt;Bot&gt; HM2K, The time for the london timezone is Fri Feb 13 23:31:30 2009</pre>
+</blockquote>
+<p>However, much like my old <em>weather.tcl</em>, I realised that my <em>worldtime.tcl</em> had passed it&#8217;s sell by date and had now expired.</p>
+<p>My old <em>worldtime.tcl</em> which was based on a script by <em>Murf</em> which used <em>worldtimeserver.com</em> to gather it&#8217;s data had stopped working.</p>
+<p>It would seem that <em>worldtimeserver.com</em> had changed their markup which meant that it was no longer possible to parse the correct data from the HTML.</p>
+<p>Never mind, I thought, there must be a better way, that doesn&#8217;t need to use a third party website, that won&#8217;t stop working.</p>
+<p>After all operating systems have worldtime build in without using a website, so how do they do it?</p>
+<p>So, I did some investigation&#8230;</p>
+<p><span id="more-573"></span></p>
+<p><span style="text-decoration: line-through;">I discovered that on Linux based systems (including FreeBSD) the time zone information was stored locally.</span></p>
+<blockquote><p><span style="text-decoration: line-through;">/usr/share/zoneinfo/</span></p></blockquote>
+<p><span style="text-decoration: line-through;">Using a bit of Google magic, I managed to locate a few pre-made procedures to help me read the time zone information.</span></p>
+<ul>
+<li><span style="text-decoration: line-through;"><a href="http://alice.wu-wien.ac.at:8000/xowiki/load-timezones.tcl">load-timezones.tcl</a></span>
+<ul>
+<li><span style="text-decoration: line-through;">get_tz_names</span></li>
+<li><span style="text-decoration: line-through;">get_tz_rules</span></li>
+</ul>
+</li>
+</ul>
+<p><span style="text-decoration: line-through;">Using these functions I was able to find the right timezone and get the GMT offset which allowed me to work out the time in that timezone using the unix ticks.</span></p>
+<p><span style="text-decoration: line-through;">At the moment, because it reads the time zone files that are only available on Linux based systems, it will not work on windrops.</span></p>
+<p><span style="text-decoration: line-through;">However, what I may do next time is build a function that saves the timezone information into a database file which can be used on windows systems and will also give the Linux systems a cache file to make it respond quicker.</span></p>
+<p><strong>Update: </strong>I decided to stop using the tz database method and replace it with a Google lookup method, which is far more accurate and portable.</p>
+<p>So now you&#8217;ll probably want to download it&#8230;</p>
+<ul>
+<li><a href="http://hm2k.googlecode.com/svn/trunk/code/tcl/worldtime.tcl">Download worldtime.tcl</a></li>
+</ul>
+<p>Hope it works for you.</p>
+<p>Enjoy!</p>
+<p>Note: If you find this useful, or have an issue with the script, please add a comment below. Thanks.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/weather-tcl" rel="bookmark" title="weather.tcl">weather.tcl </a> <small>Update: This script is now part of the eggtcl project....</small></li>
+<li><a href="https://hm2k.org/posts/which-is-the-best-operating-system" rel="bookmark" title="Which is the best operating system?">Which is the best operating system? </a> <small>I&#8217;ve done my research and i&#8217;ve discovered there&#8217;s only 6...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/worldtime-tcl/feed</wfw:commentRss>
+			<slash:comments>6</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">573</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:45 by W3 Total Cache
+-->

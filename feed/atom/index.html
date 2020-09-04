@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?><feed
+	xmlns="http://www.w3.org/2005/Atom"
+	xmlns:thr="http://purl.org/syndication/thread/1.0"
+	xml:lang="en-GB"
+	xml:base="https://hm2k.org/wp-atom.php"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+	<title type="text">HM2K</title>
+	<subtitle type="text">Research and development</subtitle>
+
+	<updated>2012-05-15T23:17:55Z</updated>
+
+	<link rel="alternate" type="text/html" href="http://hm2k.org/" />
+	<id>https://hm2k.org/feed/atom</id>
+	<link rel="self" type="application/atom+xml" href="https://hm2k.org/feed/atom" />
+
+	<generator uri="https://wordpress.org/" version="5.5.1">WordPress</generator>
+	<entry>
+		<author>
+			<name>James Wade</name>
+							<uri>http://www.phurix.net/</uri>
+						</author>
+
+		<title type="html"><![CDATA[Unable to update nameservers: Nameserver doesn&#8217;t exist at the registry]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry" />
+
+		<id>http://labs.phurix.net/?p=3349</id>
+		<updated>2012-05-06T16:28:24Z</updated>
+		<published>2012-05-06T16:28:24Z</published>
+		<category scheme="http://hm2k.org/" term="Internet" /><category scheme="http://hm2k.org/" term="Sysadmin" /><category scheme="http://hm2k.org/" term="dns" /><category scheme="http://hm2k.org/" term="nameservers" /><category scheme="http://hm2k.org/" term="opensrs" /><category scheme="http://hm2k.org/" term="tucows" />
+		<summary type="html"><![CDATA[If you have domains with TuCows OpenSRS you may be faced with this error when you try and set custom name servers on your domain through the OpenSRS manage interface: Unable to update nameservers: Nameserver [ns2.example.co.uk] doesn&#8217;t exist at the registry. Especially if you&#8217;ve recently set a new glue up. In the OpenSRS domain manager [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/php-opensrs-client" rel="bookmark" title="PHP OpenSRS Client">PHP OpenSRS Client </a> <small>This is only a quick message to say that I...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry"><![CDATA[<p>If you have domains with TuCows OpenSRS you may be faced with this error when you try and set custom name servers on your domain through the <a href="https://manage.opensrs.net/index.cgi">OpenSRS manage interface</a>:</p>
+<p style="padding-left: 30px;">Unable to update nameservers: Nameserver [ns2.example.co.uk] doesn&#8217;t exist at the registry.</p>
+<p>Especially if you&#8217;ve recently set a <a href="http://www.nominet.org.uk/registrars/systems/data/nameservers/">new glue up</a>.</p>
+<p>In the OpenSRS domain manager it says:</p>
+<p style="padding-left: 30px;">** IMPORTANT: Before adding additional name servers to your configuration, you should be sure that the name server has setup correctly. 24 &#8211; 48 hours after you submit a request for an additional name server, it will be in the rotation for authoritative lookups and if it is not setup correctly, your site will take a long time to resolve when visitors try to find you.</p>
+<p>You can ignore this for now, here&#8217;s what you need to do first&#8230;</p>
+<p>You, or your admin who has access to the OpenSRS reseller interface needs to find the page in there entitled &#8220;Add Nameserver to All Foreign Registries&#8221; as per <a href="http://www.opensrs.com/docs/opensrsrwi/add_nameserver_to_all_foreign_registries.htm">these instructions</a>:</p>
+<p style="padding-left: 30px;">Add Nameserver to All Foreign Registries<br />
+This interface allows you to add Registered Nameservers to all of the Registries to which the OpenSRS system is connected. If you want to use a COM/NET/ORG nameserver (default.opensrs.net) on a .BIZ domain, you have to first add it to the “foreign” .BIZ Registry using this option. The reason for this is because each Registry keeps a database of “registered nameservers”, and new nameservers at “foreign” registries need to be explicitly added before they can be used to resolve domains in that TLD. Use this interface when you get the error “Unable to add nameservers: Command failed: unable to verify existence of nameserver” when trying to add a foreign nameserver to a domain.</p>
+<p style="padding-left: 30px;">To add a nameserver to all foreign registries</p>
+<ol>
+<li>In the Domain Management section of the RWI, click Add Nameserver to All Foreign Registries.</li>
+<li>In the Nameserver text box, enter the nameserver.</li>
+<li>Click Add Nameserver.</li>
+</ol>
+<p><a href="http://labs.phurix.net/upload/OpenSRS.png"><img loading="lazy" class="aligncenter" title="OpenSRS" src="http://labs.phurix.net/upload/OpenSRS-300x193.png" alt="" width="300" height="193" /></a></p>
+<p>Once you do that you should see a message that says:</p>
+<p style="padding-left: 30px;">.com registry: Successfully added<br />
+.asia registry: Successfully added<br />
+.xxx registry: Successfully added<br />
+.com.au registry: Successfully added<br />
+.biz registry: Successfully added<br />
+.bz registry: Successfully added<br />
+.ca registry: Successfully added<br />
+.cc registry: Successfully added<br />
+.com.cn registry: Successfully added<br />
+.co registry: Successfully added<br />
+.in registry: Successfully added<br />
+.info registry: Successfully added<br />
+.es registry: Successfully added<br />
+.me registry: Successfully added<br />
+.mobi registry: Successfully added<br />
+.name registry: Successfully added<br />
+.nl registry: Successfully added<br />
+.org registry: Successfully added<br />
+.tv registry: Successfully added<br />
+.us registry: Successfully added<br />
+.ws registry: Successfully added<br />
+.pro registry: Successfully added</p>
+<p>Or similar.</p>
+<p>Now we give it 24-48 hours, then you can set custom name servers on your domain via the OpenSRS manage interface.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/php-opensrs-client" rel="bookmark" title="PHP OpenSRS Client">PHP OpenSRS Client </a> <small>This is only a quick message to say that I...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry#comments" thr:count="1"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry/feed/atom" thr:count="1"/>
+			<thr:total>1</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>admin</name>
+							<uri>http://www.phurix.co.uk/</uri>
+						</author>
+
+		<title type="html"><![CDATA[Anti Email Spam in the UK]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/anti-email-spam-in-the-uk" />
+
+		<id>http://www.hm2k.com/?p=51</id>
+		<updated>2012-05-15T23:17:55Z</updated>
+		<published>2012-03-23T15:23:22Z</published>
+		<category scheme="http://hm2k.org/" term="Internet" /><category scheme="http://hm2k.org/" term="antispam" /><category scheme="http://hm2k.org/" term="email" /><category scheme="http://hm2k.org/" term="spam" />
+		<summary type="html"><![CDATA[Many years back I began investigating anti email spam in the UK as a way to defend against the amount amount of email spam we were receiving to certain email addresses. The reason this email address was getting so much spam is because it was harvested by a website spider bot, as the email address was [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+<li><a href="https://hm2k.org/posts/email-address-on-your-website" rel="bookmark" title="email address on your website">email address on your website </a> <small>This is something that people don&#8217;t seem to realise, and...</small></li>
+<li><a href="https://hm2k.org/posts/fax-to-email" rel="bookmark" title="Fax to email">Fax to email </a> <small>Fax to email is perhaps one of the most interesting,...</small></li>
+<li><a href="https://hm2k.org/posts/start-your-own-free-email-service" rel="bookmark" title="Start your own free email service">Start your own free email service </a> <small>I have been interested in starting my own free email...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/anti-email-spam-in-the-uk"><![CDATA[<p>Many years back I began investigating anti email spam in the UK as a way to defend against the amount amount of email spam we were receiving to certain email addresses.</p>
+<p>The reason this email address was getting so much spam is because it was harvested by a website spider bot, as the email address was placed on company website by the previous webmaster.</p>
+<p style="padding-left: 30px;">DO NOT put your email address or any email addresses directly on your website, instead use a form.</p>
+<p>Back then there was only examples of support for US, but very little support in the UK.</p>
+<p>One thing I did find was the <a href="http://www.oft.gov.uk/Consumer/Spam/default.htm">Office Of Fair Trading Spam Tips</a> but they were not very useful, the JunkBusters.com website has some nice tips on &#8220;<a href="http://web.archive.org/web/20091027232014/http://www.junkbusters.com/junkemail.html">junk email</a>&#8220;, if only something existed like this for the UK.</p>
+<p>I discovered that in the US you can send your junk/spam email to <a href="mailto:spam@ftc.gov">spam@ftc.gov</a> and they will pursue law enforcement actions against people sending the emails.</p>
+<p>After I read the <a href="http://www.ico.gov.uk/upload/documents/library/privacy_and_electronic/introductory/rules_~1.pdf">NEW RULES ON EMAIL MARKETING</a> article, I figured I could issue a complaint with the <a href="http://www.ico.gov.uk/complaints/privacy_and_electronic_communications.aspx">Information Commissioner</a> via <a href="http://www.ico.gov.uk/complaints/~/media/documents/library/Privacy_and_electronic/Forms/pecr_complaints_form.doc">this form</a>.</p>
+<p><strong>Update:</strong> In 2010 the BBC offered an article entitled: &#8220;<a href="http://www.bbc.co.uk/webwise/guides/stopping-spam-emails">How can I stop getting spam emails?</a>&#8221; which seems to offer sufficient advice, there&#8217;s also a whole heap of resources in the Dmoz &#8220;<a href="http://www.dmoz.org/Computers/Internet/E-mail/Spam/">email spam</a>&#8221; directory.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+<li><a href="https://hm2k.org/posts/email-address-on-your-website" rel="bookmark" title="email address on your website">email address on your website </a> <small>This is something that people don&#8217;t seem to realise, and...</small></li>
+<li><a href="https://hm2k.org/posts/fax-to-email" rel="bookmark" title="Fax to email">Fax to email </a> <small>Fax to email is perhaps one of the most interesting,...</small></li>
+<li><a href="https://hm2k.org/posts/start-your-own-free-email-service" rel="bookmark" title="Start your own free email service">Start your own free email service </a> <small>I have been interested in starting my own free email...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/anti-email-spam-in-the-uk#comments" thr:count="0"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/anti-email-spam-in-the-uk/feed/atom" thr:count="0"/>
+			<thr:total>0</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>James Wade</name>
+							<uri>http://www.phurix.net/</uri>
+						</author>
+
+		<title type="html"><![CDATA[Migrating IMAP mailboxes to a cPanel server]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server" />
+
+		<id>http://labs.phurix.net/?p=3322</id>
+		<updated>2011-11-07T23:02:22Z</updated>
+		<published>2011-11-07T23:02:22Z</published>
+		<category scheme="http://hm2k.org/" term="Sysadmin" /><category scheme="http://hm2k.org/" term="centos" /><category scheme="http://hm2k.org/" term="cpanel" /><category scheme="http://hm2k.org/" term="imap" /><category scheme="http://hm2k.org/" term="imapsync" /><category scheme="http://hm2k.org/" term="migration" />
+		<summary type="html"><![CDATA[A customer got in touch with us and explained their situation. They need to setup their email on the go and configure some forwarders. Their issue was that they were never given access to the control panel by the account holder and have since lost touch. This unfortunately left them in a situation where they [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server"><![CDATA[<p>A customer got in touch with us and explained their situation.<a href="http://labs.phurix.net/upload/Envelope.png"><img loading="lazy" class="alignright size-full wp-image-3328" title="Envelope" src="http://labs.phurix.net/upload/Envelope.png" alt="" width="256" height="256" srcset="https://hm2k.org/upload/Envelope.png 256w, https://hm2k.org/upload/Envelope-150x150.png 150w" sizes="(max-width: 256px) 100vw, 256px" /></a></p>
+<p>They need to setup their email on the go and configure some forwarders. Their issue was that they were never given access to the control panel by the account holder and have since lost touch.</p>
+<p>This unfortunately left them in a situation where they had no control over their hosting, they asked me to help them out.</p>
+<p>My task was to migrate their existing IMAP mailboxes to their hosting account on one of our cPanel servers&#8230;</p>
+<p><span id="more-3322"></span></p>
+<p>The first thing I did was get their UK domain onto our TAG giving us control over that for a small cost of £10+VAT, which the customer was only happy to pay.</p>
+<p>There are other ways to get control of the domain without the cost, such as dealing with the host directly but in this case, fasthosts refuses to communicate with you unless you&#8217;re a customer. Ridiculous.</p>
+<p>From here on inward, you&#8217;ll need root access to cPanel WHM on your server, or know someone who has.</p>
+<p>At this point you need to start to create your mailboxes on the new server that match up to the existing ones.</p>
+<p>The only issue with this is that you may find you can&#8217;t add &#8220;Remote Domains&#8221; (domains hosted elsewhere).</p>
+<blockquote><p>This item lets you allow cPanel users to create parked and addon domains that resolve to other servers. To make your selection, click the button corresponding to the option you wish to use. This value defaults to Off.</p>
+<p>Warning: Enabling this option can cause major security issues. We strongly recommend that you do not enable this option.</p></blockquote>
+<p>You&#8217;ll need to &#8220;<a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/WHMDocs/TweakSettings#Domains">Allow Remote Domains</a>&#8221; (Under &#8220;Tweak Settings&#8221; in WHM) so you&#8217;re able to add the domain. Once added, you can turn it off again.</p>
+<p>As I said, once the domain is added you can <a href="http://www.cpanel.net/media/tutorials/emailaccounts.htm">create your mailboxes</a> in cPanel to match what you already have.</p>
+<p>I then went ahead and added them to the customer&#8217;s email client (Outlook 2007) to make sure everything was working as expected (it was).</p>
+<p>They should have two sets of accounts added for each email address, the only difference between them should be the servers they use.</p>
+<h3>Migrating</h3>
+<p>This is where the fun starts.</p>
+<p>If you&#8217;ve tried moving messages before in Outlook you&#8217;ll know it&#8217;s pretty slow. The issue is that, you&#8217;re downloading the message from the existing server, copying it to your computer, then uploading it to the other server.</p>
+<p>This is a slow process, especially if you&#8217;re on regular UK broadband. In addition to that, you&#8217;ll find that Outlook will lock up while it waits for the server to respond.</p>
+<p>I tested moving a few thousand messages: it took 8 hours. At this rate it would take around a week to do all of the accounts which isn&#8217;t feasible in a live environment.</p>
+<p>Thunderbird isn&#8217;t much better. There had to be a better solution&#8230;</p>
+<p>I got in touch with cPanel, as they have a dedicated &#8220;migration&#8221; team, however they were asking for shell, ftp or control panel access, none of which the customer had.</p>
+<p>At first I had considered a server side, IMAP compatible email client such as Mutt or PINE, but I felt this may be a bit cumbersome.</p>
+<p>Enter imapsync&#8230;</p>
+<h3>imapsync</h3>
+<p>After a quick search I came across imapsync which appears to be the solution I was looking for.</p>
+<p>It&#8217;s written in Perl and is open source so there&#8217;s no reason it shouldn&#8217;t run on a CentOS server.</p>
+<p>To install imapsync on CentOS (with cPanel) you&#8217;ll need to do the following:</p>
+<p>First of all, imapsync isn&#8217;t in any of the official CentOS repositories so you need to install the <a href="http://wiki.centos.org/AdditionalResources/Repositories/RPMForge">RPMForge repository</a>.</p>
+<p>So, for example, on a CentOS 4 i386 install I would do:</p>
+<blockquote><p>wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.2-2.el4.rf.i386.rpm</p>
+<p>rpm -i rpmforge-release-0.5.2-2.el4.rf.i386.rpm</p></blockquote>
+<p>Now it&#8217;s installed, you can utilise it by using yum combined with &#8220;&#8211;enablerepo=rpmforge&#8221; to install imapsync.</p>
+<p>However, before you go ahead and do that, you need to realise that because cPanel has it&#8217;s own set of perl modules and blocks the OS ones, you need to disable the &#8220;exclude&#8221; line in the yum configuration file.</p>
+<blockquote><p>nano -w /etc/yum.conf</p>
+<p>Note: Use whatever editor you prefer, I&#8217;m using nano. The -w is for no word wrap as this file contains long lines.</p></blockquote>
+<p>In this file, you need to comment out the following like:</p>
+<blockquote><p>#exclude=apache* bind-chroot courier* dovecot* exim* filesystem httpd* mod_ssl* mysql* nsd* perl* php* pr$</p></blockquote>
+<p>The hash (#) at the beginning means it&#8217;ll no longer be parsed, so nothing is excluded.</p>
+<p>Now you can go ahead and install imapsync trouble free:</p>
+<blockquote><p>yum install imapsync &#8211;enablerepo=rpmforge</p></blockquote>
+<p>This should install imapsync and any dependencies (such as the required perl modules).</p>
+<p>The only advice that cPanel gave me when doing this is:</p>
+<blockquote><p>It is possible this could break some components of cPanel, but it should be generally repairable as long as you run &#8220;/scripts/checkperlmodules &#8211;full &#8211;force&#8221; afterwards to rebuild/reinstall the cPanel versions of the various modules.</p></blockquote>
+<p>I suggest you also do that once imapsync is installed to ensure you don&#8217;t break anything in cPanel.</p>
+<h3>Migration</h3>
+<p>Now we have imapsync installed we can actually use it&#8230;</p>
+<blockquote>
+<pre>imapsync \
+       --host1 mail.example.co.uk --authmech1 PLAIN --user1 joe.blogs@example.co.uk --password1 12345678 \
+       --host2 lemon.phurix.com --authmech2 PLAIN --user2 joe.blogs@example.co.uk --password2 99999999</pre>
+</blockquote>
+<p>This should be enough to get you going, but do be aware of the SECURITY issues outlined in the <a href="http://ks.lamiral.info/imapsync/README">imapsync README</a>.</p>
+<p>Once this is done, all you need to do is get the name servers (or just the MX) changed on the domain to new hosting and after about 4 hours you should be good to go.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-requested-url-cpanel-was-not-found-on-this-server" rel="bookmark" title="The requested URL /cpanel was not found on this server">The requested URL /cpanel was not found on this server </a> <small>If you run cPanel servers, then you may at some...</small></li>
+<li><a href="https://hm2k.org/posts/installing-subversion-on-a-cpanel-server" rel="bookmark" title="Installing Subversion on a cPanel Server">Installing Subversion on a cPanel Server </a> <small>It should be easy right? Just &#8220;yum install subversion&#8221;. Nope. You...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/installing-ioncube-loader-with-cpanel-on-centos" rel="bookmark" title="Installing IonCube Loader with cPanel on CentOS">Installing IonCube Loader with cPanel on CentOS </a> <small>There seems to be limited details of how this is...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server#comments" thr:count="1"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/migrating-imap-mailboxes-to-a-cpanel-server/feed/atom" thr:count="1"/>
+			<thr:total>1</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>James Wade</name>
+							<uri>http://www.phurix.net/</uri>
+						</author>
+
+		<title type="html"><![CDATA[Is Google PageRank dead?]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/is-google-pagerank-dead" />
+
+		<id>http://labs.phurix.net/?p=3314</id>
+		<updated>2011-10-06T21:30:30Z</updated>
+		<published>2011-10-06T21:30:30Z</published>
+		<category scheme="http://hm2k.org/" term="Development" /><category scheme="http://hm2k.org/" term="Internet" /><category scheme="http://hm2k.org/" term="google" /><category scheme="http://hm2k.org/" term="pagerank" /><category scheme="http://hm2k.org/" term="php" />
+		<summary type="html"><![CDATA[PageRank is dead, long live PageRank. As we said recently, there&#8217;s been lots of speculation as to whether PageRank is dead or not. It isn&#8217;t, just Google are moving the goals a bit. Basically, they don&#8217;t want you to focus on PageRank but it&#8217;s still massively important to them. All this talk of dead, reminds me of [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/is-google-pagerank-dead"><![CDATA[<p>PageRank is dead, long live PageRank.<img loading="lazy" class="alignright size-medium wp-image-3317" title="Dead Parrot" src="http://labs.phurix.net/upload/dead-parrot-1-300x168.png" alt="" width="300" height="168" srcset="https://hm2k.org/upload/dead-parrot-1-300x168.png 300w, https://hm2k.org/upload/dead-parrot-1.png 853w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>As we said <a href="http://labs.phurix.net/posts/pagerank-viewer-launch">recently</a>, there&#8217;s been lots of speculation as to whether PageRank is dead or not. It isn&#8217;t, just Google are moving the goals a bit. Basically, they don&#8217;t want you to focus on PageRank but it&#8217;s still massively important to them.</p>
+<p>All this talk of dead, reminds me of the <a href="http://en.wikipedia.org/wiki/Dead_Parrot_sketch">Monty Python dead parrot sketch</a>, only in this case, it isn&#8217;t dead. An anti-dead-parrot if you will.</p>
+<p>So what&#8217;s with all the <a href="http://www.google.co.uk/news?q=pagerank+dead">news about PageRank being dead</a>? Google just changed their code, that&#8217;s all&#8230;</p>
+<p><span id="more-3314"></span></p>
+<h3>What&#8217;s going on then?</h3>
+<p>Originally, everyone used the code in the Internet Explorer plugin, then the Firefox plugin came along.</p>
+<p>The common thing about both was the URL they used to lookup the PageRank:</p>
+<blockquote><p>http://toolbarqueries.google.com/search?client=navclient-auto&amp;ch=%s&amp;features=Rank&amp;q=info:%s</p>
+<p>Note: The first %s is the checkhash, while the second is the actual URL you&#8217;re looking up.</p></blockquote>
+<p>Back in August, <a href="http://james.slaterspage.com/scraping-google-related-with-bonus-pagerank/">James Slater</a> was investigating the new <a href="https://chrome.google.com/webstore/detail/cikfgcnnhcibkipoldbjegmeojnkaled">Google Related chrome plugin</a> only to discover the new PageRank lookup URLs:</p>
+<blockquote><p>http://toolbarqueries.google.com/tbr?client=navclient-auto&amp;ch=%s&amp;features=Rank&amp;q=info:%s</p></blockquote>
+<p>Also, if you used to use the host &#8220;www.google.com&#8221; this no longer works either, use &#8220;toolbarqueries.google.com&#8221; instead.</p>
+<h3>Let there be code!</h3>
+<p>As part of our ongoing commitment to our <a href="http://pagerank.phurix.net/">PageRank lookup tool</a>, not only have we fixed our code, but we&#8217;ve released working PageRank scripts to GitHub.</p>
+<ul>
+<li><a href="https://github.com/phurix/pagerank/">PageRank on GitHub</a></li>
+</ul>
+<p>PageRank is dead, long live PageRank.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/is-google-pagerank-dead#comments" thr:count="5"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/is-google-pagerank-dead/feed/atom" thr:count="5"/>
+			<thr:total>5</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>James Wade</name>
+							<uri>http://www.phurix.net/</uri>
+						</author>
+
+		<title type="html"><![CDATA[Integrate a newsletter into your website]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/integrate-a-newsletter-into-your-website" />
+
+		<id>http://labs.phurix.net/?p=3257</id>
+		<updated>2012-01-30T22:14:45Z</updated>
+		<published>2011-09-07T13:26:56Z</published>
+		<category scheme="http://hm2k.org/" term="Development" /><category scheme="http://hm2k.org/" term="mailchimp" /><category scheme="http://hm2k.org/" term="mailing lists" /><category scheme="http://hm2k.org/" term="mailman" /><category scheme="http://hm2k.org/" term="newsletter" /><category scheme="http://hm2k.org/" term="php" />
+		<summary type="html"><![CDATA[Over the years I&#8217;ve been asked how to integrate a newsletter into a website quite a few times. These days I often find myself recommending a third party service such as MailChimp, however I soon discovered that as brilliant as it is, MailChimp its not for everyone. For example, many of our web hosting clients [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/british-fuel-cost-per-mile" rel="bookmark" title="British fuel cost per mile">British fuel cost per mile </a> <small>I was trying to work out how to estimate how...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-copyright-your-website" rel="bookmark" title="How to Copyright your website">How to Copyright your website </a> <small>People often ask me how to go about getting their...</small></li>
+<li><a href="https://hm2k.org/posts/php-coding-standards-and-best-practices" rel="bookmark" title="PHP coding standards and best practices">PHP coding standards and best practices </a> <small>I have been using PHP for a long time now,...</small></li>
+<li><a href="https://hm2k.org/posts/free-icons" rel="bookmark" title="Free icon sets for your website">Free icon sets for your website </a> <small>If you don&#8217;t have the time to make your own...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/integrate-a-newsletter-into-your-website"><![CDATA[<p><a href="http://labs.phurix.net/upload/mailman-par-avion.png"><img loading="lazy" class="alignright size-medium wp-image-3260" title="Mailman powering our Newsletter" src="http://labs.phurix.net/upload/mailman-par-avion-300x165.png" alt="" width="300" height="165" srcset="https://hm2k.org/upload/mailman-par-avion-300x165.png 300w, https://hm2k.org/upload/mailman-par-avion.png 650w" sizes="(max-width: 300px) 100vw, 300px" /></a>Over the years I&#8217;ve been asked how to integrate a newsletter into a website quite a few times.</p>
+<p>These days I often find myself recommending a third party service such as <a href="http://mailchimp.com/">MailChimp</a>, however I soon discovered that as brilliant as it is, MailChimp its not for everyone.</p>
+<p>For example, many of our web hosting clients want to run their own mail campaigns through their own website rather than use a third party service.</p>
+<p><span id="more-3257"></span></p>
+<h3>What software should we use?</h3>
+<p>From memory there&#8217;s a few ways to do that:</p>
+<ul>
+<li><a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/CpanelDocs/MailingLists">Mailman</a> &#8211; Installed with cPanel</li>
+<li><a href="http://www.phplist.com/">PHPList</a> &#8211; Install yourself or through fantastico, I&#8217;m not a fan</li>
+<li><a href="http://www.greatcircle.com/majordomo/">Majordomo</a> &#8211; Not installed</li>
+</ul>
+<p>There&#8217;s quite a few other &#8220;<a href="http://en.wikipedia.org/wiki/Category:Free_mailing_lists">free mailing list</a>&#8221; solutions and there&#8217;s plenty of <a href="http://alternativeto.net/software/mailman/">alternatives to Mailman</a>, but Mailman is the preferred option for us, mainly because it&#8217;s reliable and established&#8230;</p>
+<blockquote><p>&#8220;cPanel currently uses Mailman, which is an open source product under the GNU Project&#8221;</p>
+<p>&#8211; <a href="http://www.cpanel.net/podcast?page_id=673">Adam Wien, Systems Administrator</a></p></blockquote>
+<p>It&#8217;s reassuring when software is used by a vendor such as cPanel, as you know it&#8217;s likely to be supported for the foreseeable future.</p>
+<p>It&#8217;s really easy to <a href="http://docs.cpanel.net/twiki/bin/view/AllDocumentation/CpanelDocs/MailingLists">get started</a> with the Mailman Mailing Lists in cPanel, however there&#8217;s even a <a href="http://www.cpanel.net/media/tutorials/mailinglists.htm">video tutorial</a> if you&#8217;re a little unsure.</p>
+<blockquote><p>Tip: When you setup your mailing list call it &#8220;newsletter&#8221; so its purpose is easy to identify.</p></blockquote>
+<p>Now we&#8217;ve decided what software we&#8217;re using and we&#8217;ve setup our newsletter mailing list, we can now actually integrate it with our website.</p>
+<p>When I first started looking into this, there wasn&#8217;t many ways to integrate Mailman using PHP, just an outdated article entitled <a href="http://wiki.list.org/pages/viewpage.action?pageId=4030648#">How do I integrate Mailman with PHP, or any other web enabling technology?</a></p>
+<p>Don&#8217;t worry about that, because we&#8217;re here to help&#8230;</p>
+<h3>Introducing the Mailman Widget for WordPress</h3>
+<p>What we want to achieve here is a widget on our website so users are able to subscribe to our newsletter.</p>
+<p>If you&#8217;re using WordPress, this is no problem as we&#8217;ve got a WordPress Plugin to do it for you:</p>
+<ul>
+<li><a href="http://wordpress.org/extend/plugins/mailman-widget/">Mailman Widget</a></li>
+</ul>
+<p>Simply login to your WordPress site as you normally would and go to the <a href="http://codex.wordpress.org/Plugins_Add_New_Screen">Add New Plugin</a> screen. Just look for the &#8220;Mailman Widget&#8221;. If in doubt, take a look at the <a href="http://wordpress.org/extend/plugins/mailman-widget/screenshots/">Mailman Widget screenshots</a> to help you out.</p>
+<h3>Not using WordPress? Don&#8217;t panic!</h3>
+<p>We can use exactly the same library that&#8217;s used in the <em>Mailman Widget</em> on <em>any</em> PHP based website.</p>
+<ul>
+<li><a href="http://php-mailman.sourceforge.net/">PHP-Mailman</a></li>
+</ul>
+<p>Simply download the file and take a look at the example to get you started.</p>
+<h3>The future of PHP Mailman</h3>
+<p>In future, using PHP Mailman should be even easier as it is turned into a PHP Pear package called Services_Mailman.</p>
+<p>You can now download the Pear package via github:</p>
+<ul>
+<li><a href="https://github.com/pear/Services_Mailman">Services_Mailman</a></li>
+</ul>
+<p>Simply click the download button and extract the files. You can either require it like a normal class or install it as a Pear package by running the following:</p>
+<blockquote><p>pear install package.xml</p></blockquote>
+<p>Once the <a href="http://pear.php.net/pepr/pepr-proposal-show.php?id=672">proposal for Services_Mailman</a> has been passed, you should be able to simply do &#8220;pear install Services_Mailman&#8221; as it will be added to the Pear channel.</p>
+<h3>In summary</h3>
+<p>I hope this helps make it easier for you to add a newsletter to your website. Despite the rise of social media (such as twitter) email is still the number 1 way to communicate online, so it&#8217;s never been more important to keep in touch with your customers or peers.</p>
+<p><strong>Good luck!</strong></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/british-fuel-cost-per-mile" rel="bookmark" title="British fuel cost per mile">British fuel cost per mile </a> <small>I was trying to work out how to estimate how...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-copyright-your-website" rel="bookmark" title="How to Copyright your website">How to Copyright your website </a> <small>People often ask me how to go about getting their...</small></li>
+<li><a href="https://hm2k.org/posts/php-coding-standards-and-best-practices" rel="bookmark" title="PHP coding standards and best practices">PHP coding standards and best practices </a> <small>I have been using PHP for a long time now,...</small></li>
+<li><a href="https://hm2k.org/posts/free-icons" rel="bookmark" title="Free icon sets for your website">Free icon sets for your website </a> <small>If you don&#8217;t have the time to make your own...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/integrate-a-newsletter-into-your-website#comments" thr:count="1"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/integrate-a-newsletter-into-your-website/feed/atom" thr:count="1"/>
+			<thr:total>1</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>James Wade</name>
+							<uri>http://www.phurix.net/</uri>
+						</author>
+
+		<title type="html"><![CDATA[Google&#8217;s Official Profanity API]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/googles-official-profanity-api" />
+
+		<id>http://labs.phurix.net/?p=3180</id>
+		<updated>2011-08-17T13:05:40Z</updated>
+		<published>2011-08-17T10:09:15Z</published>
+		<category scheme="http://hm2k.org/" term="Development" /><category scheme="http://hm2k.org/" term="Internet" /><category scheme="http://hm2k.org/" term="api" /><category scheme="http://hm2k.org/" term="bad words" /><category scheme="http://hm2k.org/" term="json" /><category scheme="http://hm2k.org/" term="php" /><category scheme="http://hm2k.org/" term="profanity" />
+		<summary type="html"><![CDATA[Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new website which asks: &#8220;What do you love?&#8221; (wdyl.com). So, perhaps I was a bit hasty writing off WhoisX. The list of profanities was discovered in the Javascript on the website, however Google reacted quickly and switched this to a URL lookup instead of a Javascript one therefore keeping [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/googles-official-profanity-api"><![CDATA[<p><a href="http://www.wdyl.com/?q=butt hole lane"><img loading="lazy" class="alignright size-medium wp-image-3230" title="Butt_Hole_Road" src="http://i.imgur.com/U2IWJ.jpg" alt="" width="300" height="199" /></a>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new website which asks: <a href="http://wdyl.com/">&#8220;What do you love?&#8221;</a> (wdyl.com).</p>
+<p>So, perhaps I was a bit hasty <a href="http://labs.phurix.net/posts/the-rise-and-fall-of-whoisx">writing off WhoisX</a>.</p>
+<p>The list of profanities was <a href="http://fffff.at/googles-official-list-of-bad-words/">discovered</a> in the Javascript on the website, however Google reacted quickly and switched this to a URL lookup instead of a Javascript one therefore keeping the list away from prying eyes.</p>
+<p>However, what this does mean is now we have an API to play with:<span id="more-3180"></span></p>
+<blockquote><p><a href="http://www.wdyl.com/profanity?q=xxx">http://www.wdyl.com/profanity?q=xxx</a></p></blockquote>
+<p>This will return a true JSON response:</p>
+<blockquote><p>{&#8220;response&#8221;: &#8220;true&#8221;}</p></blockquote>
+<p>While looking up something like &#8220;lol&#8221; will return a false response:</p>
+<blockquote><p><a href="http://www.wdyl.com/profanity?q=lol">http://www.wdyl.com/profanity?q=lol</a></p>
+<p>{&#8220;response&#8221;: &#8220;false&#8221;}</p></blockquote>
+<p>All in all a pretty simple and easy way to figure out whether Google thinks it is a bad word or not.</p>
+<p>On the down side, you can&#8217;t easily use it on your site, as, if you try to call it by AJAX you&#8217;ll be faced by the following error:</p>
+<blockquote><p>XMLHttpRequest cannot load http://www.wdyl.com/profanity. Origin http://example.org is not allowed by Access-Control-Allow-Origin.</p></blockquote>
+<p>On the upside, we don&#8217;t want to do that anyway, we can to use it from PHP.</p>
+<blockquote>
+<pre>&lt;?php
+
+$q=isset($_REQUEST['q'])?urlencode($_REQUEST['q']):'';
+readfile('http://www.wdyl.com/profanity?q='.$q);
+
+?&gt;</pre>
+</blockquote>
+<p>That&#8217;s right, that&#8217;s all there is to it. Simply copy that into the a file called &#8220;profanity.php&#8221; and you&#8217;re ready to go!</p>
+<p>Now you can do a <a href="http://api.jquery.com/jQuery.getJSON/">JSON cal</a>l to your &#8216;profanity.php&#8217; to tell you whether the word is bad or not.</p>
+<p>If that&#8217;s not enough, you could try using the Google Profanity API to avoid displaying ads on pages that contain profanities.</p>
+<p>Now if only there was a way to avoid the <a href="http://en.wikipedia.org/wiki/Scunthorpe_problem">Scunthorp problem</a>&#8230;</p>
+<p>Going back to the reported Adsense problem on WhoisX.co.uk, the example query was:</p>
+<blockquote><p>adult-hardcore-sex.cuntspace.me.uk</p></blockquote>
+<p>Passing this to the API returned false.</p>
+<p>But, changing all the non-word characters to spaces has a different effect:</p>
+<blockquote><p>adult hardcore sex cuntspace me uk</p>
+<p>{&#8220;response&#8221;: &#8220;true&#8221;}</p></blockquote>
+<p>This is done in PHP using a simple regular expression:</p>
+<blockquote><p>echo preg_replace(&#8216;/[\W+]/&#8217;,&#8217; &#8216;,&#8217;adult-hardcore-sex.cuntspace.me.uk&#8217;);</p></blockquote>
+<p>I&#8217;m not sure this exactly solves the Scunthorp problem, but it definitely does identify &#8220;sex&#8221; as an adult theme which is perfect.</p>
+<p>Now to turn it into a usable function:</p>
+<blockquote>
+<pre>&lt;?php
+
+function is_profanity($q,$json=0) {
+	$q=urlencode(preg_replace('/[\W+]/',' ',$q));
+	$p=file_get_contents('http://www.wdyl.com/profanity?q='.$q);
+	if ($json) { return $p; }
+	$p=json_decode($p);
+	return ($p-&gt;response=='true')?1:0;
+}
+
+$q=isset($_REQUEST['q'])?$_REQUEST['q']:'';
+echo is_profanity($q);
+
+?&gt;</pre>
+</blockquote>
+<p>We can use this function to check whether the query is considered a profanity or not. If it is, it will return a 1, otherwise a 0 is returned.</p>
+<p>This function can now be used to include kittens (or whatever) rather than Google Adsense Ads on a pages with &#8220;<a href="https://www.google.com/adsense/support/as/bin/answer.py?hl=en&amp;answer=105957">adult themed</a>&#8221; content.</p>
+<p>Brilliant!</p>
+<p>Now to submit for <a href="https://www.google.com/adsense/support/bin/request.py?contact_type=policy_violation_appeal">reconsideration</a>&#8230;</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/googles-official-profanity-api#comments" thr:count="2"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/googles-official-profanity-api/feed/atom" thr:count="2"/>
+			<thr:total>2</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>James Wade</name>
+							<uri>http://www.phurix.net/</uri>
+						</author>
+
+		<title type="html"><![CDATA[The rise and fall of WhoisX]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" />
+
+		<id>http://labs.phurix.net/?p=3051</id>
+		<updated>2011-08-15T08:33:38Z</updated>
+		<published>2011-08-15T08:33:38Z</published>
+		<category scheme="http://hm2k.org/" term="Development" /><category scheme="http://hm2k.org/" term="Internet" />
+		<summary type="html"><![CDATA[WhoisX is a domain name lookup service, similar to the whois service provided by &#8220;domain tools&#8221;, but ours was primarily for UK domain names. It began as a small project to help people check whether a domain was available or not. When a domain was available the visitor was linked to a place they could buy the domain. [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+<li><a href="https://hm2k.org/posts/whoisx-relaunch" rel="bookmark" title="WhoisX relaunch">WhoisX relaunch </a> <small>We&#8217;re ready now&#8230; So, we&#8217;ve been running WhoisX since 2004,...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/the-rise-and-fall-of-whoisx"><![CDATA[<p><a href="http://labs.phurix.net/upload/fail.png"><img loading="lazy" class="alignright size-medium wp-image-3143" title="Fail narwhal" src="http://labs.phurix.net/upload/fail-300x225.png" alt="" width="300" height="225" srcset="https://hm2k.org/upload/fail-300x225.png 300w, https://hm2k.org/upload/fail.png 500w" sizes="(max-width: 300px) 100vw, 300px" /></a><a href="http://whoisx.co.uk/">WhoisX</a> is a domain name lookup service, similar to the whois service provided by &#8220;domain tools&#8221;, but ours was primarily for UK domain names.</p>
+<p>It began as a small project to help people check whether a domain was available or not. When a domain was available the visitor was linked to a place they could buy the domain.</p>
+<p><span id="more-3051"></span>We developed out the project into more of a whois lookup service because this was useful to customers who wanted to see details about their domain using a web service rather than understanding how to do a whois lookup from the command line.</p>
+<p>However, we soon came to realise that the site was causing a high load on the server because it was being hammered by bots. These bots were visiting thousands of URLs in an attempt to get WhoisX to generate a link back to them. Little do they know that, that&#8217;s not how it works.</p>
+<p>The project was revamped with a whole load of new features including caching and load checking, which worked very well.</p>
+<p>It no longer just did domain lookups either, it did hostnames (showing the &#8220;domain parts&#8221; making it easy to navigate), ip lookups, country code lookups, reverse ip lookups, mail server lookups and various dns queries all displayed within a few seconds.</p>
+<p>We expanded the &#8220;social&#8221; aspect to make it easier to share and made it ad supported using Google Adwords.</p>
+<p>Personally, I found the tool very useful to quickly check a domain, or drop a link into an email so customers could check for themselves.</p>
+<p>This was all working great. The tool was useful to us and it was bringing in a small revenue, so it was all worth while.</p>
+<p>However, this ended when Google emailed with the subject &#8220;AdSense ad serving has been disabled to your site&#8221;, the email went on to say:</p>
+<blockquote><p>Hello,</p>
+<p>During a recent review of your account we found that you are currently<br />
+displaying Google ads in a manner that is not compliant with our program<br />
+policies<br />
+(<a href="https://www.google.com/support/adsense/bin/answer.py?answer=48182&amp;stc=aspe-1pp-en">https://www.google.com/support/adsense/bin/answer.py?answer=48182&amp;stc=aspe-1pp-en</a>).</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+EXAMPLE PAGE: <a href="http://whoisx.co.uk/adult-hardcore-sex.cuntspace.me.uk">http://whoisx.co.uk/adult-hardcore-sex.cuntspace.me.uk</a></p>
+<p>Please note that this URL is an example and that the same violations may<br />
+exist on other pages of this website or other sites in your network.</p>
+<p>VIOLATION(S) FOUND:</p>
+<p>LINKS TO ADULT CONTENT: As stated in our program policies, AdSense<br />
+publishers are not permitted to place Google ads on pages with adult or<br />
+mature content. This includes displaying ads on pages that provide links<br />
+for or drive traffic to adult or mature sites. More information about this<br />
+policy can be found in our help center<br />
+(<a href="https://www.google.com/adsense/support/as/bin/answer.py?hl=en&amp;answer=105957">https://www.google.com/adsense/support/as/bin/answer.py?hl=en&amp;answer=105957</a>).</p>
+<p>ADULT SEARCH RESULTS: As stated in our program policies, AdSense<br />
+publishers are not permitted to place Google ads on pages with adult or<br />
+mature content. This includes search results pages for adult or mature<br />
+terms, images or videos with adult keywords or tags, and user generated<br />
+comments that are mature in nature. More information about this policy can<br />
+be found in our help center (<br />
+<a href="https://www.google.com/adsense/support/as/bin/answer.py?hl=en&amp;answer=105957">https://www.google.com/adsense/support/as/bin/answer.py?hl=en&amp;answer=105957</a><br />
+).</p>
+<p>ACTION TAKEN: We have disabled ad serving to your site.</p>
+<p>ACCOUNT STATUS: ACTIVE<br />
+Your AdSense account remains active. However, please note that our team<br />
+reserves the right to disable your account at any time. As such, we<br />
+encourage you to become familiar with our program policies and monitor<br />
+your network accordingly.</p>
+<p>Issue ID# XXXXXXX</p>
+<p>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8211;<br />
+Thank you for your cooperation.</p>
+<p>Sincerely,</p>
+<p>The Google AdSense Team<br />
+&#8212;&#8212;&#8212;&#8212;&#8212;-<br />
+For more information regarding this email, please visit our Help Center:<br />
+<a href="https://www.google.com/adsense/support/bin/answer.py?answer=113058&amp;stc=aspe-ai4-en">https://www.google.com/adsense/support/bin/answer.py?answer=113058&amp;stc=aspe-ai4-en</a>.</p></blockquote>
+<p>Although I agree with Google&#8217;s terms, this was an outside case and I couldn&#8217;t understand why they had chosen the example they had, since the &#8220;visit website&#8221; link on the page links to a website that doesn&#8217;t exist.</p>
+<p>At the very worst, the URL contains an adult word, which is almost impossible to filter due to the &#8220;<a href="http://en.wikipedia.org/wiki/Scunthorpe_problem">Scunthorpe problem</a>&#8221; and that Google have not supplied a &#8220;bad word list&#8221; for us to work off.</p>
+<p>This meant that without spending a lot of time on developing a very complex filter system so that ads aren&#8217;t displayed on pages containing potentially bad words, there was very little we could do about it.</p>
+<p>So, this signals the end for <a href="http://whoisx.co.uk/">WhoisX</a> as we know it.</p>
+<p>Consider this 30 days that the site will be closing down in it&#8217;s current form.</p>
+<p>However, we do have plans to open a new domain lookup service, supported by Phurix in it&#8217;s place.</p>
+<p>Watch this space!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+<li><a href="https://hm2k.org/posts/whoisx-relaunch" rel="bookmark" title="WhoisX relaunch">WhoisX relaunch </a> <small>We&#8217;re ready now&#8230; So, we&#8217;ve been running WhoisX since 2004,...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx#comments" thr:count="1"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx/feed/atom" thr:count="1"/>
+			<thr:total>1</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>James Wade</name>
+							<uri>http://www.phurix.net/</uri>
+						</author>
+
+		<title type="html"><![CDATA[What is my IP?]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/what-is-my-ip" />
+
+		<id>http://labs.phurix.net/?p=3193</id>
+		<updated>2011-08-09T09:01:08Z</updated>
+		<published>2011-08-09T08:48:14Z</published>
+		<category scheme="http://hm2k.org/" term="Development" /><category scheme="http://hm2k.org/" term="Internet" /><category scheme="http://hm2k.org/" term="api" /><category scheme="http://hm2k.org/" term="ip address" /><category scheme="http://hm2k.org/" term="php" /><category scheme="http://hm2k.org/" term="regex" /><category scheme="http://hm2k.org/" term="what is my ip" />
+		<summary type="html"><![CDATA[An IP address is a unique number which identifies a machine on a network. On the Internet IP addresses are allocated in blocks to ISPs in each country by regional registries, making it possible to identify which country an IP address originated in. Often, if you are connected to the Internet behind a router, you [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/what-is-my-ip"><![CDATA[<p><img loading="lazy" class="alignright size-medium wp-image-3199" title="500px-Coffee_IP.svg" src="http://labs.phurix.net/upload/500px-Coffee_IP.svg_-300x225.png" alt="" width="300" height="225" srcset="https://hm2k.org/upload/500px-Coffee_IP.svg_-300x225.png 300w, https://hm2k.org/upload/500px-Coffee_IP.svg_.png 500w" sizes="(max-width: 300px) 100vw, 300px" />An <a href="http://en.wikipedia.org/wiki/IP_address">IP address</a> is a unique number which identifies a machine on a network.</p>
+<p>On the Internet IP addresses are allocated in blocks to ISPs in each country by regional registries, making it possible to identify which country an IP address originated in.</p>
+<p>Often, if you are connected to the Internet behind a router, you share an online IP address with everyone else on your local area network (LAN).</p>
+<p>Sometimes you need to know your external IP address and using something like <a href="http://en.wikipedia.org/wiki/Ipconfig">ipconfig</a> will only return your LAN IP address (something like 192.168.0.1).</p>
+<p><span id="more-3193"></span>That is why many &#8220;what is my ip&#8221; websites exist, making it easy for you to lookup your external IP address.</p>
+<p>My favourite IP lookup service has been for a long time one run by NASDAQ-100 content delivery specialists &#8220;Akamai Technologies&#8221;:</p>
+<ul>
+<li><a href="http://whatismyip.akamai.com/">whatismyip.akamai.com</a></li>
+</ul>
+<p>It&#8217;s brilliant in its simplicity but it&#8217;s not very pretty.</p>
+<p>We decided to do something different. We made a pretty &#8220;What is my IP address?&#8221; lookup:</p>
+<ul>
+<li><a href="http://ip.phurix.net/">ip.phurix.net</a></li>
+</ul>
+<p>Part of its beauty is that the audience its aimed at is able to quickly read and understand the information at a glance, without any prompts. While those who don&#8217;t understand it can marvel at its pretty form and ponder over its usefulness.</p>
+<p>The other part of its beauty is that it&#8217;s <em>highly <a href="http://en.wiktionary.org/wiki/parsable">parsable</a></em>.</p>
+<p>It&#8217;s easy to parse the IP address, mainly because the presentation (CSS) is separate from the markup (HTML), but also because of the headers.</p>
+<p>Here&#8217;s a short demonstration to show how you can use the headers to get the IP address using this tool:</p>
+<blockquote><p>&lt;?php $h=get_headers(&#8216;http://ip.phurix.net&#8217;,1); echo trim($h[&#8216;Location&#8217;],&#8217;/&#8217;); ?&gt;</p></blockquote>
+<p>However, this method isn&#8217;t very portable, so may not be suitable if you&#8217;re checking against multiple sources at once.</p>
+<p>So instead, we can also demonstrate using a simple regular expression and a function that can get http contents (such as file_get_contents() in PHP).</p>
+<blockquote><p>&lt;?php echo preg_replace(&#8216;/.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*/s&#8217;,&#8217;$1&#8242;,file_get_contents(&#8216;http://ip.phurix.net&#8217;));?&gt;</p></blockquote>
+<p>The brilliance in this little snippet is that it will work with <em>any</em> useful &#8220;What is my IP?&#8221; lookup website.</p>
+<p>So as you can see, it&#8217;s really easy to work with as a pretty API as well.</p>
+<p>Beyond the IP address, you only need to look at the source code to understand that it&#8217;s easy to parse the other details.</p>
+<p>I hope you found this useful!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/what-is-my-ip#comments" thr:count="0"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/what-is-my-ip/feed/atom" thr:count="0"/>
+			<thr:total>0</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>James Wade</name>
+							<uri>http://www.phurix.net/</uri>
+						</author>
+
+		<title type="html"><![CDATA[PageRank Viewer Launch]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/pagerank-viewer-launch" />
+
+		<id>http://labs.phurix.net/?p=3142</id>
+		<updated>2011-08-03T14:55:28Z</updated>
+		<published>2011-08-03T14:55:28Z</published>
+		<category scheme="http://hm2k.org/" term="Development" /><category scheme="http://hm2k.org/" term="Internet" /><category scheme="http://hm2k.org/" term="google" /><category scheme="http://hm2k.org/" term="pagerank" /><category scheme="http://hm2k.org/" term="php" />
+		<summary type="html"><![CDATA[Back in 2007, we were developing code for our domain lookup service. One of the features we wanted was to display the Google PageRank of a domain right there in the lookup along side the whois details. At the time we didn&#8217;t know how to pull this information and there was very limited details on [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/pagerank-viewer-launch"><![CDATA[<p><a href="http://pagerank.phurix.net/"><img loading="lazy" class="alignright" title="pagerank" src="http://labs.phurix.net/upload/pagerank-300x225.png" alt="" width="300" height="225" /></a>Back in 2007, we were developing code for our domain lookup service.</p>
+<p>One of the features we wanted was to display the Google PageRank of a domain right there in the lookup along side the whois details.</p>
+<p>At the time we didn&#8217;t know how to pull this information and there was very limited details on it, so some research was required which resulted in a <a href="http://labs.phurix.net/projects/pagerank">PageRank PHP script</a>.</p>
+<p>Over time, the resulting &#8220;pagerank.php&#8221; script became very popular and was developed further by fixing bugs and making it easier to use.</p>
+<p>Now we wanted to show off our work in the form of a demo, so we launched a website&#8230;</p>
+<p><span id="more-3142"></span>We&#8217;ve had a demo of the <a href="http://pagerankviewer.com/">PageRank Viewer</a> online since 2010, but this week we&#8217;ve developed a whole new site along side entirely new code.</p>
+<p>The original code we used was reverse engineered from the Internet Explorer toolbar, however it was much later that improved code based on the Google Toolbar for Mozilla Firefox surfaced.</p>
+<p>The code from the Google Toolbar for Mozilla Firefox was interesting. By downloading the plugin &#8220;xpi&#8221; file, unzipping it and taking a look at the javascript you are able to see that Google regards PageRank quite highly or has sense of humour:</p>
+<blockquote><p>HASH_SEED_=&#8221;Mining PageRank is AGAINST GOOGLE&#8217;S TERMS OF SERVICE. Yes, I&#8217;m talking to you, scammer.&#8221;;</p></blockquote>
+<p>The simplicity of this code made it very easy to port over to any scripting language. So along side the launch of the all new PageRank Viewer website, we&#8217;re also shipping code in PHP, Python, Perl, TCL, C++ and D, all with the new code so you can write your own solution.</p>
+<p>We bring this to you just in time too, there&#8217;s a perceived deprecation of PageRank after Google didn&#8217;t offer any official PageRank tool in their Google Chrome web browser.</p>
+<p>PageRank was removed from webmaster tools, dismissed by a Google employee who said:</p>
+<blockquote><p>&#8220;it was silly to tell people not to think about it, but then to show them the data, implying that they should look at it&#8221;</p>
+<p>&#8211; <a href="http://www.google.com/support/forum/p/Webmasters/thread?tid=6a1d6250e26e9e48&amp;hl=en">Susan Moskwa 14/10/2009</a></p></blockquote>
+<p>Although we agree with the point Google is trying to make, we felt there is still a lot of value on PageRank to webmasters.</p>
+<p>For example, Google have made it very clear that having a reliable web hosting provider will help with ranking.</p>
+<p>With that in mind, we decided to redevelop the PageRank Viewer and release new code to improve availability of PageRank lookups.</p>
+<p>We welcome the all new <a href="http://pagerank.phurix.net/">PageRank Viewer</a> to the family as a Phurix Labs project.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/pagerank-viewer-launch#comments" thr:count="1"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/pagerank-viewer-launch/feed/atom" thr:count="1"/>
+			<thr:total>1</thr:total>
+			</entry>
+		<entry>
+		<author>
+			<name>James Henry</name>
+							<uri>http://www.phurix.co.uk/</uri>
+						</author>
+
+		<title type="html"><![CDATA[Presenting Coinb.in]]></title>
+		<link rel="alternate" type="text/html" href="https://hm2k.org/posts/presenting-coinb-in" />
+
+		<id>http://labs.phurix.net/?p=3070</id>
+		<updated>2011-07-27T11:00:21Z</updated>
+		<published>2011-07-27T10:22:20Z</published>
+		<category scheme="http://hm2k.org/" term="Development" /><category scheme="http://hm2k.org/" term="Internet" /><category scheme="http://hm2k.org/" term="Software" />
+		<summary type="html"><![CDATA[Bitcoin is a peer-to-peer cryto currency and we&#8217;ve been working on a free service for bitcoin users to help with accepting payments. Coinb.in is what is known as a &#8220;Bitcoin eWallet Service&#8221; with an easily accessible API aimed at web developers, to allow the acceptance of bitcoins and to process the payments automatically and anonymously from our network via [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/tracking-an-ip-address" rel="bookmark" title="Tracking an IP address">Tracking an IP address </a> <small>In my job I have to manage lots of machines...</small></li>
+<li><a href="https://hm2k.org/posts/longip-script" rel="bookmark" title="longip perl script">longip perl script </a> <small>I wanted to create a script that would convert a...</small></li>
+</ol>
+</div>
+]]></summary>
+
+					<content type="html" xml:base="https://hm2k.org/posts/presenting-coinb-in"><![CDATA[<p><img loading="lazy" class="alignright" title="Coinb,in - automate bitcoin transactions" src="https://coinb.in/images/coinbin.gif" alt="" width="210" height="52" />Bitcoin is a peer-to-peer cryto currency and we&#8217;ve been working on a free service for bitcoin users to help with accepting payments.</p>
+<p><strong><a href="https://coinb.in">Coinb.in</a></strong> is what is known as a &#8220;Bitcoin eWallet Service&#8221; with an easily accessible API aimed at web developers, to allow the acceptance of bitcoins and to process the payments automatically and anonymously from our network via an unbranded interface, at no fee, without having to run a bitcoin client.</p>
+<p><em>Coinb.in</em> works by providing your customer with a unique wallet address, which is linked to your account. The <em>coinb.in</em> service then checks the Bitcoin p2p network at regular intervals. Once the payment has been confirmed, you will receive a notification by email and the transaction data will be sent to a script of your choice, which can then be used to process the order and populate your database.</p>
+<p><span id="more-3070"></span></p>
+<p>There are a number of different ways to implement <em>Coinb.in</em>. The most simple and least complex way would be to implement a &#8220;buy it now&#8221; button, which does not require the user to register first.</p>
+<p>For example, on a small project we run, called <a href="http://www.gallush.com">Gallush</a> the following code could be added to <a href="http://www.gallush.com/buy/shell-services/starter-shell/">a product page</a> as a bitcoin &#8220;buy it now&#8221; button.</p>
+<blockquote>
+<pre>&lt;script src="http://coinb.in/merchant.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+    var cb = {'uid':'2',
+    'amount':'3.00',
+    'fromcurrency':'USD',
+    'description':'Starter shell. 1 month',
+    'ref':'I10',
+    'requestemail':1,
+    'callback':'http://www.gallush.com/btc-payments.php'};
+&lt;/script&gt;
+&lt;a href="javascript:;" onClick="coinbin(cb);"&gt;Buy it now!&lt;/a&gt;</pre>
+</blockquote>
+<p><script type="text/javascript" src="http://coinb.in/merchant.js"></script><script type="text/javascript">// <![CDATA[
+    var cb = {'uid':'2',
+    'amount':'3.00',
+    'fromcurrency':'USD',
+    'description':'Starter shell. 1 month',
+    'ref':'I10',
+    'requestemail':1,
+    'callback':'http://www.gallush.com/btc-payments.php'};
+// ]]&gt;</script><br />
+Here&#8217;s an example: <a onclick="coinbin(cb);" href="javascript:;">Buy it now!</a></p>
+<p>The html and javascript above, would generate a link that would require no site registration because when it is clicked it will request that the visitor enters in their email address before they can continue, because of the &amp;requestemail parameter being set.</p>
+<p>Once the user has provided their email address, coinb.in will convert 3 USD to the equivalent value in bitcoins, and return this value plus an address to make a payment to.</p>
+<p>The &amp;description parameter  should contain a full description of the purchase and the &amp;reference parameter in our example contains the item id (I10).</p>
+<p>Once the user had made a payment, and it has been confirmed 6 times, all of the above data and additional transaction data is then sent to the callback URL provided so that it may populate the database and process the order accordingly.</p>
+<p>Coinb.in comes complete with, examples, <a href="https://coinb.in/documentation.html">documentation</a> and an API that can output the results into several different formats including XML and JSON objects</p>
+<p>Now the question is, would you buy <a href="http://www.phurix.co.uk">web hosting</a> with bitcoins?</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/tracking-an-ip-address" rel="bookmark" title="Tracking an IP address">Tracking an IP address </a> <small>In my job I have to manage lots of machines...</small></li>
+<li><a href="https://hm2k.org/posts/longip-script" rel="bookmark" title="longip perl script">longip perl script </a> <small>I wanted to create a script that would convert a...</small></li>
+</ol></p>
+</div>
+]]></content>
+		
+					<link rel="replies" type="text/html" href="https://hm2k.org/posts/presenting-coinb-in#comments" thr:count="0"/>
+			<link rel="replies" type="application/atom+xml" href="https://hm2k.org/posts/presenting-coinb-in/feed/atom" thr:count="0"/>
+			<thr:total>0</thr:total>
+			</entry>
+	</feed>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:21:33 by W3 Total Cache
+-->

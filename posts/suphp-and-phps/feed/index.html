@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: suPHP and .phps PHP code highlighting support	</title>
+	<atom:link href="https://hm2k.org/posts/suphp-and-phps/feed" rel="self" type="application/rss+xml" />
+	<link>https://hm2k.org/posts/suphp-and-phps</link>
+	<description>Research and development</description>
+	<lastBuildDate>Sun, 13 Dec 2009 12:29:41 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+	<item>
+		<title>
+		By: NiLon		</title>
+		<link>https://hm2k.org/posts/suphp-and-phps/comment-page-1#comment-190947</link>
+
+		<dc:creator><![CDATA[NiLon]]></dc:creator>
+		<pubDate>Sun, 13 Dec 2009 12:29:41 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=214#comment-190947</guid>
+
+					<description><![CDATA[To apache confs add handler for .phps
+
+AddType application/x-httpd-php-source .phps
+suPHP_AddHandler application/x-httpd-php-source
+
+then go to suphp.conf and add binaries that handle requests, for source I use wrapper
+
+application/x-httpd-php=php:/usr/bin/php-cgi
+application/x-httpd-php-source=php:/tmp/php-cgi-source
+
+/tmp/php-cgi-source is file containing only line:
+
+#!/usr/bin/php-cgi -s
+
+
+restart webserver and you are good to go]]></description>
+			<content:encoded><![CDATA[<p>To apache confs add handler for .phps</p>
+<p>AddType application/x-httpd-php-source .phps<br />
+suPHP_AddHandler application/x-httpd-php-source</p>
+<p>then go to suphp.conf and add binaries that handle requests, for source I use wrapper</p>
+<p>application/x-httpd-php=php:/usr/bin/php-cgi<br />
+application/x-httpd-php-source=php:/tmp/php-cgi-source</p>
+<p>/tmp/php-cgi-source is file containing only line:</p>
+<p>#!/usr/bin/php-cgi -s</p>
+<p>restart webserver and you are good to go</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: TeeCee		</title>
+		<link>https://hm2k.org/posts/suphp-and-phps/comment-page-1#comment-125335</link>
+
+		<dc:creator><![CDATA[TeeCee]]></dc:creator>
+		<pubDate>Sat, 06 Dec 2008 11:20:15 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=214#comment-125335</guid>
+
+					<description><![CDATA[Hi!
+
+There is some problem with this code...
+1.) The highlight_file() is often disabled because the safe_mode = ON setting. This can be eliminatedwith some workaround, since highlight_string() is working in that case...
+2.) The substr... strpos... checking is bad, because it splits the string at the first dot in the path!
+
+My version that works on my safe_mode running server:
+
+if ( strtolower(@array_pop(explode(&#039;.&#039;,$_GET[&#039;file&#039;]))) === &#039;phps&#039;) {
+    highlight_string(join(&#039;&#039;, file($_GET[&#039;file&#039;])));
+}]]></description>
+			<content:encoded><![CDATA[<p>Hi!</p>
+<p>There is some problem with this code&#8230;<br />
+1.) The highlight_file() is often disabled because the safe_mode = ON setting. This can be eliminatedwith some workaround, since highlight_string() is working in that case&#8230;<br />
+2.) The substr&#8230; strpos&#8230; checking is bad, because it splits the string at the first dot in the path!</p>
+<p>My version that works on my safe_mode running server:</p>
+<p>if ( strtolower(@array_pop(explode(&#8216;.&#8217;,$_GET[&#8216;file&#8217;]))) === &#8216;phps&#8217;) {<br />
+    highlight_string(join(&#8221;, file($_GET[&#8216;file&#8217;])));<br />
+}</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Zeeshan		</title>
+		<link>https://hm2k.org/posts/suphp-and-phps/comment-page-1#comment-88542</link>
+
+		<dc:creator><![CDATA[Zeeshan]]></dc:creator>
+		<pubDate>Fri, 01 Aug 2008 14:27:21 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=214#comment-88542</guid>
+
+					<description><![CDATA[Investigate send_parsed_php_source() in mod_php4/5.c to see how it handles the &quot;application/x-httpd-php-source&quot; handler type or form a second handler (or third handler) in suPHP which specifically points to a PHP CGI that contains the initial param of &#039;-s&#039;. Assign &quot;application/x-httpd-php-source&quot; to suPHP&#039;s new handler and any file then given to this PHP CGI binary will output syntax highlighted source code.]]></description>
+			<content:encoded><![CDATA[<p>Investigate send_parsed_php_source() in mod_php4/5.c to see how it handles the &#8220;application/x-httpd-php-source&#8221; handler type or form a second handler (or third handler) in suPHP which specifically points to a PHP CGI that contains the initial param of &#8216;-s&#8217;. Assign &#8220;application/x-httpd-php-source&#8221; to suPHP&#8217;s new handler and any file then given to this PHP CGI binary will output syntax highlighted source code.</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:23 by W3 Total Cache
+-->

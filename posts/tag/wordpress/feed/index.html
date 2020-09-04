@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Wordpress &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/wordpress/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 23 Mar 2011 11:23:26 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Replace strings MySQL</title>
+		<link>https://hm2k.org/posts/replace-strings-in-mysq</link>
+					<comments>https://hm2k.org/posts/replace-strings-in-mysq#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 23 Mar 2011 11:23:26 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[drupal]]></category>
+		<category><![CDATA[mysql]]></category>
+		<category><![CDATA[replace]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=646</guid>
+
+					<description><![CDATA[If you ever need to make big changes to your site, such as moving directory or changing the domain name you&#8217;ll know that you&#8217;ll have to make changes to the database for that to take affect. First of all, before you make any adhoc changes like these to your database, ALWAYS take a backup. Many [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>If you ever need to make big changes to your site, such as moving directory or changing the domain name you&#8217;ll know that you&#8217;ll have to make changes to the database for that to take affect.</p>
+<p><span id="more-646"></span></p>
+<p>First of all, before you make any adhoc changes like these to your database, ALWAYS take a backup.</p>
+<p>Many of us use wordpress, and what you sometimes find is that if you move your blog into a subdirectory your content (such as images) will not point to the right place.</p>
+<p>So, here&#8217;s what I did to fix that:</p>
+<blockquote><p>UPDATE wp_posts SET post_content = REPLACE(post_content, &#8216;../wp-content/&#8217;, &#8216;/blog/wp-content/&#8217;);</p></blockquote>
+<p>This will update the wp_posts table, changing all occurrences of &#8220;../wp-content/&#8221; to the new &#8220;/blog/wp-content/&#8221; folder in the post_content field.</p>
+<p>Pretty nifty.</p>
+<p>If you&#8217;re using Drupal, and have changed the domain of your site, here&#8217;s what you need to do:</p>
+<blockquote><p>UPDATE node_revisions SET body = REPLACE(body, &#8216;old.example.com&#8217;, &#8216;new.example.com&#8217;);</p>
+<p>UPDATE node_revisions SET teaser = REPLACE(teaser, &#8216;old.example.com&#8217;, &#8216;new.example.com&#8217;);</p></blockquote>
+<p>Obviously &#8220;old.example.com&#8221; is your old domain, and &#8220;new.example.com&#8221; is your new domain.</p>
+<p>If you do change the domain of your site, you should also put a <a href="http://en.wikipedia.org/wiki/URL_redirection">301 URL redirect</a> in place too.</p>
+<p>This method of replacing strings in MySQL can also be useful if you are changing the directory of your Drupal installation.</p>
+<p>If you need any help, just drop me a comment below.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/replace-strings-in-mysq/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">646</post-id>	</item>
+		<item>
+		<title>Getting started with Quercus in Google App Engine</title>
+		<link>https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine</link>
+					<comments>https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 15 Apr 2010 12:26:55 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[gae]]></category>
+		<category><![CDATA[google app engine]]></category>
+		<category><![CDATA[java]]></category>
+		<category><![CDATA[quercus]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=609</guid>
+
+					<description><![CDATA[Last year an article was written on a blog about how to run PHP on Google App Engine (GAE). The guide came with a pre-made package to get you started. However, Quercus has been updated since this was produced. Unfortunately the official Quercus website has very little detail to help us get started&#8230; Further research [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Last year an article was written on a blog about how to <a href="http://www.webdigi.co.uk/blog/2009/run-php-on-the-google-app-engine/">run PHP on Google App Engine (GAE)</a>.</p>
+<p>The guide came with a pre-made package to get you started.</p>
+<p>However, Quercus has been updated since this was produced.</p>
+<p><span id="more-609"></span>Unfortunately the <a href="http://quercus.caucho.com/">official Quercus website</a> has very little detail to help us get started&#8230;</p>
+<p>Further research lead me to a blog post by the company that makes Quercus entitled: <a href="http://blog.caucho.com/?p=187">Quercus on the Google App Engine</a></p>
+<p>It gives a general overview of what is required, but isn&#8217;t really very direct.</p>
+<p>I did also find an entry on their wiki for <a href="http://wiki.caucho.com/Quercus_Google_App_Engine">Quercus on Google App Engine</a>, which was more useful.</p>
+<p>Here&#8217;s what you need to do:</p>
+<ol>
+<li>Follow the <a href="http://code.google.com/appengine/docs/java/gettingstarted/creating.html">Google App Engine: Creating a Project getting started guide</a> to create your file structure and the xml files.</li>
+<li> Download the <a href="http://caucho.com/download">latest version of Resin</a> (ie: <a href="http://www.caucho.com/download/resin-4.0.6.zip">resin-4.0.6.zip</a>)</li>
+<li>From the zip, copy lib/resin.jar to your WEB-INF/lib</li>
+<li>Add GoogleQuercusServlet as a standard servlet and any params to web.xml (<a href="http://gist.github.com/367023">example web.xml</a>)</li>
+<li>Put your PHP files in your &#8220;war&#8221; directory.</li>
+<li>Use the <a href="http://code.google.com/appengine/downloads.html#Google_App_Engine_SDK_for_Java">AppEngine Java SDK</a> appcfg to update.</li>
+</ol>
+<p>If you get this error:</p>
+<blockquote><p>java.lang.IllegalStateException: Found a jar file too large to upload: &#8220;&#8230;\WEB-INF\lib\resin.jar&#8221;.  Consider using &#8211;enable_jar_splitting.</p></blockquote>
+<p>Using the suggested option fixed this, which looks like this:</p>
+<blockquote><p>C:\appengine-java-sdk\bin\appcfg.cmd &#8211;enable_jar_splitting update war</p></blockquote>
+<p>That&#8217;s pretty much it to get you started, when you visit your app address, you should be able to call your PHP files.</p>
+<p>If you are looking for something a bit more advanced, take a look at these articles that explain how to get WordPress working:</p>
+<ul>
+<li><a href="http://blog.caucho.com/?p=196">Converting WordPress for Quercus on Google App Engine</a></li>
+<li><a href="http://www.caucho.com/articles/Quercus_on_GAE.pdf">Using Quercus® to Run the WordPress PHP blog on Google App Engine (pdf)</a></li>
+</ul>
+<p>For additional help I recommend you visit <a href="http://forum.caucho.com/forumdisplay.php?f=5">Caucho&#8217;s Quercus  Forums</a>.</p>
+<div id="_mcePaste" style="position: absolute; left: -10000px; top: 575px; width: 1px; height: 1px; overflow: hidden;">Using Quercus® to Run the WordPress PHP blog on Google App EngineUsing Quercus® to Run the WordPress PHP blog on Google App Engine</div>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine/feed</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">609</post-id>	</item>
+		<item>
+		<title>Using Your Own URL as Your OpenID with WordPress</title>
+		<link>https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress</link>
+					<comments>https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 16 Apr 2009 22:09:33 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[openid]]></category>
+		<category><![CDATA[openid delegation]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=408</guid>
+
+					<description><![CDATA[Today I decided to join stackoverflow.com, which requires you to login using OpenID. It was pretty simple to get signed up with myopenid.com, but while I was on the stackoverflow login page I noticed a little message which I found interesting: Use your own URL Want to add OpenID support to your website? It&#8217;s as [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/adding-table-controls-and-support-to-tinymce-in-wordpress" rel="bookmark" title="Adding table controls and support to TinyMCE in WordPress">Adding table controls and support to TinyMCE in WordPress </a> <small>One thing wordpress has always lacked is the ability to...</small></li>
+<li><a href="https://hm2k.org/posts/cannot-redeclare-pclziputilpathreduction" rel="bookmark" title="Cannot redeclare pclziputilpathreduction()">Cannot redeclare pclziputilpathreduction() </a> <small>I had this issue today, I found that you need...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Today I decided to join <a href="http://www.stackoverflow.com/">stackoverflow.com</a>, which requires you to login using <a href="http://openid.net/get/">OpenID</a>.</p>
+<p>It was pretty simple to get signed up with <a href="https://www.myopenid.com/">myopenid.com</a>, but while I was on the <a href="http://stackoverflow.com/users/login?returnurl=%2f">stackoverflow login page</a> I noticed a little message which I found interesting:<span id="more-408"></span></p>
+<blockquote>
+<h4>Use your own URL</h4>
+<p>Want to add OpenID support to <em>your</em> website?</p>
+<p>It&#8217;s as easy as adding two HTML header tags!</p>
+<p><a href="http://blog.stackoverflow.com/2009/01/using-your-own-url-as-your-openid/">Read more..</a></p></blockquote>
+<p>It basically would mean I could use &#8220;hm2k.com&#8221; instead of &#8220;hm2k.myopenid.com&#8221; to login with OpenID, which is pretty neat. There&#8217;s also a section in the help on <a href="https://www.myopenid.com/help#own_domain">myOpenID.com for using your own domain</a>, which confirms this.</p>
+<p>Seems easy enough, I thought. Then I took into consideration that I&#8217;m using wordpress, sure not a major problem, I can simply hard code it into my theme, but then do I really want to do that? No, of course not.</p>
+<p>WordPress is renound for it&#8217;s ability to be compltely dynamic, I want to stick in line with that. More importantly, I want my OpenID URL to work regardless of what theme I&#8217;m using.</p>
+<p>So I decided to start looking into it. I soon discovered someone over at wordpress.com had the same idea and had requested a way to <a href="http://en.forums.wordpress.com/topic/add-openid-delegation-link-to-head">add OpenID delegation link to head</a>.</p>
+<p>At first I thought about getting a plugin that would inject the required lines of HTML into the head, however after some quite extensive research I found what I was looking for&#8230;</p>
+<p><img loading="lazy" class="alignnone size-full wp-image-409" title="OpenID Delegation" src="http://www.hm2k.com/upload/screenshot-5.png" alt="OpenID Delegation" width="550" height="141" srcset="https://hm2k.org/upload/screenshot-5.png 550w, https://hm2k.org/upload/screenshot-5-300x76.png 300w" sizes="(max-width: 550px) 100vw, 550px" /></p>
+<p><a href="http://wordpress.org/extend/plugins/openid/">The WordPress OpenID Plugin</a> allows users authorized to use the OpenID Provider can delegate to a different provider, among other things.</p>
+<p>Once you have installed and activated the plugin you need to do the following:</p>
+<ol>
+<li>Go to the OpenID settings page (/wp-admin/options-general.php?page=openid)</li>
+<li>Set the &#8220;Blog Owner&#8221; as yourself, and click &#8220;Save Changes&#8221;.</li>
+<li>Go to your profile (/wp-admin/profile.php) and scroll to the bottom where it says &#8220;OpenID Delegation&#8221;.</li>
+<li>In the edit box you would provide your OpenID URL (ie: http://hm2k.myopenid.com/)</li>
+</ol>
+<p>Now when I check the source code of my site I see the following HTML in the &lt;head&gt;:</p>
+<blockquote><p>&lt;link rel=&#8221;openid2.provider&#8221; href=&#8221;http://www.myopenid.com/server&#8221; /&gt;<br />
+&lt;link rel=&#8221;openid2.local_id&#8221; href=&#8221;http://hm2k.myopenid.com/&#8221; /&gt;<br />
+&lt;link rel=&#8221;openid.server&#8221; href=&#8221;http://www.myopenid.com/server&#8221; /&gt;<br />
+&lt;link rel=&#8221;openid.delegate&#8221; href=&#8221;http://hm2k.myopenid.com/&#8221; /&gt;</p></blockquote>
+<p>Perfect!</p>
+<p>I hope you find this as useful as I have.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/adding-table-controls-and-support-to-tinymce-in-wordpress" rel="bookmark" title="Adding table controls and support to TinyMCE in WordPress">Adding table controls and support to TinyMCE in WordPress </a> <small>One thing wordpress has always lacked is the ability to...</small></li>
+<li><a href="https://hm2k.org/posts/cannot-redeclare-pclziputilpathreduction" rel="bookmark" title="Cannot redeclare pclziputilpathreduction()">Cannot redeclare pclziputilpathreduction() </a> <small>I had this issue today, I found that you need...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">408</post-id>	</item>
+		<item>
+		<title>Cannot redeclare pclziputilpathreduction()</title>
+		<link>https://hm2k.org/posts/cannot-redeclare-pclziputilpathreduction</link>
+					<comments>https://hm2k.org/posts/cannot-redeclare-pclziputilpathreduction#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 17 Feb 2009 12:49:27 +0000</pubDate>
+				<category><![CDATA[pclziputilpathreduction]]></category>
+		<category><![CDATA[upgrading]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/cannot-redeclare-pclziputilpathreduction</guid>
+
+					<description><![CDATA[I had this issue today, I found that you need to deactivate the &#8220;WordPress Automatic Upgrade&#8221; plugin as it&#8217;s included in the core of WordPress now anyway. So, just disable the plugin and try again. WordPress Upgrade Error Solved &#8211; Fatal error: Cannot redeclare pclziputilpathreduction()<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress" rel="bookmark" title="Using Your Own URL as Your OpenID with WordPress">Using Your Own URL as Your OpenID with WordPress </a> <small>Today I decided to join stackoverflow.com, which requires you to...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I had this issue today, I found that you need to deactivate the &#8220;WordPress Automatic Upgrade&#8221; plugin as it&#8217;s included in the core of WordPress now anyway.</p>
+<p>So, just disable the plugin and try again.</p>
+<p><span id="more-387"></span><a href="http://www.youtube.com/watch?v=OGeyrdW1KSw">WordPress Upgrade Error Solved &#8211; Fatal error: Cannot redeclare pclziputilpathreduction()</a></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress" rel="bookmark" title="Using Your Own URL as Your OpenID with WordPress">Using Your Own URL as Your OpenID with WordPress </a> <small>Today I decided to join stackoverflow.com, which requires you to...</small></li>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/cannot-redeclare-pclziputilpathreduction/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">387</post-id>	</item>
+		<item>
+		<title>10 wordpress performance optimisation tips</title>
+		<link>https://hm2k.org/posts/10-wordpress-performance-optimisation-tips</link>
+					<comments>https://hm2k.org/posts/10-wordpress-performance-optimisation-tips#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 16 May 2008 12:40:55 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Optimisation]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=179</guid>
+
+					<description><![CDATA[I wanted to prepare my wordpress powered blog for an influx of traffic from social media sites such as reddit.com or digg.com, in case one of my articles got big, so I decided to investigate what could be done to optimise the performance my blog. This is the result&#8230; Upgrade to the latest version of [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited" rel="bookmark" title="50+ PHP optimisation tips revisited">50+ PHP optimisation tips revisited </a> <small>After reading an article some time ago entitled &#8220;40 Tips...</small></li>
+<li><a href="https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress" rel="bookmark" title="Using Your Own URL as Your OpenID with WordPress">Using Your Own URL as Your OpenID with WordPress </a> <small>Today I decided to join stackoverflow.com, which requires you to...</small></li>
+<li><a href="https://hm2k.org/posts/adding-table-controls-and-support-to-tinymce-in-wordpress" rel="bookmark" title="Adding table controls and support to TinyMCE in WordPress">Adding table controls and support to TinyMCE in WordPress </a> <small>One thing wordpress has always lacked is the ability to...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I wanted to prepare my wordpress powered blog for an influx of traffic from social media sites such as reddit.com or digg.com, in case one of my articles got big, so I decided to investigate what could be done to optimise the performance my blog.</p>
+<p>This is the result&#8230;</p>
+<p><span id="more-179"></span></p>
+<ol>
+<li>Upgrade to the latest version of <a href="http://wordpress.org/download/">WordPress</a>. Each version has more performance improvements. Try using the <a href="http://techie-buzz.com/wordpress-plugins/wordpress-automatic-upgrade-plugin.html">WordPress Automated Upgrade</a> plugin.</li>
+<li>Avoid using lots of large javascript or css files or huge images in your site template or try to <a href="http://code.google.com/p/minify/">Minify</a> them.</li>
+<li>Disable any plugins that you don&#8217;t use or need.</li>
+<li>Enable <a href="http://codex.wordpress.org/Function_Reference/WP_Cache">WordPress Object Caching</a>, and <a href="http://perishablepress.com/press/2007/12/26/how-to-enable-the-default-wordpress-object-cache/">learn how</a>.<a href="http://perishablepress.com/press/2007/12/26/how-to-enable-the-default-wordpress-object-cache/"></a></li>
+<li>Try <a href="http://mnm.uib.es/gallir/wp-cache-2/">WP-Cache2</a> or <a href="http://ocaoimh.ie/wp-super-cache/">WP Super Cache</a> (based on WP-Cache) ideal for large sites, with lots of traffic.</li>
+<li><a href="http://weblogtoolscollection.com/archives/2005/04/06/optimize-your-database/">Optimise your MySQL database tables</a>.</li>
+<li>If you&#8217;re serving lots of images, <a href="http://codex.wordpress.org/WordPress_Optimization/Offloading">offload some</a> to free image hosting sites such as <a href="http://www.flickr.com/">flickr</a> or <a href="http://imageshack.us/">imageshack</a>.</li>
+<li>Use <a href="http://xdebug.org/">Xdebug</a> to check if the plugins you are using are causing performance issues. If they are, get rid of them.</li>
+<li><a href="http://www.howtogeek.com/howto/programming/speed-up-your-web-site-with-mysql-query-caching/">Use Mysql Query Caching</a> to speed up calls to the database.<a href="http://www.howtogeek.com/howto/programming/speed-up-your-web-site-with-mysql-query-caching/"></a></li>
+<li>Use PHP Opcode Caching such as <a href="http://eaccelerator.net/">eAccelerator</a>.</li>
+</ol>
+<p>Also read <a href="http://www.howtoforge.com/configuring_apache_for_maximum_performance">how to configure Apache for performance</a>.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited" rel="bookmark" title="50+ PHP optimisation tips revisited">50+ PHP optimisation tips revisited </a> <small>After reading an article some time ago entitled &#8220;40 Tips...</small></li>
+<li><a href="https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress" rel="bookmark" title="Using Your Own URL as Your OpenID with WordPress">Using Your Own URL as Your OpenID with WordPress </a> <small>Today I decided to join stackoverflow.com, which requires you to...</small></li>
+<li><a href="https://hm2k.org/posts/adding-table-controls-and-support-to-tinymce-in-wordpress" rel="bookmark" title="Adding table controls and support to TinyMCE in WordPress">Adding table controls and support to TinyMCE in WordPress </a> <small>One thing wordpress has always lacked is the ability to...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/10-wordpress-performance-optimisation-tips/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">179</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:43 by W3 Total Cache
+-->

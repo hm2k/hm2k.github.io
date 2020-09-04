@@ -1,0 +1,458 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 
+	<title>HM2K » How to setup Tucows OpenSRS</title>
+
+	<link rel="stylesheet" href="https://hm2k.org/wp-content/themes/hm2k/style.css" type="text/css" media="screen,print">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://hm2k.org/feed">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://hm2k.org/feed/atom">
+	
+	
+	<style type="text/css" media="screen">
+			</style>
+	
+		<link rel="archives" title="May 2012" href="https://hm2k.org/posts/2012/05">
+	<link rel="archives" title="March 2012" href="https://hm2k.org/posts/2012/03">
+	<link rel="archives" title="November 2011" href="https://hm2k.org/posts/2011/11">
+	<link rel="archives" title="October 2011" href="https://hm2k.org/posts/2011/10">
+	<link rel="archives" title="September 2011" href="https://hm2k.org/posts/2011/09">
+	<link rel="archives" title="August 2011" href="https://hm2k.org/posts/2011/08">
+	<link rel="archives" title="July 2011" href="https://hm2k.org/posts/2011/07">
+	<link rel="archives" title="June 2011" href="https://hm2k.org/posts/2011/06">
+	<link rel="archives" title="May 2011" href="https://hm2k.org/posts/2011/05">
+	<link rel="archives" title="April 2011" href="https://hm2k.org/posts/2011/04">
+	<link rel="archives" title="March 2011" href="https://hm2k.org/posts/2011/03">
+	<link rel="archives" title="February 2011" href="https://hm2k.org/posts/2011/02">
+	<link rel="archives" title="December 2010" href="https://hm2k.org/posts/2010/12">
+	<link rel="archives" title="November 2010" href="https://hm2k.org/posts/2010/11">
+	<link rel="archives" title="June 2010" href="https://hm2k.org/posts/2010/06">
+	<link rel="archives" title="May 2010" href="https://hm2k.org/posts/2010/05">
+	<link rel="archives" title="April 2010" href="https://hm2k.org/posts/2010/04">
+	<link rel="archives" title="February 2010" href="https://hm2k.org/posts/2010/02">
+	<link rel="archives" title="December 2009" href="https://hm2k.org/posts/2009/12">
+	<link rel="archives" title="November 2009" href="https://hm2k.org/posts/2009/11">
+	<link rel="archives" title="October 2009" href="https://hm2k.org/posts/2009/10">
+	<link rel="archives" title="September 2009" href="https://hm2k.org/posts/2009/09">
+	<link rel="archives" title="August 2009" href="https://hm2k.org/posts/2009/08">
+	<link rel="archives" title="July 2009" href="https://hm2k.org/posts/2009/07">
+	<link rel="archives" title="June 2009" href="https://hm2k.org/posts/2009/06">
+	<link rel="archives" title="April 2009" href="https://hm2k.org/posts/2009/04">
+	<link rel="archives" title="February 2009" href="https://hm2k.org/posts/2009/02">
+	<link rel="archives" title="January 2009" href="https://hm2k.org/posts/2009/01">
+	<link rel="archives" title="December 2008" href="https://hm2k.org/posts/2008/12">
+	<link rel="archives" title="November 2008" href="https://hm2k.org/posts/2008/11">
+	<link rel="archives" title="September 2008" href="https://hm2k.org/posts/2008/09">
+	<link rel="archives" title="July 2008" href="https://hm2k.org/posts/2008/07">
+	<link rel="archives" title="June 2008" href="https://hm2k.org/posts/2008/06">
+	<link rel="archives" title="May 2008" href="https://hm2k.org/posts/2008/05">
+	<link rel="archives" title="April 2008" href="https://hm2k.org/posts/2008/04">
+	<link rel="archives" title="March 2008" href="https://hm2k.org/posts/2008/03">
+	<link rel="archives" title="February 2008" href="https://hm2k.org/posts/2008/02">
+	<link rel="archives" title="January 2008" href="https://hm2k.org/posts/2008/01">
+	<link rel="archives" title="December 2007" href="https://hm2k.org/posts/2007/12">
+	<link rel="archives" title="November 2007" href="https://hm2k.org/posts/2007/11">
+	<link rel="archives" title="October 2007" href="https://hm2k.org/posts/2007/10">
+	<link rel="archives" title="August 2007" href="https://hm2k.org/posts/2007/08">
+	<link rel="archives" title="July 2007" href="https://hm2k.org/posts/2007/07">
+	<link rel="archives" title="June 2007" href="https://hm2k.org/posts/2007/06">
+	<link rel="archives" title="May 2007" href="https://hm2k.org/posts/2007/05">
+	<link rel="archives" title="April 2007" href="https://hm2k.org/posts/2007/04">
+	<link rel="archives" title="March 2007" href="https://hm2k.org/posts/2007/03">
+	<link rel="archives" title="February 2007" href="https://hm2k.org/posts/2007/02">
+	<link rel="archives" title="January 2007" href="https://hm2k.org/posts/2007/01">
+	<link rel="dns-prefetch" href="//platform-api.sharethis.com">
+
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="HM2K » How to setup Tucows OpenSRS Comments Feed" href="https://hm2k.org/posts/how-to-setup-tucows-opensrs/feed">
+<link rel="stylesheet" id="yarppWidgetCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.5.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="social_comments-css" href="https://hm2k.org/wp-content/plugins/social/assets/comments.css?ver=2.11" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/8.9/css/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/c/5.5.1/wp-includes/js/jquery/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#product=ga&amp;property=5f4131776f37880012707ba8" id="googleanalytics-platform-sharethis-js"></script>
+<link rel="alternate" type="application/json" href="https://hm2k.org/wp-json/wp/v2/posts/93">
+<link rel="prev" title="How to Minimize Microsoft Office Outlook to the System Tray" href="https://hm2k.org/posts/how-to-minimize-microsoft-office-outlook-to-the-system-tray">
+<link rel="next" title="How can I recycle my computer hardware?" href="https://hm2k.org/posts/how-can-i-recycle-my-computer-hardware">
+
+<link rel="canonical" href="https://hm2k.org/posts/how-to-setup-tucows-opensrs">
+
+<link rel="alternate" type="application/json+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fhow-to-setup-tucows-opensrs">
+<link rel="alternate" type="text/xml+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Fposts%2Fhow-to-setup-tucows-opensrs&amp;format=xml">
+<style type="text/css">img#wpstats{display:none}</style></head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+	<div style="float:right; margin-right: 5px;">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-8789111894509366";
+/* 468x60, created 4/17/08 */
+google_ad_slot = "9389236395";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	<p><small><b>Have I helped you?</b> Please consider my <a href="http://tinyurl.com/hm2kwishlist">wishlist</a> or <a href="http://tinyurl.com/hm2kpaypal">donating</a>. Thanks!</small></p>
+<p>Don't forget to <a href="http://twitter.com/hm2k">follow me on twitter</a>.</p>
+	</div>
+	<h1><a href="https://hm2k.org">HM2K</a></h1>
+</div>
+
+
+<div id="content">
+
+			
+		<div class="post" id="post-93">
+	
+			<h2 class="posttitle"><a href="https://hm2k.org/posts/how-to-setup-tucows-opensrs" rel="bookmark" title="Permanent link to How to setup Tucows OpenSRS">How to setup Tucows OpenSRS</a></h2>
+			
+			<p class="postmeta"> 
+			April 25, 2007 at 2:33 pm 
+			· Filed under <a href="https://hm2k.org/posts/category/dev" rel="category tag">Development</a>						</p>
+		
+			<div class="postentry">
+			<p>OpensSRS is a domain reseller system offered by Tucows to internet service providers.</p>
+<p>Although Tucows offers a very flexible system, there’s a serious lack of easy to follow documentation.</p>
+<p>This document will explain how to get your tucows opensrs reseller account up and running with full access.</p>
+<p><span id="more-93"></span></p>
+<ol>
+<li>To begin with you will require an OpenSRS account, you can <a href="https://horizon.opensrs.net/subscribe/">signup here</a>.</li>
+<li>You then need to review the <a href="http://resellers.tucows.com/contracts">contracts</a> you want.</li>
+<li>In this case we will be reviewing the <a href="http://resellers.tucows.com/contracts/tldagreement.pdf">Master TLD Contract</a>.</li>
+<li>Print this off, fill out the spaces on the contract, and don’t forget to sign it.</li>
+<li>Fax it across to (416) 531-2516 or from the UK 1014165312516.</li>
+<li>The next thing to do is to decide how you wish to make <a href="http://resellers.tucows.com/payment">payments</a>. In my case I will be using MasterCard, so do pay anything you have to fill out the <a href="http://resellers.tucows.com/ccpayment.pdf">Credit Card form</a> and fax the details across to the same number.</li>
+<li>You must pay $95 for the setup fee.</li>
+<li>Don’t forget to update your website/terms and conditions with the <a href="http://resellers.tucows.com/contracts/tld/exhibita">TuCows contract terms</a>.</li>
+<li>Once you receive your username and password via email, you need to complete the access tests, which are a pain in themselves.</li>
+</ol>
+<p>At this point you will be unable to log into the “<a href="https://rr-n1-tor.opensrs.net/resellers/">Live System</a>“, until you complete the full access test…</p>
+<ol>
+<li>Log into the “<a href="http://resellers-test.opensrs.net/">Test System</a>” using your username and password provided in the welcome email.</li>
+<li>Once logged in you will see the administration page for the test system, which is an exact replica of the live system. For now, ignore this, and scroll to the bottom. You need to open the page entitled “<a href="https://horizon.opensrs.net/resellers/index?action=view&amp;file=rite-instruct.html">Full Access Test Instructions</a>“, and read the instructions, however vague they are.</li>
+<li>As it says, you need to download and install the “<a href="http://resellers.tucows.com/current/">OpenSRS Client Software</a>“, but what you actually need is the “<a href="http://resellers.tucows.com/current/RCL/opensrs-client-2.9.5.zip">Reseller Client Library (RCL)</a>“, download this.</li>
+<li>Although the <a href="http://documentation.tucows.com/opensrs_rcl.pdf">RCL manual</a> can be found on the website, its not very clear what you need to do. Take a look at it anyway.</li>
+<li>Once you have downloaded the RCL, extract it, and edit the “etc/OpenSRS.conf” file.
+<ol>
+<li>Get the username from the welcome email, and enter inside the quotes on line 13…</li>
+<li>my $USERNAME = “yourusername”; # XXX insert username here</li>
+<li>Log back into the “<a href="http://resellers-test.opensrs.net/">Test System</a>“, scroll to the bottom and find “<a onclick="return confirm('WARNING: This will disable your client cgis until you update your configuration file with your new private key.\n\nDo you want to proceed?')" href="https://horizon.opensrs.net/resellers/?action=generate_key">Generate New Private Key</a>“, follow the on-screen instructions and enter the private key provided on line 14…</li>
+<li>my $PRIVATE_KEY = “your_private_key “; # XXX insert DES key here</li>
+<li>Next set your admin email address on line 16…</li>
+<li>$ADMIN_EMAIL = ‘admin@example.com’;</li>
+<li>Next set the email address where renewals will be sent to on line 17…</li>
+<li>$RENEW_EMAIL = ‘domains@example.com’;</li>
+<li>For now on line 22, you must keep test server as 1 (this would be set to 0 if we were live)…</li>
+<li>$TEST_SERVER = 1;</li>
+<li>On line 28, configure the full path to where you intend on installing the client…</li>
+<li>$PATH_SOURCE = “&lt;path_to_source&gt;”; # e.g., “/home/username/opensrs”</li>
+<li>On line 49 to 55, you have the remote server config settings:</li>
+<li>REMOTE_PORT =&gt; 55000,<br>
+REMOTE_HOST =&gt; “horizon.opensrs.net”,<br>
+REMOTE_HTTPS_PORT =&gt; 55443,# OSRS IDN conversion server connection settings<br>
+REMOTE_IDN_HOST =&gt; ‘horizon.opensrs.net’,<br>
+REMOTE_IDN_PORT =&gt; 55044,</li>
+<li>If you are in test mode, these must remain the same, and you must make sure the server can use those external ports. If you are in live mode, the ports start with “52”, instead of “55”, and the hostname is “rr-n1-tor.opensrs.net”.</li>
+<li>On line 60, you must decide which connection type you want to use…</li>
+<li>connection_type =&gt; ‘CBC’, # CBC, HTTPS</li>
+<li>If you use CBC you also need to set the connection type on line 61 (try Blowfish)…</li>
+<li>crypt_type =&gt; ”, # Blowfish, DES, or Blowfish_PP (slow!). ONLY important</li>
+</ol>
+</li>
+<li>You MUST open EACH AND EVERY SINGLE .cgi file in the “cgi” directory, and change the “<em>$path_to_config = ‘&lt;path_to_conf_file&gt;’;</em>” to the correct path. You could probably get away with using ‘../etc’ as the path.</li>
+<li>Upload all of the files to the directory you have decided on, and “chmod” all the “.cgi” files to “755” so they are able to run.</li>
+<li>If you have SSH access to your web server you can verify your install by running the “cgi/verify_install.cgi” using the perl command at console (NOT via a web browser).</li>
+<li>Next you need to visit the true URL of the “reg_system.cgi” that you uploaded, and continue to follow the “<a href="https://horizon.opensrs.net/resellers/index?action=view&amp;file=rite-instruct.html">Full Access Test Instructions</a>“.</li>
+<li>If this page appears to be blank, you need to speak to your web server admin and ask them to read the error log (sometimes located “/usr/local/apache/logs/error_log”), usually you will need to install a perl module such as Data::Structure::Util using cpan.</li>
+<li>You may also require to “cpan install Unicode::String”.</li>
+<li>If you get the “Ciphertext does not begin with a valid header for ‘salt’ header mode” error, chances are you need to cpan update Crypt::CBC, and apply <a href="http://discuss.tucows.com/pipermail/domains-dev/2006-June/006819.html">this fix</a>. (Which is already already applied in the latest version)</li>
+<li>[And well this is where I stopped because I’m still getting errors, and openSRS seem unable to help me]</li>
+</ol>
+<p>If you are still having problems, read the OpenSRS <a href="https://rrc.tucows.com/support/faq/support_faq">FAQ</a>.</p>
+<p>So this is what I did, I contacted TuCows numerous times and they were unable to help me with this.</p>
+<p>I was told by TuCows to downgrade my Crypt:CBC, I told them it wasn’t possible for me to do this.</p>
+<p>I contacted TuCows again and insisted they allow me to bypass the Rite Test.</p>
+<p>With this in mind, I decided to forget about the PERL solution and take a look at <a href="http://sourceforge.net/projects/opensrs-php/">OpenSRS-PHP</a>.</p>
+<ul>
+<li>I downloaded this, ensured I had the Crypt-CBC PEAR module installed and recompiled php with mcrypt.</li>
+<li>I extracted the files, read the README and uploaded them to the server.</li>
+<li>As I understand it, I required a private key from the <a href="http://resellers-test.opensrs.net/">test system</a> and another from the <a href="http://resellers.opensrs.net/">live system</a>.</li>
+<li>I loaded these private keys along with the username into the ‘openSRS.php’ and began investigating the ‘test.php’</li>
+<li>From my understanding ‘test.php’ looks up a domain to check if its available or not. With this in mind I needed to investigate other functions further.</li>
+<li>After reading the <a href="http://documentation.tucows.com/opensrs_api.pdf">OpenSRS API specification (PDF)</a> I was able to utilise commands to process domain names.</li>
+</ul>
+<p><strong>In Summary</strong></p>
+<p>After reading all that you are probably thinking what I’m thinking. “What a load of @#*$”. I could not agree more. TuCows OpenSRS is bloody awful to work with if you are new to it, it seems to have a serious lack of documentation on how to achieve things.</p>
+<p>This article should help you with 2 things, firstly at least get you an account setup so you are able to manually manage domains. Secondly, it should offer you ways to interface with OpenSRS’s API.</p>
+<p>Perhaps in the future I can provide you with some working examples, but that was not the objective of this article.</p>
+<p>I hope this helps someone to have a less painful time with TuCows OpenSRS than me, and I invite anyone to discuss any issues I have mentioned here.</p>
+<div class="yarpp-related">
+<p>Related posts:</p><ol>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/php-opensrs-client" rel="bookmark" title="PHP OpenSRS Client">PHP OpenSRS Client </a> <small>This is only a quick message to say that I...</small></li>
+<li><a href="https://hm2k.org/posts/dont-forget-to-run-make-test" rel="bookmark" title="Don’t forget to run make test!">Don’t forget to run make test! </a> <small>During my install of PHP5 on FreeBSD… Build complete. Don’t...</small></li>
+</ol>
+</div>
+						</div>
+
+			<p class="postfeedback">
+			<a href="https://hm2k.org/posts/how-to-setup-tucows-opensrs" rel="bookmark" title="Permanent link to How to setup Tucows OpenSRS" class="permalink">Permalink</a>
+			</p>
+			
+		</div>
+		
+		<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="https://hm2k.org/index.php?social_controller=auth&amp;social_action=reload_form&amp;redirect_to=https://hm2k.org/posts/how-to-setup-tucows-opensrs&amp;post_id=93">
+			Logging In...		</div>
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://hm2k.org/posts/how-to-setup-tucows-opensrs#respond" style="display:none;">cancel</a></small></h3><form action="https://hm2k.org/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=twitter&amp;post_id=93" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=facebook&amp;post_id=93" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p><p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value=""></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value=""><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value=""></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post It"> <input type="hidden" name="comment_post_ID" value="93" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0"><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value=""></p><div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b3d8980d33"></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="138"></p></div></form>	</div>
+		</div>
+	<div id="social-tabs-comments">
+				<ul class="social-nav social-clearfix">
+			<li class="social-all social-tab-main social-current-tab"><a href="#" rel="social-all"><span>2 Replies</span></a></li>
+			<li class="social-wordpress"><a href="#" rel="wordpress"><span>0 Comments</span></a></li>
+			<li class="social-twitter"><a href="#" rel="social-twitter"><span>0 Tweets</span></a></li>
+			<li class="social-facebook"><a href="#" rel="social-facebook"><span>0 Facebook</span></a></li>
+			<li class="social-pingback"><a href="#" rel="social-pingback"><span>0 Pingbacks</span></a></li>
+		</ul>
+
+		
+		<div id="social-comments-tab-all" class="social-tabs-panel social-tabs-first-panel">
+			<div id="comments" class="social-comments">
+				<div class="social-last-reply-when">Last reply was March 30, 2009</div><div class="cf-clearfix"></div>				<ol class="social-commentlist">
+				<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::start_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::start_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>18</b><br>
+<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::end_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::end_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>42</b><br>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-103594">
+<div class="social-comment-inner social-clearfix" id="comment-103594">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/7d2a6a61c6a674993bc5b33a7bb74d70?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/7d2a6a61c6a674993bc5b33a7bb74d70?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.votreespace.net/" rel="external nofollow ugc" class="url">Olivier Labbé</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/how-to-setup-tucows-opensrs#comment-103594" class="social-posted-when" target="_blank">September 26, 2008</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>this article goes right beside the contract and the 230 pages of docs for 3 differents api/clients for opensrs…</p>
+<p>i’m still in the grey zone of “where the f*&amp;( do I begins?”</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-151853">
+<div class="social-comment-inner social-clearfix" id="comment-151853">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.hm2k.com/" rel="external nofollow ugc" class="url">hm2k</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/posts/how-to-setup-tucows-opensrs#comment-151853" class="social-posted-when" target="_blank">March 30, 2009</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Also useful:<br>
+<a href="http://opensrs.com/resources/documentation/opensrsapixml/index.htm" rel="nofollow ugc">http://opensrs.com/resources/documentation/opensrsapixml/index.htm</a><br>
+<a href="http://opensrs.com/resources/documentation/opensrsapiperl/index.htm" rel="nofollow ugc">http://opensrs.com/resources/documentation/opensrsapiperl/index.htm</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+				</ol>
+							</div>
+		</div>
+			</div>
+	
+	</div>
+				
+		
+</div>
+
+
+<div id="sidebar">
+<ul>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+
+			<ul>
+				<li class="page_item page-item-8 page_item_has_children"><a href="https://hm2k.org/articles">Articles</a>
+<ul class="children">
+	<li class="page_item page-item-74"><a href="https://hm2k.org/articles/pagerank">Google PageRank Script</a></li>
+	<li class="page_item page-item-9"><a href="https://hm2k.org/articles/regex">Guide to regular expressions</a></li>
+	<li class="page_item page-item-99"><a href="https://hm2k.org/articles/how-to-ask-a-question">How to ask a question</a></li>
+	<li class="page_item page-item-131"><a href="https://hm2k.org/articles/morals-of-downloading">Morals of Downloading</a></li>
+	<li class="page_item page-item-39"><a href="https://hm2k.org/articles/remove-spyware">Remove Spyware</a></li>
+	<li class="page_item page-item-104"><a href="https://hm2k.org/articles/seo-faq">SEO FAQ</a></li>
+	<li class="page_item page-item-10"><a href="https://hm2k.org/articles/seo-tips">SEO Tips</a></li>
+	<li class="page_item page-item-50"><a href="https://hm2k.org/articles/software">Software</a></li>
+	<li class="page_item page-item-5"><a href="https://hm2k.org/articles/startkeylogger">startkeylogger</a></li>
+	<li class="page_item page-item-106"><a href="https://hm2k.org/articles/useful-linux-commands">Useful Linux Commands</a></li>
+	<li class="page_item page-item-111"><a href="https://hm2k.org/articles/ways-to-waste-time-online">Ways to waste time online</a></li>
+	<li class="page_item page-item-40"><a href="https://hm2k.org/articles/yes-www">www. is NOT deprecated</a></li>
+</ul>
+</li>
+<li class="page_item page-item-13"><a href="https://hm2k.org/contact">Contact</a></li>
+			</ul>
+
+			</li>
+<li id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+
+			<ul>
+					<li class="cat-item cat-item-44"><a href="https://hm2k.org/posts/category/business">Business</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://hm2k.org/posts/category/dev">Development</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://hm2k.org/posts/category/general">General</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://hm2k.org/posts/category/hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://hm2k.org/posts/category/internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-285"><a href="https://hm2k.org/posts/category/security-2">Security</a>
+</li>
+	<li class="cat-item cat-item-260"><a href="https://hm2k.org/posts/category/software">Software</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://hm2k.org/posts/category/sysadmin">Sysadmin</a>
+</li>
+			</ul>
+
+			</li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+
+			<ul>
+					<li><a href="https://hm2k.org/posts/2012/05">May 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2012/03">March 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2011/11">November 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/10">October 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/09">September 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/08">August 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/07">July 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/06">June 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/05">May 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/04">April 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/03">March 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/02">February 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2010/12">December 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/11">November 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/06">June 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/05">May 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/04">April 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/02">February 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2009/12">December 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/11">November 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/10">October 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/09">September 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/08">August 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/07">July 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/06">June 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/04">April 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/02">February 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/01">January 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2008/12">December 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/11">November 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/09">September 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/07">July 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/06">June 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/05">May 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/04">April 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/03">March 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/02">February 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/01">January 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2007/12">December 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/11">November 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/10">October 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/08">August 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/07">July 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/06">June 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/05">May 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/04">April 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/03">March 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/02">February 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/01">January 2007</a></li>
+			</ul>
+
+			</li>
+<li id="text-5" class="widget widget_text"><h2 class="widgettitle">About</h2>
+			<div class="textwidget"><p>Welcome to the HM2K. Here you’ll find our experiments and findings as part of our on going Internet engineering.</p>
+</div>
+		</li>
+<li id="linkcat-16" class="widget widget_links"><h2 class="widgettitle">Projects</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://deaduseful.com/">Domain Name Whois</a></li>
+<li><a href="https://eggtcl.github.io/">Eggdrop TCL</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-28" class="widget widget_links"><h2 class="widgettitle">Network</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://phurix.co.uk/">Phurix Web Hosting</a></li>
+<li><a href="https://suzuki4u.co.uk/" title="The only UK based Suzuki Forums">Suzuki Community</a></li>
+
+	</ul>
+</li>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>		
+Copyright © 2002-2020 HM2K.
+</p>
+</div>
+
+</div>
+
+<link rel="stylesheet" id="yarppRelatedCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/related.css?ver=5.5.1" type="text/css" media="all">
+<script type="text/javascript" id="social_js-js-extra">
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hm2k.org/wp-content/plugins/social/assets/social.js?ver=2.11" id="social_js-js"></script>
+<script async="async" type="text/javascript" src="https://hm2k.org/wp-content/plugins/akismet/_inc/form.js?ver=4.1.6" id="akismet-form-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-202036.js" async="async" defer></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.9',blog:'181873647',post:'93',tz:'0',srv:'hm2k.org'} ]);
+	_stq.push([ 'clickTrackerInit', '181873647', '93' ]);
+</script>
+
+</body>
+</html>

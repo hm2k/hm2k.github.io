@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>Optimisation &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/optimisation/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 16 Mar 2011 11:19:47 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>50+ PHP optimisation tips revisited</title>
+		<link>https://hm2k.org/posts/50-php-optimisation-tips-revisited</link>
+					<comments>https://hm2k.org/posts/50-php-optimisation-tips-revisited#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 20 May 2008 17:51:28 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Optimisation]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=178</guid>
+
+					<description><![CDATA[After reading an article some time ago entitled &#8220;40 Tips for optimizing your php Code&#8221; (and some others that are suspiciously similar), I decided to redo it, but properly this time with more accurate tips, providing references and citations for each and every one. The result is this list of over 50 PHP optimisation tips&#8230; [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/text-editors-revisited" rel="bookmark" title="Text editors revisited">Text editors revisited </a> <small>As a web developer my main tool is my text...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>After reading an article some time ago entitled &#8220;<a href="http://digg.com/programming/40_Tips_for_optimizing_your_php_Code">40 Tips for optimizing your php Code</a>&#8221; (and some others that are suspiciously similar), I decided to redo it, but properly this time with more accurate tips, providing references and citations for each and every one.</p>
+<p>The result is this list of over 50 PHP optimisation tips&#8230;</p>
+<p><strong>Update: The list is more like 50+ PHP tips and tricks these days.</strong></p>
+<p>Enjoy!</p>
+<p><span id="more-178"></span></p>
+<ol>
+<li><a href="http://www.php.net/echo"><em>echo</em></a> is faster than <a href="http://www.php.net/print"><em>print</em></a>. <a href="http://web.archive.org/web/20050407085143/http://dynacker.dotgeek.org/printvsecho/">[Citation]</a></li>
+<li>Wrap your string in single quotes (&#8216;) instead of double quotes (&#8220;) is faster because PHP searches for variables inside &#8220;&#8230;&#8221; and not in &#8216;&#8230;&#8217;, use this when you&#8217;re not using variables you need evaluating in your string.  <a href="http://spindrop.us/2007/03/03/php-double-versus-single-quotes/">[Citation]</a></li>
+<li>Use sprintf instead of variables contained in double quotes, it&#8217;s about 10x faster. <a href="http://teroheikkinen.iki.fi/blog/php-s_different_echo_methods_performance_comparison/">[Citation]</a></li>
+<li>Use <a href="http://www.php.net/echo">echo</a>&#8216;s multiple parameters (or stacked) instead of string concatenation. <a href="http://blog.libssh2.org/index.php?/archives/28-How-long-is-a-piece-of-string.html">[Citation]</a></li>
+<li>Use pre-calculations, set the maximum value for your for-loops before and not in the loop. ie: <a href="http://www.php.net/for">for</a> ($x=0; $x &lt; count($array); $x), this calls the count() function each time, use $max=count($array) instead before the for-loop starts. <a href="http://www.php.lt/benchmark/phpbench.php">[Citation]</a></li>
+<li>Unset or null your variables to free memory, especially large arrays. <a href="http://lists.nyphp.org/pipermail/talk/2003-January/001855.html">[Citation]</a></li>
+<li>Avoid magic like <a href="http://uk2.php.net/manual/en/language.oop5.overloading.php">__get, __set</a>, <a href="http://www.php.net/__autoload">__autoload</a>. <a href="http://www.ilia.ws/files/zend_performance.pdf">[Citation]</a></li>
+<li>Use require() instead of require_once() where possible. <a href="http://peter.mapledesign.co.uk/weblog/archives/writing-faster-php-code-1-require_once">[Citation]</a></li>
+<li>Use <a href="http://en.wikipedia.org/wiki/Path_(computing)">full paths</a> in includes and requires, less time spent on resolving the OS paths. <a href="http://t3.dotgnu.info/blog/php/include_once-mostly-harmless.html">[Citation]</a></li>
+<li>require() and include() are identical in every way except require halts if the file is missing. Performance wise there is very little difference. <a href="http://groups.google.com/group/php.general/browse_thread/thread/72332fe1ed21e104/b1650148cd6e3c17?lnk=st&amp;q=php+require+vs+include+performance#b1650148cd6e3c17">[Citation]</a></li>
+<li>Since PHP5, the time of when the script started executing can be found in $_SERVER[’REQUEST_TIME’], use this instead of time() or microtime(). <a href="http://www.php.net/time">[Citation]</a></li>
+<li><a href="http://www.php.net/pcre">PCRE</a> regex is quicker than <a href="http://www.php.net/ereg">EREG</a>, but always see if you can use quicker native functions such as <a href="http://www.php.net/strncasecmp">strncasecmp</a>, <a href="http://www.php.net/strpbrk">strpbrk</a> and <a href="http://www.php.net/stripos">stripos</a> instead. <a href="http://talks.php.net/show/php-best-practices/36">[Citation]</a></li>
+<li>When parsing with XML in PHP try <a href="http://www.bin-co.com/php/scripts/xml2array/">xml2array</a>, which makes use of the <a href="http://www.php.net/xml">PHP XML functions</a>, for HTML you can try PHP&#8217;s <a href="http://www.php.net/dom">DOM document</a> or <a href="http://www.php.net/domxml">DOM XML</a> in PHP4. <a href="http://htmlparsing.icenine.ca/">[Citation]</a></li>
+<li><a href="http://www.php.net/str_replace">str_replace</a> is faster than <a href="http://www.php.net/preg_replace">preg_replace</a>, str_replace is best overall, however <a href="http://www.php.net/strtr">strtr</a> is sometimes quicker with larger strings. Using array() inside str_replace is usually quicker than multiple str_replace. <a href="http://www.tummblr.com/web-development/php/php-speed-of-string-replacement-functions/">[Citation]</a></li>
+<li>&#8220;else if&#8221; statements are faster than <a href="http://en.wikipedia.org/wiki/Switch_statement">select statements</a> aka <a href="http://www.php.net/switch">case/switch</a>. <a href="http://www.php.lt/benchmark/phpbench.php">[Citation]</a></li>
+<li>Error suppression with @ is very slow. <a href="http://michelf.com/weblog/2005/bad-uses-of-the-at-operator/">[Citation]</a></li>
+<li>To reduce bandwidth usage turn on mod_deflate in Apache v2 <a href="http://howtoforge.com/apache2_mod_deflate">[Citation]</a> or for Apache v1 try mod_gzip. <a href="http://talks.php.net/show/php-best-practices/40">[Citation]</a></li>
+<li>Close your database connections when you&#8217;re done with them. <a href="http://uk.php.net/manual/en/function.mysql-close.php#69063">[Citation]</a></li>
+<li>$row[’id’] is <a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">7 times faster</a> than $row[id], because if you don&#8217;t supply quotes it has to guess which index you meant, assuming you didn&#8217;t mean a constant. <a href="http://www.php.net/constants#language.constants.syntax">[Citation]</a></li>
+<li>Use &lt;?php &#8230; ?&gt; tags when declaring PHP as all other styles are depreciated, including short tags. <a href="http://talks.php.net/show/php-best-practices/10">[Citation]</a></li>
+<li>Use strict code, avoid suppressing errors, notices and warnings thus resulting in cleaner code and less overheads. Consider having <a href="http://www.php.net/error_reporting">error_reporting(E_ALL)</a> always on. <a href="http://talks.php.net/show/php-best-practices/11">[Citation]</a></li>
+<li>PHP scripts are be served at 2-10 times slower by Apache httpd than a static page. Try to use static pages instead of server side scripts. <a href="http://talks.php.net/show/php-best-practices/34">[Citation]</a></li>
+<li>PHP scripts (unless cached) are compiled on the fly every time you call them. Install a PHP caching product (such as <a href="http://www.php.net/memcache">memcached</a> or <a href="http://eaccelerator.net/">eAccelerator</a> or <a href="http://sourceforge.net/projects/turck-mmcache/">Turck MMCache</a>) to typically increase performance by 25-100% by removing compile times. You can even <a href="http://www.cpanel.net/support/docs/ea/ea3/ea3php_php_extensionmgr.html">setup eAccelerator on cPanel using EasyApache3</a>. <a href="http://www.phpfive.net/php-opcode-caching-with-eaccelerator-article45.htm">[Citation]</a></li>
+<li>An alternative caching technique when you have pages that don&#8217;t change too frequently is to cache the HTML output of your PHP pages. Try <a href="http://smarty.php.net/">Smarty</a> or <a href="http://pear.php.net/Cache_Lite">Cache Lite</a>.  <a href="http://phplens.com/phpeverywhere/tuning-apache-php">[Citation]</a></li>
+<li>Use isset where possible in replace of strlen. (ie: if (strlen($foo) &lt; 5) { echo &#8220;Foo is too short&#8221;; } vs. if (!isset($foo{5})) { echo &#8220;Foo is too short&#8221;; } ). <a href="http://blog.dynom.nl/archives/String-length-vs-isset-to-check-string-lengths_20070807_5.html">[Citation]</a></li>
+<li>++$i is faster than $ i++, so <a href="http://www.hudzilla.org/phpwiki/index.php?title=Pre-increment_where_possible">use pre-increment where possible</a>. <a href="http://talks.php.net/show/php-best-practices/32">[Citation]</a></li>
+<li>Make use of the countless predefined functions of PHP, don&#8217;t attempt to build your own as the native ones will be far quicker; if you have very time and resource consuming functions, consider writing them as C extensions or modules. <a href="http://talks.php.net/show/php-best-practices/31">[Citation]</a></li>
+<li>Profile your code. A profiler shows you, which parts of your code consumes how many time. The <a href="http://xdebug.org/">Xdebug debugger</a> already contains a profiler. Profiling shows you the bottlenecks in overview. <a href="http://talks.php.net/show/php-best-practices/39">[Citation]</a></li>
+<li>Document your code. <a href="http://talks.php.net/show/php-best-practices/16">[Citation]</a></li>
+<li>Learn the difference between good and bad code. <a href="http://www.sitepoint.com/blogs/2007/05/25/good-and-bad-php-code/">[Citation]</a></li>
+<li>Stick to coding standards, it will make it easier for you to understand other people&#8217;s code and other people will be able to understand yours. <a href="http://talks.php.net/show/php-best-practices/15">[Citation]</a></li>
+<li>Separate code, content and presentation: keep your PHP code separate from your HTML. <a href="http://www.ibm.com/developerworks/library/wa-phprock1/index.html">[Citation]</a></li>
+<li>Don&#8217;t bother using complex template systems such as Smarty, use the one that&#8217;s included in PHP already, see <a href="http://www.php.net/ob_get_contents">ob_get_contents</a> and <a href="http://www.php.net/extract">extract</a>, and simply pull the data from your database. <a href="http://www.massassi.com/php/articles/template_engines/">[Citation]</a></li>
+<li>Never trust variables coming from user land (such as from $_POST) use <a href="http://www.php.net/mysql_real_escape_string">mysql_real_escape_string</a> when using mysql, and <a href="http://www.php.net/htmlspecialchars">htmlspecialchars</a> when outputting as HTML. <a href="http://talks.php.net/show/php-best-practices/19">[Citation]</a></li>
+<li>For security reasons never have anything that could expose information about paths, extensions and configuration, such as display_errors or <a href="http://www.php.net/phpinfo">phpinfo</a>() in your webroot. <a href="http://talks.php.net/show/php-best-practices/24">[Citation]</a></li>
+<li>Turn off <a href="http://www.php.net/register_globals">register_globals</a> (it&#8217;s disabled by default for a reason!). No script at production level should need this enabled as it is a security risk. Fix any scripts that require it on, and fix any scripts that require it off using <a href="http://uk.php.net/manual/en/security.globals.php#82542">unregister_globals()</a>. Do this now, as it&#8217;s set to be removed in PHP6. <a href="http://talks.php.net/show/php-best-practices/27">[Citation]</a></li>
+<li>Avoid using plain text when storing and evaluating passwords to avoid exposure, instead use a hash, such as an <a href="http://www.php.net/md5">md5</a> hash. <a href="http://talks.php.net/show/php-best-practices/28">[Citation]</a></li>
+<li>Use <a href="http://www.php.net/ip2long">ip2long</a>() and <a href="http://www.php.net/long2ip">long2ip</a>() to store IP addresses as integers instead of strings. <a href="http://blog.rightbrainnetworks.com/2006/09/18/10-things-you-probably-didnt-know-about-php/">[Citation]</a></li>
+<li>You can avoid reinventing the wheel by using the PEAR project, giving you existing code of a high standard. <a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">[Citation]</a></li>
+<li>When using header(&#8216;Location: &#8216;.$url); remember to follow it with a die(); as the script continues to run even though the location has changed or avoid using it all together where possible. <a href="http://richardlynch.blogspot.com/2007/06/php-header-location-redirect-refresh.html">[Citation]</a></li>
+<li>In <a href="http://www.php.net/oop">OOP</a>, if a method can be a <a href="http://en.wikipedia.org/wiki/Method_(computer_science)#Static_methods">static method</a>, declare it static. Speed improvement is by a factor of 4. <a href="http://ilia.ws/files/frankfurt_perf.pdf">[Citation]</a>.</li>
+<li>Incrementing a local variable in an OOP method is the fastest. Nearly the same as calling a local variable in a function and incrementing a global variable is 2 times slow than a local variable. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Incrementing an object property (eg. $this-&gt;prop++) is 3 times slower than a local variable. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Incrementing an undefined local variable is 9-10 times slower than a pre-initialized one. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Just declaring a global variable without using it in a function slows things down (by about the same amount as incrementing a local var). PHP probably does a check to see if the global exists. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Method invocation appears to be independent of the number of methods defined in the class because I added 10 more methods to the test class (before and after the test method) with no change in performance. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Methods in derived classes run faster than ones defined in the base class. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>A function call with one parameter and an empty function body takes about the same time as doing 7-8 $localvar++ operations. A similar method call is of course about 15 $localvar++ operations. <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php">[Citation]</a></li>
+<li>Not everything has to be OOP, often it is just overhead, each method and object call consumes a lot of memory. <a href="http://talks.php.net/show/php-best-practices/33">[Citation]</a></li>
+<li>Never trust user data, escape your strings that you use in SQL queries using <a href="http://www.php.net/mysql_real_escape_string">mysql_real_escape_string</a>, instead of mysql_escape_string or addslashes. Also note that if <a href="http://www.php.net/magic_quotes_gpc">magic_quotes_gpc</a> is enabled you should use <a href="http://www.php.net/stripslashes">stripslashes</a> first. <a href="http://www.jemjabella.co.uk/articles/php-security-tips">[Citation]</a></li>
+<li>Avoid the PHP mail() function header injection issue. <a href="http://uk3.php.net/manual/en/function.mail.php#56788">[Citation]</a></li>
+<li>Unset your database variables (the password at a minimum), you shouldn&#8217;t need it after you make the database connection.</li>
+<li><a href="http://en.wikipedia.org/wiki/RTFM">RTFM!</a> PHP offers a <a href="http://www.php.net/manual/">fantastic manual</a>, possibly one of the best out there, which makes it a very hands on language, providing working examples and talking in plain English. Please USE IT! <a href="http://xkcd.com/293/">[Citation]</a></li>
+</ol>
+<p>If you still need help, try #PHP on the <a href="http://chat.efnet.org/">EFnet</a> IRC Network. (Read the !rules first).</p>
+<p>Also see:</p>
+<ul>
+<li>an <a href="http://phplens.com/lens/php-book/optimizing-debugging-php.php" target="_blank">Excellent Article</a> about optimizing PHP by John Lim</li>
+<li><a href="http://pear.php.net/manual/en/standards.php">PEAR coding standards</a></li>
+<li><a href="http://talks.php.net/show/php-best-practices/">PHP best practices</a> by ez.no (Use left and right keys to scroll through the pages)</li>
+<li><a href="http://phplens.com/phpeverywhere/tuning-apache-php">Tuning Apache and PHP for Speed on Unix</a></li>
+<li><a href="http://c2.com/cgi/wiki?PrematureOptimization">Premature Optimisation</a></li>
+<li><a href="http://ilia.ws/files/frankfurt_perf.pdf">PHP and Performance</a></li>
+<li><a href="http://www.scribd.com/doc/10633/Performance-Tuning-PHP">Performance Tuning PHP</a></li>
+<li><a href="http://www.ibm.com/developerworks/library/wa-phprock1/index.html">Develop rock-solid code in PHP</a></li>
+<li><a href="http://www.moskalyuk.com/blog/php-optimization-tips/1272">12 PHP optimization tips</a></li>
+<li><a href="http://blog.rightbrainnetworks.com/2006/09/18/10-things-you-probably-didnt-know-about-php/">10 things you (probably) didn’t know about PHP</a></li>
+</ul>
+<p>Think you&#8217;re a PHP guru now? See if you can <a href="http://www.nickhalstead.com/2007/05/23/php-interview-questions-from-yahoo/">answer these questions</a>.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/10-wordpress-performance-optimisation-tips" rel="bookmark" title="10 wordpress performance optimisation tips">10 wordpress performance optimisation tips </a> <small>I wanted to prepare my wordpress powered blog for an...</small></li>
+<li><a href="https://hm2k.org/posts/text-editors-revisited" rel="bookmark" title="Text editors revisited">Text editors revisited </a> <small>As a web developer my main tool is my text...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/50-php-optimisation-tips-revisited/feed</wfw:commentRss>
+			<slash:comments>38</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">178</post-id>	</item>
+		<item>
+		<title>10 wordpress performance optimisation tips</title>
+		<link>https://hm2k.org/posts/10-wordpress-performance-optimisation-tips</link>
+					<comments>https://hm2k.org/posts/10-wordpress-performance-optimisation-tips#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 16 May 2008 12:40:55 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Optimisation]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=179</guid>
+
+					<description><![CDATA[I wanted to prepare my wordpress powered blog for an influx of traffic from social media sites such as reddit.com or digg.com, in case one of my articles got big, so I decided to investigate what could be done to optimise the performance my blog. This is the result&#8230; Upgrade to the latest version of [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited" rel="bookmark" title="50+ PHP optimisation tips revisited">50+ PHP optimisation tips revisited </a> <small>After reading an article some time ago entitled &#8220;40 Tips...</small></li>
+<li><a href="https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress" rel="bookmark" title="Using Your Own URL as Your OpenID with WordPress">Using Your Own URL as Your OpenID with WordPress </a> <small>Today I decided to join stackoverflow.com, which requires you to...</small></li>
+<li><a href="https://hm2k.org/posts/adding-table-controls-and-support-to-tinymce-in-wordpress" rel="bookmark" title="Adding table controls and support to TinyMCE in WordPress">Adding table controls and support to TinyMCE in WordPress </a> <small>One thing wordpress has always lacked is the ability to...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I wanted to prepare my wordpress powered blog for an influx of traffic from social media sites such as reddit.com or digg.com, in case one of my articles got big, so I decided to investigate what could be done to optimise the performance my blog.</p>
+<p>This is the result&#8230;</p>
+<p><span id="more-179"></span></p>
+<ol>
+<li>Upgrade to the latest version of <a href="http://wordpress.org/download/">WordPress</a>. Each version has more performance improvements. Try using the <a href="http://techie-buzz.com/wordpress-plugins/wordpress-automatic-upgrade-plugin.html">WordPress Automated Upgrade</a> plugin.</li>
+<li>Avoid using lots of large javascript or css files or huge images in your site template or try to <a href="http://code.google.com/p/minify/">Minify</a> them.</li>
+<li>Disable any plugins that you don&#8217;t use or need.</li>
+<li>Enable <a href="http://codex.wordpress.org/Function_Reference/WP_Cache">WordPress Object Caching</a>, and <a href="http://perishablepress.com/press/2007/12/26/how-to-enable-the-default-wordpress-object-cache/">learn how</a>.<a href="http://perishablepress.com/press/2007/12/26/how-to-enable-the-default-wordpress-object-cache/"></a></li>
+<li>Try <a href="http://mnm.uib.es/gallir/wp-cache-2/">WP-Cache2</a> or <a href="http://ocaoimh.ie/wp-super-cache/">WP Super Cache</a> (based on WP-Cache) ideal for large sites, with lots of traffic.</li>
+<li><a href="http://weblogtoolscollection.com/archives/2005/04/06/optimize-your-database/">Optimise your MySQL database tables</a>.</li>
+<li>If you&#8217;re serving lots of images, <a href="http://codex.wordpress.org/WordPress_Optimization/Offloading">offload some</a> to free image hosting sites such as <a href="http://www.flickr.com/">flickr</a> or <a href="http://imageshack.us/">imageshack</a>.</li>
+<li>Use <a href="http://xdebug.org/">Xdebug</a> to check if the plugins you are using are causing performance issues. If they are, get rid of them.</li>
+<li><a href="http://www.howtogeek.com/howto/programming/speed-up-your-web-site-with-mysql-query-caching/">Use Mysql Query Caching</a> to speed up calls to the database.<a href="http://www.howtogeek.com/howto/programming/speed-up-your-web-site-with-mysql-query-caching/"></a></li>
+<li>Use PHP Opcode Caching such as <a href="http://eaccelerator.net/">eAccelerator</a>.</li>
+</ol>
+<p>Also read <a href="http://www.howtoforge.com/configuring_apache_for_maximum_performance">how to configure Apache for performance</a>.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/50-php-optimisation-tips-revisited" rel="bookmark" title="50+ PHP optimisation tips revisited">50+ PHP optimisation tips revisited </a> <small>After reading an article some time ago entitled &#8220;40 Tips...</small></li>
+<li><a href="https://hm2k.org/posts/using-your-own-url-as-your-openid-with-wordpress" rel="bookmark" title="Using Your Own URL as Your OpenID with WordPress">Using Your Own URL as Your OpenID with WordPress </a> <small>Today I decided to join stackoverflow.com, which requires you to...</small></li>
+<li><a href="https://hm2k.org/posts/adding-table-controls-and-support-to-tinymce-in-wordpress" rel="bookmark" title="Adding table controls and support to TinyMCE in WordPress">Adding table controls and support to TinyMCE in WordPress </a> <small>One thing wordpress has always lacked is the ability to...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/10-wordpress-performance-optimisation-tips/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">179</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:12 by W3 Total Cache
+-->

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>three &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/three/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Fri, 11 Mar 2011 11:34:54 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>exim on another port for smtp</title>
+		<link>https://hm2k.org/posts/exim-on-another-port-for-smtp</link>
+					<comments>https://hm2k.org/posts/exim-on-another-port-for-smtp#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 25 Nov 2010 14:58:35 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[25]]></category>
+		<category><![CDATA[587]]></category>
+		<category><![CDATA[exim]]></category>
+		<category><![CDATA[smtp]]></category>
+		<category><![CDATA[three]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=661</guid>
+
+					<description><![CDATA[When a business I know had trouble with their broadband I was fortunately able to get them back online by using the redundant mobile broadband on the router. The only issue then was that they couldn&#8217;t send email on port 25 through the Three mobile network. The solution is to change the outgoing SMTP from [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/ftp-server-for-windows" rel="bookmark" title="FTP server for windows">FTP server for windows </a> <small>I have been on the lookout for a decent FTP...</small></li>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form" rel="bookmark" title="How to correctly make a PHP contact form">How to correctly make a PHP contact form </a> <small>I use contact forms on many websites, and over the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>When a business I know had trouble with their broadband I was fortunately able to get them back online by using the redundant mobile broadband on the router.</p>
+<p>The only issue then was that they <a href="http://www.three.co.uk/Help_Support/Mobile_Broadband_Help">couldn&#8217;t send email on port 25 through the Three mobile network</a>.</p>
+<p>The solution is to change the outgoing SMTP from port 25 to port 587.</p>
+<p>Because I keep forgetting myself, here&#8217;s how you do it on cPanel:</p>
+<p><span id="more-661"></span>You can run Exim on another port by going to the <em>Service Manager</em> in WebHost Manager and then enabling <em>exim on another port</em> and choosing the port number.</p>
+<p>If it&#8217;s still not working, your firewall (iptables) is probably blocking it, so here&#8217;s what you need to do:</p>
+<p>First find the iptables for port 25:</p>
+<blockquote><p>root@server [/]# iptables-save | grep &#8220;port 25&#8221;<br />
+-A INPUT -i venet0 -p tcp -m tcp &#8211;dport 25 -j ACCEPT<br />
+-A INPUT -i venet0 -p tcp -m tcp &#8211;sport 25 -j ACCEPT<br />
+-A OUTPUT -o venet0 -p tcp -m tcp &#8211;sport 25 -j ACCEPT<br />
+-A OUTPUT -o venet0 -p tcp -m tcp &#8211;dport 25 -j ACCEPT</p></blockquote>
+<p>Once you have that, copy each line and replace 25 with 587 and enter those in, like so:</p>
+<blockquote><p>iptables -A INPUT -i venet0 -p tcp -m tcp &#8211;dport 587 -j ACCEPT<br />
+iptables -A INPUT -i venet0 -p tcp -m tcp &#8211;sport 587 -j ACCEPT<br />
+iptables -A OUTPUT -o venet0 -p tcp -m tcp &#8211;sport 587 -j ACCEPT<br />
+iptables -A OUTPUT -o venet0 -p tcp -m tcp &#8211;dport 587 -j ACCEPT</p></blockquote>
+<p>Finally, you should check it works by using telnet from another machine:</p>
+<blockquote><p>[user@server2~]$ telnet mail.server.example.com 587<br />
+Trying 1.2.3.4&#8230;<br />
+Connected to mail.server.example.com (1.2.3.4).<br />
+Escape character is &#8216;^]&#8217;.<br />
+220-server.example.com ESMTP Exim 4.69 #1 Fri, 26 Nov 2010 16:54:07 +0000<br />
+220-We do not authorize the use of this system to transport unsolicited,<br />
+220 and/or bulk e-mail.</p></blockquote>
+<p>If you see a message similar to the above it has worked, so now you can save iptables and restart the service:</p>
+<ul>
+<li>iptables-save</li>
+<li>service iptables restart</li>
+</ul>
+<p>Done!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/ftp-server-for-windows" rel="bookmark" title="FTP server for windows">FTP server for windows </a> <small>I have been on the lookout for a decent FTP...</small></li>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-correctly-make-a-php-contact-form" rel="bookmark" title="How to correctly make a PHP contact form">How to correctly make a PHP contact form </a> <small>I use contact forms on many websites, and over the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/exim-on-another-port-for-smtp/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">661</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:31 by W3 Total Cache
+-->

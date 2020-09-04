@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>pagerank &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/pagerank/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 06 Oct 2011 21:30:30 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Is Google PageRank dead?</title>
+		<link>https://hm2k.org/posts/is-google-pagerank-dead</link>
+					<comments>https://hm2k.org/posts/is-google-pagerank-dead#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Thu, 06 Oct 2011 21:30:30 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[pagerank]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3314</guid>
+
+					<description><![CDATA[PageRank is dead, long live PageRank. As we said recently, there&#8217;s been lots of speculation as to whether PageRank is dead or not. It isn&#8217;t, just Google are moving the goals a bit. Basically, they don&#8217;t want you to focus on PageRank but it&#8217;s still massively important to them. All this talk of dead, reminds me of [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>PageRank is dead, long live PageRank.<img loading="lazy" class="alignright size-medium wp-image-3317" title="Dead Parrot" src="http://labs.phurix.net/upload/dead-parrot-1-300x168.png" alt="" width="300" height="168" srcset="https://hm2k.org/upload/dead-parrot-1-300x168.png 300w, https://hm2k.org/upload/dead-parrot-1.png 853w" sizes="(max-width: 300px) 100vw, 300px" /></p>
+<p>As we said <a href="http://labs.phurix.net/posts/pagerank-viewer-launch">recently</a>, there&#8217;s been lots of speculation as to whether PageRank is dead or not. It isn&#8217;t, just Google are moving the goals a bit. Basically, they don&#8217;t want you to focus on PageRank but it&#8217;s still massively important to them.</p>
+<p>All this talk of dead, reminds me of the <a href="http://en.wikipedia.org/wiki/Dead_Parrot_sketch">Monty Python dead parrot sketch</a>, only in this case, it isn&#8217;t dead. An anti-dead-parrot if you will.</p>
+<p>So what&#8217;s with all the <a href="http://www.google.co.uk/news?q=pagerank+dead">news about PageRank being dead</a>? Google just changed their code, that&#8217;s all&#8230;</p>
+<p><span id="more-3314"></span></p>
+<h3>What&#8217;s going on then?</h3>
+<p>Originally, everyone used the code in the Internet Explorer plugin, then the Firefox plugin came along.</p>
+<p>The common thing about both was the URL they used to lookup the PageRank:</p>
+<blockquote><p>http://toolbarqueries.google.com/search?client=navclient-auto&amp;ch=%s&amp;features=Rank&amp;q=info:%s</p>
+<p>Note: The first %s is the checkhash, while the second is the actual URL you&#8217;re looking up.</p></blockquote>
+<p>Back in August, <a href="http://james.slaterspage.com/scraping-google-related-with-bonus-pagerank/">James Slater</a> was investigating the new <a href="https://chrome.google.com/webstore/detail/cikfgcnnhcibkipoldbjegmeojnkaled">Google Related chrome plugin</a> only to discover the new PageRank lookup URLs:</p>
+<blockquote><p>http://toolbarqueries.google.com/tbr?client=navclient-auto&amp;ch=%s&amp;features=Rank&amp;q=info:%s</p></blockquote>
+<p>Also, if you used to use the host &#8220;www.google.com&#8221; this no longer works either, use &#8220;toolbarqueries.google.com&#8221; instead.</p>
+<h3>Let there be code!</h3>
+<p>As part of our ongoing commitment to our <a href="http://pagerank.phurix.net/">PageRank lookup tool</a>, not only have we fixed our code, but we&#8217;ve released working PageRank scripts to GitHub.</p>
+<ul>
+<li><a href="https://github.com/phurix/pagerank/">PageRank on GitHub</a></li>
+</ul>
+<p>PageRank is dead, long live PageRank.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/is-google-pagerank-dead/feed</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3314</post-id>	</item>
+		<item>
+		<title>PageRank Viewer Launch</title>
+		<link>https://hm2k.org/posts/pagerank-viewer-launch</link>
+					<comments>https://hm2k.org/posts/pagerank-viewer-launch#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Wed, 03 Aug 2011 14:55:28 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[pagerank]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3142</guid>
+
+					<description><![CDATA[Back in 2007, we were developing code for our domain lookup service. One of the features we wanted was to display the Google PageRank of a domain right there in the lookup along side the whois details. At the time we didn&#8217;t know how to pull this information and there was very limited details on [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="http://pagerank.phurix.net/"><img loading="lazy" class="alignright" title="pagerank" src="http://labs.phurix.net/upload/pagerank-300x225.png" alt="" width="300" height="225" /></a>Back in 2007, we were developing code for our domain lookup service.</p>
+<p>One of the features we wanted was to display the Google PageRank of a domain right there in the lookup along side the whois details.</p>
+<p>At the time we didn&#8217;t know how to pull this information and there was very limited details on it, so some research was required which resulted in a <a href="http://labs.phurix.net/projects/pagerank">PageRank PHP script</a>.</p>
+<p>Over time, the resulting &#8220;pagerank.php&#8221; script became very popular and was developed further by fixing bugs and making it easier to use.</p>
+<p>Now we wanted to show off our work in the form of a demo, so we launched a website&#8230;</p>
+<p><span id="more-3142"></span>We&#8217;ve had a demo of the <a href="http://pagerankviewer.com/">PageRank Viewer</a> online since 2010, but this week we&#8217;ve developed a whole new site along side entirely new code.</p>
+<p>The original code we used was reverse engineered from the Internet Explorer toolbar, however it was much later that improved code based on the Google Toolbar for Mozilla Firefox surfaced.</p>
+<p>The code from the Google Toolbar for Mozilla Firefox was interesting. By downloading the plugin &#8220;xpi&#8221; file, unzipping it and taking a look at the javascript you are able to see that Google regards PageRank quite highly or has sense of humour:</p>
+<blockquote><p>HASH_SEED_=&#8221;Mining PageRank is AGAINST GOOGLE&#8217;S TERMS OF SERVICE. Yes, I&#8217;m talking to you, scammer.&#8221;;</p></blockquote>
+<p>The simplicity of this code made it very easy to port over to any scripting language. So along side the launch of the all new PageRank Viewer website, we&#8217;re also shipping code in PHP, Python, Perl, TCL, C++ and D, all with the new code so you can write your own solution.</p>
+<p>We bring this to you just in time too, there&#8217;s a perceived deprecation of PageRank after Google didn&#8217;t offer any official PageRank tool in their Google Chrome web browser.</p>
+<p>PageRank was removed from webmaster tools, dismissed by a Google employee who said:</p>
+<blockquote><p>&#8220;it was silly to tell people not to think about it, but then to show them the data, implying that they should look at it&#8221;</p>
+<p>&#8211; <a href="http://www.google.com/support/forum/p/Webmasters/thread?tid=6a1d6250e26e9e48&amp;hl=en">Susan Moskwa 14/10/2009</a></p></blockquote>
+<p>Although we agree with the point Google is trying to make, we felt there is still a lot of value on PageRank to webmasters.</p>
+<p>For example, Google have made it very clear that having a reliable web hosting provider will help with ranking.</p>
+<p>With that in mind, we decided to redevelop the PageRank Viewer and release new code to improve availability of PageRank lookups.</p>
+<p>We welcome the all new <a href="http://pagerank.phurix.net/">PageRank Viewer</a> to the family as a Phurix Labs project.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/articles/pagerank" rel="bookmark" title="Google PageRank Script">Google PageRank Script </a> <small>Welcome to the home of the Google PageRank script. You&#8217;ll...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/pagerank-viewer-launch/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3142</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:13 by W3 Total Cache
+-->

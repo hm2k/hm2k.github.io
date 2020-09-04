@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>SEO &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/seo/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 02 Jun 2011 09:48:26 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>XSS: Get linked from Dmoz instantly</title>
+		<link>https://hm2k.org/posts/get-linked-from-dmoz-instantly</link>
+					<comments>https://hm2k.org/posts/get-linked-from-dmoz-instantly#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 24 Mar 2011 09:07:31 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Security]]></category>
+		<category><![CDATA[dmoz]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[SEO]]></category>
+		<category><![CDATA[xss]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=1881</guid>
+
+					<description><![CDATA[Recently, like many of you, I&#8217;ve had some trouble getting websites listed on the AOL owned &#8220;Open Directory Project&#8221; known as Dmoz. So, looking back at a post written by Oatmeal which explains how to get 20 .gov links in 20 minutes I wondered if the same was possible for Dmoz&#8230; After very little searching I [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/free-stuff" rel="bookmark" title="Free Stuff">Free Stuff </a> <small>I love free stuff, it&#8217;s probably why I like open...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Recently, like many of you, I&#8217;ve had some trouble getting websites listed on the AOL owned &#8220;Open Directory Project&#8221; known as Dmoz.</p>
+<p>So, looking back at a post written by <a href="http://0at.org/">Oatmeal</a> which explains <a href="http://www.seomoz.org/blog/xss-how-to-get-20-gov-links-in-20-minutes">how to get 20 .gov links in 20 minutes</a> I wondered if the same was possible for Dmoz&#8230;</p>
+<p><span id="more-1881"></span>After very little searching I soon discovered that the <strong>main search function of Dmoz is vulnerable</strong>.</p>
+<p>This means malicious users could easily place HTML code into the search form input box and manipulate the markup on the site (aka <a href="http://en.wikipedia.org/wiki/Cross-site_scripting">Cross Site Scripting</a> or XSS).</p>
+<p>Here&#8217;s a proof of concept showing how you would link to <a href="http://www.rfc-editor.org/rfc/rfc2606.txt">example.com</a> with the anchor text as &#8220;Look, I made a link&#8221;:</p>
+<blockquote><p>http://www.dmoz.org/search?q=%3Ch1%3E%3Ca+href%3D%22http%3A%2F%2Fexample.com%22%3ELook%2C+I+made+a+link%3C%2Fa%3E%3C/h1%3E</p>
+<p><a href="http://www.dmoz.org/search?q=%3Ch1%3E%3Ca+href%3D%22http%3A%2F%2Fwww.example.com%22%3ELook%2C+I+made+a+link%3C%2Fa%3E%3C/h1%3E">View the compromised page</a> (<a href="http://i.imgur.com/1Aqad.png">screenshot</a>)</p></blockquote>
+<p>To make this affective, you would simply need to swap out the domain and the anchor text and (in theory) you would have to link to them from various other websites for them to eventually get indexed and start passing link juice for things like <a href="http://www.hm2k.com/projects/pagerank">PageRank</a>.</p>
+<p>This is not the first time that Dmoz has been subject to such a flaw, as in 2007 they were subject to a similar <a href="http://sla.ckers.org/forum/read.php?3,16280,16287">XSS vulnerability in their blog search</a>.</p>
+<p>There are many well established ways Dmoz could fix this (aside from fixing their site code) on the server but they have chosen not to. I&#8217;m not sure why.</p>
+<p>Is there any SEO value in these type of links? It&#8217;s uncertain.</p>
+<p>Is there a security risk? Yes, definitely.</p>
+<p>Dmoz is not the only site to ever become subject to an XSS exploit, <a href="http://www.theregister.co.uk/2010/09/22/twitter_xss_genesis/">twitter has</a><a href="http://www.darknet.org.uk/2010/01/researcher-uncovers-xss-flaws-in-twitter-and-google-calendar/"> been vulnerable</a> <a href="http://www.jemjabella.co.uk/2010/confirmed-twitter-xss-vulnerability/">plenty</a> <a href="http://www.davidnaylor.co.uk/twitter-exploit-still-works.html">of</a> <a href="http://www.davidnaylor.co.uk/massive-twitter-cross-site-scripting-vulnerability.html">times</a>, but by golly they fixed it.</p>
+<p>Will Dmoz pull their finger out or is he dead, <a href="http://www.dmoz.org/public/profile?editor=jimnoble">jim</a>?</p>
+<p><em>Note: <a href="http://www.dmoz.org/docs/en/public_abuse_faq_en.html">Dmoz Staff</a> were unavailable for comment at time of publication (email address was unreachable).</em></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/free-stuff" rel="bookmark" title="Free Stuff">Free Stuff </a> <small>I love free stuff, it&#8217;s probably why I like open...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/get-linked-from-dmoz-instantly/feed</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1881</post-id>	</item>
+		<item>
+		<title>Friendly URLs (revisited)</title>
+		<link>https://hm2k.org/posts/friendly-urls</link>
+					<comments>https://hm2k.org/posts/friendly-urls#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 16 Jun 2008 12:02:59 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Apache]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/friendly-urls</guid>
+
+					<description><![CDATA[Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all familiar with URLs that look like this: http://www.example.com/?nav=page These type of URLs aren&#8217;t particularly &#8220;friendly&#8221;, they are known as dynamic URLs. As a rule of thumb search engines such as Google don&#8217;t like them as much as &#8220;static URLs&#8221;. However, Google has recently released an [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess" rel="bookmark" title="Creating subdomains from directories using mod_rewrite in Apache .htaccess">Creating subdomains from directories using mod_rewrite in Apache .htaccess </a> <small>The idea was to have the ability to create unlimited...</small></li>
+<li><a href="https://hm2k.org/posts/word-separators-in-urls" rel="bookmark" title="Word separators in URLs">Word separators in URLs </a> <small>In the world of web development and search engine optimisation...</small></li>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><strong>Turn dynamic URLs into friendly URLs</strong></p>
+<p>I&#8217;m sure we&#8217;re all familiar with <a href="http://en.wikipedia.org/wiki/URL">URLs</a> that look like this:</p>
+<blockquote><p>http://www.example.com/?nav=page</p></blockquote>
+<p>These type of URLs aren&#8217;t particularly &#8220;friendly&#8221;, they are known as dynamic URLs. As a rule of thumb search engines such as Google don&#8217;t like them as much as &#8220;static URLs&#8221;.</p>
+<p>However, Google has recently released an article on this very subject entitled <a href="http://googlewebmastercentral.blogspot.com/2008/09/dynamic-urls-vs-static-urls.html">Dynamic URLs vs. static URLs</a>, I recommend you give it a read so you fully understand what we&#8217;re talking about.</p>
+<p><a href="http://www.google.co.uk/intl/en/webmasters/guidelines.html"><span id="more-53"></span>Google</a> suggests that many search engine crawlers do not like dynamic URLs as much as static URLs.</p>
+<p>A &#8220;static&#8221; or &#8220;friendly&#8221; version of the above URL could be as follows:</p>
+<blockquote><p>http://www.example.com/page.html</p></blockquote>
+<p>Here&#8217;s how it&#8217;s done&#8230;</p>
+<p><strong>Solution 1</strong></p>
+<p>Apache&#8217;s <a href="http://httpd.apache.org/docs/1.3/mod/mod_rewrite.html">mod_rewrite</a> can be easily used via a file called &#8220;.htaccess&#8221; to turn dynamic urls into friendly urls.</p>
+<p>Here is an example of how it&#8217;s done:</p>
+<blockquote><p>#Turn on the Rewrite Engine<br />
+RewriteEngine on<br />
+#Set the base path<br />
+RewriteBase /<br />
+#Check that the lookup isn&#8217;t an existing file<br />
+RewriteCond %{REQUEST_FILENAME} !-f<br />
+#Check that the lookup isn&#8217;t an existing directory<br />
+RewriteCond %{REQUEST_FILENAME} !-d<br />
+#Check that the file isn&#8217;t index.php (avoid looping)<br />
+RewriteCond %{REQUEST_URI} !^index\.php$<br />
+#Force all .html lookups to the index file<br />
+RewriteRule (.+)*\.html index.php?nav=$1 [QSA,L]<br />
+#Note: QSA=query string append;L=Last, no more rules</p></blockquote>
+<p>This will rewrite all paths ending in &#8220;.html&#8221; to your index file.</p>
+<p>From there, it&#8217;s simply a case of tailoring the rewrite to your requirements.</p>
+<p>Checkout the <a href="http://www.ilovejackdaniels.com/mod_rewrite_cheat_sheet.png">mod_rewrite cheat sheet</a> for more help on rewrites.</p>
+<p><strong>Solution 2</strong></p>
+<p>If you ARE using PHP, a better way might be to just hand over ALL the path information to your &#8220;index.php&#8221; and handle it from there.</p>
+<p>The rewrite to do that looks something like this:</p>
+<blockquote><p>RewriteEngine on<br />
+RewriteBase /<br />
+RewriteCond %{REQUEST_FILENAME} !-f<br />
+RewriteCond %{REQUEST_FILENAME} !-d<br />
+RewriteCond %{REQUEST_URI} !^index\.php$<br />
+RewriteRule ^(.+)$ index.php/$1 [QSA,L]</p></blockquote>
+<p>As per above this will only rewrite paths that don&#8217;t exist.</p>
+<p>It doesn&#8217;t work out any slower than the above solution, as either way you&#8217;re passing it to PHP, and rewrites are fairly slow to begin with.</p>
+<p>In your &#8220;index.php&#8221;, you can parse $_SERVER[&#8216;PATH_INFO&#8217;] (or $_SERVER[&#8216;ORIG_PATH_INFO&#8217;]) for the path information. It may be quicker and easier to <a href="http://www.php.net/explode">explode</a> the path by &#8220;/&#8221;, and find the information you need using a <a href="http://www.php.net/foreach">foreach</a> rather than using regex in <a href="http://www.php.net/preg_match">preg_match</a>.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess" rel="bookmark" title="Creating subdomains from directories using mod_rewrite in Apache .htaccess">Creating subdomains from directories using mod_rewrite in Apache .htaccess </a> <small>The idea was to have the ability to create unlimited...</small></li>
+<li><a href="https://hm2k.org/posts/word-separators-in-urls" rel="bookmark" title="Word separators in URLs">Word separators in URLs </a> <small>In the world of web development and search engine optimisation...</small></li>
+<li><a href="https://hm2k.org/posts/suphp-and-phps" rel="bookmark" title="suPHP and .phps PHP code highlighting support">suPHP and .phps PHP code highlighting support </a> <small>Today a user on one of my web servers asked...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/friendly-urls/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">53</post-id>	</item>
+		<item>
+		<title>Recording an IRC channel on Windows</title>
+		<link>https://hm2k.org/posts/recording-an-irc-channel-on-windows</link>
+					<comments>https://hm2k.org/posts/recording-an-irc-channel-on-windows#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 22 Apr 2008 13:48:15 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=188</guid>
+
+					<description><![CDATA[Recently Matt Cutts posted an article on his blog about Recording an IRC channel on Linux/Ubuntu. However, as you can see his article was all about using the irssi IRC client on Linux/Ubuntu. I decided that some people may wish to know how to do it on Windows. Here&#8217;s how&#8230; There&#8217;s tuns of IRC clients [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/twitter-for-mirc" rel="bookmark" title="Twitter for mIRC">Twitter for mIRC </a> <small>I signed up for Twitter quite some months ago, but...</small></li>
+<li><a href="https://hm2k.org/posts/regmirc" rel="bookmark" title="Why I registered mIRC">Why I registered mIRC </a> <small>For those that don&#8217;t know&#8230; mIRC is communication software, otherwise...</small></li>
+<li><a href="https://hm2k.org/posts/migrating-from-windows-to-linux" rel="bookmark" title="Migrating from Windows to Linux">Migrating from Windows to Linux </a> <small>These days I find myself playing less and less games...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Recently Matt Cutts posted an article on his blog about <a href="http://www.mattcutts.com/blog/recording-an-irc-channel-on-linuxubuntu/">Recording an IRC channel on Linux/Ubuntu</a>.</p>
+<p>However, as you can see his article was all about using the irssi IRC client on Linux/Ubuntu.</p>
+<p>I decided that some people may wish to know how to do it on Windows.</p>
+<p>Here&#8217;s how&#8230;</p>
+<p><span id="more-188"></span></p>
+<p>There&#8217;s tuns of IRC clients out there for windows, you can even find IRC clients in your web browser, such as Chatzilla in Mozilla and Opera has one too, not only this but you can also get ported versions of Linux clients. Not only that, bug large IRC networks such as EFnet even have their own <a href="http://chat.efnet.org/">webchat</a>.</p>
+<p>We&#8217;re not going to use any of these, we&#8217;re going to use the most renowned IRC client in the world: <a href="http://www.mirc.com/">mIRC</a>.</p>
+<p>What makes mIRC such a great client is it&#8217;s usability. You&#8217;ll learn this once you start to use it.</p>
+<p>Installing mIRC is easy, just <a href="http://www.mirc.com/get.php">download mIRC</a>, run the exe file and follow the simple on screen instructions.</p>
+<p>Once installed you need to setup &#8220;logging&#8221;, so go to Tools &gt; Options, then IRC &gt; Logging.</p>
+<p>From there you can setup logging to your preferences. If you need help understanding any of this, just hit F1 at any time, and look for the section on Logging.</p>
+<p>Mine looks like this:</p>
+<p style="text-align: center;"><a href="http://www.hm2k.com/upload/mirc-logging.jpg"><img loading="lazy" class="alignnone size-medium wp-image-189" title="mirc-logging" src="http://www.hm2k.com/upload/mirc-logging-300x253.jpg" alt="" width="300" height="253" /></a></p>
+<p>Now to connect to a channel, say #SEO on EFnet, with the nickname NOTHM2K, you can do the following:</p>
+<blockquote><p>/nick NOTHM2K | /server irc.efnet.net | /join #SEO</p></blockquote>
+<p>Once you join the channel the client should start logging straight away.</p>
+<p>So what can you actually do with your logs? Well you can view them, search them or generate stats from them. Just like most things you archive.</p>
+<p>You can view your logs by doing:</p>
+<blockquote><p>//run $mircdirlogs</p>
+<p>Note: the double slash is important, it means execute rather than plain text</p></blockquote>
+<p>As you will be on the &#8220;EFnet&#8221; network, you will likely see a folder called &#8220;EFnet&#8221;, if you have setup your logging like me, you will find your daily timestamped logs in there. You can get to the folder quickly by doing:</p>
+<blockquote><p>//run $+($mircdirlogs,\,$network,\)</p></blockquote>
+<p>To open the current log of the channel you&#8217;re currently in you can do:</p>
+<blockquote><p>//run $window($active).logfile</p>
+<p>Note: Please make sure you have associated .log files with a program otherwise you will get an error and the file will not open.</p></blockquote>
+<p>To search through a log file for a specific string of text you can download <a href="http://gnuwin32.sourceforge.net/packages/grep.htm">grep for windows</a> or use <a href="http://technet2.microsoft.com/windowsserver/en/library/2b01d7f5-ab5a-407f-b5ec-f46248289db91033.mspx?mfr=true">findstr</a> which comes with windows. From mIRC do:</p>
+<blockquote><p>//run cmd</p></blockquote>
+<p>When a command prompt opens from there you can use grep or findstr. We will be using findstr&#8230;</p>
+<blockquote><p>findstr /?</p>
+<p>Note: This returns the help information</p>
+<p>findstr /s /C:&#8221;hello HM2K&#8221; *.log</p>
+<p>Note: This will search through all files that end in .log in the current dir and subdirectories for the string &#8220;hello HM2K&#8221;.</p></blockquote>
+<p>Or for those that prefer mIRC scripts, here&#8217;s findstr for mIRC&#8230;</p>
+<blockquote><p>alias findstr { ; v0.1 by HM2K (Updated: 23/05/08)<br />
+if (!$3) { echo -a Usage: /findstr &lt;path&gt; &lt;file-match&gt; &lt;string-match&gt; | halt }<br />
+var %win = @findstr<br />
+if (!$window(%win)) { window -e %win }<br />
+var %files = $findfile($1,$2,0)<br />
+var %i = 1<br />
+while (%i &lt; %files) {<br />
+filter -fwn $findfile($1,$2,%i) %win $+(*,$3,*)<br />
+if ($filtered) { aline %win $findfile($1,$2,%i) }<br />
+inc %i<br />
+}<br />
+}</p></blockquote>
+<p>To generate stats you need third party software such as <a href="http://www.nic.fi/~mauvinen/mircstats/">mIRCstats</a> or <a href="http://pisg.sourceforge.net/">pisg</a> (recommended), however if you do use pisg, it might make sense to use the <a href="http://www.eggheads.org/">eggdrop</a> or <a href="http://windrop.sourceforge.net/downloads.html">windrop</a> (for windows) IRC bot to generate the logs instead.</p>
+<p>There&#8217;s lots and lots of other neat tricks in mIRC for logging (take a look at $findfile) and beyond. I invite you to take a look at some of my <a href="http://www.hm2k.com/projects/mirc-scripts">mIRC scripts</a>, which some of you may find useful.</p>
+<p>PS. If you like <a href="http://www.hm2k.com/posts/why-i-registered-mirc">mIRC, please register</a>.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/twitter-for-mirc" rel="bookmark" title="Twitter for mIRC">Twitter for mIRC </a> <small>I signed up for Twitter quite some months ago, but...</small></li>
+<li><a href="https://hm2k.org/posts/regmirc" rel="bookmark" title="Why I registered mIRC">Why I registered mIRC </a> <small>For those that don&#8217;t know&#8230; mIRC is communication software, otherwise...</small></li>
+<li><a href="https://hm2k.org/posts/migrating-from-windows-to-linux" rel="bookmark" title="Migrating from Windows to Linux">Migrating from Windows to Linux </a> <small>These days I find myself playing less and less games...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/recording-an-irc-channel-on-windows/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">188</post-id>	</item>
+		<item>
+		<title>BT Web Clicks</title>
+		<link>https://hm2k.org/posts/bt-web-clicks</link>
+					<comments>https://hm2k.org/posts/bt-web-clicks#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 17 Apr 2008 17:09:14 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=187</guid>
+
+					<description><![CDATA[Today I received a phone call from one of my clients who said that they had a BT engineer with them. OK. I thought, what&#8217;s going on here&#8230; They then proceeded to ask me &#8220;what do we rank for on google?&#8221;, my response was &#8220;your company name, unless you request otherwise&#8221;. They then went on [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/css-seo" rel="bookmark" title="Does using CSS affect SEO?">Does using CSS affect SEO? </a> <small>I get asked this question time and time again. People...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/uk-business-license" rel="bookmark" title="UK Business License">UK Business License </a> <small>We recently had an issue with a US based company...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Today I received a phone call from one of my clients who said that they had a BT engineer with them. OK. I thought, what&#8217;s going on here&#8230;</p>
+<p>They then proceeded to ask me &#8220;what do we rank for on google?&#8221;, my response was &#8220;your company name, unless you request otherwise&#8221;.</p>
+<p>They then went on to mentioned that &#8220;the man from BT&#8221; can get us listed &#8220;at the top&#8221; of the search engine for &#8220;our keywords&#8221;.</p>
+<p>Naturally I reply to this with a sigh, but how they can they go around making such statements? It&#8217;s so unethical to make these kind of claims.</p>
+<p>After reading their marketing bumph, I found out what they meant by &#8220;at the top&#8221;. What they are offering is the ability to list as the &#8220;<a href="http://adwords.google.com/select/en_GB/images/adwords_home/b4.gif">sponsored links</a>&#8221; in search engines, which appear &#8220;at the top&#8221;.</p>
+<p>They requested my email address to send me &#8220;further details&#8221; through, below is the marketing email I was sent. I couldn&#8217;t wait to pull it apart.</p>
+<p>This isn&#8217;t at all a review of the BT Web Clicks service, in fact i&#8217;ve not used it, it&#8217;s simply an analysis of their marketing blurb.</p>
+<p><span id="more-187"></span></p>
+<blockquote><p>BT webclicks is a new service that guarantees as many or as little hits on your website based on your particular need.<br />
+Example. Anybody searching search engines such as google yahoo and msn for the specific type of business they need will be presented with a choice of various differenet company&#8217;s. What we guarantee is not just a priority sponsored listing. We absolutely guarantee that we will the will actually click on to your website searching for whatever your key words say about you. Ie car hire chaueffeur driven</p></blockquote>
+<p><strong>WRONG:</strong> You can&#8217;t guarantee anything you have no control over. You have no control over our websites or any of the search engines. No matter whether you think you do or not, even if you are using <a href="http://en.wikipedia.org/wiki/Deep_packet_inspection#Targeted_advertising">deep packet inspection for targeted advertising</a>, which is against your privacy policy and thus against the law.</p>
+<blockquote><p>If we don&#8217;t achieve the level of clicks you want we will give you your money back for the percentage we don&#8217;t achieve. Furthermore we are that confident of our product that we will allow customers to trial the 960 package for 3 months and can terminate the agreement if they are not happy at the end of this period.</p></blockquote>
+<p><strong>EXPENSIVE:</strong> According to the <a href="http://www.btbroadbandoffice.com/internetapplications/webclicks/prices">BT Web Clicks Prices</a>, you&#8217;re charging between £1 and £15 per month per click. So, 100 clicks in a month could cost you £1,500. Why would I do that when I get get 100 clicks a month for free using organic methods?</p>
+<blockquote><p>BT Web Clicks &#8211; Search Engine Marketing for Small Businesses Running a small business is hard work, fortunately your Internet Advertising doesn&#8217;t have to be Do you run a small business in your spare time or know someone who does? If so, BT is launching a new service which could help you save time and money.</p></blockquote>
+<p><strong>WASTE:</strong> of time and money more like. Small businesses are vulnerable, but they&#8217;re right, running a business doesn&#8217;t get any easier, just like huge corporations are going to continue to try and trick you trick you into buying something you don&#8217;t need. If your business is important, spend the time and money doing it yourself, rather than paying BT to do it.</p>
+<blockquote><p>Internet Advertising is the fastest growing advertising media in the UK, fuelled by the tremendous growth in the use of the Internet. But small and medium sized businesses are missing out on much of this usage because advertising on search engines is complicated and time consuming.<strong></strong></p></blockquote>
+<p><strong>NOT ALWAYS BEST:</strong> Just because it&#8217;s the fastest doesn&#8217;t always mean it&#8217;s the best, this is because it&#8217;s very competitive, and just about everyone has some involvement these days. This is why Google have now started using other forms of media including <a href="http://www.google.com/adwords/tvads/">TV</a>, <a href="http://www.google.com/adwords/audioads/">audio</a> and <a href="http://www.google.com/adwords/printads/">print</a>. Whatever gets results.</p>
+<blockquote><p>BT Web Clicks is a new Internet Advertising product that helps small and medium businesses by taking away the pain of advertising on search engines, leaving them to concentrate on their business. It offers customers a fixed amount of leads to their website for a fixed monthly fee. It is backed by a guarantee1 that offers them money back for undelivered clicks.</p></blockquote>
+<p><strong>PAINKILLER:</strong> Yes, using BT Web Clicks is much like using a pain killer, it block the pain, but they don&#8217;t actually give you a solution, and just like pain killers, they wear off after a while, unless you keep paying for them. Instead invest in a consultant who can act on your behalf.</p>
+<blockquote><p>Setting up a search marketing campaign on the major UK search engines can take up to 30 hours, however, customers placing orders for BT Web Clicks will have our expert team identify the keywords relevant to their business, create the advertising text, and place and manage the adverts on the major search engines including Google, Yahoo and at least 12 other search engines.</p></blockquote>
+<p><strong>HOW LONG?: </strong>Last time I checked, planning and setting up a search engine marketing campaign should take about 30 minutes, not 30 hours. If choosing relevant keywords, creating advertising text and signing up to <a href="http://adwords.google.com/">Google Adwords</a> takes 30 hours, you must be stupid.</p>
+<blockquote><p>BT Web Clicks<br />
+Get more customers to visit your business website!</p>
+<p># Sponsored links on multiple search engines<br />
+# Experts choosing optimised keywords<br />
+# Fixed prices to suit your budget</p></blockquote>
+<p><strong>FREE:</strong> None of this actually costs money, just your time. How much is your time actually worth? If it&#8217;s worth more than BT are charging for this service, I recommend you hire someone else to read through this for you.</p>
+<blockquote><p>BT Web Clicks is a search marketing service for your website or online shop. This service creates your business&#8217; very own sponsored links on both major and local search engines, such as Google and Yahoo, in order to drive relevant leads through to your site through carefully chosen keywords.</p></blockquote>
+<p><strong>FREE AGAIN:</strong> Creating your very own sponsored links is a FREE service offered by search engines. You only have to pay for them to appear on search engines for the keywords you choose.</p>
+<blockquote><p>Who will benefit from BT Web Clicks?<br />
+Your website is the first step in getting your business online, but how are people looking for your type of products and services going to find you if they don&#8217;t know you exist?</p></blockquote>
+<p><strong>MARKETING: </strong>There&#8217;s lots of ways people can find out you exist. You shouldn&#8217;t rely on paid online marketing exclusively, there&#8217;s plenty of free methods and other medias to explore.</p>
+<blockquote><p>What is BT Web Clicks?</p>
+<p>Many people start researching through search engines for both local and national suppliers &#8211; so whether you&#8217;re a local business such as a florist, takeaway restaurant, or hairdresser looking for local customers, or a specialist mail order company selling nationally BT Web Clicks can help.</p></blockquote>
+<p><strong>WHAT?:</strong> People do what? I don&#8217;t think they do, they use <a href="http://www.yell.com/">yellow pages</a> for local information. Don&#8217;t let them trick you.</p>
+<blockquote><p>What do I get?</p>
+<p># Keyword generation &#8211; our team of experts analyse search engines and choose the keywords that are going to generate you relevant leads to your site.<br />
+# Advertising text &#8211; we use professional online copywriters to create a text ad for your website to attract customers.<br />
+# No admin &#8211; our automated systems connect directly with the search engines to bid on keywords and upload your sponsored links.<br />
+# Fixed budget &#8211; you choose the budget so you know exactly what you will spend each month, all backed by a guarantee.<br />
+# Leads direct to your door &#8211; when a customer clicks your sponsored link they go straight through to your website and not through any other online directory.<br />
+# A monthly report with number of click through to your website &#8211; you can monitor your traffic and increase package if necessary</p></blockquote>
+<p><strong>GUARANTEED PIECE OF CRAP:</strong> Here&#8217;s how I see it. A guy puts a guarantee on the box &#8217;cause he wants you to fell all warm and toasty inside. But they know all they sold ya was a guaranteed piece of shit. That&#8217;s all it is. Hey, if you want me to take a dump in a box and mark it guaranteed, I will. I got spare time.</p>
+<blockquote><p>What does this mean for my business?<br />
+Getting visitors to your website is the first step in getting a paying customer so promoting your site in the right place is vitally important. Search marketing is a proven way of generating leads directly from both major and local search engines, however getting it right and running a search marketing campaign to generate quality leads can be both time consuming and costly.</p></blockquote>
+<blockquote><p>With BT Web Clicks you get the opportunity to use expertly chosen keywords and professionally written advertising copy that are all relevant to your business. This helps ensure that the visitors that come to your website using a sponsored link are looking for the products or services that your business supplies, and more likely to become your customer.</p></blockquote>
+<p><strong>THE REAL EXPERT:</strong> They aren&#8217;t the real expect, YOU ARE, yes, that&#8217;s right, the real expert is YOU! After all, it&#8217;s your business, you know your customers better than anyone else, right?</p>
+<blockquote><p>If you need anymore information don&#8217;t hesitate to call Yours sincereley, Mark Clark Sales Executive: Cheshire and North Wales BT Directories<br />
+Email: mark.d.clark@bt.com<br />
+Mobile: 07918717465</p></blockquote>
+<p><strong>THANKS:</strong> Thanks Mark, you&#8217;ve been most helpful. I enjoyed writing about this. Now watch as I rank on the first page of google for &#8220;BT Web Clicks&#8221;.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/css-seo" rel="bookmark" title="Does using CSS affect SEO?">Does using CSS affect SEO? </a> <small>I get asked this question time and time again. People...</small></li>
+<li><a href="https://hm2k.org/articles/seo-tips" rel="bookmark" title="SEO Tips">SEO Tips </a> <small>Quick List of SEO Tips You must get indexed by...</small></li>
+<li><a href="https://hm2k.org/posts/uk-business-license" rel="bookmark" title="UK Business License">UK Business License </a> <small>We recently had an issue with a US based company...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/bt-web-clicks/feed</wfw:commentRss>
+			<slash:comments>61</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">187</post-id>	</item>
+		<item>
+		<title>Google AdSense won&#8217;t let me in!</title>
+		<link>https://hm2k.org/posts/google-adsense-wont-let-me-in</link>
+					<comments>https://hm2k.org/posts/google-adsense-wont-let-me-in#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 17 Apr 2008 11:02:40 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=184</guid>
+
+					<description><![CDATA[Back in 2004, I signed up my old site &#8220;hm2k.org&#8221; to Google AdSense as an attempt to raise funds for my work. It&#8217;s content was mainly made up of what I was researching around that time, including a few controversial topics such as hacking, trojans and warez distribution. (Oh the joys of being under 18, [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221; to Google AdSense as an attempt to raise funds for my work.</p>
+<p>It&#8217;s content was mainly made up of what I was researching around that time, including a few controversial topics such as hacking, trojans and warez distribution. (Oh the joys of being under 18, or at least I was at time of original creation).</p>
+<p><span id="more-184"></span></p>
+<p>Thus, I got a reasonable response saying:</p>
+<blockquote><p>Hello [name],</p>
+<p>Thank you very much for updating your account information. I have reviewed<br />
+<a href="http://www.hm2k.org/" target="_blank">www.hm2k.org</a> and concluded that it does not comply with our <span class="nfakPe">AdSense</span><br />
+policy.  Our goal is to be able to extend our service to as many web<br />
+publishers as we can. Unfortunately, after reviewing your site, we are<br />
+unable to accept it into our <span class="nfakPe">AdSense</span> program at this time for the reason<br />
+listed below:</p>
+<p>-Unacceptable site content</p>
+<p>Please check for a separate application disapproval email for detailed<br />
+instructions on how to resolve this problem. Please feel free to reply to<br />
+this email for reconsideration when you have made the changes.</p>
+<p>Thank you for your understanding.</p>
+<p>Sincerely,</p>
+<p>Trinh<br />
+The Google <span class="nfakPe">AdSense</span> Team</p></blockquote>
+<p>And I did understand, it was fair enough at the time&#8230;</p>
+<p>Since then I had completely revamped &#8220;hm2k.org&#8221; 2 or 3 times, then finally in January 2007 I decided to completely redo my site, using the wordpress blog system, a whole new domain, a new design, all new content, and a new vision. It&#8217;s a whole new site.</p>
+<p>Let&#8217;s now fast forward to over 4 years later since the original application was submitted, to April 2008&#8230;</p>
+<p><!--more--></p>
+<p>My blog is getting ever more popular and I wish to cash in on this, but how? My first port of call is <a href="https://www.google.com/adsense/">Google AdSense</a>.</p>
+<p>By this point I&#8217;d already had a Google AdSense account for quite some time for my business, which is absolutly fine, this time however, it&#8217;s personal.</p>
+<p>So, I try and login to Google AdSense using my Google Account that i&#8217;ve had for quite some time now, and I receive the following message:</p>
+<blockquote><p>An AdSense account was not found under the Google Account associated with <strong>xxxxx@hm2k.org</strong>. Please check to make sure you are signing in with your approved AdSense login and password. If you&#8217;ve forgot your login, click <a href="https://www.google.com/adsense/support/bin/answer.py?answer=47611" target="_blank">here</a>. If you&#8217;re not an AdSense publisher, <a href="https://www.google.com/adsense/g-app-single-1" target="_blank">sign up</a> for an account.</p></blockquote>
+<p>So I try and signup again, using my existing account as per above.</p>
+<p>So I click on signup, and go through the steps&#8230;</p>
+<p>I get to the step entitled: &#8220;This is the account information you entered&#8221;&#8230;</p>
+<p>It says &#8220;Which best describes you?&#8221;</p>
+<p>I click: I have an email address and password (Google Account) I already use with Google services like AdWords, Gmail, Orkut, or the personalized home page.</p>
+<p>It says: &#8220;Would you like to use your existing Google Account for AdSense?&#8221;</p>
+<p>I click: &#8220;I&#8217;d like to use my existing Google account for AdSense.&#8221;</p>
+<p>A login box saying &#8220;Use an existing Google Account&#8221; comes up, I login&#8230;</p>
+<p>The page reloads and it gives me an error saying:</p>
+<blockquote><p>A user with the email you specified already exists<br />
+Please select a different Google Account login to access this account.</p></blockquote>
+<p>My first issue is the fact that neither of these errors are very descriptive, the second problem is that they are conflicting errors, they don&#8217;t agree with each other. I feel like I&#8217;m going round in circles and that neither error is telling me what&#8217;s really going on&#8230;</p>
+<p>Not only do I post on the <a href="http://groups.google.com/group/adsense-help-basics/browse_thread/thread/9dedab8897cf7dbe/fe090a2c7339601f">Google AdSense group</a>, I also proceed to <a href="https://www.google.com/adsense/support/bin/request.py">contact</a> Google saying that I&#8217;m having &#8220;login problems&#8221;, which is the only way I can describe the problem I&#8217;m seeing.</p>
+<p>I got no response from the group, but the response I got direct from Google is as follows:</p>
+<blockquote><p>Hello [name],</p>
+<p>Thanks for writing in. I&#8217;ll be more than happy to help you with your<br />
+password issue. Based on your description of the problem, I&#8217;ve provided<br />
+two options below. If neither of these helps you log into your account,<br />
+please feel free to reply and I&#8217;ll help you further.</p>
+<p>Your login email address is xxxxx@hm2k.org.</p>
+<p>If you know your current password and you&#8217;d like to change it, please<br />
+follow the directions on this page:<br />
+<a href="https://www.google.com/support/adsense/bin/answer.py?answer=9915" target="_blank">https://www.<span class="nfakPe">google</span>.com/support/<span class="nfakPe">adsense</span>/bin/answer.py?answer=9915</a></p>
+<p>If you&#8217;ve forgotten your existing password, please visit<br />
+<a href="https://www.google.com/adsense/assistlogin" target="_blank">https://www.<span class="nfakPe">google</span>.com/<span class="nfakPe">adsense</span>/assistlogin</a> . On this page, you&#8217;ll be able<br />
+to submit your email address to us. We&#8217;ll then automatically send you an<br />
+email with a link that will allow you to reset your password.</p>
+<p>Additionally, I&#8217;m happy to let you know your application complies with our<br />
+program policies and has been approved. Please check your email for a<br />
+separate application approval message providing instructions on accessing<br />
+your account and getting started with <span class="nfakPe">AdSense</span>.</p>
+<p>Additionally, please be aware that because your application was previously<br />
+disapproved, there may be a delay of 48 hours or more before <span class="nfakPe">Google</span> ads<br />
+begin appearing on your site. We appreciate your patience.</p>
+<p>For additional questions, I&#8217;d encourage you to visit the <span class="nfakPe">AdSense</span> Help<br />
+Center ( <a href="http://www.google.com/adsense_help" target="_blank">http://www.<span class="nfakPe">google</span>.com/<span class="nfakPe">adsense</span>_help</a> ) or the official <span class="nfakPe">AdSense</span> blog<br />
+( <a href="http://adsense.blogspot.com/?utm_source=txft" target="_blank">http://<span class="nfakPe">adsense</span>.blogspot.com?utm_source=txft</a> ). Alternatively, feel free<br />
+to post your question on the <span class="nfakPe">AdSense</span> Help Forum (<br />
+<a href="http://groups.google.com/group/adsense-help?utm_source=txft" target="_blank">http://groups.<span class="nfakPe">google</span>.com/group/<span class="nfakPe">adsense</span>-help?utm_source=txft</a> ).</p>
+<p>Sincerely,</p>
+<p>Kalpana<br />
+The <span class="nfakPe">Google</span> <span class="nfakPe">AdSense</span> Team</p></blockquote>
+<p>Apart from this email being very unhelpful towards my actual problem, it does clearly say that my application was approved. However, I wait 48 hours and receive nothing.</p>
+<p>What&#8217;s going on with my account? I can&#8217;t login, is it active or not? I don&#8217;t know! How could I know?</p>
+<p>Browsing my old emails and browsing the web I discover I can have my website appealed, and re-reviewed, but only if you&#8217;ve been banned for invalid clicks.</p>
+<p>Stupidly (perhaps), I fill out the <a href="https://www.google.com/adsense/support/bin/request.py?contact=invalid_clicks_appeal">online appeal form</a> anyway, with limited details, as I&#8217;ve not actually been banned for invalid clicks, so I don&#8217;t really have anything to provide.</p>
+<p>This is the response I get back:</p>
+<blockquote><p>Hello,</p>
+<p>Thank you for providing us with additional information. However, after<br />
+thoroughly reviewing your account data and taking your feedback into<br />
+consideration, we have re-confirmed that your account poses a significant<br />
+risk to our advertisers. For this reason, we are unable to reinstate your<br />
+account. Thank you for your understanding.</p>
+<p>As a reminder, if you have any questions about your account or the actions<br />
+that we have taken, please do not reply to this email. You can find more<br />
+information by visiting<br />
+<a href="https://www.google.com/adsense/support/bin/answer.py?answer=57153" target="_blank">https://www.google.com/adsense/support/bin/answer.py?answer=57153</a>.</p>
+<p>Sincerely,</p>
+<p>The Google AdSense Team</p>
+<p>Google Ireland Ltd.<br />
+Gordon House<br />
+Barrow Street<br />
+Dublin 4<br />
+Ireland</p>
+<p>Registered in Dublin, Ireland<br />
+Registration Number: 368047</p></blockquote>
+<p>It looks like a generic error  they just send out when the appeal fails, there&#8217;s also a distinct lack of personal touches like there&#8217;s been in the past.</p>
+<p>I conclude that my appeal application failed because firstly I wasn&#8217;t banned for invalid clicks, and secondly because I didn&#8217;t supply enough details about invalid clicks, which is mainly down to the fact that I never had an account in the first place to even generate invalid clicks.</p>
+<p>I have come to the end of my tether with this&#8230;</p>
+<p>Will I <em>ever </em>get a personal Google AdSense account?</p>
+<p>And just when I think all is lost, I receive a reply&#8230;</p>
+<blockquote><p>Hi [name],</p>
+<p>Thanks for writing in. I am sorry to know that you are still not able to<br />
+access your AdSense account. Please follow the steps below to resolve<br />
+this.</p>
+<p>1. Please make sure that your AdSense account password is different from<br />
+your Google Account password.</p>
+<p>2. You can reset it at <a href="https://www.google.com/adsense/assistlogin?hl=en_US" target="_blank">https://www.google.com/adsense/assistlogin?hl=en_US</a></p>
+<p>3. Once your passwords are different, you will need to log in to AdSense<br />
+with the AdSense email and password .</p>
+<p>4. Once you log in to your AdSense account, please migrate using<br />
+<a href="https://www.google.com/adsense/migrate-login-1" target="_blank">https://www.google.com/adsense/migrate-login-1</a></p>
+<p>Additionally, please know that your AdSense password is different from the<br />
+password you use to access other Google services. Our records show that<br />
+you have successfully reset he password for other Google services, but the<br />
+password for your AdSense account has not been reset. I suggest you visit<br />
+the link above and reset your password one more time.</p>
+<p>We appreciate your continued patience and understanding.</p>
+<div class="Ih2E3d">For additional questions, I&#8217;d encourage you to visit the AdSense Help<br />
+Center ( <a href="http://www.google.com/adsense_help" target="_blank">http://www.google.com/adsense_help</a> ) or the official AdSense blog<br />
+( <a href="http://adsense.blogspot.com/?utm_source=txft" target="_blank">http://adsense.blogspot.com?utm_source=txft</a> ). Alternatively, feel free<br />
+to post your question on the AdSense Help Forum (<br />
+<a href="http://groups.google.com/group/adsense-help?utm_source=txft" target="_blank">http://groups.google.com/group/adsense-help?utm_source=txft</a> ).</p>
+<p>Sincerely,</p>
+</div>
+<p>Parvathi<br />
+The Google AdSense Team</p></blockquote>
+<p>SUCCESS!</p>
+<p>After following the link to reset my password, receiving the email, then following THAT link, entering in a password over 7 chrs long, then returning to the login page, I can login!</p>
+<p>I find there is a new set of terms and conditions, last updated 2008-02-25, I understand the gist, so I accept.</p>
+<p>I then reach the <a href="https://www.google.com/adsense/migrate-login-1">migration link</a>, as per the above email. I click &#8220;Yes &#8211; I&#8217;m the only one who logs in to this AdSense account&#8221; and press continue&#8230;</p>
+<p>Which best describes you?<br />
+&gt; I have an email address and password (Google Account) I already use with Google services like Gmail, Orkut, or the personalized home page.<br />
+Would you like to use your existing Google Account for AdSense?<br />
+&gt; I&#8217;d like to use my existing Google account for AdSense.</p>
+<p>Now I get the &#8220;Use an existing Google Account&#8221; dialogue box, where I can enter my Google Account details.</p>
+<p>Final step is &#8220;Confirm your chosen AdSense login&#8221;, I confirm.</p>
+<p>I AM IN! I AM ACTUALLY IN!</p>
+<p>Just to check I&#8217;m not dreaming, I logout, and log back in, it accepts my Google Account details, no problem!</p>
+<p>Once again, Google saves the day!</p>
+<p>Problem solved, Well done Google!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/google-adsense-wont-let-me-in/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">184</post-id>	</item>
+		<item>
+		<title>eCommerce shopping cart software</title>
+		<link>https://hm2k.org/posts/ecommerce-shopping-cart-software</link>
+					<comments>https://hm2k.org/posts/ecommerce-shopping-cart-software#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 26 Mar 2008 01:17:33 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/ecommerce-shopping-cart-software</guid>
+
+					<description><![CDATA[So you&#8217;ve got a shop, or perhaps a new product range and you want to build a website so you can sell online. What you need is some kind of web based eCommerce shopping cart system, the question is which? I decided to build a short list of web based eCommerce shopping cart software out [&#8230;]<div class='yarpp-related-rss yarpp-related-none'>
+
+No related posts.
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>So you&#8217;ve got a shop, or perhaps a new product range and you want to build a website so you can sell online.</p>
+<p>What you need is some kind of web based eCommerce shopping cart system, the question is which?</p>
+<p>I decided to build a short list of web based eCommerce shopping cart software out there.</p>
+<p>The scenario is this, you have a client who wants an eCommerce solution, they are paying you, but not nearly enough, you&#8217;re doing this as more of a favour. You started to develop a solution for them, but felt their feedback wasn&#8217;t sufficient which would ultimately lead to missing things out, and it probably wasn&#8217;t worth it anyway. What is needed is a base platform to build upon.</p>
+<p>The rules are this, it must be open source, and it must work out of the box.</p>
+<p>Please remember, this is based purely on my options, by all means, take them on board, and form your own options.</p>
+<p><span id="more-177"></span></p>
+<p><a href="http://www.oscommerce.com/"><strong>osCommerce</strong></a> &#8211; <a href="http://demo.oscommerce.com/">Demo</a></p>
+<p>This thing has been around since about 2000, and to be honest I don&#8217;t think it&#8217;s improved much since then. I used it in the past, I found it was a ugly, useless piece of junk, despite the fact I keep getting reports from fellow web developers claiming that it&#8217;s actually a wonderful piece of software&#8230; once you apply all the community patches, fix the template system and add an array of modules to make it do all sorts of trickery.</p>
+<p>Fail.</p>
+<p><a href="http://www.oscmax.com/"><strong>osCMax</strong></a> &#8211; <a href="http://www.oscmax.com/"></a><a href="http://demo.opensourcecms.com/oscmax/">Demo</a><strong><br />
+</strong></p>
+<p>No surprises that this got it&#8217;s name due to the fact that it&#8217;s based on osCommerce. Advised by a fellow web developer I proceed with caution. As it turns out, like osCommerce, it requires register_globals to be enabled. In this day and age, I cannot take any web software that tells me it will not work until I make my setup a security risk seriously. Although this is called osCommerce Maximized, if they can&#8217;t manage to work without register_globals being enabled, i&#8217;m not convinced.</p>
+<p>Fail.</p>
+<p><a href="http://www.cubecart.com/site/home/"><strong>CubeCart</strong></a> &#8211; <a href="http://www.cubecart.com/site/demo/cc3/">Demo</a></p>
+<p>By looking at their website, you&#8217;d assume this product costs money. However apparently it&#8217;s only support and removal of the copyright which you must pay for, which would be fine, if it was reasonably priced, but it isn&#8217;t. And let&#8217;s just say the &#8220;checkout&#8221; process is much to be desired, for example, it doesn&#8217;t show the postage until you actually pay.</p>
+<p>Fail.</p>
+<p><a href="http://www.icdevgroup.org/"><strong>Interchange</strong></a> &#8211; <a href="http://demo.icdevgroup.org/i/demo4">Demo</a><strong><br />
+</strong></p>
+<p>From the initial outlook it appears to be very much something that was created at the start of the dot-com boom, and indeed it is. Coded in perl back in 1995, it&#8217;s likely to be one of the original GPL eCommerce solutions out there. I investigated the demo, it seems very simple, yet oozes the lack of any kind of modern day standards.</p>
+<p>Fail.</p>
+<p><a href="http://www.magentocommerce.com/"><strong>Magento</strong></a> &#8211; <a href="http://demo.magentocommerce.com/">Demo</a><strong><br />
+</strong></p>
+<p>From the outset this software appears to be ideal. It&#8217;s very much geared for the modern web developer with it&#8217;s trendy feel, complete with snazzy design and gradients on the demo store. Too good to be true? Maybe.</p>
+<p align="left">What is interesting to know is that the company that developed this software Irubin Consulting Inc originally started out as &#8220;<a href="http://web.archive.org/web/20051104063855/http://www.irubin.com/oscommerce.html">osCommerce developers</a>&#8220;.</p>
+<p>To begin with I notice that it has a huge amount of <a href="http://en.wikipedia.org/wiki/Library_%28computer_science%29">libs</a> which amounts to over 50% of the total disk space footprint. I&#8217;m not one for unnecessary bulk, and I&#8217;m not convinced all this is required by the default setup. I proceed regardless, thinking &#8220;hey, perhaps all this is justified&#8221;.</p>
+<p>Once all the files were uploaded, the installation could begin, a standard step of visiting the url and following the instructions. The localization took me longer than expected to define the locale settings as the lists were bizarrely long, and difficult to find what I was looking for. <em>Now feeling dumber than before, I continue anyway.</em></p>
+<p>I reach a step entitled: &#8220;Download Magento Core Modules and Updates&#8221;, to which I say &#8220;huh?&#8221;, I have three options: SVN Installation; Package Management through the Web; Manual Downloads and Upgrades.  I chose the &#8220;Proceed with Automatic Download (Alpha)&#8221;. <em>Why this had to be so complicated is beyond me&#8230;</em></p>
+<p>I&#8217;ve finally reached the next step where i&#8217;m greeted by a new problem: PHP Extension &#8220;pdo_mysql&#8221; must be loaded<br />
+PHP Extension &#8220;mcrypt&#8221; must be loaded. <em>I&#8217;m sure i&#8217;d loaded these&#8230;</em></p>
+<p>Great, now I need to recompile PHP, lucky for me I&#8217;m the sysadmin, otherwise I&#8217;d have to contact someone to do this for me. <em>I&#8217;m wondering can I still justify all this? I&#8217;m having doubts. I quit far earlier on previous solutions.</em></p>
+<p>Fail? Not yet, just because my server wasn&#8217;t setup correctly doesn&#8217;t mean I can give up just yet!</p>
+<p>I continued the installation which went flawlessly from there on inwards.</p>
+<p>Okay, so i&#8217;m all setup and I logged in as an admin. This is complicated, how on earth will my end users figure out how to manage their online store? Reluctantly it&#8217;s a&#8230;</p>
+<p>Fail.</p>
+<p><a href="http://www.zen-cart.com/"><strong>Zen Cart</strong></a> &#8211; <a href="http://www.zen-cart.com/index.php?main_page=showcase">Demo(s)</a><strong><br />
+</strong></p>
+<p>Yet another osCommerce based system. Nobody really has a bad word to say about it. Apart from the die hard osCommerce fans that claim it&#8217;s too overly customised, yet you&#8217;ll always find their osCommerce is also, very customised, so I&#8217;m not convinced. One of the bad things about Zen is if you find you need to change something outside of your template each time you upgrade, you&#8217;ll need to reapply the modifications you made.</p>
+<p>Fail.</p>
+<p><strong><a href="http://www.osc2nuke.com/">osc2nuke</a></strong> &#8211; <a href="http://demo.osc2nuke.com/">Demo</a></p>
+<p>If you&#8217;ve ever used phpNuke, the last thing you&#8217;ll want to do is even consider entrusting it with your business transactions. Well, this is a merge between osCommerce and phpNuke, both renowned for their security issues.</p>
+<p>Fail.</p>
+<p><a href="http://cpcommerce.cpradio.org/"><strong>cpCommerce</strong></a> &#8211; <a href="http://demo.opensourcecms.com/cpcommerce/">Demo</a><a href="http://cpcommerce.cpradio.org/"><strong><br />
+</strong></a></p>
+<p>The script&#8217;s site itself doesn&#8217;t have a demo, just screenshots. I&#8217;m never happy to use a solution that is so concerned about it&#8217;s own security that it won&#8217;t even include a demo on it&#8217;s own site. If you have no confidence in your product, neither do I, so no thanks.</p>
+<p>Fail.</p>
+<p><strong><a href="http://www.openfreeway.org/">Freeway</a></strong> &#8211; <a href="http://www.openfreeway.org/"></a><a href="http://www.openfreeway.org/demo/frontdemo/">Demo</a><strong><a href="http://www.openfreeway.org/"><br />
+</a></strong></p>
+<p>The whole time I was looking at the admin part of this script I was thinking: &#8220;will my end users understand how to use this?&#8221;, and the answer is no. I just can&#8217;t see myself working with this.</p>
+<p>Fail.</p>
+<p><strong><a href="http://www.phpshop.org/">phpShop</a></strong> &#8211; <a href="http://demo.opensourcecms.com/phpshop">Demo</a><strong><a href="http://www.phpshop.org/"><br />
+</a></strong></p>
+<p>This system could be nice if it was designed a bit nicer with the latest standards in mind. Tables are very much a thing of the past. <em>It&#8217;s got potential, but I&#8217;m not the man to do it. I have enough to do as it is.</em></p>
+<p>Fail.</p>
+<p><strong><a href="http://www.creloaded.com/">CRE Loaded</a></strong> &#8211; <a href="http://demos.creloaded.com/creloaded62standard/">Demo</a><strong><a href="http://www.creloaded.com/"><br />
+</a></strong></p>
+<p>Again, it&#8217;s osCommerce based, yet I don&#8217;t like the fact that they are constantly trying to sell you something, that is essentially free.</p>
+<p>Fail.</p>
+<p><strong><a href="http://www.bakesalehq.com/">Bakesale</a></strong> &#8211; <a href="http://demo.bakesalehq.com/">Demo</a><strong><a href="http://www.bakesalehq.com/"><br />
+</a></strong></p>
+<p>What strikes me about this is how amazingly simple it seems right from the outset. There&#8217;s no beating about the bush, even the main site clearly states exactly what it is, and what it isn&#8217;t.</p>
+<p>Although it&#8217;s good points may also be it&#8217;s down fall. It&#8217;s simplicity leaves little room for expansion, thus there&#8217;s very little interest in this project. No community means no community support, which effectively renders it a dead project. For me to use a project it must have an active community that drive the project and constantly pushing the boundaries. This simply does not have that.</p>
+<p>Fail.</p>
+<p><strong>Joomla! + <a href="http://virtuemart.net/">Virtuemart</a></strong> &#8211; <a href="http://demo.virtuemart.net/">Demo</a><strong><a href="http://virtuemart.net/"><br />
+</a></strong></p>
+<p>This happy module exists as an eCommerce addon to the ever popular Joomla, but this is just far too complicated. It&#8217;s a CMS AND an eCommerce solution, yet the eCommerce solution appears to be sufficient on it&#8217;s own. I guess the point is it uses Joomla as a platform, but if you don&#8217;t already use Joomla, it&#8217;s not much use is it? Why does it have to be so complicated? Thus as far as I&#8217;m concerned&#8230;</p>
+<p>Fail.</p>
+<p><strong><a href="http://www.ubercart.org/">UberCart</a></strong> &#8211; <a href="http://livetest.ubercart.org/">Demo</a></p>
+<p>Using Drupal as a working platform, UberCart is in all honesty a very nice looking solution. It sings, it dances, it does everything you&#8217;d expect from an eCommerce system. However, ultimately you know that underneath it&#8217;s Drupal, and although Drupal is a fantastic CMS, that is what it is, a content management system. Aren&#8217;t we over complicating things a little?</p>
+<p>Fail.</p>
+<p><strong><a href="http://www.opensolution.org/index,pl.html?sLang=en">Quick.Cart</a></strong> &#8211; <a href="http://opensolution.org/Quick.Cart/demo/">Demo</a><strong><a href="http://www.opensolution.org/index,pl.html?sLang=en"><br />
+</a></strong></p>
+<p>I&#8217;m not sure what it is, I just couldn&#8217;t get on with this. I just didn&#8217;t like it.</p>
+<p>Fail.</p>
+<p><strong><a href="http://www.ideacart.com/">IdeaCart</a></strong> &#8211; <a href="http://demo.ideacart.com/">Demo</a></p>
+<p>The demo appears to be down, not a good start. I think I&#8217;ll pass&#8230;</p>
+<p>Fail.</p>
+<p><strong><a href="http://www.opencart.com/">OpenCart</a></strong> &#8211; <a href="http://demo.opencart.com/">Demo</a></p>
+<p>Very simple frontend and a very nice and straight forward admin area, a joy to see something so finely constructed for modern web development.</p>
+<p>A very simple 2 step setup sequence was most refreshing. I was setup in no time at all and ready to go.</p>
+<p>All I needed to do was setup the rewrites in the &#8220;.htaccess&#8221; file, login to the admin area via &#8220;/admin/&#8221; and enable it there.</p>
+<p>Success!</p>
+<div class='yarpp-related-rss yarpp-related-none'>
+<p>No related posts.</p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/ecommerce-shopping-cart-software/feed</wfw:commentRss>
+			<slash:comments>5</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">177</post-id>	</item>
+		<item>
+		<title>Word separators in URLs</title>
+		<link>https://hm2k.org/posts/word-separators-in-urls</link>
+					<comments>https://hm2k.org/posts/word-separators-in-urls#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 06 Feb 2008 01:00:26 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/word-separators-in-urls</guid>
+
+					<description><![CDATA[In the world of web development and search engine optimisation you find this topic is frequently discussed, yet often without any reasoning or conclusion. Therefore the purpose of this article is to investigate why. So, let&#8217;s start at the very beginning, and find out what &#8220;word separators&#8221; actually are, and why we need them in [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>In the world of web development and search engine optimisation you find this topic is frequently discussed, yet often without any reasoning or conclusion. Therefore the purpose of this article is to investigate why.</p>
+<p>So, let&#8217;s start at the very beginning, and find out what &#8220;word separators&#8221; actually are, and why we need them in URLs.</p>
+<p>Traditionally a word separator is a space, yes, an every day space you create with your space-bar key.</p>
+<p>The problem with using spaces in URLs is that when the URL is utilised in a browser (for example), the URL is encoded using <a href="http://en.wikipedia.org/wiki/Percent-encoding">percent encoding</a> which causes spaces to appear as the encoded &#8220;%20&#8221;, resulting in an ugly URL formation which is humanly difficult to read.</p>
+<blockquote><p>ie: http://www.example.com/percent%20encoding</p></blockquote>
+<p>How do we overcome the problem? Over the years a workaround has developed&#8230;</p>
+<p>&#8230;the dash, no the hyphen, no in fact it&#8217;s the minus sign (yes, I mean this &#8220;-&#8221; symbol)&#8230;</p>
+<blockquote><p>ie: http://www.example.com/not-percent-encoding</p></blockquote>
+<p><span id="more-171"></span><strong>The history</strong></p>
+<p>It appears that originally the usage of the hyphen comes from it&#8217;s appearance in hostnames and domain names.</p>
+<p>In the early stages of the internet, groups of developers decided to write RFC documents to introduce ideas of how they believe the internet should work. These RFCs quickly became the standard, which includes details such as what is classed as a valid hostname or domain name is and what isn&#8217;t.</p>
+<p>We can clearly see the use of the &#8220;minus sign&#8221; as a separator in <a href="http://tools.ietf.org/html/rfc952">RFC 952</a>, although originally they weren&#8217;t there to be used in place of spaces, but simply to allow you to add suffixes to hostnames.</p>
+<p>Later, the use of &#8220;hyphens&#8221; appear in <a href="http://www.faqs.org/rfcs/rfc1738">RFC 1738</a> where a standard for URLs is suggested.</p>
+<p>Beyond that &#8220;hyphens&#8221; are mentioned again in <a href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a> entitled &#8220;Uniform Resource Identifier (URI): Generic Syntax&#8221;, which clearly defines the URI (and consequently URL) syntax.</p>
+<blockquote>
+<pre>reserved    = gen-delims / sub-delims
+
+gen-delims  = ":" / "/" / "?" / "#" / "[" / "]" / "@"
+
+sub-delims  = "!" / "$" / "&amp;" / "'" / "(" / ")"
+/ "*" / "+" / "," / ";" / "="
+
+unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"</pre>
+</blockquote>
+<p>From this we can see that a &#8220;hyphen&#8221; is categorised as an &#8220;Unreserved Characters&#8221;, unlike &#8220;Reserved Characters&#8221; which are often used as delimiters and therefore in many programming situations would require &#8220;<a href="http://en.wikipedia.org/wiki/Escape_character">escaping</a>&#8220;, however they are not that difficult to work with.</p>
+<p>Back in 2004 <a href="http://www.webmasterworld.com/forum3/23371.htm">GoogleGuy on WebmasterWorld</a> clearly states that the period (.), the comma (,) and the hyphen (-) are valid word separators in URLs. He did also mentioned that most people seem to prefer the hyphen, without explanation why&#8230;</p>
+<p><strong>Present usage</strong></p>
+<p>Today the use of hyphens as a word separator in a URL is so common that people are beginning to think that it is an actually standard. It&#8217;s not.</p>
+<p>And it&#8217;s not hard to see why. The amount of open source blogging (such as wordpress) and content management software (such as joomla) out there using them has given people enough reason to never even think twice about it.</p>
+<p><em>But, why is using a hyphen a problem?</em></p>
+<p>Like any workaround there are always going to be problems.</p>
+<p>The problem arises over the confusion of a dash, hyphen, and the minus sign. Often they can be seen to be the same symbol and the same symbol used to represent each situation where they may be used as punctuation or to provide context to data.</p>
+<p>One situation where there is potential confusion is with names and words that already contain hyphens (eg: Jean-Claude Van Damme).</p>
+<p><em>So, what are the alternatives?</em></p>
+<p><em>Underscores (_)</em>. In the past, we have seen discussion of <a href="http://www.mattcutts.com/blog/dashes-vs-underscores/">dashes vs. underscores</a>, and it has been concluded that the use of dashes is considered better than the use of underscores in URLs due to how search engines interpret the input, until now&#8230;</p>
+<p>Recently it has been stated that <a href="http://www.news.com/8301-10784_3-9748779-7.html">Google now views underscores as word separators</a>, in exactly the same way as dashes. However, a quick <a href="http://www.google.com/search?q=bull_shit">test of this</a>, and you soon discover that really, this hasn&#8217;t happened, even though the heavily popular <a href="http://en.wikipedia.org/wiki/Help:Page_name">Wikipedia</a> and <a href="http://digg.com/">Digg.com</a> use the underscore as a word separator in their URLs.</p>
+<p><em>Plus (+)</em>. In common <a href="http://www.php.net/urlencode">urlencoding</a>, we see that spaces are often encoded as this symbol instead of the percent-encoded version (%20). This gives you a good base reason to use this symbol as opposed to any other.</p>
+<p>The biggest reason to use these instead is that unlike the hyphen, they are not found in words in the English dictionary, as well as being unheard of them appearing in names. However the one problem I have found is that visually urls encoded this way end up looking like search terms, rather than a static url.</p>
+<p><em>Full stop (.)</em>. As it&#8217;s an unreserved character we can easily use this in our URLs. The problem is that it may start to get confusing, as urls may look like files, with extensions. Also, in terms of programming, the &#8220;.&#8221; often means &#8220;everything&#8221;, especially in perl style regular expressions, which means you may have to escape it when using. It&#8217;s worth noting that &#8220;.&#8221; generally doesn&#8217;t get encoded to %2E.</p>
+<p><strong>The future</strong></p>
+<p><em>What does this mean for my current sites using dashes?</em></p>
+<p>Ultimately <em>nothing</em>.</p>
+<p>Any good webmaster knows that once you have your URLs in place the last thing you want to be doing is abandoning them, unless you rewrite/remap them.</p>
+<p>However, next time you&#8217;re developing a new site, you can rest assured that you are fully aware of why you decided to use that word separator instead of another.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/word-separators-in-urls/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">171</post-id>	</item>
+		<item>
+		<title>Does registering a domain for a longer term increase your search engine rankings?</title>
+		<link>https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings</link>
+					<comments>https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 09 Jan 2008 16:40:36 +0000</pubDate>
+				<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings</guid>
+
+					<description><![CDATA[Recently I come across a claim by Network Solutions stating: Did you know? Registering a domain name for a longer term not only saves you money, but helps to increase your search engine ranking. Consider a 5-year term! Why it works: Search engines perceive domain names registered for 5 years or longer to be more [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-search-by-nearest-uk-postcode-in-php" rel="bookmark" title="How to search by nearest UK postcode in PHP">How to search by nearest UK postcode in PHP </a> <small>Often clients ask me to create a function where by...</small></li>
+<li><a href="https://hm2k.org/posts/inveiscom-cn-domain-scam" rel="bookmark" title="Inveis.com .cn domain scam">Inveis.com .cn domain scam </a> <small>Today I received the following email from toby.yang@inveis.com&#8230; [Note: If...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Recently I come across a claim by Network Solutions stating:</p>
+<blockquote><p><em>Did you know? Registering a domain name for a longer term not only saves you money, but helps to increase your search engine ranking. Consider a 5-year term!</em></p>
+<p><em>Why it works: Search engines perceive domain names registered for 5 years or longer to be more legitimate than domain names registered for a shorter term, and therefore rank them more highly.</em></p>
+<p><em><a href="http://www.networksolutions.com/purchase-it/images/domain-ad-in-cart.gif">Source</a></em></p></blockquote>
+<p><span id="more-162"></span>Having previously discussed the &#8220;age of a domain&#8221; issue at length with other Search Engine Optimisers I decided to investigate whether there was any truth in this statement, or if in fact it was purely marketing.</p>
+<p>Firstly we can assume that by &#8220;search engine&#8221; they are referring to one of the &#8220;big three&#8221; (Yahoo!, Google and Live Search). Since Google is the market leader, and their search engine technology is better documented we will focus on them.</p>
+<p>Next, we have to ask what they mean by &#8220;search engine ranking&#8221;, Google offers two prominent ranking systems, they are <a href="http://en.wikipedia.org/wiki/Serp">SERPs</a> (Search Engine Results Pages) and <a href="http://en.wikipedia.org/wiki/PageRank">PageRank</a>. Since &#8220;SERPs&#8221; is a generic ranking system, used by all search engines, we can assume this is what they are referring to.</p>
+<p>In order to work out whether this is true, we need to know more about the Google SERP algorithm, one place to start is at <a href="http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsearch-bool.html&amp;r=0&amp;f=S&amp;l=50&amp;TERM1=google&amp;FIELD1=AS&amp;co1=AND&amp;TERM2=&amp;FIELD2=&amp;d=PG01">Google&#8217;s patents</a>. One patent to look at in particular is page two of the <a href="http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsearch-bool.html&amp;r=2&amp;f=G&amp;l=50&amp;co1=AND&amp;d=PG01&amp;s1=20050071741&amp;OS=20050071741">U.S. Patent Application No. 20050071741, titled &#8220;Information Retrieval Based on Historical Data&#8221;,</a> patent which states:</p>
+<blockquote><p>1. A method for scoring a document, comprising: identifying a document;      obtaining one or more types of history data associated with the document;      and generating a score for the document based on the one or more types of      history data.</p>
+<p>38. The method of claim 1, wherein the one or more types of history data      includes domain-related information corresponding to domains associated      with documents; and wherein the generating a score includes: analyzing      domain-related information corresponding to a domain associated with the      document over time, and scoring the document based, at least in part, on      a result of the analyzing.</p>
+<p>39. The method of claim 38, wherein the scoring the document includes:      determining whether the domain associated with the document is      legitimate, and scoring the document based, at least in part, on whether      the domain associated with the document is legitimate.</p>
+<p>40. The method of claim 38, wherein the domain-related information is      related to at least one of an expiration date of the domain, a domain      name server record associated with the domain, and a name server      associated with the domain.</p></blockquote>
+<p>This doesn&#8217;t tell us a great deal, so we continue reading&#8230;</p>
+<blockquote><p> [0099] Certain signals may be used to distinguish between illegitimate and      legitimate domains. For example, domains can be renewed up to a period of      10 years. Valuable (legitimate) domains are often paid for several years      in advance, while doorway (illegitimate) domains rarely are used for more      than a year. Therefore, the date when a domain expires in the future can      be used as a factor in predicting the legitimacy of a domain and, thus,      the documents associated therewith.</p></blockquote>
+<p>So far we learn that registering a domain for a longer term doesn&#8217;t increase your &#8220;search engine rankings&#8221; or SERPs, but in fact, it simply aids Google to identify illegitimate domains.</p>
+<p>However, reading further we read:</p>
+<blockquote><p>[0102] In summary, search engine 125 may generate (or alter) a score associated with a document based, at least in part, on information relating to a legitimacy of a domain associated with the document.</p></blockquote>
+<p><em>Note: As far as I am aware &#8220;Search Engine 125&#8221; is the patent name for the search engine we know as &#8220;Google&#8221;. I believe a diagram should be included to realise this.</em></p>
+<p>Effectively, the patent is stating that having a domain that is detected as illegitimate can ultimately affect your score (or rank).</p>
+<p>However, there are some oddities with so called patent &#8220;20050071741&#8221;:</p>
+<ul>
+<li>It appears as part of patent &#8220;<a href="http://appft1.uspto.gov/netacgi/nph-Parser?Sect1=PTO2&amp;Sect2=HITOFF&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsearch-bool.html&amp;r=1&amp;f=G&amp;l=50&amp;co1=AND&amp;d=PG01&amp;s1=20050071741&amp;OS=20050071741&amp;RS=20050071741">ENTITY DISPLAY PRIORITY IN A DISTRIBUTED GEOGRAPHIC INFORMATION SYSTEM</a>&#8220;, on page 2, mentioned only once on page 1. This patent in essence has nothing to do with &#8220;search engines rankings&#8221;. However it does mention a &#8220;page rank&#8221; and mentions this application as a reference.</li>
+<li>The patent doesn&#8217;t appear to be registered to Google, instead it states a &#8220;HARRITY &amp; SNYDER, LLP&#8221;, however the &#8220;inventors&#8221; are recognised staff at Google.</li>
+<li>Searching for <a href="http://www.google.com/patents?q=20050071741&amp;btnG=Search+Patents">20050071741</a> or <a href="http://www.google.com/patents?q=%22Information+retrieval+based+on+historical+data%22&amp;btnG=Search+Patents">&#8220;Information retrieval based on historical data&#8221;</a> via Google patents returns no results.</li>
+<li>Searching for <a href="http://patft.uspto.gov/netacgi/nph-Parser?TERM1=20050071741&amp;Sect1=PTO1&amp;Sect2=HITOFF&amp;d=PALL&amp;p=1&amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;r=0&amp;f=S&amp;l=50">20050071741</a> in the official US Goverment patent database returns no results.</li>
+<li>It mentions FIGURES/diagrams which are not included, and cannot be found.</li>
+<li>It does not clearly state what this &#8220;scoring system&#8221; is used for, however it&#8217;s nature seems very close to that of the Google PageRank system, not that of SERPs.</li>
+<li>It appears that this is only a patent application and <strong>NOT an actual patent</strong>. Considering this application has been <em>patent pending</em> since 2005 we don&#8217;t even know if its currently implemented.</li>
+</ul>
+<p>So it seems the patent path has brought us to a dead end, however from the information discovered I have concluded that registering your domain for a longer term:</p>
+<ul>
+<li>decreases the chances of your domain being marked as illegitimate.</li>
+<li>only affects your SERPs or search engine rankings if your domain is marked as illegitimate.</li>
+<li>probably decreases your page rank if your domain is marked as illegitimate.</li>
+</ul>
+<p><strong>Is it worth registering 5 years ahead?</strong></p>
+<p>Please use your common sense.</p>
+<p>Unless you&#8217;re trying to do something illegitimate, it&#8217;s safe to say registering for 5 years would have very little affect (if any) on your search engine rankings.</p>
+<p>To give this some kind of perspective, having a link from this very page to your new domain would increase your page ranking far beyond that of registering the same domain could do even if you registered it for 1000 years.</p>
+<p>It is however recommended that you should register for more than 1 year when purchasing a new domain, but don&#8217;t let it put you off if you only want it for 1 year.</p>
+<p>This is because it is common knowledge that illegitimate sites have the trend of only buying a domain for a year.</p>
+<p>Having said this, one of the major benefits of registering for a long period of time ensuring you do not lose your domain name.</p>
+<p>Ultimately the answer is: Probably not&#8230;</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/getting-started-with-quercus-in-google-app-engine" rel="bookmark" title="Getting started with Quercus in Google App Engine">Getting started with Quercus in Google App Engine </a> <small>Last year an article was written on a blog about...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-search-by-nearest-uk-postcode-in-php" rel="bookmark" title="How to search by nearest UK postcode in PHP">How to search by nearest UK postcode in PHP </a> <small>Often clients ask me to create a function where by...</small></li>
+<li><a href="https://hm2k.org/posts/inveiscom-cn-domain-scam" rel="bookmark" title="Inveis.com .cn domain scam">Inveis.com .cn domain scam </a> <small>Today I received the following email from toby.yang@inveis.com&#8230; [Note: If...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">162</post-id>	</item>
+		<item>
+		<title>Creating subdomains from directories using mod_rewrite in Apache .htaccess</title>
+		<link>https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess</link>
+					<comments>https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 16 Mar 2007 00:25:32 +0000</pubDate>
+				<category><![CDATA[Apache]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess</guid>
+
+					<description><![CDATA[The idea was to have the ability to create unlimited subdomains simply by creating an appropreate directory for it in your html root directory. Since most people don&#8217;t have direct access to their httpd.conf, the obvious solution was to create a method using mod_rewrite within &#8220;.htaccess&#8221;. This also allowed it to be setup very easily [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+<li><a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="PHPizabi &#8211; creating a dating site">PHPizabi &#8211; creating a dating site </a> <small>During the summer of 2007 I decided to purchase a...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>The idea was to have the ability to create unlimited subdomains simply by creating an appropreate directory for it in your html root directory.</p>
+<p>Since most people don&#8217;t have direct access to their httpd.conf, the obvious solution was to create a method using mod_rewrite within &#8220;.htaccess&#8221;. This also allowed it to be setup very easily and quickly.</p>
+<p><span id="more-110"></span>I have no immediate use for this solution, however I know it will come in very handy in the future.</p>
+<p>Someone I know was trying to figure this out earlier today, so I took it upon myself to figure out how to work out a solution for this problem.</p>
+<p>After much discussion with #apache @ EFnet, in particular TBF, we came about the following solution.</p>
+<blockquote><p>#Grab the subdomain from the domain<br />
+RewriteCond %{HTTP_HOST} ^([^.]+).hm2k.org$<br />
+#Make sure the subdomain is not www or example<br />
+RewriteCond %{1} !^(www|example)$<br />
+#Check if the directory actually exists before we go there<br />
+RewriteCond /home/hm2k/public_html/%1 -d<br />
+#This stops it from looping<br />
+RewriteCond %{REQUEST_FILENAME} !^/home/hm2k/public_html/<br />
+#Finally, this is the actual rewrite<br />
+RewriteRule (.*) /home/hm2k/public_html/%1/$1 [Last]</p></blockquote>
+<p>Thanks to all those who helped, I hope this comes in useful to someone.</p>
+<p><strike>1136331104</strike></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/friendly-urls" rel="bookmark" title="Friendly URLs (revisited)">Friendly URLs (revisited) </a> <small>Turn dynamic URLs into friendly URLs I&#8217;m sure we&#8217;re all...</small></li>
+<li><a href="https://hm2k.org/posts/focus-on-one-domain" rel="bookmark" title="Focus on one domain">Focus on one domain </a> <small>Why you should be focusing on one domain name for...</small></li>
+<li><a href="https://hm2k.org/posts/phpizabi-creating-a-dating-site" rel="bookmark" title="PHPizabi &#8211; creating a dating site">PHPizabi &#8211; creating a dating site </a> <small>During the summer of 2007 I decided to purchase a...</small></li>
+<li><a href="https://hm2k.org/posts/storing-mysql-database-settings-for-php-and-perl-in-one-file" rel="bookmark" title="Storing mySQL database settings for php and perl in one file">Storing mySQL database settings for php and perl in one file </a> <small>I have a situation where there&#8217;s two scripts. The main...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/creating-subdomains-from-directories-using-mod_rewrite-in-apache-htaccess/feed</wfw:commentRss>
+			<slash:comments>11</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">110</post-id>	</item>
+		<item>
+		<title>Focus on one domain</title>
+		<link>https://hm2k.org/posts/focus-on-one-domain</link>
+					<comments>https://hm2k.org/posts/focus-on-one-domain#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 30 Jan 2007 01:02:13 +0000</pubDate>
+				<category><![CDATA[Apache]]></category>
+		<category><![CDATA[SEO]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/focus-on-one-domain</guid>
+
+					<description><![CDATA[Why you should be focusing on one domain name for one site Often you will find yourself buying a domain for your project (eg: example.com), however these days to secure the brand you have to buy all the associated domains (eg: example.net, example.org, example.co.uk, example.info, etc). I then find that visitors will end up entering [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/inveiscom-cn-domain-scam" rel="bookmark" title="Inveis.com .cn domain scam">Inveis.com .cn domain scam </a> <small>Today I received the following email from toby.yang@inveis.com&#8230; [Note: If...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+<li><a href="https://hm2k.org/posts/domain-example-com-has-exceeded-the-max-emails-per-hour-200-allowed-message-discarded" rel="bookmark" title="Domain example.com has exceeded the max emails per hour (200) allowed. Message discarded.">Domain example.com has exceeded the max emails per hour (200) allowed. Message discarded. </a> <small>Got this error with cpanel? Domain example.com has exceeded the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><strong>Why you should be focusing on one domain name for one site</strong></p>
+<p>Often you will find yourself buying a domain for your project (eg: example.com), however these days to secure the brand you have to buy all the associated domains (eg: example.net, example.org, example.co.uk, example.info, etc).</p>
+<p>I then find that visitors will end up entering the sites at different points from different domains, depending on how they find it, or what they have been told.</p>
+<p><span id="more-54"></span>The problem with this is its confusing, and its confusing for the user. The solution is to decide on one domain name, and focus on that, then simply redirect all traffic from the other domains to your main domain name.</p>
+<p>This will also help enforce your brand name by ensuring the user always gets redirected to the correct domain, even if they visit the others by mistake.</p>
+<p>In addition to this, Google states &#8220;<a href="http://www.google.com/support/webmasters/bin/answer.py?answer=35769">Don&#8217;t create multiple pages, subdomains, or domains with substantially duplicate content.</a>&#8220;, therefore by redirecting traffic to one domain, rather than having duplicates you stand more chance of your domain not being marked as &#8220;bad&#8221; by search engines. (Also see <a href="http://www.google.com/support/webmasters/bin/answer.py?answer=44231">What&#8217;s a preferred domain?</a>)</p>
+<p>On a very similar note, another common problem is the &#8220;www.&#8221; prefix on domains, sometimes people include when visiting a URL, other times they do not. The problem with this is that &#8220;www.example.com&#8221; is considered an entirely different domain than &#8220;example.com&#8221; by search engines. By redirecting traffic that is NONE &#8220;www.example.com&#8221; we can still continue our focus and maintain our brand name.</p>
+<p><strong>How?</strong></p>
+<p>One method is using <a href="http://www.google.com/support/webmasters/bin/answer.py?hl=en&amp;answer=93633">301 redirects</a> to redirect from other domains, to your main one.</p>
+<p>We can do this by using mod_rewrite for Apache or ISAPI_Rewrite for IIS.</p>
+<p><strong>Apache mod_rewrite (.htaccess)</strong></p>
+<blockquote><p>RewriteEngine On</p>
+<p>RewriteCond %{HTTP_HOST} !^www\.example\.com$ [NC]<br />
+RewriteRule ^(.*)$ http://www.example.com/$1 [R=301,QSA,L]</p></blockquote>
+<p><em>Note: The QSA flag will append the query string to the rewritten URL.</em></p>
+<p><strong>IIS mod rewrite using ISAPI filter (mod_rewrite.ini)</strong></p>
+<blockquote><p>RewriteCond Host: !^www\.example\.com</p>
+<p>RewriteRule ^/(.*)$ http://www\.example\.com/$1 [I,RP]</p></blockquote>
+<p><em>Note: Some find ^(.*)$ works, others find ^/(.*)$ works. I&#8217;ll let you decide which to use.</em></p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/does-registering-a-domain-for-a-longer-term-increase-your-search-engine-rankings" rel="bookmark" title="Does registering a domain for a longer term increase your search engine rankings?">Does registering a domain for a longer term increase your search engine rankings? </a> <small>Recently I come across a claim by Network Solutions stating:...</small></li>
+<li><a href="https://hm2k.org/posts/inveiscom-cn-domain-scam" rel="bookmark" title="Inveis.com .cn domain scam">Inveis.com .cn domain scam </a> <small>Today I received the following email from toby.yang@inveis.com&#8230; [Note: If...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+<li><a href="https://hm2k.org/posts/domain-example-com-has-exceeded-the-max-emails-per-hour-200-allowed-message-discarded" rel="bookmark" title="Domain example.com has exceeded the max emails per hour (200) allowed. Message discarded.">Domain example.com has exceeded the max emails per hour (200) allowed. Message discarded. </a> <small>Got this error with cpanel? Domain example.com has exceeded the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/focus-on-one-domain/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">54</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:24 by W3 Total Cache
+-->

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: The specified network name is no longer available samba	</title>
+	<atom:link href="https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba/feed" rel="self" type="application/rss+xml" />
+	<link>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 03 Nov 2011 04:24:57 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+	<item>
+		<title>
+		By: Nicholas		</title>
+		<link>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba/comment-page-1#comment-314551</link>
+
+		<dc:creator><![CDATA[Nicholas]]></dc:creator>
+		<pubDate>Thu, 03 Nov 2011 04:24:57 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=218#comment-314551</guid>
+
+					<description><![CDATA[This can be caused by having no space left on your samba server causing logging to fail alongside your patience. 
+
+Look for a message like: 
+
+  tdb(/var/cache/samba/locking.tdb): expand_file write of 8192 bytes failed (No space left on device)]]></description>
+			<content:encoded><![CDATA[<p>This can be caused by having no space left on your samba server causing logging to fail alongside your patience. </p>
+<p>Look for a message like: </p>
+<p>  tdb(/var/cache/samba/locking.tdb): expand_file write of 8192 bytes failed (No space left on device)</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: hm2k		</title>
+		<link>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba/comment-page-1#comment-200754</link>
+
+		<dc:creator><![CDATA[hm2k]]></dc:creator>
+		<pubDate>Fri, 12 Mar 2010 12:15:54 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=218#comment-200754</guid>
+
+					<description><![CDATA[Turns out, once I had tried updating again, I had to readd my user using smbpasswd –a 
+
+Never mind.]]></description>
+			<content:encoded><![CDATA[<p>Turns out, once I had tried updating again, I had to readd my user using smbpasswd –a </p>
+<p>Never mind.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: hm2k		</title>
+		<link>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba/comment-page-1#comment-200751</link>
+
+		<dc:creator><![CDATA[hm2k]]></dc:creator>
+		<pubDate>Fri, 12 Mar 2010 11:46:02 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=218#comment-200751</guid>
+
+					<description><![CDATA[I&#039;ve now tried rolling back to 3.0.30 and restarting the smb service, but I still get the following error:
+
+[root@blade log]# tail -f samba
+[2010/03/12 12:46:06, 0] lib/util_sock.c:set_socket_options(237)
+  Unknown socket option SO_SNBUF
+[2010/03/12 12:46:06, 0] lib/util_sock.c:set_socket_options(237)
+  Unknown socket option TCP_NODELAY_SO_RCVBUF
+[2010/03/12 12:46:06, 0] lib/util_sock.c:set_socket_options(237)
+  Unknown socket option SO_SNBUF
+[2010/03/12 12:46:09, 0] lib/util_sock.c:set_socket_options(237)
+  Unknown socket option TCP_NODELAY_SO_RCVBUF
+[2010/03/12 12:46:09, 0] lib/util_sock.c:set_socket_options(237)
+  Unknown socket option SO_SNBUF
+
+I&#039;m not sure what to do at the moment...]]></description>
+			<content:encoded><![CDATA[<p>I&#8217;ve now tried rolling back to 3.0.30 and restarting the smb service, but I still get the following error:</p>
+<p>[root@blade log]# tail -f samba<br />
+[2010/03/12 12:46:06, 0] lib/util_sock.c:set_socket_options(237)<br />
+  Unknown socket option SO_SNBUF<br />
+[2010/03/12 12:46:06, 0] lib/util_sock.c:set_socket_options(237)<br />
+  Unknown socket option TCP_NODELAY_SO_RCVBUF<br />
+[2010/03/12 12:46:06, 0] lib/util_sock.c:set_socket_options(237)<br />
+  Unknown socket option SO_SNBUF<br />
+[2010/03/12 12:46:09, 0] lib/util_sock.c:set_socket_options(237)<br />
+  Unknown socket option TCP_NODELAY_SO_RCVBUF<br />
+[2010/03/12 12:46:09, 0] lib/util_sock.c:set_socket_options(237)<br />
+  Unknown socket option SO_SNBUF</p>
+<p>I&#8217;m not sure what to do at the moment&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: hm2k		</title>
+		<link>https://hm2k.org/posts/the-specified-network-name-is-no-longer-available-samba/comment-page-1#comment-200750</link>
+
+		<dc:creator><![CDATA[hm2k]]></dc:creator>
+		<pubDate>Fri, 12 Mar 2010 11:32:58 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=218#comment-200750</guid>
+
+					<description><![CDATA[Yesterday I restarted my server after updating my packages.
+
+It installed the following:
+
+samba                   i386       3.0.33-0.18.el4_8.1  installed          30 M
+samba-common            i386       3.0.33-0.18.el4_8.1  installed          20 M
+
+When I restarted I found I had the same problem as I do here, even though this is now a later version than the above.
+
+I&#039;m going to try and roll back to the 3.0.30 version to see if that fixes it and then go from there...]]></description>
+			<content:encoded><![CDATA[<p>Yesterday I restarted my server after updating my packages.</p>
+<p>It installed the following:</p>
+<p>samba                   i386       3.0.33-0.18.el4_8.1  installed          30 M<br />
+samba-common            i386       3.0.33-0.18.el4_8.1  installed          20 M</p>
+<p>When I restarted I found I had the same problem as I do here, even though this is now a later version than the above.</p>
+<p>I&#8217;m going to try and roll back to the 3.0.30 version to see if that fixes it and then go from there&#8230;</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:47 by W3 Total Cache
+-->

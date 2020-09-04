@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>tucows &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/tucows/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Sun, 06 May 2012 16:28:24 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Unable to update nameservers: Nameserver doesn&#8217;t exist at the registry</title>
+		<link>https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry</link>
+					<comments>https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Sun, 06 May 2012 16:28:24 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[dns]]></category>
+		<category><![CDATA[nameservers]]></category>
+		<category><![CDATA[opensrs]]></category>
+		<category><![CDATA[tucows]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3349</guid>
+
+					<description><![CDATA[If you have domains with TuCows OpenSRS you may be faced with this error when you try and set custom name servers on your domain through the OpenSRS manage interface: Unable to update nameservers: Nameserver [ns2.example.co.uk] doesn&#8217;t exist at the registry. Especially if you&#8217;ve recently set a new glue up. In the OpenSRS domain manager [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/php-opensrs-client" rel="bookmark" title="PHP OpenSRS Client">PHP OpenSRS Client </a> <small>This is only a quick message to say that I...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>If you have domains with TuCows OpenSRS you may be faced with this error when you try and set custom name servers on your domain through the <a href="https://manage.opensrs.net/index.cgi">OpenSRS manage interface</a>:</p>
+<p style="padding-left: 30px;">Unable to update nameservers: Nameserver [ns2.example.co.uk] doesn&#8217;t exist at the registry.</p>
+<p>Especially if you&#8217;ve recently set a <a href="http://www.nominet.org.uk/registrars/systems/data/nameservers/">new glue up</a>.</p>
+<p>In the OpenSRS domain manager it says:</p>
+<p style="padding-left: 30px;">** IMPORTANT: Before adding additional name servers to your configuration, you should be sure that the name server has setup correctly. 24 &#8211; 48 hours after you submit a request for an additional name server, it will be in the rotation for authoritative lookups and if it is not setup correctly, your site will take a long time to resolve when visitors try to find you.</p>
+<p>You can ignore this for now, here&#8217;s what you need to do first&#8230;</p>
+<p>You, or your admin who has access to the OpenSRS reseller interface needs to find the page in there entitled &#8220;Add Nameserver to All Foreign Registries&#8221; as per <a href="http://www.opensrs.com/docs/opensrsrwi/add_nameserver_to_all_foreign_registries.htm">these instructions</a>:</p>
+<p style="padding-left: 30px;">Add Nameserver to All Foreign Registries<br />
+This interface allows you to add Registered Nameservers to all of the Registries to which the OpenSRS system is connected. If you want to use a COM/NET/ORG nameserver (default.opensrs.net) on a .BIZ domain, you have to first add it to the “foreign” .BIZ Registry using this option. The reason for this is because each Registry keeps a database of “registered nameservers”, and new nameservers at “foreign” registries need to be explicitly added before they can be used to resolve domains in that TLD. Use this interface when you get the error “Unable to add nameservers: Command failed: unable to verify existence of nameserver” when trying to add a foreign nameserver to a domain.</p>
+<p style="padding-left: 30px;">To add a nameserver to all foreign registries</p>
+<ol>
+<li>In the Domain Management section of the RWI, click Add Nameserver to All Foreign Registries.</li>
+<li>In the Nameserver text box, enter the nameserver.</li>
+<li>Click Add Nameserver.</li>
+</ol>
+<p><a href="http://labs.phurix.net/upload/OpenSRS.png"><img loading="lazy" class="aligncenter" title="OpenSRS" src="http://labs.phurix.net/upload/OpenSRS-300x193.png" alt="" width="300" height="193" /></a></p>
+<p>Once you do that you should see a message that says:</p>
+<p style="padding-left: 30px;">.com registry: Successfully added<br />
+.asia registry: Successfully added<br />
+.xxx registry: Successfully added<br />
+.com.au registry: Successfully added<br />
+.biz registry: Successfully added<br />
+.bz registry: Successfully added<br />
+.ca registry: Successfully added<br />
+.cc registry: Successfully added<br />
+.com.cn registry: Successfully added<br />
+.co registry: Successfully added<br />
+.in registry: Successfully added<br />
+.info registry: Successfully added<br />
+.es registry: Successfully added<br />
+.me registry: Successfully added<br />
+.mobi registry: Successfully added<br />
+.name registry: Successfully added<br />
+.nl registry: Successfully added<br />
+.org registry: Successfully added<br />
+.tv registry: Successfully added<br />
+.us registry: Successfully added<br />
+.ws registry: Successfully added<br />
+.pro registry: Successfully added</p>
+<p>Or similar.</p>
+<p>Now we give it 24-48 hours, then you can set custom name servers on your domain via the OpenSRS manage interface.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/php-opensrs-client" rel="bookmark" title="PHP OpenSRS Client">PHP OpenSRS Client </a> <small>This is only a quick message to say that I...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/hp-software-update" rel="bookmark" title="HP Software Update">HP Software Update </a> <small>Today, I am trying to install a &#8220;HP Scanjet 7650n&#8221;,...</small></li>
+<li><a href="https://hm2k.org/posts/domain-slamming" rel="bookmark" title="Domain Slamming">Domain Slamming </a> <small>Ever received one of those domain renewal notices from companies...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/unable-to-update-nameservers-nameserver-doesnt-exist-at-the-registry/feed</wfw:commentRss>
+			<slash:comments>1</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3349</post-id>	</item>
+		<item>
+		<title>PHP OpenSRS Client</title>
+		<link>https://hm2k.org/posts/php-opensrs-client</link>
+					<comments>https://hm2k.org/posts/php-opensrs-client#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2009 13:42:50 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[client]]></category>
+		<category><![CDATA[opensrs]]></category>
+		<category><![CDATA[tucows]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=579</guid>
+
+					<description><![CDATA[This is only a quick message to say that I am now developing the PHP OpenSRS Client project. OpenSRS-PHP is a PHP-based client class that communicates with the TuCows OpenSRS Domain Name Registry System via an API. I have just released version 2.8.1 with many long awaited fixes. Website Enjoy!<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-to-setup-tucows-opensrs" rel="bookmark" title="How to setup Tucows OpenSRS">How to setup Tucows OpenSRS </a> <small>OpensSRS is a domain reseller system offered by Tucows to...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/ftp-client" rel="bookmark" title="An FTP client">An FTP client </a> <small>I have been looking for a decent FTP client for...</small></li>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What&#8217;s wrong with low version numbers?">What&#8217;s wrong with low version numbers? </a> <small>In a presentation entitled &#8220;Why I hate Django&#8221;, Cal Henderson...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>This is only a quick message to say that I am now developing the <em>PHP OpenSRS Client project</em>.</p>
+<p>OpenSRS-PHP is a PHP-based client class that communicates with the TuCows OpenSRS Domain Name Registry System via an API.</p>
+<p>I have just released version 2.8.1 with many long awaited fixes.</p>
+<ul>
+<li><a href="http://opensrs-php.sourceforge.net/">Website</a></li>
+</ul>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-to-setup-tucows-opensrs" rel="bookmark" title="How to setup Tucows OpenSRS">How to setup Tucows OpenSRS </a> <small>OpensSRS is a domain reseller system offered by Tucows to...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/ftp-client" rel="bookmark" title="An FTP client">An FTP client </a> <small>I have been looking for a decent FTP client for...</small></li>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What&#8217;s wrong with low version numbers?">What&#8217;s wrong with low version numbers? </a> <small>In a presentation entitled &#8220;Why I hate Django&#8221;, Cal Henderson...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/php-opensrs-client/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">579</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:34 by W3 Total Cache
+-->

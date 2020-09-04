@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>weather &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/weather/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Sun, 07 Aug 2011 23:27:25 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>weather.tcl</title>
+		<link>https://hm2k.org/posts/weather-tcl</link>
+					<comments>https://hm2k.org/posts/weather-tcl#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 05 Nov 2009 00:37:14 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[eggdrop]]></category>
+		<category><![CDATA[eggtcl]]></category>
+		<category><![CDATA[irc]]></category>
+		<category><![CDATA[TCL]]></category>
+		<category><![CDATA[weather]]></category>
+		<category><![CDATA[weather.tcl]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=560</guid>
+
+					<description><![CDATA[Update: This script is now part of the eggtcl project. Today, after I decided to hang out in #eggtcl on EFnet, someone asked the following: &#60;daILLeST&#62; anyine know of a weather tcl that actually works? All the ones I find are outdated, or in another language&#8230; I decided it was time that I updated my [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+<li><a href="https://hm2k.org/posts/universal-currency-converter-tcl-for-eggdrop" rel="bookmark" title="Universal Currency Converter TCL for Eggdrop">Universal Currency Converter TCL for Eggdrop </a> <small>Update: This script is now part of the eggtcl project. This...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><strong><em>Update: This script is now part of the <a href="http://www.eggtcl.com/">eggtcl project</a>.</em></strong></p>
+<p>Today, after I decided to hang out in #eggtcl on EFnet, someone asked the following:</p>
+<blockquote><p>&lt;daILLeST&gt; anyine know of a weather tcl that actually works? All the ones I find are outdated, or in another language&#8230;</p></blockquote>
+<p>I decided it was time that I updated my old weather.tcl based on a script by Ycarus for eggdrop bots.</p>
+<p><span id="more-560"></span>Before, many scripts used weather underground (wunderground.com) to gather their feed.</p>
+<p>I believe this is because there were many existing TCL based software that used this site to gather their data via telnet.</p>
+<p>Telnet access to their server stopped working correctly, so scripts began using their http site to gather data. This too eventually stopped working as once they changed their site, the scripts could no longer parse the html for the data.</p>
+<p>Enter Google.</p>
+<p>Google has a weather API that they use for their &#8220;<a href="http://www.google.com/ig">iGoogle</a>&#8220;, which is very handy.</p>
+<p>Although it appears to be undocumented by Google, working with the API is easy enough&#8230;</p>
+<blockquote><p><a href="http://www.google.com/ig/api?weather=london&amp;hl=en">http://www.google.com/ig/api?weather=london&amp;hl=en</a></p></blockquote>
+<p>The query string contains a &#8220;weather&#8221; parameter, which is generally city or postcode and the &#8220;hl&#8221; parameter which is the language.</p>
+<p>This will return an XML formatted result for the city of &#8220;London, England&#8221;.</p>
+<p>We can then parse the data we want from this and return it accordingly.</p>
+<p>So, put it all together, a bit of TCL care (get it?), and we&#8217;re done&#8230;</p>
+<ul>
+<li><strong>Download <a href="http://code.google.com/p/eggtcl/downloads/detail?name=weather.tcl">weather.tcl</a></strong></li>
+</ul>
+<p>It works well, and returns a result similar to this:</p>
+<blockquote><p>&gt; .wz london<br />
+&lt;Bot&gt; HM2K, * Weather: London, England: Mostly Cloudy, 8ºC Humidity: 87% Wind: W at 9 mph</p></blockquote>
+<p>Hope you find this useful.</p>
+<p>What I may do next time&#8230;</p>
+<p>Since Google&#8217;s Weather API is completely officially undocumented it&#8217;s worth noting that in future it may be wise to use <a href="http://developer.yahoo.com/weather/">Yahoo&#8217;s weather API</a>, which is fully and officially documented.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+<li><a href="https://hm2k.org/posts/universal-currency-converter-tcl-for-eggdrop" rel="bookmark" title="Universal Currency Converter TCL for Eggdrop">Universal Currency Converter TCL for Eggdrop </a> <small>Update: This script is now part of the eggtcl project. This...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/weather-tcl/feed</wfw:commentRss>
+			<slash:comments>8</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">560</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:38 by W3 Total Cache
+-->

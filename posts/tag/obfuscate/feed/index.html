@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>obfuscate &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/obfuscate/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 03 Nov 2011 17:58:26 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Over sixteen ways to obfuscate e-mail addresses</title>
+		<link>https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses</link>
+					<comments>https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Sun, 03 Apr 2011 10:10:28 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[email]]></category>
+		<category><![CDATA[obfuscate]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=1891</guid>
+
+					<description><![CDATA[Back in 2007 I wrote about email addresses on your website and how to avoid putting your email address in plain text. A guy I know, named &#8220;csarven&#8221; also wrote about methods to hide email addresses from page source providing over 16 concepts for hiding your email address. This was useful, but not practical, so [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/email-address-on-your-website" rel="bookmark" title="email address on your website">email address on your website </a> <small>This is something that people don&#8217;t seem to realise, and...</small></li>
+<li><a href="https://hm2k.org/articles/ways-to-waste-time-online" rel="bookmark" title="Ways to waste time online">Ways to waste time online </a> <small>I compiled a short list of sites that you can...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Back in 2007 I wrote about<a href="http://www.hm2k.com/posts/email-address-on-your-website"> email addresses on your website</a> and how to avoid putting your email address in plain text.</p>
+<p>A guy I know, named &#8220;csarven&#8221; also wrote about <a href="http://www.csarven.ca/hiding-email-addresses">methods to hide email addresses from page source</a> providing over 16 concepts for hiding your email address.</p>
+<p>This was useful, but not practical, so I decided to write a PHP class&#8230;</p>
+<p><span id="more-1891"></span>I began writing the <a href="http://obfuscate.sourceforge.net/">Obfuscate Email PHP Library</a> as a proof of concept to show the various methods in action, but then I decided to release the code as well as a demonstration website.</p>
+<p>The demonstration website is based on a concept outlined by tilllate.com in their &#8220;<a href="http://techblog.tilllate.com/2008/07/20/ten-methods-to-obfuscate-e-mail-addresses-compared/">nine ways to obfuscate e-mail addresses compared</a>&#8221; article.</p>
+<p>In this article the author has setup 9 different email addresses and put them on their website using 9 different obfuscation techniques.</p>
+<p>They then waited one and a half years for the mailboxes to receive emails and then reviewed the results.</p>
+<p>The Obfuscate project is using a very similar concept, but instead it is using a free email service to provide disposable email addresses without any configuration.</p>
+<p>At first <a href="http://en.wikipedia.org/wiki/Mailinator">mailinator</a> was used, however emails are kept for just a few hours which makes it almost impossible to measure results. Meanwhile the <a href="http://www.dispostable.com/">dispostable</a> service keeps email for up to two days and there is no registration required.</p>
+<p>The theory is that the &#8220;plain&#8221; email address should received more email than the others and the most successful methods will receive no emails at all.</p>
+<p>The project website will be indexed by the search engines and the spam bots should start to crawl the website for email addresses.</p>
+<p>Now we wait for the results&#8230;</p>
+<p>In the meantime you can use the <a href="http://obfuscate.sourceforge.net/">Obfuscate Email PHP Library</a> to choose one of over 16 methods of obfuscation you feel is most suitable for you.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/email-address-on-your-website" rel="bookmark" title="email address on your website">email address on your website </a> <small>This is something that people don&#8217;t seem to realise, and...</small></li>
+<li><a href="https://hm2k.org/articles/ways-to-waste-time-online" rel="bookmark" title="Ways to waste time online">Ways to waste time online </a> <small>I compiled a short list of sites that you can...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">1891</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:09 by W3 Total Cache
+-->

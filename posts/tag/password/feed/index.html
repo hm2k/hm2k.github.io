@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>password &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/password/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Thu, 02 Jun 2011 10:41:49 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Has friendster been hacked?</title>
+		<link>https://hm2k.org/posts/has-friendster-been-hacked</link>
+					<comments>https://hm2k.org/posts/has-friendster-been-hacked#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 01 Jun 2011 16:08:14 +0000</pubDate>
+				<category><![CDATA[Security]]></category>
+		<category><![CDATA[email]]></category>
+		<category><![CDATA[friendster]]></category>
+		<category><![CDATA[hacked]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[spam]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=2925</guid>
+
+					<description><![CDATA[I noticed an unusual email when I checked my Gmail account today. Sure it was spam, but this one was tagged with a &#8220;Password&#8221; tag, a tag that I used to filter any emails that contain an old password. Low and behold there was my password displayed right in the email. So, of course, the first [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/hacked-my-school" rel="bookmark" title="How I hacked my schools website &#8211; a look into the past">How I hacked my schools website &#8211; a look into the past </a> <small>When I was about 16 I hacked my schools website,...</small></li>
+<li><a href="https://hm2k.org/posts/how-not-to-use-phpmailer" rel="bookmark" title="How not to use PHPMailer">How not to use PHPMailer </a> <small>I came across PHPMailer usage the other day on a...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I noticed an unusual email when I checked my Gmail account today.</p>
+<p>Sure it was spam, but this one was tagged with a &#8220;Password&#8221; tag, a tag that I used to filter any emails that contain an old password.</p>
+<p>Low and behold there was my password displayed right in the email. So, of course, the first thing to do was to check the <a href="http://pastie.org/pastes/2003898/text">email headers</a> to see how the email was routed.</p>
+<p>I could not believe it!<span id="more-2925"></span></p>
+<blockquote><p>To: &#8220;password1&#8221; &lt;friendster@example.org&gt;</p>
+<p><em>Note: my password is not password1, I replaced it with that.</em></p></blockquote>
+<p>They had inserted my password instead of my name in the &#8220;To&#8221; part of the email headers.</p>
+<p>The email address they sent to was an alias which I had used specifically for friendster so I knew. However, according to the email headers it definitely did not come from the friendster servers.</p>
+<p>How did the spammers manage to get my password and email address?</p>
+<p>I&#8217;ve certainly not used the account since about 2005, so it can&#8217;t be me.</p>
+<p>Does friendster store their passwords in plain text?</p>
+<p>I figured the easiest way to check is to issue a &#8220;forgot password&#8221; request and see what happens.</p>
+<ul>
+<li>It&#8217;s official: Friendster is a <a href="http://plaintextoffenders.com/">plain text offender</a>.</li>
+</ul>
+<p>I received an &#8220;<a href="http://pastie.org/pastes/2004005/text">Your Friendster account information</a>&#8221; email which contained my password in plain text right in the email.</p>
+<p><a href="http://www.hm2k.com/upload/friendster-password.jpg"><img loading="lazy" class="aligncenter size-medium wp-image-2927" title="friendster password" src="http://www.hm2k.com/upload/friendster-password-300x213.jpg" alt="" width="300" height="213" srcset="https://hm2k.org/upload/friendster-password-300x213.jpg 300w, https://hm2k.org/upload/friendster-password.jpg 618w" sizes="(max-width: 300px) 100vw, 300px" /></a></p>
+<p>Yes, this means is that it is absolutely possible that if somebody <em>did </em>hack into friendster they could recover my password (and everyone elses) from their database.</p>
+<p><strong>What does this mean for friendster?</strong></p>
+<p>Well, probably not a lot since most people are waving <a href="http://lifestyle.inquirer.net/1972/bye-bye-friendster">bye-bye to friendster</a> anyway as friendster starts to delete all user data from their servers.</p>
+<p><em>My tip: Don&#8217;t delay, <a href="http://www.friendster.com/cancelaccount.php">delete it today!</a></em></p>
+<p><strong>Update 02/06/11</strong></p>
+<p>Yesterday I emailed friendster to notify them of a serious security concern, today I received this reply:</p>
+<blockquote><p>Thank you for reporting this to us.  We take reports like this seriously  and we shall make the proper investigation on your concern.   Unfortunately, we don&#8217;t have a specific time frame on when the  investigation will be completed. We apologize for the inconvenience.</p>
+<p>Regards,</p>
+<p>Frank</p>
+<p>Customer Support</p></blockquote>
+<p>P.S. Thanks for your comments, I&#8217;m glad I&#8217;m not alone. Keep them coming!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/hacked-my-school" rel="bookmark" title="How I hacked my schools website &#8211; a look into the past">How I hacked my schools website &#8211; a look into the past </a> <small>When I was about 16 I hacked my schools website,...</small></li>
+<li><a href="https://hm2k.org/posts/how-not-to-use-phpmailer" rel="bookmark" title="How not to use PHPMailer">How not to use PHPMailer </a> <small>I came across PHPMailer usage the other day on a...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/has-friendster-been-hacked/feed</wfw:commentRss>
+			<slash:comments>8</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">2925</post-id>	</item>
+		<item>
+		<title>How not to use PHPMailer</title>
+		<link>https://hm2k.org/posts/how-not-to-use-phpmailer</link>
+					<comments>https://hm2k.org/posts/how-not-to-use-phpmailer#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Mon, 24 Aug 2009 12:14:13 +0000</pubDate>
+				<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[fail]]></category>
+		<category><![CDATA[password]]></category>
+		<category><![CDATA[PHPMailer]]></category>
+		<category><![CDATA[security]]></category>
+		<category><![CDATA[sourcingmap]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=476</guid>
+
+					<description><![CDATA[I came across PHPMailer usage the other day on a Chinese gadget wholesale site &#8220;SourcingMap.com&#8221;. If you submit something via their contact us form, interestingly you appear to get a dump from PHP telling you all about the PHPMailer object. The output looks something like this: object(PHPMailer)#15 (41) { [&#8220;Priority&#8221;]=&#62; int(3) [&#8220;CharSet&#8221;]=&#62; string(10) &#8220;iso-8859-1&#8221; [&#8220;ContentType&#8221;]=&#62; [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/dont-forget-to-run-make-test" rel="bookmark" title="Don&#8217;t forget to run make test!">Don&#8217;t forget to run make test! </a> <small>During my install of PHP5 on FreeBSD&#8230; Build complete. Don&#8217;t...</small></li>
+<li><a href="https://hm2k.org/posts/jquery-sucks-at-browser-detection" rel="bookmark" title="jQuery sucks at browser detection">jQuery sucks at browser detection </a> <small>This week i&#8217;ve been tweaking a little site I&#8217;ve started...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I came across <a href="http://phpmailer.worxware.com/">PHPMailer</a> usage the other day on a Chinese gadget wholesale site &#8220;SourcingMap.com&#8221;.</p>
+<p>If you submit something via their <a href="http://www.sourcingmap.com/contact_us.php">contact us</a> form, interestingly you appear to get a dump from PHP telling you all about the PHPMailer object.</p>
+<p><span id="more-476"></span>The output looks something like this:</p>
+<blockquote><p>object(PHPMailer)#15 (41) {   [&#8220;Priority&#8221;]=&gt;   int(3)   [&#8220;CharSet&#8221;]=&gt;   string(10) &#8220;iso-8859-1&#8221;   [&#8220;ContentType&#8221;]=&gt;   string(9) &#8220;text/html&#8221;   [&#8220;Encoding&#8221;]=&gt;   string(4) &#8220;8bit&#8221;   [&#8220;ErrorInfo&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;From&#8221;]=&gt;   string(16) &#8220;test@example.com&#8221;   [&#8220;FromName&#8221;]=&gt;   string(11) &#8220;Sourcingmap&#8221;   [&#8220;Sender&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;Subject&#8221;]=&gt;   string(26) &#8220;Enquiry From  Sourcingmap.&#8221;   [&#8220;Body&#8221;]=&gt;   string(7) &#8220;Testing&#8221;   [&#8220;AltBody&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;WordWrap&#8221;]=&gt;   int(0)   [&#8220;Mailer&#8221;]=&gt;   string(4) &#8220;smtp&#8221;   [&#8220;Sendmail&#8221;]=&gt;   string(18) &#8220;/usr/sbin/sendmail&#8221;   [&#8220;PluginDir&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;Version&#8221;]=&gt;   string(9) &#8220;2.0.0 rc3&#8221;   [&#8220;ConfirmReadingTo&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;Hostname&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;Host&#8221;]=&gt;   string(14) &#8220;smtp.gmail.com&#8221;   [&#8220;Port&#8221;]=&gt;   int(465)   [&#8220;Helo&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;SMTPSecure&#8221;]=&gt;   string(3) &#8220;ssl&#8221;   [&#8220;SMTPAuth&#8221;]=&gt;   bool(true)   [&#8220;Username&#8221;]=&gt;   string(22) &#8220;orders@sourcingmap.com&#8221;   [&#8220;Password&#8221;]=&gt;   string(16) &#8220;ilovesourcingmap&#8221;   [&#8220;Timeout&#8221;]=&gt;   int(10)   [&#8220;SMTPDebug&#8221;]=&gt;   bool(false)   [&#8220;SMTPKeepAlive&#8221;]=&gt;   bool(false)   [&#8220;SingleTo&#8221;]=&gt;   bool(false)   [&#8220;smtp&#8221;]=&gt;   NULL   [&#8220;to&#8221;]=&gt;   array(1) {     [0]=&gt;     array(2) {       [0]=&gt;       string(20) &#8220;info@sourcingmap.com&#8221;       [1]=&gt;       string(11) &#8220;SourcingMap&#8221;     }   }   [&#8220;cc&#8221;]=&gt;   array(0) {   }   [&#8220;bcc&#8221;]=&gt;   array(0) {   }   [&#8220;ReplyTo&#8221;]=&gt;   array(1) {     [0]=&gt;     array(2) {       [0]=&gt;       string(16) &#8220;test@example.com&#8221;       [1]=&gt;       string(7) &#8220;My Name&#8221;     }   }   [&#8220;attachment&#8221;]=&gt;   array(0) {   }   [&#8220;CustomHeader&#8221;]=&gt;   array(0) {   }   [&#8220;message_type&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;boundary&#8221;]=&gt;   array(0) {   }   [&#8220;language&#8221;]=&gt;   array(0) {   }   [&#8220;error_count&#8221;]=&gt;   int(0)   [&#8220;LE&#8221;]=&gt;   string(1) &#8221; &#8221; }</p></blockquote>
+<p>After taking a look at the source code, I found that it&#8217;s simply an &#8220;AJAX&#8221; call to a script called &#8220;<a href="http://www.sourcingmap.com/mail_in_pop.php">mail_in_pop.php</a>&#8220;.</p>
+<p>The best thing about this whole issue is the fact that their password for their mailbox appears in plain text and would be easy to guess. I&#8217;m guessing this isn&#8217;t the only place they use this password.</p>
+<p>Yet another PHP fail whale.</p>
+<p>I&#8217;m available for hire if you want me to fix this.</p>
+<p>Enjoy!</p>
+<p>PS. I do actually like SourcingMap but there&#8217;s no excuse for this kind of blatantly poor security.</p>
+<div id="_mcePaste" style="overflow: hidden; position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px;">object(PHPMailer)#15 (41) {   [&#8220;Priority&#8221;]=&gt;   int(3)   [&#8220;CharSet&#8221;]=&gt;   string(10) &#8220;iso-8859-1&#8221;   [&#8220;ContentType&#8221;]=&gt;   string(9) &#8220;text/html&#8221;   [&#8220;Encoding&#8221;]=&gt;   string(4) &#8220;8bit&#8221;   [&#8220;ErrorInfo&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;From&#8221;]=&gt;   string(16) &#8220;test@example.com&#8221;   [&#8220;FromName&#8221;]=&gt;   string(11) &#8220;Sourcingmap&#8221;   [&#8220;Sender&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;Subject&#8221;]=&gt;   string(26) &#8220;Enquiry From  Sourcingmap.&#8221;   [&#8220;Body&#8221;]=&gt;   string(7) &#8220;Testing&#8221;   [&#8220;AltBody&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;WordWrap&#8221;]=&gt;   int(0)   [&#8220;Mailer&#8221;]=&gt;   string(4) &#8220;smtp&#8221;   [&#8220;Sendmail&#8221;]=&gt;   string(18) &#8220;/usr/sbin/sendmail&#8221;   [&#8220;PluginDir&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;Version&#8221;]=&gt;   string(9) &#8220;2.0.0 rc3&#8221;   [&#8220;ConfirmReadingTo&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;Hostname&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;Host&#8221;]=&gt;   string(14) &#8220;smtp.gmail.com&#8221;   [&#8220;Port&#8221;]=&gt;   int(465)   [&#8220;Helo&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;SMTPSecure&#8221;]=&gt;   string(3) &#8220;ssl&#8221;   [&#8220;SMTPAuth&#8221;]=&gt;   bool(true)   [&#8220;Username&#8221;]=&gt;   string(22) &#8220;orders@sourcingmap.com&#8221;   [&#8220;Password&#8221;]=&gt;   string(16) &#8220;ilovesourcingmap&#8221;   [&#8220;Timeout&#8221;]=&gt;   int(10)   [&#8220;SMTPDebug&#8221;]=&gt;   bool(false)   [&#8220;SMTPKeepAlive&#8221;]=&gt;   bool(false)   [&#8220;SingleTo&#8221;]=&gt;   bool(false)   [&#8220;smtp&#8221;]=&gt;   NULL   [&#8220;to&#8221;]=&gt;   array(1) {     [0]=&gt;     array(2) {       [0]=&gt;       string(20) &#8220;info@sourcingmap.com&#8221;       [1]=&gt;       string(11) &#8220;SourcingMap&#8221;     }   }   [&#8220;cc&#8221;]=&gt;   array(0) {   }   [&#8220;bcc&#8221;]=&gt;   array(0) {   }   [&#8220;ReplyTo&#8221;]=&gt;   array(1) {     [0]=&gt;     array(2) {       [0]=&gt;       string(16) &#8220;test@example.com&#8221;       [1]=&gt;       string(7) &#8220;My Name&#8221;     }   }   [&#8220;attachment&#8221;]=&gt;   array(0) {   }   [&#8220;CustomHeader&#8221;]=&gt;   array(0) {   }   [&#8220;message_type&#8221;]=&gt;   string(0) &#8220;&#8221;   [&#8220;boundary&#8221;]=&gt;   array(0) {   }   [&#8220;language&#8221;]=&gt;   array(0) {   }   [&#8220;error_count&#8221;]=&gt;   int(0)   [&#8220;LE&#8221;]=&gt;   string(1) &#8221; &#8221; } <strong><span style="color: red;">Your enquiry has been successfully sent to the Store Owner.</span></strong></div>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/dont-forget-to-run-make-test" rel="bookmark" title="Don&#8217;t forget to run make test!">Don&#8217;t forget to run make test! </a> <small>During my install of PHP5 on FreeBSD&#8230; Build complete. Don&#8217;t...</small></li>
+<li><a href="https://hm2k.org/posts/jquery-sucks-at-browser-detection" rel="bookmark" title="jQuery sucks at browser detection">jQuery sucks at browser detection </a> <small>This week i&#8217;ve been tweaking a little site I&#8217;ve started...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/how-not-to-use-phpmailer/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">476</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:13 by W3 Total Cache
+-->

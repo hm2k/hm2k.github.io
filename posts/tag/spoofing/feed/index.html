@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>spoofing &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/spoofing/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 14 Oct 2009 12:23:01 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Ident Spoofing</title>
+		<link>https://hm2k.org/posts/ident-spoofing</link>
+					<comments>https://hm2k.org/posts/ident-spoofing#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 14 Oct 2009 12:23:01 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[Sysadmin]]></category>
+		<category><![CDATA[FreeBSD]]></category>
+		<category><![CDATA[ident]]></category>
+		<category><![CDATA[oidentd]]></category>
+		<category><![CDATA[rfc1413]]></category>
+		<category><![CDATA[spoofing]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=517</guid>
+
+					<description><![CDATA[Today I wrote about Oidentd on Wikipedia. Ident as per RFC 1413 is used for a few different services, in particular IRC. A feature of oidentd that my users find useful is ident spoofing. Ident is important on IRC as some servers do not allow you to connect unless you have an ident, while others [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Today I wrote about <a href="http://en.wikipedia.org/wiki/Oidentd">Oidentd</a> on Wikipedia. <a href="http://en.wikipedia.org/wiki/Ident">Ident</a> as per <a href="http://tools.ietf.org/html/rfc1413">RFC 1413</a> is used for a few different services, in particular <a href="http://en.wikipedia.org/wiki/Internet_Relay_Chat">IRC</a>. A feature of oidentd that my users find useful is ident spoofing.</p>
+<p><span id="more-517"></span>Ident is important on IRC as some servers do not allow you to connect unless you have an ident, while others do, you find yourself with a tide (~) prefix before your username. These are sometimes banned. For example:</p>
+<blockquote><p>HM2K!HM2K@ROFL.name</p>
+<p><em>#This is an example of a real user with a real ident</em></p>
+<p>baduser!~asdfg@123.123.123.123</p>
+<p><em>#This is an example of a possible exploited system</em></p></blockquote>
+<p>Generally the ident server (such as oidentd) will return the user&#8217;s username as the ident when it is requested, however on my servers, I allow some of my users to spoof their ident.</p>
+<p>This means they can change their ident to whatever they like, regardless of their username.</p>
+<p>To do this, you need to create the <a href="http://linux.die.net/man/5/oidentd.conf"><em>$HOME/.oidentd.conf</em></a> file, with the following content:</p>
+<blockquote><p>global { reply &#8216;$ident&#8217;}</p>
+<p><em>#Note: Where $ident is, replace with the ident you want.</em></p></blockquote>
+<p>I know some users find this a bit difficult or confusing, so I created a script to do it for them.</p>
+<ul>
+<li><a href="http://hm2k.googlecode.com/svn/trunk/code/shell/setident.sh">setident.sh</a> &#8211; A script used to set your ident</li>
+</ul>
+<p>It&#8217;s works fine using the sh unix shell on FreeBSD.</p>
+<p>If you are on my shell servers, you should be able to take advantage of this using the &#8220;setident&#8221; command.</p>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/configuring-a-freebsd-irc-shell-server" rel="bookmark" title="Configuring a FreeBSD IRC Shell Server">Configuring a FreeBSD IRC Shell Server </a> <small>This is a brief guide created to help configure a...</small></li>
+<li><a href="https://hm2k.org/posts/how-to-find-the-fastest-cvsup-mirror-server" rel="bookmark" title="How to find the fastest CVSUP mirror server">How to find the fastest CVSUP mirror server </a> <small>Some time ago I wrote about using fastest_cvsup, to find...</small></li>
+<li><a href="https://hm2k.org/posts/gmail-needs-an-api" rel="bookmark" title="Gmail needs an API">Gmail needs an API </a> <small>Yesterday I spent some time investigating Google Wave. A very...</small></li>
+<li><a href="https://hm2k.org/posts/freebsd-socks-proxy-for-mirc" rel="bookmark" title="Setting up a FreeBSD socks proxy server for use with mIRC">Setting up a FreeBSD socks proxy server for use with mIRC </a> <small>Update: Looking for the sss.pl? Try the Simple Sockets Server...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/ident-spoofing/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">517</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:31:28 by W3 Total Cache
+-->

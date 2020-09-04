@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>api &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/api/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Wed, 17 Aug 2011 13:05:40 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>Google&#8217;s Official Profanity API</title>
+		<link>https://hm2k.org/posts/googles-official-profanity-api</link>
+					<comments>https://hm2k.org/posts/googles-official-profanity-api#comments</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Wed, 17 Aug 2011 10:09:15 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[bad words]]></category>
+		<category><![CDATA[json]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[profanity]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3180</guid>
+
+					<description><![CDATA[Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new website which asks: &#8220;What do you love?&#8221; (wdyl.com). So, perhaps I was a bit hasty writing off WhoisX. The list of profanities was discovered in the Javascript on the website, however Google reacted quickly and switched this to a URL lookup instead of a Javascript one therefore keeping [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><a href="http://www.wdyl.com/?q=butt hole lane"><img loading="lazy" class="alignright size-medium wp-image-3230" title="Butt_Hole_Road" src="http://i.imgur.com/U2IWJ.jpg" alt="" width="300" height="199" /></a>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new website which asks: <a href="http://wdyl.com/">&#8220;What do you love?&#8221;</a> (wdyl.com).</p>
+<p>So, perhaps I was a bit hasty <a href="http://labs.phurix.net/posts/the-rise-and-fall-of-whoisx">writing off WhoisX</a>.</p>
+<p>The list of profanities was <a href="http://fffff.at/googles-official-list-of-bad-words/">discovered</a> in the Javascript on the website, however Google reacted quickly and switched this to a URL lookup instead of a Javascript one therefore keeping the list away from prying eyes.</p>
+<p>However, what this does mean is now we have an API to play with:<span id="more-3180"></span></p>
+<blockquote><p><a href="http://www.wdyl.com/profanity?q=xxx">http://www.wdyl.com/profanity?q=xxx</a></p></blockquote>
+<p>This will return a true JSON response:</p>
+<blockquote><p>{&#8220;response&#8221;: &#8220;true&#8221;}</p></blockquote>
+<p>While looking up something like &#8220;lol&#8221; will return a false response:</p>
+<blockquote><p><a href="http://www.wdyl.com/profanity?q=lol">http://www.wdyl.com/profanity?q=lol</a></p>
+<p>{&#8220;response&#8221;: &#8220;false&#8221;}</p></blockquote>
+<p>All in all a pretty simple and easy way to figure out whether Google thinks it is a bad word or not.</p>
+<p>On the down side, you can&#8217;t easily use it on your site, as, if you try to call it by AJAX you&#8217;ll be faced by the following error:</p>
+<blockquote><p>XMLHttpRequest cannot load http://www.wdyl.com/profanity. Origin http://example.org is not allowed by Access-Control-Allow-Origin.</p></blockquote>
+<p>On the upside, we don&#8217;t want to do that anyway, we can to use it from PHP.</p>
+<blockquote>
+<pre>&lt;?php
+
+$q=isset($_REQUEST['q'])?urlencode($_REQUEST['q']):'';
+readfile('http://www.wdyl.com/profanity?q='.$q);
+
+?&gt;</pre>
+</blockquote>
+<p>That&#8217;s right, that&#8217;s all there is to it. Simply copy that into the a file called &#8220;profanity.php&#8221; and you&#8217;re ready to go!</p>
+<p>Now you can do a <a href="http://api.jquery.com/jQuery.getJSON/">JSON cal</a>l to your &#8216;profanity.php&#8217; to tell you whether the word is bad or not.</p>
+<p>If that&#8217;s not enough, you could try using the Google Profanity API to avoid displaying ads on pages that contain profanities.</p>
+<p>Now if only there was a way to avoid the <a href="http://en.wikipedia.org/wiki/Scunthorpe_problem">Scunthorp problem</a>&#8230;</p>
+<p>Going back to the reported Adsense problem on WhoisX.co.uk, the example query was:</p>
+<blockquote><p>adult-hardcore-sex.cuntspace.me.uk</p></blockquote>
+<p>Passing this to the API returned false.</p>
+<p>But, changing all the non-word characters to spaces has a different effect:</p>
+<blockquote><p>adult hardcore sex cuntspace me uk</p>
+<p>{&#8220;response&#8221;: &#8220;true&#8221;}</p></blockquote>
+<p>This is done in PHP using a simple regular expression:</p>
+<blockquote><p>echo preg_replace(&#8216;/[\W+]/&#8217;,&#8217; &#8216;,&#8217;adult-hardcore-sex.cuntspace.me.uk&#8217;);</p></blockquote>
+<p>I&#8217;m not sure this exactly solves the Scunthorp problem, but it definitely does identify &#8220;sex&#8221; as an adult theme which is perfect.</p>
+<p>Now to turn it into a usable function:</p>
+<blockquote>
+<pre>&lt;?php
+
+function is_profanity($q,$json=0) {
+	$q=urlencode(preg_replace('/[\W+]/',' ',$q));
+	$p=file_get_contents('http://www.wdyl.com/profanity?q='.$q);
+	if ($json) { return $p; }
+	$p=json_decode($p);
+	return ($p-&gt;response=='true')?1:0;
+}
+
+$q=isset($_REQUEST['q'])?$_REQUEST['q']:'';
+echo is_profanity($q);
+
+?&gt;</pre>
+</blockquote>
+<p>We can use this function to check whether the query is considered a profanity or not. If it is, it will return a 1, otherwise a 0 is returned.</p>
+<p>This function can now be used to include kittens (or whatever) rather than Google Adsense Ads on a pages with &#8220;<a href="https://www.google.com/adsense/support/as/bin/answer.py?hl=en&amp;answer=105957">adult themed</a>&#8221; content.</p>
+<p>Brilliant!</p>
+<p>Now to submit for <a href="https://www.google.com/adsense/support/bin/request.py?contact_type=policy_violation_appeal">reconsideration</a>&#8230;</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/the-rise-and-fall-of-whoisx" rel="bookmark" title="The rise and fall of WhoisX">The rise and fall of WhoisX </a> <small>WhoisX is a domain name lookup service, similar to the...</small></li>
+<li><a href="https://hm2k.org/posts/what-is-my-ip" rel="bookmark" title="What is my IP?">What is my IP? </a> <small>An IP address is a unique number which identifies a...</small></li>
+<li><a href="https://hm2k.org/posts/get_favicon-php-function" rel="bookmark" title="get_favicon() php function">get_favicon() php function </a> <small>I was after a php function that would get the...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/googles-official-profanity-api/feed</wfw:commentRss>
+			<slash:comments>2</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3180</post-id>	</item>
+		<item>
+		<title>What is my IP?</title>
+		<link>https://hm2k.org/posts/what-is-my-ip</link>
+					<comments>https://hm2k.org/posts/what-is-my-ip#respond</comments>
+		
+		<dc:creator><![CDATA[James Wade]]></dc:creator>
+		<pubDate>Tue, 09 Aug 2011 08:48:14 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[ip address]]></category>
+		<category><![CDATA[php]]></category>
+		<category><![CDATA[regex]]></category>
+		<category><![CDATA[what is my ip]]></category>
+		<guid isPermaLink="false">http://labs.phurix.net/?p=3193</guid>
+
+					<description><![CDATA[An IP address is a unique number which identifies a machine on a network. On the Internet IP addresses are allocated in blocks to ISPs in each country by regional registries, making it possible to identify which country an IP address originated in. Often, if you are connected to the Internet behind a router, you [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><img loading="lazy" class="alignright size-medium wp-image-3199" title="500px-Coffee_IP.svg" src="http://labs.phurix.net/upload/500px-Coffee_IP.svg_-300x225.png" alt="" width="300" height="225" srcset="https://hm2k.org/upload/500px-Coffee_IP.svg_-300x225.png 300w, https://hm2k.org/upload/500px-Coffee_IP.svg_.png 500w" sizes="(max-width: 300px) 100vw, 300px" />An <a href="http://en.wikipedia.org/wiki/IP_address">IP address</a> is a unique number which identifies a machine on a network.</p>
+<p>On the Internet IP addresses are allocated in blocks to ISPs in each country by regional registries, making it possible to identify which country an IP address originated in.</p>
+<p>Often, if you are connected to the Internet behind a router, you share an online IP address with everyone else on your local area network (LAN).</p>
+<p>Sometimes you need to know your external IP address and using something like <a href="http://en.wikipedia.org/wiki/Ipconfig">ipconfig</a> will only return your LAN IP address (something like 192.168.0.1).</p>
+<p><span id="more-3193"></span>That is why many &#8220;what is my ip&#8221; websites exist, making it easy for you to lookup your external IP address.</p>
+<p>My favourite IP lookup service has been for a long time one run by NASDAQ-100 content delivery specialists &#8220;Akamai Technologies&#8221;:</p>
+<ul>
+<li><a href="http://whatismyip.akamai.com/">whatismyip.akamai.com</a></li>
+</ul>
+<p>It&#8217;s brilliant in its simplicity but it&#8217;s not very pretty.</p>
+<p>We decided to do something different. We made a pretty &#8220;What is my IP address?&#8221; lookup:</p>
+<ul>
+<li><a href="http://ip.phurix.net/">ip.phurix.net</a></li>
+</ul>
+<p>Part of its beauty is that the audience its aimed at is able to quickly read and understand the information at a glance, without any prompts. While those who don&#8217;t understand it can marvel at its pretty form and ponder over its usefulness.</p>
+<p>The other part of its beauty is that it&#8217;s <em>highly <a href="http://en.wiktionary.org/wiki/parsable">parsable</a></em>.</p>
+<p>It&#8217;s easy to parse the IP address, mainly because the presentation (CSS) is separate from the markup (HTML), but also because of the headers.</p>
+<p>Here&#8217;s a short demonstration to show how you can use the headers to get the IP address using this tool:</p>
+<blockquote><p>&lt;?php $h=get_headers(&#8216;http://ip.phurix.net&#8217;,1); echo trim($h[&#8216;Location&#8217;],&#8217;/&#8217;); ?&gt;</p></blockquote>
+<p>However, this method isn&#8217;t very portable, so may not be suitable if you&#8217;re checking against multiple sources at once.</p>
+<p>So instead, we can also demonstrate using a simple regular expression and a function that can get http contents (such as file_get_contents() in PHP).</p>
+<blockquote><p>&lt;?php echo preg_replace(&#8216;/.*?(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}).*/s&#8217;,&#8217;$1&#8242;,file_get_contents(&#8216;http://ip.phurix.net&#8217;));?&gt;</p></blockquote>
+<p>The brilliance in this little snippet is that it will work with <em>any</em> useful &#8220;What is my IP?&#8221; lookup website.</p>
+<p>So as you can see, it&#8217;s really easy to work with as a pretty API as well.</p>
+<p>Beyond the IP address, you only need to look at the source code to understand that it&#8217;s easy to parse the other details.</p>
+<p>I hope you found this useful!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/googles-official-profanity-api" rel="bookmark" title="Google&#8217;s Official Profanity API">Google&#8217;s Official Profanity API </a> <small>Recently a list of &#8220;bad words&#8221; were made available through Google&#8217;s new...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/over-sixteen-ways-to-obfuscate-e-mail-addresses" rel="bookmark" title="Over sixteen ways to obfuscate e-mail addresses">Over sixteen ways to obfuscate e-mail addresses </a> <small>Back in 2007 I wrote about email addresses on your...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/what-is-my-ip/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">3193</post-id>	</item>
+		<item>
+		<title>PHP OpenSRS Client</title>
+		<link>https://hm2k.org/posts/php-opensrs-client</link>
+					<comments>https://hm2k.org/posts/php-opensrs-client#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Wed, 25 Nov 2009 13:42:50 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[client]]></category>
+		<category><![CDATA[opensrs]]></category>
+		<category><![CDATA[tucows]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=579</guid>
+
+					<description><![CDATA[This is only a quick message to say that I am now developing the PHP OpenSRS Client project. OpenSRS-PHP is a PHP-based client class that communicates with the TuCows OpenSRS Domain Name Registry System via an API. I have just released version 2.8.1 with many long awaited fixes. Website Enjoy!<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-to-setup-tucows-opensrs" rel="bookmark" title="How to setup Tucows OpenSRS">How to setup Tucows OpenSRS </a> <small>OpensSRS is a domain reseller system offered by Tucows to...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/ftp-client" rel="bookmark" title="An FTP client">An FTP client </a> <small>I have been looking for a decent FTP client for...</small></li>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What&#8217;s wrong with low version numbers?">What&#8217;s wrong with low version numbers? </a> <small>In a presentation entitled &#8220;Why I hate Django&#8221;, Cal Henderson...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>This is only a quick message to say that I am now developing the <em>PHP OpenSRS Client project</em>.</p>
+<p>OpenSRS-PHP is a PHP-based client class that communicates with the TuCows OpenSRS Domain Name Registry System via an API.</p>
+<p>I have just released version 2.8.1 with many long awaited fixes.</p>
+<ul>
+<li><a href="http://opensrs-php.sourceforge.net/">Website</a></li>
+</ul>
+<p>Enjoy!</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-to-setup-tucows-opensrs" rel="bookmark" title="How to setup Tucows OpenSRS">How to setup Tucows OpenSRS </a> <small>OpensSRS is a domain reseller system offered by Tucows to...</small></li>
+<li><a href="https://hm2k.org/posts/transfering-domains-from-godaddycom-to-tucows-opensrs" rel="bookmark" title="Transfering domains from Godaddy.com to TuCows OpenSRS">Transfering domains from Godaddy.com to TuCows OpenSRS </a> <small>I need to transfer a bunch of domains from Godaddy...</small></li>
+<li><a href="https://hm2k.org/posts/ftp-client" rel="bookmark" title="An FTP client">An FTP client </a> <small>I have been looking for a decent FTP client for...</small></li>
+<li><a href="https://hm2k.org/posts/whats-wrong-with-low-version-numbers" rel="bookmark" title="What&#8217;s wrong with low version numbers?">What&#8217;s wrong with low version numbers? </a> <small>In a presentation entitled &#8220;Why I hate Django&#8221;, Cal Henderson...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/php-opensrs-client/feed</wfw:commentRss>
+			<slash:comments>4</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">579</post-id>	</item>
+		<item>
+		<title>Gmail needs an API</title>
+		<link>https://hm2k.org/posts/gmail-needs-an-api</link>
+					<comments>https://hm2k.org/posts/gmail-needs-an-api#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Fri, 13 Nov 2009 16:05:06 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[gmail]]></category>
+		<category><![CDATA[google mail]]></category>
+		<category><![CDATA[wave]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=570</guid>
+
+					<description><![CDATA[Yesterday I spent some time investigating Google Wave. A very interesting new product from Google. Not only that but an interesting protocol. If you think about it, Google has mostly only used other protocols for communication in the past, now it&#8217;s creating it&#8217;s own. They clearly want to create a completely new protocol that will [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-not-to-use-phpmailer" rel="bookmark" title="How not to use PHPMailer">How not to use PHPMailer </a> <small>I came across PHPMailer usage the other day on a...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>Yesterday I spent some time investigating Google Wave. A very interesting new product from Google. Not only that but an interesting protocol.</p>
+<p>If you think about it, Google has mostly only used other protocols for communication in the past, now it&#8217;s creating it&#8217;s own. They clearly want to create a completely new protocol that will effectively be the future of these old primitive protocols.</p>
+<p>For this to catch on, it will either have to run directly along side smtp and xmmp or layer on top of them.</p>
+<p>We&#8217;re going to need a way to pass requests over http to smtp or pop3/imap, and what better way to do it than with gmail?</p>
+<p>Sure, but there&#8217;s no API&#8230;</p>
+<p><span id="more-570"></span></p>
+<p>It&#8217;s argued that all you need to do is roll your own &#8220;api&#8221; or library class to use smtp and imap server provided by Google Mail (gmail) to send and receive emails.</p>
+<p>The problem with this is that you&#8217;re forced to hand the app your username and password. Naturally this raises security concerns.</p>
+<p>Of course this isn&#8217;t a big problem if you only use your own username and password and manage to store it on your server security.</p>
+<p>The problem comes when others want to use their gmail accounts with your web app. They have not choice but to hand over their username and password. What can possibly go wrong?</p>
+<ul>
+<li>Their username and password gives you FULL access to their account, including account actions such as changing passwords.</li>
+</ul>
+<p>My proposal would be for an API that allowed you to interface with gmail, in particular to send emails (which has the biggest scope here).</p>
+<p>To access the API you could generate an API Key from within gmail that would allow you to interface with gmail, but limited to mailing functions, rather than account settings.</p>
+<p>An alternative to this is similar to the &#8220;GoogleCode.com Password&#8221;, used by project members when checking out or committing source code changes, or when using command-line tools to upload files to the project &#8220;Downloads&#8221; tab.</p>
+<p>If you could set a &#8220;Google Mail SMTP Password&#8221; or similar, which would only permit you to access the gmail SMTP server, but not gmail itself, this would also allow you to overcome the security issues mentioned above.</p>
+<p>However, this alternative wouldn&#8217;t help towards integration with Google Wave as much as an api would.</p>
+<p>In summary, to resolve the security issue an API is an option, but for Google Wave integration too, it&#8217;s essentially a must.</p>
+<p>I hope someone at Google reads this and agrees with me, for that matter, I hope you or anyone reading this agrees with me.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/how-not-to-use-phpmailer" rel="bookmark" title="How not to use PHPMailer">How not to use PHPMailer </a> <small>I came across PHPMailer usage the other day on a...</small></li>
+<li><a href="https://hm2k.org/posts/has-friendster-been-hacked" rel="bookmark" title="Has friendster been hacked?">Has friendster been hacked? </a> <small>I noticed an unusual email when I checked my Gmail...</small></li>
+<li><a href="https://hm2k.org/posts/google-adsense-wont-let-me-in" rel="bookmark" title="Google AdSense won&#8217;t let me in!">Google AdSense won&#8217;t let me in! </a> <small>Back in 2004, I signed up my old site &#8220;hm2k.org&#8221;...</small></li>
+<li><a href="https://hm2k.org/posts/the-google-translate-recursion-bug" rel="bookmark" title="The Google Translate recursion bug">The Google Translate recursion bug </a> <small>Recently I found a bug in Google Translate. It&#8217;s not...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/gmail-needs-an-api/feed</wfw:commentRss>
+			<slash:comments>3</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">570</post-id>	</item>
+		<item>
+		<title>weather.tcl</title>
+		<link>https://hm2k.org/posts/weather-tcl</link>
+					<comments>https://hm2k.org/posts/weather-tcl#comments</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Thu, 05 Nov 2009 00:37:14 +0000</pubDate>
+				<category><![CDATA[Internet]]></category>
+		<category><![CDATA[api]]></category>
+		<category><![CDATA[eggdrop]]></category>
+		<category><![CDATA[eggtcl]]></category>
+		<category><![CDATA[irc]]></category>
+		<category><![CDATA[TCL]]></category>
+		<category><![CDATA[weather]]></category>
+		<category><![CDATA[weather.tcl]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=560</guid>
+
+					<description><![CDATA[Update: This script is now part of the eggtcl project. Today, after I decided to hang out in #eggtcl on EFnet, someone asked the following: &#60;daILLeST&#62; anyine know of a weather tcl that actually works? All the ones I find are outdated, or in another language&#8230; I decided it was time that I updated my [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+<li><a href="https://hm2k.org/posts/universal-currency-converter-tcl-for-eggdrop" rel="bookmark" title="Universal Currency Converter TCL for Eggdrop">Universal Currency Converter TCL for Eggdrop </a> <small>Update: This script is now part of the eggtcl project. This...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p><strong><em>Update: This script is now part of the <a href="http://www.eggtcl.com/">eggtcl project</a>.</em></strong></p>
+<p>Today, after I decided to hang out in #eggtcl on EFnet, someone asked the following:</p>
+<blockquote><p>&lt;daILLeST&gt; anyine know of a weather tcl that actually works? All the ones I find are outdated, or in another language&#8230;</p></blockquote>
+<p>I decided it was time that I updated my old weather.tcl based on a script by Ycarus for eggdrop bots.</p>
+<p><span id="more-560"></span>Before, many scripts used weather underground (wunderground.com) to gather their feed.</p>
+<p>I believe this is because there were many existing TCL based software that used this site to gather their data via telnet.</p>
+<p>Telnet access to their server stopped working correctly, so scripts began using their http site to gather data. This too eventually stopped working as once they changed their site, the scripts could no longer parse the html for the data.</p>
+<p>Enter Google.</p>
+<p>Google has a weather API that they use for their &#8220;<a href="http://www.google.com/ig">iGoogle</a>&#8220;, which is very handy.</p>
+<p>Although it appears to be undocumented by Google, working with the API is easy enough&#8230;</p>
+<blockquote><p><a href="http://www.google.com/ig/api?weather=london&amp;hl=en">http://www.google.com/ig/api?weather=london&amp;hl=en</a></p></blockquote>
+<p>The query string contains a &#8220;weather&#8221; parameter, which is generally city or postcode and the &#8220;hl&#8221; parameter which is the language.</p>
+<p>This will return an XML formatted result for the city of &#8220;London, England&#8221;.</p>
+<p>We can then parse the data we want from this and return it accordingly.</p>
+<p>So, put it all together, a bit of TCL care (get it?), and we&#8217;re done&#8230;</p>
+<ul>
+<li><strong>Download <a href="http://code.google.com/p/eggtcl/downloads/detail?name=weather.tcl">weather.tcl</a></strong></li>
+</ul>
+<p>It works well, and returns a result similar to this:</p>
+<blockquote><p>&gt; .wz london<br />
+&lt;Bot&gt; HM2K, * Weather: London, England: Mostly Cloudy, 8ºC Humidity: 87% Wind: W at 9 mph</p></blockquote>
+<p>Hope you find this useful.</p>
+<p>What I may do next time&#8230;</p>
+<p>Since Google&#8217;s Weather API is completely officially undocumented it&#8217;s worth noting that in future it may be wise to use <a href="http://developer.yahoo.com/weather/">Yahoo&#8217;s weather API</a>, which is fully and officially documented.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/worldtime-tcl" rel="bookmark" title="worldtime.tcl">worldtime.tcl </a> <small>Sometimes you need to know the time somewhere else in...</small></li>
+<li><a href="https://hm2k.org/posts/universal-currency-converter-tcl-for-eggdrop" rel="bookmark" title="Universal Currency Converter TCL for Eggdrop">Universal Currency Converter TCL for Eggdrop </a> <small>Update: This script is now part of the eggtcl project. This...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/weather-tcl/feed</wfw:commentRss>
+			<slash:comments>8</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">560</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:26 by W3 Total Cache
+-->

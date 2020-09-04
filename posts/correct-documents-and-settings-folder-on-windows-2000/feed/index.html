@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	
+	>
+<channel>
+	<title>
+	Comments on: Correct Documents and Settings folder on Windows 2000	</title>
+	<atom:link href="https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/feed" rel="self" type="application/rss+xml" />
+	<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000</link>
+	<description>Research and development</description>
+	<lastBuildDate>Fri, 06 Nov 2009 21:49:29 +0000</lastBuildDate>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+	<item>
+		<title>
+		By: Bob Lourie		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-185718</link>
+
+		<dc:creator><![CDATA[Bob Lourie]]></dc:creator>
+		<pubDate>Fri, 06 Nov 2009 21:49:29 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-185718</guid>
+
+					<description><![CDATA[Article referred to above:
+http://techrepublic.com.com/5208-6346-0.html?forumID=80&#038;threadID=120681&#038;messageID=3196151
+cheers]]></description>
+			<content:encoded><![CDATA[<p>Article referred to above:<br />
+<a href="http://techrepublic.com.com/5208-6346-0.html?forumID=80&#038;threadID=120681&#038;messageID=3196151" rel="nofollow ugc">http://techrepublic.com.com/5208-6346-0.html?forumID=80&#038;threadID=120681&#038;messageID=3196151</a><br />
+cheers</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Bob Lourie		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-185715</link>
+
+		<dc:creator><![CDATA[Bob Lourie]]></dc:creator>
+		<pubDate>Fri, 06 Nov 2009 21:29:35 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-185715</guid>
+
+					<description><![CDATA[Hi, thank you for writing your experience up as it helped me no end. (Some of us still use w2k :-)
+
+I have several Linux distribs on different partitions on a SATA drive and a PATA - with the orig Win installations on it.
+Recently when installing a new os , Grub appears to have changed the assignment of hd0 and hd1 around . I did a rough and ready reassignment with the active menu.lst and the Linux oses were accessible again, as was W2k. 
+However I soon had complaints from family that the desktop had changed in Win. Outlook express was wanting to do a fresh install and the icons had reduced to just a few. 
+This evidence was enough to think doing something silly and reinstalling but the solution was elegant, although I took some time to research it on inet.
+
+I found a good item on Outlook Express and your article. The upshot was that Outlook had multiple files managed as part of an OE identity.
+However this identity was created for the users W2k profile.
+
+Since both icon and OE setting had gone, it was likely to be a profile issue.
+
+Using  GETSID, I found ProfileList in the registry and adjacent to the key - which ended xxxxx001 was another almost identical one ending xxxxx001.bak
+
+After making some preparations against disaster ( incanting &quot; Bugger, this had better work..&quot; repeatedly), I renamed the active one as something else, then the .bak was removed from the second (and then placed on the first over the temp  extension to be doggedly conservative).
+
+On restarting the computer and w2k all was well with the lost profile restored and with Outlook Express restored as part of that.
+
+So thanks again for providing the process to get the info needed to simply undo a little W2k knot. ( I still do not know how the glitch with grub affected W2k although it is the only change that I am aware of )
+
+cheers
+bob]]></description>
+			<content:encoded><![CDATA[<p>Hi, thank you for writing your experience up as it helped me no end. (Some of us still use w2k 🙂</p>
+<p>I have several Linux distribs on different partitions on a SATA drive and a PATA &#8211; with the orig Win installations on it.<br />
+Recently when installing a new os , Grub appears to have changed the assignment of hd0 and hd1 around . I did a rough and ready reassignment with the active menu.lst and the Linux oses were accessible again, as was W2k.<br />
+However I soon had complaints from family that the desktop had changed in Win. Outlook express was wanting to do a fresh install and the icons had reduced to just a few.<br />
+This evidence was enough to think doing something silly and reinstalling but the solution was elegant, although I took some time to research it on inet.</p>
+<p>I found a good item on Outlook Express and your article. The upshot was that Outlook had multiple files managed as part of an OE identity.<br />
+However this identity was created for the users W2k profile.</p>
+<p>Since both icon and OE setting had gone, it was likely to be a profile issue.</p>
+<p>Using  GETSID, I found ProfileList in the registry and adjacent to the key &#8211; which ended xxxxx001 was another almost identical one ending xxxxx001.bak</p>
+<p>After making some preparations against disaster ( incanting &#8221; Bugger, this had better work..&#8221; repeatedly), I renamed the active one as something else, then the .bak was removed from the second (and then placed on the first over the temp  extension to be doggedly conservative).</p>
+<p>On restarting the computer and w2k all was well with the lost profile restored and with Outlook Express restored as part of that.</p>
+<p>So thanks again for providing the process to get the info needed to simply undo a little W2k knot. ( I still do not know how the glitch with grub affected W2k although it is the only change that I am aware of )</p>
+<p>cheers<br />
+bob</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Greg		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-176076</link>
+
+		<dc:creator><![CDATA[Greg]]></dc:creator>
+		<pubDate>Wed, 26 Aug 2009 05:12:49 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-176076</guid>
+
+					<description><![CDATA[Thanks, worked great.]]></description>
+			<content:encoded><![CDATA[<p>Thanks, worked great.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Richard G.		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-128484</link>
+
+		<dc:creator><![CDATA[Richard G.]]></dc:creator>
+		<pubDate>Wed, 17 Dec 2008 22:44:31 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-128484</guid>
+
+					<description><![CDATA[I still have a Windows 2000 system that decided to do this as well. The difference was that instead of MACHINENAME, it tagged DOMAINNAME to the end of my username for the &quot;new&quot; Documents and Settings profile directory (it is a domain bound box).
+
+The same registry trick resolved the problem. Thanks much!!!
+
+Hint: if you cannot install getsid, just search the registry under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList for the bad (&quot;new&quot;) profile directory name, and change the &quot;ProfileImagePath&quot; accordingly.]]></description>
+			<content:encoded><![CDATA[<p>I still have a Windows 2000 system that decided to do this as well. The difference was that instead of MACHINENAME, it tagged DOMAINNAME to the end of my username for the &#8220;new&#8221; Documents and Settings profile directory (it is a domain bound box).</p>
+<p>The same registry trick resolved the problem. Thanks much!!!</p>
+<p>Hint: if you cannot install getsid, just search the registry under HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList for the bad (&#8220;new&#8221;) profile directory name, and change the &#8220;ProfileImagePath&#8221; accordingly.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: shoe		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-117400</link>
+
+		<dc:creator><![CDATA[shoe]]></dc:creator>
+		<pubDate>Thu, 06 Nov 2008 06:38:47 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-117400</guid>
+
+					<description><![CDATA[Thanks that worked great.  I have no idea why this suddenly happened in the first place though.]]></description>
+			<content:encoded><![CDATA[<p>Thanks that worked great.  I have no idea why this suddenly happened in the first place though.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Steffen		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-101030</link>
+
+		<dc:creator><![CDATA[Steffen]]></dc:creator>
+		<pubDate>Fri, 19 Sep 2008 08:37:11 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-101030</guid>
+
+					<description><![CDATA[Thanks alot for the information the same thing just happened on my colleauges Win2k-machine. Apparently during an Update of Windows .Net Framework Components. Furthermore Outlook decided to move his mailbox to the new local folder...but didn&#039;t manage to finish it. So all his files are lost. (makes me appreciate working under Linux even more).]]></description>
+			<content:encoded><![CDATA[<p>Thanks alot for the information the same thing just happened on my colleauges Win2k-machine. Apparently during an Update of Windows .Net Framework Components. Furthermore Outlook decided to move his mailbox to the new local folder&#8230;but didn&#8217;t manage to finish it. So all his files are lost. (makes me appreciate working under Linux even more).</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Aftab		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-53121</link>
+
+		<dc:creator><![CDATA[Aftab]]></dc:creator>
+		<pubDate>Sat, 22 Mar 2008 20:24:45 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-53121</guid>
+
+					<description><![CDATA[Thanks for your valuable help. I think you&#039;ll find that many people still use 2000 as it was a lot more stable (and secure) than XP when that came out, and I think Microsoft recognise this by continuing to provide windows update security patches for 2000 to this day. Great Help topic you wrote there, Thanks.]]></description>
+			<content:encoded><![CDATA[<p>Thanks for your valuable help. I think you&#8217;ll find that many people still use 2000 as it was a lot more stable (and secure) than XP when that came out, and I think Microsoft recognise this by continuing to provide windows update security patches for 2000 to this day. Great Help topic you wrote there, Thanks.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Kris		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-38927</link>
+
+		<dc:creator><![CDATA[Kris]]></dc:creator>
+		<pubDate>Mon, 28 Jan 2008 19:39:08 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-38927</guid>
+
+					<description><![CDATA[Thanks dude it worked like a charm, helped me get back to my &quot;User&quot; account.
+Even now i couldn&#039;t understand what got me there to &quot;User.Machinename&quot; account.]]></description>
+			<content:encoded><![CDATA[<p>Thanks dude it worked like a charm, helped me get back to my &#8220;User&#8221; account.<br />
+Even now i couldn&#8217;t understand what got me there to &#8220;User.Machinename&#8221; account.</p>
+]]></content:encoded>
+		
+			</item>
+		<item>
+		<title>
+		By: Adam		</title>
+		<link>https://hm2k.org/posts/correct-documents-and-settings-folder-on-windows-2000/comment-page-1#comment-34837</link>
+
+		<dc:creator><![CDATA[Adam]]></dc:creator>
+		<pubDate>Thu, 10 Jan 2008 23:26:43 +0000</pubDate>
+		<guid isPermaLink="false">http://www.hm2k.com/posts/correct-documents-and-settings-folder-on-windows-2000#comment-34837</guid>
+
+					<description><![CDATA[My mom still uses 2000 (she never saw a need to upgrade since it does what she wants).  She just ran into the problem, and you helped me out a lot. Thanks!]]></description>
+			<content:encoded><![CDATA[<p>My mom still uses 2000 (she never saw a need to upgrade since it does what she wants).  She just ran into the problem, and you helped me out a lot. Thanks!</p>
+]]></content:encoded>
+		
+			</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:23:04 by W3 Total Cache
+-->

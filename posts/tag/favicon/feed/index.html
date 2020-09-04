@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	
+	xmlns:georss="http://www.georss.org/georss"
+	xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	>
+
+<channel>
+	<title>favicon &#8211; HM2K</title>
+	<atom:link href="https://hm2k.org/posts/tag/favicon/feed" rel="self" type="application/rss+xml" />
+	<link>http://hm2k.org/</link>
+	<description>Research and development</description>
+	<lastBuildDate>Mon, 21 Mar 2011 00:40:27 +0000</lastBuildDate>
+	<language>en-GB</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.5.1</generator>
+<site xmlns="com-wordpress:feed-additions:1">181873647</site>	<item>
+		<title>get_favicon() php function</title>
+		<link>https://hm2k.org/posts/get_favicon-php-function</link>
+					<comments>https://hm2k.org/posts/get_favicon-php-function#respond</comments>
+		
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<pubDate>Tue, 15 Mar 2011 12:45:43 +0000</pubDate>
+				<category><![CDATA[Development]]></category>
+		<category><![CDATA[Internet]]></category>
+		<category><![CDATA[favicon]]></category>
+		<category><![CDATA[function]]></category>
+		<category><![CDATA[google]]></category>
+		<category><![CDATA[php]]></category>
+		<guid isPermaLink="false">http://www.hm2k.com/?p=593</guid>
+
+					<description><![CDATA[I was after a php function that would get the favicon for a supplied domain, I did attempt to write my own but it proved more complex than I had first anticipated. Never fear, I did a quick google and came across a couple of sites. http://www.peej.co.uk/projects/favatars.html I tried this code, but it returned nothing. [&#8230;]<div class='yarpp-related-rss'>
+
+Related posts:<ol>
+<li><a href="https://hm2k.org/posts/rglob-php" rel="bookmark" title="rglob.php">rglob.php </a> <small>Today I was having a look on PHP.net and noticed...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol>
+</div>
+]]></description>
+										<content:encoded><![CDATA[<p>I was after a php function that would get the favicon for a supplied domain, I did attempt to write my own but it proved more complex than I had first anticipated.  <span id="more-593"></span>Never fear, I did a quick google and came across a couple of sites.</p>
+<ul>
+<li><a href="http://www.peej.co.uk/projects/favatars.html">http://www.peej.co.uk/projects/favatars.html</a></li>
+</ul>
+<p>I tried this code, but it returned nothing. I attempted to fix it, but it still didn&#8217;t really perform very well.</p>
+<ul>
+<li><a href="http://www.josephtinsley.com/39/2009-11-10/google-favicon-api-php-code/">http://www.josephtinsley.com/39/2009-11-10/google-favicon-api-php-code/</a></li>
+</ul>
+<p>This was interesting, it seems that google has an API for returning favicons&#8230;</p>
+<blockquote><p>function get_favicon($host) { return &#8216;http://www.google.com/s2/favicons?domain=&#8217;.$host; }</p></blockquote>
+<p>That was easy.  Also, if you don&#8217;t fancy using Google (some people don&#8217;t) you can try one of these instead:</p>
+<ul>
+<li>http://duckduckgo.com/i/%s.ico</li>
+<li>http://getfavicon.appspot.com/%s</li>
+<li>http://www.getfavicon.org/?url=%s</li>
+</ul>
+<p>Where %s is, but the host or domain name.</p>
+<div class='yarpp-related-rss'>
+<p>Related posts:<ol>
+<li><a href="https://hm2k.org/posts/rglob-php" rel="bookmark" title="rglob.php">rglob.php </a> <small>Today I was having a look on PHP.net and noticed...</small></li>
+<li><a href="https://hm2k.org/posts/is-google-pagerank-dead" rel="bookmark" title="Is Google PageRank dead?">Is Google PageRank dead? </a> <small>PageRank is dead, long live PageRank. As we said recently,...</small></li>
+<li><a href="https://hm2k.org/posts/pagerank-viewer-launch" rel="bookmark" title="PageRank Viewer Launch">PageRank Viewer Launch </a> <small>Back in 2007, we were developing code for our domain...</small></li>
+<li><a href="https://hm2k.org/posts/hm2ks-code-repository" rel="bookmark" title="HM2K&#8217;s code repository">HM2K&#8217;s code repository </a> <small>HM2K&#8217;s code repository is now open for business! This repository...</small></li>
+</ol></p>
+</div>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://hm2k.org/posts/get_favicon-php-function/feed</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+		<post-id xmlns="com-wordpress:feed-additions:1">593</post-id>	</item>
+	</channel>
+</rss>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+
+Served from: hm2k.org @ 2020-09-03 16:30:45 by W3 Total Cache
+-->

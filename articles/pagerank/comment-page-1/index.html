@@ -1,0 +1,1467 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 
+	<title>HM2K » Google PageRank Script</title>
+
+	<link rel="stylesheet" href="https://hm2k.org/wp-content/themes/hm2k/style.css" type="text/css" media="screen,print">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://hm2k.org/feed">
+	<link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://hm2k.org/feed/atom">
+	
+	
+	<style type="text/css" media="screen">
+			</style>
+	
+		<link rel="archives" title="May 2012" href="https://hm2k.org/posts/2012/05">
+	<link rel="archives" title="March 2012" href="https://hm2k.org/posts/2012/03">
+	<link rel="archives" title="November 2011" href="https://hm2k.org/posts/2011/11">
+	<link rel="archives" title="October 2011" href="https://hm2k.org/posts/2011/10">
+	<link rel="archives" title="September 2011" href="https://hm2k.org/posts/2011/09">
+	<link rel="archives" title="August 2011" href="https://hm2k.org/posts/2011/08">
+	<link rel="archives" title="July 2011" href="https://hm2k.org/posts/2011/07">
+	<link rel="archives" title="June 2011" href="https://hm2k.org/posts/2011/06">
+	<link rel="archives" title="May 2011" href="https://hm2k.org/posts/2011/05">
+	<link rel="archives" title="April 2011" href="https://hm2k.org/posts/2011/04">
+	<link rel="archives" title="March 2011" href="https://hm2k.org/posts/2011/03">
+	<link rel="archives" title="February 2011" href="https://hm2k.org/posts/2011/02">
+	<link rel="archives" title="December 2010" href="https://hm2k.org/posts/2010/12">
+	<link rel="archives" title="November 2010" href="https://hm2k.org/posts/2010/11">
+	<link rel="archives" title="June 2010" href="https://hm2k.org/posts/2010/06">
+	<link rel="archives" title="May 2010" href="https://hm2k.org/posts/2010/05">
+	<link rel="archives" title="April 2010" href="https://hm2k.org/posts/2010/04">
+	<link rel="archives" title="February 2010" href="https://hm2k.org/posts/2010/02">
+	<link rel="archives" title="December 2009" href="https://hm2k.org/posts/2009/12">
+	<link rel="archives" title="November 2009" href="https://hm2k.org/posts/2009/11">
+	<link rel="archives" title="October 2009" href="https://hm2k.org/posts/2009/10">
+	<link rel="archives" title="September 2009" href="https://hm2k.org/posts/2009/09">
+	<link rel="archives" title="August 2009" href="https://hm2k.org/posts/2009/08">
+	<link rel="archives" title="July 2009" href="https://hm2k.org/posts/2009/07">
+	<link rel="archives" title="June 2009" href="https://hm2k.org/posts/2009/06">
+	<link rel="archives" title="April 2009" href="https://hm2k.org/posts/2009/04">
+	<link rel="archives" title="February 2009" href="https://hm2k.org/posts/2009/02">
+	<link rel="archives" title="January 2009" href="https://hm2k.org/posts/2009/01">
+	<link rel="archives" title="December 2008" href="https://hm2k.org/posts/2008/12">
+	<link rel="archives" title="November 2008" href="https://hm2k.org/posts/2008/11">
+	<link rel="archives" title="September 2008" href="https://hm2k.org/posts/2008/09">
+	<link rel="archives" title="July 2008" href="https://hm2k.org/posts/2008/07">
+	<link rel="archives" title="June 2008" href="https://hm2k.org/posts/2008/06">
+	<link rel="archives" title="May 2008" href="https://hm2k.org/posts/2008/05">
+	<link rel="archives" title="April 2008" href="https://hm2k.org/posts/2008/04">
+	<link rel="archives" title="March 2008" href="https://hm2k.org/posts/2008/03">
+	<link rel="archives" title="February 2008" href="https://hm2k.org/posts/2008/02">
+	<link rel="archives" title="January 2008" href="https://hm2k.org/posts/2008/01">
+	<link rel="archives" title="December 2007" href="https://hm2k.org/posts/2007/12">
+	<link rel="archives" title="November 2007" href="https://hm2k.org/posts/2007/11">
+	<link rel="archives" title="October 2007" href="https://hm2k.org/posts/2007/10">
+	<link rel="archives" title="August 2007" href="https://hm2k.org/posts/2007/08">
+	<link rel="archives" title="July 2007" href="https://hm2k.org/posts/2007/07">
+	<link rel="archives" title="June 2007" href="https://hm2k.org/posts/2007/06">
+	<link rel="archives" title="May 2007" href="https://hm2k.org/posts/2007/05">
+	<link rel="archives" title="April 2007" href="https://hm2k.org/posts/2007/04">
+	<link rel="archives" title="March 2007" href="https://hm2k.org/posts/2007/03">
+	<link rel="archives" title="February 2007" href="https://hm2k.org/posts/2007/02">
+	<link rel="archives" title="January 2007" href="https://hm2k.org/posts/2007/01">
+	<link rel="dns-prefetch" href="//platform-api.sharethis.com">
+
+<link rel="dns-prefetch" href="//c0.wp.com">
+<link rel="alternate" type="application/rss+xml" title="HM2K » Google PageRank Script Comments Feed" href="https://hm2k.org/articles/pagerank/feed">
+<link rel="stylesheet" id="yarppWidgetCss-css" href="https://hm2k.org/wp-content/plugins/yet-another-related-posts-plugin/style/widget.css?ver=5.5.1" type="text/css" media="all">
+<link rel="stylesheet" id="wp-block-library-css" href="https://c0.wp.com/c/5.5.1/wp-includes/css/dist/block-library/style.min.css" type="text/css" media="all">
+<style id="wp-block-library-inline-css" type="text/css">
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel="stylesheet" id="social_comments-css" href="https://hm2k.org/wp-content/plugins/social/assets/comments.css?ver=2.11" type="text/css" media="screen">
+<link rel="stylesheet" id="jetpack_css-css" href="https://c0.wp.com/p/jetpack/8.9/css/jetpack.css" type="text/css" media="all">
+<script type="text/javascript" src="https://c0.wp.com/c/5.5.1/wp-includes/js/jquery/jquery.js" id="jquery-core-js"></script>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#product=ga&amp;property=5f4131776f37880012707ba8" id="googleanalytics-platform-sharethis-js"></script>
+<link rel="alternate" type="application/json" href="https://hm2k.org/wp-json/wp/v2/pages/74">
+
+<link rel="canonical" href="https://hm2k.org/articles/pagerank/comment-page-1#comments">
+
+<link rel="alternate" type="application/json+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Farticles%2Fpagerank">
+<link rel="alternate" type="text/xml+oembed" href="https://hm2k.org/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fhm2k.org%2Farticles%2Fpagerank&amp;format=xml">
+<style type="text/css">img#wpstats{display:none}</style></head>
+
+<body>
+
+<div id="wrapper">
+
+<div id="header">
+	<div style="float:right; margin-right: 5px;">
+	<script type="text/javascript"><!--
+google_ad_client = "pub-8789111894509366";
+/* 468x60, created 4/17/08 */
+google_ad_slot = "9389236395";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+	<p><small><b>Have I helped you?</b> Please consider my <a href="http://tinyurl.com/hm2kwishlist">wishlist</a> or <a href="http://tinyurl.com/hm2kpaypal">donating</a>. Thanks!</small></p>
+<p>Don't forget to <a href="http://twitter.com/hm2k">follow me on twitter</a>.</p>
+	</div>
+	<h1><a href="https://hm2k.org">HM2K</a></h1>
+</div>
+
+
+<div id="content">
+
+
+	<h2 id="post-74">Google PageRank Script</h2>
+			
+	<p>Welcome to the home of the Google PageRank script.</p>
+<p>You’ll find all the information and code you need here:</p>
+<ul>
+<li><a href="http://code.google.com/p/hm2k/wiki/pagerank">History of the PageRank Script by HM2K</a></li>
+<li>Find the <a href="https://github.com/phurix/pagerank/">PageRank Scripts Source Code on GitHub</a> in various languages</li>
+<li>The <a href="http://labs.phurix.net/posts/pagerank-viewer-launch">PageRank Viewer</a> website</li>
+<li>Get the <a href="http://pear.php.net/package/Services_PageRank">Official PEAR Services PageRank package</a></li>
+</ul>
+<p>Please feel free to leave your comments about PageRank below.</p>
+		
+		
+	<div id="social">
+		<div class="social-post">
+		<div id="loading" style="display:none">
+			<input type="hidden" id="reload_url" value="https://hm2k.org/index.php?social_controller=auth&amp;social_action=reload_form&amp;redirect_to=https://hm2k.org/articles/pagerank&amp;post_id=74">
+			Logging In...		</div>
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Profile <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://hm2k.org/articles/pagerank/comment-page-1#respond" style="display:none;">cancel</a></small></h3><form action="https://hm2k.org/wp-comments-post.php" method="post" id="commentform" class="comment-form"><div class="social-sign-in-links social-clearfix">
+		<a class="social-twitter social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=twitter&amp;post_id=74" id="twitter_signin" target="_blank">Sign in with Twitter</a>
+		<a class="social-facebook social-imr social-login comments" href="https://hm2k.org/index.php?social_controller=auth&amp;social_action=authorize&amp;key=facebook&amp;post_id=74" id="facebook_signin" target="_blank">Sign in with Facebook</a>
+	</div>
+<div class="social-divider">
+	<span>or</span>
+</div>
+<p class="social-input-row social-input-row-comment"><label for="comment" class="social-label">Comment</label><textarea id="comment" name="comment" class="social-input" required="required"></textarea></p><p class="social-input-row social-input-row-author"><label for="author" class="social-label">Name</label><input id="author" name="author" class="social-input" required="required" type="text" value=""></p>
+<p class="social-input-row social-input-row-email"><label for="email" class="social-label">Email</label><input id="email" name="email" class="social-input" required="required" type="text" value=""><small class="social-help">Not published</small></p>
+<p class="social-input-row social-input-row-url"><label for="url" class="social-label">Website</label><input id="url" name="url" class="social-input" type="text" value=""></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post It"> <input type="hidden" name="comment_post_ID" value="74" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+<input type="hidden" id="use_twitter_reply" name="use_twitter_reply" value="0"><input type="hidden" id="in_reply_to_status_id" name="in_reply_to_status_id" value=""></p><div id="commentform-extras"><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="1b7ebf3ab7"></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="63"></p></div></form>	</div>
+		</div>
+	<div id="social-tabs-comments">
+				<ul class="social-nav social-clearfix">
+			<li class="social-all social-tab-main social-current-tab"><a href="#" rel="social-all"><span>131 Replies</span></a></li>
+			<li class="social-wordpress"><a href="#" rel="wordpress"><span>0 Comments</span></a></li>
+			<li class="social-twitter"><a href="#" rel="social-twitter"><span>0 Tweets</span></a></li>
+			<li class="social-facebook"><a href="#" rel="social-facebook"><span>0 Facebook</span></a></li>
+			<li class="social-pingback"><a href="#" rel="social-pingback"><span>0 Pingbacks</span></a></li>
+		</ul>
+
+		
+		<div id="social-comments-tab-all" class="social-tabs-panel social-tabs-first-panel">
+			<div id="comments" class="social-comments">
+				<div class="social-last-reply-when">Last reply was December 27, 2007</div><div class="cf-clearfix"></div>				<ol class="social-commentlist">
+				<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::start_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::start_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>18</b><br>
+<br>
+<b>Warning</b>:  Declaration of Social_Walker_Comment::end_lvl(&amp;$output, $depth, $args) should be compatible with Walker_Comment::end_lvl(&amp;$output, $depth = 0, $args = Array) in <b>/Users/wade/Sites/hm2k.org/wp-content/plugins/social/lib/social/walker/comment.php</b> on line <b>42</b><br>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-7">
+<div class="social-comment-inner social-clearfix" id="comment-7">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/374a533c00246f5cde207f4c46d3b0f2?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/374a533c00246f5cde207f4c46d3b0f2?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.serialblogger.com.ar" rel="external nofollow ugc" class="url">Diego</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-7" class="social-posted-when" target="_blank">February 22, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p><strong>You are a genius!!!</strong></p>
+<p>It finally worked on my weird server!! 😀 Thanks man!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-10">
+<div class="social-comment-inner social-clearfix" id="comment-10">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/26193f5ec2ee9b988923b7474ba5b4f6?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/26193f5ec2ee9b988923b7474ba5b4f6?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">stars</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-10" class="social-posted-when" target="_blank">February 22, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>It does not work on  my server. I downloaded the file pagerank.phps then change to pagerank.php and upload to my server and run it.But it display the blank page.Why does it happen like that?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-11">
+<div class="social-comment-inner social-clearfix" id="comment-11">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">admin</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-11" class="social-posted-when" target="_blank">February 22, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>stars, i’d check your apache access/error logs, also make sure you have PHP error reporting turned on.</p>
+<p>contact me direct for further help.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-40">
+<div class="social-comment-inner social-clearfix" id="comment-40">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/fba3bf4820ef7036d5a7194cb1632e4e?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/fba3bf4820ef7036d5a7194cb1632e4e?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Mark</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-40" class="social-posted-when" target="_blank">March 18, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thanks a lot! It’s work.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-215">
+<div class="social-comment-inner social-clearfix" id="comment-215">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/7756be21211780780fccb72cf98c9d36?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/7756be21211780780fccb72cf98c9d36?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">anon</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-215" class="social-posted-when" target="_blank">March 31, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>If you find this script does not work then this may be due to safe mode being enabled</p>
+<p>The script uses fsockopen();</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-485">
+<div class="social-comment-inner social-clearfix" id="comment-485">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/4dafbc8df2e7cceb74d4c01e397e9bf8?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/4dafbc8df2e7cceb74d4c01e397e9bf8?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.pcnuke.com" rel="external nofollow ugc" class="url">hammer</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-485" class="social-posted-when" target="_blank">April 4, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>#<br>
+stars said,</p>
+<p>February 22, 2007 @ 11:35 pm</p>
+<p>It does not work on my server. I downloaded the file pagerank.phps then change to pagerank.php and upload to my server and run it.But it display the blank page.Why does it happen like that?</p>
+<p>—</p>
+<p>You need to make a change at the bottom of the page in the last 2 lines<br>
+ take away the // symbols in front of the line that has them at the beginning, save it, then retest it</p>
+<p>hammer</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-791">
+<div class="social-comment-inner social-clearfix" id="comment-791">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/164ed6f04c33ef34d7b643a36de1341e?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/164ed6f04c33ef34d7b643a36de1341e?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.rodp.net/hosted/" rel="external nofollow ugc" class="url">Nerve</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-791" class="social-posted-when" target="_blank">April 10, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>1) The PageRank is displayed as a bar.If you click that bar…the browser will try to load the following page: <a href="http://www.youserver.com/www.example.com" rel="nofollow ugc">http://www.youserver.com/www.example.com</a> where the <a href="http://www.yourserver.com" rel="nofollow ugc">http://www.yourserver.com</a> is your host server for the script…and the <a href="http://www.example.com" rel="nofollow ugc">http://www.example.com</a> is the page you requested for pagerank test. So the link will be <a href="http://www.yourserver.com/www.example.com" rel="nofollow ugc">http://www.yourserver.com/www.example.com</a> if you click that bar.How can we change that into <a href="http://www.yourserver.com" rel="nofollow ugc">http://www.yourserver.com</a> only ?</p>
+<p>2) admin: can you modify that script to show the number too ? as a result.. to appear that PageRank and the number next to it.<br>
+    or tell me what to modify in it.I am a PHP n00b 😛</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-919">
+<div class="social-comment-inner social-clearfix" id="comment-919">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/eb4cf5cc9e7652d5171b4400f112d721?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/eb4cf5cc9e7652d5171b4400f112d721?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.rodp.net/hosted/" rel="external nofollow ugc" class="url">upper</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-919" class="social-posted-when" target="_blank">April 12, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>we modified that script a little bit and here is a new version of it : <a href="http://www.rodp.net/hosted/" rel="nofollow ugc">http://www.rodp.net/hosted/</a></p>
+<p>I don’t know if this will be the final version of it,but further updates will be available on our test site 🙂</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-922">
+<div class="social-comment-inner social-clearfix" id="comment-922">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://ww.hm2k.com/" rel="external nofollow ugc" class="url">hm2k</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-922" class="social-posted-when" target="_blank">April 12, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>If you insist on using my code, please at least give me credit.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-976">
+<div class="social-comment-inner social-clearfix" id="comment-976">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/eb4cf5cc9e7652d5171b4400f112d721?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/eb4cf5cc9e7652d5171b4400f112d721?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">upper</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-976" class="social-posted-when" target="_blank">April 13, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>lol,I use your script just for fun.I am not earning money from it.<br>
+Also, as you can see on my site,I do NOT offer your script to others,I just show you how it can be customized.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-2011">
+<div class="social-comment-inner social-clearfix" id="comment-2011">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/e7f9f4ad2b884484c96f649b7f4eed62?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/e7f9f4ad2b884484c96f649b7f4eed62?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Max</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-2011" class="social-posted-when" target="_blank">April 26, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi, i tested the scripts with your code for this URL and did not work:<br>
+<a href="http://www.digitalwall.com/scripts/search.asp?txtKeyword=%BA%F4%B8%F4%A6%E6%BEP" rel="nofollow ugc">http://www.digitalwall.com/scripts/search.asp?txtKeyword=%BA%F4%B8%F4%A6%E6%BEP</a></p>
+<p>Yes. It’s a Chinese language webpage and the URL was encoded to take a Chinese character. This page has page rank value 2 in Google tool bar, but it failed to pass your code.</p>
+<p>It was the same when I tested on pagerank.gamesaga.net. Guess the algorithm cannot compute the correct PR value for this URL.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-2111">
+<div class="social-comment-inner social-clearfix" id="comment-2111">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2e4d992f9ae3160fa5229ceddd6a8bc9?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2e4d992f9ae3160fa5229ceddd6a8bc9?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.adaxas.net" rel="external nofollow ugc" class="url">helmut</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-2111" class="social-posted-when" target="_blank">April 29, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>ingenious it’s really helpful.<br>
+Thank you</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-2147">
+<div class="social-comment-inner social-clearfix" id="comment-2147">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/460b14a0abf87964ed17fec502caf7dd?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/460b14a0abf87964ed17fec502caf7dd?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.bazarek24.pl" rel="external nofollow ugc" class="url">Aukcje</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-2147" class="social-posted-when" target="_blank">April 30, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thanks a lot! It’s work.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="trackback odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-2242">
+<div class="social-comment-inner social-clearfix" id="comment-2242">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<cite class="social-fn fn"><a href="http://www.dt.ee/blog/internetiturundus/2007/05/php-skript-google-pagerank-lugemiseks/" rel="external nofollow ugc" class="url">DT blogi</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-2242" class="social-posted-when" target="_blank">May 3, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p><strong>PHP-skript Google PageRank’ide lugemiseks</strong></p>
+<p>Google PageRank (PR) on suurus, mis näitab lehekülje tähtsust Google’i silmis kümne palli skaalal. Et DT lehekülgedel ka sellest aspektist silma peal hoida ning optimeerimise tulemusi jälgida, siis kirjutasin ühe lihtsa PHP-skripti, mis sitemap…</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-2270">
+<div class="social-comment-inner social-clearfix" id="comment-2270">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/e90214a137b8206a70709b393e535cad?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/e90214a137b8206a70709b393e535cad?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://reg.kost.ru/" rel="external nofollow ugc" class="url">kost</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-2270" class="social-posted-when" target="_blank">May 4, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Good script. Thank you.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-2340">
+<div class="social-comment-inner social-clearfix" id="comment-2340">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/02f9598785af549c97a6cb47dab51bc9?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/02f9598785af549c97a6cb47dab51bc9?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.eloansguide.com" rel="external nofollow ugc" class="url">seoguy</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-2340" class="social-posted-when" target="_blank">May 6, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thanks buddy… After a long research I found this page… before that I tried googlecommunity.com script ,<a href="http://www.devpapers.com/article/326" rel="nofollow ugc">http://www.devpapers.com/article/326</a> .. none of these are working .. All are giving the same old 403 error…<br>
+Thanks again.. Is it ok to use <a href="http://www.google.com/images/pos.gif" rel="nofollow ugc">http://www.google.com/images/pos.gif</a> image  diractly from google??…</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-3441">
+<div class="social-comment-inner social-clearfix" id="comment-3441">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/3eb9e871314f71d088b12538af2f40e0?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/3eb9e871314f71d088b12538af2f40e0?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.fu20.com" rel="external nofollow ugc" class="url">www.fu20.com</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-3441" class="social-posted-when" target="_blank">May 25, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>i like php code for show page rank<br>
+please help me<br>
+have fun</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-3840">
+<div class="social-comment-inner social-clearfix" id="comment-3840">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/097b5544abf00326ecabcfc19027371b?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/097b5544abf00326ecabcfc19027371b?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.liveconnector.com" rel="external nofollow ugc" class="url">Fariz Tadjoedin</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-3840" class="social-posted-when" target="_blank">June 8, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Yes, it’s work, i love you 🙂</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-3849">
+<div class="social-comment-inner social-clearfix" id="comment-3849">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/eb4cf5cc9e7652d5171b4400f112d721?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/eb4cf5cc9e7652d5171b4400f112d721?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://directory.ipgp.net/" rel="external nofollow ugc" class="url">General Web Directory</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-3849" class="social-posted-when" target="_blank">June 8, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>You can take the PageRank tool from a web directory script and then just modify it a little ! 🙂</p>
+<p><a href="http://directory.ipgp.net/" rel="nofollow ugc">http://directory.ipgp.net/</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-4099">
+<div class="social-comment-inner social-clearfix" id="comment-4099">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/27073d46a82fb2c9ba234433a7a01981?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/27073d46a82fb2c9ba234433a7a01981?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.dezigno.com.au" rel="external nofollow ugc" class="url">Faraz</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-4099" class="social-posted-when" target="_blank">June 15, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi, I just uploaded the file on my server <a href="http://www.dezigno.com.au" rel="nofollow ugc">http://www.dezigno.com.au</a>. it is not working. please have a look <a href="http://www.dezigno.com.au/pagerank.php" rel="nofollow ugc">http://www.dezigno.com.au/pagerank.php</a>. another thing, please tell me which ares in php to customized? i have knowledge in html and css, not much with php. cheers faraz</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-5379">
+<div class="social-comment-inner social-clearfix" id="comment-5379">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/30033a5526b89d778ec01c2bb03391de?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/30033a5526b89d778ec01c2bb03391de?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.googledirect.com/" rel="external nofollow ugc" class="url">Googledirect meta search engine</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-5379" class="social-posted-when" target="_blank">July 3, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi, want to confirm it really work on my site perfectly. I fully agree with your decision about differ chechsum by server. Thank you for your great wotk!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-6808">
+<div class="social-comment-inner social-clearfix" id="comment-6808">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/8575a68e6f00c9dcb7899dedb701264a?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/8575a68e6f00c9dcb7899dedb701264a?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Tobi</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-6808" class="social-posted-when" target="_blank">July 12, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thank you!!!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-6905">
+<div class="social-comment-inner social-clearfix" id="comment-6905">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c659399ef74f0c3b18c40cb04bd6c596?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c659399ef74f0c3b18c40cb04bd6c596?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.viciao2k3.net" rel="external nofollow ugc" class="url">gafeman</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-6905" class="social-posted-when" target="_blank">July 13, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>¡¡ you made a really good job !!</p>
+<p>i include it in my service, check it out: <a href="http://www.viciao2k3.net/services/xinu?lang=uk" rel="nofollow ugc">http://www.viciao2k3.net/services/xinu?lang=uk</a></p>
+<p>Grettings from Spain</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-8433">
+<div class="social-comment-inner social-clearfix" id="comment-8433">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/ac3af02bf2cd3a404bdc3ebce5400010?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/ac3af02bf2cd3a404bdc3ebce5400010?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.nasruldev.net" rel="external nofollow ugc" class="url">nasdev</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-8433" class="social-posted-when" target="_blank">July 29, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>your script is really work, nice<br>
+other pagerank script is junk..i have tried and none of them works</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-8570">
+<div class="social-comment-inner social-clearfix" id="comment-8570">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/f6d5cae521ffc312f8903be00b3261e4?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/f6d5cae521ffc312f8903be00b3261e4?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Sir</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-8570" class="social-posted-when" target="_blank">July 31, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>It works!!! Big thanks!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-10919">
+<div class="social-comment-inner social-clearfix" id="comment-10919">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/be298014874495fb5cb4287647c01b6c?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/be298014874495fb5cb4287647c01b6c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">bulernt</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-10919" class="social-posted-when" target="_blank">August 13, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>i do have a question about multiple data centers, has anyone tried  to get pr from different  data centers by this script?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-11880">
+<div class="social-comment-inner social-clearfix" id="comment-11880">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/29bda2afb1034e199b4c818da4e39877?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/29bda2afb1034e199b4c818da4e39877?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Des-X</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-11880" class="social-posted-when" target="_blank">August 22, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>THX. It works on 64bit Linux and Mac</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-13078">
+<div class="social-comment-inner social-clearfix" id="comment-13078">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/1bd4c3418dfbc67f446c1488f0e23451?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/1bd4c3418dfbc67f446c1488f0e23451?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.rishirajsingh.info" rel="external nofollow ugc" class="url">Rishiraj Singh</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-13078" class="social-posted-when" target="_blank">August 30, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>To NERVE,<br>
+admin: can you modify that script to show the number too ? as a result.. to appear that PageRank and the number next to it.<br>
+or tell me what to modify in it.I am a PHP n00b</p>
+<p>ju<br>
+	return $out.$out2;st look for the line<br>
+//	$out=’<a href="https://hm2k.org/articles/pagerank/'.%24url.'" title="'.$pagerank.'" rel="nofollow">‘.$html.’</a>‘;  from bottom 7</p>
+<p>after that delete return $out and add following two lines and it will display number too. variable $pr hold pagerank value.</p>
+<p>	$out2=”Your PageRank is “.$pr.”/10”;</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-15269">
+<div class="social-comment-inner social-clearfix" id="comment-15269">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/ddd8f26256c62363917f981afe20a676?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/ddd8f26256c62363917f981afe20a676?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://-" rel="external nofollow ugc" class="url">Samsher</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-15269" class="social-posted-when" target="_blank">September 17, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>What is the final working page rank script? I tried on my server but noticed nothing but a blank page.. pls help!</p>
+<p>Thanks!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-16188">
+<div class="social-comment-inner social-clearfix" id="comment-16188">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/4a3a9cf071a86be503c107adbaa2df92?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/4a3a9cf071a86be503c107adbaa2df92?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">figaro</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-16188" class="social-posted-when" target="_blank">September 25, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thank you for sharing. God bless and Godspeed.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-16426">
+<div class="social-comment-inner social-clearfix" id="comment-16426">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/f4bd97ab29f36868fa0b99f119459d4a?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/f4bd97ab29f36868fa0b99f119459d4a?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">vic</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-16426" class="social-posted-when" target="_blank">September 27, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>great job, thank you very much</p>
+<p>for all those that couldn’t make it work</p>
+<p>DELETE THE // ON LINE 135 (the one before the last one)</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-17917">
+<div class="social-comment-inner social-clearfix" id="comment-17917">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/a174ee662898d09c214838b5d59a5517?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/a174ee662898d09c214838b5d59a5517?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.julian.se" rel="external nofollow ugc" class="url">Julian</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-17917" class="social-posted-when" target="_blank">October 10, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thanks!</p>
+<p>Looked around for this Google Pagerank script for quite a while.<br>
+Finally found someone who did a good work.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-19794">
+<div class="social-comment-inner social-clearfix" id="comment-19794">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/5cfad968e95956dddabd0e91acc065fb?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/5cfad968e95956dddabd0e91acc065fb?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://fonebuzz.net" rel="external nofollow ugc" class="url">Raja Amer Khan</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-19794" class="social-posted-when" target="_blank">October 31, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Many script i tried but didn’t work on my server. But you rock!!!</p>
+<p>Keep it up!! great job!!!</p>
+<p>many people sell scripts for money but your giving it for free!! thumbs up!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-19942">
+<div class="social-comment-inner social-clearfix" id="comment-19942">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/08fb67b51f6b4ee0291a9e4fa14da8e8?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/08fb67b51f6b4ee0291a9e4fa14da8e8?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.mydeskblog.com" rel="external nofollow ugc" class="url">MyDeskBlog.com</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-19942" class="social-posted-when" target="_blank">November 1, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Aww! I’ve been scouring the internet for scripts just like this. I would like to run a “php page rank checker script” WITHIN a wordpress post. To run php codes in a WordPress post, I used <a href="http://www.nosq.com/blog/runphp/" rel="nofollow ugc">http://www.nosq.com/blog/runphp/</a> plugin.</p>
+<p>I guess this HM2K’s script and WordPress’ runPHP script doesn’t play well together. I get an error like this:</p>
+<p>—</p>
+<p>Warning: fsockopen() [function.fsockopen]: php_network_getaddresses: getaddrinfo failed: Name or service not known in /home/mydeskbl/public_html/wp-content/plugins/runPHP/runPHP.php(410) : eval()’d code on line 78</p>
+<p>Warning: fsockopen() [function.fsockopen]: unable to connect to :80 in /home/mydeskbl/public_html/wp-content/plugins/runPHP/runPHP.php(410) : eval()’d code on line 78</p>
+<p>—</p>
+<p>Pretty sure the fault lies in runPHP plugin. Nothing I can do about it.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-21170">
+<div class="social-comment-inner social-clearfix" id="comment-21170">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://1.gravatar.com/avatar/d10ca8d11301c2f4993ac2279ce4b930?s=40&amp;d=mm&amp;r=g" srcset="https://1.gravatar.com/avatar/d10ca8d11301c2f4993ac2279ce4b930?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.piloun.com" rel="external nofollow ugc" class="url">Ales</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-21170" class="social-posted-when" target="_blank">November 6, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thanks for the sript</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-21805">
+<div class="social-comment-inner social-clearfix" id="comment-21805">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2918afa31f319a5f2fe7c17db56b874a?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2918afa31f319a5f2fe7c17db56b874a?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">doc</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-21805" class="social-posted-when" target="_blank">November 8, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>“A user named “AboutSledge” offered a working solution, which was the Pagerank Checksum Caculator Source Code for Python, for C and for PHP.”</p>
+<p>site is down. anyone has the c code?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-22999">
+<div class="social-comment-inner social-clearfix" id="comment-22999">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/51be32da21c1cacf45fd1c299269dbcd?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/51be32da21c1cacf45fd1c299269dbcd?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">siN</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-22999" class="social-posted-when" target="_blank">November 13, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>i’d like to have C code too<br>
+found some <a href="http://www.upsdn.net/html/2005-09/553.html" rel="nofollow ugc">http://www.upsdn.net/html/2005-09/553.html</a>    but can’t 100% sure it works</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-26126">
+<div class="social-comment-inner social-clearfix" id="comment-26126">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://ww.fonebuzz.net" rel="external nofollow ugc" class="url">Raja Amer Khan</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-26126" class="social-posted-when" target="_blank">November 26, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hello guys,</p>
+<p>This script is great and working. I need some help, i’m working on a project which has website resources. I created sorts for all types, and for page rank i used website url query inside pagerank function, it works fine but the problem is we cannot sort by page rank. So, is there any solution to store pagerank values inside mysql so it would be able to sort?</p>
+<p>help would be appreciated..</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-26898">
+<div class="social-comment-inner social-clearfix" id="comment-26898">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/c0621be6b2884b93abb90bbe7a9ef11c?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://ww.hm2k.com/" rel="external nofollow ugc" class="url">hm2k</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-26898" class="social-posted-when" target="_blank">November 30, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Try here:</p>
+<p><a href="http://web.archive.org/web/20070718095023/http://pagerank.gamesaga.net/" rel="nofollow ugc">http://web.archive.org/web/20070718095023/http://pagerank.gamesaga.net/</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-26960">
+<div class="social-comment-inner social-clearfix" id="comment-26960">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://ww.fonebuzz.net" rel="external nofollow ugc" class="url">Raja Amer Khan</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-26960" class="social-posted-when" target="_blank">November 30, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>thank you for url but i’m a bit confused what to do with it. Newbie in mysql.. could you please guide me which one i download and how i save pr values into mysql?</p>
+<p>thank you!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-27965">
+<div class="social-comment-inner social-clearfix" id="comment-27965">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/029409a602650c76ad4e6965a127a269?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/029409a602650c76ad4e6965a127a269?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Thomas George</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-27965" class="social-posted-when" target="_blank">December 7, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi Hm2k,</p>
+<p>Thanks for this script.</p>
+<p>It will help me to keep tack of PR of my sites.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-28887">
+<div class="social-comment-inner social-clearfix" id="comment-28887">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2ab1db7580b3ac52f354d26a8304034e?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2ab1db7580b3ac52f354d26a8304034e?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Chris</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-28887" class="social-posted-when" target="_blank">December 12, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thanks for the script!  It works great on our server, but I do have one hang up.  I’d like to configure the script to automatically display the pagerank of a site I hard code into it instead of inputting a site by hand in the text box.  I’ve been experimenting with no luck, has anyone done this?</p>
+<p>Please let me know if you have any suggestions.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-28980">
+<div class="social-comment-inner social-clearfix" id="comment-28980">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/fdcba127988985f60528ae56e9c77055?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/fdcba127988985f60528ae56e9c77055?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Michael</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-28980" class="social-posted-when" target="_blank">December 13, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>God dammit, you are my Hero !</p>
+<p>Since my Hoster has changed to Debian (gaijins) old script didnt work anymore.<br>
+Took me 2 Days to find this here and WEEEEEEE …. works like a charm !</p>
+<p>Thanks alot  *excited*</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-29046">
+<div class="social-comment-inner social-clearfix" id="comment-29046">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/2eeaac010c6d3689548665c954706d2d?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/2eeaac010c6d3689548665c954706d2d?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Monarchy</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-29046" class="social-posted-when" target="_blank">December 13, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Big thanks for this script!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-29069">
+<div class="social-comment-inner social-clearfix" id="comment-29069">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.fonebuzz.net" rel="external nofollow ugc" class="url">Raja Amer Khan</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-29069" class="social-posted-when" target="_blank">December 13, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>no reply?</p>
+<p>can’t i save page ranks in mysql?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-29106">
+<div class="social-comment-inner social-clearfix" id="comment-29106">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/fdcba127988985f60528ae56e9c77055?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/fdcba127988985f60528ae56e9c77055?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Michael</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-29106" class="social-posted-when" target="_blank">December 14, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>@Raja Amer Khan:<br>
+Usually you call the funktion pagerank( ), provide an url and receive the pagerank in $pr<br>
+So, after receiving $pr Value, just store it into your database.</p>
+<p>Only thing you should consider is, that you should think about a function for updating those values, too<br>
+in case, google does its dance and things will change.</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-29550">
+<div class="social-comment-inner social-clearfix" id="comment-29550">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.fonebuzz.net" rel="external nofollow ugc" class="url">Raja Amer Khan</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-29550" class="social-posted-when" target="_blank">December 16, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>well i’m trying something like this:</p>
+<p>MYSQL:<br>
+Website | Title</p>
+<p>i use pagerank(“$row[‘website’]”)</p>
+<p>this works perfect but this cannot be sorted.</p>
+<p>I tried to add php command in mysql but it didnt work, could you please explain what your saying?</p>
+<p>thank yoU!!</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-29552">
+<div class="social-comment-inner social-clearfix" id="comment-29552">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/fdcba127988985f60528ae56e9c77055?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/fdcba127988985f60528ae56e9c77055?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn">Michael</cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-29552" class="social-posted-when" target="_blank">December 16, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Set up field for pagerank in your database</p>
+<p>Then basically (this aint a code to copy paste… just a basic idea:</p>
+<p>while (mysql_query(“select bla from bla ….. “)) {<br>
+if (!$row[`pagerank`]){ // check if PR is already set<br>
+mysql_query (“alter table xxxxxxx ……. value”.pagerank($row[`website`]).”)”; // depends on your code-style how you call the function but i am sure you can fiddle it to work<br>
+}<br>
+}</p>
+<p>Use something like this to store pagerank for your sites.</p>
+<p>Then you should be able to call these site in Order of their Pageranks<br>
+by useing order by</p>
+<p>Other Way would be, that you use php sort : <a href="http://de3.php.net/manual/en/function.sort.php" rel="nofollow ugc">http://de3.php.net/manual/en/function.sort.php</a></p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment even thread-even depth-1 social-comment social-clearfix social-wordpress" id="li-comment-30083">
+<div class="social-comment-inner social-clearfix" id="comment-30083">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=40&amp;d=mm&amp;r=g" srcset="https://0.gravatar.com/avatar/0feed9b72b86b2285c2e22dcf65cd293?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.fonebuzz.net" rel="external nofollow ugc" class="url">Raja Amer Khan</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-30083" class="social-posted-when" target="_blank">December 19, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Thank you so much for your suggestions.</p>
+<p>I will surely try that code. Could you please add my email in your msn or give me your email?</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+<li class="comment odd alt thread-odd thread-alt depth-1 social-comment social-clearfix social-wordpress" id="li-comment-31630">
+<div class="social-comment-inner social-clearfix" id="comment-31630">
+	<div class="social-comment-header">
+		<div class="social-comment-author vcard">
+			<img alt="" src="https://2.gravatar.com/avatar/86205bb4045ee9eae4fa3ce5aacdeae8?s=40&amp;d=mm&amp;r=g" srcset="https://2.gravatar.com/avatar/86205bb4045ee9eae4fa3ce5aacdeae8?s=80&amp;d=mm&amp;r=g 2x" class="avatar avatar-40 photo" height="40" width="40" loading="lazy"><cite class="social-fn fn"><a href="http://www.online-program.net" rel="external nofollow ugc" class="url">Agus Halim</a></cite>		</div>
+		
+		<div class="social-comment-meta social-comment-meta-wordpress">
+			<span class="social-posted-from">
+								<span>View</span>
+							</span>
+			<a href="https://hm2k.org/articles/pagerank/comment-page-1#comment-31630" class="social-posted-when" target="_blank">December 27, 2007</a>
+		</div>
+	</div>
+	<div class="social-comment-body">
+				<p>Hi, i’ve try this code at my hosting server (godaddy shared hosting)<br>
+i try the url google.com but the rank is still at N/A or 0 state<br>
+<a href="http://www.online-program.net/tools/pr/pagerank.php?url=www.google.com" rel="nofollow ugc">http://www.online-program.net/tools/pr/pagerank.php?url=www.google.com</a></p>
+<p>i have already tried many google pagerank code for this weeks and still no luck 🙁</p>
+<p>last time i was assume maybe my server is running on linux 32 bits<br>
+i’ve also try Get google page rank (32bit and 64 bit systems)<br>
+<a href="http://www.webmasterworld.com/php/3318556.htm" rel="nofollow ugc">http://www.webmasterworld.com/php/3318556.htm</a><br>
+but this method also fail. please help…<br>
+thank you very much</p>
+	</div>
+			<div class="social-actions entry-meta">
+			</div>
+		
+</div>
+</li>
+				</ol>
+								<nav id="comment-nav-below">
+					<h1 class="assistive-text">Comment navigation</h1>
+					<div class="nav-previous"></div>
+					<div class="nav-next"><a href="https://hm2k.org/articles/pagerank/comment-page-2#comments">Newer Comments →</a></div>
+				</nav>
+							</div>
+		</div>
+			</div>
+	
+	</div>
+	
+
+</div>
+
+
+<div id="sidebar">
+<ul>
+<li id="pages-2" class="widget widget_pages"><h2 class="widgettitle">Pages</h2>
+
+			<ul>
+				<li class="page_item page-item-8 page_item_has_children current_page_ancestor current_page_parent"><a href="https://hm2k.org/articles">Articles</a>
+<ul class="children">
+	<li class="page_item page-item-74 current_page_item"><a href="https://hm2k.org/articles/pagerank" aria-current="page">Google PageRank Script</a></li>
+	<li class="page_item page-item-9"><a href="https://hm2k.org/articles/regex">Guide to regular expressions</a></li>
+	<li class="page_item page-item-99"><a href="https://hm2k.org/articles/how-to-ask-a-question">How to ask a question</a></li>
+	<li class="page_item page-item-131"><a href="https://hm2k.org/articles/morals-of-downloading">Morals of Downloading</a></li>
+	<li class="page_item page-item-39"><a href="https://hm2k.org/articles/remove-spyware">Remove Spyware</a></li>
+	<li class="page_item page-item-104"><a href="https://hm2k.org/articles/seo-faq">SEO FAQ</a></li>
+	<li class="page_item page-item-10"><a href="https://hm2k.org/articles/seo-tips">SEO Tips</a></li>
+	<li class="page_item page-item-50"><a href="https://hm2k.org/articles/software">Software</a></li>
+	<li class="page_item page-item-5"><a href="https://hm2k.org/articles/startkeylogger">startkeylogger</a></li>
+	<li class="page_item page-item-106"><a href="https://hm2k.org/articles/useful-linux-commands">Useful Linux Commands</a></li>
+	<li class="page_item page-item-111"><a href="https://hm2k.org/articles/ways-to-waste-time-online">Ways to waste time online</a></li>
+	<li class="page_item page-item-40"><a href="https://hm2k.org/articles/yes-www">www. is NOT deprecated</a></li>
+</ul>
+</li>
+<li class="page_item page-item-13"><a href="https://hm2k.org/contact">Contact</a></li>
+			</ul>
+
+			</li>
+<li id="categories-2" class="widget widget_categories"><h2 class="widgettitle">Categories</h2>
+
+			<ul>
+					<li class="cat-item cat-item-44"><a href="https://hm2k.org/posts/category/business">Business</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://hm2k.org/posts/category/dev">Development</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://hm2k.org/posts/category/general">General</a>
+</li>
+	<li class="cat-item cat-item-35"><a href="https://hm2k.org/posts/category/hardware">Hardware</a>
+</li>
+	<li class="cat-item cat-item-23"><a href="https://hm2k.org/posts/category/internet">Internet</a>
+</li>
+	<li class="cat-item cat-item-285"><a href="https://hm2k.org/posts/category/security-2">Security</a>
+</li>
+	<li class="cat-item cat-item-260"><a href="https://hm2k.org/posts/category/software">Software</a>
+</li>
+	<li class="cat-item cat-item-41"><a href="https://hm2k.org/posts/category/sysadmin">Sysadmin</a>
+</li>
+			</ul>
+
+			</li>
+<li id="archives-2" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
+
+			<ul>
+					<li><a href="https://hm2k.org/posts/2012/05">May 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2012/03">March 2012</a></li>
+	<li><a href="https://hm2k.org/posts/2011/11">November 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/10">October 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/09">September 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/08">August 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/07">July 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/06">June 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/05">May 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/04">April 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/03">March 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2011/02">February 2011</a></li>
+	<li><a href="https://hm2k.org/posts/2010/12">December 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/11">November 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/06">June 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/05">May 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/04">April 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2010/02">February 2010</a></li>
+	<li><a href="https://hm2k.org/posts/2009/12">December 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/11">November 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/10">October 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/09">September 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/08">August 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/07">July 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/06">June 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/04">April 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/02">February 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2009/01">January 2009</a></li>
+	<li><a href="https://hm2k.org/posts/2008/12">December 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/11">November 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/09">September 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/07">July 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/06">June 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/05">May 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/04">April 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/03">March 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/02">February 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2008/01">January 2008</a></li>
+	<li><a href="https://hm2k.org/posts/2007/12">December 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/11">November 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/10">October 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/08">August 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/07">July 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/06">June 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/05">May 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/04">April 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/03">March 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/02">February 2007</a></li>
+	<li><a href="https://hm2k.org/posts/2007/01">January 2007</a></li>
+			</ul>
+
+			</li>
+<li id="text-5" class="widget widget_text"><h2 class="widgettitle">About</h2>
+			<div class="textwidget"><p>Welcome to the HM2K. Here you’ll find our experiments and findings as part of our on going Internet engineering.</p>
+</div>
+		</li>
+<li id="linkcat-16" class="widget widget_links"><h2 class="widgettitle">Projects</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://deaduseful.com/">Domain Name Whois</a></li>
+<li><a href="https://eggtcl.github.io/">Eggdrop TCL</a></li>
+
+	</ul>
+</li>
+
+<li id="linkcat-28" class="widget widget_links"><h2 class="widgettitle">Network</h2>
+
+	<ul class="xoxo blogroll">
+<li><a href="https://phurix.co.uk/">Phurix Web Hosting</a></li>
+<li><a href="https://suzuki4u.co.uk/" title="The only UK based Suzuki Forums">Suzuki Community</a></li>
+
+	</ul>
+</li>
+
+</ul>
+</div>
+
+<div id="footer">
+<p>		
+Copyright © 2002-2020 HM2K.
+</p>
+</div>
+
+</div>
+
+<script type="text/javascript" id="social_js-js-extra">
+/* <![CDATA[ */
+var Sociali18n = {"commentReplyTitle":"Post a Reply"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://hm2k.org/wp-content/plugins/social/assets/social.js?ver=2.11" id="social_js-js"></script>
+<script async="async" type="text/javascript" src="https://hm2k.org/wp-content/plugins/akismet/_inc/form.js?ver=4.1.6" id="akismet-form-js"></script>
+<script type="text/javascript" src="https://stats.wp.com/e-202036.js" async="async" defer></script>
+<script type="text/javascript">
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.9',blog:'181873647',post:'74',tz:'0',srv:'hm2k.org'} ]);
+	_stq.push([ 'clickTrackerInit', '181873647', '74' ]);
+</script>
+
+</body>
+</html>
